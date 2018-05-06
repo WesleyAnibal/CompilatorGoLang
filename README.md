@@ -1,4 +1,4 @@
-# CompilatorGoLang
+# CompilerGoLang
 ### Construction of a compiler for the GO Language for the discipline of Compilers of the course of Computer Science-UFCG
 
 ##### Components:
