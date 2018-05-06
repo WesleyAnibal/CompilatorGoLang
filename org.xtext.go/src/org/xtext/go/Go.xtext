@@ -1,0 +1,19 @@
+grammar org.xtext.go.Go with org.eclipse.xtext.common.Terminals
+
+generate go "http://www.xtext.org/go/Go"
+
+Model:
+	 types+=Type*;
+
+Type: DataType | Greeting;
+	
+Greeting:
+	'print' '('name=ID')';
+
+DataType:
+	'Type' name=ID ';';
+	
+@Override 
+terminal ID:
+	('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+	
