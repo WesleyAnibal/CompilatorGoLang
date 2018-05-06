@@ -3,9 +3,9 @@
 
 ##### Components:
 <ul>
-  <li>Arthur Sampaio</li>
-  <li>Nilton Ginani</li>
-  <li>Wesley Anibal</li>
+  <li href="https://www.linkedin.com/in/arthursampaiopcorreia/">Arthur Sampaio</li>
+  <li href="https://www.linkedin.com/in/nilton-ginani-08314b64/">Nilton Ginani</li>
+  <li href="https://www.linkedin.com/in/wesley-anibal/">Wesley Anibal</li>
 </ul>
 
 
