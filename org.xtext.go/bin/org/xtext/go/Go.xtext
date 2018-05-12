@@ -6,7 +6,7 @@ Go:
 	elements+=Greeting*;
 
 Greeting:
-	DataType | Entity | DecFunc | EOL;
+	DataType | Entity | DecFunc | EOL | Condition;
 	
 terminal EOL:
 	NEWLINE | SL_COMMENT;
@@ -17,12 +17,49 @@ terminal SL_COMMENT:
 terminal NEWLINE:
 	('\r'? '\n');
 	
+Condition: 
+    (if=IfCondition(elseif=ElseIfCondition)(else=ElseCondition)?);
+    
+IfCondition:
+	IF cond=Expression "{" 
+    then=Greeting 
+    "}";
+ElseIfCondition:
+	(=>ELSE IfCondition);
+	
+ElseCondition:
+	(=>ELSE "{"then=Greeting"}"); 
+  
+Expression:
+    OrExpression
+;   
+
+OrExpression returns Expression:
+    AndExpression ({OrExpression.left=current} "||" right=AndExpression)*  
+;   
+
+AndExpression returns Expression:
+    ComparisonExpression ({AndExpression.left=current} "&&" right=ComparisonExpression)*  
+;
+
+ComparisonExpression returns Expression:
+    PrimaryExpression ({ComparisonExpression.left=current} operator=("<"|"<="|"=="|">="|">") right=PrimaryExpression)*
+;
+
+PrimaryExpression returns Expression:
+    "(" Expression ")"
+    | Literal
+;
+
+Literal returns Expression:
+    {Literal} value="true" | "false" | INT
+;
 DecFunc:
-	FUNC name=ID"("(parameter=ID)?(","parameter=ID)*")""{""}";
+	FUNC name=ID"("(parameter=ID)?(","parameter=ID)*")""{"args+=Greeting*"}";
 
 Terminals:
 	(BREAK|CASE|CHAN|CONST|CONTINUE|ELSE|IF|FOR|FUNC|IMPORT|RETURN|PACKAGE|RANGE);
-
+	
 BREAK:
 	"break";
 
@@ -75,7 +112,7 @@ RANGE:
 	"range";
 	
 Entity:
-	'print' '(' name=ID ')';
+	'print' '(' (name=ID | INT+) ')';
 
 DataType:
 	'datatype' name=ID;

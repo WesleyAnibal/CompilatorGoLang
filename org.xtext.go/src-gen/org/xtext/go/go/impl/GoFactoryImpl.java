@@ -67,9 +67,18 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
     {
       case GoPackage.GO: return createGo();
       case GoPackage.GREETING: return createGreeting();
+      case GoPackage.CONDITION: return createCondition();
+      case GoPackage.IF_CONDITION: return createIfCondition();
+      case GoPackage.ELSE_IF_CONDITION: return createElseIfCondition();
+      case GoPackage.ELSE_CONDITION: return createElseCondition();
+      case GoPackage.EXPRESSION: return createExpression();
       case GoPackage.DEC_FUNC: return createDecFunc();
       case GoPackage.ENTITY: return createEntity();
       case GoPackage.DATA_TYPE: return createDataType();
+      case GoPackage.OR_EXPRESSION: return createOrExpression();
+      case GoPackage.AND_EXPRESSION: return createAndExpression();
+      case GoPackage.COMPARISON_EXPRESSION: return createComparisonExpression();
+      case GoPackage.LITERAL: return createLiteral();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -95,6 +104,61 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     GreetingImpl greeting = new GreetingImpl();
     return greeting;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Condition createCondition()
+  {
+    ConditionImpl condition = new ConditionImpl();
+    return condition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IfCondition createIfCondition()
+  {
+    IfConditionImpl ifCondition = new IfConditionImpl();
+    return ifCondition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ElseIfCondition createElseIfCondition()
+  {
+    ElseIfConditionImpl elseIfCondition = new ElseIfConditionImpl();
+    return elseIfCondition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ElseCondition createElseCondition()
+  {
+    ElseConditionImpl elseCondition = new ElseConditionImpl();
+    return elseCondition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression createExpression()
+  {
+    ExpressionImpl expression = new ExpressionImpl();
+    return expression;
   }
 
   /**
@@ -128,6 +192,50 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     DataTypeImpl dataType = new DataTypeImpl();
     return dataType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OrExpression createOrExpression()
+  {
+    OrExpressionImpl orExpression = new OrExpressionImpl();
+    return orExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AndExpression createAndExpression()
+  {
+    AndExpressionImpl andExpression = new AndExpressionImpl();
+    return andExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ComparisonExpression createComparisonExpression()
+  {
+    ComparisonExpressionImpl comparisonExpression = new ComparisonExpressionImpl();
+    return comparisonExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Literal createLiteral()
+  {
+    LiteralImpl literal = new LiteralImpl();
+    return literal;
   }
 
   /**

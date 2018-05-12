@@ -3,14 +3,24 @@
  */
 package org.xtext.go.go.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.GoPackage;
+import org.xtext.go.go.Greeting;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,13 +30,35 @@ import org.xtext.go.go.GoPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getArgs <em>Args</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DecFuncImpl extends GreetingImpl implements DecFunc
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #getParameter() <em>Parameter</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -48,6 +80,16 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
   protected String parameter = PARAMETER_EDEFAULT;
 
   /**
+   * The cached value of the '{@link #getArgs() <em>Args</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getArgs()
+   * @generated
+   * @ordered
+   */
+  protected EList<Greeting> args;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -66,6 +108,29 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
   protected EClass eStaticClass()
   {
     return GoPackage.Literals.DEC_FUNC;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DEC_FUNC__NAME, oldName, name));
   }
 
   /**
@@ -96,13 +161,47 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Greeting> getArgs()
+  {
+    if (args == null)
+    {
+      args = new EObjectContainmentEList<Greeting>(Greeting.class, this, GoPackage.DEC_FUNC__ARGS);
+    }
+    return args;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GoPackage.DEC_FUNC__ARGS:
+        return ((InternalEList<?>)getArgs()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
+      case GoPackage.DEC_FUNC__NAME:
+        return getName();
       case GoPackage.DEC_FUNC__PARAMETER:
         return getParameter();
+      case GoPackage.DEC_FUNC__ARGS:
+        return getArgs();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -112,13 +211,21 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
+      case GoPackage.DEC_FUNC__NAME:
+        setName((String)newValue);
+        return;
       case GoPackage.DEC_FUNC__PARAMETER:
         setParameter((String)newValue);
+        return;
+      case GoPackage.DEC_FUNC__ARGS:
+        getArgs().clear();
+        getArgs().addAll((Collection<? extends Greeting>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +241,14 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
   {
     switch (featureID)
     {
+      case GoPackage.DEC_FUNC__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case GoPackage.DEC_FUNC__PARAMETER:
         setParameter(PARAMETER_EDEFAULT);
+        return;
+      case GoPackage.DEC_FUNC__ARGS:
+        getArgs().clear();
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +264,12 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
   {
     switch (featureID)
     {
+      case GoPackage.DEC_FUNC__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case GoPackage.DEC_FUNC__PARAMETER:
         return PARAMETER_EDEFAULT == null ? parameter != null : !PARAMETER_EDEFAULT.equals(parameter);
+      case GoPackage.DEC_FUNC__ARGS:
+        return args != null && !args.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -168,7 +285,9 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (parameter: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", parameter: ");
     result.append(parameter);
     result.append(')');
     return result.toString();

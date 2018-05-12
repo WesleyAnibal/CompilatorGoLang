@@ -9,13 +9,47 @@
     <genClasses ecoreClass="Go.ecore#//Go">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Go/elements"/>
     </genClasses>
-    <genClasses ecoreClass="Go.ecore#//Greeting">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Greeting/name"/>
+    <genClasses ecoreClass="Go.ecore#//Greeting"/>
+    <genClasses ecoreClass="Go.ecore#//Condition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Condition/if"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Condition/elseif"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Condition/else"/>
     </genClasses>
+    <genClasses ecoreClass="Go.ecore#//IfCondition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//IfCondition/cond"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//IfCondition/then"/>
+    </genClasses>
+    <genClasses ecoreClass="Go.ecore#//ElseIfCondition"/>
+    <genClasses ecoreClass="Go.ecore#//ElseCondition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//ElseCondition/then"/>
+    </genClasses>
+    <genClasses ecoreClass="Go.ecore#//Expression"/>
     <genClasses ecoreClass="Go.ecore#//DecFunc">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecFunc/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecFunc/parameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecFunc/args"/>
     </genClasses>
-    <genClasses ecoreClass="Go.ecore#//Entity"/>
-    <genClasses ecoreClass="Go.ecore#//DataType"/>
+    <genClasses ecoreClass="Go.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Entity/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Go.ecore#//DataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DataType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Go.ecore#//OrExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//OrExpression/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//OrExpression/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Go.ecore#//AndExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//AndExpression/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//AndExpression/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Go.ecore#//ComparisonExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//ComparisonExpression/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//ComparisonExpression/operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//ComparisonExpression/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Go.ecore#//Literal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Literal/value"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
