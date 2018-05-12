@@ -42,13 +42,14 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cDataTypeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cEntityParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cTerminalsParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cDecFuncParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cEOLTerminalRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//Greeting:
-		//	DataType | Entity | Terminals;
+		//	DataType | Entity | DecFunc | EOL;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//DataType | Entity | Terminals
+		//DataType | Entity | DecFunc | EOL
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//DataType
@@ -57,8 +58,74 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		//Entity
 		public RuleCall getEntityParserRuleCall_1() { return cEntityParserRuleCall_1; }
 		
-		//Terminals
-		public RuleCall getTerminalsParserRuleCall_2() { return cTerminalsParserRuleCall_2; }
+		//DecFunc
+		public RuleCall getDecFuncParserRuleCall_2() { return cDecFuncParserRuleCall_2; }
+		
+		//EOL
+		public RuleCall getEOLTerminalRuleCall_3() { return cEOLTerminalRuleCall_3; }
+	}
+	public class DecFuncElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.DecFunc");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cFUNCParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cParameterAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cParameterIDTerminalRuleCall_3_0 = (RuleCall)cParameterAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cCommaKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cParameterAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cParameterIDTerminalRuleCall_4_1_0 = (RuleCall)cParameterAssignment_4_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cLeftCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//DecFunc:
+		//	FUNC name=ID "(" parameter=ID? ("," parameter=ID)* ")" "{" "}";
+		@Override public ParserRule getRule() { return rule; }
+		
+		//FUNC name=ID "(" parameter=ID? ("," parameter=ID)* ")" "{" "}"
+		public Group getGroup() { return cGroup; }
+		
+		//FUNC
+		public RuleCall getFUNCParserRuleCall_0() { return cFUNCParserRuleCall_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//"("
+		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
+		
+		//parameter=ID?
+		public Assignment getParameterAssignment_3() { return cParameterAssignment_3; }
+		
+		//ID
+		public RuleCall getParameterIDTerminalRuleCall_3_0() { return cParameterIDTerminalRuleCall_3_0; }
+		
+		//("," parameter=ID)*
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//","
+		public Keyword getCommaKeyword_4_0() { return cCommaKeyword_4_0; }
+		
+		//parameter=ID
+		public Assignment getParameterAssignment_4_1() { return cParameterAssignment_4_1; }
+		
+		//ID
+		public RuleCall getParameterIDTerminalRuleCall_4_1_0() { return cParameterIDTerminalRuleCall_4_1_0; }
+		
+		//")"
+		public Keyword getRightParenthesisKeyword_5() { return cRightParenthesisKeyword_5; }
+		
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_6() { return cLeftCurlyBracketKeyword_6; }
+		
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 	public class TerminalsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Terminals");
@@ -368,6 +435,10 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	
 	private final GoElements pGo;
 	private final GreetingElements pGreeting;
+	private final TerminalRule tEOL;
+	private final TerminalRule tSL_COMMENT;
+	private final TerminalRule tNEWLINE;
+	private final DecFuncElements pDecFunc;
 	private final TerminalsElements pTerminals;
 	private final BREAKElements pBREAK;
 	private final CASEElements pCASE;
@@ -400,6 +471,10 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		this.gaTerminals = gaTerminals;
 		this.pGo = new GoElements();
 		this.pGreeting = new GreetingElements();
+		this.tEOL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.EOL");
+		this.tSL_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.SL_COMMENT");
+		this.tNEWLINE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.NEWLINE");
+		this.pDecFunc = new DecFuncElements();
 		this.pTerminals = new TerminalsElements();
 		this.pBREAK = new BREAKElements();
 		this.pCASE = new CASEElements();
@@ -460,13 +535,41 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Greeting:
-	//	DataType | Entity | Terminals;
+	//	DataType | Entity | DecFunc | EOL;
 	public GreetingElements getGreetingAccess() {
 		return pGreeting;
 	}
 	
 	public ParserRule getGreetingRule() {
 		return getGreetingAccess().getRule();
+	}
+	
+	//terminal EOL:
+	//	NEWLINE | SL_COMMENT;
+	public TerminalRule getEOLRule() {
+		return tEOL;
+	}
+	
+	//terminal SL_COMMENT:
+	//	'//' !('\n' | '\r')* ('\r'? '\n')?;
+	public TerminalRule getSL_COMMENTRule() {
+		return tSL_COMMENT;
+	}
+	
+	//terminal NEWLINE:
+	//	'\r'? '\n';
+	public TerminalRule getNEWLINERule() {
+		return tNEWLINE;
+	}
+	
+	//DecFunc:
+	//	FUNC name=ID "(" parameter=ID? ("," parameter=ID)* ")" "{" "}";
+	public DecFuncElements getDecFuncAccess() {
+		return pDecFunc;
+	}
+	
+	public ParserRule getDecFuncRule() {
+		return getDecFuncAccess().getRule();
 	}
 	
 	//Terminals:
@@ -691,12 +794,6 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	//	'/*'->'*/';
 	public TerminalRule getML_COMMENTRule() {
 		return gaTerminals.getML_COMMENTRule();
-	}
-	
-	//terminal SL_COMMENT:
-	//	'//' !('\n' | '\r')* ('\r'? '\n')?;
-	public TerminalRule getSL_COMMENTRule() {
-		return gaTerminals.getSL_COMMENTRule();
 	}
 	
 	//terminal WS:

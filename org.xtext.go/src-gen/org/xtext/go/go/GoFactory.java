@@ -42,6 +42,15 @@ public interface GoFactory extends EFactory
   Greeting createGreeting();
 
   /**
+   * Returns a new object of class '<em>Dec Func</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dec Func</em>'.
+   * @generated
+   */
+  DecFunc createDecFunc();
+
+  /**
    * Returns a new object of class '<em>Entity</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

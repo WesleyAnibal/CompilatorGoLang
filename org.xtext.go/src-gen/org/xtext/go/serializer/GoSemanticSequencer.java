@@ -15,6 +15,7 @@ import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.go.go.DataType;
+import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.Entity;
 import org.xtext.go.go.Go;
 import org.xtext.go.go.GoPackage;
@@ -36,6 +37,9 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			switch (semanticObject.eClass().getClassifierID()) {
 			case GoPackage.DATA_TYPE:
 				sequence_DataType(context, (DataType) semanticObject); 
+				return; 
+			case GoPackage.DEC_FUNC:
+				sequence_DecFunc(context, (DecFunc) semanticObject); 
 				return; 
 			case GoPackage.ENTITY:
 				sequence_Entity(context, (Entity) semanticObject); 
@@ -64,6 +68,19 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDataTypeAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Greeting returns DecFunc
+	 *     DecFunc returns DecFunc
+	 *
+	 * Constraint:
+	 *     (name=ID parameter=ID? parameter=ID*)
+	 */
+	protected void sequence_DecFunc(ISerializationContext context, DecFunc semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

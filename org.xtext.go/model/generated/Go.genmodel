@@ -12,6 +12,9 @@
     <genClasses ecoreClass="Go.ecore#//Greeting">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Greeting/name"/>
     </genClasses>
+    <genClasses ecoreClass="Go.ecore#//DecFunc">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecFunc/parameter"/>
+    </genClasses>
     <genClasses ecoreClass="Go.ecore#//Entity"/>
     <genClasses ecoreClass="Go.ecore#//DataType"/>
   </genPackages>

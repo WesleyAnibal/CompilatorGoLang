@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.xtext.go.go.DataType;
+import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.Entity;
 import org.xtext.go.go.Go;
 import org.xtext.go.go.GoFactory;
@@ -38,6 +39,13 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * @generated
    */
   private EClass greetingEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass decFuncEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -161,6 +169,26 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getDecFunc()
+  {
+    return decFuncEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDecFunc_Parameter()
+  {
+    return (EAttribute)decFuncEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getEntity()
   {
     return entityEClass;
@@ -212,6 +240,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     greetingEClass = createEClass(GREETING);
     createEAttribute(greetingEClass, GREETING__NAME);
 
+    decFuncEClass = createEClass(DEC_FUNC);
+    createEAttribute(decFuncEClass, DEC_FUNC__PARAMETER);
+
     entityEClass = createEClass(ENTITY);
 
     dataTypeEClass = createEClass(DATA_TYPE);
@@ -246,6 +277,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    decFuncEClass.getESuperTypes().add(this.getGreeting());
     entityEClass.getESuperTypes().add(this.getGreeting());
     dataTypeEClass.getESuperTypes().add(this.getGreeting());
 
@@ -255,6 +287,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     initEClass(greetingEClass, Greeting.class, "Greeting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getGreeting_Name(), ecorePackage.getEString(), "name", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(decFuncEClass, DecFunc.class, "DecFunc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDecFunc_Parameter(), ecorePackage.getEString(), "parameter", null, 0, 1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

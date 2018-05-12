@@ -8,6 +8,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="Greeting">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DecFunc" eSuperTypes="#//Greeting">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//Greeting"/>
   <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="#//Greeting"/>
 </ecore:EPackage>

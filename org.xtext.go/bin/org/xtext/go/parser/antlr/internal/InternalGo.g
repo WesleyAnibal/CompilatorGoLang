@@ -131,24 +131,30 @@ ruleGreeting returns [EObject current=null]
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getGreetingAccess().getTerminalsParserRuleCall_2());
+			newCompositeNode(grammarAccess.getGreetingAccess().getDecFuncParserRuleCall_2());
 		}
-		ruleTerminals
+		this_DecFunc_2=ruleDecFunc
 		{
+			$current = $this_DecFunc_2.current;
 			afterParserOrEnumRuleCall();
+		}
+		    |
+		this_EOL_3=RULE_EOL
+		{
+			newLeafNode(this_EOL_3, grammarAccess.getGreetingAccess().getEOLTerminalRuleCall_3());
 		}
 	)
 ;
 
-// Entry rule entryRuleTerminals
-entryRuleTerminals returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getTerminalsRule()); }
-	iv_ruleTerminals=ruleTerminals
-	{ $current=$iv_ruleTerminals.current.getText(); }
+// Entry rule entryRuleDecFunc
+entryRuleDecFunc returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDecFuncRule()); }
+	iv_ruleDecFunc=ruleDecFunc
+	{ $current=$iv_ruleDecFunc.current; }
 	EOF;
 
-// Rule Terminals
-ruleTerminals returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+// Rule DecFunc
+ruleDecFunc returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -157,146 +163,87 @@ ruleTerminals returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken
 }:
 	(
 		{
-			newCompositeNode(grammarAccess.getTerminalsAccess().getBREAKParserRuleCall_0());
+			newCompositeNode(grammarAccess.getDecFuncAccess().getFUNCParserRuleCall_0());
 		}
-		this_BREAK_0=ruleBREAK
-		{
-			$current.merge(this_BREAK_0);
-		}
+		ruleFUNC
 		{
 			afterParserOrEnumRuleCall();
 		}
-		    |
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getDecFuncAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDecFuncRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_2='('
 		{
-			newCompositeNode(grammarAccess.getTerminalsAccess().getCASEParserRuleCall_1());
+			newLeafNode(otherlv_2, grammarAccess.getDecFuncAccess().getLeftParenthesisKeyword_2());
 		}
-		this_CASE_1=ruleCASE
+		(
+			(
+				lv_parameter_3_0=RULE_ID
+				{
+					newLeafNode(lv_parameter_3_0, grammarAccess.getDecFuncAccess().getParameterIDTerminalRuleCall_3_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDecFuncRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"parameter",
+						lv_parameter_3_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)?
+		(
+			otherlv_4=','
+			{
+				newLeafNode(otherlv_4, grammarAccess.getDecFuncAccess().getCommaKeyword_4_0());
+			}
+			(
+				(
+					lv_parameter_5_0=RULE_ID
+					{
+						newLeafNode(lv_parameter_5_0, grammarAccess.getDecFuncAccess().getParameterIDTerminalRuleCall_4_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDecFuncRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"parameter",
+							lv_parameter_5_0,
+							"org.eclipse.xtext.common.Terminals.ID");
+					}
+				)
+			)
+		)*
+		otherlv_6=')'
 		{
-			$current.merge(this_CASE_1);
+			newLeafNode(otherlv_6, grammarAccess.getDecFuncAccess().getRightParenthesisKeyword_5());
 		}
+		otherlv_7='{'
 		{
-			afterParserOrEnumRuleCall();
+			newLeafNode(otherlv_7, grammarAccess.getDecFuncAccess().getLeftCurlyBracketKeyword_6());
 		}
-		    |
+		otherlv_8='}'
 		{
-			newCompositeNode(grammarAccess.getTerminalsAccess().getCHANParserRuleCall_2());
-		}
-		this_CHAN_2=ruleCHAN
-		{
-			$current.merge(this_CHAN_2);
-		}
-		{
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getTerminalsAccess().getCONSTParserRuleCall_3());
-		}
-		this_CONST_3=ruleCONST
-		{
-			$current.merge(this_CONST_3);
-		}
-		{
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getTerminalsAccess().getCONTINUEParserRuleCall_4());
-		}
-		this_CONTINUE_4=ruleCONTINUE
-		{
-			$current.merge(this_CONTINUE_4);
-		}
-		{
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getTerminalsAccess().getELSEParserRuleCall_5());
-		}
-		this_ELSE_5=ruleELSE
-		{
-			$current.merge(this_ELSE_5);
-		}
-		{
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getTerminalsAccess().getIFParserRuleCall_6());
-		}
-		this_IF_6=ruleIF
-		{
-			$current.merge(this_IF_6);
-		}
-		{
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getTerminalsAccess().getFORParserRuleCall_7());
-		}
-		this_FOR_7=ruleFOR
-		{
-			$current.merge(this_FOR_7);
-		}
-		{
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getTerminalsAccess().getFUNCParserRuleCall_8());
-		}
-		this_FUNC_8=ruleFUNC
-		{
-			$current.merge(this_FUNC_8);
-		}
-		{
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getTerminalsAccess().getIMPORTParserRuleCall_9());
-		}
-		this_IMPORT_9=ruleIMPORT
-		{
-			$current.merge(this_IMPORT_9);
-		}
-		{
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getTerminalsAccess().getRETURNParserRuleCall_10());
-		}
-		this_RETURN_10=ruleRETURN
-		{
-			$current.merge(this_RETURN_10);
-		}
-		{
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getTerminalsAccess().getPACKAGEParserRuleCall_11());
-		}
-		this_PACKAGE_11=rulePACKAGE
-		{
-			$current.merge(this_PACKAGE_11);
-		}
-		{
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getTerminalsAccess().getRANGEParserRuleCall_12());
-		}
-		this_RANGE_12=ruleRANGE
-		{
-			$current.merge(this_RANGE_12);
-		}
-		{
-			afterParserOrEnumRuleCall();
+			newLeafNode(otherlv_8, grammarAccess.getDecFuncAccess().getRightCurlyBracketKeyword_7());
 		}
 	)
 ;
@@ -677,6 +624,12 @@ ruleDataType returns [EObject current=null]
 	)
 ;
 
+RULE_EOL : (RULE_NEWLINE|RULE_SL_COMMENT);
+
+RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
+
+fragment RULE_NEWLINE : '\r'? '\n';
+
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 RULE_INT : ('0'..'9')+;
@@ -684,8 +637,6 @@ RULE_INT : ('0'..'9')+;
 RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
 
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
-
-RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 

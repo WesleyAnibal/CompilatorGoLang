@@ -67,6 +67,7 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
     {
       case GoPackage.GO: return createGo();
       case GoPackage.GREETING: return createGreeting();
+      case GoPackage.DEC_FUNC: return createDecFunc();
       case GoPackage.ENTITY: return createEntity();
       case GoPackage.DATA_TYPE: return createDataType();
       default:
@@ -94,6 +95,17 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     GreetingImpl greeting = new GreetingImpl();
     return greeting;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DecFunc createDecFunc()
+  {
+    DecFuncImpl decFunc = new DecFuncImpl();
+    return decFunc;
   }
 
   /**

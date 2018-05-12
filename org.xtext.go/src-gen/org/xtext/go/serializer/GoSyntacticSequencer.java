@@ -26,19 +26,31 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (ruleCall.getRule() == grammarAccess.getTerminalsRule())
-			return getTerminalsToken(semanticObject, ruleCall, node);
+		if (ruleCall.getRule() == grammarAccess.getEOLRule())
+			return getEOLToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getFUNCRule())
+			return getFUNCToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
 	/**
-	 * Terminals:
-	 * 	(BREAK|CASE|CHAN|CONST|CONTINUE|ELSE|IF|FOR|FUNC|IMPORT|RETURN|PACKAGE|RANGE);
+	 * terminal EOL:
+	 * 	NEWLINE | SL_COMMENT;
 	 */
-	protected String getTerminalsToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+	protected String getEOLToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "break";
+		return "\n";
+	}
+	
+	/**
+	 * FUNC:
+	 * 	"func";
+	 */
+	protected String getFUNCToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "func";
 	}
 	
 	@Override

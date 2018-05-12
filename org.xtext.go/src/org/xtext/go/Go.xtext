@@ -6,7 +6,19 @@ Go:
 	elements+=Greeting*;
 
 Greeting:
-	DataType | Entity | Terminals;
+	DataType | Entity | DecFunc | EOL;
+	
+terminal EOL:
+	NEWLINE | SL_COMMENT;
+
+terminal SL_COMMENT:
+	'//' !('\n'|'\r')* ('\r'? '\n')?;
+	
+terminal NEWLINE:
+	('\r'? '\n');
+	
+DecFunc:
+	FUNC name=ID"("(parameter=ID)?(","parameter=ID)*")""{""}";
 
 Terminals:
 	(BREAK|CASE|CHAN|CONST|CONTINUE|ELSE|IF|FOR|FUNC|IMPORT|RETURN|PACKAGE|RANGE);
@@ -39,7 +51,7 @@ IF:
 	"if";
 	
 IMPORT:
-	"import";
+	"import";	
 
 RETURN:
 	"return";

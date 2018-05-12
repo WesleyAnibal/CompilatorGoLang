@@ -114,6 +114,43 @@ public interface GoPackage extends EPackage
   int GREETING_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link org.xtext.go.go.impl.DecFuncImpl <em>Dec Func</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.go.go.impl.DecFuncImpl
+   * @see org.xtext.go.go.impl.GoPackageImpl#getDecFunc()
+   * @generated
+   */
+  int DEC_FUNC = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEC_FUNC__NAME = GREETING__NAME;
+
+  /**
+   * The feature id for the '<em><b>Parameter</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEC_FUNC__PARAMETER = GREETING_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Dec Func</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEC_FUNC_FEATURE_COUNT = GREETING_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.go.go.impl.EntityImpl <em>Entity</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -121,7 +158,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getEntity()
    * @generated
    */
-  int ENTITY = 2;
+  int ENTITY = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -149,7 +186,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDataType()
    * @generated
    */
-  int DATA_TYPE = 3;
+  int DATA_TYPE = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -211,6 +248,27 @@ public interface GoPackage extends EPackage
    * @generated
    */
   EAttribute getGreeting_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.go.go.DecFunc <em>Dec Func</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Dec Func</em>'.
+   * @see org.xtext.go.go.DecFunc
+   * @generated
+   */
+  EClass getDecFunc();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.go.go.DecFunc#getParameter <em>Parameter</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Parameter</em>'.
+   * @see org.xtext.go.go.DecFunc#getParameter()
+   * @see #getDecFunc()
+   * @generated
+   */
+  EAttribute getDecFunc_Parameter();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.Entity <em>Entity</em>}'.
@@ -290,6 +348,24 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EAttribute GREETING__NAME = eINSTANCE.getGreeting_Name();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.go.go.impl.DecFuncImpl <em>Dec Func</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.go.go.impl.DecFuncImpl
+     * @see org.xtext.go.go.impl.GoPackageImpl#getDecFunc()
+     * @generated
+     */
+    EClass DEC_FUNC = eINSTANCE.getDecFunc();
+
+    /**
+     * The meta object literal for the '<em><b>Parameter</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DEC_FUNC__PARAMETER = eINSTANCE.getDecFunc_Parameter();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.EntityImpl <em>Entity</em>}' class.
