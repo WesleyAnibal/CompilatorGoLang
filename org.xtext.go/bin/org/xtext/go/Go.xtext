@@ -2,18 +2,65 @@ grammar org.xtext.go.Go with org.eclipse.xtext.common.Terminals
 
 generate go "http://www.xtext.org/go/Go"
 
-Model:
-	 types+=Type*;
+Go:
+	elements+=Greeting*;
 
-Type: DataType | Greeting;
-	
 Greeting:
-	'print' '('name=ID')';
+	DataType | Entity;
+
+terminal BREAK:
+	"break";
+
+terminal CASE:
+	"case";
+
+terminal CHAN:
+	"chan";
+
+terminal CONST:
+	"const";
+
+terminal CONTINUE:
+	"continue";
+
+terminal ELSE:
+	"else";
+
+terminal FOR:
+	"for";
+	
+terminal FUNC:
+	"func";
+
+terminal IF:
+	"if";
+	
+terminal IMPORT:
+	"import";
+
+terminal RETURN:
+	"return";
+	
+terminal PACKAGE:
+	"package";
+	
+terminal TYPE:
+	"type";
+	
+terminal VAR:
+	"var";
+	
+terminal SWITCH:
+	"switch";
+
+terminal STRUCT:
+	"struct";
+
+terminal RANGE:
+	"range";
+	
+Entity:
+	'print' '(' name=ID ')';
 
 DataType:
-	'Type' name=ID ';';
-	
-@Override 
-terminal ID:
-	('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
-	
+	'datatype' name=ID;

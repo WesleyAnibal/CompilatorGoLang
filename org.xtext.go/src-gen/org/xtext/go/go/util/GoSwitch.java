@@ -73,10 +73,17 @@ public class GoSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case GoPackage.MODEL:
+      case GoPackage.GO:
       {
-        Model model = (Model)theEObject;
-        T result = caseModel(model);
+        Go go = (Go)theEObject;
+        T result = caseGo(go);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.GREETING:
+      {
+        Greeting greeting = (Greeting)theEObject;
+        T result = caseGreeting(greeting);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -87,11 +94,45 @@ public class GoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GoPackage.GREETING:
+      case GoPackage.TYPE_NAME:
       {
-        Greeting greeting = (Greeting)theEObject;
-        T result = caseGreeting(greeting);
-        if (result == null) result = caseType(greeting);
+        TypeName typeName = (TypeName)theEObject;
+        T result = caseTypeName(typeName);
+        if (result == null) result = caseType(typeName);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.TYPE_SPEC:
+      {
+        TypeSpec typeSpec = (TypeSpec)theEObject;
+        T result = caseTypeSpec(typeSpec);
+        if (result == null) result = caseGreeting(typeSpec);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.TYPE_DEF:
+      {
+        TypeDef typeDef = (TypeDef)theEObject;
+        T result = caseTypeDef(typeDef);
+        if (result == null) result = caseTypeSpec(typeDef);
+        if (result == null) result = caseGreeting(typeDef);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.ALIAS_DECL:
+      {
+        AliasDecl aliasDecl = (AliasDecl)theEObject;
+        T result = caseAliasDecl(aliasDecl);
+        if (result == null) result = caseTypeSpec(aliasDecl);
+        if (result == null) result = caseGreeting(aliasDecl);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.ENTITY:
+      {
+        Entity entity = (Entity)theEObject;
+        T result = caseEntity(entity);
+        if (result == null) result = caseGreeting(entity);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -99,7 +140,7 @@ public class GoSwitch<T> extends Switch<T>
       {
         DataType dataType = (DataType)theEObject;
         T result = caseDataType(dataType);
-        if (result == null) result = caseType(dataType);
+        if (result == null) result = caseGreeting(dataType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -108,17 +149,33 @@ public class GoSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Go</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Model</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Go</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseModel(Model object)
+  public T caseGo(Go object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Greeting</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Greeting</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGreeting(Greeting object)
   {
     return null;
   }
@@ -140,17 +197,81 @@ public class GoSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Greeting</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Type Name</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Greeting</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Type Name</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseGreeting(Greeting object)
+  public T caseTypeName(TypeName object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Type Spec</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Type Spec</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTypeSpec(TypeSpec object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Type Def</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Type Def</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTypeDef(TypeDef object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Alias Decl</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Alias Decl</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAliasDecl(AliasDecl object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEntity(Entity object)
   {
     return null;
   }

@@ -15,7 +15,7 @@ import org.xtext.go.go.GoPackage;
  *
  * @generated
  */
-public class DataTypeImpl extends TypeImpl implements DataType
+public class DataTypeImpl extends GreetingImpl implements DataType
 {
   /**
    * <!-- begin-user-doc -->

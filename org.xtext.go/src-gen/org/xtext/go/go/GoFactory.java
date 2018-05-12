@@ -24,13 +24,22 @@ public interface GoFactory extends EFactory
   GoFactory eINSTANCE = org.xtext.go.go.impl.GoFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Model</em>'.
+   * Returns a new object of class '<em>Go</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Model</em>'.
+   * @return a new object of class '<em>Go</em>'.
    * @generated
    */
-  Model createModel();
+  Go createGo();
+
+  /**
+   * Returns a new object of class '<em>Greeting</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Greeting</em>'.
+   * @generated
+   */
+  Greeting createGreeting();
 
   /**
    * Returns a new object of class '<em>Type</em>'.
@@ -42,13 +51,49 @@ public interface GoFactory extends EFactory
   Type createType();
 
   /**
-   * Returns a new object of class '<em>Greeting</em>'.
+   * Returns a new object of class '<em>Type Name</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Greeting</em>'.
+   * @return a new object of class '<em>Type Name</em>'.
    * @generated
    */
-  Greeting createGreeting();
+  TypeName createTypeName();
+
+  /**
+   * Returns a new object of class '<em>Type Spec</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Type Spec</em>'.
+   * @generated
+   */
+  TypeSpec createTypeSpec();
+
+  /**
+   * Returns a new object of class '<em>Type Def</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Type Def</em>'.
+   * @generated
+   */
+  TypeDef createTypeDef();
+
+  /**
+   * Returns a new object of class '<em>Alias Decl</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Alias Decl</em>'.
+   * @generated
+   */
+  AliasDecl createAliasDecl();
+
+  /**
+   * Returns a new object of class '<em>Entity</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Entity</em>'.
+   * @generated
+   */
+  Entity createEntity();
 
   /**
    * Returns a new object of class '<em>Data Type</em>'.

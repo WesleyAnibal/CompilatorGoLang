@@ -14,6 +14,6 @@ package org.xtext.go.go;
  * @model
  * @generated
  */
-public interface DataType extends Type
+public interface DataType extends Greeting
 {
 } // DataType

@@ -10,12 +10,17 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.xtext.go.go.AliasDecl;
 import org.xtext.go.go.DataType;
+import org.xtext.go.go.Entity;
+import org.xtext.go.go.Go;
 import org.xtext.go.go.GoFactory;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Greeting;
-import org.xtext.go.go.Model;
 import org.xtext.go.go.Type;
+import org.xtext.go.go.TypeDef;
+import org.xtext.go.go.TypeName;
+import org.xtext.go.go.TypeSpec;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +35,14 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass modelEClass = null;
+  private EClass goEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass greetingEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -44,7 +56,35 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass greetingEClass = null;
+  private EClass typeNameEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass typeSpecEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass typeDefEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass aliasDeclEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass entityEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -121,9 +161,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getModel()
+  public EClass getGo()
   {
-    return modelEClass;
+    return goEClass;
   }
 
   /**
@@ -131,9 +171,29 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Types()
+  public EReference getGo_Elements()
   {
-    return (EReference)modelEClass.getEStructuralFeatures().get(0);
+    return (EReference)goEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGreeting()
+  {
+    return greetingEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGreeting_Name()
+  {
+    return (EAttribute)greetingEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -151,9 +211,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getType_Name()
+  public EClass getTypeName()
   {
-    return (EAttribute)typeEClass.getEStructuralFeatures().get(0);
+    return typeNameEClass;
   }
 
   /**
@@ -161,9 +221,59 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getGreeting()
+  public EAttribute getTypeName_Name()
   {
-    return greetingEClass;
+    return (EAttribute)typeNameEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTypeSpec()
+  {
+    return typeSpecEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTypeSpec_Type()
+  {
+    return (EReference)typeSpecEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTypeDef()
+  {
+    return typeDefEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAliasDecl()
+  {
+    return aliasDeclEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEntity()
+  {
+    return entityEClass;
   }
 
   /**
@@ -206,13 +316,25 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     isCreated = true;
 
     // Create classes and their features
-    modelEClass = createEClass(MODEL);
-    createEReference(modelEClass, MODEL__TYPES);
-
-    typeEClass = createEClass(TYPE);
-    createEAttribute(typeEClass, TYPE__NAME);
+    goEClass = createEClass(GO);
+    createEReference(goEClass, GO__ELEMENTS);
 
     greetingEClass = createEClass(GREETING);
+    createEAttribute(greetingEClass, GREETING__NAME);
+
+    typeEClass = createEClass(TYPE);
+
+    typeNameEClass = createEClass(TYPE_NAME);
+    createEAttribute(typeNameEClass, TYPE_NAME__NAME);
+
+    typeSpecEClass = createEClass(TYPE_SPEC);
+    createEReference(typeSpecEClass, TYPE_SPEC__TYPE);
+
+    typeDefEClass = createEClass(TYPE_DEF);
+
+    aliasDeclEClass = createEClass(ALIAS_DECL);
+
+    entityEClass = createEClass(ENTITY);
 
     dataTypeEClass = createEClass(DATA_TYPE);
   }
@@ -246,17 +368,33 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    greetingEClass.getESuperTypes().add(this.getType());
-    dataTypeEClass.getESuperTypes().add(this.getType());
+    typeNameEClass.getESuperTypes().add(this.getType());
+    typeSpecEClass.getESuperTypes().add(this.getGreeting());
+    typeDefEClass.getESuperTypes().add(this.getTypeSpec());
+    aliasDeclEClass.getESuperTypes().add(this.getTypeSpec());
+    entityEClass.getESuperTypes().add(this.getGreeting());
+    dataTypeEClass.getESuperTypes().add(this.getGreeting());
 
     // Initialize classes and features; add operations and parameters
-    initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Types(), this.getType(), null, "types", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getType_Name(), ecorePackage.getEString(), "name", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(goEClass, Go.class, "Go", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getGo_Elements(), this.getGreeting(), null, "elements", null, 0, -1, Go.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(greetingEClass, Greeting.class, "Greeting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGreeting_Name(), ecorePackage.getEString(), "name", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(typeNameEClass, TypeName.class, "TypeName", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTypeName_Name(), ecorePackage.getEString(), "name", null, 0, 1, TypeName.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(typeSpecEClass, TypeSpec.class, "TypeSpec", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTypeSpec_Type(), this.getType(), null, "type", null, 0, 1, TypeSpec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(typeDefEClass, TypeDef.class, "TypeDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(aliasDeclEClass, AliasDecl.class, "AliasDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

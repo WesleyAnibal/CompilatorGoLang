@@ -27,7 +27,7 @@ public class GoParser extends AbstractAntlrParser {
 
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Model";
+		return "Go";
 	}
 
 	public GoGrammarAccess getGrammarAccess() {

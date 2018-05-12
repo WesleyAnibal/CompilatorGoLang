@@ -65,9 +65,14 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     switch (eClass.getClassifierID())
     {
-      case GoPackage.MODEL: return createModel();
-      case GoPackage.TYPE: return createType();
+      case GoPackage.GO: return createGo();
       case GoPackage.GREETING: return createGreeting();
+      case GoPackage.TYPE: return createType();
+      case GoPackage.TYPE_NAME: return createTypeName();
+      case GoPackage.TYPE_SPEC: return createTypeSpec();
+      case GoPackage.TYPE_DEF: return createTypeDef();
+      case GoPackage.ALIAS_DECL: return createAliasDecl();
+      case GoPackage.ENTITY: return createEntity();
       case GoPackage.DATA_TYPE: return createDataType();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -79,10 +84,21 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Model createModel()
+  public Go createGo()
   {
-    ModelImpl model = new ModelImpl();
-    return model;
+    GoImpl go = new GoImpl();
+    return go;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Greeting createGreeting()
+  {
+    GreetingImpl greeting = new GreetingImpl();
+    return greeting;
   }
 
   /**
@@ -101,10 +117,54 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Greeting createGreeting()
+  public TypeName createTypeName()
   {
-    GreetingImpl greeting = new GreetingImpl();
-    return greeting;
+    TypeNameImpl typeName = new TypeNameImpl();
+    return typeName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TypeSpec createTypeSpec()
+  {
+    TypeSpecImpl typeSpec = new TypeSpecImpl();
+    return typeSpec;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TypeDef createTypeDef()
+  {
+    TypeDefImpl typeDef = new TypeDefImpl();
+    return typeDef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AliasDecl createAliasDecl()
+  {
+    AliasDeclImpl aliasDecl = new AliasDeclImpl();
+    return aliasDecl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Entity createEntity()
+  {
+    EntityImpl entity = new EntityImpl();
+    return entity;
   }
 
   /**

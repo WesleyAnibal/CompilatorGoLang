@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="go" nsURI="http://www.xtext.org/go/Go" nsPrefix="go">
-  <eClassifiers xsi:type="ecore:EClass" name="Model">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
-        eType="#//Type" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Go">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//Greeting" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Type">
+  <eClassifiers xsi:type="ecore:EClass" name="Greeting">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Greeting" eSuperTypes="#//Type"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="#//Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeName" eSuperTypes="#//Type">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeSpec" eSuperTypes="#//Greeting">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeDef" eSuperTypes="#//TypeSpec"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AliasDecl" eSuperTypes="#//TypeSpec"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//Greeting"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="#//Greeting"/>
 </ecore:EPackage>

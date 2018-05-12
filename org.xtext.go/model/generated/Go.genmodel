@@ -6,13 +6,22 @@
     copyrightFields="false" runtimeVersion="2.13">
   <genPackages prefix="Go" basePackage="org.xtext.go" disposableProviderFactory="true"
       fileExtensions="Go" ecorePackage="Go.ecore#/">
-    <genClasses ecoreClass="Go.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Model/types"/>
+    <genClasses ecoreClass="Go.ecore#//Go">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Go/elements"/>
     </genClasses>
-    <genClasses ecoreClass="Go.ecore#//Type">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Type/name"/>
+    <genClasses ecoreClass="Go.ecore#//Greeting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Greeting/name"/>
     </genClasses>
-    <genClasses ecoreClass="Go.ecore#//Greeting"/>
+    <genClasses ecoreClass="Go.ecore#//Type"/>
+    <genClasses ecoreClass="Go.ecore#//TypeName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//TypeName/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Go.ecore#//TypeSpec">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//TypeSpec/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Go.ecore#//TypeDef"/>
+    <genClasses ecoreClass="Go.ecore#//AliasDecl"/>
+    <genClasses ecoreClass="Go.ecore#//Entity"/>
     <genClasses ecoreClass="Go.ecore#//DataType"/>
   </genPackages>
 </genmodel:GenModel>
