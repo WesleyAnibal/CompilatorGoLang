@@ -20,7 +20,6 @@ import org.xtext.go.go.Condition;
 import org.xtext.go.go.DataType;
 import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.ElseCondition;
-import org.xtext.go.go.Entity;
 import org.xtext.go.go.Go;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.IfCondition;
@@ -59,9 +58,6 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case GoPackage.ELSE_CONDITION:
 				sequence_ElseCondition(context, (ElseCondition) semanticObject); 
-				return; 
-			case GoPackage.ENTITY:
-				sequence_Entity(context, (Entity) semanticObject); 
 				return; 
 			case GoPackage.GO:
 				sequence_Go(context, (Go) semanticObject); 
@@ -137,7 +133,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Condition returns Condition
 	 *
 	 * Constraint:
-	 *     (if=IfCondition elseif=ElseIfCondition else=ElseCondition?)
+	 *     (if=IfCondition elseif=ElseIfCondition* else=ElseCondition?)
 	 */
 	protected void sequence_Condition(ISerializationContext context, Condition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -181,35 +177,10 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     ElseCondition returns ElseCondition
 	 *
 	 * Constraint:
-	 *     then=Greeting
+	 *     then=Greeting+
 	 */
 	protected void sequence_ElseCondition(ISerializationContext context, ElseCondition semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.ELSE_CONDITION__THEN) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.ELSE_CONDITION__THEN));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getElseConditionAccess().getThenGreetingParserRuleCall_2_0(), semanticObject.getThen());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Greeting returns Entity
-	 *     Entity returns Entity
-	 *
-	 * Constraint:
-	 *     name=ID
-	 */
-	protected void sequence_Entity(ISerializationContext context, Entity semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.ENTITY__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.ENTITY__NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_2_0_0(), semanticObject.getName());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -231,19 +202,10 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     ElseIfCondition returns IfCondition
 	 *
 	 * Constraint:
-	 *     (cond=Expression then=Greeting)
+	 *     (cond=Expression then=Greeting*)
 	 */
 	protected void sequence_IfCondition(ISerializationContext context, IfCondition semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.IF_CONDITION__COND) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.IF_CONDITION__COND));
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.IF_CONDITION__THEN) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.IF_CONDITION__THEN));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getIfConditionAccess().getCondExpressionParserRuleCall_1_0(), semanticObject.getCond());
-		feeder.accept(grammarAccess.getIfConditionAccess().getThenGreetingParserRuleCall_3_0(), semanticObject.getThen());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

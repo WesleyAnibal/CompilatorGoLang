@@ -116,11 +116,6 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createDecFuncAdapter();
       }
       @Override
-      public Adapter caseEntity(Entity object)
-      {
-        return createEntityAdapter();
-      }
-      @Override
       public Adapter caseDataType(DataType object)
       {
         return createDataTypeAdapter();
@@ -283,21 +278,6 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDecFuncAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Entity <em>Entity</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.go.go.Entity
-   * @generated
-   */
-  public Adapter createEntityAdapter()
   {
     return null;
   }

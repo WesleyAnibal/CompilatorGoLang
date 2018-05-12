@@ -80,10 +80,10 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cElseElseConditionParserRuleCall_2_0 = (RuleCall)cElseAssignment_2.eContents().get(0);
 		
 		//Condition:
-		//	if=IfCondition elseif=ElseIfCondition else=ElseCondition?;
+		//	if=IfCondition elseif=ElseIfCondition* else=ElseCondition?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//if=IfCondition elseif=ElseIfCondition else=ElseCondition?
+		//if=IfCondition elseif=ElseIfCondition* else=ElseCondition?
 		public Group getGroup() { return cGroup; }
 		
 		//if=IfCondition
@@ -92,7 +92,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		//IfCondition
 		public RuleCall getIfIfConditionParserRuleCall_0_0() { return cIfIfConditionParserRuleCall_0_0; }
 		
-		//elseif=ElseIfCondition
+		//elseif=ElseIfCondition*
 		public Assignment getElseifAssignment_1() { return cElseifAssignment_1; }
 		
 		//ElseIfCondition
@@ -116,10 +116,10 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//IfCondition:
-		//	IF cond=Expression "{" then=Greeting "}";
+		//	IF cond=Expression "{" then=Greeting* "}";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//IF cond=Expression "{" then=Greeting "}"
+		//IF cond=Expression "{" then=Greeting* "}"
 		public Group getGroup() { return cGroup; }
 		
 		//IF
@@ -134,7 +134,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//then=Greeting
+		//then=Greeting*
 		public Assignment getThenAssignment_3() { return cThenAssignment_3; }
 		
 		//Greeting
@@ -172,10 +172,10 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//ElseCondition:
-		//	=> ELSE "{" then=Greeting "}";
+		//	=> ELSE "{" then=Greeting* "}";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//=> ELSE "{" then=Greeting "}"
+		//=> ELSE "{" then=Greeting* "}"
 		public Group getGroup() { return cGroup; }
 		
 		//=> ELSE
@@ -184,7 +184,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//then=Greeting
+		//then=Greeting*
 		public Assignment getThenAssignment_2() { return cThenAssignment_2; }
 		
 		//Greeting
@@ -728,16 +728,15 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPrintKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Assignment cNameAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_2_0_0 = (RuleCall)cNameAssignment_2_0.eContents().get(0);
+		private final RuleCall cSTRINGTerminalRuleCall_2_0 = (RuleCall)cAlternatives_2.eContents().get(0);
 		private final RuleCall cINTTerminalRuleCall_2_1 = (RuleCall)cAlternatives_2.eContents().get(1);
 		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Entity:
-		//	'print' '(' (name=ID | INT+) ')';
+		//	'print' '(' (STRING | INT+) ')';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'print' '(' (name=ID | INT+) ')'
+		//'print' '(' (STRING | INT+) ')'
 		public Group getGroup() { return cGroup; }
 		
 		//'print'
@@ -746,14 +745,11 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		//'('
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 		
-		//name=ID | INT+
+		//STRING | INT+
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 		
-		//name=ID
-		public Assignment getNameAssignment_2_0() { return cNameAssignment_2_0; }
-		
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0_0() { return cNameIDTerminalRuleCall_2_0_0; }
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_2_0() { return cSTRINGTerminalRuleCall_2_0; }
 		
 		//INT+
 		public RuleCall getINTTerminalRuleCall_2_1() { return cINTTerminalRuleCall_2_1; }
@@ -936,7 +932,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Condition:
-	//	if=IfCondition elseif=ElseIfCondition else=ElseCondition?;
+	//	if=IfCondition elseif=ElseIfCondition* else=ElseCondition?;
 	public ConditionElements getConditionAccess() {
 		return pCondition;
 	}
@@ -946,7 +942,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//IfCondition:
-	//	IF cond=Expression "{" then=Greeting "}";
+	//	IF cond=Expression "{" then=Greeting* "}";
 	public IfConditionElements getIfConditionAccess() {
 		return pIfCondition;
 	}
@@ -966,7 +962,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//ElseCondition:
-	//	=> ELSE "{" then=Greeting "}";
+	//	=> ELSE "{" then=Greeting* "}";
 	public ElseConditionElements getElseConditionAccess() {
 		return pElseCondition;
 	}
@@ -1227,7 +1223,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Entity:
-	//	'print' '(' (name=ID | INT+) ')';
+	//	'print' '(' (STRING | INT+) ')';
 	public EntityElements getEntityAccess() {
 		return pEntity;
 	}

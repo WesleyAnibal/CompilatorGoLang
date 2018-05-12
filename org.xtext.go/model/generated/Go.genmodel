@@ -29,9 +29,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecFunc/parameter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecFunc/args"/>
     </genClasses>
-    <genClasses ecoreClass="Go.ecore#//Entity">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Entity/name"/>
-    </genClasses>
     <genClasses ecoreClass="Go.ecore#//DataType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DataType/name"/>
     </genClasses>

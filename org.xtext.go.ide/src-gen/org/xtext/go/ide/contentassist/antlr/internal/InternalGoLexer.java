@@ -12,9 +12,9 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalGoLexer extends Lexer {
-    public static final int RULE_NEWLINE=7;
-    public static final int RULE_STRING=9;
-    public static final int RULE_SL_COMMENT=8;
+    public static final int RULE_NEWLINE=8;
+    public static final int RULE_STRING=6;
+    public static final int RULE_SL_COMMENT=9;
     public static final int T__19=19;
     public static final int T__15=15;
     public static final int T__37=37;
@@ -33,7 +33,7 @@ public class InternalGoLexer extends Lexer {
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
-    public static final int RULE_ID=6;
+    public static final int RULE_ID=7;
     public static final int RULE_EOL=4;
     public static final int RULE_WS=11;
     public static final int RULE_ANY_OTHER=12;
@@ -672,10 +672,10 @@ public class InternalGoLexer extends Lexer {
         try {
             int _type = RULE_EOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGo.g:2558:10: ( ( RULE_NEWLINE | RULE_SL_COMMENT ) )
-            // InternalGo.g:2558:12: ( RULE_NEWLINE | RULE_SL_COMMENT )
+            // InternalGo.g:2543:10: ( ( RULE_NEWLINE | RULE_SL_COMMENT ) )
+            // InternalGo.g:2543:12: ( RULE_NEWLINE | RULE_SL_COMMENT )
             {
-            // InternalGo.g:2558:12: ( RULE_NEWLINE | RULE_SL_COMMENT )
+            // InternalGo.g:2543:12: ( RULE_NEWLINE | RULE_SL_COMMENT )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -693,14 +693,14 @@ public class InternalGoLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalGo.g:2558:13: RULE_NEWLINE
+                    // InternalGo.g:2543:13: RULE_NEWLINE
                     {
                     mRULE_NEWLINE(); 
 
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2558:26: RULE_SL_COMMENT
+                    // InternalGo.g:2543:26: RULE_SL_COMMENT
                     {
                     mRULE_SL_COMMENT(); 
 
@@ -725,12 +725,12 @@ public class InternalGoLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGo.g:2560:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalGo.g:2560:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalGo.g:2545:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalGo.g:2545:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalGo.g:2560:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalGo.g:2545:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop2:
             do {
                 int alt2=2;
@@ -743,7 +743,7 @@ public class InternalGoLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalGo.g:2560:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalGo.g:2545:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -763,7 +763,7 @@ public class InternalGoLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalGo.g:2560:40: ( ( '\\r' )? '\\n' )?
+            // InternalGo.g:2545:40: ( ( '\\r' )? '\\n' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -772,9 +772,9 @@ public class InternalGoLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // InternalGo.g:2560:41: ( '\\r' )? '\\n'
+                    // InternalGo.g:2545:41: ( '\\r' )? '\\n'
                     {
-                    // InternalGo.g:2560:41: ( '\\r' )?
+                    // InternalGo.g:2545:41: ( '\\r' )?
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
@@ -783,7 +783,7 @@ public class InternalGoLexer extends Lexer {
                     }
                     switch (alt3) {
                         case 1 :
-                            // InternalGo.g:2560:41: '\\r'
+                            // InternalGo.g:2545:41: '\\r'
                             {
                             match('\r'); 
 
@@ -813,10 +813,10 @@ public class InternalGoLexer extends Lexer {
     // $ANTLR start "RULE_NEWLINE"
     public final void mRULE_NEWLINE() throws RecognitionException {
         try {
-            // InternalGo.g:2562:23: ( ( '\\r' )? '\\n' )
-            // InternalGo.g:2562:25: ( '\\r' )? '\\n'
+            // InternalGo.g:2547:23: ( ( '\\r' )? '\\n' )
+            // InternalGo.g:2547:25: ( '\\r' )? '\\n'
             {
-            // InternalGo.g:2562:25: ( '\\r' )?
+            // InternalGo.g:2547:25: ( '\\r' )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -825,7 +825,7 @@ public class InternalGoLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // InternalGo.g:2562:25: '\\r'
+                    // InternalGo.g:2547:25: '\\r'
                     {
                     match('\r'); 
 
@@ -849,10 +849,10 @@ public class InternalGoLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGo.g:2564:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalGo.g:2564:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalGo.g:2549:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalGo.g:2549:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalGo.g:2564:11: ( '^' )?
+            // InternalGo.g:2549:11: ( '^' )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -861,7 +861,7 @@ public class InternalGoLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalGo.g:2564:11: '^'
+                    // InternalGo.g:2549:11: '^'
                     {
                     match('^'); 
 
@@ -879,7 +879,7 @@ public class InternalGoLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalGo.g:2564:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalGo.g:2549:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop7:
             do {
                 int alt7=2;
@@ -928,10 +928,10 @@ public class InternalGoLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGo.g:2566:10: ( ( '0' .. '9' )+ )
-            // InternalGo.g:2566:12: ( '0' .. '9' )+
+            // InternalGo.g:2551:10: ( ( '0' .. '9' )+ )
+            // InternalGo.g:2551:12: ( '0' .. '9' )+
             {
-            // InternalGo.g:2566:12: ( '0' .. '9' )+
+            // InternalGo.g:2551:12: ( '0' .. '9' )+
             int cnt8=0;
             loop8:
             do {
@@ -945,7 +945,7 @@ public class InternalGoLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalGo.g:2566:13: '0' .. '9'
+            	    // InternalGo.g:2551:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -977,10 +977,10 @@ public class InternalGoLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGo.g:2568:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalGo.g:2568:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalGo.g:2553:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalGo.g:2553:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalGo.g:2568:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalGo.g:2553:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -998,10 +998,10 @@ public class InternalGoLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // InternalGo.g:2568:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalGo.g:2553:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalGo.g:2568:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalGo.g:2553:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop9:
                     do {
                         int alt9=3;
@@ -1017,7 +1017,7 @@ public class InternalGoLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // InternalGo.g:2568:21: '\\\\' .
+                    	    // InternalGo.g:2553:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1025,7 +1025,7 @@ public class InternalGoLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalGo.g:2568:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalGo.g:2553:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1050,10 +1050,10 @@ public class InternalGoLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2568:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalGo.g:2553:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalGo.g:2568:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalGo.g:2553:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop10:
                     do {
                         int alt10=3;
@@ -1069,7 +1069,7 @@ public class InternalGoLexer extends Lexer {
 
                         switch (alt10) {
                     	case 1 :
-                    	    // InternalGo.g:2568:54: '\\\\' .
+                    	    // InternalGo.g:2553:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1077,7 +1077,7 @@ public class InternalGoLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalGo.g:2568:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalGo.g:2553:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1120,12 +1120,12 @@ public class InternalGoLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGo.g:2570:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalGo.g:2570:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalGo.g:2555:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalGo.g:2555:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalGo.g:2570:24: ( options {greedy=false; } : . )*
+            // InternalGo.g:2555:24: ( options {greedy=false; } : . )*
             loop12:
             do {
                 int alt12=2;
@@ -1150,7 +1150,7 @@ public class InternalGoLexer extends Lexer {
 
                 switch (alt12) {
             	case 1 :
-            	    // InternalGo.g:2570:52: .
+            	    // InternalGo.g:2555:52: .
             	    {
             	    matchAny(); 
 
@@ -1180,10 +1180,10 @@ public class InternalGoLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGo.g:2572:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalGo.g:2572:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalGo.g:2557:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalGo.g:2557:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalGo.g:2572:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalGo.g:2557:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt13=0;
             loop13:
             do {
@@ -1237,8 +1237,8 @@ public class InternalGoLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGo.g:2574:16: ( . )
-            // InternalGo.g:2574:18: .
+            // InternalGo.g:2559:16: ( . )
+            // InternalGo.g:2559:18: .
             {
             matchAny(); 
 

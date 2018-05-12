@@ -11,7 +11,6 @@ import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
@@ -22,8 +21,7 @@ import org.xtext.go.services.GoGrammarAccess;
 public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected GoGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Entity_Greeting_EOLTerminalRuleCall_3_or___PrintKeyword_0_LeftParenthesisKeyword_1_INTTerminalRuleCall_2_1_p_RightParenthesisKeyword_3__;
-	protected AbstractElementAlias match_Entity_INTTerminalRuleCall_2_1_p;
+	protected AbstractElementAlias match_Greeting_EOLTerminalRuleCall_3_or_EntityParserRuleCall_1;
 	protected AbstractElementAlias match_Literal_FalseKeyword_1_or_INTTerminalRuleCall_2;
 	protected AbstractElementAlias match_PrimaryExpression_LeftParenthesisKeyword_0_0_a;
 	protected AbstractElementAlias match_PrimaryExpression_LeftParenthesisKeyword_0_0_p;
@@ -31,8 +29,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (GoGrammarAccess) access;
-		match_Entity_Greeting_EOLTerminalRuleCall_3_or___PrintKeyword_0_LeftParenthesisKeyword_1_INTTerminalRuleCall_2_1_p_RightParenthesisKeyword_3__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getEntityAccess().getPrintKeyword_0()), new TokenAlias(false, false, grammarAccess.getEntityAccess().getLeftParenthesisKeyword_1()), new TokenAlias(true, false, grammarAccess.getEntityAccess().getINTTerminalRuleCall_2_1()), new TokenAlias(false, false, grammarAccess.getEntityAccess().getRightParenthesisKeyword_3())), new TokenAlias(false, false, grammarAccess.getGreetingAccess().getEOLTerminalRuleCall_3()));
-		match_Entity_INTTerminalRuleCall_2_1_p = new TokenAlias(true, false, grammarAccess.getEntityAccess().getINTTerminalRuleCall_2_1());
+		match_Greeting_EOLTerminalRuleCall_3_or_EntityParserRuleCall_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getGreetingAccess().getEOLTerminalRuleCall_3()), new TokenAlias(false, false, grammarAccess.getGreetingAccess().getEntityParserRuleCall_1()));
 		match_Literal_FalseKeyword_1_or_INTTerminalRuleCall_2 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getLiteralAccess().getFalseKeyword_1()), new TokenAlias(false, false, grammarAccess.getLiteralAccess().getINTTerminalRuleCall_2()));
 		match_PrimaryExpression_LeftParenthesisKeyword_0_0_a = new TokenAlias(true, true, grammarAccess.getPrimaryExpressionAccess().getLeftParenthesisKeyword_0_0());
 		match_PrimaryExpression_LeftParenthesisKeyword_0_0_p = new TokenAlias(true, false, grammarAccess.getPrimaryExpressionAccess().getLeftParenthesisKeyword_0_0());
@@ -44,6 +41,8 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getELSEToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getEOLRule())
 			return getEOLToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getEntityRule())
+			return getEntityToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getFUNCRule())
 			return getFUNCToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getIFRule())
@@ -71,6 +70,16 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return "\n";
+	}
+	
+	/**
+	 * Entity:
+	 * 	'print' '(' (STRING | INT+) ')';
+	 */
+	protected String getEntityToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "print(\"\")";
 	}
 	
 	/**
@@ -108,10 +117,8 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Entity_Greeting_EOLTerminalRuleCall_3_or___PrintKeyword_0_LeftParenthesisKeyword_1_INTTerminalRuleCall_2_1_p_RightParenthesisKeyword_3__.equals(syntax))
-				emit_Entity_Greeting_EOLTerminalRuleCall_3_or___PrintKeyword_0_LeftParenthesisKeyword_1_INTTerminalRuleCall_2_1_p_RightParenthesisKeyword_3__(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Entity_INTTerminalRuleCall_2_1_p.equals(syntax))
-				emit_Entity_INTTerminalRuleCall_2_1_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_Greeting_EOLTerminalRuleCall_3_or_EntityParserRuleCall_1.equals(syntax))
+				emit_Greeting_EOLTerminalRuleCall_3_or_EntityParserRuleCall_1(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Literal_FalseKeyword_1_or_INTTerminalRuleCall_2.equals(syntax))
 				emit_Literal_FalseKeyword_1_or_INTTerminalRuleCall_2(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_PrimaryExpression_LeftParenthesisKeyword_0_0_a.equals(syntax))
@@ -124,29 +131,18 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Ambiguous syntax:
-	 *     EOL | ('print' '(' INT+ ')')
+	 *     EOL | Entity
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)
 	 */
-	protected void emit_Entity_Greeting_EOLTerminalRuleCall_3_or___PrintKeyword_0_LeftParenthesisKeyword_1_INTTerminalRuleCall_2_1_p_RightParenthesisKeyword_3__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Greeting_EOLTerminalRuleCall_3_or_EntityParserRuleCall_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     INT+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) 'print' '(' (ambiguity) ')' (rule start)
-	 */
-	protected void emit_Entity_INTTerminalRuleCall_2_1_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     INT | 'false'
+	 *     'false' | INT
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) '('* (ambiguity) (rule start)
@@ -161,7 +157,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '('*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (INT | 'false') (rule start)
+	 *     (rule start) (ambiguity) ('false' | INT) (rule start)
 	 *     (rule start) (ambiguity) value='true'
 	 *     (rule start) (ambiguity) {AndExpression.left=}
 	 *     (rule start) (ambiguity) {ComparisonExpression.left=}

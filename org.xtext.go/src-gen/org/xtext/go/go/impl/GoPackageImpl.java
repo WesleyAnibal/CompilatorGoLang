@@ -17,7 +17,6 @@ import org.xtext.go.go.DataType;
 import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.ElseCondition;
 import org.xtext.go.go.ElseIfCondition;
-import org.xtext.go.go.Entity;
 import org.xtext.go.go.Expression;
 import org.xtext.go.go.Go;
 import org.xtext.go.go.GoFactory;
@@ -90,13 +89,6 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * @generated
    */
   private EClass decFuncEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass entityEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -381,26 +373,6 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getEntity()
-  {
-    return entityEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getEntity_Name()
-  {
-    return (EAttribute)entityEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getDataType()
   {
     return dataTypeEClass;
@@ -592,9 +564,6 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     createEAttribute(decFuncEClass, DEC_FUNC__PARAMETER);
     createEReference(decFuncEClass, DEC_FUNC__ARGS);
 
-    entityEClass = createEClass(ENTITY);
-    createEAttribute(entityEClass, ENTITY__NAME);
-
     dataTypeEClass = createEClass(DATA_TYPE);
     createEAttribute(dataTypeEClass, DATA_TYPE__NAME);
 
@@ -647,7 +616,6 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     conditionEClass.getESuperTypes().add(this.getGreeting());
     ifConditionEClass.getESuperTypes().add(this.getElseIfCondition());
     decFuncEClass.getESuperTypes().add(this.getGreeting());
-    entityEClass.getESuperTypes().add(this.getGreeting());
     dataTypeEClass.getESuperTypes().add(this.getGreeting());
     orExpressionEClass.getESuperTypes().add(this.getExpression());
     andExpressionEClass.getESuperTypes().add(this.getExpression());
@@ -680,9 +648,6 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEAttribute(getDecFunc_Name(), ecorePackage.getEString(), "name", null, 0, 1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDecFunc_Parameter(), ecorePackage.getEString(), "parameter", null, 0, 1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDecFunc_Args(), this.getGreeting(), null, "args", null, 0, -1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getEntity_Name(), ecorePackage.getEString(), "name", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDataType_Name(), ecorePackage.getEString(), "name", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

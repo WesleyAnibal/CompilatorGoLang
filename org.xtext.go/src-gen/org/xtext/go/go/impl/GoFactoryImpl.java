@@ -73,7 +73,6 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
       case GoPackage.ELSE_CONDITION: return createElseCondition();
       case GoPackage.EXPRESSION: return createExpression();
       case GoPackage.DEC_FUNC: return createDecFunc();
-      case GoPackage.ENTITY: return createEntity();
       case GoPackage.DATA_TYPE: return createDataType();
       case GoPackage.OR_EXPRESSION: return createOrExpression();
       case GoPackage.AND_EXPRESSION: return createAndExpression();
@@ -170,17 +169,6 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     DecFuncImpl decFunc = new DecFuncImpl();
     return decFunc;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Entity createEntity()
-  {
-    EntityImpl entity = new EntityImpl();
-    return entity;
   }
 
   /**

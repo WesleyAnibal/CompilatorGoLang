@@ -300,34 +300,6 @@ public interface GoPackage extends EPackage
   int DEC_FUNC_FEATURE_COUNT = GREETING_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link org.xtext.go.go.impl.EntityImpl <em>Entity</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.go.go.impl.EntityImpl
-   * @see org.xtext.go.go.impl.GoPackageImpl#getEntity()
-   * @generated
-   */
-  int ENTITY = 8;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY__NAME = GREETING_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Entity</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY_FEATURE_COUNT = GREETING_FEATURE_COUNT + 1;
-
-  /**
    * The meta object id for the '{@link org.xtext.go.go.impl.DataTypeImpl <em>Data Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -335,7 +307,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDataType()
    * @generated
    */
-  int DATA_TYPE = 9;
+  int DATA_TYPE = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -363,7 +335,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getOrExpression()
    * @generated
    */
-  int OR_EXPRESSION = 10;
+  int OR_EXPRESSION = 9;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -400,7 +372,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getAndExpression()
    * @generated
    */
-  int AND_EXPRESSION = 11;
+  int AND_EXPRESSION = 10;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -437,7 +409,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getComparisonExpression()
    * @generated
    */
-  int COMPARISON_EXPRESSION = 12;
+  int COMPARISON_EXPRESSION = 11;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -483,7 +455,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 13;
+  int LITERAL = 12;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -693,27 +665,6 @@ public interface GoPackage extends EPackage
    * @generated
    */
   EReference getDecFunc_Args();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.go.go.Entity <em>Entity</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Entity</em>'.
-   * @see org.xtext.go.go.Entity
-   * @generated
-   */
-  EClass getEntity();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.go.go.Entity#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.go.go.Entity#getName()
-   * @see #getEntity()
-   * @generated
-   */
-  EAttribute getEntity_Name();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.DataType <em>Data Type</em>}'.
@@ -1046,24 +997,6 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EReference DEC_FUNC__ARGS = eINSTANCE.getDecFunc_Args();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.go.go.impl.EntityImpl <em>Entity</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.go.go.impl.EntityImpl
-     * @see org.xtext.go.go.impl.GoPackageImpl#getEntity()
-     * @generated
-     */
-    EClass ENTITY = eINSTANCE.getEntity();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ENTITY__NAME = eINSTANCE.getEntity_Name();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.DataTypeImpl <em>Data Type</em>}' class.

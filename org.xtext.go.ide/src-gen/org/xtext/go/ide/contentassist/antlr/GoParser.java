@@ -69,7 +69,6 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDecFuncAccess().getParameterAssignment_3(), "rule__DecFunc__ParameterAssignment_3");
 					put(grammarAccess.getDecFuncAccess().getParameterAssignment_4_1(), "rule__DecFunc__ParameterAssignment_4_1");
 					put(grammarAccess.getDecFuncAccess().getArgsAssignment_7(), "rule__DecFunc__ArgsAssignment_7");
-					put(grammarAccess.getEntityAccess().getNameAssignment_2_0(), "rule__Entity__NameAssignment_2_0");
 					put(grammarAccess.getDataTypeAccess().getNameAssignment_1(), "rule__DataType__NameAssignment_1");
 				}
 			};

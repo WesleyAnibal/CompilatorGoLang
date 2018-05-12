@@ -882,9 +882,9 @@ rule__Entity__Alternatives_2
 	}
 :
 	(
-		{ before(grammarAccess.getEntityAccess().getNameAssignment_2_0()); }
-		(rule__Entity__NameAssignment_2_0)
-		{ after(grammarAccess.getEntityAccess().getNameAssignment_2_0()); }
+		{ before(grammarAccess.getEntityAccess().getSTRINGTerminalRuleCall_2_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getEntityAccess().getSTRINGTerminalRuleCall_2_0()); }
 	)
 	|
 	(
@@ -950,7 +950,7 @@ rule__Condition__Group__1__Impl
 :
 (
 	{ before(grammarAccess.getConditionAccess().getElseifAssignment_1()); }
-	(rule__Condition__ElseifAssignment_1)
+	(rule__Condition__ElseifAssignment_1)*
 	{ after(grammarAccess.getConditionAccess().getElseifAssignment_1()); }
 )
 ;
@@ -1085,7 +1085,7 @@ rule__IfCondition__Group__3__Impl
 :
 (
 	{ before(grammarAccess.getIfConditionAccess().getThenAssignment_3()); }
-	(rule__IfCondition__ThenAssignment_3)
+	(rule__IfCondition__ThenAssignment_3)*
 	{ after(grammarAccess.getIfConditionAccess().getThenAssignment_3()); }
 )
 ;
@@ -1247,7 +1247,7 @@ rule__ElseCondition__Group__2__Impl
 :
 (
 	{ before(grammarAccess.getElseConditionAccess().getThenAssignment_2()); }
-	(rule__ElseCondition__ThenAssignment_2)
+	(rule__ElseCondition__ThenAssignment_2)*
 	{ after(grammarAccess.getElseConditionAccess().getThenAssignment_2()); }
 )
 ;
@@ -2519,21 +2519,6 @@ rule__DecFunc__ArgsAssignment_7
 		{ before(grammarAccess.getDecFuncAccess().getArgsGreetingParserRuleCall_7_0()); }
 		ruleGreeting
 		{ after(grammarAccess.getDecFuncAccess().getArgsGreetingParserRuleCall_7_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Entity__NameAssignment_2_0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_2_0_0()); }
-		RULE_ID
-		{ after(grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_2_0_0()); }
 	)
 ;
 finally {

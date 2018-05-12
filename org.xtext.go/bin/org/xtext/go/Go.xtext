@@ -18,17 +18,16 @@ terminal NEWLINE:
 	('\r'? '\n');
 	
 Condition: 
-    (if=IfCondition(elseif=ElseIfCondition)(else=ElseCondition)?);
+    (if=IfCondition(elseif=ElseIfCondition)*(else=ElseCondition)?);
     
 IfCondition:
-	IF cond=Expression "{" 
-    then=Greeting 
-    "}";
+	IF cond=Expression "{"then=Greeting*"}";
+    
 ElseIfCondition:
 	(=>ELSE IfCondition);
 	
 ElseCondition:
-	(=>ELSE "{"then=Greeting"}"); 
+	(=>ELSE "{"then=Greeting*"}"); 
   
 Expression:
     OrExpression
@@ -112,7 +111,7 @@ RANGE:
 	"range";
 	
 Entity:
-	'print' '(' (name=ID | INT+) ')';
+	'print' '(' (STRING | INT+) ')';
 
 DataType:
 	'datatype' name=ID;
