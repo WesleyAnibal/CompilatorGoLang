@@ -67,11 +67,6 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
     {
       case GoPackage.GO: return createGo();
       case GoPackage.GREETING: return createGreeting();
-      case GoPackage.TYPE: return createType();
-      case GoPackage.TYPE_NAME: return createTypeName();
-      case GoPackage.TYPE_SPEC: return createTypeSpec();
-      case GoPackage.TYPE_DEF: return createTypeDef();
-      case GoPackage.ALIAS_DECL: return createAliasDecl();
       case GoPackage.ENTITY: return createEntity();
       case GoPackage.DATA_TYPE: return createDataType();
       default:
@@ -99,61 +94,6 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     GreetingImpl greeting = new GreetingImpl();
     return greeting;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Type createType()
-  {
-    TypeImpl type = new TypeImpl();
-    return type;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TypeName createTypeName()
-  {
-    TypeNameImpl typeName = new TypeNameImpl();
-    return typeName;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TypeSpec createTypeSpec()
-  {
-    TypeSpecImpl typeSpec = new TypeSpecImpl();
-    return typeSpec;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TypeDef createTypeDef()
-  {
-    TypeDefImpl typeDef = new TypeDefImpl();
-    return typeDef;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AliasDecl createAliasDecl()
-  {
-    AliasDeclImpl aliasDecl = new AliasDeclImpl();
-    return aliasDecl;
   }
 
   /**

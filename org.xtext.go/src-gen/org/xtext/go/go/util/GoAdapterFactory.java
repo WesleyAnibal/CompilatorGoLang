@@ -86,31 +86,6 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createGreetingAdapter();
       }
       @Override
-      public Adapter caseType(Type object)
-      {
-        return createTypeAdapter();
-      }
-      @Override
-      public Adapter caseTypeName(TypeName object)
-      {
-        return createTypeNameAdapter();
-      }
-      @Override
-      public Adapter caseTypeSpec(TypeSpec object)
-      {
-        return createTypeSpecAdapter();
-      }
-      @Override
-      public Adapter caseTypeDef(TypeDef object)
-      {
-        return createTypeDefAdapter();
-      }
-      @Override
-      public Adapter caseAliasDecl(AliasDecl object)
-      {
-        return createAliasDeclAdapter();
-      }
-      @Override
       public Adapter caseEntity(Entity object)
       {
         return createEntityAdapter();
@@ -168,81 +143,6 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createGreetingAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Type <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.go.go.Type
-   * @generated
-   */
-  public Adapter createTypeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.go.go.TypeName <em>Type Name</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.go.go.TypeName
-   * @generated
-   */
-  public Adapter createTypeNameAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.go.go.TypeSpec <em>Type Spec</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.go.go.TypeSpec
-   * @generated
-   */
-  public Adapter createTypeSpecAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.go.go.TypeDef <em>Type Def</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.go.go.TypeDef
-   * @generated
-   */
-  public Adapter createTypeDefAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.go.go.AliasDecl <em>Alias Decl</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.go.go.AliasDecl
-   * @generated
-   */
-  public Adapter createAliasDeclAdapter()
   {
     return null;
   }

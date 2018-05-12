@@ -87,47 +87,6 @@ public class GoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GoPackage.TYPE:
-      {
-        Type type = (Type)theEObject;
-        T result = caseType(type);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GoPackage.TYPE_NAME:
-      {
-        TypeName typeName = (TypeName)theEObject;
-        T result = caseTypeName(typeName);
-        if (result == null) result = caseType(typeName);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GoPackage.TYPE_SPEC:
-      {
-        TypeSpec typeSpec = (TypeSpec)theEObject;
-        T result = caseTypeSpec(typeSpec);
-        if (result == null) result = caseGreeting(typeSpec);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GoPackage.TYPE_DEF:
-      {
-        TypeDef typeDef = (TypeDef)theEObject;
-        T result = caseTypeDef(typeDef);
-        if (result == null) result = caseTypeSpec(typeDef);
-        if (result == null) result = caseGreeting(typeDef);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GoPackage.ALIAS_DECL:
-      {
-        AliasDecl aliasDecl = (AliasDecl)theEObject;
-        T result = caseAliasDecl(aliasDecl);
-        if (result == null) result = caseTypeSpec(aliasDecl);
-        if (result == null) result = caseGreeting(aliasDecl);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case GoPackage.ENTITY:
       {
         Entity entity = (Entity)theEObject;
@@ -176,86 +135,6 @@ public class GoSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseGreeting(Greeting object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Type</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Type</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseType(Type object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Type Name</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Type Name</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTypeName(TypeName object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Type Spec</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Type Spec</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTypeSpec(TypeSpec object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Type Def</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Type Def</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTypeDef(TypeDef object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Alias Decl</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Alias Decl</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAliasDecl(AliasDecl object)
   {
     return null;
   }

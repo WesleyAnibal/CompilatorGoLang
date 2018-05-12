@@ -14,13 +14,10 @@ import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
-import org.xtext.go.go.AliasDecl;
 import org.xtext.go.go.DataType;
 import org.xtext.go.go.Entity;
 import org.xtext.go.go.Go;
 import org.xtext.go.go.GoPackage;
-import org.xtext.go.go.TypeDef;
-import org.xtext.go.go.TypeName;
 import org.xtext.go.services.GoGrammarAccess;
 
 @SuppressWarnings("all")
@@ -37,9 +34,6 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == GoPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case GoPackage.ALIAS_DECL:
-				sequence_AliasDecl(context, (AliasDecl) semanticObject); 
-				return; 
 			case GoPackage.DATA_TYPE:
 				sequence_DataType(context, (DataType) semanticObject); 
 				return; 
@@ -49,39 +43,10 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case GoPackage.GO:
 				sequence_Go(context, (Go) semanticObject); 
 				return; 
-			case GoPackage.TYPE_DEF:
-				sequence_TypeDef(context, (TypeDef) semanticObject); 
-				return; 
-			case GoPackage.TYPE_NAME:
-				sequence_TypeName(context, (TypeName) semanticObject); 
-				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
-	
-	/**
-	 * Contexts:
-	 *     Greeting returns AliasDecl
-	 *     TypeSpec returns AliasDecl
-	 *     AliasDecl returns AliasDecl
-	 *
-	 * Constraint:
-	 *     (name=ID type=Type)
-	 */
-	protected void sequence_AliasDecl(ISerializationContext context, AliasDecl semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.GREETING__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.GREETING__NAME));
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.TYPE_SPEC__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.TYPE_SPEC__TYPE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAliasDeclAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getAliasDeclAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
-		feeder.finish();
-	}
-	
 	
 	/**
 	 * Contexts:
@@ -130,48 +95,6 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_Go(ISerializationContext context, Go semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Greeting returns TypeDef
-	 *     TypeSpec returns TypeDef
-	 *     TypeDef returns TypeDef
-	 *
-	 * Constraint:
-	 *     (name=ID type=Type)
-	 */
-	protected void sequence_TypeDef(ISerializationContext context, TypeDef semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.GREETING__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.GREETING__NAME));
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.TYPE_SPEC__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.TYPE_SPEC__TYPE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getTypeDefAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getTypeDefAccess().getTypeTypeParserRuleCall_1_0(), semanticObject.getType());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Type returns TypeName
-	 *     TypeName returns TypeName
-	 *
-	 * Constraint:
-	 *     name=ID
-	 */
-	protected void sequence_TypeName(ISerializationContext context, TypeName semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.TYPE_NAME__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.TYPE_NAME__NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getTypeNameAccess().getNameIDTerminalRuleCall_0(), semanticObject.getName());
-		feeder.finish();
 	}
 	
 	

@@ -32,21 +32,10 @@ public class GoParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getGreetingAccess().getAlternatives(), "rule__Greeting__Alternatives");
-					put(grammarAccess.getTypeAccess().getAlternatives(), "rule__Type__Alternatives");
-					put(grammarAccess.getTypeSpecAccess().getAlternatives(), "rule__TypeSpec__Alternatives");
-					put(grammarAccess.getArrayLengthAccess().getAlternatives(), "rule__ArrayLength__Alternatives");
-					put(grammarAccess.getTypeAccess().getGroup_2(), "rule__Type__Group_2__0");
-					put(grammarAccess.getTypeDefAccess().getGroup(), "rule__TypeDef__Group__0");
-					put(grammarAccess.getAliasDeclAccess().getGroup(), "rule__AliasDecl__Group__0");
-					put(grammarAccess.getArrayTypeAccess().getGroup(), "rule__ArrayType__Group__0");
+					put(grammarAccess.getTerminalsAccess().getAlternatives(), "rule__Terminals__Alternatives");
 					put(grammarAccess.getEntityAccess().getGroup(), "rule__Entity__Group__0");
 					put(grammarAccess.getDataTypeAccess().getGroup(), "rule__DataType__Group__0");
 					put(grammarAccess.getGoAccess().getElementsAssignment(), "rule__Go__ElementsAssignment");
-					put(grammarAccess.getTypeNameAccess().getNameAssignment(), "rule__TypeName__NameAssignment");
-					put(grammarAccess.getTypeDefAccess().getNameAssignment_0(), "rule__TypeDef__NameAssignment_0");
-					put(grammarAccess.getTypeDefAccess().getTypeAssignment_1(), "rule__TypeDef__TypeAssignment_1");
-					put(grammarAccess.getAliasDeclAccess().getNameAssignment_0(), "rule__AliasDecl__NameAssignment_0");
-					put(grammarAccess.getAliasDeclAccess().getTypeAssignment_2(), "rule__AliasDecl__TypeAssignment_2");
 					put(grammarAccess.getEntityAccess().getNameAssignment_2(), "rule__Entity__NameAssignment_2");
 					put(grammarAccess.getDataTypeAccess().getNameAssignment_1(), "rule__DataType__NameAssignment_1");
 				}

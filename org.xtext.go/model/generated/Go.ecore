@@ -8,15 +8,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Greeting">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Type"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TypeName" eSuperTypes="#//Type">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TypeSpec" eSuperTypes="#//Greeting">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TypeDef" eSuperTypes="#//TypeSpec"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AliasDecl" eSuperTypes="#//TypeSpec"/>
   <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//Greeting"/>
   <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="#//Greeting"/>
 </ecore:EPackage>

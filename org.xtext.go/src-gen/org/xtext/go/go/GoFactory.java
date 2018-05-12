@@ -42,51 +42,6 @@ public interface GoFactory extends EFactory
   Greeting createGreeting();
 
   /**
-   * Returns a new object of class '<em>Type</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Type</em>'.
-   * @generated
-   */
-  Type createType();
-
-  /**
-   * Returns a new object of class '<em>Type Name</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Type Name</em>'.
-   * @generated
-   */
-  TypeName createTypeName();
-
-  /**
-   * Returns a new object of class '<em>Type Spec</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Type Spec</em>'.
-   * @generated
-   */
-  TypeSpec createTypeSpec();
-
-  /**
-   * Returns a new object of class '<em>Type Def</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Type Def</em>'.
-   * @generated
-   */
-  TypeDef createTypeDef();
-
-  /**
-   * Returns a new object of class '<em>Alias Decl</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Alias Decl</em>'.
-   * @generated
-   */
-  AliasDecl createAliasDecl();
-
-  /**
    * Returns a new object of class '<em>Entity</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

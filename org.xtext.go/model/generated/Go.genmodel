@@ -12,15 +12,6 @@
     <genClasses ecoreClass="Go.ecore#//Greeting">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Greeting/name"/>
     </genClasses>
-    <genClasses ecoreClass="Go.ecore#//Type"/>
-    <genClasses ecoreClass="Go.ecore#//TypeName">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//TypeName/name"/>
-    </genClasses>
-    <genClasses ecoreClass="Go.ecore#//TypeSpec">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//TypeSpec/type"/>
-    </genClasses>
-    <genClasses ecoreClass="Go.ecore#//TypeDef"/>
-    <genClasses ecoreClass="Go.ecore#//AliasDecl"/>
     <genClasses ecoreClass="Go.ecore#//Entity"/>
     <genClasses ecoreClass="Go.ecore#//DataType"/>
   </genPackages>

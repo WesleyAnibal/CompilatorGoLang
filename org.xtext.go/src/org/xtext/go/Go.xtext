@@ -6,57 +6,60 @@ Go:
 	elements+=Greeting*;
 
 Greeting:
-	DataType | Entity;
+	DataType | Entity | Terminals;
 
-terminal BREAK:
+Terminals:
+	(BREAK|CASE|CHAN|CONST|CONTINUE|ELSE|IF|FOR|FUNC|IMPORT|RETURN|PACKAGE|RANGE);
+
+BREAK:
 	"break";
 
-terminal CASE:
+CASE:
 	"case";
 
-terminal CHAN:
+CHAN:
 	"chan";
 
-terminal CONST:
+CONST:
 	"const";
 
-terminal CONTINUE:
+CONTINUE:
 	"continue";
 
-terminal ELSE:
+ELSE:
 	"else";
 
-terminal FOR:
+FOR:
 	"for";
 	
-terminal FUNC:
+FUNC:
 	"func";
 
-terminal IF:
+IF:
 	"if";
 	
-terminal IMPORT:
+IMPORT:
 	"import";
 
-terminal RETURN:
+RETURN:
 	"return";
 	
-terminal PACKAGE:
+PACKAGE:
 	"package";
 	
-terminal TYPE:
+TYPE:
 	"type";
 	
-terminal VAR:
+VAR:
 	"var";
 	
-terminal SWITCH:
+SWITCH:
 	"switch";
 
-terminal STRUCT:
+STRUCT:
 	"struct";
 
-terminal RANGE:
+RANGE:
 	"range";
 	
 Entity:

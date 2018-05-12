@@ -114,164 +114,6 @@ public interface GoPackage extends EPackage
   int GREETING_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.go.go.impl.TypeImpl <em>Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.go.go.impl.TypeImpl
-   * @see org.xtext.go.go.impl.GoPackageImpl#getType()
-   * @generated
-   */
-  int TYPE = 2;
-
-  /**
-   * The number of structural features of the '<em>Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TYPE_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.go.go.impl.TypeNameImpl <em>Type Name</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.go.go.impl.TypeNameImpl
-   * @see org.xtext.go.go.impl.GoPackageImpl#getTypeName()
-   * @generated
-   */
-  int TYPE_NAME = 3;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TYPE_NAME__NAME = TYPE_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Type Name</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TYPE_NAME_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.go.go.impl.TypeSpecImpl <em>Type Spec</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.go.go.impl.TypeSpecImpl
-   * @see org.xtext.go.go.impl.GoPackageImpl#getTypeSpec()
-   * @generated
-   */
-  int TYPE_SPEC = 4;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TYPE_SPEC__NAME = GREETING__NAME;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TYPE_SPEC__TYPE = GREETING_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Type Spec</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TYPE_SPEC_FEATURE_COUNT = GREETING_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.go.go.impl.TypeDefImpl <em>Type Def</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.go.go.impl.TypeDefImpl
-   * @see org.xtext.go.go.impl.GoPackageImpl#getTypeDef()
-   * @generated
-   */
-  int TYPE_DEF = 5;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TYPE_DEF__NAME = TYPE_SPEC__NAME;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TYPE_DEF__TYPE = TYPE_SPEC__TYPE;
-
-  /**
-   * The number of structural features of the '<em>Type Def</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TYPE_DEF_FEATURE_COUNT = TYPE_SPEC_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.go.go.impl.AliasDeclImpl <em>Alias Decl</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.go.go.impl.AliasDeclImpl
-   * @see org.xtext.go.go.impl.GoPackageImpl#getAliasDecl()
-   * @generated
-   */
-  int ALIAS_DECL = 6;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ALIAS_DECL__NAME = TYPE_SPEC__NAME;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ALIAS_DECL__TYPE = TYPE_SPEC__TYPE;
-
-  /**
-   * The number of structural features of the '<em>Alias Decl</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ALIAS_DECL_FEATURE_COUNT = TYPE_SPEC_FEATURE_COUNT + 0;
-
-  /**
    * The meta object id for the '{@link org.xtext.go.go.impl.EntityImpl <em>Entity</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -279,7 +121,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getEntity()
    * @generated
    */
-  int ENTITY = 7;
+  int ENTITY = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -307,7 +149,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDataType()
    * @generated
    */
-  int DATA_TYPE = 8;
+  int DATA_TYPE = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -369,78 +211,6 @@ public interface GoPackage extends EPackage
    * @generated
    */
   EAttribute getGreeting_Name();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.go.go.Type <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Type</em>'.
-   * @see org.xtext.go.go.Type
-   * @generated
-   */
-  EClass getType();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.go.go.TypeName <em>Type Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Type Name</em>'.
-   * @see org.xtext.go.go.TypeName
-   * @generated
-   */
-  EClass getTypeName();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.go.go.TypeName#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.go.go.TypeName#getName()
-   * @see #getTypeName()
-   * @generated
-   */
-  EAttribute getTypeName_Name();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.go.go.TypeSpec <em>Type Spec</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Type Spec</em>'.
-   * @see org.xtext.go.go.TypeSpec
-   * @generated
-   */
-  EClass getTypeSpec();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.go.go.TypeSpec#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Type</em>'.
-   * @see org.xtext.go.go.TypeSpec#getType()
-   * @see #getTypeSpec()
-   * @generated
-   */
-  EReference getTypeSpec_Type();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.go.go.TypeDef <em>Type Def</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Type Def</em>'.
-   * @see org.xtext.go.go.TypeDef
-   * @generated
-   */
-  EClass getTypeDef();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.go.go.AliasDecl <em>Alias Decl</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Alias Decl</em>'.
-   * @see org.xtext.go.go.AliasDecl
-   * @generated
-   */
-  EClass getAliasDecl();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.Entity <em>Entity</em>}'.
@@ -520,72 +290,6 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EAttribute GREETING__NAME = eINSTANCE.getGreeting_Name();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.go.go.impl.TypeImpl <em>Type</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.go.go.impl.TypeImpl
-     * @see org.xtext.go.go.impl.GoPackageImpl#getType()
-     * @generated
-     */
-    EClass TYPE = eINSTANCE.getType();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.go.go.impl.TypeNameImpl <em>Type Name</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.go.go.impl.TypeNameImpl
-     * @see org.xtext.go.go.impl.GoPackageImpl#getTypeName()
-     * @generated
-     */
-    EClass TYPE_NAME = eINSTANCE.getTypeName();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TYPE_NAME__NAME = eINSTANCE.getTypeName_Name();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.go.go.impl.TypeSpecImpl <em>Type Spec</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.go.go.impl.TypeSpecImpl
-     * @see org.xtext.go.go.impl.GoPackageImpl#getTypeSpec()
-     * @generated
-     */
-    EClass TYPE_SPEC = eINSTANCE.getTypeSpec();
-
-    /**
-     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference TYPE_SPEC__TYPE = eINSTANCE.getTypeSpec_Type();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.go.go.impl.TypeDefImpl <em>Type Def</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.go.go.impl.TypeDefImpl
-     * @see org.xtext.go.go.impl.GoPackageImpl#getTypeDef()
-     * @generated
-     */
-    EClass TYPE_DEF = eINSTANCE.getTypeDef();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.go.go.impl.AliasDeclImpl <em>Alias Decl</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.go.go.impl.AliasDeclImpl
-     * @see org.xtext.go.go.impl.GoPackageImpl#getAliasDecl()
-     * @generated
-     */
-    EClass ALIAS_DECL = eINSTANCE.getAliasDecl();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.EntityImpl <em>Entity</em>}' class.
