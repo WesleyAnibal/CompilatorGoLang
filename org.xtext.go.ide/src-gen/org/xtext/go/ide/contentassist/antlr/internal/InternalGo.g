@@ -2540,7 +2540,11 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-RULE_EOL : (RULE_NEWLINE|RULE_SL_COMMENT);
+RULE_EOL : (RULE_NEWLINE|RULE_COMMENTS);
+
+fragment RULE_COMMENTS : (RULE_ML_COMMENT|RULE_SL_COMMENT);
+
+RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*~('*') '*/';
 
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
@@ -2551,8 +2555,6 @@ RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 RULE_INT : ('0'..'9')+;
 
 RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
-
-RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 

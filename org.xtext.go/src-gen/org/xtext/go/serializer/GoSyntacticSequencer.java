@@ -64,7 +64,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * terminal EOL:
-	 * 	NEWLINE | SL_COMMENT;
+	 * 	NEWLINE | COMMENTS;
 	 */
 	protected String getEOLToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
@@ -142,7 +142,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     'false' | INT
+	 *     INT | 'false'
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) '('* (ambiguity) (rule start)
@@ -157,7 +157,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '('*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) ('false' | INT) (rule start)
+	 *     (rule start) (ambiguity) (INT | 'false') (rule start)
 	 *     (rule start) (ambiguity) value='true'
 	 *     (rule start) (ambiguity) {AndExpression.left=}
 	 *     (rule start) (ambiguity) {ComparisonExpression.left=}

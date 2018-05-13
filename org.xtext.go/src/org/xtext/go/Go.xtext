@@ -9,8 +9,14 @@ Greeting:
 	DataType | Entity | DecFunc | EOL | Condition;
 	
 terminal EOL:
-	NEWLINE | SL_COMMENT;
-
+	NEWLINE | COMMENTS;
+	
+terminal COMMENTS:
+	ML_COMMENT | SL_COMMENT;
+	
+terminal ML_COMMENT:
+	"/*"->"*/";
+	
 terminal SL_COMMENT:
 	'//' !('\n'|'\r')* ('\r'? '\n')?;
 	

@@ -785,6 +785,8 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	private final GoElements pGo;
 	private final GreetingElements pGreeting;
 	private final TerminalRule tEOL;
+	private final TerminalRule tCOMMENTS;
+	private final TerminalRule tML_COMMENT;
 	private final TerminalRule tSL_COMMENT;
 	private final TerminalRule tNEWLINE;
 	private final ConditionElements pCondition;
@@ -831,6 +833,8 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGo = new GoElements();
 		this.pGreeting = new GreetingElements();
 		this.tEOL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.EOL");
+		this.tCOMMENTS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.COMMENTS");
+		this.tML_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.ML_COMMENT");
 		this.tSL_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.SL_COMMENT");
 		this.tNEWLINE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.NEWLINE");
 		this.pCondition = new ConditionElements();
@@ -914,9 +918,21 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal EOL:
-	//	NEWLINE | SL_COMMENT;
+	//	NEWLINE | COMMENTS;
 	public TerminalRule getEOLRule() {
 		return tEOL;
+	}
+	
+	//terminal COMMENTS:
+	//	ML_COMMENT | SL_COMMENT;
+	public TerminalRule getCOMMENTSRule() {
+		return tCOMMENTS;
+	}
+	
+	//terminal ML_COMMENT:
+	//	"/*"->!"*" "*/";
+	public TerminalRule getML_COMMENTRule() {
+		return tML_COMMENT;
 	}
 	
 	//terminal SL_COMMENT:
@@ -1258,12 +1274,6 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	//	'"' ('\\' . | !('\\' | '"'))* '"' | "'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
-	}
-	
-	//terminal ML_COMMENT:
-	//	'/*'->'*/';
-	public TerminalRule getML_COMMENTRule() {
-		return gaTerminals.getML_COMMENTRule();
 	}
 	
 	//terminal WS:

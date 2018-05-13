@@ -23,12 +23,13 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalGoParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_EOL", "RULE_INT", "RULE_STRING", "RULE_ID", "RULE_NEWLINE", "RULE_SL_COMMENT", "RULE_ML_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'break'", "'case'", "'chan'", "'const'", "'continue'", "'else'", "'for'", "'func'", "'if'", "'import'", "'return'", "'package'", "'range'", "'<'", "'<='", "'=='", "'>='", "'>'", "'false'", "'{'", "'}'", "'||'", "'&&'", "'('", "')'", "','", "'print'", "'datatype'", "'true'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_EOL", "RULE_INT", "RULE_STRING", "RULE_ID", "RULE_NEWLINE", "RULE_COMMENTS", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'break'", "'case'", "'chan'", "'const'", "'continue'", "'else'", "'for'", "'func'", "'if'", "'import'", "'return'", "'package'", "'range'", "'<'", "'<='", "'=='", "'>='", "'>'", "'false'", "'{'", "'}'", "'||'", "'&&'", "'('", "')'", "','", "'print'", "'datatype'", "'true'"
     };
     public static final int RULE_NEWLINE=8;
     public static final int RULE_STRING=6;
-    public static final int RULE_SL_COMMENT=9;
+    public static final int RULE_SL_COMMENT=11;
     public static final int T__19=19;
+    public static final int RULE_COMMENTS=9;
     public static final int T__15=15;
     public static final int T__37=37;
     public static final int T__16=16;
@@ -38,7 +39,6 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
     public static final int T__18=18;
     public static final int T__33=33;
     public static final int T__34=34;
-    public static final int T__13=13;
     public static final int T__35=35;
     public static final int T__14=14;
     public static final int T__36=36;
@@ -48,8 +48,8 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
     public static final int T__32=32;
     public static final int RULE_ID=7;
     public static final int RULE_EOL=4;
-    public static final int RULE_WS=11;
-    public static final int RULE_ANY_OTHER=12;
+    public static final int RULE_WS=12;
+    public static final int RULE_ANY_OTHER=13;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
@@ -63,6 +63,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
     public static final int T__40=40;
     public static final int T__41=41;
     public static final int T__20=20;
+    public static final int T__42=42;
     public static final int T__21=21;
 
     // delegates
@@ -156,7 +157,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==RULE_EOL||(LA1_0>=20 && LA1_0<=21)||(LA1_0>=39 && LA1_0<=40)) ) {
+                if ( (LA1_0==RULE_EOL||(LA1_0>=21 && LA1_0<=22)||(LA1_0>=40 && LA1_0<=41)) ) {
                     alt1=1;
                 }
 
@@ -1267,7 +1268,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBREAKAccess().getBreakKeyword()); 
             }
-            match(input,13,FOLLOW_2); if (state.failed) return ;
+            match(input,14,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBREAKAccess().getBreakKeyword()); 
             }
@@ -1342,7 +1343,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCASEAccess().getCaseKeyword()); 
             }
-            match(input,14,FOLLOW_2); if (state.failed) return ;
+            match(input,15,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCASEAccess().getCaseKeyword()); 
             }
@@ -1417,7 +1418,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCHANAccess().getChanKeyword()); 
             }
-            match(input,15,FOLLOW_2); if (state.failed) return ;
+            match(input,16,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCHANAccess().getChanKeyword()); 
             }
@@ -1492,7 +1493,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCONSTAccess().getConstKeyword()); 
             }
-            match(input,16,FOLLOW_2); if (state.failed) return ;
+            match(input,17,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCONSTAccess().getConstKeyword()); 
             }
@@ -1567,7 +1568,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCONTINUEAccess().getContinueKeyword()); 
             }
-            match(input,17,FOLLOW_2); if (state.failed) return ;
+            match(input,18,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCONTINUEAccess().getContinueKeyword()); 
             }
@@ -1642,7 +1643,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getELSEAccess().getElseKeyword()); 
             }
-            match(input,18,FOLLOW_2); if (state.failed) return ;
+            match(input,19,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getELSEAccess().getElseKeyword()); 
             }
@@ -1717,7 +1718,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFORAccess().getForKeyword()); 
             }
-            match(input,19,FOLLOW_2); if (state.failed) return ;
+            match(input,20,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFORAccess().getForKeyword()); 
             }
@@ -1792,7 +1793,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFUNCAccess().getFuncKeyword()); 
             }
-            match(input,20,FOLLOW_2); if (state.failed) return ;
+            match(input,21,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getFUNCAccess().getFuncKeyword()); 
             }
@@ -1867,7 +1868,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIFAccess().getIfKeyword()); 
             }
-            match(input,21,FOLLOW_2); if (state.failed) return ;
+            match(input,22,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIFAccess().getIfKeyword()); 
             }
@@ -1942,7 +1943,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIMPORTAccess().getImportKeyword()); 
             }
-            match(input,22,FOLLOW_2); if (state.failed) return ;
+            match(input,23,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIMPORTAccess().getImportKeyword()); 
             }
@@ -2017,7 +2018,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRETURNAccess().getReturnKeyword()); 
             }
-            match(input,23,FOLLOW_2); if (state.failed) return ;
+            match(input,24,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRETURNAccess().getReturnKeyword()); 
             }
@@ -2092,7 +2093,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPACKAGEAccess().getPackageKeyword()); 
             }
-            match(input,24,FOLLOW_2); if (state.failed) return ;
+            match(input,25,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPACKAGEAccess().getPackageKeyword()); 
             }
@@ -2167,7 +2168,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRANGEAccess().getRangeKeyword()); 
             }
-            match(input,25,FOLLOW_2); if (state.failed) return ;
+            match(input,26,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRANGEAccess().getRangeKeyword()); 
             }
@@ -2372,17 +2373,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             // InternalGo.g:757:1: ( ( ruleDataType ) | ( ruleEntity ) | ( ruleDecFunc ) | ( RULE_EOL ) | ( ruleCondition ) )
             int alt2=5;
             switch ( input.LA(1) ) {
-            case 40:
+            case 41:
                 {
                 alt2=1;
                 }
                 break;
-            case 39:
+            case 40:
                 {
                 alt2=2;
                 }
                 break;
-            case 20:
+            case 21:
                 {
                 alt2=3;
                 }
@@ -2392,7 +2393,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                 alt2=4;
                 }
                 break;
-            case 21:
+            case 22:
                 {
                 alt2=5;
                 }
@@ -2544,27 +2545,27 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             // InternalGo.g:796:1: ( ( '<' ) | ( '<=' ) | ( '==' ) | ( '>=' ) | ( '>' ) )
             int alt3=5;
             switch ( input.LA(1) ) {
-            case 26:
+            case 27:
                 {
                 alt3=1;
                 }
                 break;
-            case 27:
+            case 28:
                 {
                 alt3=2;
                 }
                 break;
-            case 28:
+            case 29:
                 {
                 alt3=3;
                 }
                 break;
-            case 29:
+            case 30:
                 {
                 alt3=4;
                 }
                 break;
-            case 30:
+            case 31:
                 {
                 alt3=5;
                 }
@@ -2587,7 +2588,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getComparisonExpressionAccess().getOperatorLessThanSignKeyword_1_1_0_0()); 
                     }
-                    match(input,26,FOLLOW_2); if (state.failed) return ;
+                    match(input,27,FOLLOW_2); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getComparisonExpressionAccess().getOperatorLessThanSignKeyword_1_1_0_0()); 
                     }
@@ -2606,7 +2607,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getComparisonExpressionAccess().getOperatorLessThanSignEqualsSignKeyword_1_1_0_1()); 
                     }
-                    match(input,27,FOLLOW_2); if (state.failed) return ;
+                    match(input,28,FOLLOW_2); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getComparisonExpressionAccess().getOperatorLessThanSignEqualsSignKeyword_1_1_0_1()); 
                     }
@@ -2625,7 +2626,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getComparisonExpressionAccess().getOperatorEqualsSignEqualsSignKeyword_1_1_0_2()); 
                     }
-                    match(input,28,FOLLOW_2); if (state.failed) return ;
+                    match(input,29,FOLLOW_2); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getComparisonExpressionAccess().getOperatorEqualsSignEqualsSignKeyword_1_1_0_2()); 
                     }
@@ -2644,7 +2645,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getComparisonExpressionAccess().getOperatorGreaterThanSignEqualsSignKeyword_1_1_0_3()); 
                     }
-                    match(input,29,FOLLOW_2); if (state.failed) return ;
+                    match(input,30,FOLLOW_2); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getComparisonExpressionAccess().getOperatorGreaterThanSignEqualsSignKeyword_1_1_0_3()); 
                     }
@@ -2663,7 +2664,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getComparisonExpressionAccess().getOperatorGreaterThanSignKeyword_1_1_0_4()); 
                     }
-                    match(input,30,FOLLOW_2); if (state.failed) return ;
+                    match(input,31,FOLLOW_2); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getComparisonExpressionAccess().getOperatorGreaterThanSignKeyword_1_1_0_4()); 
                     }
@@ -2701,10 +2702,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==36) ) {
+            if ( (LA4_0==37) ) {
                 alt4=1;
             }
-            else if ( (LA4_0==RULE_INT||LA4_0==31||LA4_0==41) ) {
+            else if ( (LA4_0==RULE_INT||LA4_0==32||LA4_0==42) ) {
                 alt4=2;
             }
             else {
@@ -2794,12 +2795,12 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             // InternalGo.g:856:1: ( ( ( rule__Literal__Group_0__0 ) ) | ( 'false' ) | ( RULE_INT ) )
             int alt5=3;
             switch ( input.LA(1) ) {
-            case 41:
+            case 42:
                 {
                 alt5=1;
                 }
                 break;
-            case 31:
+            case 32:
                 {
                 alt5=2;
                 }
@@ -2856,7 +2857,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getLiteralAccess().getFalseKeyword_1()); 
                     }
-                    match(input,31,FOLLOW_2); if (state.failed) return ;
+                    match(input,32,FOLLOW_2); if (state.failed) return ;
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getLiteralAccess().getFalseKeyword_1()); 
                     }
@@ -3180,10 +3181,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                 int alt8=2;
                 int LA8_0 = input.LA(1);
 
-                if ( (LA8_0==18) ) {
+                if ( (LA8_0==19) ) {
                     int LA8_1 = input.LA(2);
 
-                    if ( (LA8_1==21) ) {
+                    if ( (LA8_1==22) ) {
                         alt8=1;
                     }
 
@@ -3286,7 +3287,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( (LA9_0==18) ) {
+            if ( (LA9_0==19) ) {
                 alt9=1;
             }
             switch (alt9) {
@@ -3554,7 +3555,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfConditionAccess().getLeftCurlyBracketKeyword_2()); 
             }
-            match(input,32,FOLLOW_2); if (state.failed) return ;
+            match(input,33,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIfConditionAccess().getLeftCurlyBracketKeyword_2()); 
             }
@@ -3639,7 +3640,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                 int alt10=2;
                 int LA10_0 = input.LA(1);
 
-                if ( (LA10_0==RULE_EOL||(LA10_0>=20 && LA10_0<=21)||(LA10_0>=39 && LA10_0<=40)) ) {
+                if ( (LA10_0==RULE_EOL||(LA10_0>=21 && LA10_0<=22)||(LA10_0>=40 && LA10_0<=41)) ) {
                     alt10=1;
                 }
 
@@ -3735,7 +3736,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfConditionAccess().getRightCurlyBracketKeyword_4()); 
             }
-            match(input,33,FOLLOW_2); if (state.failed) return ;
+            match(input,34,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIfConditionAccess().getRightCurlyBracketKeyword_4()); 
             }
@@ -4070,7 +4071,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getElseConditionAccess().getLeftCurlyBracketKeyword_1()); 
             }
-            match(input,32,FOLLOW_2); if (state.failed) return ;
+            match(input,33,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getElseConditionAccess().getLeftCurlyBracketKeyword_1()); 
             }
@@ -4155,7 +4156,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                 int alt11=2;
                 int LA11_0 = input.LA(1);
 
-                if ( (LA11_0==RULE_EOL||(LA11_0>=20 && LA11_0<=21)||(LA11_0>=39 && LA11_0<=40)) ) {
+                if ( (LA11_0==RULE_EOL||(LA11_0>=21 && LA11_0<=22)||(LA11_0>=40 && LA11_0<=41)) ) {
                     alt11=1;
                 }
 
@@ -4251,7 +4252,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getElseConditionAccess().getRightCurlyBracketKeyword_3()); 
             }
-            match(input,33,FOLLOW_2); if (state.failed) return ;
+            match(input,34,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getElseConditionAccess().getRightCurlyBracketKeyword_3()); 
             }
@@ -4414,7 +4415,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                 int alt12=2;
                 int LA12_0 = input.LA(1);
 
-                if ( (LA12_0==34) ) {
+                if ( (LA12_0==35) ) {
                     alt12=1;
                 }
 
@@ -4594,7 +4595,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrExpressionAccess().getVerticalLineVerticalLineKeyword_1_1()); 
             }
-            match(input,34,FOLLOW_2); if (state.failed) return ;
+            match(input,35,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getOrExpressionAccess().getVerticalLineVerticalLineKeyword_1_1()); 
             }
@@ -4841,7 +4842,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                 int alt13=2;
                 int LA13_0 = input.LA(1);
 
-                if ( (LA13_0==35) ) {
+                if ( (LA13_0==36) ) {
                     alt13=1;
                 }
 
@@ -5021,7 +5022,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndExpressionAccess().getAmpersandAmpersandKeyword_1_1()); 
             }
-            match(input,35,FOLLOW_2); if (state.failed) return ;
+            match(input,36,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAndExpressionAccess().getAmpersandAmpersandKeyword_1_1()); 
             }
@@ -5268,7 +5269,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                 int alt14=2;
                 int LA14_0 = input.LA(1);
 
-                if ( ((LA14_0>=26 && LA14_0<=30)) ) {
+                if ( ((LA14_0>=27 && LA14_0<=31)) ) {
                     alt14=1;
                 }
 
@@ -5621,7 +5622,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getLeftParenthesisKeyword_0_0()); 
             }
-            match(input,36,FOLLOW_2); if (state.failed) return ;
+            match(input,37,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpressionAccess().getLeftParenthesisKeyword_0_0()); 
             }
@@ -5778,7 +5779,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getRightParenthesisKeyword_0_2()); 
             }
-            match(input,37,FOLLOW_2); if (state.failed) return ;
+            match(input,38,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpressionAccess().getRightParenthesisKeyword_0_2()); 
             }
@@ -6192,7 +6193,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getLeftParenthesisKeyword_2()); 
             }
-            match(input,36,FOLLOW_2); if (state.failed) return ;
+            match(input,37,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDecFuncAccess().getLeftParenthesisKeyword_2()); 
             }
@@ -6377,7 +6378,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                 int alt16=2;
                 int LA16_0 = input.LA(1);
 
-                if ( (LA16_0==38) ) {
+                if ( (LA16_0==39) ) {
                     alt16=1;
                 }
 
@@ -6478,7 +6479,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getRightParenthesisKeyword_5()); 
             }
-            match(input,37,FOLLOW_2); if (state.failed) return ;
+            match(input,38,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDecFuncAccess().getRightParenthesisKeyword_5()); 
             }
@@ -6557,7 +6558,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getLeftCurlyBracketKeyword_6()); 
             }
-            match(input,32,FOLLOW_2); if (state.failed) return ;
+            match(input,33,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDecFuncAccess().getLeftCurlyBracketKeyword_6()); 
             }
@@ -6642,7 +6643,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                 int alt17=2;
                 int LA17_0 = input.LA(1);
 
-                if ( (LA17_0==RULE_EOL||(LA17_0>=20 && LA17_0<=21)||(LA17_0>=39 && LA17_0<=40)) ) {
+                if ( (LA17_0==RULE_EOL||(LA17_0>=21 && LA17_0<=22)||(LA17_0>=40 && LA17_0<=41)) ) {
                     alt17=1;
                 }
 
@@ -6738,7 +6739,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getRightCurlyBracketKeyword_8()); 
             }
-            match(input,33,FOLLOW_2); if (state.failed) return ;
+            match(input,34,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDecFuncAccess().getRightCurlyBracketKeyword_8()); 
             }
@@ -6817,7 +6818,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getCommaKeyword_4_0()); 
             }
-            match(input,38,FOLLOW_2); if (state.failed) return ;
+            match(input,39,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDecFuncAccess().getCommaKeyword_4_0()); 
             }
@@ -6980,7 +6981,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEntityAccess().getPrintKeyword_0()); 
             }
-            match(input,39,FOLLOW_2); if (state.failed) return ;
+            match(input,40,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getEntityAccess().getPrintKeyword_0()); 
             }
@@ -7059,7 +7060,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEntityAccess().getLeftParenthesisKeyword_1()); 
             }
-            match(input,36,FOLLOW_2); if (state.failed) return ;
+            match(input,37,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getEntityAccess().getLeftParenthesisKeyword_1()); 
             }
@@ -7222,7 +7223,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEntityAccess().getRightParenthesisKeyword_3()); 
             }
-            match(input,37,FOLLOW_2); if (state.failed) return ;
+            match(input,38,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getEntityAccess().getRightParenthesisKeyword_3()); 
             }
@@ -7301,7 +7302,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDataTypeAccess().getDatatypeKeyword_0()); 
             }
-            match(input,40,FOLLOW_2); if (state.failed) return ;
+            match(input,41,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDataTypeAccess().getDatatypeKeyword_0()); 
             }
@@ -7933,7 +7934,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralAccess().getValueTrueKeyword_0_1_0()); 
             }
-            match(input,41,FOLLOW_2); if (state.failed) return ;
+            match(input,42,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLiteralAccess().getValueTrueKeyword_0_1_0()); 
             }
@@ -8179,26 +8180,26 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000018000300012L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000030000600012L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000021080000020L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000018200300010L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000018000300010L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000400000002L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000800000002L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x000000007C000000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x000000007C000002L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000042100000020L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000030400600010L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000030000600010L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000800000002L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000001000000002L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x00000000F8000000L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x00000000F8000002L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000040000000000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000006000000080L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000004000000002L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x000000C000000080L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000008000000002L});
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000060L});
 
 }

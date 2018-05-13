@@ -22,12 +22,13 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalGoParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_EOL", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_NEWLINE", "RULE_SL_COMMENT", "RULE_ML_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'{'", "'}'", "'||'", "'&&'", "'<'", "'<='", "'=='", "'>='", "'>'", "'('", "')'", "'true'", "'false'", "','", "'break'", "'case'", "'chan'", "'const'", "'continue'", "'else'", "'for'", "'func'", "'if'", "'import'", "'return'", "'package'", "'range'", "'print'", "'datatype'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_EOL", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_NEWLINE", "RULE_COMMENTS", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'{'", "'}'", "'||'", "'&&'", "'<'", "'<='", "'=='", "'>='", "'>'", "'('", "')'", "'true'", "'false'", "','", "'break'", "'case'", "'chan'", "'const'", "'continue'", "'else'", "'for'", "'func'", "'if'", "'import'", "'return'", "'package'", "'range'", "'print'", "'datatype'"
     };
     public static final int RULE_NEWLINE=8;
     public static final int RULE_STRING=7;
-    public static final int RULE_SL_COMMENT=9;
+    public static final int RULE_SL_COMMENT=11;
     public static final int T__19=19;
+    public static final int RULE_COMMENTS=9;
     public static final int T__15=15;
     public static final int T__37=37;
     public static final int T__16=16;
@@ -37,7 +38,6 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
     public static final int T__18=18;
     public static final int T__33=33;
     public static final int T__34=34;
-    public static final int T__13=13;
     public static final int T__35=35;
     public static final int T__14=14;
     public static final int T__36=36;
@@ -47,8 +47,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
     public static final int T__32=32;
     public static final int RULE_ID=6;
     public static final int RULE_EOL=4;
-    public static final int RULE_WS=11;
-    public static final int RULE_ANY_OTHER=12;
+    public static final int RULE_WS=12;
+    public static final int RULE_ANY_OTHER=13;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
@@ -62,6 +62,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
     public static final int T__40=40;
     public static final int T__41=41;
     public static final int T__20=20;
+    public static final int T__42=42;
     public static final int T__21=21;
 
     // delegates
@@ -164,7 +165,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==RULE_EOL||(LA1_0>=34 && LA1_0<=35)||(LA1_0>=40 && LA1_0<=41)) ) {
+                if ( (LA1_0==RULE_EOL||(LA1_0>=35 && LA1_0<=36)||(LA1_0>=41 && LA1_0<=42)) ) {
                     alt1=1;
                 }
 
@@ -295,17 +296,17 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:114:2: (this_DataType_0= ruleDataType | ruleEntity | this_DecFunc_2= ruleDecFunc | this_EOL_3= RULE_EOL | this_Condition_4= ruleCondition )
             int alt2=5;
             switch ( input.LA(1) ) {
-            case 41:
+            case 42:
                 {
                 alt2=1;
                 }
                 break;
-            case 40:
+            case 41:
                 {
                 alt2=2;
                 }
                 break;
-            case 34:
+            case 35:
                 {
                 alt2=3;
                 }
@@ -315,7 +316,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 alt2=4;
                 }
                 break;
-            case 35:
+            case 36:
                 {
                 alt2=5;
                 }
@@ -555,10 +556,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==32) ) {
+                if ( (LA3_0==33) ) {
                     int LA3_1 = input.LA(2);
 
-                    if ( (LA3_1==35) && (synpred1_InternalGo())) {
+                    if ( (LA3_1==36) && (synpred1_InternalGo())) {
                         alt3=1;
                     }
 
@@ -612,7 +613,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==32) && (synpred2_InternalGo())) {
+            if ( (LA4_0==33) && (synpred2_InternalGo())) {
                 alt4=1;
             }
             switch (alt4) {
@@ -790,7 +791,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,13,FOLLOW_7); if (state.failed) return current;
+            otherlv_2=(Token)match(input,14,FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getIfConditionAccess().getLeftCurlyBracketKeyword_2());
@@ -802,7 +803,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 int alt5=2;
                 int LA5_0 = input.LA(1);
 
-                if ( (LA5_0==RULE_EOL||(LA5_0>=34 && LA5_0<=35)||(LA5_0>=40 && LA5_0<=41)) ) {
+                if ( (LA5_0==RULE_EOL||(LA5_0>=35 && LA5_0<=36)||(LA5_0>=41 && LA5_0<=42)) ) {
                     alt5=1;
                 }
 
@@ -849,7 +850,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,14,FOLLOW_2); if (state.failed) return current;
+            otherlv_4=(Token)match(input,15,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_4, grammarAccess.getIfConditionAccess().getRightCurlyBracketKeyword_4());
@@ -1079,7 +1080,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,13,FOLLOW_7); if (state.failed) return current;
+            otherlv_1=(Token)match(input,14,FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getElseConditionAccess().getLeftCurlyBracketKeyword_1());
@@ -1091,7 +1092,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 int alt6=2;
                 int LA6_0 = input.LA(1);
 
-                if ( (LA6_0==RULE_EOL||(LA6_0>=34 && LA6_0<=35)||(LA6_0>=40 && LA6_0<=41)) ) {
+                if ( (LA6_0==RULE_EOL||(LA6_0>=35 && LA6_0<=36)||(LA6_0>=41 && LA6_0<=42)) ) {
                     alt6=1;
                 }
 
@@ -1138,7 +1139,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_3=(Token)match(input,14,FOLLOW_2); if (state.failed) return current;
+            otherlv_3=(Token)match(input,15,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getElseConditionAccess().getRightCurlyBracketKeyword_3());
@@ -1343,7 +1344,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 int alt7=2;
                 int LA7_0 = input.LA(1);
 
-                if ( (LA7_0==15) ) {
+                if ( (LA7_0==16) ) {
                     alt7=1;
                 }
 
@@ -1365,7 +1366,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_2=(Token)match(input,15,FOLLOW_5); if (state.failed) return current;
+            	    otherlv_2=(Token)match(input,16,FOLLOW_5); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				newLeafNode(otherlv_2, grammarAccess.getOrExpressionAccess().getVerticalLineVerticalLineKeyword_1_1());
@@ -1522,7 +1523,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 int alt8=2;
                 int LA8_0 = input.LA(1);
 
-                if ( (LA8_0==16) ) {
+                if ( (LA8_0==17) ) {
                     alt8=1;
                 }
 
@@ -1544,7 +1545,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_2=(Token)match(input,16,FOLLOW_5); if (state.failed) return current;
+            	    otherlv_2=(Token)match(input,17,FOLLOW_5); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				newLeafNode(otherlv_2, grammarAccess.getAndExpressionAccess().getAmpersandAmpersandKeyword_1_1());
@@ -1705,7 +1706,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 int alt10=2;
                 int LA10_0 = input.LA(1);
 
-                if ( ((LA10_0>=17 && LA10_0<=21)) ) {
+                if ( ((LA10_0>=18 && LA10_0<=22)) ) {
                     alt10=1;
                 }
 
@@ -1736,27 +1737,27 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             	    // InternalGo.g:577:6: (lv_operator_2_1= '<' | lv_operator_2_2= '<=' | lv_operator_2_3= '==' | lv_operator_2_4= '>=' | lv_operator_2_5= '>' )
             	    int alt9=5;
             	    switch ( input.LA(1) ) {
-            	    case 17:
+            	    case 18:
             	        {
             	        alt9=1;
             	        }
             	        break;
-            	    case 18:
+            	    case 19:
             	        {
             	        alt9=2;
             	        }
             	        break;
-            	    case 19:
+            	    case 20:
             	        {
             	        alt9=3;
             	        }
             	        break;
-            	    case 20:
+            	    case 21:
             	        {
             	        alt9=4;
             	        }
             	        break;
-            	    case 21:
+            	    case 22:
             	        {
             	        alt9=5;
             	        }
@@ -1773,7 +1774,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             	        case 1 :
             	            // InternalGo.g:578:7: lv_operator_2_1= '<'
             	            {
-            	            lv_operator_2_1=(Token)match(input,17,FOLLOW_5); if (state.failed) return current;
+            	            lv_operator_2_1=(Token)match(input,18,FOLLOW_5); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              							newLeafNode(lv_operator_2_1, grammarAccess.getComparisonExpressionAccess().getOperatorLessThanSignKeyword_1_1_0_0());
@@ -1793,7 +1794,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             	        case 2 :
             	            // InternalGo.g:589:7: lv_operator_2_2= '<='
             	            {
-            	            lv_operator_2_2=(Token)match(input,18,FOLLOW_5); if (state.failed) return current;
+            	            lv_operator_2_2=(Token)match(input,19,FOLLOW_5); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              							newLeafNode(lv_operator_2_2, grammarAccess.getComparisonExpressionAccess().getOperatorLessThanSignEqualsSignKeyword_1_1_0_1());
@@ -1813,7 +1814,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             	        case 3 :
             	            // InternalGo.g:600:7: lv_operator_2_3= '=='
             	            {
-            	            lv_operator_2_3=(Token)match(input,19,FOLLOW_5); if (state.failed) return current;
+            	            lv_operator_2_3=(Token)match(input,20,FOLLOW_5); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              							newLeafNode(lv_operator_2_3, grammarAccess.getComparisonExpressionAccess().getOperatorEqualsSignEqualsSignKeyword_1_1_0_2());
@@ -1833,7 +1834,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             	        case 4 :
             	            // InternalGo.g:611:7: lv_operator_2_4= '>='
             	            {
-            	            lv_operator_2_4=(Token)match(input,20,FOLLOW_5); if (state.failed) return current;
+            	            lv_operator_2_4=(Token)match(input,21,FOLLOW_5); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              							newLeafNode(lv_operator_2_4, grammarAccess.getComparisonExpressionAccess().getOperatorGreaterThanSignEqualsSignKeyword_1_1_0_3());
@@ -1853,7 +1854,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             	        case 5 :
             	            // InternalGo.g:622:7: lv_operator_2_5= '>'
             	            {
-            	            lv_operator_2_5=(Token)match(input,21,FOLLOW_5); if (state.failed) return current;
+            	            lv_operator_2_5=(Token)match(input,22,FOLLOW_5); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              							newLeafNode(lv_operator_2_5, grammarAccess.getComparisonExpressionAccess().getOperatorGreaterThanSignKeyword_1_1_0_4());
@@ -2010,10 +2011,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             int alt11=2;
             int LA11_0 = input.LA(1);
 
-            if ( (LA11_0==22) ) {
+            if ( (LA11_0==23) ) {
                 alt11=1;
             }
-            else if ( (LA11_0==RULE_INT||(LA11_0>=24 && LA11_0<=25)) ) {
+            else if ( (LA11_0==RULE_INT||(LA11_0>=25 && LA11_0<=26)) ) {
                 alt11=2;
             }
             else {
@@ -2030,7 +2031,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     // InternalGo.g:674:3: (otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')' )
                     // InternalGo.g:675:4: otherlv_0= '(' this_Expression_1= ruleExpression otherlv_2= ')'
                     {
-                    otherlv_0=(Token)match(input,22,FOLLOW_5); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,23,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_0, grammarAccess.getPrimaryExpressionAccess().getLeftParenthesisKeyword_0_0());
@@ -2052,7 +2053,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                       				afterParserOrEnumRuleCall();
                       			
                     }
-                    otherlv_2=(Token)match(input,23,FOLLOW_2); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,24,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_2, grammarAccess.getPrimaryExpressionAccess().getRightParenthesisKeyword_0_2());
@@ -2169,12 +2170,12 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:719:2: ( ( () ( (lv_value_1_0= 'true' ) ) ) | otherlv_2= 'false' | this_INT_3= RULE_INT )
             int alt12=3;
             switch ( input.LA(1) ) {
-            case 24:
+            case 25:
                 {
                 alt12=1;
                 }
                 break;
-            case 25:
+            case 26:
                 {
                 alt12=2;
                 }
@@ -2218,7 +2219,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     // InternalGo.g:729:5: (lv_value_1_0= 'true' )
                     // InternalGo.g:730:6: lv_value_1_0= 'true'
                     {
-                    lv_value_1_0=(Token)match(input,24,FOLLOW_2); if (state.failed) return current;
+                    lv_value_1_0=(Token)match(input,25,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_value_1_0, grammarAccess.getLiteralAccess().getValueTrueKeyword_0_1_0());
@@ -2247,7 +2248,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 case 2 :
                     // InternalGo.g:744:3: otherlv_2= 'false'
                     {
-                    otherlv_2=(Token)match(input,25,FOLLOW_2); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,26,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       			newLeafNode(otherlv_2, grammarAccess.getLiteralAccess().getFalseKeyword_1());
@@ -2403,7 +2404,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,22,FOLLOW_15); if (state.failed) return current;
+            otherlv_2=(Token)match(input,23,FOLLOW_15); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getDecFuncAccess().getLeftParenthesisKeyword_2());
@@ -2456,7 +2457,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 int alt14=2;
                 int LA14_0 = input.LA(1);
 
-                if ( (LA14_0==26) ) {
+                if ( (LA14_0==27) ) {
                     alt14=1;
                 }
 
@@ -2465,7 +2466,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // InternalGo.g:820:4: otherlv_4= ',' ( (lv_parameter_5_0= RULE_ID ) )
             	    {
-            	    otherlv_4=(Token)match(input,26,FOLLOW_13); if (state.failed) return current;
+            	    otherlv_4=(Token)match(input,27,FOLLOW_13); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				newLeafNode(otherlv_4, grammarAccess.getDecFuncAccess().getCommaKeyword_4_0());
@@ -2510,13 +2511,13 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_6=(Token)match(input,23,FOLLOW_6); if (state.failed) return current;
+            otherlv_6=(Token)match(input,24,FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_6, grammarAccess.getDecFuncAccess().getRightParenthesisKeyword_5());
               		
             }
-            otherlv_7=(Token)match(input,13,FOLLOW_7); if (state.failed) return current;
+            otherlv_7=(Token)match(input,14,FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_7, grammarAccess.getDecFuncAccess().getLeftCurlyBracketKeyword_6());
@@ -2528,7 +2529,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 int alt15=2;
                 int LA15_0 = input.LA(1);
 
-                if ( (LA15_0==RULE_EOL||(LA15_0>=34 && LA15_0<=35)||(LA15_0>=40 && LA15_0<=41)) ) {
+                if ( (LA15_0==RULE_EOL||(LA15_0>=35 && LA15_0<=36)||(LA15_0>=41 && LA15_0<=42)) ) {
                     alt15=1;
                 }
 
@@ -2575,7 +2576,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_9=(Token)match(input,14,FOLLOW_2); if (state.failed) return current;
+            otherlv_9=(Token)match(input,15,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getDecFuncAccess().getRightCurlyBracketKeyword_8());
@@ -2659,7 +2660,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:891:2: (kw= 'break' )
             // InternalGo.g:892:2: kw= 'break'
             {
-            kw=(Token)match(input,27,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,28,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(kw);
@@ -2741,7 +2742,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:913:2: (kw= 'case' )
             // InternalGo.g:914:2: kw= 'case'
             {
-            kw=(Token)match(input,28,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,29,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(kw);
@@ -2823,7 +2824,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:935:2: (kw= 'chan' )
             // InternalGo.g:936:2: kw= 'chan'
             {
-            kw=(Token)match(input,29,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,30,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(kw);
@@ -2905,7 +2906,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:957:2: (kw= 'const' )
             // InternalGo.g:958:2: kw= 'const'
             {
-            kw=(Token)match(input,30,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,31,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(kw);
@@ -2987,7 +2988,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:979:2: (kw= 'continue' )
             // InternalGo.g:980:2: kw= 'continue'
             {
-            kw=(Token)match(input,31,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,32,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(kw);
@@ -3069,7 +3070,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:1001:2: (kw= 'else' )
             // InternalGo.g:1002:2: kw= 'else'
             {
-            kw=(Token)match(input,32,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,33,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(kw);
@@ -3151,7 +3152,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:1023:2: (kw= 'for' )
             // InternalGo.g:1024:2: kw= 'for'
             {
-            kw=(Token)match(input,33,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,34,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(kw);
@@ -3233,7 +3234,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:1045:2: (kw= 'func' )
             // InternalGo.g:1046:2: kw= 'func'
             {
-            kw=(Token)match(input,34,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,35,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(kw);
@@ -3315,7 +3316,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:1067:2: (kw= 'if' )
             // InternalGo.g:1068:2: kw= 'if'
             {
-            kw=(Token)match(input,35,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,36,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(kw);
@@ -3397,7 +3398,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:1089:2: (kw= 'import' )
             // InternalGo.g:1090:2: kw= 'import'
             {
-            kw=(Token)match(input,36,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,37,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(kw);
@@ -3479,7 +3480,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:1111:2: (kw= 'return' )
             // InternalGo.g:1112:2: kw= 'return'
             {
-            kw=(Token)match(input,37,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,38,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(kw);
@@ -3561,7 +3562,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:1133:2: (kw= 'package' )
             // InternalGo.g:1134:2: kw= 'package'
             {
-            kw=(Token)match(input,38,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,39,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(kw);
@@ -3643,7 +3644,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:1155:2: (kw= 'range' )
             // InternalGo.g:1156:2: kw= 'range'
             {
-            kw=(Token)match(input,39,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,40,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               		current.merge(kw);
@@ -3730,14 +3731,14 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:1178:2: (kw= 'print' kw= '(' (this_STRING_2= RULE_STRING | (this_INT_3= RULE_INT )+ ) kw= ')' )
             // InternalGo.g:1179:3: kw= 'print' kw= '(' (this_STRING_2= RULE_STRING | (this_INT_3= RULE_INT )+ ) kw= ')'
             {
-            kw=(Token)match(input,40,FOLLOW_14); if (state.failed) return current;
+            kw=(Token)match(input,41,FOLLOW_14); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(kw);
               			newLeafNode(kw, grammarAccess.getEntityAccess().getPrintKeyword_0());
               		
             }
-            kw=(Token)match(input,22,FOLLOW_17); if (state.failed) return current;
+            kw=(Token)match(input,23,FOLLOW_17); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(kw);
@@ -3829,7 +3830,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             }
 
-            kw=(Token)match(input,23,FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,24,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(kw);
@@ -3918,7 +3919,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             // InternalGo.g:1231:2: (otherlv_0= 'datatype' ( (lv_name_1_0= RULE_ID ) ) )
             // InternalGo.g:1232:3: otherlv_0= 'datatype' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,41,FOLLOW_13); if (state.failed) return current;
+            otherlv_0=(Token)match(input,42,FOLLOW_13); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getDataTypeAccess().getDatatypeKeyword_0());
@@ -4043,21 +4044,21 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000030C00000012L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000100000002L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000003400020L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000030C00004010L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000030C00000010L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x00000000003E0002L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000061800000012L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000200000002L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000006800020L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000061800008010L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000061800000010L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x00000000007C0002L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000001000000L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000004800040L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000004800000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000009000040L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000009000000L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x00000000000000A0L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000800020L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000001000020L});
 
 }
