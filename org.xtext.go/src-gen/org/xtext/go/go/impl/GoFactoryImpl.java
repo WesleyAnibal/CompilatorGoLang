@@ -67,6 +67,7 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
     {
       case GoPackage.GO: return createGo();
       case GoPackage.GREETING: return createGreeting();
+      case GoPackage.DEC_VAR: return createDecVar();
       case GoPackage.CONDITION: return createCondition();
       case GoPackage.IF_CONDITION: return createIfCondition();
       case GoPackage.ELSE_IF_CONDITION: return createElseIfCondition();
@@ -103,6 +104,17 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     GreetingImpl greeting = new GreetingImpl();
     return greeting;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DecVar createDecVar()
+  {
+    DecVarImpl decVar = new DecVarImpl();
+    return decVar;
   }
 
   /**

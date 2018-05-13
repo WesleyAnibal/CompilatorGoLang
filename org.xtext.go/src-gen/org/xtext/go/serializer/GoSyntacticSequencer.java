@@ -21,7 +21,7 @@ import org.xtext.go.services.GoGrammarAccess;
 public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected GoGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Greeting_EOLTerminalRuleCall_3_or_EntityParserRuleCall_1;
+	protected AbstractElementAlias match_Greeting_EOLTerminalRuleCall_4_or_EntityParserRuleCall_2;
 	protected AbstractElementAlias match_Literal_FalseKeyword_1_or_INTTerminalRuleCall_2;
 	protected AbstractElementAlias match_PrimaryExpression_LeftParenthesisKeyword_0_0_a;
 	protected AbstractElementAlias match_PrimaryExpression_LeftParenthesisKeyword_0_0_p;
@@ -29,7 +29,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (GoGrammarAccess) access;
-		match_Greeting_EOLTerminalRuleCall_3_or_EntityParserRuleCall_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getGreetingAccess().getEOLTerminalRuleCall_3()), new TokenAlias(false, false, grammarAccess.getGreetingAccess().getEntityParserRuleCall_1()));
+		match_Greeting_EOLTerminalRuleCall_4_or_EntityParserRuleCall_2 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getGreetingAccess().getEOLTerminalRuleCall_4()), new TokenAlias(false, false, grammarAccess.getGreetingAccess().getEntityParserRuleCall_2()));
 		match_Literal_FalseKeyword_1_or_INTTerminalRuleCall_2 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getLiteralAccess().getFalseKeyword_1()), new TokenAlias(false, false, grammarAccess.getLiteralAccess().getINTTerminalRuleCall_2()));
 		match_PrimaryExpression_LeftParenthesisKeyword_0_0_a = new TokenAlias(true, true, grammarAccess.getPrimaryExpressionAccess().getLeftParenthesisKeyword_0_0());
 		match_PrimaryExpression_LeftParenthesisKeyword_0_0_p = new TokenAlias(true, false, grammarAccess.getPrimaryExpressionAccess().getLeftParenthesisKeyword_0_0());
@@ -49,6 +49,10 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getIFToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getINTRule())
 			return getINTToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getTYPERule())
+			return getTYPEToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getVARRule())
+			return getVARToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -111,14 +115,34 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 		return "";
 	}
 	
+	/**
+	 * TYPE:
+	 * 	"type";
+	 */
+	protected String getTYPEToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "type";
+	}
+	
+	/**
+	 * VAR:
+	 * 	"var";
+	 */
+	protected String getVARToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "var";
+	}
+	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		if (transition.getAmbiguousSyntaxes().isEmpty()) return;
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Greeting_EOLTerminalRuleCall_3_or_EntityParserRuleCall_1.equals(syntax))
-				emit_Greeting_EOLTerminalRuleCall_3_or_EntityParserRuleCall_1(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_Greeting_EOLTerminalRuleCall_4_or_EntityParserRuleCall_2.equals(syntax))
+				emit_Greeting_EOLTerminalRuleCall_4_or_EntityParserRuleCall_2(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Literal_FalseKeyword_1_or_INTTerminalRuleCall_2.equals(syntax))
 				emit_Literal_FalseKeyword_1_or_INTTerminalRuleCall_2(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_PrimaryExpression_LeftParenthesisKeyword_0_0_a.equals(syntax))
@@ -131,18 +155,18 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Ambiguous syntax:
-	 *     EOL | Entity
+	 *     Entity | EOL
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)
 	 */
-	protected void emit_Greeting_EOLTerminalRuleCall_3_or_EntityParserRuleCall_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Greeting_EOLTerminalRuleCall_4_or_EntityParserRuleCall_2(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     INT | 'false'
+	 *     'false' | INT
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) '('* (ambiguity) (rule start)
@@ -157,7 +181,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '('*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (INT | 'false') (rule start)
+	 *     (rule start) (ambiguity) ('false' | INT) (rule start)
 	 *     (rule start) (ambiguity) value='true'
 	 *     (rule start) (ambiguity) {AndExpression.left=}
 	 *     (rule start) (ambiguity) {ComparisonExpression.left=}

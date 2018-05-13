@@ -15,6 +15,7 @@ import org.xtext.go.go.ComparisonExpression;
 import org.xtext.go.go.Condition;
 import org.xtext.go.go.DataType;
 import org.xtext.go.go.DecFunc;
+import org.xtext.go.go.DecVar;
 import org.xtext.go.go.ElseCondition;
 import org.xtext.go.go.ElseIfCondition;
 import org.xtext.go.go.Expression;
@@ -47,6 +48,13 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * @generated
    */
   private EClass greetingEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass decVarEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -216,6 +224,36 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
   public EClass getGreeting()
   {
     return greetingEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDecVar()
+  {
+    return decVarEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDecVar_Vars()
+  {
+    return (EAttribute)decVarEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDecVar_Atrb()
+  {
+    return (EAttribute)decVarEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -543,6 +581,10 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     greetingEClass = createEClass(GREETING);
 
+    decVarEClass = createEClass(DEC_VAR);
+    createEAttribute(decVarEClass, DEC_VAR__VARS);
+    createEAttribute(decVarEClass, DEC_VAR__ATRB);
+
     conditionEClass = createEClass(CONDITION);
     createEReference(conditionEClass, CONDITION__IF);
     createEReference(conditionEClass, CONDITION__ELSEIF);
@@ -613,6 +655,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    decVarEClass.getESuperTypes().add(this.getGreeting());
     conditionEClass.getESuperTypes().add(this.getGreeting());
     ifConditionEClass.getESuperTypes().add(this.getElseIfCondition());
     decFuncEClass.getESuperTypes().add(this.getGreeting());
@@ -627,6 +670,10 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEReference(getGo_Elements(), this.getGreeting(), null, "elements", null, 0, -1, Go.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(greetingEClass, Greeting.class, "Greeting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(decVarEClass, DecVar.class, "DecVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDecVar_Vars(), ecorePackage.getEString(), "vars", null, 0, -1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDecVar_Atrb(), ecorePackage.getEString(), "atrb", null, 0, -1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCondition_If(), this.getIfCondition(), null, "if", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

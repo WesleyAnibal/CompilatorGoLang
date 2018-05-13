@@ -3,6 +3,9 @@
  */
 package org.xtext.go.validation;
 
+import org.eclipse.xtext.validation.Check;
+import org.xtext.go.go.DecVar;
+import org.xtext.go.go.GoPackage;
 import org.xtext.go.validation.AbstractGoValidator;
 
 /**
@@ -12,4 +15,13 @@ import org.xtext.go.validation.AbstractGoValidator;
  */
 @SuppressWarnings("all")
 public class GoValidator extends AbstractGoValidator {
+  @Check
+  public void checkGreetingStartsWithCapital(final DecVar g) {
+    int _size = g.getVars().size();
+    int _size_1 = g.getAtrb().size();
+    boolean _lessThan = (_size < _size_1);
+    if (_lessThan) {
+      this.error("número de atribuições maior que variaveis", GoPackage.Literals.DEC_VAR__VARS);
+    }
+  }
 }

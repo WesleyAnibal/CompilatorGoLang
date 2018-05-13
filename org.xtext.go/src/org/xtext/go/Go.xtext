@@ -3,10 +3,13 @@ grammar org.xtext.go.Go with org.eclipse.xtext.common.Terminals
 generate go "http://www.xtext.org/go/Go"
 
 Go:
-	elements+=Greeting*;
+	(elements+=Greeting*);
 
 Greeting:
-	DataType | Entity | DecFunc | EOL | Condition;
+	DecVar | DataType | Entity | DecFunc | EOL | Condition;
+
+DecVar:
+	VAR vars+=ID TYPE ("=" atrb+=ID("," atrb+=ID)*)?;
 	
 terminal EOL:
 	NEWLINE | COMMENTS;
@@ -19,7 +22,7 @@ terminal ML_COMMENT:
 	
 terminal SL_COMMENT:
 	'//' !('\n'|'\r')* ('\r'? '\n')?;
-	
+
 terminal NEWLINE:
 	('\r'? '\n');
 	

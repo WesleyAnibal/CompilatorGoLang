@@ -3,6 +3,11 @@
  */
 package org.xtext.go.validation
 
+import org.eclipse.xtext.validation.Check
+import org.xtext.go.go.Go
+import org.xtext.go.go.DecVar
+import org.xtext.go.go.GoPackage
+import org.xtext.go.go.Greeting
 
 /**
  * This class contains custom validation rules. 
@@ -21,5 +26,12 @@ class GoValidator extends AbstractGoValidator {
 //					INVALID_NAME)
 //		}
 //	}
+	@Check
+	def checkGreetingStartsWithCapital(DecVar g) {
+		if(g.vars.size() < g.atrb.size()){
+			error("número de atribuições maior que variaveis", GoPackage.Literals.DEC_VAR__VARS);
+		}
+	}
+
 	
 }
