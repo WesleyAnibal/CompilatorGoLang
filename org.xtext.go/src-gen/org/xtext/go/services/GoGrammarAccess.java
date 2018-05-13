@@ -79,21 +79,25 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVARParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Assignment cVarsAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cVarsIDTerminalRuleCall_1_0 = (RuleCall)cVarsAssignment_1.eContents().get(0);
-		private final RuleCall cTYPEParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cEqualsSignKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cAtrbAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cAtrbIDTerminalRuleCall_3_1_0 = (RuleCall)cAtrbAssignment_3_1.eContents().get(0);
-		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
-		private final Keyword cCommaKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
-		private final Assignment cAtrbAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
-		private final RuleCall cAtrbIDTerminalRuleCall_3_2_1_0 = (RuleCall)cAtrbAssignment_3_2_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cVarsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cVarsIDTerminalRuleCall_2_1_0 = (RuleCall)cVarsAssignment_2_1.eContents().get(0);
+		private final RuleCall cTYPEParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cEqualsSignKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cAtrbAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cAtrbIDTerminalRuleCall_4_1_0 = (RuleCall)cAtrbAssignment_4_1.eContents().get(0);
+		private final Group cGroup_4_2 = (Group)cGroup_4.eContents().get(2);
+		private final Keyword cCommaKeyword_4_2_0 = (Keyword)cGroup_4_2.eContents().get(0);
+		private final Assignment cAtrbAssignment_4_2_1 = (Assignment)cGroup_4_2.eContents().get(1);
+		private final RuleCall cAtrbIDTerminalRuleCall_4_2_1_0 = (RuleCall)cAtrbAssignment_4_2_1.eContents().get(0);
 		
 		//DecVar:
-		//	VAR vars+=ID TYPE ("=" atrb+=ID ("," atrb+=ID)*)?;
+		//	VAR vars+=ID ("," vars+=ID)* TYPE ("=" atrb+=ID ("," atrb+=ID)*)?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//VAR vars+=ID TYPE ("=" atrb+=ID ("," atrb+=ID)*)?
+		//VAR vars+=ID ("," vars+=ID)* TYPE ("=" atrb+=ID ("," atrb+=ID)*)?
 		public Group getGroup() { return cGroup; }
 		
 		//VAR
@@ -105,32 +109,44 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getVarsIDTerminalRuleCall_1_0() { return cVarsIDTerminalRuleCall_1_0; }
 		
-		//TYPE
-		public RuleCall getTYPEParserRuleCall_2() { return cTYPEParserRuleCall_2; }
-		
-		//("=" atrb+=ID ("," atrb+=ID)*)?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//"="
-		public Keyword getEqualsSignKeyword_3_0() { return cEqualsSignKeyword_3_0; }
-		
-		//atrb+=ID
-		public Assignment getAtrbAssignment_3_1() { return cAtrbAssignment_3_1; }
-		
-		//ID
-		public RuleCall getAtrbIDTerminalRuleCall_3_1_0() { return cAtrbIDTerminalRuleCall_3_1_0; }
-		
-		//("," atrb+=ID)*
-		public Group getGroup_3_2() { return cGroup_3_2; }
+		//("," vars+=ID)*
+		public Group getGroup_2() { return cGroup_2; }
 		
 		//","
-		public Keyword getCommaKeyword_3_2_0() { return cCommaKeyword_3_2_0; }
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
 		
-		//atrb+=ID
-		public Assignment getAtrbAssignment_3_2_1() { return cAtrbAssignment_3_2_1; }
+		//vars+=ID
+		public Assignment getVarsAssignment_2_1() { return cVarsAssignment_2_1; }
 		
 		//ID
-		public RuleCall getAtrbIDTerminalRuleCall_3_2_1_0() { return cAtrbIDTerminalRuleCall_3_2_1_0; }
+		public RuleCall getVarsIDTerminalRuleCall_2_1_0() { return cVarsIDTerminalRuleCall_2_1_0; }
+		
+		//TYPE
+		public RuleCall getTYPEParserRuleCall_3() { return cTYPEParserRuleCall_3; }
+		
+		//("=" atrb+=ID ("," atrb+=ID)*)?
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//"="
+		public Keyword getEqualsSignKeyword_4_0() { return cEqualsSignKeyword_4_0; }
+		
+		//atrb+=ID
+		public Assignment getAtrbAssignment_4_1() { return cAtrbAssignment_4_1; }
+		
+		//ID
+		public RuleCall getAtrbIDTerminalRuleCall_4_1_0() { return cAtrbIDTerminalRuleCall_4_1_0; }
+		
+		//("," atrb+=ID)*
+		public Group getGroup_4_2() { return cGroup_4_2; }
+		
+		//","
+		public Keyword getCommaKeyword_4_2_0() { return cCommaKeyword_4_2_0; }
+		
+		//atrb+=ID
+		public Assignment getAtrbAssignment_4_2_1() { return cAtrbAssignment_4_2_1; }
+		
+		//ID
+		public RuleCall getAtrbIDTerminalRuleCall_4_2_1_0() { return cAtrbIDTerminalRuleCall_4_2_1_0; }
 	}
 	public class ConditionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Condition");
@@ -983,7 +999,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DecVar:
-	//	VAR vars+=ID TYPE ("=" atrb+=ID ("," atrb+=ID)*)?;
+	//	VAR vars+=ID ("," vars+=ID)* TYPE ("=" atrb+=ID ("," atrb+=ID)*)?;
 	public DecVarElements getDecVarAccess() {
 		return pDecVar;
 	}

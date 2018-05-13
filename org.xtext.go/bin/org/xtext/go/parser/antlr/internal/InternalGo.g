@@ -204,23 +204,47 @@ ruleDecVar returns [EObject current=null]
 				}
 			)
 		)
+		(
+			otherlv_2=','
+			{
+				newLeafNode(otherlv_2, grammarAccess.getDecVarAccess().getCommaKeyword_2_0());
+			}
+			(
+				(
+					lv_vars_3_0=RULE_ID
+					{
+						newLeafNode(lv_vars_3_0, grammarAccess.getDecVarAccess().getVarsIDTerminalRuleCall_2_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDecVarRule());
+						}
+						addWithLastConsumed(
+							$current,
+							"vars",
+							lv_vars_3_0,
+							"org.eclipse.xtext.common.Terminals.ID");
+					}
+				)
+			)
+		)*
 		{
-			newCompositeNode(grammarAccess.getDecVarAccess().getTYPEParserRuleCall_2());
+			newCompositeNode(grammarAccess.getDecVarAccess().getTYPEParserRuleCall_3());
 		}
 		ruleTYPE
 		{
 			afterParserOrEnumRuleCall();
 		}
 		(
-			otherlv_3='='
+			otherlv_5='='
 			{
-				newLeafNode(otherlv_3, grammarAccess.getDecVarAccess().getEqualsSignKeyword_3_0());
+				newLeafNode(otherlv_5, grammarAccess.getDecVarAccess().getEqualsSignKeyword_4_0());
 			}
 			(
 				(
-					lv_atrb_4_0=RULE_ID
+					lv_atrb_6_0=RULE_ID
 					{
-						newLeafNode(lv_atrb_4_0, grammarAccess.getDecVarAccess().getAtrbIDTerminalRuleCall_3_1_0());
+						newLeafNode(lv_atrb_6_0, grammarAccess.getDecVarAccess().getAtrbIDTerminalRuleCall_4_1_0());
 					}
 					{
 						if ($current==null) {
@@ -229,21 +253,21 @@ ruleDecVar returns [EObject current=null]
 						addWithLastConsumed(
 							$current,
 							"atrb",
-							lv_atrb_4_0,
+							lv_atrb_6_0,
 							"org.eclipse.xtext.common.Terminals.ID");
 					}
 				)
 			)
 			(
-				otherlv_5=','
+				otherlv_7=','
 				{
-					newLeafNode(otherlv_5, grammarAccess.getDecVarAccess().getCommaKeyword_3_2_0());
+					newLeafNode(otherlv_7, grammarAccess.getDecVarAccess().getCommaKeyword_4_2_0());
 				}
 				(
 					(
-						lv_atrb_6_0=RULE_ID
+						lv_atrb_8_0=RULE_ID
 						{
-							newLeafNode(lv_atrb_6_0, grammarAccess.getDecVarAccess().getAtrbIDTerminalRuleCall_3_2_1_0());
+							newLeafNode(lv_atrb_8_0, grammarAccess.getDecVarAccess().getAtrbIDTerminalRuleCall_4_2_1_0());
 						}
 						{
 							if ($current==null) {
@@ -252,7 +276,7 @@ ruleDecVar returns [EObject current=null]
 							addWithLastConsumed(
 								$current,
 								"atrb",
-								lv_atrb_6_0,
+								lv_atrb_8_0,
 								"org.eclipse.xtext.common.Terminals.ID");
 						}
 					)

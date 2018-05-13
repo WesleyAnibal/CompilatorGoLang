@@ -28,8 +28,12 @@ class GoValidator extends AbstractGoValidator {
 //	}
 	@Check
 	def checkGreetingStartsWithCapital(DecVar g) {
-		if(g.vars.size() < g.atrb.size()){
-			error("número de atribuições maior que variaveis", GoPackage.Literals.DEC_VAR__VARS);
+		if(g.atrb.size() > 0){
+			if(g.vars.size() < g.atrb.size()){
+				error("número de atribuições maior que variaveis", GoPackage.Literals.DEC_VAR__VARS);
+			}else if(g.vars.size() > g.atrb.size()){
+				error("número de atribuições menor que variaveis", GoPackage.Literals.DEC_VAR__VARS);
+			}
 		}
 	}
 

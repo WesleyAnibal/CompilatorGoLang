@@ -182,7 +182,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DecVar returns DecVar
 	 *
 	 * Constraint:
-	 *     (vars+=ID (atrb+=ID atrb+=ID*)?)
+	 *     (vars+=ID vars+=ID* (atrb+=ID atrb+=ID*)?)
 	 */
 	protected void sequence_DecVar(ISerializationContext context, DecVar semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

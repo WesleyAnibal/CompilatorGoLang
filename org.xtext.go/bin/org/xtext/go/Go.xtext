@@ -9,7 +9,7 @@ Greeting:
 	DecVar | DataType | Entity | DecFunc | EOL | Condition;
 
 DecVar:
-	VAR vars+=ID TYPE ("=" atrb+=ID("," atrb+=ID)*)?;
+	VAR vars+=ID("," vars+=ID)* TYPE ("=" atrb+=ID("," atrb+=ID)*)?;
 	
 terminal EOL:
 	NEWLINE | COMMENTS;
