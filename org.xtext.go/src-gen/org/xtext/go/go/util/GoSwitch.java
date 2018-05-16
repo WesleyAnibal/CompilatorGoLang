@@ -109,7 +109,6 @@ public class GoSwitch<T> extends Switch<T>
         INT int_ = (INT)theEObject;
         T result = caseINT(int_);
         if (result == null) result = caseGreeting(int_);
-        if (result == null) result = caseExpression(int_);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

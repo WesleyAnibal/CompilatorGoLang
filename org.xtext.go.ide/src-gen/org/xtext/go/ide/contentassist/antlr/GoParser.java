@@ -33,6 +33,7 @@ public class GoParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getGreetingAccess().getAlternatives(), "rule__Greeting__Alternatives");
 					put(grammarAccess.getDecVarAccess().getAlternatives(), "rule__DecVar__Alternatives");
+					put(grammarAccess.getDecImportAccess().getAlternatives_1(), "rule__DecImport__Alternatives_1");
 					put(grammarAccess.getOperationsAccess().getAlternatives(), "rule__Operations__Alternatives");
 					put(grammarAccess.getComparisonExpressionAccess().getOperatorAlternatives_1_1_0(), "rule__ComparisonExpression__OperatorAlternatives_1_1_0");
 					put(grammarAccess.getPrimaryExpressionAccess().getAlternatives(), "rule__PrimaryExpression__Alternatives");
@@ -46,6 +47,8 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDecVarsAccess().getGroup(), "rule__DecVars__Group__0");
 					put(grammarAccess.getDecVarsAccess().getGroup_1(), "rule__DecVars__Group_1__0");
 					put(grammarAccess.getDecVarsAccess().getGroup_4(), "rule__DecVars__Group_4__0");
+					put(grammarAccess.getDecImportAccess().getGroup(), "rule__DecImport__Group__0");
+					put(grammarAccess.getDecImportAccess().getGroup_1_1(), "rule__DecImport__Group_1_1__0");
 					put(grammarAccess.getDoubleAccess().getGroup(), "rule__Double__Group__0");
 					put(grammarAccess.getSumAccess().getGroup(), "rule__Sum__Group__0");
 					put(grammarAccess.getSubtractionAccess().getGroup(), "rule__Subtraction__Group__0");

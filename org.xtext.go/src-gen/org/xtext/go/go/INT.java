@@ -14,6 +14,6 @@ package org.xtext.go.go;
  * @model
  * @generated
  */
-public interface INT extends Greeting, Expression
+public interface INT extends Greeting
 {
 } // INT

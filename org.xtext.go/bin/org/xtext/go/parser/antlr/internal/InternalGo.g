@@ -169,6 +169,14 @@ ruleGreeting returns [EObject current=null]
 			$current = $this_Operations_6.current;
 			afterParserOrEnumRuleCall();
 		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getGreetingAccess().getDecImportParserRuleCall_7());
+		}
+		ruleDecImport
+		{
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -410,6 +418,66 @@ ruleDecVars returns [EObject current=null]
 				)
 			)
 		)*
+	)
+;
+
+// Entry rule entryRuleDecImport
+entryRuleDecImport returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getDecImportRule()); }
+	iv_ruleDecImport=ruleDecImport
+	{ $current=$iv_ruleDecImport.current.getText(); }
+	EOF;
+
+// Rule DecImport
+ruleDecImport returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getDecImportAccess().getIMPORTParserRuleCall_0());
+		}
+		this_IMPORT_0=ruleIMPORT
+		{
+			$current.merge(this_IMPORT_0);
+		}
+		{
+			afterParserOrEnumRuleCall();
+		}
+		(
+			this_STRING_1=RULE_STRING
+			{
+				$current.merge(this_STRING_1);
+			}
+			{
+				newLeafNode(this_STRING_1, grammarAccess.getDecImportAccess().getSTRINGTerminalRuleCall_1_0());
+			}
+			    |
+			(
+				kw='('
+				{
+					$current.merge(kw);
+					newLeafNode(kw, grammarAccess.getDecImportAccess().getLeftParenthesisKeyword_1_1_0());
+				}
+				(
+					this_STRING_3=RULE_STRING
+					{
+						$current.merge(this_STRING_3);
+					}
+					{
+						newLeafNode(this_STRING_3, grammarAccess.getDecImportAccess().getSTRINGTerminalRuleCall_1_1_1());
+					}
+				)+
+				kw=')'
+				{
+					$current.merge(kw);
+					newLeafNode(kw, grammarAccess.getDecImportAccess().getRightParenthesisKeyword_1_1_2());
+				}
+			)
+		)
 	)
 ;
 
@@ -1188,13 +1256,9 @@ ruleLiteral returns [EObject current=null]
 			newLeafNode(otherlv_2, grammarAccess.getLiteralAccess().getFalseKeyword_1());
 		}
 		    |
+		this_INT_3=RULE_INT
 		{
-			newCompositeNode(grammarAccess.getLiteralAccess().getOperationsParserRuleCall_2());
-		}
-		this_Operations_3=ruleOperations
-		{
-			$current = $this_Operations_3.current;
-			afterParserOrEnumRuleCall();
+			newLeafNode(this_INT_3, grammarAccess.getLiteralAccess().getINTTerminalRuleCall_2());
 		}
 	)
 ;

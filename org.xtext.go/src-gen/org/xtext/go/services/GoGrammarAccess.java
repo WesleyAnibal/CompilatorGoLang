@@ -48,12 +48,13 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cEOLTerminalRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cConditionParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		private final RuleCall cOperationsParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cDecImportParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		
 		//Greeting:
-		//	DecVar | DataType | Entity | DecFunc | EOL | Condition | Operations;
+		//	DecVar | DataType | Entity | DecFunc | EOL | Condition | Operations | DecImport;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//DecVar | DataType | Entity | DecFunc | EOL | Condition | Operations
+		//DecVar | DataType | Entity | DecFunc | EOL | Condition | Operations | DecImport
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//DecVar
@@ -76,6 +77,9 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Operations
 		public RuleCall getOperationsParserRuleCall_6() { return cOperationsParserRuleCall_6; }
+		
+		//DecImport
+		public RuleCall getDecImportParserRuleCall_7() { return cDecImportParserRuleCall_7; }
 	}
 	public class DecVarElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.DecVar");
@@ -222,6 +226,45 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//ID
 		public RuleCall getAtrbIDTerminalRuleCall_4_1_0() { return cAtrbIDTerminalRuleCall_4_1_0; }
+	}
+	public class DecImportElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.DecImport");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cIMPORTParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final RuleCall cSTRINGTerminalRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
+		private final Group cGroup_1_1 = (Group)cAlternatives_1.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
+		private final RuleCall cSTRINGTerminalRuleCall_1_1_1 = (RuleCall)cGroup_1_1.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_1_1_2 = (Keyword)cGroup_1_1.eContents().get(2);
+		
+		//DecImport:
+		//	IMPORT (STRING | "(" STRING+ ")");
+		@Override public ParserRule getRule() { return rule; }
+		
+		//IMPORT (STRING | "(" STRING+ ")")
+		public Group getGroup() { return cGroup; }
+		
+		//IMPORT
+		public RuleCall getIMPORTParserRuleCall_0() { return cIMPORTParserRuleCall_0; }
+		
+		//STRING | "(" STRING+ ")"
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
+		
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_1_0() { return cSTRINGTerminalRuleCall_1_0; }
+		
+		//"(" STRING+ ")"
+		public Group getGroup_1_1() { return cGroup_1_1; }
+		
+		//"("
+		public Keyword getLeftParenthesisKeyword_1_1_0() { return cLeftParenthesisKeyword_1_1_0; }
+		
+		//STRING+
+		public RuleCall getSTRINGTerminalRuleCall_1_1_1() { return cSTRINGTerminalRuleCall_1_1_1; }
+		
+		//")"
+		public Keyword getRightParenthesisKeyword_1_1_2() { return cRightParenthesisKeyword_1_1_2; }
 	}
 	public class OperationsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Operations");
@@ -674,13 +717,13 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
 		private final Keyword cValueTrueKeyword_0_1_0 = (Keyword)cValueAssignment_0_1.eContents().get(0);
 		private final Keyword cFalseKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
-		private final RuleCall cOperationsParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cINTTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//Literal Expression:
-		//	{Literal} value="true" | "false" | Operations;
+		//	{Literal} value="true" | "false" | INT;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Literal} value="true" | "false" | Operations
+		//{Literal} value="true" | "false" | INT
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//{Literal} value="true"
@@ -698,8 +741,8 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		//"false"
 		public Keyword getFalseKeyword_1() { return cFalseKeyword_1; }
 		
-		//Operations
-		public RuleCall getOperationsParserRuleCall_2() { return cOperationsParserRuleCall_2; }
+		//INT
+		public RuleCall getINTTerminalRuleCall_2() { return cINTTerminalRuleCall_2; }
 	}
 	public class DecFuncElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.DecFunc");
@@ -1086,6 +1129,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	private final GreetingElements pGreeting;
 	private final DecVarElements pDecVar;
 	private final DecVarsElements pDecVars;
+	private final DecImportElements pDecImport;
 	private final OperationsElements pOperations;
 	private final DoubleElements pDouble;
 	private final SumElements pSum;
@@ -1146,6 +1190,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGreeting = new GreetingElements();
 		this.pDecVar = new DecVarElements();
 		this.pDecVars = new DecVarsElements();
+		this.pDecImport = new DecImportElements();
 		this.pOperations = new OperationsElements();
 		this.pDouble = new DoubleElements();
 		this.pSum = new SumElements();
@@ -1232,7 +1277,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Greeting:
-	//	DecVar | DataType | Entity | DecFunc | EOL | Condition | Operations;
+	//	DecVar | DataType | Entity | DecFunc | EOL | Condition | Operations | DecImport;
 	public GreetingElements getGreetingAccess() {
 		return pGreeting;
 	}
@@ -1259,6 +1304,16 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getDecVarsRule() {
 		return getDecVarsAccess().getRule();
+	}
+	
+	//DecImport:
+	//	IMPORT (STRING | "(" STRING+ ")");
+	public DecImportElements getDecImportAccess() {
+		return pDecImport;
+	}
+	
+	public ParserRule getDecImportRule() {
+		return getDecImportAccess().getRule();
 	}
 	
 	//Operations INT:
@@ -1467,7 +1522,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Literal Expression:
-	//	{Literal} value="true" | "false" | Operations;
+	//	{Literal} value="true" | "false" | INT;
 	public LiteralElements getLiteralAccess() {
 		return pLiteral;
 	}

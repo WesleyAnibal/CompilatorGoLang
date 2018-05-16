@@ -697,7 +697,6 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     decVarEClass.getESuperTypes().add(this.getGreeting());
     decVarsEClass.getESuperTypes().add(this.getDecVar());
     intEClass.getESuperTypes().add(this.getGreeting());
-    intEClass.getESuperTypes().add(this.getExpression());
     conditionEClass.getESuperTypes().add(this.getGreeting());
     ifConditionEClass.getESuperTypes().add(this.getElseIfCondition());
     decFuncEClass.getESuperTypes().add(this.getGreeting());

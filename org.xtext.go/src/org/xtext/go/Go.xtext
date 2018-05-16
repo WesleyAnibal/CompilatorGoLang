@@ -6,7 +6,7 @@ Go:
 	(elements+=Greeting*);
 
 Greeting:
-	DecVar | DataType | Entity | DecFunc | EOL | Condition | Operations;
+	DecVar | DataType | Entity | DecFunc | EOL | Condition | Operations | DecImport;
 
 DecVar:
 	DecVars |VAR vars+=ID("," vars+=ID)* TYPE ("=" atrb+=ID("," atrb+=ID)*)?;
@@ -14,7 +14,9 @@ DecVar:
 DecVars:
 	vars+=ID("," vars+=ID)* ":=" atrb+=ID("," atrb+=ID)*;
 
-
+DecImport:
+	IMPORT (STRING | "("STRING+")");
+	
 Operations returns INT:
 	Sum | Subtraction | Multiplication | Division | INT;
 		
@@ -94,7 +96,7 @@ PrimaryExpression returns Expression:
 ;
 
 Literal returns Expression:
-    {Literal} value="true" | "false" | Operations
+    {Literal} value="true" | "false" | INT
 ;
 DecFunc:
 	FUNC name=ID"("(parameter=ID)?(","parameter=ID)*")""{"args+=Greeting*"}";
