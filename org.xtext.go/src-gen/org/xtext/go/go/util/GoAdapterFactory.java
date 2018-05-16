@@ -91,6 +91,16 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createDecVarAdapter();
       }
       @Override
+      public Adapter caseDecVars(DecVars object)
+      {
+        return createDecVarsAdapter();
+      }
+      @Override
+      public Adapter caseINT(INT object)
+      {
+        return createINTAdapter();
+      }
+      @Override
       public Adapter caseCondition(Condition object)
       {
         return createConditionAdapter();
@@ -208,6 +218,36 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDecVarAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.DecVars <em>Dec Vars</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.DecVars
+   * @generated
+   */
+  public Adapter createDecVarsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.INT <em>INT</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.INT
+   * @generated
+   */
+  public Adapter createINTAdapter()
   {
     return null;
   }

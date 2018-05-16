@@ -14,6 +14,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecVar/vars"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecVar/atrb"/>
     </genClasses>
+    <genClasses ecoreClass="Go.ecore#//DecVars"/>
+    <genClasses ecoreClass="Go.ecore#//INT"/>
     <genClasses ecoreClass="Go.ecore#//Condition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Condition/if"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Condition/elseif"/>

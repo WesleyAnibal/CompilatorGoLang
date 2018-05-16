@@ -20,6 +20,7 @@ import org.xtext.go.go.Condition;
 import org.xtext.go.go.DataType;
 import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.DecVar;
+import org.xtext.go.go.DecVars;
 import org.xtext.go.go.ElseCondition;
 import org.xtext.go.go.Go;
 import org.xtext.go.go.GoPackage;
@@ -59,6 +60,9 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case GoPackage.DEC_VAR:
 				sequence_DecVar(context, (DecVar) semanticObject); 
+				return; 
+			case GoPackage.DEC_VARS:
+				sequence_DecVars(context, (DecVars) semanticObject); 
 				return; 
 			case GoPackage.ELSE_CONDITION:
 				sequence_ElseCondition(context, (ElseCondition) semanticObject); 
@@ -185,6 +189,20 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (vars+=ID vars+=ID* (atrb+=ID atrb+=ID*)?)
 	 */
 	protected void sequence_DecVar(ISerializationContext context, DecVar semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Greeting returns DecVars
+	 *     DecVar returns DecVars
+	 *     DecVars returns DecVars
+	 *
+	 * Constraint:
+	 *     (vars+=ID vars+=ID* atrb+=ID atrb+=ID*)
+	 */
+	protected void sequence_DecVars(ISerializationContext context, DecVars semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

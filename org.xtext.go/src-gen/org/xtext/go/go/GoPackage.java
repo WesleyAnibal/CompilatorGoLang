@@ -142,6 +142,62 @@ public interface GoPackage extends EPackage
   int DEC_VAR_FEATURE_COUNT = GREETING_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.go.go.impl.DecVarsImpl <em>Dec Vars</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.go.go.impl.DecVarsImpl
+   * @see org.xtext.go.go.impl.GoPackageImpl#getDecVars()
+   * @generated
+   */
+  int DEC_VARS = 3;
+
+  /**
+   * The feature id for the '<em><b>Vars</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEC_VARS__VARS = DEC_VAR__VARS;
+
+  /**
+   * The feature id for the '<em><b>Atrb</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEC_VARS__ATRB = DEC_VAR__ATRB;
+
+  /**
+   * The number of structural features of the '<em>Dec Vars</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEC_VARS_FEATURE_COUNT = DEC_VAR_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.go.go.impl.INTImpl <em>INT</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.go.go.impl.INTImpl
+   * @see org.xtext.go.go.impl.GoPackageImpl#getINT()
+   * @generated
+   */
+  int INT = 4;
+
+  /**
+   * The number of structural features of the '<em>INT</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_FEATURE_COUNT = GREETING_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link org.xtext.go.go.impl.ConditionImpl <em>Condition</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -149,7 +205,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getCondition()
    * @generated
    */
-  int CONDITION = 3;
+  int CONDITION = 5;
 
   /**
    * The feature id for the '<em><b>If</b></em>' containment reference.
@@ -195,7 +251,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getElseIfCondition()
    * @generated
    */
-  int ELSE_IF_CONDITION = 5;
+  int ELSE_IF_CONDITION = 7;
 
   /**
    * The number of structural features of the '<em>Else If Condition</em>' class.
@@ -214,7 +270,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getIfCondition()
    * @generated
    */
-  int IF_CONDITION = 4;
+  int IF_CONDITION = 6;
 
   /**
    * The feature id for the '<em><b>Cond</b></em>' containment reference.
@@ -251,7 +307,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getElseCondition()
    * @generated
    */
-  int ELSE_CONDITION = 6;
+  int ELSE_CONDITION = 8;
 
   /**
    * The feature id for the '<em><b>Then</b></em>' containment reference.
@@ -279,7 +335,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 7;
+  int EXPRESSION = 9;
 
   /**
    * The number of structural features of the '<em>Expression</em>' class.
@@ -298,7 +354,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDecFunc()
    * @generated
    */
-  int DEC_FUNC = 8;
+  int DEC_FUNC = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -344,7 +400,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDataType()
    * @generated
    */
-  int DATA_TYPE = 9;
+  int DATA_TYPE = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -372,7 +428,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getOrExpression()
    * @generated
    */
-  int OR_EXPRESSION = 10;
+  int OR_EXPRESSION = 12;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -409,7 +465,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getAndExpression()
    * @generated
    */
-  int AND_EXPRESSION = 11;
+  int AND_EXPRESSION = 13;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -446,7 +502,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getComparisonExpression()
    * @generated
    */
-  int COMPARISON_EXPRESSION = 12;
+  int COMPARISON_EXPRESSION = 14;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -492,7 +548,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 13;
+  int LITERAL = 15;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -575,6 +631,26 @@ public interface GoPackage extends EPackage
    * @generated
    */
   EAttribute getDecVar_Atrb();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.go.go.DecVars <em>Dec Vars</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Dec Vars</em>'.
+   * @see org.xtext.go.go.DecVars
+   * @generated
+   */
+  EClass getDecVars();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.go.go.INT <em>INT</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>INT</em>'.
+   * @see org.xtext.go.go.INT
+   * @generated
+   */
+  EClass getINT();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.Condition <em>Condition</em>}'.
@@ -960,6 +1036,26 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EAttribute DEC_VAR__ATRB = eINSTANCE.getDecVar_Atrb();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.go.go.impl.DecVarsImpl <em>Dec Vars</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.go.go.impl.DecVarsImpl
+     * @see org.xtext.go.go.impl.GoPackageImpl#getDecVars()
+     * @generated
+     */
+    EClass DEC_VARS = eINSTANCE.getDecVars();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.go.go.impl.INTImpl <em>INT</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.go.go.impl.INTImpl
+     * @see org.xtext.go.go.impl.GoPackageImpl#getINT()
+     * @generated
+     */
+    EClass INT = eINSTANCE.getINT();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.ConditionImpl <em>Condition</em>}' class.

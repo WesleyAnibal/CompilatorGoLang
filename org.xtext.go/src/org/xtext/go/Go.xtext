@@ -6,10 +6,44 @@ Go:
 	(elements+=Greeting*);
 
 Greeting:
-	DecVar | DataType | Entity | DecFunc | EOL | Condition;
+	DecVar | DataType | Entity | DecFunc | EOL | Condition | Operations;
 
 DecVar:
-	VAR vars+=ID("," vars+=ID)* TYPE ("=" atrb+=ID("," atrb+=ID)*)?;
+	DecVars |VAR vars+=ID("," vars+=ID)* TYPE ("=" atrb+=ID("," atrb+=ID)*)?;
+
+DecVars:
+	vars+=ID("," vars+=ID)* ":=" atrb+=ID("," atrb+=ID)*;
+
+
+Operations returns INT:
+	Sum | Subtraction | Multiplication | Division | INT;
+		
+Double:
+	INT"."INT;
+	
+Sum returns INT:
+	INT Plus INT;
+
+Subtraction returns INT:
+	INT Minus INT;
+
+Multiplication returns INT:
+	INT Asterics INT;
+
+Division returns INT:
+	INT Bar INT;
+	
+terminal Bar:
+	"/";
+	
+terminal Asterics:
+	"*";
+	
+terminal Minus:
+	"-";
+	
+terminal Plus:
+	"+";
 	
 terminal EOL:
 	NEWLINE | COMMENTS;
@@ -60,7 +94,7 @@ PrimaryExpression returns Expression:
 ;
 
 Literal returns Expression:
-    {Literal} value="true" | "false" | INT
+    {Literal} value="true" | "false" | Operations
 ;
 DecFunc:
 	FUNC name=ID"("(parameter=ID)?(","parameter=ID)*")""{"args+=Greeting*"}";

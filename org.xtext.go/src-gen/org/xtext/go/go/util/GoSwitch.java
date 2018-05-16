@@ -95,6 +95,24 @@ public class GoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GoPackage.DEC_VARS:
+      {
+        DecVars decVars = (DecVars)theEObject;
+        T result = caseDecVars(decVars);
+        if (result == null) result = caseDecVar(decVars);
+        if (result == null) result = caseGreeting(decVars);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.INT:
+      {
+        INT int_ = (INT)theEObject;
+        T result = caseINT(int_);
+        if (result == null) result = caseGreeting(int_);
+        if (result == null) result = caseExpression(int_);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GoPackage.CONDITION:
       {
         Condition condition = (Condition)theEObject;
@@ -228,6 +246,38 @@ public class GoSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDecVar(DecVar object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dec Vars</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dec Vars</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDecVars(DecVars object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>INT</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>INT</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseINT(INT object)
   {
     return null;
   }
