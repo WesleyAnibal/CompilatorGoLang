@@ -13,17 +13,17 @@ DecVar:
 
 DecVars:
 	vars+=ID("," vars+=ID)* ":=" atrb+=Atri("," atrb+=Atri)*;
+	
 Atri:
-	"["INT*"]"Types("{"TypeValue"}")? | TypeValue ;
+	"["INT?"]"Types("{"TypeValue"}")? | TypeValue ;
+	
 Params:
 	params+=ID Types ("," params+=ID Types)*;
 	
 TypeValue:
 	STRING | INT | Double | Boolean;
 
-Boolean:
-	"true" | "false";
-	
+
 DecImport:
 	IMPORT (STRING | "("STRING+")");
 	
@@ -44,34 +44,7 @@ Multiplication returns INT:
 
 Division returns INT:
 	INT Bar INT;
-	
-terminal Bar:
-	"/";
-	
-terminal Asterics:
-	"*";
-	
-terminal Minus:
-	"-";
-	
-terminal Plus:
-	"+";
-	
-terminal EOL:
-	NEWLINE | COMMENTS;
-	
-terminal COMMENTS:
-	ML_COMMENT | SL_COMMENT;
-	
-terminal ML_COMMENT:
-	"/*"->"*/";
-	
-terminal SL_COMMENT:
-	'//' !('\n'|'\r')* ('\r'? '\n')?;
-
-terminal NEWLINE:
-	('\r'? '\n');
-	
+		
 Condition: 
     (if=IfCondition(elseif=ElseIfCondition)*(else=ElseCondition)?);
     
@@ -110,13 +83,18 @@ Literal returns Expression:
 ;
 DecFunc:
 	FUNC name=ID"("param=Params*")""{"args+=Greeting*"}";
+	
+//Tokens
 
+Terminals:
+	(BREAK|CASE|CHAN|CONST|CONTINUE|ELSE|IF|FOR|FUNC|IMPORT|RETURN|PACKAGE|RANGE);
 
 Types:
 	TYPE | "string" |"int";
-Terminals:
-	(BREAK|CASE|CHAN|CONST|CONTINUE|ELSE|IF|FOR|FUNC|IMPORT|RETURN|PACKAGE|RANGE);
-	
+
+Boolean:
+	"true" | "false";
+		
 BREAK:
 	"break";
 
@@ -170,6 +148,33 @@ RANGE:
 	
 Entity:
 	'print' '(' (STRING | INT+) ')';
+	
+terminal Bar:
+	"/";
+	
+terminal Asterics:
+	"*";
+	
+terminal Minus:
+	"-";
+	
+terminal Plus:
+	"+";
+	
+terminal EOL:
+	NEWLINE | COMMENTS;
+	
+terminal COMMENTS:
+	ML_COMMENT | SL_COMMENT;
+	
+terminal ML_COMMENT:
+	"/*"->"*/";
+	
+terminal SL_COMMENT:
+	'//' !('\n'|'\r')* ('\r'? '\n')?;
 
+terminal NEWLINE:
+	('\r'? '\n');
+	
 DataType:
 	'datatype' name=ID;

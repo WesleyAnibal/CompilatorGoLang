@@ -242,19 +242,19 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTypeValueParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Atri:
-		//	"[" INT* "]" Types ("{" TypeValue "}")? | TypeValue;
+		//	"[" INT? "]" Types ("{" TypeValue "}")? | TypeValue;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//"[" INT* "]" Types ("{" TypeValue "}")? | TypeValue
+		//"[" INT? "]" Types ("{" TypeValue "}")? | TypeValue
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//"[" INT* "]" Types ("{" TypeValue "}")?
+		//"[" INT? "]" Types ("{" TypeValue "}")?
 		public Group getGroup_0() { return cGroup_0; }
 		
 		//"["
 		public Keyword getLeftSquareBracketKeyword_0_0() { return cLeftSquareBracketKeyword_0_0; }
 		
-		//INT*
+		//INT?
 		public RuleCall getINTTerminalRuleCall_0_1() { return cINTTerminalRuleCall_0_1; }
 		
 		//"]"
@@ -1460,7 +1460,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Atri:
-	//	"[" INT* "]" Types ("{" TypeValue "}")? | TypeValue;
+	//	"[" INT? "]" Types ("{" TypeValue "}")? | TypeValue;
 	public AtriElements getAtriAccess() {
 		return pAtri;
 	}

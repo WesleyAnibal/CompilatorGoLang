@@ -4499,6 +4499,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     alt8=3;
                     }
                     break;
+                case RULE_PLUS:
+                    {
+                    alt8=1;
+                    }
+                    break;
                 case EOF:
                 case RULE_EOL:
                 case RULE_INT:
@@ -4512,11 +4517,6 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                 case 55:
                     {
                     alt8=5;
-                    }
-                    break;
-                case RULE_PLUS:
-                    {
-                    alt8=1;
                     }
                     break;
                 case RULE_BAR:
@@ -7218,45 +7218,38 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0__1__Impl"
-    // InternalGo.g:2108:1: rule__Atri__Group_0__1__Impl : ( ( RULE_INT )* ) ;
+    // InternalGo.g:2108:1: rule__Atri__Group_0__1__Impl : ( ( RULE_INT )? ) ;
     public final void rule__Atri__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2112:1: ( ( ( RULE_INT )* ) )
-            // InternalGo.g:2113:1: ( ( RULE_INT )* )
+            // InternalGo.g:2112:1: ( ( ( RULE_INT )? ) )
+            // InternalGo.g:2113:1: ( ( RULE_INT )? )
             {
-            // InternalGo.g:2113:1: ( ( RULE_INT )* )
-            // InternalGo.g:2114:2: ( RULE_INT )*
+            // InternalGo.g:2113:1: ( ( RULE_INT )? )
+            // InternalGo.g:2114:2: ( RULE_INT )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtriAccess().getINTTerminalRuleCall_0_1()); 
             }
-            // InternalGo.g:2115:2: ( RULE_INT )*
-            loop20:
-            do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+            // InternalGo.g:2115:2: ( RULE_INT )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-                if ( (LA20_0==RULE_INT) ) {
-                    alt20=1;
-                }
+            if ( (LA20_0==RULE_INT) ) {
+                alt20=1;
+            }
+            switch (alt20) {
+                case 1 :
+                    // InternalGo.g:2115:3: RULE_INT
+                    {
+                    match(input,RULE_INT,FOLLOW_2); if (state.failed) return ;
 
+                    }
+                    break;
 
-                switch (alt20) {
-            	case 1 :
-            	    // InternalGo.g:2115:3: RULE_INT
-            	    {
-            	    match(input,RULE_INT,FOLLOW_4); if (state.failed) return ;
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop20;
-                }
-            } while (true);
+            }
 
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAtriAccess().getINTTerminalRuleCall_0_1()); 

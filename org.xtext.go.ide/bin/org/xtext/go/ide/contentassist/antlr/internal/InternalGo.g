@@ -2112,7 +2112,7 @@ rule__Atri__Group_0__1__Impl
 :
 (
 	{ before(grammarAccess.getAtriAccess().getINTTerminalRuleCall_0_1()); }
-	(RULE_INT)*
+	(RULE_INT)?
 	{ after(grammarAccess.getAtriAccess().getINTTerminalRuleCall_0_1()); }
 )
 ;

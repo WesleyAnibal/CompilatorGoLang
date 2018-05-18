@@ -455,7 +455,7 @@ ruleAtri returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 				{
 					newLeafNode(this_INT_1, grammarAccess.getAtriAccess().getINTTerminalRuleCall_0_1());
 				}
-			)*
+			)?
 			kw=']'
 			{
 				$current.merge(kw);
