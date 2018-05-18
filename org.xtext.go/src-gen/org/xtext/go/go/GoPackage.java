@@ -226,6 +226,109 @@ public interface GoPackage extends EPackage
   int INT_FEATURE_COUNT = GREETING_FEATURE_COUNT + 0;
 
   /**
+   * The meta object id for the '{@link org.xtext.go.go.impl.IImpl <em>I</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.go.go.impl.IImpl
+   * @see org.xtext.go.go.impl.GoPackageImpl#getI()
+   * @generated
+   */
+  int I = 6;
+
+  /**
+   * The number of structural features of the '<em>I</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int I_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.go.go.impl.TImpl <em>T</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.go.go.impl.TImpl
+   * @see org.xtext.go.go.impl.GoPackageImpl#getT()
+   * @generated
+   */
+  int T = 7;
+
+  /**
+   * The feature id for the '<em><b>O</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int T__O = INT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>T</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int T_FEATURE_COUNT = INT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.go.go.impl.YImpl <em>Y</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.go.go.impl.YImpl
+   * @see org.xtext.go.go.impl.GoPackageImpl#getY()
+   * @generated
+   */
+  int Y = 8;
+
+  /**
+   * The feature id for the '<em><b>O</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int Y__O = 0;
+
+  /**
+   * The number of structural features of the '<em>Y</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int Y_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.go.go.impl.FImpl <em>F</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.go.go.impl.FImpl
+   * @see org.xtext.go.go.impl.GoPackageImpl#getF()
+   * @generated
+   */
+  int F = 9;
+
+  /**
+   * The feature id for the '<em><b>O</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int F__O = T__O;
+
+  /**
+   * The number of structural features of the '<em>F</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int F_FEATURE_COUNT = T_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link org.xtext.go.go.impl.ConditionImpl <em>Condition</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -233,7 +336,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getCondition()
    * @generated
    */
-  int CONDITION = 6;
+  int CONDITION = 10;
 
   /**
    * The feature id for the '<em><b>If</b></em>' containment reference.
@@ -279,7 +382,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getElseIfCondition()
    * @generated
    */
-  int ELSE_IF_CONDITION = 8;
+  int ELSE_IF_CONDITION = 12;
 
   /**
    * The number of structural features of the '<em>Else If Condition</em>' class.
@@ -298,7 +401,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getIfCondition()
    * @generated
    */
-  int IF_CONDITION = 7;
+  int IF_CONDITION = 11;
 
   /**
    * The feature id for the '<em><b>Cond</b></em>' containment reference.
@@ -335,7 +438,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getElseCondition()
    * @generated
    */
-  int ELSE_CONDITION = 9;
+  int ELSE_CONDITION = 13;
 
   /**
    * The feature id for the '<em><b>Then</b></em>' containment reference.
@@ -363,7 +466,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 10;
+  int EXPRESSION = 14;
 
   /**
    * The number of structural features of the '<em>Expression</em>' class.
@@ -382,7 +485,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDecFunc()
    * @generated
    */
-  int DEC_FUNC = 11;
+  int DEC_FUNC = 15;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -428,7 +531,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDataType()
    * @generated
    */
-  int DATA_TYPE = 12;
+  int DATA_TYPE = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -456,7 +559,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getOrExpression()
    * @generated
    */
-  int OR_EXPRESSION = 13;
+  int OR_EXPRESSION = 17;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -493,7 +596,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getAndExpression()
    * @generated
    */
-  int AND_EXPRESSION = 14;
+  int AND_EXPRESSION = 18;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -530,7 +633,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getComparisonExpression()
    * @generated
    */
-  int COMPARISON_EXPRESSION = 15;
+  int COMPARISON_EXPRESSION = 19;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -576,7 +679,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 16;
+  int LITERAL = 20;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -700,6 +803,68 @@ public interface GoPackage extends EPackage
    * @generated
    */
   EClass getINT();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.go.go.I <em>I</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>I</em>'.
+   * @see org.xtext.go.go.I
+   * @generated
+   */
+  EClass getI();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.go.go.T <em>T</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>T</em>'.
+   * @see org.xtext.go.go.T
+   * @generated
+   */
+  EClass getT();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.T#getO <em>O</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>O</em>'.
+   * @see org.xtext.go.go.T#getO()
+   * @see #getT()
+   * @generated
+   */
+  EReference getT_O();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.go.go.Y <em>Y</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Y</em>'.
+   * @see org.xtext.go.go.Y
+   * @generated
+   */
+  EClass getY();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Y#getO <em>O</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>O</em>'.
+   * @see org.xtext.go.go.Y#getO()
+   * @see #getY()
+   * @generated
+   */
+  EReference getY_O();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.go.go.F <em>F</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>F</em>'.
+   * @see org.xtext.go.go.F
+   * @generated
+   */
+  EClass getF();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.Condition <em>Condition</em>}'.
@@ -1123,6 +1288,62 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EClass INT = eINSTANCE.getINT();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.go.go.impl.IImpl <em>I</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.go.go.impl.IImpl
+     * @see org.xtext.go.go.impl.GoPackageImpl#getI()
+     * @generated
+     */
+    EClass I = eINSTANCE.getI();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.go.go.impl.TImpl <em>T</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.go.go.impl.TImpl
+     * @see org.xtext.go.go.impl.GoPackageImpl#getT()
+     * @generated
+     */
+    EClass T = eINSTANCE.getT();
+
+    /**
+     * The meta object literal for the '<em><b>O</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference T__O = eINSTANCE.getT_O();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.go.go.impl.YImpl <em>Y</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.go.go.impl.YImpl
+     * @see org.xtext.go.go.impl.GoPackageImpl#getY()
+     * @generated
+     */
+    EClass Y = eINSTANCE.getY();
+
+    /**
+     * The meta object literal for the '<em><b>O</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference Y__O = eINSTANCE.getY_O();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.go.go.impl.FImpl <em>F</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.go.go.impl.FImpl
+     * @see org.xtext.go.go.impl.GoPackageImpl#getF()
+     * @generated
+     */
+    EClass F = eINSTANCE.getF();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.ConditionImpl <em>Condition</em>}' class.

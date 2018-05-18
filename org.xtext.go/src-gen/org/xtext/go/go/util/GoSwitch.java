@@ -23,7 +23,7 @@ import org.xtext.go.go.*;
  * @see org.xtext.go.go.GoPackage
  * @generated
  */
-public class GoSwitch<T> extends Switch<T>
+public class GoSwitch<T1> extends Switch<T1>
 {
   /**
    * The cached model package
@@ -69,28 +69,28 @@ public class GoSwitch<T> extends Switch<T>
    * @generated
    */
   @Override
-  protected T doSwitch(int classifierID, EObject theEObject)
+  protected T1 doSwitch(int classifierID, EObject theEObject)
   {
     switch (classifierID)
     {
       case GoPackage.GO:
       {
         Go go = (Go)theEObject;
-        T result = caseGo(go);
+        T1 result = caseGo(go);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case GoPackage.GREETING:
       {
         Greeting greeting = (Greeting)theEObject;
-        T result = caseGreeting(greeting);
+        T1 result = caseGreeting(greeting);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case GoPackage.DEC_VAR:
       {
         DecVar decVar = (DecVar)theEObject;
-        T result = caseDecVar(decVar);
+        T1 result = caseDecVar(decVar);
         if (result == null) result = caseGreeting(decVar);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -98,7 +98,7 @@ public class GoSwitch<T> extends Switch<T>
       case GoPackage.DEC_VARS:
       {
         DecVars decVars = (DecVars)theEObject;
-        T result = caseDecVars(decVars);
+        T1 result = caseDecVars(decVars);
         if (result == null) result = caseDecVar(decVars);
         if (result == null) result = caseGreeting(decVars);
         if (result == null) result = defaultCase(theEObject);
@@ -107,22 +107,57 @@ public class GoSwitch<T> extends Switch<T>
       case GoPackage.PARAMS:
       {
         Params params = (Params)theEObject;
-        T result = caseParams(params);
+        T1 result = caseParams(params);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case GoPackage.INT:
       {
         INT int_ = (INT)theEObject;
-        T result = caseINT(int_);
+        T1 result = caseINT(int_);
         if (result == null) result = caseGreeting(int_);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.I:
+      {
+        I i = (I)theEObject;
+        T1 result = caseI(i);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.T:
+      {
+        T t = (T)theEObject;
+        T1 result = caseT(t);
+        if (result == null) result = caseINT(t);
+        if (result == null) result = caseI(t);
+        if (result == null) result = caseGreeting(t);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.Y:
+      {
+        Y y = (Y)theEObject;
+        T1 result = caseY(y);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.F:
+      {
+        F f = (F)theEObject;
+        T1 result = caseF(f);
+        if (result == null) result = caseT(f);
+        if (result == null) result = caseINT(f);
+        if (result == null) result = caseI(f);
+        if (result == null) result = caseGreeting(f);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case GoPackage.CONDITION:
       {
         Condition condition = (Condition)theEObject;
-        T result = caseCondition(condition);
+        T1 result = caseCondition(condition);
         if (result == null) result = caseGreeting(condition);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -130,7 +165,7 @@ public class GoSwitch<T> extends Switch<T>
       case GoPackage.IF_CONDITION:
       {
         IfCondition ifCondition = (IfCondition)theEObject;
-        T result = caseIfCondition(ifCondition);
+        T1 result = caseIfCondition(ifCondition);
         if (result == null) result = caseElseIfCondition(ifCondition);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -138,28 +173,28 @@ public class GoSwitch<T> extends Switch<T>
       case GoPackage.ELSE_IF_CONDITION:
       {
         ElseIfCondition elseIfCondition = (ElseIfCondition)theEObject;
-        T result = caseElseIfCondition(elseIfCondition);
+        T1 result = caseElseIfCondition(elseIfCondition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case GoPackage.ELSE_CONDITION:
       {
         ElseCondition elseCondition = (ElseCondition)theEObject;
-        T result = caseElseCondition(elseCondition);
+        T1 result = caseElseCondition(elseCondition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case GoPackage.EXPRESSION:
       {
         Expression expression = (Expression)theEObject;
-        T result = caseExpression(expression);
+        T1 result = caseExpression(expression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case GoPackage.DEC_FUNC:
       {
         DecFunc decFunc = (DecFunc)theEObject;
-        T result = caseDecFunc(decFunc);
+        T1 result = caseDecFunc(decFunc);
         if (result == null) result = caseGreeting(decFunc);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -167,7 +202,7 @@ public class GoSwitch<T> extends Switch<T>
       case GoPackage.DATA_TYPE:
       {
         DataType dataType = (DataType)theEObject;
-        T result = caseDataType(dataType);
+        T1 result = caseDataType(dataType);
         if (result == null) result = caseGreeting(dataType);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -175,7 +210,7 @@ public class GoSwitch<T> extends Switch<T>
       case GoPackage.OR_EXPRESSION:
       {
         OrExpression orExpression = (OrExpression)theEObject;
-        T result = caseOrExpression(orExpression);
+        T1 result = caseOrExpression(orExpression);
         if (result == null) result = caseExpression(orExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -183,7 +218,7 @@ public class GoSwitch<T> extends Switch<T>
       case GoPackage.AND_EXPRESSION:
       {
         AndExpression andExpression = (AndExpression)theEObject;
-        T result = caseAndExpression(andExpression);
+        T1 result = caseAndExpression(andExpression);
         if (result == null) result = caseExpression(andExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -191,7 +226,7 @@ public class GoSwitch<T> extends Switch<T>
       case GoPackage.COMPARISON_EXPRESSION:
       {
         ComparisonExpression comparisonExpression = (ComparisonExpression)theEObject;
-        T result = caseComparisonExpression(comparisonExpression);
+        T1 result = caseComparisonExpression(comparisonExpression);
         if (result == null) result = caseExpression(comparisonExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -199,7 +234,7 @@ public class GoSwitch<T> extends Switch<T>
       case GoPackage.LITERAL:
       {
         Literal literal = (Literal)theEObject;
-        T result = caseLiteral(literal);
+        T1 result = caseLiteral(literal);
         if (result == null) result = caseExpression(literal);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -219,7 +254,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseGo(Go object)
+  public T1 caseGo(Go object)
   {
     return null;
   }
@@ -235,7 +270,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseGreeting(Greeting object)
+  public T1 caseGreeting(Greeting object)
   {
     return null;
   }
@@ -251,7 +286,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseDecVar(DecVar object)
+  public T1 caseDecVar(DecVar object)
   {
     return null;
   }
@@ -267,7 +302,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseDecVars(DecVars object)
+  public T1 caseDecVars(DecVars object)
   {
     return null;
   }
@@ -283,7 +318,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseParams(Params object)
+  public T1 caseParams(Params object)
   {
     return null;
   }
@@ -299,7 +334,71 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseINT(INT object)
+  public T1 caseINT(INT object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>I</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>I</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T1 caseI(I object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>T</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>T</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T1 caseT(T object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Y</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Y</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T1 caseY(Y object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>F</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>F</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T1 caseF(F object)
   {
     return null;
   }
@@ -315,7 +414,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseCondition(Condition object)
+  public T1 caseCondition(Condition object)
   {
     return null;
   }
@@ -331,7 +430,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseIfCondition(IfCondition object)
+  public T1 caseIfCondition(IfCondition object)
   {
     return null;
   }
@@ -347,7 +446,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseElseIfCondition(ElseIfCondition object)
+  public T1 caseElseIfCondition(ElseIfCondition object)
   {
     return null;
   }
@@ -363,7 +462,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseElseCondition(ElseCondition object)
+  public T1 caseElseCondition(ElseCondition object)
   {
     return null;
   }
@@ -379,7 +478,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseExpression(Expression object)
+  public T1 caseExpression(Expression object)
   {
     return null;
   }
@@ -395,7 +494,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseDecFunc(DecFunc object)
+  public T1 caseDecFunc(DecFunc object)
   {
     return null;
   }
@@ -411,7 +510,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseDataType(DataType object)
+  public T1 caseDataType(DataType object)
   {
     return null;
   }
@@ -427,7 +526,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseOrExpression(OrExpression object)
+  public T1 caseOrExpression(OrExpression object)
   {
     return null;
   }
@@ -443,7 +542,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAndExpression(AndExpression object)
+  public T1 caseAndExpression(AndExpression object)
   {
     return null;
   }
@@ -459,7 +558,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseComparisonExpression(ComparisonExpression object)
+  public T1 caseComparisonExpression(ComparisonExpression object)
   {
     return null;
   }
@@ -475,7 +574,7 @@ public class GoSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseLiteral(Literal object)
+  public T1 caseLiteral(Literal object)
   {
     return null;
   }
@@ -492,7 +591,7 @@ public class GoSwitch<T> extends Switch<T>
    * @generated
    */
   @Override
-  public T defaultCase(EObject object)
+  public T1 defaultCase(EObject object)
   {
     return null;
   }

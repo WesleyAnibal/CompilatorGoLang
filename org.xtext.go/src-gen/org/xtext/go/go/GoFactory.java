@@ -78,6 +78,42 @@ public interface GoFactory extends EFactory
   INT createINT();
 
   /**
+   * Returns a new object of class '<em>I</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>I</em>'.
+   * @generated
+   */
+  I createI();
+
+  /**
+   * Returns a new object of class '<em>T</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>T</em>'.
+   * @generated
+   */
+  T createT();
+
+  /**
+   * Returns a new object of class '<em>Y</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Y</em>'.
+   * @generated
+   */
+  Y createY();
+
+  /**
+   * Returns a new object of class '<em>F</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>F</em>'.
+   * @generated
+   */
+  F createF();
+
+  /**
    * Returns a new object of class '<em>Condition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

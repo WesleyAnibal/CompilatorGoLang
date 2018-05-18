@@ -71,6 +71,10 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
       case GoPackage.DEC_VARS: return createDecVars();
       case GoPackage.PARAMS: return createParams();
       case GoPackage.INT: return createINT();
+      case GoPackage.I: return createI();
+      case GoPackage.T: return createT();
+      case GoPackage.Y: return createY();
+      case GoPackage.F: return createF();
       case GoPackage.CONDITION: return createCondition();
       case GoPackage.IF_CONDITION: return createIfCondition();
       case GoPackage.ELSE_IF_CONDITION: return createElseIfCondition();
@@ -151,6 +155,50 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     INTImpl int_ = new INTImpl();
     return int_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public I createI()
+  {
+    IImpl i = new IImpl();
+    return i;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public T createT()
+  {
+    TImpl t = new TImpl();
+    return t;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Y createY()
+  {
+    YImpl y = new YImpl();
+    return y;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public F createF()
+  {
+    FImpl f = new FImpl();
+    return f;
   }
 
   /**

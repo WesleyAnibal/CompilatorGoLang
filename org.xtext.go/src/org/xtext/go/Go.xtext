@@ -9,53 +9,57 @@ Greeting:
 	DecVar | DataType | Entity | DecFunc | EOL | Condition | Operations | DecImport;
 
 DecVar:
-	DecVars |VAR vars+=ID("," vars+=ID)* (Types) ("=" atrb+=Atri("," atrb+=Atri)*)?;
+	DecVars |VAR vars+=ID(Comma vars+=ID)* (Types) ("=" atrb+=Atri(Comma atrb+=Atri)*)?;
 
 DecVars:
-	vars+=ID("," vars+=ID)* ":=" atrb+=Atri("," atrb+=Atri)*;
+	vars+=ID(Comma vars+=ID)* ":=" atrb+=Atri(Comma atrb+=Atri)*;
 	
 Atri:
-	"["INT?"]"Types("{"TypeValue"}")? | TypeValue ;
+	Open_brackets INT? Closed_brackets Types(Open_Key TypeValue Closed_Key)? | TypeValue ;
 	
+
 Params:
-	params+=ID Types ("," params+=ID Types)*;
+	params+=ID Types (Comma params+=ID Types)*;
 	
 TypeValue:
-	STRING | INT | Double | Boolean;
+	STRING | Numbers | Boolean;
 
 
 DecImport:
 	IMPORT (STRING | "("STRING+")");
 	
 Operations returns INT:
-	Sum | Subtraction | Multiplication | Division | INT;
-		
-Double:
-	INT"."INT;
+	T o=I;
 	
-Sum returns INT:
-	INT Plus INT;
+I:
+	((Plus T o=I)|(Minus T o=I))?;
+	
+T: 
+	F o=Y;
+	
+Y:
+	((Asterics o=F o=Y) |(Bar o=F o=Y))?;
+	
+F:
+	"("o=Operations")"| Numbers;
 
-Subtraction returns INT:
-	INT Minus INT;
-
-Multiplication returns INT:
-	INT Asterics INT;
-
-Division returns INT:
-	INT Bar INT;
-		
+Numbers:
+	INT | Double;
+	
+Double:
+	INT Dot INT;
+	
 Condition: 
     (if=IfCondition(elseif=ElseIfCondition)*(else=ElseCondition)?);
     
 IfCondition:
-	IF cond=Expression "{"then=Greeting*"}";
+	IF cond=Expression Open_Key then=Greeting*Closed_Key;
     
 ElseIfCondition:
 	(=>ELSE IfCondition);
 	
 ElseCondition:
-	(=>ELSE "{"then=Greeting*"}"); 
+	(=>ELSE Open_Key then=Greeting*Closed_Key); 
   
 Expression:
     OrExpression
@@ -79,10 +83,10 @@ PrimaryExpression returns Expression:
 ;
 
 Literal returns Expression:
-    {Literal} value=Boolean | INT
+    {Literal} value=Boolean | Numbers
 ;
 DecFunc:
-	FUNC name=ID"("param=Params*")""{"args+=Greeting*"}";
+	FUNC name=ID"("param=Params*")" Open_Key args+=Greeting*Closed_Key;
 	
 //Tokens
 
@@ -92,6 +96,24 @@ Terminals:
 Types:
 	TYPE | "string" |"int";
 
+terminal Open_Key:
+	"{";
+
+terminal Closed_Key:
+	"}";
+
+terminal Open_brackets:
+	"[";
+
+terminal Closed_brackets:
+	"]";
+	
+terminal Dot:
+	".";
+
+terminal Comma:
+	",";
+		
 Boolean:
 	"true" | "false";
 		

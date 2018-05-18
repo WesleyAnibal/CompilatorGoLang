@@ -106,6 +106,26 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createINTAdapter();
       }
       @Override
+      public Adapter caseI(I object)
+      {
+        return createIAdapter();
+      }
+      @Override
+      public Adapter caseT(T object)
+      {
+        return createTAdapter();
+      }
+      @Override
+      public Adapter caseY(Y object)
+      {
+        return createYAdapter();
+      }
+      @Override
+      public Adapter caseF(F object)
+      {
+        return createFAdapter();
+      }
+      @Override
       public Adapter caseCondition(Condition object)
       {
         return createConditionAdapter();
@@ -268,6 +288,66 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createINTAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.I <em>I</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.I
+   * @generated
+   */
+  public Adapter createIAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.T <em>T</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.T
+   * @generated
+   */
+  public Adapter createTAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Y <em>Y</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Y
+   * @generated
+   */
+  public Adapter createYAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.F <em>F</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.F
+   * @generated
+   */
+  public Adapter createFAdapter()
   {
     return null;
   }

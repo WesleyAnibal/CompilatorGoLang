@@ -18,6 +18,16 @@
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="INT" eSuperTypes="#//Greeting"/>
+  <eClassifiers xsi:type="ecore:EClass" name="I"/>
+  <eClassifiers xsi:type="ecore:EClass" name="T" eSuperTypes="#//INT #//I">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="o" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Y">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="o" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="F" eSuperTypes="#//T"/>
   <eClassifiers xsi:type="ecore:EClass" name="Condition" eSuperTypes="#//Greeting">
     <eStructuralFeatures xsi:type="ecore:EReference" name="if" eType="#//IfCondition"
         containment="true"/>

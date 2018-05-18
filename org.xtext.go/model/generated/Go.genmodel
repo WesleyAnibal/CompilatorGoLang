@@ -19,6 +19,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Params/params"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//INT"/>
+    <genClasses ecoreClass="Go.ecore#//I"/>
+    <genClasses ecoreClass="Go.ecore#//T">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//T/o"/>
+    </genClasses>
+    <genClasses ecoreClass="Go.ecore#//Y">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Y/o"/>
+    </genClasses>
+    <genClasses ecoreClass="Go.ecore#//F"/>
     <genClasses ecoreClass="Go.ecore#//Condition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Condition/if"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Condition/elseif"/>

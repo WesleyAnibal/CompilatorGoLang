@@ -84,6 +84,34 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass iEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass yEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass conditionEClass = null;
 
   /**
@@ -317,6 +345,66 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
   public EClass getINT()
   {
     return intEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getI()
+  {
+    return iEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getT()
+  {
+    return tEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getT_O()
+  {
+    return (EReference)tEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getY()
+  {
+    return yEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getY_O()
+  {
+    return (EReference)yEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getF()
+  {
+    return fEClass;
   }
 
   /**
@@ -655,6 +743,16 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     intEClass = createEClass(INT);
 
+    iEClass = createEClass(I);
+
+    tEClass = createEClass(T);
+    createEReference(tEClass, T__O);
+
+    yEClass = createEClass(Y);
+    createEReference(yEClass, Y__O);
+
+    fEClass = createEClass(F);
+
     conditionEClass = createEClass(CONDITION);
     createEReference(conditionEClass, CONDITION__IF);
     createEReference(conditionEClass, CONDITION__ELSEIF);
@@ -728,6 +826,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     decVarEClass.getESuperTypes().add(this.getGreeting());
     decVarsEClass.getESuperTypes().add(this.getDecVar());
     intEClass.getESuperTypes().add(this.getGreeting());
+    tEClass.getESuperTypes().add(this.getINT());
+    tEClass.getESuperTypes().add(this.getI());
+    fEClass.getESuperTypes().add(this.getT());
     conditionEClass.getESuperTypes().add(this.getGreeting());
     ifConditionEClass.getESuperTypes().add(this.getElseIfCondition());
     decFuncEClass.getESuperTypes().add(this.getGreeting());
@@ -753,6 +854,16 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEAttribute(getParams_Params(), ecorePackage.getEString(), "params", null, 0, -1, Params.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(intEClass, org.xtext.go.go.INT.class, "INT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(iEClass, org.xtext.go.go.I.class, "I", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(tEClass, org.xtext.go.go.T.class, "T", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getT_O(), ecorePackage.getEObject(), null, "o", null, 0, 1, org.xtext.go.go.T.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(yEClass, org.xtext.go.go.Y.class, "Y", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getY_O(), ecorePackage.getEObject(), null, "o", null, 0, 1, org.xtext.go.go.Y.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(fEClass, org.xtext.go.go.F.class, "F", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCondition_If(), this.getIfCondition(), null, "if", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -11,7 +11,6 @@ import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
@@ -22,16 +21,16 @@ import org.xtext.go.services.GoGrammarAccess;
 public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected GoGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Division_Greeting_Multiplication_Operations_Subtraction_Sum_DecImportParserRuleCall_7_or_EOLTerminalRuleCall_4_or_EntityParserRuleCall_2_or_INTTerminalRuleCall_4_or___INTTerminalRuleCall_0_AstericsTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_BarTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_MinusTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_PlusTerminalRuleCall_1_INTTerminalRuleCall_2__;
-	protected AbstractElementAlias match_Division_Multiplication_Operations_Subtraction_Sum_INTTerminalRuleCall_4_or___INTTerminalRuleCall_0_AstericsTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_BarTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_MinusTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_PlusTerminalRuleCall_1_INTTerminalRuleCall_2__;
+	protected AbstractElementAlias match_Greeting_DecImportParserRuleCall_7_or_EOLTerminalRuleCall_4_or_EntityParserRuleCall_2;
+	protected AbstractElementAlias match_I_MinusTerminalRuleCall_1_0_or_PlusTerminalRuleCall_0_0;
 	protected AbstractElementAlias match_PrimaryExpression_LeftParenthesisKeyword_0_0_a;
 	protected AbstractElementAlias match_PrimaryExpression_LeftParenthesisKeyword_0_0_p;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (GoGrammarAccess) access;
-		match_Division_Greeting_Multiplication_Operations_Subtraction_Sum_DecImportParserRuleCall_7_or_EOLTerminalRuleCall_4_or_EntityParserRuleCall_2_or_INTTerminalRuleCall_4_or___INTTerminalRuleCall_0_AstericsTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_BarTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_MinusTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_PlusTerminalRuleCall_1_INTTerminalRuleCall_2__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getDivisionAccess().getINTTerminalRuleCall_0()), new TokenAlias(false, false, grammarAccess.getDivisionAccess().getBarTerminalRuleCall_1()), new TokenAlias(false, false, grammarAccess.getDivisionAccess().getINTTerminalRuleCall_2())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getMultiplicationAccess().getINTTerminalRuleCall_0()), new TokenAlias(false, false, grammarAccess.getMultiplicationAccess().getAstericsTerminalRuleCall_1()), new TokenAlias(false, false, grammarAccess.getMultiplicationAccess().getINTTerminalRuleCall_2())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getSubtractionAccess().getINTTerminalRuleCall_0()), new TokenAlias(false, false, grammarAccess.getSubtractionAccess().getMinusTerminalRuleCall_1()), new TokenAlias(false, false, grammarAccess.getSubtractionAccess().getINTTerminalRuleCall_2())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getSumAccess().getINTTerminalRuleCall_0()), new TokenAlias(false, false, grammarAccess.getSumAccess().getPlusTerminalRuleCall_1()), new TokenAlias(false, false, grammarAccess.getSumAccess().getINTTerminalRuleCall_2())), new TokenAlias(false, false, grammarAccess.getGreetingAccess().getDecImportParserRuleCall_7()), new TokenAlias(false, false, grammarAccess.getGreetingAccess().getEOLTerminalRuleCall_4()), new TokenAlias(false, false, grammarAccess.getGreetingAccess().getEntityParserRuleCall_2()), new TokenAlias(false, false, grammarAccess.getOperationsAccess().getINTTerminalRuleCall_4()));
-		match_Division_Multiplication_Operations_Subtraction_Sum_INTTerminalRuleCall_4_or___INTTerminalRuleCall_0_AstericsTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_BarTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_MinusTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_PlusTerminalRuleCall_1_INTTerminalRuleCall_2__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getDivisionAccess().getINTTerminalRuleCall_0()), new TokenAlias(false, false, grammarAccess.getDivisionAccess().getBarTerminalRuleCall_1()), new TokenAlias(false, false, grammarAccess.getDivisionAccess().getINTTerminalRuleCall_2())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getMultiplicationAccess().getINTTerminalRuleCall_0()), new TokenAlias(false, false, grammarAccess.getMultiplicationAccess().getAstericsTerminalRuleCall_1()), new TokenAlias(false, false, grammarAccess.getMultiplicationAccess().getINTTerminalRuleCall_2())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getSubtractionAccess().getINTTerminalRuleCall_0()), new TokenAlias(false, false, grammarAccess.getSubtractionAccess().getMinusTerminalRuleCall_1()), new TokenAlias(false, false, grammarAccess.getSubtractionAccess().getINTTerminalRuleCall_2())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getSumAccess().getINTTerminalRuleCall_0()), new TokenAlias(false, false, grammarAccess.getSumAccess().getPlusTerminalRuleCall_1()), new TokenAlias(false, false, grammarAccess.getSumAccess().getINTTerminalRuleCall_2())), new TokenAlias(false, false, grammarAccess.getOperationsAccess().getINTTerminalRuleCall_4()));
+		match_Greeting_DecImportParserRuleCall_7_or_EOLTerminalRuleCall_4_or_EntityParserRuleCall_2 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getGreetingAccess().getDecImportParserRuleCall_7()), new TokenAlias(false, false, grammarAccess.getGreetingAccess().getEOLTerminalRuleCall_4()), new TokenAlias(false, false, grammarAccess.getGreetingAccess().getEntityParserRuleCall_2()));
+		match_I_MinusTerminalRuleCall_1_0_or_PlusTerminalRuleCall_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getIAccess().getMinusTerminalRuleCall_1_0()), new TokenAlias(false, false, grammarAccess.getIAccess().getPlusTerminalRuleCall_0_0()));
 		match_PrimaryExpression_LeftParenthesisKeyword_0_0_a = new TokenAlias(true, true, grammarAccess.getPrimaryExpressionAccess().getLeftParenthesisKeyword_0_0());
 		match_PrimaryExpression_LeftParenthesisKeyword_0_0_p = new TokenAlias(true, false, grammarAccess.getPrimaryExpressionAccess().getLeftParenthesisKeyword_0_0());
 	}
@@ -42,6 +41,10 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getAstericsToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getBarRule())
 			return getBarToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getClosed_KeyRule())
+			return getClosed_KeyToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getCommaRule())
+			return getCommaToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getDecImportRule())
 			return getDecImportToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getELSERule())
@@ -54,10 +57,12 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getFUNCToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getIFRule())
 			return getIFToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getINTRule())
-			return getINTToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getMinusRule())
 			return getMinusToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getNumbersRule())
+			return getNumbersToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getOpen_KeyRule())
+			return getOpen_KeyToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getPlusRule())
 			return getPlusToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getTypesRule())
@@ -85,6 +90,26 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return "/";
+	}
+	
+	/**
+	 * terminal Closed_Key:
+	 * 	"}";
+	 */
+	protected String getClosed_KeyToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "}";
+	}
+	
+	/**
+	 * terminal Comma:
+	 * 	",";
+	 */
+	protected String getCommaToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return ",";
 	}
 	
 	/**
@@ -148,15 +173,6 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	}
 	
 	/**
-	 * terminal INT returns ecore::EInt: ('0'..'9')+;
-	 */
-	protected String getINTToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "";
-	}
-	
-	/**
 	 * terminal Minus:
 	 * 	"-";
 	 */
@@ -164,6 +180,26 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return "-";
+	}
+	
+	/**
+	 * Numbers:
+	 * 	INT | Double;
+	 */
+	protected String getNumbersToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "";
+	}
+	
+	/**
+	 * terminal Open_Key:
+	 * 	"{";
+	 */
+	protected String getOpen_KeyToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "{";
 	}
 	
 	/**
@@ -202,10 +238,10 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Division_Greeting_Multiplication_Operations_Subtraction_Sum_DecImportParserRuleCall_7_or_EOLTerminalRuleCall_4_or_EntityParserRuleCall_2_or_INTTerminalRuleCall_4_or___INTTerminalRuleCall_0_AstericsTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_BarTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_MinusTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_PlusTerminalRuleCall_1_INTTerminalRuleCall_2__.equals(syntax))
-				emit_Division_Greeting_Multiplication_Operations_Subtraction_Sum_DecImportParserRuleCall_7_or_EOLTerminalRuleCall_4_or_EntityParserRuleCall_2_or_INTTerminalRuleCall_4_or___INTTerminalRuleCall_0_AstericsTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_BarTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_MinusTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_PlusTerminalRuleCall_1_INTTerminalRuleCall_2__(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Division_Multiplication_Operations_Subtraction_Sum_INTTerminalRuleCall_4_or___INTTerminalRuleCall_0_AstericsTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_BarTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_MinusTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_PlusTerminalRuleCall_1_INTTerminalRuleCall_2__.equals(syntax))
-				emit_Division_Multiplication_Operations_Subtraction_Sum_INTTerminalRuleCall_4_or___INTTerminalRuleCall_0_AstericsTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_BarTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_MinusTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_PlusTerminalRuleCall_1_INTTerminalRuleCall_2__(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_Greeting_DecImportParserRuleCall_7_or_EOLTerminalRuleCall_4_or_EntityParserRuleCall_2.equals(syntax))
+				emit_Greeting_DecImportParserRuleCall_7_or_EOLTerminalRuleCall_4_or_EntityParserRuleCall_2(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_I_MinusTerminalRuleCall_1_0_or_PlusTerminalRuleCall_0_0.equals(syntax))
+				emit_I_MinusTerminalRuleCall_1_0_or_PlusTerminalRuleCall_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_PrimaryExpression_LeftParenthesisKeyword_0_0_a.equals(syntax))
 				emit_PrimaryExpression_LeftParenthesisKeyword_0_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_PrimaryExpression_LeftParenthesisKeyword_0_0_p.equals(syntax))
@@ -216,32 +252,24 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Ambiguous syntax:
-	 *     (
-	  *         (INT Bar INT) | 
-	  *         (INT Minus INT) | 
-	  *         (INT Asterics INT) | 
-	  *         (INT Plus INT) | 
-	  *         INT | 
-	  *         EOL | 
-	  *         DecImport | 
-	  *         Entity
-	  *     )
+	 *     DecImport | Entity | EOL
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)
 	 */
-	protected void emit_Division_Greeting_Multiplication_Operations_Subtraction_Sum_DecImportParserRuleCall_7_or_EOLTerminalRuleCall_4_or_EntityParserRuleCall_2_or_INTTerminalRuleCall_4_or___INTTerminalRuleCall_0_AstericsTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_BarTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_MinusTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_PlusTerminalRuleCall_1_INTTerminalRuleCall_2__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Greeting_DecImportParserRuleCall_7_or_EOLTerminalRuleCall_4_or_EntityParserRuleCall_2(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     INT | (INT Bar INT) | (INT Plus INT) | (INT Minus INT) | (INT Asterics INT)
+	 *     Minus | Plus
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
+	 *     (rule start) (ambiguity) '(' o=Operations
+	 *     (rule start) (ambiguity) Numbers o=Y
 	 */
-	protected void emit_Division_Multiplication_Operations_Subtraction_Sum_INTTerminalRuleCall_4_or___INTTerminalRuleCall_0_AstericsTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_BarTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_MinusTerminalRuleCall_1_INTTerminalRuleCall_2___or___INTTerminalRuleCall_0_PlusTerminalRuleCall_1_INTTerminalRuleCall_2__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_I_MinusTerminalRuleCall_1_0_or_PlusTerminalRuleCall_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -250,7 +278,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '('*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) INT (rule start)
+	 *     (rule start) (ambiguity) Numbers (rule start)
 	 *     (rule start) (ambiguity) value=Boolean
 	 *     (rule start) (ambiguity) {AndExpression.left=}
 	 *     (rule start) (ambiguity) {ComparisonExpression.left=}
