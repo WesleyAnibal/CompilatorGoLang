@@ -6,13 +6,16 @@ Go:
 	(elements+=Greeting*);
 
 Greeting:
-	DecVar | DataType | Entity | DecFunc | EOL | Condition | Operations | DecImport;
+	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition | Operations | DecImport;
 
 DecVar:
-	DecVars |VAR vars+=ID(Comma vars+=ID)* (Types) ("=" atrb+=Atri(Comma atrb+=Atri)*)?;
+	DecVars |Modif vars+=ID(Comma vars+=ID)* (Types) ("=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*)?;
 
+MultDecVars:
+	Modif Open_parentheses (name=ID "=" (TypeValue | value=ID))* Closed_parentheses;
+	
 DecVars:
-	vars+=ID(Comma vars+=ID)* ":=" atrb+=Atri(Comma atrb+=Atri)*;
+	vars+=ID(Comma vars+=ID)* ":=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*;
 	
 Atri:
 	Open_brackets INT? Closed_brackets Types(Open_Key TypeValue Closed_Key)? | TypeValue ;
@@ -26,8 +29,10 @@ TypeValue:
 
 
 DecImport:
-	IMPORT (STRING | "("STRING+")");
-	
+	IMPORT (STRING | Open_parentheses STRING+ Closed_parentheses);
+
+//Removi a recursão a esquerda
+
 Operations returns INT:
 	T o=I;
 	
@@ -41,7 +46,7 @@ Y:
 	((Asterics o=F o=Y) |(Bar o=F o=Y))?;
 	
 F:
-	"("o=Operations")"| Numbers;
+	Open_parentheses o=Operations Closed_parentheses| Numbers;
 
 Numbers:
 	INT | Double;
@@ -78,7 +83,7 @@ ComparisonExpression returns Expression:
 ;
 
 PrimaryExpression returns Expression:
-    "(" Expression ")"
+    Open_parentheses Expression Closed_parentheses
     | Literal
 ;
 
@@ -86,7 +91,7 @@ Literal returns Expression:
     {Literal} value=Boolean | Numbers
 ;
 DecFunc:
-	FUNC name=ID"("param=Params*")" Open_Key args+=Greeting*Closed_Key;
+	FUNC name=ID Open_parentheses param=Params* Closed_parentheses Open_Key args+=Greeting*Closed_Key;
 	
 //Tokens
 
@@ -94,8 +99,11 @@ Terminals:
 	(BREAK|CASE|CHAN|CONST|CONTINUE|ELSE|IF|FOR|FUNC|IMPORT|RETURN|PACKAGE|RANGE);
 
 Types:
-	TYPE | "string" |"int";
+	TYPE | "string" |"int" | "bool"| "byte" | "rune" |"float32" | "float64";
 
+Modif:
+	VAR | CONST;
+	
 terminal Open_Key:
 	"{";
 
@@ -113,7 +121,12 @@ terminal Dot:
 
 terminal Comma:
 	",";
-		
+	
+terminal Open_parentheses:
+	"(";
+
+terminal Closed_parentheses:
+	")";
 Boolean:
 	"true" | "false";
 		
@@ -167,9 +180,6 @@ STRUCT:
 
 RANGE:
 	"range";
-	
-Entity:
-	'print' '(' (STRING | INT+) ')';
 	
 terminal Bar:
 	"/";

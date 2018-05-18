@@ -27,6 +27,7 @@ import org.xtext.go.go.Go;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.IfCondition;
 import org.xtext.go.go.Literal;
+import org.xtext.go.go.MultDecVars;
 import org.xtext.go.go.OrExpression;
 import org.xtext.go.go.Params;
 import org.xtext.go.go.T;
@@ -98,6 +99,9 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case GoPackage.LITERAL:
 				sequence_Literal(context, (Literal) semanticObject); 
+				return; 
+			case GoPackage.MULT_DEC_VARS:
+				sequence_MultDecVars(context, (MultDecVars) semanticObject); 
 				return; 
 			case GoPackage.OR_EXPRESSION:
 				sequence_OrExpression(context, (OrExpression) semanticObject); 
@@ -230,7 +234,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DecVar returns DecVar
 	 *
 	 * Constraint:
-	 *     (vars+=ID vars+=ID* (atrb+=Atri atrb+=Atri*)?)
+	 *     (vars+=ID vars+=ID* ((atrb+=Atri | atrb+=ID) atrb+=Atri? (atrb+=ID? atrb+=Atri?)*)?)
 	 */
 	protected void sequence_DecVar(ISerializationContext context, DecVar semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -244,7 +248,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DecVars returns DecVars
 	 *
 	 * Constraint:
-	 *     (vars+=ID vars+=ID* atrb+=Atri atrb+=Atri*)
+	 *     (vars+=ID vars+=ID* (atrb+=Atri | atrb+=ID) atrb+=Atri? (atrb+=ID? atrb+=Atri?)*)
 	 */
 	protected void sequence_DecVars(ISerializationContext context, DecVars semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -378,6 +382,19 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getLiteralAccess().getValueBooleanParserRuleCall_0_1_0(), semanticObject.getValue());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Greeting returns MultDecVars
+	 *     MultDecVars returns MultDecVars
+	 *
+	 * Constraint:
+	 *     (name=ID value=ID?)+
+	 */
+	protected void sequence_MultDecVars(ISerializationContext context, MultDecVars semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

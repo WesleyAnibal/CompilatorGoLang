@@ -26,6 +26,7 @@ import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Greeting;
 import org.xtext.go.go.IfCondition;
 import org.xtext.go.go.Literal;
+import org.xtext.go.go.MultDecVars;
 import org.xtext.go.go.OrExpression;
 import org.xtext.go.go.Params;
 
@@ -57,6 +58,13 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * @generated
    */
   private EClass decVarEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass multDecVarsEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -305,6 +313,36 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
   public EAttribute getDecVar_Atrb()
   {
     return (EAttribute)decVarEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMultDecVars()
+  {
+    return multDecVarsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMultDecVars_Name()
+  {
+    return (EAttribute)multDecVarsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMultDecVars_Value()
+  {
+    return (EAttribute)multDecVarsEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -736,6 +774,10 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     createEAttribute(decVarEClass, DEC_VAR__VARS);
     createEAttribute(decVarEClass, DEC_VAR__ATRB);
 
+    multDecVarsEClass = createEClass(MULT_DEC_VARS);
+    createEAttribute(multDecVarsEClass, MULT_DEC_VARS__NAME);
+    createEAttribute(multDecVarsEClass, MULT_DEC_VARS__VALUE);
+
     decVarsEClass = createEClass(DEC_VARS);
 
     paramsEClass = createEClass(PARAMS);
@@ -824,6 +866,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     // Add supertypes to classes
     decVarEClass.getESuperTypes().add(this.getGreeting());
+    multDecVarsEClass.getESuperTypes().add(this.getGreeting());
     decVarsEClass.getESuperTypes().add(this.getDecVar());
     intEClass.getESuperTypes().add(this.getGreeting());
     tEClass.getESuperTypes().add(this.getINT());
@@ -847,6 +890,10 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEClass(decVarEClass, DecVar.class, "DecVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDecVar_Vars(), ecorePackage.getEString(), "vars", null, 0, -1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDecVar_Atrb(), ecorePackage.getEString(), "atrb", null, 0, -1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(multDecVarsEClass, MultDecVars.class, "MultDecVars", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMultDecVars_Name(), ecorePackage.getEString(), "name", null, 0, 1, MultDecVars.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMultDecVars_Value(), ecorePackage.getEString(), "value", null, 0, 1, MultDecVars.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(decVarsEClass, DecVars.class, "DecVars", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

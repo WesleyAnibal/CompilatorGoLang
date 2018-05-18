@@ -33,6 +33,11 @@ public class GoParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getGreetingAccess().getAlternatives(), "rule__Greeting__Alternatives");
 					put(grammarAccess.getDecVarAccess().getAlternatives(), "rule__DecVar__Alternatives");
+					put(grammarAccess.getDecVarAccess().getAtrbAlternatives_1_4_1_0(), "rule__DecVar__AtrbAlternatives_1_4_1_0");
+					put(grammarAccess.getDecVarAccess().getAtrbAlternatives_1_4_2_1_0(), "rule__DecVar__AtrbAlternatives_1_4_2_1_0");
+					put(grammarAccess.getMultDecVarsAccess().getAlternatives_2_2(), "rule__MultDecVars__Alternatives_2_2");
+					put(grammarAccess.getDecVarsAccess().getAtrbAlternatives_3_0(), "rule__DecVars__AtrbAlternatives_3_0");
+					put(grammarAccess.getDecVarsAccess().getAtrbAlternatives_4_1_0(), "rule__DecVars__AtrbAlternatives_4_1_0");
 					put(grammarAccess.getAtriAccess().getAlternatives(), "rule__Atri__Alternatives");
 					put(grammarAccess.getTypeValueAccess().getAlternatives(), "rule__TypeValue__Alternatives");
 					put(grammarAccess.getDecImportAccess().getAlternatives_1(), "rule__DecImport__Alternatives_1");
@@ -45,12 +50,14 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLiteralAccess().getAlternatives(), "rule__Literal__Alternatives");
 					put(grammarAccess.getTerminalsAccess().getAlternatives(), "rule__Terminals__Alternatives");
 					put(grammarAccess.getTypesAccess().getAlternatives(), "rule__Types__Alternatives");
+					put(grammarAccess.getModifAccess().getAlternatives(), "rule__Modif__Alternatives");
 					put(grammarAccess.getBooleanAccess().getAlternatives(), "rule__Boolean__Alternatives");
-					put(grammarAccess.getEntityAccess().getAlternatives_2(), "rule__Entity__Alternatives_2");
 					put(grammarAccess.getDecVarAccess().getGroup_1(), "rule__DecVar__Group_1__0");
 					put(grammarAccess.getDecVarAccess().getGroup_1_2(), "rule__DecVar__Group_1_2__0");
 					put(grammarAccess.getDecVarAccess().getGroup_1_4(), "rule__DecVar__Group_1_4__0");
 					put(grammarAccess.getDecVarAccess().getGroup_1_4_2(), "rule__DecVar__Group_1_4_2__0");
+					put(grammarAccess.getMultDecVarsAccess().getGroup(), "rule__MultDecVars__Group__0");
+					put(grammarAccess.getMultDecVarsAccess().getGroup_2(), "rule__MultDecVars__Group_2__0");
 					put(grammarAccess.getDecVarsAccess().getGroup(), "rule__DecVars__Group__0");
 					put(grammarAccess.getDecVarsAccess().getGroup_1(), "rule__DecVars__Group_1__0");
 					put(grammarAccess.getDecVarsAccess().getGroup_4(), "rule__DecVars__Group_4__0");
@@ -81,13 +88,14 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPrimaryExpressionAccess().getGroup_0(), "rule__PrimaryExpression__Group_0__0");
 					put(grammarAccess.getLiteralAccess().getGroup_0(), "rule__Literal__Group_0__0");
 					put(grammarAccess.getDecFuncAccess().getGroup(), "rule__DecFunc__Group__0");
-					put(grammarAccess.getEntityAccess().getGroup(), "rule__Entity__Group__0");
 					put(grammarAccess.getDataTypeAccess().getGroup(), "rule__DataType__Group__0");
 					put(grammarAccess.getGoAccess().getElementsAssignment(), "rule__Go__ElementsAssignment");
 					put(grammarAccess.getDecVarAccess().getVarsAssignment_1_1(), "rule__DecVar__VarsAssignment_1_1");
 					put(grammarAccess.getDecVarAccess().getVarsAssignment_1_2_1(), "rule__DecVar__VarsAssignment_1_2_1");
 					put(grammarAccess.getDecVarAccess().getAtrbAssignment_1_4_1(), "rule__DecVar__AtrbAssignment_1_4_1");
 					put(grammarAccess.getDecVarAccess().getAtrbAssignment_1_4_2_1(), "rule__DecVar__AtrbAssignment_1_4_2_1");
+					put(grammarAccess.getMultDecVarsAccess().getNameAssignment_2_0(), "rule__MultDecVars__NameAssignment_2_0");
+					put(grammarAccess.getMultDecVarsAccess().getValueAssignment_2_2_1(), "rule__MultDecVars__ValueAssignment_2_2_1");
 					put(grammarAccess.getDecVarsAccess().getVarsAssignment_0(), "rule__DecVars__VarsAssignment_0");
 					put(grammarAccess.getDecVarsAccess().getVarsAssignment_1_1(), "rule__DecVars__VarsAssignment_1_1");
 					put(grammarAccess.getDecVarsAccess().getAtrbAssignment_3(), "rule__DecVars__AtrbAssignment_3");
