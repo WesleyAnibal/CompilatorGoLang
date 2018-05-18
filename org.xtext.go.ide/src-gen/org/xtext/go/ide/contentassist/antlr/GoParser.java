@@ -33,11 +33,15 @@ public class GoParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getGreetingAccess().getAlternatives(), "rule__Greeting__Alternatives");
 					put(grammarAccess.getDecVarAccess().getAlternatives(), "rule__DecVar__Alternatives");
+					put(grammarAccess.getAtriAccess().getAlternatives(), "rule__Atri__Alternatives");
+					put(grammarAccess.getTypeValueAccess().getAlternatives(), "rule__TypeValue__Alternatives");
+					put(grammarAccess.getBooleanAccess().getAlternatives(), "rule__Boolean__Alternatives");
 					put(grammarAccess.getDecImportAccess().getAlternatives_1(), "rule__DecImport__Alternatives_1");
 					put(grammarAccess.getOperationsAccess().getAlternatives(), "rule__Operations__Alternatives");
 					put(grammarAccess.getComparisonExpressionAccess().getOperatorAlternatives_1_1_0(), "rule__ComparisonExpression__OperatorAlternatives_1_1_0");
 					put(grammarAccess.getPrimaryExpressionAccess().getAlternatives(), "rule__PrimaryExpression__Alternatives");
 					put(grammarAccess.getLiteralAccess().getAlternatives(), "rule__Literal__Alternatives");
+					put(grammarAccess.getTypesAccess().getAlternatives(), "rule__Types__Alternatives");
 					put(grammarAccess.getTerminalsAccess().getAlternatives(), "rule__Terminals__Alternatives");
 					put(grammarAccess.getEntityAccess().getAlternatives_2(), "rule__Entity__Alternatives_2");
 					put(grammarAccess.getDecVarAccess().getGroup_1(), "rule__DecVar__Group_1__0");
@@ -47,6 +51,10 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDecVarsAccess().getGroup(), "rule__DecVars__Group__0");
 					put(grammarAccess.getDecVarsAccess().getGroup_1(), "rule__DecVars__Group_1__0");
 					put(grammarAccess.getDecVarsAccess().getGroup_4(), "rule__DecVars__Group_4__0");
+					put(grammarAccess.getAtriAccess().getGroup_0(), "rule__Atri__Group_0__0");
+					put(grammarAccess.getAtriAccess().getGroup_0_4(), "rule__Atri__Group_0_4__0");
+					put(grammarAccess.getParamsAccess().getGroup(), "rule__Params__Group__0");
+					put(grammarAccess.getParamsAccess().getGroup_2(), "rule__Params__Group_2__0");
 					put(grammarAccess.getDecImportAccess().getGroup(), "rule__DecImport__Group__0");
 					put(grammarAccess.getDecImportAccess().getGroup_1_1(), "rule__DecImport__Group_1_1__0");
 					put(grammarAccess.getDoubleAccess().getGroup(), "rule__Double__Group__0");
@@ -67,7 +75,6 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPrimaryExpressionAccess().getGroup_0(), "rule__PrimaryExpression__Group_0__0");
 					put(grammarAccess.getLiteralAccess().getGroup_0(), "rule__Literal__Group_0__0");
 					put(grammarAccess.getDecFuncAccess().getGroup(), "rule__DecFunc__Group__0");
-					put(grammarAccess.getDecFuncAccess().getGroup_4(), "rule__DecFunc__Group_4__0");
 					put(grammarAccess.getEntityAccess().getGroup(), "rule__Entity__Group__0");
 					put(grammarAccess.getDataTypeAccess().getGroup(), "rule__DataType__Group__0");
 					put(grammarAccess.getGoAccess().getElementsAssignment(), "rule__Go__ElementsAssignment");
@@ -79,6 +86,8 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDecVarsAccess().getVarsAssignment_1_1(), "rule__DecVars__VarsAssignment_1_1");
 					put(grammarAccess.getDecVarsAccess().getAtrbAssignment_3(), "rule__DecVars__AtrbAssignment_3");
 					put(grammarAccess.getDecVarsAccess().getAtrbAssignment_4_1(), "rule__DecVars__AtrbAssignment_4_1");
+					put(grammarAccess.getParamsAccess().getParamsAssignment_0(), "rule__Params__ParamsAssignment_0");
+					put(grammarAccess.getParamsAccess().getParamsAssignment_2_1(), "rule__Params__ParamsAssignment_2_1");
 					put(grammarAccess.getConditionAccess().getIfAssignment_0(), "rule__Condition__IfAssignment_0");
 					put(grammarAccess.getConditionAccess().getElseifAssignment_1(), "rule__Condition__ElseifAssignment_1");
 					put(grammarAccess.getConditionAccess().getElseAssignment_2(), "rule__Condition__ElseAssignment_2");
@@ -91,9 +100,8 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getComparisonExpressionAccess().getRightAssignment_1_2(), "rule__ComparisonExpression__RightAssignment_1_2");
 					put(grammarAccess.getLiteralAccess().getValueAssignment_0_1(), "rule__Literal__ValueAssignment_0_1");
 					put(grammarAccess.getDecFuncAccess().getNameAssignment_1(), "rule__DecFunc__NameAssignment_1");
-					put(grammarAccess.getDecFuncAccess().getParameterAssignment_3(), "rule__DecFunc__ParameterAssignment_3");
-					put(grammarAccess.getDecFuncAccess().getParameterAssignment_4_1(), "rule__DecFunc__ParameterAssignment_4_1");
-					put(grammarAccess.getDecFuncAccess().getArgsAssignment_7(), "rule__DecFunc__ArgsAssignment_7");
+					put(grammarAccess.getDecFuncAccess().getParamAssignment_3(), "rule__DecFunc__ParamAssignment_3");
+					put(grammarAccess.getDecFuncAccess().getArgsAssignment_6(), "rule__DecFunc__ArgsAssignment_6");
 					put(grammarAccess.getDataTypeAccess().getNameAssignment_1(), "rule__DataType__NameAssignment_1");
 				}
 			};

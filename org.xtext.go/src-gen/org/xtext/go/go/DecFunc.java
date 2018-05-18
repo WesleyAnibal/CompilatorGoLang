@@ -15,7 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.DecFunc#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.go.go.DecFunc#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link org.xtext.go.go.DecFunc#getParam <em>Param</em>}</li>
  *   <li>{@link org.xtext.go.go.DecFunc#getArgs <em>Args</em>}</li>
  * </ul>
  *
@@ -52,30 +52,30 @@ public interface DecFunc extends Greeting
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Parameter</b></em>' attribute.
+   * Returns the value of the '<em><b>Param</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Parameter</em>' attribute isn't clear,
+   * If the meaning of the '<em>Param</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Parameter</em>' attribute.
-   * @see #setParameter(String)
-   * @see org.xtext.go.go.GoPackage#getDecFunc_Parameter()
-   * @model
+   * @return the value of the '<em>Param</em>' containment reference.
+   * @see #setParam(Params)
+   * @see org.xtext.go.go.GoPackage#getDecFunc_Param()
+   * @model containment="true"
    * @generated
    */
-  String getParameter();
+  Params getParam();
 
   /**
-   * Sets the value of the '{@link org.xtext.go.go.DecFunc#getParameter <em>Parameter</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.go.go.DecFunc#getParam <em>Param</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Parameter</em>' attribute.
-   * @see #getParameter()
+   * @param value the new value of the '<em>Param</em>' containment reference.
+   * @see #getParam()
    * @generated
    */
-  void setParameter(String value);
+  void setParam(Params value);
 
   /**
    * Returns the value of the '<em><b>Args</b></em>' containment reference list.

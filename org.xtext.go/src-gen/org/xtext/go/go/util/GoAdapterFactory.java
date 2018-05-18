@@ -96,6 +96,11 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createDecVarsAdapter();
       }
       @Override
+      public Adapter caseParams(Params object)
+      {
+        return createParamsAdapter();
+      }
+      @Override
       public Adapter caseINT(INT object)
       {
         return createINTAdapter();
@@ -233,6 +238,21 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDecVarsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Params <em>Params</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Params
+   * @generated
+   */
+  public Adapter createParamsAdapter()
   {
     return null;
   }

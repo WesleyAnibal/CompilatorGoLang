@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Greeting;
+import org.xtext.go.go.Params;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +32,7 @@ import org.xtext.go.go.Greeting;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getParameter <em>Parameter</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getParam <em>Param</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getArgs <em>Args</em>}</li>
  * </ul>
  *
@@ -60,24 +61,14 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getParameter() <em>Parameter</em>}' attribute.
+   * The cached value of the '{@link #getParam() <em>Param</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getParameter()
+   * @see #getParam()
    * @generated
    * @ordered
    */
-  protected static final String PARAMETER_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getParameter() <em>Parameter</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getParameter()
-   * @generated
-   * @ordered
-   */
-  protected String parameter = PARAMETER_EDEFAULT;
+  protected Params param;
 
   /**
    * The cached value of the '{@link #getArgs() <em>Args</em>}' containment reference list.
@@ -138,9 +129,9 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getParameter()
+  public Params getParam()
   {
-    return parameter;
+    return param;
   }
 
   /**
@@ -148,12 +139,37 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setParameter(String newParameter)
+  public NotificationChain basicSetParam(Params newParam, NotificationChain msgs)
   {
-    String oldParameter = parameter;
-    parameter = newParameter;
+    Params oldParam = param;
+    param = newParam;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DEC_FUNC__PARAMETER, oldParameter, parameter));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.DEC_FUNC__PARAM, oldParam, newParam);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setParam(Params newParam)
+  {
+    if (newParam != param)
+    {
+      NotificationChain msgs = null;
+      if (param != null)
+        msgs = ((InternalEObject)param).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.DEC_FUNC__PARAM, null, msgs);
+      if (newParam != null)
+        msgs = ((InternalEObject)newParam).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.DEC_FUNC__PARAM, null, msgs);
+      msgs = basicSetParam(newParam, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DEC_FUNC__PARAM, newParam, newParam));
   }
 
   /**
@@ -180,6 +196,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
   {
     switch (featureID)
     {
+      case GoPackage.DEC_FUNC__PARAM:
+        return basicSetParam(null, msgs);
       case GoPackage.DEC_FUNC__ARGS:
         return ((InternalEList<?>)getArgs()).basicRemove(otherEnd, msgs);
     }
@@ -198,8 +216,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
     {
       case GoPackage.DEC_FUNC__NAME:
         return getName();
-      case GoPackage.DEC_FUNC__PARAMETER:
-        return getParameter();
+      case GoPackage.DEC_FUNC__PARAM:
+        return getParam();
       case GoPackage.DEC_FUNC__ARGS:
         return getArgs();
     }
@@ -220,8 +238,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
       case GoPackage.DEC_FUNC__NAME:
         setName((String)newValue);
         return;
-      case GoPackage.DEC_FUNC__PARAMETER:
-        setParameter((String)newValue);
+      case GoPackage.DEC_FUNC__PARAM:
+        setParam((Params)newValue);
         return;
       case GoPackage.DEC_FUNC__ARGS:
         getArgs().clear();
@@ -244,8 +262,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
       case GoPackage.DEC_FUNC__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case GoPackage.DEC_FUNC__PARAMETER:
-        setParameter(PARAMETER_EDEFAULT);
+      case GoPackage.DEC_FUNC__PARAM:
+        setParam((Params)null);
         return;
       case GoPackage.DEC_FUNC__ARGS:
         getArgs().clear();
@@ -266,8 +284,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
     {
       case GoPackage.DEC_FUNC__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case GoPackage.DEC_FUNC__PARAMETER:
-        return PARAMETER_EDEFAULT == null ? parameter != null : !PARAMETER_EDEFAULT.equals(parameter);
+      case GoPackage.DEC_FUNC__PARAM:
+        return param != null;
       case GoPackage.DEC_FUNC__ARGS:
         return args != null && !args.isEmpty();
     }
@@ -287,8 +305,6 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", parameter: ");
-    result.append(parameter);
     result.append(')');
     return result.toString();
   }

@@ -15,6 +15,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecVar/atrb"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//DecVars"/>
+    <genClasses ecoreClass="Go.ecore#//Params">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Params/params"/>
+    </genClasses>
     <genClasses ecoreClass="Go.ecore#//INT"/>
     <genClasses ecoreClass="Go.ecore#//Condition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Condition/if"/>
@@ -32,7 +35,7 @@
     <genClasses ecoreClass="Go.ecore#//Expression"/>
     <genClasses ecoreClass="Go.ecore#//DecFunc">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecFunc/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecFunc/parameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecFunc/param"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecFunc/args"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//DataType">

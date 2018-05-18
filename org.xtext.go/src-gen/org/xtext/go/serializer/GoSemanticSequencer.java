@@ -27,6 +27,7 @@ import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.IfCondition;
 import org.xtext.go.go.Literal;
 import org.xtext.go.go.OrExpression;
+import org.xtext.go.go.Params;
 import org.xtext.go.services.GoGrammarAccess;
 
 @SuppressWarnings("all")
@@ -78,6 +79,9 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case GoPackage.OR_EXPRESSION:
 				sequence_OrExpression(context, (OrExpression) semanticObject); 
+				return; 
+			case GoPackage.PARAMS:
+				sequence_Params(context, (Params) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -173,7 +177,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DecFunc returns DecFunc
 	 *
 	 * Constraint:
-	 *     (name=ID parameter=ID? parameter=ID* args+=Greeting*)
+	 *     (name=ID param=Params* args+=Greeting*)
 	 */
 	protected void sequence_DecFunc(ISerializationContext context, DecFunc semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -186,7 +190,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DecVar returns DecVar
 	 *
 	 * Constraint:
-	 *     (vars+=ID vars+=ID* (atrb+=ID atrb+=ID*)?)
+	 *     (vars+=ID vars+=ID* (atrb+=Atri atrb+=Atri*)?)
 	 */
 	protected void sequence_DecVar(ISerializationContext context, DecVar semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -200,7 +204,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DecVars returns DecVars
 	 *
 	 * Constraint:
-	 *     (vars+=ID vars+=ID* atrb+=ID atrb+=ID*)
+	 *     (vars+=ID vars+=ID* atrb+=Atri atrb+=Atri*)
 	 */
 	protected void sequence_DecVars(ISerializationContext context, DecVars semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -257,7 +261,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Literal returns Literal
 	 *
 	 * Constraint:
-	 *     value='true'
+	 *     value=Boolean
 	 */
 	protected void sequence_Literal(ISerializationContext context, Literal semanticObject) {
 		if (errorAcceptor != null) {
@@ -265,7 +269,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.LITERAL__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLiteralAccess().getValueTrueKeyword_0_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getLiteralAccess().getValueBooleanParserRuleCall_0_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -295,6 +299,18 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		feeder.accept(grammarAccess.getOrExpressionAccess().getOrExpressionLeftAction_1_0(), semanticObject.getLeft());
 		feeder.accept(grammarAccess.getOrExpressionAccess().getRightAndExpressionParserRuleCall_1_2_0(), semanticObject.getRight());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Params returns Params
+	 *
+	 * Constraint:
+	 *     (params+=ID params+=ID*)
+	 */
+	protected void sequence_Params(ISerializationContext context, Params semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

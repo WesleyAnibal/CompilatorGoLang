@@ -60,6 +60,15 @@ public interface GoFactory extends EFactory
   DecVars createDecVars();
 
   /**
+   * Returns a new object of class '<em>Params</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Params</em>'.
+   * @generated
+   */
+  Params createParams();
+
+  /**
    * Returns a new object of class '<em>INT</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

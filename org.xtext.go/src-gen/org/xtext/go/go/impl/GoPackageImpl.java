@@ -27,6 +27,7 @@ import org.xtext.go.go.Greeting;
 import org.xtext.go.go.IfCondition;
 import org.xtext.go.go.Literal;
 import org.xtext.go.go.OrExpression;
+import org.xtext.go.go.Params;
 
 /**
  * <!-- begin-user-doc -->
@@ -63,6 +64,13 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * @generated
    */
   private EClass decVarsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass paramsEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -286,6 +294,26 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getParams()
+  {
+    return paramsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getParams_Params()
+  {
+    return (EAttribute)paramsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getINT()
   {
     return intEClass;
@@ -426,9 +454,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDecFunc_Parameter()
+  public EReference getDecFunc_Param()
   {
-    return (EAttribute)decFuncEClass.getEStructuralFeatures().get(1);
+    return (EReference)decFuncEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -622,6 +650,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     decVarsEClass = createEClass(DEC_VARS);
 
+    paramsEClass = createEClass(PARAMS);
+    createEAttribute(paramsEClass, PARAMS__PARAMS);
+
     intEClass = createEClass(INT);
 
     conditionEClass = createEClass(CONDITION);
@@ -642,7 +673,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     decFuncEClass = createEClass(DEC_FUNC);
     createEAttribute(decFuncEClass, DEC_FUNC__NAME);
-    createEAttribute(decFuncEClass, DEC_FUNC__PARAMETER);
+    createEReference(decFuncEClass, DEC_FUNC__PARAM);
     createEReference(decFuncEClass, DEC_FUNC__ARGS);
 
     dataTypeEClass = createEClass(DATA_TYPE);
@@ -718,6 +749,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     initEClass(decVarsEClass, DecVars.class, "DecVars", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+    initEClass(paramsEClass, Params.class, "Params", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getParams_Params(), ecorePackage.getEString(), "params", null, 0, -1, Params.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(intEClass, org.xtext.go.go.INT.class, "INT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -738,7 +772,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     initEClass(decFuncEClass, DecFunc.class, "DecFunc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDecFunc_Name(), ecorePackage.getEString(), "name", null, 0, 1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDecFunc_Parameter(), ecorePackage.getEString(), "parameter", null, 0, 1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDecFunc_Param(), this.getParams(), null, "param", null, 0, 1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDecFunc_Args(), this.getGreeting(), null, "args", null, 0, -1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

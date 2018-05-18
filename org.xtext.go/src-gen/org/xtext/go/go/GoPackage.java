@@ -179,6 +179,34 @@ public interface GoPackage extends EPackage
   int DEC_VARS_FEATURE_COUNT = DEC_VAR_FEATURE_COUNT + 0;
 
   /**
+   * The meta object id for the '{@link org.xtext.go.go.impl.ParamsImpl <em>Params</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.go.go.impl.ParamsImpl
+   * @see org.xtext.go.go.impl.GoPackageImpl#getParams()
+   * @generated
+   */
+  int PARAMS = 4;
+
+  /**
+   * The feature id for the '<em><b>Params</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMS__PARAMS = 0;
+
+  /**
+   * The number of structural features of the '<em>Params</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARAMS_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.go.go.impl.INTImpl <em>INT</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -186,7 +214,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getINT()
    * @generated
    */
-  int INT = 4;
+  int INT = 5;
 
   /**
    * The number of structural features of the '<em>INT</em>' class.
@@ -205,7 +233,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getCondition()
    * @generated
    */
-  int CONDITION = 5;
+  int CONDITION = 6;
 
   /**
    * The feature id for the '<em><b>If</b></em>' containment reference.
@@ -251,7 +279,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getElseIfCondition()
    * @generated
    */
-  int ELSE_IF_CONDITION = 7;
+  int ELSE_IF_CONDITION = 8;
 
   /**
    * The number of structural features of the '<em>Else If Condition</em>' class.
@@ -270,7 +298,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getIfCondition()
    * @generated
    */
-  int IF_CONDITION = 6;
+  int IF_CONDITION = 7;
 
   /**
    * The feature id for the '<em><b>Cond</b></em>' containment reference.
@@ -307,7 +335,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getElseCondition()
    * @generated
    */
-  int ELSE_CONDITION = 8;
+  int ELSE_CONDITION = 9;
 
   /**
    * The feature id for the '<em><b>Then</b></em>' containment reference.
@@ -335,7 +363,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 9;
+  int EXPRESSION = 10;
 
   /**
    * The number of structural features of the '<em>Expression</em>' class.
@@ -354,7 +382,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDecFunc()
    * @generated
    */
-  int DEC_FUNC = 10;
+  int DEC_FUNC = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -366,13 +394,13 @@ public interface GoPackage extends EPackage
   int DEC_FUNC__NAME = GREETING_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Parameter</b></em>' attribute.
+   * The feature id for the '<em><b>Param</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DEC_FUNC__PARAMETER = GREETING_FEATURE_COUNT + 1;
+  int DEC_FUNC__PARAM = GREETING_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -400,7 +428,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDataType()
    * @generated
    */
-  int DATA_TYPE = 11;
+  int DATA_TYPE = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -428,7 +456,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getOrExpression()
    * @generated
    */
-  int OR_EXPRESSION = 12;
+  int OR_EXPRESSION = 13;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -465,7 +493,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getAndExpression()
    * @generated
    */
-  int AND_EXPRESSION = 13;
+  int AND_EXPRESSION = 14;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -502,7 +530,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getComparisonExpression()
    * @generated
    */
-  int COMPARISON_EXPRESSION = 14;
+  int COMPARISON_EXPRESSION = 15;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -548,7 +576,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 15;
+  int LITERAL = 16;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -641,6 +669,27 @@ public interface GoPackage extends EPackage
    * @generated
    */
   EClass getDecVars();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.go.go.Params <em>Params</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Params</em>'.
+   * @see org.xtext.go.go.Params
+   * @generated
+   */
+  EClass getParams();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.xtext.go.go.Params#getParams <em>Params</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Params</em>'.
+   * @see org.xtext.go.go.Params#getParams()
+   * @see #getParams()
+   * @generated
+   */
+  EAttribute getParams_Params();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.INT <em>INT</em>}'.
@@ -790,15 +839,15 @@ public interface GoPackage extends EPackage
   EAttribute getDecFunc_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.go.go.DecFunc#getParameter <em>Parameter</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.DecFunc#getParam <em>Param</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Parameter</em>'.
-   * @see org.xtext.go.go.DecFunc#getParameter()
+   * @return the meta object for the containment reference '<em>Param</em>'.
+   * @see org.xtext.go.go.DecFunc#getParam()
    * @see #getDecFunc()
    * @generated
    */
-  EAttribute getDecFunc_Parameter();
+  EReference getDecFunc_Param();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.go.go.DecFunc#getArgs <em>Args</em>}'.
@@ -1048,6 +1097,24 @@ public interface GoPackage extends EPackage
     EClass DEC_VARS = eINSTANCE.getDecVars();
 
     /**
+     * The meta object literal for the '{@link org.xtext.go.go.impl.ParamsImpl <em>Params</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.go.go.impl.ParamsImpl
+     * @see org.xtext.go.go.impl.GoPackageImpl#getParams()
+     * @generated
+     */
+    EClass PARAMS = eINSTANCE.getParams();
+
+    /**
+     * The meta object literal for the '<em><b>Params</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PARAMS__PARAMS = eINSTANCE.getParams_Params();
+
+    /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.INTImpl <em>INT</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1174,12 +1241,12 @@ public interface GoPackage extends EPackage
     EAttribute DEC_FUNC__NAME = eINSTANCE.getDecFunc_Name();
 
     /**
-     * The meta object literal for the '<em><b>Parameter</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Param</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DEC_FUNC__PARAMETER = eINSTANCE.getDecFunc_Parameter();
+    EReference DEC_FUNC__PARAM = eINSTANCE.getDecFunc_Param();
 
     /**
      * The meta object literal for the '<em><b>Args</b></em>' containment reference list feature.

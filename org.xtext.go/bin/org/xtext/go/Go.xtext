@@ -9,11 +9,21 @@ Greeting:
 	DecVar | DataType | Entity | DecFunc | EOL | Condition | Operations | DecImport;
 
 DecVar:
-	DecVars |VAR vars+=ID("," vars+=ID)* TYPE ("=" atrb+=ID("," atrb+=ID)*)?;
+	DecVars |VAR vars+=ID("," vars+=ID)* (Types) ("=" atrb+=Atri("," atrb+=Atri)*)?;
 
 DecVars:
-	vars+=ID("," vars+=ID)* ":=" atrb+=ID("," atrb+=ID)*;
+	vars+=ID("," vars+=ID)* ":=" atrb+=Atri("," atrb+=Atri)*;
+Atri:
+	"["INT*"]"Types("{"TypeValue"}")? | TypeValue ;
+Params:
+	params+=ID Types ("," params+=ID Types)*;
+	
+TypeValue:
+	STRING | INT | Double | Boolean;
 
+Boolean:
+	"true" | "false";
+	
 DecImport:
 	IMPORT (STRING | "("STRING+")");
 	
@@ -96,11 +106,14 @@ PrimaryExpression returns Expression:
 ;
 
 Literal returns Expression:
-    {Literal} value="true" | "false" | INT
+    {Literal} value=Boolean | INT
 ;
 DecFunc:
-	FUNC name=ID"("(parameter=ID)?(","parameter=ID)*")""{"args+=Greeting*"}";
+	FUNC name=ID"("param=Params*")""{"args+=Greeting*"}";
 
+
+Types:
+	TYPE | "string" |"int";
 Terminals:
 	(BREAK|CASE|CHAN|CONST|CONTINUE|ELSE|IF|FOR|FUNC|IMPORT|RETURN|PACKAGE|RANGE);
 	
