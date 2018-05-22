@@ -11,12 +11,12 @@ package org.xtext.go.go;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.ComparisonExpression#getLeft <em>Left</em>}</li>
  *   <li>{@link org.xtext.go.go.ComparisonExpression#getOperator <em>Operator</em>}</li>
  *   <li>{@link org.xtext.go.go.ComparisonExpression#getRight <em>Right</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.xtext.go.go.GoPackage#getComparisonExpression()
  * @model

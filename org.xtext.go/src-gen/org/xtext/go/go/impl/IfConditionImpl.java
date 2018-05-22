@@ -22,11 +22,11 @@ import org.xtext.go.go.IfCondition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.IfConditionImpl#getCond <em>Cond</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.IfConditionImpl#getThen <em>Then</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

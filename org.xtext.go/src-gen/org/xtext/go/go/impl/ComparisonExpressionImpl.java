@@ -21,12 +21,12 @@ import org.xtext.go.go.GoPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.ComparisonExpressionImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.ComparisonExpressionImpl#getOperator <em>Operator</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.ComparisonExpressionImpl#getRight <em>Right</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

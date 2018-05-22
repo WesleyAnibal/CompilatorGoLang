@@ -6,7 +6,7 @@ Go:
 	(elements+=Greeting*);
 
 Greeting:
-	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition | Operations | DecImport;
+	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition | Operations | DecImport | CallFunc;
 
 DecVar:
 	DecVars |Modif vars+=ID(Comma vars+=ID)* (Types) ("=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*)?;
@@ -90,9 +90,15 @@ PrimaryExpression returns Expression:
 Literal returns Expression:
     {Literal} value=Boolean | Numbers
 ;
+
 DecFunc:
-	FUNC name=ID Open_parentheses param=Params* Closed_parentheses Open_Key args+=Greeting*Closed_Key;
+	FUNC name=ID Open_parentheses param=Params* Closed_parentheses Open_Key args+=Greeting*Closed_Key
+;
 	
+CallFunc:
+	ID Dot ID Open_parentheses param=Params* Closed_parentheses
+;
+
 //Tokens
 
 Terminals:

@@ -21,11 +21,11 @@ import org.xtext.go.go.OrExpression;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.OrExpressionImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.OrExpressionImpl#getRight <em>Right</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

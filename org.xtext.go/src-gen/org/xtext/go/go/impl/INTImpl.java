@@ -12,6 +12,8 @@ import org.xtext.go.go.INT;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>INT</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * </p>
  *
  * @generated
  */

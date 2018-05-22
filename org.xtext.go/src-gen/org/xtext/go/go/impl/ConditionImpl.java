@@ -23,12 +23,12 @@ import org.xtext.go.go.IfCondition;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.ConditionImpl#getIf <em>If</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.ConditionImpl#getElseif <em>Elseif</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.ConditionImpl#getElse <em>Else</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

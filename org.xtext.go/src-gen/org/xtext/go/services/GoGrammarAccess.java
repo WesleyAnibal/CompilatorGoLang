@@ -478,7 +478,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cOIParserRuleCall_1_0 = (RuleCall)cOAssignment_1.eContents().get(0);
 		
 		////Removi a recursão a esquerda
-		// Operations INT:
+		//Operations INT:
 		//	T o=I;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -980,7 +980,8 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLiteralParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//PrimaryExpression Expression:
-		//	Open_parentheses Expression Closed_parentheses | Literal;
+		//	Open_parentheses Expression Closed_parentheses
+		//	| Literal;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//Open_parentheses Expression Closed_parentheses | Literal
@@ -1105,7 +1106,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRANGEParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
 		
 		////Tokens
-		// Terminals:
+		//Terminals:
 		//	BREAK | CASE | CHAN | CONST | CONTINUE | ELSE | IF | FOR | FUNC | IMPORT | RETURN | PACKAGE | RANGE;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -1706,7 +1707,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	////Removi a recursão a esquerda
-	// Operations INT:
+	//Operations INT:
 	//	T o=I;
 	public OperationsElements getOperationsAccess() {
 		return pOperations;
@@ -1858,7 +1859,8 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//PrimaryExpression Expression:
-	//	Open_parentheses Expression Closed_parentheses | Literal;
+	//	Open_parentheses Expression Closed_parentheses
+	//	| Literal;
 	public PrimaryExpressionElements getPrimaryExpressionAccess() {
 		return pPrimaryExpression;
 	}
@@ -1888,7 +1890,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	////Tokens
-	// Terminals:
+	//Terminals:
 	//	BREAK | CASE | CHAN | CONST | CONTINUE | ELSE | IF | FOR | FUNC | IMPORT | RETURN | PACKAGE | RANGE;
 	public TerminalsElements getTerminalsAccess() {
 		return pTerminals;

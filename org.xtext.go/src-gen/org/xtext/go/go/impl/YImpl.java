@@ -22,10 +22,10 @@ import org.xtext.go.go.Y;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.YImpl#getO <em>O</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
