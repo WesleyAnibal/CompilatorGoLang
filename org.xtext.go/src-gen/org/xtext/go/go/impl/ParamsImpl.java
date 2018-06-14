@@ -22,10 +22,10 @@ import org.xtext.go.go.Params;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.ParamsImpl#getParams <em>Params</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

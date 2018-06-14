@@ -71,6 +71,7 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
       case GoPackage.MULT_DEC_VARS: return createMultDecVars();
       case GoPackage.DEC_VARS: return createDecVars();
       case GoPackage.PARAMS: return createParams();
+      case GoPackage.OPERATIONS_ONE_EQUALS: return createOperationsOneEquals();
       case GoPackage.INT: return createINT();
       case GoPackage.I: return createI();
       case GoPackage.T: return createT();
@@ -81,7 +82,11 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
       case GoPackage.ELSE_IF_CONDITION: return createElseIfCondition();
       case GoPackage.ELSE_CONDITION: return createElseCondition();
       case GoPackage.EXPRESSION: return createExpression();
+      case GoPackage.CALL_FOR: return createCallFor();
+      case GoPackage.OPERATIONS_ONE: return createoperationsOne();
+      case GoPackage.VAR_FOR: return createvarFor();
       case GoPackage.DEC_FUNC: return createDecFunc();
+      case GoPackage.CALL_FUNC: return createCallFunc();
       case GoPackage.DATA_TYPE: return createDataType();
       case GoPackage.OR_EXPRESSION: return createOrExpression();
       case GoPackage.AND_EXPRESSION: return createAndExpression();
@@ -156,6 +161,17 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     ParamsImpl params = new ParamsImpl();
     return params;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OperationsOneEquals createOperationsOneEquals()
+  {
+    OperationsOneEqualsImpl operationsOneEquals = new OperationsOneEqualsImpl();
+    return operationsOneEquals;
   }
 
   /**
@@ -273,10 +289,54 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public CallFor createCallFor()
+  {
+    CallForImpl callFor = new CallForImpl();
+    return callFor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public operationsOne createoperationsOne()
+  {
+    operationsOneImpl operationsOne = new operationsOneImpl();
+    return operationsOne;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public varFor createvarFor()
+  {
+    varForImpl varFor = new varForImpl();
+    return varFor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public DecFunc createDecFunc()
   {
     DecFuncImpl decFunc = new DecFuncImpl();
     return decFunc;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CallFunc createCallFunc()
+  {
+    CallFuncImpl callFunc = new CallFuncImpl();
+    return callFunc;
   }
 
   /**

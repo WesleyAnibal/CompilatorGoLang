@@ -78,6 +78,15 @@ public interface GoFactory extends EFactory
   Params createParams();
 
   /**
+   * Returns a new object of class '<em>Operations One Equals</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Operations One Equals</em>'.
+   * @generated
+   */
+  OperationsOneEquals createOperationsOneEquals();
+
+  /**
    * Returns a new object of class '<em>INT</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -168,6 +177,33 @@ public interface GoFactory extends EFactory
   Expression createExpression();
 
   /**
+   * Returns a new object of class '<em>Call For</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Call For</em>'.
+   * @generated
+   */
+  CallFor createCallFor();
+
+  /**
+   * Returns a new object of class '<em>operations One</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>operations One</em>'.
+   * @generated
+   */
+  operationsOne createoperationsOne();
+
+  /**
+   * Returns a new object of class '<em>var For</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>var For</em>'.
+   * @generated
+   */
+  varFor createvarFor();
+
+  /**
    * Returns a new object of class '<em>Dec Func</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -175,6 +211,15 @@ public interface GoFactory extends EFactory
    * @generated
    */
   DecFunc createDecFunc();
+
+  /**
+   * Returns a new object of class '<em>Call Func</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Call Func</em>'.
+   * @generated
+   */
+  CallFunc createCallFunc();
 
   /**
    * Returns a new object of class '<em>Data Type</em>'.

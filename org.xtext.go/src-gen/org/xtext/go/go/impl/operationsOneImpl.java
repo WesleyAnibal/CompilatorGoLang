@@ -3,59 +3,56 @@
  */
 package org.xtext.go.go.impl;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.xtext.go.go.DecVar;
 import org.xtext.go.go.GoPackage;
+import org.xtext.go.go.operationsOne;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Dec Var</b></em>'.
+ * An implementation of the model object '<em><b>operations One</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getVars <em>Vars</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getAtrb <em>Atrb</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.operationsOneImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DecVarImpl extends GreetingImpl implements DecVar
+public class operationsOneImpl extends varForImpl implements operationsOne
 {
   /**
-   * The cached value of the '{@link #getVars() <em>Vars</em>}' attribute list.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVars()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected EList<String> vars;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getAtrb() <em>Atrb</em>}' attribute list.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAtrb()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected EList<String> atrb;
+  protected String name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DecVarImpl()
+  protected operationsOneImpl()
   {
     super();
   }
@@ -68,7 +65,7 @@ public class DecVarImpl extends GreetingImpl implements DecVar
   @Override
   protected EClass eStaticClass()
   {
-    return GoPackage.Literals.DEC_VAR;
+    return GoPackage.Literals.OPERATIONS_ONE;
   }
 
   /**
@@ -76,13 +73,9 @@ public class DecVarImpl extends GreetingImpl implements DecVar
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getVars()
+  public String getName()
   {
-    if (vars == null)
-    {
-      vars = new EDataTypeEList<String>(String.class, this, GoPackage.DEC_VAR__VARS);
-    }
-    return vars;
+    return name;
   }
 
   /**
@@ -90,13 +83,12 @@ public class DecVarImpl extends GreetingImpl implements DecVar
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getAtrb()
+  public void setName(String newName)
   {
-    if (atrb == null)
-    {
-      atrb = new EDataTypeEList<String>(String.class, this, GoPackage.DEC_VAR__ATRB);
-    }
-    return atrb;
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.OPERATIONS_ONE__NAME, oldName, name));
   }
 
   /**
@@ -109,10 +101,8 @@ public class DecVarImpl extends GreetingImpl implements DecVar
   {
     switch (featureID)
     {
-      case GoPackage.DEC_VAR__VARS:
-        return getVars();
-      case GoPackage.DEC_VAR__ATRB:
-        return getAtrb();
+      case GoPackage.OPERATIONS_ONE__NAME:
+        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -122,19 +112,13 @@ public class DecVarImpl extends GreetingImpl implements DecVar
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case GoPackage.DEC_VAR__VARS:
-        getVars().clear();
-        getVars().addAll((Collection<? extends String>)newValue);
-        return;
-      case GoPackage.DEC_VAR__ATRB:
-        getAtrb().clear();
-        getAtrb().addAll((Collection<? extends String>)newValue);
+      case GoPackage.OPERATIONS_ONE__NAME:
+        setName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -150,11 +134,8 @@ public class DecVarImpl extends GreetingImpl implements DecVar
   {
     switch (featureID)
     {
-      case GoPackage.DEC_VAR__VARS:
-        getVars().clear();
-        return;
-      case GoPackage.DEC_VAR__ATRB:
-        getAtrb().clear();
+      case GoPackage.OPERATIONS_ONE__NAME:
+        setName(NAME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -170,10 +151,8 @@ public class DecVarImpl extends GreetingImpl implements DecVar
   {
     switch (featureID)
     {
-      case GoPackage.DEC_VAR__VARS:
-        return vars != null && !vars.isEmpty();
-      case GoPackage.DEC_VAR__ATRB:
-        return atrb != null && !atrb.isEmpty();
+      case GoPackage.OPERATIONS_ONE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
@@ -189,12 +168,10 @@ public class DecVarImpl extends GreetingImpl implements DecVar
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (vars: ");
-    result.append(vars);
-    result.append(", atrb: ");
-    result.append(atrb);
+    result.append(" (name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }
 
-} //DecVarImpl
+} //operationsOneImpl

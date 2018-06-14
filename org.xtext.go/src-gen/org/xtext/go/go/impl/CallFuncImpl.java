@@ -3,62 +3,74 @@
  */
 package org.xtext.go.go.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.xtext.go.go.DecFunc;
+import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.GoPackage;
-import org.xtext.go.go.Greeting;
 import org.xtext.go.go.Params;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Dec Func</b></em>'.
+ * An implementation of the model object '<em><b>Call Func</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getParam <em>Param</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getArgs <em>Args</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.CallFuncImpl#getNameClass <em>Name Class</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.CallFuncImpl#getNameFunc <em>Name Func</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.CallFuncImpl#getParam <em>Param</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DecFuncImpl extends GreetingImpl implements DecFunc
+public class CallFuncImpl extends GreetingImpl implements CallFunc
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getNameClass() <em>Name Class</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getNameClass()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String NAME_CLASS_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getNameClass() <em>Name Class</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getNameClass()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String nameClass = NAME_CLASS_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getNameFunc() <em>Name Func</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNameFunc()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_FUNC_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getNameFunc() <em>Name Func</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNameFunc()
+   * @generated
+   * @ordered
+   */
+  protected String nameFunc = NAME_FUNC_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getParam() <em>Param</em>}' containment reference.
@@ -71,21 +83,11 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
   protected Params param;
 
   /**
-   * The cached value of the '{@link #getArgs() <em>Args</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getArgs()
-   * @generated
-   * @ordered
-   */
-  protected EList<Greeting> args;
-
-  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DecFuncImpl()
+  protected CallFuncImpl()
   {
     super();
   }
@@ -98,7 +100,7 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
   @Override
   protected EClass eStaticClass()
   {
-    return GoPackage.Literals.DEC_FUNC;
+    return GoPackage.Literals.CALL_FUNC;
   }
 
   /**
@@ -106,9 +108,9 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public String getNameClass()
   {
-    return name;
+    return nameClass;
   }
 
   /**
@@ -116,12 +118,35 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setNameClass(String newNameClass)
   {
-    String oldName = name;
-    name = newName;
+    String oldNameClass = nameClass;
+    nameClass = newNameClass;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DEC_FUNC__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.CALL_FUNC__NAME_CLASS, oldNameClass, nameClass));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getNameFunc()
+  {
+    return nameFunc;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setNameFunc(String newNameFunc)
+  {
+    String oldNameFunc = nameFunc;
+    nameFunc = newNameFunc;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.CALL_FUNC__NAME_FUNC, oldNameFunc, nameFunc));
   }
 
   /**
@@ -145,7 +170,7 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
     param = newParam;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.DEC_FUNC__PARAM, oldParam, newParam);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.CALL_FUNC__PARAM, oldParam, newParam);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -162,28 +187,14 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
     {
       NotificationChain msgs = null;
       if (param != null)
-        msgs = ((InternalEObject)param).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.DEC_FUNC__PARAM, null, msgs);
+        msgs = ((InternalEObject)param).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.CALL_FUNC__PARAM, null, msgs);
       if (newParam != null)
-        msgs = ((InternalEObject)newParam).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.DEC_FUNC__PARAM, null, msgs);
+        msgs = ((InternalEObject)newParam).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.CALL_FUNC__PARAM, null, msgs);
       msgs = basicSetParam(newParam, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DEC_FUNC__PARAM, newParam, newParam));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Greeting> getArgs()
-  {
-    if (args == null)
-    {
-      args = new EObjectContainmentEList<Greeting>(Greeting.class, this, GoPackage.DEC_FUNC__ARGS);
-    }
-    return args;
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.CALL_FUNC__PARAM, newParam, newParam));
   }
 
   /**
@@ -196,10 +207,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
   {
     switch (featureID)
     {
-      case GoPackage.DEC_FUNC__PARAM:
+      case GoPackage.CALL_FUNC__PARAM:
         return basicSetParam(null, msgs);
-      case GoPackage.DEC_FUNC__ARGS:
-        return ((InternalEList<?>)getArgs()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -214,12 +223,12 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
   {
     switch (featureID)
     {
-      case GoPackage.DEC_FUNC__NAME:
-        return getName();
-      case GoPackage.DEC_FUNC__PARAM:
+      case GoPackage.CALL_FUNC__NAME_CLASS:
+        return getNameClass();
+      case GoPackage.CALL_FUNC__NAME_FUNC:
+        return getNameFunc();
+      case GoPackage.CALL_FUNC__PARAM:
         return getParam();
-      case GoPackage.DEC_FUNC__ARGS:
-        return getArgs();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -229,21 +238,19 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case GoPackage.DEC_FUNC__NAME:
-        setName((String)newValue);
+      case GoPackage.CALL_FUNC__NAME_CLASS:
+        setNameClass((String)newValue);
         return;
-      case GoPackage.DEC_FUNC__PARAM:
+      case GoPackage.CALL_FUNC__NAME_FUNC:
+        setNameFunc((String)newValue);
+        return;
+      case GoPackage.CALL_FUNC__PARAM:
         setParam((Params)newValue);
-        return;
-      case GoPackage.DEC_FUNC__ARGS:
-        getArgs().clear();
-        getArgs().addAll((Collection<? extends Greeting>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -259,14 +266,14 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
   {
     switch (featureID)
     {
-      case GoPackage.DEC_FUNC__NAME:
-        setName(NAME_EDEFAULT);
+      case GoPackage.CALL_FUNC__NAME_CLASS:
+        setNameClass(NAME_CLASS_EDEFAULT);
         return;
-      case GoPackage.DEC_FUNC__PARAM:
+      case GoPackage.CALL_FUNC__NAME_FUNC:
+        setNameFunc(NAME_FUNC_EDEFAULT);
+        return;
+      case GoPackage.CALL_FUNC__PARAM:
         setParam((Params)null);
-        return;
-      case GoPackage.DEC_FUNC__ARGS:
-        getArgs().clear();
         return;
     }
     super.eUnset(featureID);
@@ -282,12 +289,12 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
   {
     switch (featureID)
     {
-      case GoPackage.DEC_FUNC__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case GoPackage.DEC_FUNC__PARAM:
+      case GoPackage.CALL_FUNC__NAME_CLASS:
+        return NAME_CLASS_EDEFAULT == null ? nameClass != null : !NAME_CLASS_EDEFAULT.equals(nameClass);
+      case GoPackage.CALL_FUNC__NAME_FUNC:
+        return NAME_FUNC_EDEFAULT == null ? nameFunc != null : !NAME_FUNC_EDEFAULT.equals(nameFunc);
+      case GoPackage.CALL_FUNC__PARAM:
         return param != null;
-      case GoPackage.DEC_FUNC__ARGS:
-        return args != null && !args.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -303,10 +310,12 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
+    result.append(" (nameClass: ");
+    result.append(nameClass);
+    result.append(", nameFunc: ");
+    result.append(nameFunc);
     result.append(')');
     return result.toString();
   }
 
-} //DecFuncImpl
+} //CallFuncImpl

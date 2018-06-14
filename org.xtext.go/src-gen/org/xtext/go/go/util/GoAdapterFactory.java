@@ -106,6 +106,11 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createParamsAdapter();
       }
       @Override
+      public Adapter caseOperationsOneEquals(OperationsOneEquals object)
+      {
+        return createOperationsOneEqualsAdapter();
+      }
+      @Override
       public Adapter caseINT(INT object)
       {
         return createINTAdapter();
@@ -156,9 +161,29 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createExpressionAdapter();
       }
       @Override
+      public Adapter caseCallFor(CallFor object)
+      {
+        return createCallForAdapter();
+      }
+      @Override
+      public Adapter caseoperationsOne(operationsOne object)
+      {
+        return createoperationsOneAdapter();
+      }
+      @Override
+      public Adapter casevarFor(varFor object)
+      {
+        return createvarForAdapter();
+      }
+      @Override
       public Adapter caseDecFunc(DecFunc object)
       {
         return createDecFuncAdapter();
+      }
+      @Override
+      public Adapter caseCallFunc(CallFunc object)
+      {
+        return createCallFuncAdapter();
       }
       @Override
       public Adapter caseDataType(DataType object)
@@ -293,6 +318,21 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createParamsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.OperationsOneEquals <em>Operations One Equals</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.OperationsOneEquals
+   * @generated
+   */
+  public Adapter createOperationsOneEqualsAdapter()
   {
     return null;
   }
@@ -448,6 +488,51 @@ public class GoAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.CallFor <em>Call For</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.CallFor
+   * @generated
+   */
+  public Adapter createCallForAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.operationsOne <em>operations One</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.operationsOne
+   * @generated
+   */
+  public Adapter createoperationsOneAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.varFor <em>var For</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.varFor
+   * @generated
+   */
+  public Adapter createvarForAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.go.go.DecFunc <em>Dec Func</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -458,6 +543,21 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDecFuncAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.CallFunc <em>Call Func</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.CallFunc
+   * @generated
+   */
+  public Adapter createCallFuncAdapter()
   {
     return null;
   }

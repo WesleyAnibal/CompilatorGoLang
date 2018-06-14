@@ -5,8 +5,6 @@ package org.xtext.go.go.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.xtext.go.go.Expression;
 import org.xtext.go.go.GoPackage;
 
@@ -14,12 +12,10 @@ import org.xtext.go.go.GoPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Expression</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
-public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expression
+public class ExpressionImpl extends varForImpl implements Expression
 {
   /**
    * <!-- begin-user-doc -->

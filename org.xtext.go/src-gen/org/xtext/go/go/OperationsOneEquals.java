@@ -6,21 +6,21 @@ package org.xtext.go.go;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Data Type</b></em>'.
+ * A representation of the model object '<em><b>Operations One Equals</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.go.go.DataType#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.go.go.OperationsOneEquals#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see org.xtext.go.go.GoPackage#getDataType()
+ * @see org.xtext.go.go.GoPackage#getOperationsOneEquals()
  * @model
  * @generated
  */
-public interface DataType extends Greeting
+public interface OperationsOneEquals extends INT, varFor
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -32,14 +32,14 @@ public interface DataType extends Greeting
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see org.xtext.go.go.GoPackage#getDataType_Name()
+   * @see org.xtext.go.go.GoPackage#getOperationsOneEquals_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link org.xtext.go.go.DataType#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.go.go.OperationsOneEquals#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -48,4 +48,4 @@ public interface DataType extends Greeting
    */
   void setName(String value);
 
-} // DataType
+} // OperationsOneEquals

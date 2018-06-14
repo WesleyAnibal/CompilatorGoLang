@@ -14,8 +14,6 @@ import org.xtext.go.go.I;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>I</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

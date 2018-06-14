@@ -7,45 +7,45 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.xtext.go.go.CallFor;
 import org.xtext.go.go.GoPackage;
-import org.xtext.go.go.T;
+import org.xtext.go.go.Greeting;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>T</b></em>'.
+ * An implementation of the model object '<em><b>Call For</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.go.go.impl.TImpl#getO <em>O</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.CallForImpl#getX <em>X</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TImpl extends INTImpl implements T
+public class CallForImpl extends GreetingImpl implements CallFor
 {
   /**
-   * The cached value of the '{@link #getO() <em>O</em>}' containment reference.
+   * The cached value of the '{@link #getX() <em>X</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getO()
+   * @see #getX()
    * @generated
    * @ordered
    */
-  protected EObject o;
+  protected Greeting x;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected TImpl()
+  protected CallForImpl()
   {
     super();
   }
@@ -58,7 +58,7 @@ public class TImpl extends INTImpl implements T
   @Override
   protected EClass eStaticClass()
   {
-    return GoPackage.Literals.T;
+    return GoPackage.Literals.CALL_FOR;
   }
 
   /**
@@ -66,9 +66,9 @@ public class TImpl extends INTImpl implements T
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getO()
+  public Greeting getX()
   {
-    return o;
+    return x;
   }
 
   /**
@@ -76,13 +76,13 @@ public class TImpl extends INTImpl implements T
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetO(EObject newO, NotificationChain msgs)
+  public NotificationChain basicSetX(Greeting newX, NotificationChain msgs)
   {
-    EObject oldO = o;
-    o = newO;
+    Greeting oldX = x;
+    x = newX;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.T__O, oldO, newO);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.CALL_FOR__X, oldX, newX);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -93,20 +93,20 @@ public class TImpl extends INTImpl implements T
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setO(EObject newO)
+  public void setX(Greeting newX)
   {
-    if (newO != o)
+    if (newX != x)
     {
       NotificationChain msgs = null;
-      if (o != null)
-        msgs = ((InternalEObject)o).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.T__O, null, msgs);
-      if (newO != null)
-        msgs = ((InternalEObject)newO).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.T__O, null, msgs);
-      msgs = basicSetO(newO, msgs);
+      if (x != null)
+        msgs = ((InternalEObject)x).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.CALL_FOR__X, null, msgs);
+      if (newX != null)
+        msgs = ((InternalEObject)newX).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.CALL_FOR__X, null, msgs);
+      msgs = basicSetX(newX, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.T__O, newO, newO));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.CALL_FOR__X, newX, newX));
   }
 
   /**
@@ -119,8 +119,8 @@ public class TImpl extends INTImpl implements T
   {
     switch (featureID)
     {
-      case GoPackage.T__O:
-        return basicSetO(null, msgs);
+      case GoPackage.CALL_FOR__X:
+        return basicSetX(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -135,8 +135,8 @@ public class TImpl extends INTImpl implements T
   {
     switch (featureID)
     {
-      case GoPackage.T__O:
-        return getO();
+      case GoPackage.CALL_FOR__X:
+        return getX();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -151,8 +151,8 @@ public class TImpl extends INTImpl implements T
   {
     switch (featureID)
     {
-      case GoPackage.T__O:
-        setO((EObject)newValue);
+      case GoPackage.CALL_FOR__X:
+        setX((Greeting)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -168,8 +168,8 @@ public class TImpl extends INTImpl implements T
   {
     switch (featureID)
     {
-      case GoPackage.T__O:
-        setO((EObject)null);
+      case GoPackage.CALL_FOR__X:
+        setX((Greeting)null);
         return;
     }
     super.eUnset(featureID);
@@ -185,10 +185,10 @@ public class TImpl extends INTImpl implements T
   {
     switch (featureID)
     {
-      case GoPackage.T__O:
-        return o != null;
+      case GoPackage.CALL_FOR__X:
+        return x != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //TImpl
+} //CallForImpl

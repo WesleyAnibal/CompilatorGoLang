@@ -11,11 +11,11 @@ package org.xtext.go.go;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.IfCondition#getCond <em>Cond</em>}</li>
  *   <li>{@link org.xtext.go.go.IfCondition#getThen <em>Then</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.xtext.go.go.GoPackage#getIfCondition()
  * @model

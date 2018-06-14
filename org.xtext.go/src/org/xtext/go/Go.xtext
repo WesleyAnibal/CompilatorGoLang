@@ -6,7 +6,7 @@ Go:
 	(elements+=Greeting*);
 
 Greeting:
-	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition | Operations | DecImport | CallFunc;
+	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition | Operations | DecImport | CallFunc | CallFor;
 
 DecVar:
 	DecVars |Modif vars+=ID(Comma vars+=ID)* (Types) ("=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*)?;
@@ -31,10 +31,13 @@ TypeValue:
 DecImport:
 	IMPORT (STRING | Open_parentheses STRING+ Closed_parentheses);
 
+
+OperationsOneEquals:
+	name=ID(PlusEquals| MinusEquals)(ID|Numbers);
 //Removi a recursão a esquerda
 
 Operations returns INT:
-	T o=I;
+	T o=I | OperationsOneEquals;
 	
 I:
 	((Plus T o=I)|(Minus T o=I))?;
@@ -70,6 +73,9 @@ Expression:
     OrExpression
 ;   
 
+CallFor :
+	FOR varFor? Open_Key x=Greeting Closed_Key
+;
 OrExpression returns Expression:
     AndExpression ({OrExpression.left=current} "||" right=AndExpression)*  
 ;   
@@ -79,7 +85,7 @@ AndExpression returns Expression:
 ;
 
 ComparisonExpression returns Expression:
-    PrimaryExpression ({ComparisonExpression.left=current} operator=("<"|"<="|"=="|">="|">") right=PrimaryExpression)*
+    PrimaryExpression ({ComparisonExpression.left=current} Operator right=PrimaryExpression)*
 ;
 
 PrimaryExpression returns Expression:
@@ -87,8 +93,16 @@ PrimaryExpression returns Expression:
     | Literal
 ;
 
+Operator:
+	"<"|"<="|"=="|">="|">";
+operationsOne:
+	name=ID(PlusOne| MinusOne);
+	
+varFor:
+	ComparisonExpression | (Modif var+=ID Types "=" atrb+=(Atri|ID)  PontoVirgula right=Literal Operator left=Literal PontoVirgula (operationsOne| OperationsOneEquals));
+
 Literal returns Expression:
-    {Literal} value=Boolean | Numbers
+    {Literal} value=Boolean | Numbers | ID
 ;
 
 DecFunc:
@@ -96,7 +110,7 @@ DecFunc:
 ;
 	
 CallFunc:
-	ID Dot ID Open_parentheses param=Params* Closed_parentheses
+	nameClass=ID Dot nameFunc=ID Open_parentheses param=Params* Closed_parentheses
 ;
 
 //Tokens
@@ -109,6 +123,9 @@ Types:
 
 Modif:
 	VAR | CONST;
+	
+terminal PontoVirgula:
+	";";
 	
 terminal Open_Key:
 	"{";
@@ -196,9 +213,19 @@ terminal Asterics:
 terminal Minus:
 	"-";
 	
+terminal MinusOne:
+	"--";
+	
 terminal Plus:
 	"+";
+
+terminal PlusEquals:
+	"+=";
 	
+terminal MinusEquals:
+	"-=";
+terminal PlusOne:
+	"++";
 terminal EOL:
 	NEWLINE | COMMENTS;
 	
