@@ -6,7 +6,7 @@ Go:
 	(elements+=Greeting*);
 
 Greeting:
-	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition | Operations | DecImport | CallFunc | CallFor;
+	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition | Operations | DecImport | CallFunc | CallFor | CallSwitch;
 
 DecVar:
 	DecVars |Modif vars+=ID(Comma vars+=ID)* (Types) ("=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*)?;
@@ -76,6 +76,27 @@ Expression:
 CallFor :
 	FOR varFor? Open_Key x=Greeting Closed_Key
 ;
+
+CallSwitch: SWITCH varSwitch? Open_Key CallCase? Closed_Key
+	
+;
+
+CallSwitchExpression: 
+	CallCase | DefaultCase
+;
+
+CallCase: 
+	CASE ComparisonExpression DoubleDot x=Greeting
+;
+
+DefaultCase: 
+	DEFAULT DoubleDot x=Greeting
+;
+
+varSwitch : 
+	ID | CallFunc PontoVirgula
+;
+
 OrExpression returns Expression:
     AndExpression ({OrExpression.left=current} "||" right=AndExpression)*  
 ;   
@@ -142,6 +163,10 @@ terminal Closed_brackets:
 terminal Dot:
 	".";
 
+terminal DoubleDot: 
+	":"
+;
+
 terminal Comma:
 	",";
 	
@@ -164,6 +189,8 @@ CHAN:
 
 CONST:
 	"const";
+	
+DEFAULT: "default";
 
 CONTINUE:
 	"continue";
