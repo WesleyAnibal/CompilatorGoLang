@@ -77,7 +77,7 @@ CallFor :
 	FOR varFor? Open_Key x=Greeting Closed_Key
 ;
 
-CallSwitch: SWITCH varSwitch? Open_Key CallCase? Closed_Key
+CallSwitch: SWITCH varSwitch? Open_Key CallSwitchExpression? Closed_Key
 	
 ;
 
