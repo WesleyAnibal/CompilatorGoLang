@@ -14,27 +14,31 @@ import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import org.xtext.go.go.Addition;
 import org.xtext.go.go.AndExpression;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.CallFunc;
+import org.xtext.go.go.Cases;
 import org.xtext.go.go.ComparisonExpression;
 import org.xtext.go.go.Condition;
 import org.xtext.go.go.DataType;
 import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.DecVar;
 import org.xtext.go.go.DecVars;
+import org.xtext.go.go.Decl;
+import org.xtext.go.go.Division;
 import org.xtext.go.go.ElseCondition;
-import org.xtext.go.go.F;
 import org.xtext.go.go.Go;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.IfCondition;
 import org.xtext.go.go.Literal;
 import org.xtext.go.go.MultDecVars;
+import org.xtext.go.go.Multiplication;
 import org.xtext.go.go.OperationsOneEquals;
 import org.xtext.go.go.OrExpression;
 import org.xtext.go.go.Params;
-import org.xtext.go.go.T;
-import org.xtext.go.go.Y;
+import org.xtext.go.go.Subtration;
+import org.xtext.go.go.SwitchCase;
 import org.xtext.go.go.operationsOne;
 import org.xtext.go.go.varFor;
 import org.xtext.go.services.GoGrammarAccess;
@@ -53,8 +57,47 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == GoPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case GoPackage.ADDITION:
+				if (rule == grammarAccess.getExpressionRule()
+						|| rule == grammarAccess.getOpersRule()
+						|| rule == grammarAccess.getAdditionRule()
+						|| action == grammarAccess.getAdditionAccess().getAdditionLeftAction_1_0()
+						|| rule == grammarAccess.getSubtrationRule()
+						|| action == grammarAccess.getSubtrationAccess().getSubtrationLeftAction_1_0()
+						|| rule == grammarAccess.getMultiplicationRule()
+						|| action == grammarAccess.getMultiplicationAccess().getMultiplicationLeftAction_1_0()
+						|| rule == grammarAccess.getDivisionRule()
+						|| action == grammarAccess.getDivisionAccess().getDivisionLeftAction_1_0()
+						|| rule == grammarAccess.getSubMultRule()
+						|| rule == grammarAccess.getOrExpressionRule()
+						|| action == grammarAccess.getOrExpressionAccess().getOrExpressionLeftAction_1_0()
+						|| rule == grammarAccess.getAndExpressionRule()
+						|| action == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0()
+						|| rule == grammarAccess.getComparisonExpressionRule()
+						|| action == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0()
+						|| rule == grammarAccess.getPrimaryExpressionRule()
+						|| rule == grammarAccess.getVarForRule()) {
+					sequence_Addition(context, (Addition) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getGreetingRule()
+						|| rule == grammarAccess.getCallForRule()) {
+					sequence_Addition_CallFor(context, (Addition) semanticObject); 
+					return; 
+				}
+				else break;
 			case GoPackage.AND_EXPRESSION:
 				if (rule == grammarAccess.getExpressionRule()
+						|| rule == grammarAccess.getOpersRule()
+						|| rule == grammarAccess.getAdditionRule()
+						|| action == grammarAccess.getAdditionAccess().getAdditionLeftAction_1_0()
+						|| rule == grammarAccess.getSubtrationRule()
+						|| action == grammarAccess.getSubtrationAccess().getSubtrationLeftAction_1_0()
+						|| rule == grammarAccess.getMultiplicationRule()
+						|| action == grammarAccess.getMultiplicationAccess().getMultiplicationLeftAction_1_0()
+						|| rule == grammarAccess.getDivisionRule()
+						|| action == grammarAccess.getDivisionAccess().getDivisionLeftAction_1_0()
+						|| rule == grammarAccess.getSubMultRule()
 						|| rule == grammarAccess.getOrExpressionRule()
 						|| action == grammarAccess.getOrExpressionAccess().getOrExpressionLeftAction_1_0()
 						|| rule == grammarAccess.getAndExpressionRule()
@@ -78,6 +121,9 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case GoPackage.CALL_FUNC:
 				sequence_CallFunc(context, (CallFunc) semanticObject); 
 				return; 
+			case GoPackage.CASES:
+				sequence_Cases(context, (Cases) semanticObject); 
+				return; 
 			case GoPackage.COMPARISON_EXPRESSION:
 				if (rule == grammarAccess.getGreetingRule()
 						|| rule == grammarAccess.getCallForRule()) {
@@ -85,6 +131,16 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else if (rule == grammarAccess.getExpressionRule()
+						|| rule == grammarAccess.getOpersRule()
+						|| rule == grammarAccess.getAdditionRule()
+						|| action == grammarAccess.getAdditionAccess().getAdditionLeftAction_1_0()
+						|| rule == grammarAccess.getSubtrationRule()
+						|| action == grammarAccess.getSubtrationAccess().getSubtrationLeftAction_1_0()
+						|| rule == grammarAccess.getMultiplicationRule()
+						|| action == grammarAccess.getMultiplicationAccess().getMultiplicationLeftAction_1_0()
+						|| rule == grammarAccess.getDivisionRule()
+						|| action == grammarAccess.getDivisionAccess().getDivisionLeftAction_1_0()
+						|| rule == grammarAccess.getSubMultRule()
 						|| rule == grammarAccess.getOrExpressionRule()
 						|| action == grammarAccess.getOrExpressionAccess().getOrExpressionLeftAction_1_0()
 						|| rule == grammarAccess.getAndExpressionRule()
@@ -112,28 +168,41 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case GoPackage.DEC_VARS:
 				sequence_DecVars(context, (DecVars) semanticObject); 
 				return; 
-			case GoPackage.ELSE_CONDITION:
-				sequence_ElseCondition(context, (ElseCondition) semanticObject); 
+			case GoPackage.DECL:
+				sequence_Decl(context, (Decl) semanticObject); 
 				return; 
-			case GoPackage.F:
-				if (rule == grammarAccess.getFRule()) {
-					sequence_F(context, (F) semanticObject); 
+			case GoPackage.DIVISION:
+				if (rule == grammarAccess.getGreetingRule()
+						|| rule == grammarAccess.getCallForRule()) {
+					sequence_CallFor_Division(context, (Division) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getIRule()) {
-					sequence_F_I_T(context, (F) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getGreetingRule()
-						|| rule == grammarAccess.getOperationsRule()) {
-					sequence_F_Operations_T(context, (F) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getTRule()) {
-					sequence_F_T(context, (F) semanticObject); 
+				else if (rule == grammarAccess.getExpressionRule()
+						|| rule == grammarAccess.getOpersRule()
+						|| rule == grammarAccess.getAdditionRule()
+						|| action == grammarAccess.getAdditionAccess().getAdditionLeftAction_1_0()
+						|| rule == grammarAccess.getSubtrationRule()
+						|| action == grammarAccess.getSubtrationAccess().getSubtrationLeftAction_1_0()
+						|| rule == grammarAccess.getMultiplicationRule()
+						|| action == grammarAccess.getMultiplicationAccess().getMultiplicationLeftAction_1_0()
+						|| rule == grammarAccess.getDivisionRule()
+						|| action == grammarAccess.getDivisionAccess().getDivisionLeftAction_1_0()
+						|| rule == grammarAccess.getSubMultRule()
+						|| rule == grammarAccess.getOrExpressionRule()
+						|| action == grammarAccess.getOrExpressionAccess().getOrExpressionLeftAction_1_0()
+						|| rule == grammarAccess.getAndExpressionRule()
+						|| action == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0()
+						|| rule == grammarAccess.getComparisonExpressionRule()
+						|| action == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0()
+						|| rule == grammarAccess.getPrimaryExpressionRule()
+						|| rule == grammarAccess.getVarForRule()) {
+					sequence_Division(context, (Division) semanticObject); 
 					return; 
 				}
 				else break;
+			case GoPackage.ELSE_CONDITION:
+				sequence_ElseCondition(context, (ElseCondition) semanticObject); 
+				return; 
 			case GoPackage.GO:
 				sequence_Go(context, (Go) semanticObject); 
 				return; 
@@ -147,6 +216,16 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else if (rule == grammarAccess.getExpressionRule()
+						|| rule == grammarAccess.getOpersRule()
+						|| rule == grammarAccess.getAdditionRule()
+						|| action == grammarAccess.getAdditionAccess().getAdditionLeftAction_1_0()
+						|| rule == grammarAccess.getSubtrationRule()
+						|| action == grammarAccess.getSubtrationAccess().getSubtrationLeftAction_1_0()
+						|| rule == grammarAccess.getMultiplicationRule()
+						|| action == grammarAccess.getMultiplicationAccess().getMultiplicationLeftAction_1_0()
+						|| rule == grammarAccess.getDivisionRule()
+						|| action == grammarAccess.getDivisionAccess().getDivisionLeftAction_1_0()
+						|| rule == grammarAccess.getSubMultRule()
 						|| rule == grammarAccess.getOrExpressionRule()
 						|| action == grammarAccess.getOrExpressionAccess().getOrExpressionLeftAction_1_0()
 						|| rule == grammarAccess.getAndExpressionRule()
@@ -163,6 +242,35 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case GoPackage.MULT_DEC_VARS:
 				sequence_MultDecVars(context, (MultDecVars) semanticObject); 
 				return; 
+			case GoPackage.MULTIPLICATION:
+				if (rule == grammarAccess.getGreetingRule()
+						|| rule == grammarAccess.getCallForRule()) {
+					sequence_CallFor_Multiplication(context, (Multiplication) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getExpressionRule()
+						|| rule == grammarAccess.getOpersRule()
+						|| rule == grammarAccess.getAdditionRule()
+						|| action == grammarAccess.getAdditionAccess().getAdditionLeftAction_1_0()
+						|| rule == grammarAccess.getSubtrationRule()
+						|| action == grammarAccess.getSubtrationAccess().getSubtrationLeftAction_1_0()
+						|| rule == grammarAccess.getMultiplicationRule()
+						|| action == grammarAccess.getMultiplicationAccess().getMultiplicationLeftAction_1_0()
+						|| rule == grammarAccess.getDivisionRule()
+						|| action == grammarAccess.getDivisionAccess().getDivisionLeftAction_1_0()
+						|| rule == grammarAccess.getSubMultRule()
+						|| rule == grammarAccess.getOrExpressionRule()
+						|| action == grammarAccess.getOrExpressionAccess().getOrExpressionLeftAction_1_0()
+						|| rule == grammarAccess.getAndExpressionRule()
+						|| action == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0()
+						|| rule == grammarAccess.getComparisonExpressionRule()
+						|| action == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0()
+						|| rule == grammarAccess.getPrimaryExpressionRule()
+						|| rule == grammarAccess.getVarForRule()) {
+					sequence_Multiplication(context, (Multiplication) semanticObject); 
+					return; 
+				}
+				else break;
 			case GoPackage.OPERATIONS_ONE_EQUALS:
 				sequence_OperationsOneEquals(context, (OperationsOneEquals) semanticObject); 
 				return; 
@@ -173,6 +281,16 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else if (rule == grammarAccess.getExpressionRule()
+						|| rule == grammarAccess.getOpersRule()
+						|| rule == grammarAccess.getAdditionRule()
+						|| action == grammarAccess.getAdditionAccess().getAdditionLeftAction_1_0()
+						|| rule == grammarAccess.getSubtrationRule()
+						|| action == grammarAccess.getSubtrationAccess().getSubtrationLeftAction_1_0()
+						|| rule == grammarAccess.getMultiplicationRule()
+						|| action == grammarAccess.getMultiplicationAccess().getMultiplicationLeftAction_1_0()
+						|| rule == grammarAccess.getDivisionRule()
+						|| action == grammarAccess.getDivisionAccess().getDivisionLeftAction_1_0()
+						|| rule == grammarAccess.getSubMultRule()
 						|| rule == grammarAccess.getOrExpressionRule()
 						|| action == grammarAccess.getOrExpressionAccess().getOrExpressionLeftAction_1_0()
 						|| rule == grammarAccess.getAndExpressionRule()
@@ -188,23 +306,37 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case GoPackage.PARAMS:
 				sequence_Params(context, (Params) semanticObject); 
 				return; 
-			case GoPackage.T:
-				if (rule == grammarAccess.getIRule()) {
-					sequence_I_T(context, (T) semanticObject); 
+			case GoPackage.SUBTRATION:
+				if (rule == grammarAccess.getGreetingRule()
+						|| rule == grammarAccess.getCallForRule()) {
+					sequence_CallFor_Subtration(context, (Subtration) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getGreetingRule()
-						|| rule == grammarAccess.getOperationsRule()) {
-					sequence_Operations_T(context, (T) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getTRule()) {
-					sequence_T(context, (T) semanticObject); 
+				else if (rule == grammarAccess.getExpressionRule()
+						|| rule == grammarAccess.getOpersRule()
+						|| rule == grammarAccess.getAdditionRule()
+						|| action == grammarAccess.getAdditionAccess().getAdditionLeftAction_1_0()
+						|| rule == grammarAccess.getSubtrationRule()
+						|| action == grammarAccess.getSubtrationAccess().getSubtrationLeftAction_1_0()
+						|| rule == grammarAccess.getMultiplicationRule()
+						|| action == grammarAccess.getMultiplicationAccess().getMultiplicationLeftAction_1_0()
+						|| rule == grammarAccess.getDivisionRule()
+						|| action == grammarAccess.getDivisionAccess().getDivisionLeftAction_1_0()
+						|| rule == grammarAccess.getSubMultRule()
+						|| rule == grammarAccess.getOrExpressionRule()
+						|| action == grammarAccess.getOrExpressionAccess().getOrExpressionLeftAction_1_0()
+						|| rule == grammarAccess.getAndExpressionRule()
+						|| action == grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0()
+						|| rule == grammarAccess.getComparisonExpressionRule()
+						|| action == grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0()
+						|| rule == grammarAccess.getPrimaryExpressionRule()
+						|| rule == grammarAccess.getVarForRule()) {
+					sequence_Subtration(context, (Subtration) semanticObject); 
 					return; 
 				}
 				else break;
-			case GoPackage.Y:
-				sequence_Y(context, (Y) semanticObject); 
+			case GoPackage.SWITCH_CASE:
+				sequence_SwitchCase(context, (SwitchCase) semanticObject); 
 				return; 
 			case GoPackage.OPERATIONS_ONE:
 				sequence_operationsOne(context, (operationsOne) semanticObject); 
@@ -227,7 +359,69 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     Expression returns Addition
+	 *     Opers returns Addition
+	 *     Addition returns Addition
+	 *     Addition.Addition_1_0 returns Addition
+	 *     Subtration returns Addition
+	 *     Subtration.Subtration_1_0 returns Addition
+	 *     Multiplication returns Addition
+	 *     Multiplication.Multiplication_1_0 returns Addition
+	 *     Division returns Addition
+	 *     Division.Division_1_0 returns Addition
+	 *     SubMult returns Addition
+	 *     OrExpression returns Addition
+	 *     OrExpression.OrExpression_1_0 returns Addition
+	 *     AndExpression returns Addition
+	 *     AndExpression.AndExpression_1_0 returns Addition
+	 *     ComparisonExpression returns Addition
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns Addition
+	 *     PrimaryExpression returns Addition
+	 *     varFor returns Addition
+	 *
+	 * Constraint:
+	 *     (left=Addition_Addition_1_0 right=SubMult)
+	 */
+	protected void sequence_Addition(ISerializationContext context, Addition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.VAR_FOR__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.VAR_FOR__LEFT));
+			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.VAR_FOR__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.VAR_FOR__RIGHT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAdditionAccess().getAdditionLeftAction_1_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getAdditionAccess().getRightSubMultParserRuleCall_1_2_0(), semanticObject.getRight());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Greeting returns Addition
+	 *     CallFor returns Addition
+	 *
+	 * Constraint:
+	 *     (left=Addition_Addition_1_0 right=SubMult x=Greeting*)
+	 */
+	protected void sequence_Addition_CallFor(ISerializationContext context, Addition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Expression returns AndExpression
+	 *     Opers returns AndExpression
+	 *     Addition returns AndExpression
+	 *     Addition.Addition_1_0 returns AndExpression
+	 *     Subtration returns AndExpression
+	 *     Subtration.Subtration_1_0 returns AndExpression
+	 *     Multiplication returns AndExpression
+	 *     Multiplication.Multiplication_1_0 returns AndExpression
+	 *     Division returns AndExpression
+	 *     Division.Division_1_0 returns AndExpression
+	 *     SubMult returns AndExpression
 	 *     OrExpression returns AndExpression
 	 *     OrExpression.OrExpression_1_0 returns AndExpression
 	 *     AndExpression returns AndExpression
@@ -260,22 +454,10 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     CallFor returns AndExpression
 	 *
 	 * Constraint:
-	 *     (left=AndExpression_AndExpression_1_0 right=ComparisonExpression x=Greeting)
+	 *     (left=AndExpression_AndExpression_1_0 right=ComparisonExpression x=Greeting*)
 	 */
 	protected void sequence_AndExpression_CallFor(ISerializationContext context, AndExpression semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.VAR_FOR__LEFT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.VAR_FOR__LEFT));
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.VAR_FOR__RIGHT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.VAR_FOR__RIGHT));
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.CALL_FOR__X) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.CALL_FOR__X));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0(), semanticObject.getLeft());
-		feeder.accept(grammarAccess.getAndExpressionAccess().getRightComparisonExpressionParserRuleCall_1_2_0(), semanticObject.getRight());
-		feeder.accept(grammarAccess.getCallForAccess().getXGreetingParserRuleCall_3_0(), semanticObject.getX());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -285,16 +467,10 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     CallFor returns CallFor
 	 *
 	 * Constraint:
-	 *     x=Greeting
+	 *     x=Greeting+
 	 */
 	protected void sequence_CallFor(ISerializationContext context, CallFor semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.CALL_FOR__X) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.CALL_FOR__X));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCallForAccess().getXGreetingParserRuleCall_3_0(), semanticObject.getX());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -304,22 +480,23 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     CallFor returns ComparisonExpression
 	 *
 	 * Constraint:
-	 *     (left=ComparisonExpression_ComparisonExpression_1_0 right=PrimaryExpression x=Greeting)
+	 *     (left=ComparisonExpression_ComparisonExpression_1_0 right=PrimaryExpression x=Greeting*)
 	 */
 	protected void sequence_CallFor_ComparisonExpression(ISerializationContext context, ComparisonExpression semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.VAR_FOR__LEFT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.VAR_FOR__LEFT));
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.VAR_FOR__RIGHT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.VAR_FOR__RIGHT));
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.CALL_FOR__X) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.CALL_FOR__X));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0(), semanticObject.getLeft());
-		feeder.accept(grammarAccess.getComparisonExpressionAccess().getRightPrimaryExpressionParserRuleCall_1_2_0(), semanticObject.getRight());
-		feeder.accept(grammarAccess.getCallForAccess().getXGreetingParserRuleCall_3_0(), semanticObject.getX());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Greeting returns Division
+	 *     CallFor returns Division
+	 *
+	 * Constraint:
+	 *     (left=Division_Division_1_0 right=PrimaryExpression x=Greeting*)
+	 */
+	protected void sequence_CallFor_Division(ISerializationContext context, Division semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -329,19 +506,23 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     CallFor returns Literal
 	 *
 	 * Constraint:
-	 *     (value=Boolean x=Greeting)
+	 *     (value=Boolean x=Greeting*)
 	 */
 	protected void sequence_CallFor_Literal(ISerializationContext context, Literal semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.LITERAL__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.LITERAL__VALUE));
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.CALL_FOR__X) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.CALL_FOR__X));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLiteralAccess().getValueBooleanParserRuleCall_0_1_0(), semanticObject.getValue());
-		feeder.accept(grammarAccess.getCallForAccess().getXGreetingParserRuleCall_3_0(), semanticObject.getX());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Greeting returns Multiplication
+	 *     CallFor returns Multiplication
+	 *
+	 * Constraint:
+	 *     (left=Multiplication_Multiplication_1_0 right=PrimaryExpression x=Greeting*)
+	 */
+	protected void sequence_CallFor_Multiplication(ISerializationContext context, Multiplication semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -357,7 +538,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         right=Literal 
 	 *         left=Literal 
 	 *         (name=ID | name=ID) 
-	 *         x=Greeting
+	 *         x=Greeting*
 	 *     )
 	 */
 	protected void sequence_CallFor_OperationsOneEquals_operationsOne_varFor(ISerializationContext context, varFor semanticObject) {
@@ -371,22 +552,23 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     CallFor returns OrExpression
 	 *
 	 * Constraint:
-	 *     (left=OrExpression_OrExpression_1_0 right=AndExpression x=Greeting)
+	 *     (left=OrExpression_OrExpression_1_0 right=AndExpression x=Greeting*)
 	 */
 	protected void sequence_CallFor_OrExpression(ISerializationContext context, OrExpression semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.VAR_FOR__LEFT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.VAR_FOR__LEFT));
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.VAR_FOR__RIGHT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.VAR_FOR__RIGHT));
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.CALL_FOR__X) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.CALL_FOR__X));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getOrExpressionAccess().getOrExpressionLeftAction_1_0(), semanticObject.getLeft());
-		feeder.accept(grammarAccess.getOrExpressionAccess().getRightAndExpressionParserRuleCall_1_2_0(), semanticObject.getRight());
-		feeder.accept(grammarAccess.getCallForAccess().getXGreetingParserRuleCall_3_0(), semanticObject.getX());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Greeting returns Subtration
+	 *     CallFor returns Subtration
+	 *
+	 * Constraint:
+	 *     (left=Subtration_Subtration_1_0 right=SubMult x=Greeting*)
+	 */
+	protected void sequence_CallFor_Subtration(ISerializationContext context, Subtration semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -405,7 +587,29 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     Cases returns Cases
+	 *
+	 * Constraint:
+	 *     (x=Expression v=Greeting*)
+	 */
+	protected void sequence_Cases(ISerializationContext context, Cases semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Expression returns ComparisonExpression
+	 *     Opers returns ComparisonExpression
+	 *     Addition returns ComparisonExpression
+	 *     Addition.Addition_1_0 returns ComparisonExpression
+	 *     Subtration returns ComparisonExpression
+	 *     Subtration.Subtration_1_0 returns ComparisonExpression
+	 *     Multiplication returns ComparisonExpression
+	 *     Multiplication.Multiplication_1_0 returns ComparisonExpression
+	 *     Division returns ComparisonExpression
+	 *     Division.Division_1_0 returns ComparisonExpression
+	 *     SubMult returns ComparisonExpression
 	 *     OrExpression returns ComparisonExpression
 	 *     OrExpression.OrExpression_1_0 returns ComparisonExpression
 	 *     AndExpression returns ComparisonExpression
@@ -492,15 +696,72 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     Greeting returns DecVars
-	 *     DecVar returns DecVars
 	 *     DecVars returns DecVars
 	 *
 	 * Constraint:
-	 *     (vars+=ID vars+=ID* (atrb+=Atri | atrb+=ID) atrb+=ID? (atrb+=Atri? atrb+=ID?)*)
+	 *     (vars+=ID vars+=ID* (atrb+=Atri | atrb+=ID) atrb+=Atri? (atrb+=ID? atrb+=Atri?)*)
 	 */
 	protected void sequence_DecVars(ISerializationContext context, DecVars semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Greeting returns Decl
+	 *     Decl returns Decl
+	 *     DecVar returns Decl
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_Decl(ISerializationContext context, Decl semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.DECL__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.DECL__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDeclAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Expression returns Division
+	 *     Opers returns Division
+	 *     Addition returns Division
+	 *     Addition.Addition_1_0 returns Division
+	 *     Subtration returns Division
+	 *     Subtration.Subtration_1_0 returns Division
+	 *     Multiplication returns Division
+	 *     Multiplication.Multiplication_1_0 returns Division
+	 *     Division returns Division
+	 *     Division.Division_1_0 returns Division
+	 *     SubMult returns Division
+	 *     OrExpression returns Division
+	 *     OrExpression.OrExpression_1_0 returns Division
+	 *     AndExpression returns Division
+	 *     AndExpression.AndExpression_1_0 returns Division
+	 *     ComparisonExpression returns Division
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns Division
+	 *     PrimaryExpression returns Division
+	 *     varFor returns Division
+	 *
+	 * Constraint:
+	 *     (left=Division_Division_1_0 right=PrimaryExpression)
+	 */
+	protected void sequence_Division(ISerializationContext context, Division semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.VAR_FOR__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.VAR_FOR__LEFT));
+			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.VAR_FOR__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.VAR_FOR__RIGHT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDivisionAccess().getDivisionLeftAction_1_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getDivisionAccess().getRightPrimaryExpressionParserRuleCall_1_2_0(), semanticObject.getRight());
+		feeder.finish();
 	}
 	
 	
@@ -512,61 +773,6 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     then=Greeting+
 	 */
 	protected void sequence_ElseCondition(ISerializationContext context, ElseCondition semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     F returns F
-	 *
-	 * Constraint:
-	 *     o=Operations
-	 */
-	protected void sequence_F(ISerializationContext context, F semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.T__O) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.T__O));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFAccess().getOOperationsParserRuleCall_0_1_0(), semanticObject.getO());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     I returns F
-	 *
-	 * Constraint:
-	 *     (o=Operations o=Y (o=I | o=I))
-	 */
-	protected void sequence_F_I_T(ISerializationContext context, F semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Greeting returns F
-	 *     Operations returns F
-	 *
-	 * Constraint:
-	 *     (o=Operations o=Y o=I)
-	 */
-	protected void sequence_F_Operations_T(ISerializationContext context, F semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     T returns F
-	 *
-	 * Constraint:
-	 *     (o=Operations o=Y)
-	 */
-	protected void sequence_F_T(ISerializationContext context, F semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -585,23 +791,11 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     I returns T
-	 *
-	 * Constraint:
-	 *     (o=Y (o=I | o=I))
-	 */
-	protected void sequence_I_T(ISerializationContext context, T semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     IfCondition returns IfCondition
 	 *     ElseIfCondition returns IfCondition
 	 *
 	 * Constraint:
-	 *     (cond=Expression then=Greeting*)
+	 *     (cond=OrExpression then=Greeting*)
 	 */
 	protected void sequence_IfCondition(ISerializationContext context, IfCondition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -611,6 +805,16 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Contexts:
 	 *     Expression returns Literal
+	 *     Opers returns Literal
+	 *     Addition returns Literal
+	 *     Addition.Addition_1_0 returns Literal
+	 *     Subtration returns Literal
+	 *     Subtration.Subtration_1_0 returns Literal
+	 *     Multiplication returns Literal
+	 *     Multiplication.Multiplication_1_0 returns Literal
+	 *     Division returns Literal
+	 *     Division.Division_1_0 returns Literal
+	 *     SubMult returns Literal
 	 *     OrExpression returns Literal
 	 *     OrExpression.OrExpression_1_0 returns Literal
 	 *     AndExpression returns Literal
@@ -650,9 +854,46 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     Greeting returns OperationsOneEquals
+	 *     Expression returns Multiplication
+	 *     Opers returns Multiplication
+	 *     Addition returns Multiplication
+	 *     Addition.Addition_1_0 returns Multiplication
+	 *     Subtration returns Multiplication
+	 *     Subtration.Subtration_1_0 returns Multiplication
+	 *     Multiplication returns Multiplication
+	 *     Multiplication.Multiplication_1_0 returns Multiplication
+	 *     Division returns Multiplication
+	 *     Division.Division_1_0 returns Multiplication
+	 *     SubMult returns Multiplication
+	 *     OrExpression returns Multiplication
+	 *     OrExpression.OrExpression_1_0 returns Multiplication
+	 *     AndExpression returns Multiplication
+	 *     AndExpression.AndExpression_1_0 returns Multiplication
+	 *     ComparisonExpression returns Multiplication
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns Multiplication
+	 *     PrimaryExpression returns Multiplication
+	 *     varFor returns Multiplication
+	 *
+	 * Constraint:
+	 *     (left=Multiplication_Multiplication_1_0 right=PrimaryExpression)
+	 */
+	protected void sequence_Multiplication(ISerializationContext context, Multiplication semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.VAR_FOR__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.VAR_FOR__LEFT));
+			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.VAR_FOR__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.VAR_FOR__RIGHT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMultiplicationAccess().getMultiplicationLeftAction_1_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getMultiplicationAccess().getRightPrimaryExpressionParserRuleCall_1_2_0(), semanticObject.getRight());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     OperationsOneEquals returns OperationsOneEquals
-	 *     Operations returns OperationsOneEquals
 	 *
 	 * Constraint:
 	 *     name=ID
@@ -682,20 +923,17 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     Greeting returns T
-	 *     Operations returns T
-	 *
-	 * Constraint:
-	 *     (o=Y o=I)
-	 */
-	protected void sequence_Operations_T(ISerializationContext context, T semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Expression returns OrExpression
+	 *     Opers returns OrExpression
+	 *     Addition returns OrExpression
+	 *     Addition.Addition_1_0 returns OrExpression
+	 *     Subtration returns OrExpression
+	 *     Subtration.Subtration_1_0 returns OrExpression
+	 *     Multiplication returns OrExpression
+	 *     Multiplication.Multiplication_1_0 returns OrExpression
+	 *     Division returns OrExpression
+	 *     Division.Division_1_0 returns OrExpression
+	 *     SubMult returns OrExpression
 	 *     OrExpression returns OrExpression
 	 *     OrExpression.OrExpression_1_0 returns OrExpression
 	 *     AndExpression returns OrExpression
@@ -736,30 +974,52 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     T returns T
+	 *     Expression returns Subtration
+	 *     Opers returns Subtration
+	 *     Addition returns Subtration
+	 *     Addition.Addition_1_0 returns Subtration
+	 *     Subtration returns Subtration
+	 *     Subtration.Subtration_1_0 returns Subtration
+	 *     Multiplication returns Subtration
+	 *     Multiplication.Multiplication_1_0 returns Subtration
+	 *     Division returns Subtration
+	 *     Division.Division_1_0 returns Subtration
+	 *     SubMult returns Subtration
+	 *     OrExpression returns Subtration
+	 *     OrExpression.OrExpression_1_0 returns Subtration
+	 *     AndExpression returns Subtration
+	 *     AndExpression.AndExpression_1_0 returns Subtration
+	 *     ComparisonExpression returns Subtration
+	 *     ComparisonExpression.ComparisonExpression_1_0 returns Subtration
+	 *     PrimaryExpression returns Subtration
+	 *     varFor returns Subtration
 	 *
 	 * Constraint:
-	 *     o=Y
+	 *     (left=Subtration_Subtration_1_0 right=SubMult)
 	 */
-	protected void sequence_T(ISerializationContext context, T semanticObject) {
+	protected void sequence_Subtration(ISerializationContext context, Subtration semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.T__O) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.T__O));
+			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.VAR_FOR__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.VAR_FOR__LEFT));
+			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.VAR_FOR__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.VAR_FOR__RIGHT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getTAccess().getOYParserRuleCall_1_0(), semanticObject.getO());
+		feeder.accept(grammarAccess.getSubtrationAccess().getSubtrationLeftAction_1_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getSubtrationAccess().getRightSubMultParserRuleCall_1_2_0(), semanticObject.getRight());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Y returns Y
+	 *     Greeting returns SwitchCase
+	 *     SwitchCase returns SwitchCase
 	 *
 	 * Constraint:
-	 *     ((o=F o=Y) | (o=F o=Y))
+	 *     (name=ID cas=Cases* k=Greeting*)
 	 */
-	protected void sequence_Y(ISerializationContext context, Y semanticObject) {
+	protected void sequence_SwitchCase(ISerializationContext context, SwitchCase semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

@@ -42,6 +42,15 @@ public interface GoFactory extends EFactory
   Greeting createGreeting();
 
   /**
+   * Returns a new object of class '<em>Decl</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Decl</em>'.
+   * @generated
+   */
+  Decl createDecl();
+
+  /**
    * Returns a new object of class '<em>Dec Var</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -69,6 +78,24 @@ public interface GoFactory extends EFactory
   DecVars createDecVars();
 
   /**
+   * Returns a new object of class '<em>Switch Case</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Switch Case</em>'.
+   * @generated
+   */
+  SwitchCase createSwitchCase();
+
+  /**
+   * Returns a new object of class '<em>Cases</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Cases</em>'.
+   * @generated
+   */
+  Cases createCases();
+
+  /**
    * Returns a new object of class '<em>Params</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -85,51 +112,6 @@ public interface GoFactory extends EFactory
    * @generated
    */
   OperationsOneEquals createOperationsOneEquals();
-
-  /**
-   * Returns a new object of class '<em>INT</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>INT</em>'.
-   * @generated
-   */
-  INT createINT();
-
-  /**
-   * Returns a new object of class '<em>I</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>I</em>'.
-   * @generated
-   */
-  I createI();
-
-  /**
-   * Returns a new object of class '<em>T</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>T</em>'.
-   * @generated
-   */
-  T createT();
-
-  /**
-   * Returns a new object of class '<em>Y</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Y</em>'.
-   * @generated
-   */
-  Y createY();
-
-  /**
-   * Returns a new object of class '<em>F</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>F</em>'.
-   * @generated
-   */
-  F createF();
 
   /**
    * Returns a new object of class '<em>Condition</em>'.
@@ -229,6 +211,42 @@ public interface GoFactory extends EFactory
    * @generated
    */
   DataType createDataType();
+
+  /**
+   * Returns a new object of class '<em>Addition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Addition</em>'.
+   * @generated
+   */
+  Addition createAddition();
+
+  /**
+   * Returns a new object of class '<em>Subtration</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Subtration</em>'.
+   * @generated
+   */
+  Subtration createSubtration();
+
+  /**
+   * Returns a new object of class '<em>Multiplication</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Multiplication</em>'.
+   * @generated
+   */
+  Multiplication createMultiplication();
+
+  /**
+   * Returns a new object of class '<em>Division</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Division</em>'.
+   * @generated
+   */
+  Division createDivision();
 
   /**
    * Returns a new object of class '<em>Or Expression</em>'.

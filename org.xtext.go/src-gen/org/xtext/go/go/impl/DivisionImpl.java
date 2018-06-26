@@ -5,24 +5,24 @@ package org.xtext.go.go.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.xtext.go.go.F;
+import org.xtext.go.go.Division;
 import org.xtext.go.go.GoPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>F</b></em>'.
+ * An implementation of the model object '<em><b>Division</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class FImpl extends TImpl implements F
+public class DivisionImpl extends ExpressionImpl implements Division
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected FImpl()
+  protected DivisionImpl()
   {
     super();
   }
@@ -35,7 +35,7 @@ public class FImpl extends TImpl implements F
   @Override
   protected EClass eStaticClass()
   {
-    return GoPackage.Literals.F;
+    return GoPackage.Literals.DIVISION;
   }
 
-} //FImpl
+} //DivisionImpl

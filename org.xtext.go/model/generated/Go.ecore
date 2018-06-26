@@ -6,6 +6,9 @@
         eType="#//Greeting" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Greeting"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Decl" eSuperTypes="#//DecVar">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DecVar" eSuperTypes="#//Greeting">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="vars" unique="false" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -16,25 +19,31 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DecVars" eSuperTypes="#//DecVar"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DecVars">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vars" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="atrb" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SwitchCase" eSuperTypes="#//Greeting">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cas" eType="#//Cases" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="k" eType="#//Greeting"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cases">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="x" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="#//Greeting"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Params">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="params" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OperationsOneEquals" eSuperTypes="#//INT #//varFor">
+  <eClassifiers xsi:type="ecore:EClass" name="OperationsOneEquals" eSuperTypes="#//varFor">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="INT" eSuperTypes="#//Greeting"/>
-  <eClassifiers xsi:type="ecore:EClass" name="I"/>
-  <eClassifiers xsi:type="ecore:EClass" name="T" eSuperTypes="#//INT #//I">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="o" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Y">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="o" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="F" eSuperTypes="#//T"/>
   <eClassifiers xsi:type="ecore:EClass" name="Condition" eSuperTypes="#//Greeting">
     <eStructuralFeatures xsi:type="ecore:EReference" name="if" eType="#//IfCondition"
         containment="true"/>
@@ -88,6 +97,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="#//Greeting">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Addition" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Subtration" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Multiplication" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Division" eSuperTypes="#//Expression"/>
   <eClassifiers xsi:type="ecore:EClass" name="OrExpression" eSuperTypes="#//Expression"/>
   <eClassifiers xsi:type="ecore:EClass" name="AndExpression" eSuperTypes="#//Expression"/>
   <eClassifiers xsi:type="ecore:EClass" name="ComparisonExpression" eSuperTypes="#//Expression"/>

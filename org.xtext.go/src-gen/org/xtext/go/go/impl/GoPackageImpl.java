@@ -10,15 +10,19 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.xtext.go.go.Addition;
 import org.xtext.go.go.AndExpression;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.CallFunc;
+import org.xtext.go.go.Cases;
 import org.xtext.go.go.ComparisonExpression;
 import org.xtext.go.go.Condition;
 import org.xtext.go.go.DataType;
 import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.DecVar;
 import org.xtext.go.go.DecVars;
+import org.xtext.go.go.Decl;
+import org.xtext.go.go.Division;
 import org.xtext.go.go.ElseCondition;
 import org.xtext.go.go.ElseIfCondition;
 import org.xtext.go.go.Expression;
@@ -29,9 +33,12 @@ import org.xtext.go.go.Greeting;
 import org.xtext.go.go.IfCondition;
 import org.xtext.go.go.Literal;
 import org.xtext.go.go.MultDecVars;
+import org.xtext.go.go.Multiplication;
 import org.xtext.go.go.OperationsOneEquals;
 import org.xtext.go.go.OrExpression;
 import org.xtext.go.go.Params;
+import org.xtext.go.go.Subtration;
+import org.xtext.go.go.SwitchCase;
 import org.xtext.go.go.operationsOne;
 import org.xtext.go.go.varFor;
 
@@ -62,6 +69,13 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass declEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass decVarEClass = null;
 
   /**
@@ -83,6 +97,20 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass switchCaseEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass casesEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass paramsEClass = null;
 
   /**
@@ -91,41 +119,6 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * @generated
    */
   private EClass operationsOneEqualsEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass intEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass iEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass tEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass yEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass fEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -203,6 +196,34 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * @generated
    */
   private EClass dataTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass additionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass subtrationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass multiplicationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass divisionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -330,6 +351,26 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getDecl()
+  {
+    return declEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDecl_Name()
+  {
+    return (EAttribute)declEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getDecVar()
   {
     return decVarEClass;
@@ -400,6 +441,96 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getDecVars_Vars()
+  {
+    return (EAttribute)decVarsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDecVars_Atrb()
+  {
+    return (EAttribute)decVarsEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSwitchCase()
+  {
+    return switchCaseEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSwitchCase_Name()
+  {
+    return (EAttribute)switchCaseEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSwitchCase_Cas()
+  {
+    return (EReference)switchCaseEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSwitchCase_K()
+  {
+    return (EReference)switchCaseEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCases()
+  {
+    return casesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCases_X()
+  {
+    return (EReference)casesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCases_V()
+  {
+    return (EReference)casesEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getParams()
   {
     return paramsEClass;
@@ -433,76 +564,6 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
   public EAttribute getOperationsOneEquals_Name()
   {
     return (EAttribute)operationsOneEqualsEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getINT()
-  {
-    return intEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getI()
-  {
-    return iEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getT()
-  {
-    return tEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getT_O()
-  {
-    return (EReference)tEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getY()
-  {
-    return yEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getY_O()
-  {
-    return (EReference)yEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getF()
-  {
-    return fEClass;
   }
 
   /**
@@ -810,6 +871,46 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getAddition()
+  {
+    return additionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSubtration()
+  {
+    return subtrationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMultiplication()
+  {
+    return multiplicationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDivision()
+  {
+    return divisionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getOrExpression()
   {
     return orExpressionEClass;
@@ -890,6 +991,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     greetingEClass = createEClass(GREETING);
 
+    declEClass = createEClass(DECL);
+    createEAttribute(declEClass, DECL__NAME);
+
     decVarEClass = createEClass(DEC_VAR);
     createEAttribute(decVarEClass, DEC_VAR__VARS);
     createEAttribute(decVarEClass, DEC_VAR__ATRB);
@@ -899,24 +1003,23 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     createEAttribute(multDecVarsEClass, MULT_DEC_VARS__VALUE);
 
     decVarsEClass = createEClass(DEC_VARS);
+    createEAttribute(decVarsEClass, DEC_VARS__VARS);
+    createEAttribute(decVarsEClass, DEC_VARS__ATRB);
+
+    switchCaseEClass = createEClass(SWITCH_CASE);
+    createEAttribute(switchCaseEClass, SWITCH_CASE__NAME);
+    createEReference(switchCaseEClass, SWITCH_CASE__CAS);
+    createEReference(switchCaseEClass, SWITCH_CASE__K);
+
+    casesEClass = createEClass(CASES);
+    createEReference(casesEClass, CASES__X);
+    createEReference(casesEClass, CASES__V);
 
     paramsEClass = createEClass(PARAMS);
     createEAttribute(paramsEClass, PARAMS__PARAMS);
 
     operationsOneEqualsEClass = createEClass(OPERATIONS_ONE_EQUALS);
     createEAttribute(operationsOneEqualsEClass, OPERATIONS_ONE_EQUALS__NAME);
-
-    intEClass = createEClass(INT);
-
-    iEClass = createEClass(I);
-
-    tEClass = createEClass(T);
-    createEReference(tEClass, T__O);
-
-    yEClass = createEClass(Y);
-    createEReference(yEClass, Y__O);
-
-    fEClass = createEClass(F);
 
     conditionEClass = createEClass(CONDITION);
     createEReference(conditionEClass, CONDITION__IF);
@@ -959,6 +1062,14 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     dataTypeEClass = createEClass(DATA_TYPE);
     createEAttribute(dataTypeEClass, DATA_TYPE__NAME);
 
+    additionEClass = createEClass(ADDITION);
+
+    subtrationEClass = createEClass(SUBTRATION);
+
+    multiplicationEClass = createEClass(MULTIPLICATION);
+
+    divisionEClass = createEClass(DIVISION);
+
     orExpressionEClass = createEClass(OR_EXPRESSION);
 
     andExpressionEClass = createEClass(AND_EXPRESSION);
@@ -998,15 +1109,11 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    declEClass.getESuperTypes().add(this.getDecVar());
     decVarEClass.getESuperTypes().add(this.getGreeting());
     multDecVarsEClass.getESuperTypes().add(this.getGreeting());
-    decVarsEClass.getESuperTypes().add(this.getDecVar());
-    operationsOneEqualsEClass.getESuperTypes().add(this.getINT());
+    switchCaseEClass.getESuperTypes().add(this.getGreeting());
     operationsOneEqualsEClass.getESuperTypes().add(this.getvarFor());
-    intEClass.getESuperTypes().add(this.getGreeting());
-    tEClass.getESuperTypes().add(this.getINT());
-    tEClass.getESuperTypes().add(this.getI());
-    fEClass.getESuperTypes().add(this.getT());
     conditionEClass.getESuperTypes().add(this.getGreeting());
     ifConditionEClass.getESuperTypes().add(this.getElseIfCondition());
     expressionEClass.getESuperTypes().add(this.getvarFor());
@@ -1016,6 +1123,10 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     decFuncEClass.getESuperTypes().add(this.getGreeting());
     callFuncEClass.getESuperTypes().add(this.getGreeting());
     dataTypeEClass.getESuperTypes().add(this.getGreeting());
+    additionEClass.getESuperTypes().add(this.getExpression());
+    subtrationEClass.getESuperTypes().add(this.getExpression());
+    multiplicationEClass.getESuperTypes().add(this.getExpression());
+    divisionEClass.getESuperTypes().add(this.getExpression());
     orExpressionEClass.getESuperTypes().add(this.getExpression());
     andExpressionEClass.getESuperTypes().add(this.getExpression());
     comparisonExpressionEClass.getESuperTypes().add(this.getExpression());
@@ -1027,6 +1138,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     initEClass(greetingEClass, Greeting.class, "Greeting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+    initEClass(declEClass, Decl.class, "Decl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDecl_Name(), ecorePackage.getEString(), "name", null, 0, 1, Decl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(decVarEClass, DecVar.class, "DecVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDecVar_Vars(), ecorePackage.getEString(), "vars", null, 0, -1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDecVar_Atrb(), ecorePackage.getEString(), "atrb", null, 0, -1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1036,24 +1150,23 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEAttribute(getMultDecVars_Value(), ecorePackage.getEString(), "value", null, 0, 1, MultDecVars.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(decVarsEClass, DecVars.class, "DecVars", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDecVars_Vars(), ecorePackage.getEString(), "vars", null, 0, -1, DecVars.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDecVars_Atrb(), ecorePackage.getEString(), "atrb", null, 0, -1, DecVars.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(switchCaseEClass, SwitchCase.class, "SwitchCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSwitchCase_Name(), ecorePackage.getEString(), "name", null, 0, 1, SwitchCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSwitchCase_Cas(), this.getCases(), null, "cas", null, 0, 1, SwitchCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSwitchCase_K(), this.getGreeting(), null, "k", null, 0, 1, SwitchCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(casesEClass, Cases.class, "Cases", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCases_X(), this.getExpression(), null, "x", null, 0, 1, Cases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCases_V(), this.getGreeting(), null, "v", null, 0, 1, Cases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(paramsEClass, Params.class, "Params", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getParams_Params(), ecorePackage.getEString(), "params", null, 0, -1, Params.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(operationsOneEqualsEClass, OperationsOneEquals.class, "OperationsOneEquals", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getOperationsOneEquals_Name(), ecorePackage.getEString(), "name", null, 0, 1, OperationsOneEquals.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(intEClass, org.xtext.go.go.INT.class, "INT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(iEClass, org.xtext.go.go.I.class, "I", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(tEClass, org.xtext.go.go.T.class, "T", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getT_O(), ecorePackage.getEObject(), null, "o", null, 0, 1, org.xtext.go.go.T.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(yEClass, org.xtext.go.go.Y.class, "Y", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getY_O(), ecorePackage.getEObject(), null, "o", null, 0, 1, org.xtext.go.go.Y.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(fEClass, org.xtext.go.go.F.class, "F", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCondition_If(), this.getIfCondition(), null, "if", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1095,6 +1208,14 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDataType_Name(), ecorePackage.getEString(), "name", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(additionEClass, Addition.class, "Addition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(subtrationEClass, Subtration.class, "Subtration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(multiplicationEClass, Multiplication.class, "Multiplication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(divisionEClass, Division.class, "Division", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(orExpressionEClass, OrExpression.class, "OrExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

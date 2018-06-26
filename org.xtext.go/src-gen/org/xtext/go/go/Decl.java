@@ -6,21 +6,21 @@ package org.xtext.go.go;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Operations One Equals</b></em>'.
+ * A representation of the model object '<em><b>Decl</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.go.go.OperationsOneEquals#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.go.go.Decl#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see org.xtext.go.go.GoPackage#getOperationsOneEquals()
+ * @see org.xtext.go.go.GoPackage#getDecl()
  * @model
  * @generated
  */
-public interface OperationsOneEquals extends varFor
+public interface Decl extends DecVar
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -32,14 +32,14 @@ public interface OperationsOneEquals extends varFor
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see org.xtext.go.go.GoPackage#getOperationsOneEquals_Name()
+   * @see org.xtext.go.go.GoPackage#getDecl_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link org.xtext.go.go.OperationsOneEquals#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.go.go.Decl#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -48,4 +48,4 @@ public interface OperationsOneEquals extends varFor
    */
   void setName(String value);
 
-} // OperationsOneEquals
+} // Decl

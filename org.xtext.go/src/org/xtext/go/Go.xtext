@@ -6,16 +6,26 @@ Go:
 	(elements+=Greeting*);
 
 Greeting:
-	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition | Operations | DecImport | CallFunc | CallFor;
+	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition |  SwitchCase | DecImport | CallFunc | CallFor;
 
+Decl:
+	Modif name=ID Types
+;
 DecVar:
-	DecVars |Modif vars+=ID(Comma vars+=ID)* (Types) ("=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*)?;
+	Decl |Modif vars+=ID(Comma vars+=ID)* (Types) ("=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*)?;
 
 MultDecVars:
 	Modif Open_parentheses (name=ID "=" (TypeValue | value=ID))* Closed_parentheses;
 	
 DecVars:
 	vars+=ID(Comma vars+=ID)* ":=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*;
+	
+SwitchCase:
+	SWITCH name=ID Open_Key cas=Cases* (DEFAULT DoisPontos k=Greeting*)? Closed_Key 
+;
+
+Cases:
+	CASE x=Expression DoisPontos v=Greeting*;
 	
 Atri:
 	Open_brackets INT? Closed_brackets Types(Open_Key TypeValue Closed_Key)? | TypeValue ;
@@ -30,26 +40,11 @@ TypeValue:
 
 DecImport:
 	IMPORT (STRING | Open_parentheses STRING+ Closed_parentheses);
-
-
+	
 OperationsOneEquals:
 	name=ID(PlusEquals| MinusEquals)(ID|Numbers);
 //Removi a recursão a esquerda
 
-Operations returns INT:
-	T o=I | OperationsOneEquals;
-	
-I:
-	((Plus T o=I)|(Minus T o=I))?;
-	
-T: 
-	F o=Y;
-	
-Y:
-	((Asterics o=F o=Y) |(Bar o=F o=Y))?;
-	
-F:
-	Open_parentheses o=Operations Closed_parentheses| Numbers;
 
 Numbers:
 	INT | Double;
@@ -61,7 +56,7 @@ Condition:
     (if=IfCondition(elseif=ElseIfCondition)*(else=ElseCondition)?);
     
 IfCondition:
-	IF cond=Expression Open_Key then=Greeting*Closed_Key;
+	IF cond=OrExpression Open_Key then=Greeting*Closed_Key;
     
 ElseIfCondition:
 	(=>ELSE IfCondition);
@@ -70,22 +65,42 @@ ElseCondition:
 	(=>ELSE Open_Key then=Greeting*Closed_Key); 
   
 Expression:
-    OrExpression
+    =>(Opers | OrExpression | ID) 
 ;   
 
 CallFor :
-	FOR varFor? Open_Key x=Greeting Closed_Key
+	FOR varFor? Open_Key x=Greeting* Closed_Key
 ;
+
+Opers returns Expression:
+	Addition |Subtration;
+	
+Addition returns Expression:
+  =>SubMult  ({Addition.left=current} Plus right=SubMult )*;
+
+Subtration returns Expression:
+	 =>SubMult  ({Subtration.left=current} Minus right=SubMult )*;
+	
+Multiplication returns Expression:
+  =>PrimaryExpression ({Multiplication.left=current} Asterics right=PrimaryExpression)*;
+  
+Division returns Expression:
+	=>PrimaryExpression ({Division.left=current} Bar right=PrimaryExpression)*;
+
+SubMult returns Expression:
+	(Multiplication| Division)
+;	
+
 OrExpression returns Expression:
-    AndExpression ({OrExpression.left=current} "||" right=AndExpression)*  
+    =>AndExpression ({OrExpression.left=current} "||" right=AndExpression)*  
 ;   
 
 AndExpression returns Expression:
-    ComparisonExpression ({AndExpression.left=current} "&&" right=ComparisonExpression)*  
+    =>ComparisonExpression ({AndExpression.left=current} "&&" right=ComparisonExpression)*  
 ;
 
 ComparisonExpression returns Expression:
-    PrimaryExpression ({ComparisonExpression.left=current} Operator right=PrimaryExpression)*
+    =>PrimaryExpression ({ComparisonExpression.left=current} Operator right=PrimaryExpression)*
 ;
 
 PrimaryExpression returns Expression:
@@ -102,7 +117,7 @@ varFor:
 	ComparisonExpression | (Modif var+=ID Types "=" atrb+=(Atri|ID)  PontoVirgula right=Literal Operator left=Literal PontoVirgula (operationsOne| OperationsOneEquals));
 
 Literal returns Expression:
-    {Literal} value=Boolean | Numbers | ID
+    {Literal} value=Boolean | Numbers 
 ;
 
 DecFunc:
@@ -194,7 +209,9 @@ TYPE:
 	
 VAR:
 	"var";
-	
+DEFAULT:
+"default";
+
 SWITCH:
 	"switch";
 
@@ -209,7 +226,11 @@ terminal Bar:
 	
 terminal Asterics:
 	"*";
-	
+
+terminal DoisPontos:
+ 	":"	
+;
+
 terminal Minus:
 	"-";
 	
@@ -240,6 +261,6 @@ terminal SL_COMMENT:
 
 terminal NEWLINE:
 	('\r'? '\n');
-	
+
 DataType:
 	'datatype' name=ID;

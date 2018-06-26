@@ -5,24 +5,24 @@ package org.xtext.go.go.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.xtext.go.go.Addition;
 import org.xtext.go.go.GoPackage;
-import org.xtext.go.go.INT;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>INT</b></em>'.
+ * An implementation of the model object '<em><b>Addition</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class INTImpl extends GreetingImpl implements INT
+public class AdditionImpl extends ExpressionImpl implements Addition
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected INTImpl()
+  protected AdditionImpl()
   {
     super();
   }
@@ -35,7 +35,7 @@ public class INTImpl extends GreetingImpl implements INT
   @Override
   protected EClass eStaticClass()
   {
-    return GoPackage.Literals.INT;
+    return GoPackage.Literals.ADDITION;
   }
 
-} //INTImpl
+} //AdditionImpl

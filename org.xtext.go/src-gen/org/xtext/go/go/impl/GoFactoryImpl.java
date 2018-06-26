@@ -67,16 +67,14 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
     {
       case GoPackage.GO: return createGo();
       case GoPackage.GREETING: return createGreeting();
+      case GoPackage.DECL: return createDecl();
       case GoPackage.DEC_VAR: return createDecVar();
       case GoPackage.MULT_DEC_VARS: return createMultDecVars();
       case GoPackage.DEC_VARS: return createDecVars();
+      case GoPackage.SWITCH_CASE: return createSwitchCase();
+      case GoPackage.CASES: return createCases();
       case GoPackage.PARAMS: return createParams();
       case GoPackage.OPERATIONS_ONE_EQUALS: return createOperationsOneEquals();
-      case GoPackage.INT: return createINT();
-      case GoPackage.I: return createI();
-      case GoPackage.T: return createT();
-      case GoPackage.Y: return createY();
-      case GoPackage.F: return createF();
       case GoPackage.CONDITION: return createCondition();
       case GoPackage.IF_CONDITION: return createIfCondition();
       case GoPackage.ELSE_IF_CONDITION: return createElseIfCondition();
@@ -88,6 +86,10 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
       case GoPackage.DEC_FUNC: return createDecFunc();
       case GoPackage.CALL_FUNC: return createCallFunc();
       case GoPackage.DATA_TYPE: return createDataType();
+      case GoPackage.ADDITION: return createAddition();
+      case GoPackage.SUBTRATION: return createSubtration();
+      case GoPackage.MULTIPLICATION: return createMultiplication();
+      case GoPackage.DIVISION: return createDivision();
       case GoPackage.OR_EXPRESSION: return createOrExpression();
       case GoPackage.AND_EXPRESSION: return createAndExpression();
       case GoPackage.COMPARISON_EXPRESSION: return createComparisonExpression();
@@ -117,6 +119,17 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     GreetingImpl greeting = new GreetingImpl();
     return greeting;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Decl createDecl()
+  {
+    DeclImpl decl = new DeclImpl();
+    return decl;
   }
 
   /**
@@ -157,6 +170,28 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public SwitchCase createSwitchCase()
+  {
+    SwitchCaseImpl switchCase = new SwitchCaseImpl();
+    return switchCase;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Cases createCases()
+  {
+    CasesImpl cases = new CasesImpl();
+    return cases;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Params createParams()
   {
     ParamsImpl params = new ParamsImpl();
@@ -172,61 +207,6 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     OperationsOneEqualsImpl operationsOneEquals = new OperationsOneEqualsImpl();
     return operationsOneEquals;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public INT createINT()
-  {
-    INTImpl int_ = new INTImpl();
-    return int_;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public I createI()
-  {
-    IImpl i = new IImpl();
-    return i;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public T createT()
-  {
-    TImpl t = new TImpl();
-    return t;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Y createY()
-  {
-    YImpl y = new YImpl();
-    return y;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public F createF()
-  {
-    FImpl f = new FImpl();
-    return f;
   }
 
   /**
@@ -348,6 +328,50 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     DataTypeImpl dataType = new DataTypeImpl();
     return dataType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Addition createAddition()
+  {
+    AdditionImpl addition = new AdditionImpl();
+    return addition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Subtration createSubtration()
+  {
+    SubtrationImpl subtration = new SubtrationImpl();
+    return subtration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Multiplication createMultiplication()
+  {
+    MultiplicationImpl multiplication = new MultiplicationImpl();
+    return multiplication;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Division createDivision()
+  {
+    DivisionImpl division = new DivisionImpl();
+    return division;
   }
 
   /**

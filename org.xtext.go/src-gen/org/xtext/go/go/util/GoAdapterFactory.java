@@ -86,6 +86,11 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createGreetingAdapter();
       }
       @Override
+      public Adapter caseDecl(Decl object)
+      {
+        return createDeclAdapter();
+      }
+      @Override
       public Adapter caseDecVar(DecVar object)
       {
         return createDecVarAdapter();
@@ -101,6 +106,16 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createDecVarsAdapter();
       }
       @Override
+      public Adapter caseSwitchCase(SwitchCase object)
+      {
+        return createSwitchCaseAdapter();
+      }
+      @Override
+      public Adapter caseCases(Cases object)
+      {
+        return createCasesAdapter();
+      }
+      @Override
       public Adapter caseParams(Params object)
       {
         return createParamsAdapter();
@@ -109,31 +124,6 @@ public class GoAdapterFactory extends AdapterFactoryImpl
       public Adapter caseOperationsOneEquals(OperationsOneEquals object)
       {
         return createOperationsOneEqualsAdapter();
-      }
-      @Override
-      public Adapter caseINT(INT object)
-      {
-        return createINTAdapter();
-      }
-      @Override
-      public Adapter caseI(I object)
-      {
-        return createIAdapter();
-      }
-      @Override
-      public Adapter caseT(T object)
-      {
-        return createTAdapter();
-      }
-      @Override
-      public Adapter caseY(Y object)
-      {
-        return createYAdapter();
-      }
-      @Override
-      public Adapter caseF(F object)
-      {
-        return createFAdapter();
       }
       @Override
       public Adapter caseCondition(Condition object)
@@ -189,6 +179,26 @@ public class GoAdapterFactory extends AdapterFactoryImpl
       public Adapter caseDataType(DataType object)
       {
         return createDataTypeAdapter();
+      }
+      @Override
+      public Adapter caseAddition(Addition object)
+      {
+        return createAdditionAdapter();
+      }
+      @Override
+      public Adapter caseSubtration(Subtration object)
+      {
+        return createSubtrationAdapter();
+      }
+      @Override
+      public Adapter caseMultiplication(Multiplication object)
+      {
+        return createMultiplicationAdapter();
+      }
+      @Override
+      public Adapter caseDivision(Division object)
+      {
+        return createDivisionAdapter();
       }
       @Override
       public Adapter caseOrExpression(OrExpression object)
@@ -263,6 +273,21 @@ public class GoAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Decl <em>Decl</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Decl
+   * @generated
+   */
+  public Adapter createDeclAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.go.go.DecVar <em>Dec Var</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -308,6 +333,36 @@ public class GoAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.SwitchCase <em>Switch Case</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.SwitchCase
+   * @generated
+   */
+  public Adapter createSwitchCaseAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Cases <em>Cases</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Cases
+   * @generated
+   */
+  public Adapter createCasesAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.go.go.Params <em>Params</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -333,81 +388,6 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createOperationsOneEqualsAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.go.go.INT <em>INT</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.go.go.INT
-   * @generated
-   */
-  public Adapter createINTAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.go.go.I <em>I</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.go.go.I
-   * @generated
-   */
-  public Adapter createIAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.go.go.T <em>T</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.go.go.T
-   * @generated
-   */
-  public Adapter createTAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Y <em>Y</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.go.go.Y
-   * @generated
-   */
-  public Adapter createYAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.go.go.F <em>F</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.go.go.F
-   * @generated
-   */
-  public Adapter createFAdapter()
   {
     return null;
   }
@@ -573,6 +553,66 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDataTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Addition <em>Addition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Addition
+   * @generated
+   */
+  public Adapter createAdditionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Subtration <em>Subtration</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Subtration
+   * @generated
+   */
+  public Adapter createSubtrationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Multiplication <em>Multiplication</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Multiplication
+   * @generated
+   */
+  public Adapter createMultiplicationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Division <em>Division</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Division
+   * @generated
+   */
+  public Adapter createDivisionAdapter()
   {
     return null;
   }

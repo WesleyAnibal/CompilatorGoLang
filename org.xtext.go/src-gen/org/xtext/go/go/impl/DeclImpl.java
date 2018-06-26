@@ -9,23 +9,23 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.xtext.go.go.Decl;
 import org.xtext.go.go.GoPackage;
-import org.xtext.go.go.OperationsOneEquals;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Operations One Equals</b></em>'.
+ * An implementation of the model object '<em><b>Decl</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.go.go.impl.OperationsOneEqualsImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.DeclImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class OperationsOneEqualsImpl extends varForImpl implements OperationsOneEquals
+public class DeclImpl extends DecVarImpl implements Decl
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -52,7 +52,7 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
    * <!-- end-user-doc -->
    * @generated
    */
-  protected OperationsOneEqualsImpl()
+  protected DeclImpl()
   {
     super();
   }
@@ -65,7 +65,7 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
   @Override
   protected EClass eStaticClass()
   {
-    return GoPackage.Literals.OPERATIONS_ONE_EQUALS;
+    return GoPackage.Literals.DECL;
   }
 
   /**
@@ -88,7 +88,7 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.OPERATIONS_ONE_EQUALS__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DECL__NAME, oldName, name));
   }
 
   /**
@@ -101,7 +101,7 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
   {
     switch (featureID)
     {
-      case GoPackage.OPERATIONS_ONE_EQUALS__NAME:
+      case GoPackage.DECL__NAME:
         return getName();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -117,7 +117,7 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
   {
     switch (featureID)
     {
-      case GoPackage.OPERATIONS_ONE_EQUALS__NAME:
+      case GoPackage.DECL__NAME:
         setName((String)newValue);
         return;
     }
@@ -134,7 +134,7 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
   {
     switch (featureID)
     {
-      case GoPackage.OPERATIONS_ONE_EQUALS__NAME:
+      case GoPackage.DECL__NAME:
         setName(NAME_EDEFAULT);
         return;
     }
@@ -151,7 +151,7 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
   {
     switch (featureID)
     {
-      case GoPackage.OPERATIONS_ONE_EQUALS__NAME:
+      case GoPackage.DECL__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
@@ -174,4 +174,4 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
     return result.toString();
   }
 
-} //OperationsOneEqualsImpl
+} //DeclImpl

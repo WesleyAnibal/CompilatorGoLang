@@ -5,26 +5,24 @@ package org.xtext.go.go.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.xtext.go.go.GoPackage;
-import org.xtext.go.go.I;
+import org.xtext.go.go.Subtration;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>I</b></em>'.
+ * An implementation of the model object '<em><b>Subtration</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class IImpl extends MinimalEObjectImpl.Container implements I
+public class SubtrationImpl extends ExpressionImpl implements Subtration
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected IImpl()
+  protected SubtrationImpl()
   {
     super();
   }
@@ -37,7 +35,7 @@ public class IImpl extends MinimalEObjectImpl.Container implements I
   @Override
   protected EClass eStaticClass()
   {
-    return GoPackage.Literals.I;
+    return GoPackage.Literals.SUBTRATION;
   }
 
-} //IImpl
+} //SubtrationImpl
