@@ -240,13 +240,25 @@ ruleDecl returns [EObject current=null]
 				}
 			)
 		)
-		{
-			newCompositeNode(grammarAccess.getDeclAccess().getTypesParserRuleCall_2());
-		}
-		ruleTypes
-		{
-			afterParserOrEnumRuleCall();
-		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getDeclAccess().getTypeTypesParserRuleCall_2_0());
+				}
+				lv_type_2_0=ruleTypes
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getDeclRule());
+					}
+					set(
+						$current,
+						"type",
+						lv_type_2_0,
+						"org.xtext.go.Go.Types");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 	)
 ;
 
@@ -325,13 +337,25 @@ ruleDecVar returns [EObject current=null]
 					)
 				)
 			)*
-			{
-				newCompositeNode(grammarAccess.getDecVarAccess().getTypesParserRuleCall_1_3());
-			}
-			ruleTypes
-			{
-				afterParserOrEnumRuleCall();
-			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDecVarAccess().getTypeTypesParserRuleCall_1_3_0());
+					}
+					lv_type_5_0=ruleTypes
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDecVarRule());
+						}
+						set(
+							$current,
+							"type",
+							lv_type_5_0,
+							"org.xtext.go.Go.Types");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
 			(
 				otherlv_6='='
 				{

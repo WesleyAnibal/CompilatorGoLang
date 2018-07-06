@@ -687,7 +687,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DecVar returns DecVar
 	 *
 	 * Constraint:
-	 *     (vars+=ID vars+=ID* ((atrb+=Atri | atrb+=ID) atrb+=ID? (atrb+=Atri? atrb+=ID?)*)?)
+	 *     (vars+=ID vars+=ID* type=Types ((atrb+=Atri | atrb+=ID) atrb+=Atri? (atrb+=ID? atrb+=Atri?)*)?)
 	 */
 	protected void sequence_DecVar(ISerializationContext context, DecVar semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -713,15 +713,18 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DecVar returns Decl
 	 *
 	 * Constraint:
-	 *     name=ID
+	 *     (name=ID type=Types)
 	 */
 	protected void sequence_Decl(ISerializationContext context, Decl semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.DECL__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.DECL__NAME));
+			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.DEC_VAR__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.DEC_VAR__TYPE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDeclAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getDeclAccess().getTypeTypesParserRuleCall_2_0(), semanticObject.getType());
 		feeder.finish();
 	}
 	

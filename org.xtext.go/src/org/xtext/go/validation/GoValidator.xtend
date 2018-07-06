@@ -8,6 +8,13 @@ import org.xtext.go.go.Go
 import org.xtext.go.go.DecVar
 import org.xtext.go.go.GoPackage
 import org.xtext.go.go.Greeting
+import org.xtext.go.go.Decl
+import java.util.Map
+import java.util.List
+import java.util.HashMap
+import org.xtext.go.go.DecFunc
+import org.xtext.go.go.CallFunc
+import java.util.ArrayList
 
 /**
  * This class contains custom validation rules. 
@@ -26,6 +33,9 @@ class GoValidator extends AbstractGoValidator {
 //					INVALID_NAME)
 //		}
 //	}
+
+	public static Map<String, List<String>> funcImplements = new HashMap<String, List<String>>();
+
 	@Check
 	def checkGreetingStartsWithCapital(DecVar g) {
 		if(g.atrb.size() > 0){
@@ -35,6 +45,30 @@ class GoValidator extends AbstractGoValidator {
 				error("número de atribuições menor que variaveis", GoPackage.Literals.DEC_VAR__VARS);
 			}
 		}
+	}
+	
+
+	def checkIfCallFuncIsValid(CallFunc cf){
+		
+		if(checkIfCallFuncIdExists(cf.nameFunc.toString())){
+			error("Identificador da função não existe", GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+		}
+		
+	}
+	
+	def boolean checkIfCallFuncIdExists(String funcName){
+		
+		var out = false; 
+		var arr = funcImplements.get(funcName);
+		if(arr != null){
+			out = true;
+		} 
+		return out;
+		
+	}
+	
+	def addFuncToImplements(DecFunc dec){
+		funcImplements.put(dec.name.toString(), new ArrayList<String>());
 	}
 
 	

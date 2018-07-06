@@ -391,9 +391,19 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDecVar_Atrb()
+  public EAttribute getDecVar_Type()
   {
     return (EAttribute)decVarEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDecVar_Atrb()
+  {
+    return (EAttribute)decVarEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -996,6 +1006,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     decVarEClass = createEClass(DEC_VAR);
     createEAttribute(decVarEClass, DEC_VAR__VARS);
+    createEAttribute(decVarEClass, DEC_VAR__TYPE);
     createEAttribute(decVarEClass, DEC_VAR__ATRB);
 
     multDecVarsEClass = createEClass(MULT_DEC_VARS);
@@ -1143,6 +1154,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     initEClass(decVarEClass, DecVar.class, "DecVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDecVar_Vars(), ecorePackage.getEString(), "vars", null, 0, -1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDecVar_Type(), ecorePackage.getEString(), "type", null, 0, 1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDecVar_Atrb(), ecorePackage.getEString(), "atrb", null, 0, -1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(multDecVarsEClass, MultDecVars.class, "MultDecVars", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

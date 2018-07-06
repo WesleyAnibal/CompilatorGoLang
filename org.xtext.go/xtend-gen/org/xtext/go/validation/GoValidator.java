@@ -3,7 +3,14 @@
  */
 package org.xtext.go.validation;
 
+import com.google.common.base.Objects;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import org.eclipse.xtext.validation.Check;
+import org.xtext.go.go.CallFunc;
+import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.DecVar;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.validation.AbstractGoValidator;
@@ -15,6 +22,8 @@ import org.xtext.go.validation.AbstractGoValidator;
  */
 @SuppressWarnings("all")
 public class GoValidator extends AbstractGoValidator {
+  public static Map<String, List<String>> funcImplements = new HashMap<String, List<String>>();
+  
   @Check
   public void checkGreetingStartsWithCapital(final DecVar g) {
     int _size = g.getAtrb().size();
@@ -34,5 +43,28 @@ public class GoValidator extends AbstractGoValidator {
         }
       }
     }
+  }
+  
+  public void checkIfCallFuncIsValid(final CallFunc cf) {
+    boolean _checkIfCallFuncIdExists = this.checkIfCallFuncIdExists(cf.getNameFunc().toString());
+    if (_checkIfCallFuncIdExists) {
+      this.error("Identificador da função não existe", GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+    }
+  }
+  
+  public boolean checkIfCallFuncIdExists(final String funcName) {
+    boolean out = false;
+    List<String> arr = GoValidator.funcImplements.get(funcName);
+    boolean _notEquals = (!Objects.equal(arr, null));
+    if (_notEquals) {
+      out = true;
+    }
+    return out;
+  }
+  
+  public List<String> addFuncToImplements(final DecFunc dec) {
+    String _string = dec.getName().toString();
+    ArrayList<String> _arrayList = new ArrayList<String>();
+    return GoValidator.funcImplements.put(_string, _arrayList);
   }
 }

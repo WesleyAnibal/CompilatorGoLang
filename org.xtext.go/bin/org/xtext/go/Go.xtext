@@ -9,10 +9,10 @@ Greeting:
 	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition |  SwitchCase | DecImport | CallFunc | CallFor;
 
 Decl:
-	Modif name=ID Types
+	Modif name=ID type=Types
 ;
 DecVar:
-	Decl |Modif vars+=ID(Comma vars+=ID)* (Types) ("=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*)?;
+	Decl |Modif vars+=ID(Comma vars+=ID)* (type=Types) ("=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*)?;
 
 MultDecVars:
 	Modif Open_parentheses (name=ID "=" (TypeValue | value=ID))* Closed_parentheses;

@@ -15,6 +15,7 @@
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//DecVar">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecVar/vars"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecVar/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecVar/atrb"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//MultDecVars">

@@ -5,9 +5,13 @@ package org.xtext.go.go.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
@@ -23,6 +27,7 @@ import org.xtext.go.go.GoPackage;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getVars <em>Vars</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getAtrb <em>Atrb</em>}</li>
  * </ul>
  *
@@ -39,6 +44,26 @@ public class DecVarImpl extends GreetingImpl implements DecVar
    * @ordered
    */
   protected EList<String> vars;
+
+  /**
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected static final String TYPE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected String type = TYPE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getAtrb() <em>Atrb</em>}' attribute list.
@@ -90,6 +115,29 @@ public class DecVarImpl extends GreetingImpl implements DecVar
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(String newType)
+  {
+    String oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DEC_VAR__TYPE, oldType, type));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<String> getAtrb()
   {
     if (atrb == null)
@@ -111,6 +159,8 @@ public class DecVarImpl extends GreetingImpl implements DecVar
     {
       case GoPackage.DEC_VAR__VARS:
         return getVars();
+      case GoPackage.DEC_VAR__TYPE:
+        return getType();
       case GoPackage.DEC_VAR__ATRB:
         return getAtrb();
     }
@@ -131,6 +181,9 @@ public class DecVarImpl extends GreetingImpl implements DecVar
       case GoPackage.DEC_VAR__VARS:
         getVars().clear();
         getVars().addAll((Collection<? extends String>)newValue);
+        return;
+      case GoPackage.DEC_VAR__TYPE:
+        setType((String)newValue);
         return;
       case GoPackage.DEC_VAR__ATRB:
         getAtrb().clear();
@@ -153,6 +206,9 @@ public class DecVarImpl extends GreetingImpl implements DecVar
       case GoPackage.DEC_VAR__VARS:
         getVars().clear();
         return;
+      case GoPackage.DEC_VAR__TYPE:
+        setType(TYPE_EDEFAULT);
+        return;
       case GoPackage.DEC_VAR__ATRB:
         getAtrb().clear();
         return;
@@ -172,6 +228,8 @@ public class DecVarImpl extends GreetingImpl implements DecVar
     {
       case GoPackage.DEC_VAR__VARS:
         return vars != null && !vars.isEmpty();
+      case GoPackage.DEC_VAR__TYPE:
+        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
       case GoPackage.DEC_VAR__ATRB:
         return atrb != null && !atrb.isEmpty();
     }
@@ -191,6 +249,8 @@ public class DecVarImpl extends GreetingImpl implements DecVar
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (vars: ");
     result.append(vars);
+    result.append(", type: ");
+    result.append(type);
     result.append(", atrb: ");
     result.append(atrb);
     result.append(')');

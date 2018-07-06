@@ -2164,9 +2164,9 @@ rule__Decl__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getDeclAccess().getTypesParserRuleCall_2()); }
-	ruleTypes
-	{ after(grammarAccess.getDeclAccess().getTypesParserRuleCall_2()); }
+	{ before(grammarAccess.getDeclAccess().getTypeAssignment_2()); }
+	(rule__Decl__TypeAssignment_2)
+	{ after(grammarAccess.getDeclAccess().getTypeAssignment_2()); }
 )
 ;
 finally {
@@ -2273,9 +2273,9 @@ rule__DecVar__Group_1__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getDecVarAccess().getTypesParserRuleCall_1_3()); }
-	ruleTypes
-	{ after(grammarAccess.getDecVarAccess().getTypesParserRuleCall_1_3()); }
+	{ before(grammarAccess.getDecVarAccess().getTypeAssignment_1_3()); }
+	(rule__DecVar__TypeAssignment_1_3)
+	{ after(grammarAccess.getDecVarAccess().getTypeAssignment_1_3()); }
 )
 ;
 finally {
@@ -6153,6 +6153,21 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__Decl__TypeAssignment_2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getDeclAccess().getTypeTypesParserRuleCall_2_0()); }
+		ruleTypes
+		{ after(grammarAccess.getDeclAccess().getTypeTypesParserRuleCall_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__DecVar__VarsAssignment_1_1
 	@init {
 		int stackSize = keepStackSize();
@@ -6177,6 +6192,21 @@ rule__DecVar__VarsAssignment_1_2_1
 		{ before(grammarAccess.getDecVarAccess().getVarsIDTerminalRuleCall_1_2_1_0()); }
 		RULE_ID
 		{ after(grammarAccess.getDecVarAccess().getVarsIDTerminalRuleCall_1_2_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__DecVar__TypeAssignment_1_3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getDecVarAccess().getTypeTypesParserRuleCall_1_3_0()); }
+		ruleTypes
+		{ after(grammarAccess.getDecVarAccess().getTypeTypesParserRuleCall_1_3_0()); }
 	)
 ;
 finally {

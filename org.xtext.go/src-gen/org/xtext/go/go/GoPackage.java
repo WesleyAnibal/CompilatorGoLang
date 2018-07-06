@@ -124,13 +124,22 @@ public interface GoPackage extends EPackage
   int DEC_VAR__VARS = GREETING_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEC_VAR__TYPE = GREETING_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Atrb</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DEC_VAR__ATRB = GREETING_FEATURE_COUNT + 1;
+  int DEC_VAR__ATRB = GREETING_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Dec Var</em>' class.
@@ -139,7 +148,7 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DEC_VAR_FEATURE_COUNT = GREETING_FEATURE_COUNT + 2;
+  int DEC_VAR_FEATURE_COUNT = GREETING_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.DeclImpl <em>Decl</em>}' class.
@@ -159,6 +168,15 @@ public interface GoPackage extends EPackage
    * @ordered
    */
   int DECL__VARS = DEC_VAR__VARS;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECL__TYPE = DEC_VAR__TYPE;
 
   /**
    * The feature id for the '<em><b>Atrb</b></em>' attribute list.
@@ -1520,6 +1538,17 @@ public interface GoPackage extends EPackage
   EAttribute getDecVar_Vars();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.go.go.DecVar#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see org.xtext.go.go.DecVar#getType()
+   * @see #getDecVar()
+   * @generated
+   */
+  EAttribute getDecVar_Type();
+
+  /**
    * Returns the meta object for the attribute list '{@link org.xtext.go.go.DecVar#getAtrb <em>Atrb</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2207,6 +2236,14 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EAttribute DEC_VAR__VARS = eINSTANCE.getDecVar_Vars();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DEC_VAR__TYPE = eINSTANCE.getDecVar_Type();
 
     /**
      * The meta object literal for the '<em><b>Atrb</b></em>' attribute list feature.
