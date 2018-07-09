@@ -2495,31 +2495,9 @@ ruleCallFunc returns [EObject current=null]
 	(
 		(
 			(
-				lv_nameClass_0_0=RULE_ID
+				lv_nameFunc_0_0=RULE_ID
 				{
-					newLeafNode(lv_nameClass_0_0, grammarAccess.getCallFuncAccess().getNameClassIDTerminalRuleCall_0_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getCallFuncRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"nameClass",
-						lv_nameClass_0_0,
-						"org.eclipse.xtext.common.Terminals.ID");
-				}
-			)
-		)
-		this_Dot_1=RULE_DOT
-		{
-			newLeafNode(this_Dot_1, grammarAccess.getCallFuncAccess().getDotTerminalRuleCall_1());
-		}
-		(
-			(
-				lv_nameFunc_2_0=RULE_ID
-				{
-					newLeafNode(lv_nameFunc_2_0, grammarAccess.getCallFuncAccess().getNameFuncIDTerminalRuleCall_2_0());
+					newLeafNode(lv_nameFunc_0_0, grammarAccess.getCallFuncAccess().getNameFuncIDTerminalRuleCall_0_0());
 				}
 				{
 					if ($current==null) {
@@ -2528,21 +2506,21 @@ ruleCallFunc returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"nameFunc",
-						lv_nameFunc_2_0,
+						lv_nameFunc_0_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
-		this_Open_parentheses_3=RULE_OPEN_PARENTHESES
+		this_Open_parentheses_1=RULE_OPEN_PARENTHESES
 		{
-			newLeafNode(this_Open_parentheses_3, grammarAccess.getCallFuncAccess().getOpen_parenthesesTerminalRuleCall_3());
+			newLeafNode(this_Open_parentheses_1, grammarAccess.getCallFuncAccess().getOpen_parenthesesTerminalRuleCall_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getCallFuncAccess().getParamParamsParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getCallFuncAccess().getParamParamsParserRuleCall_2_0());
 				}
-				lv_param_4_0=ruleParams
+				lv_param_2_0=ruleParams
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCallFuncRule());
@@ -2550,15 +2528,15 @@ ruleCallFunc returns [EObject current=null]
 					set(
 						$current,
 						"param",
-						lv_param_4_0,
+						lv_param_2_0,
 						"org.xtext.go.Go.Params");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		this_Closed_parentheses_5=RULE_CLOSED_PARENTHESES
+		this_Closed_parentheses_3=RULE_CLOSED_PARENTHESES
 		{
-			newLeafNode(this_Closed_parentheses_5, grammarAccess.getCallFuncAccess().getClosed_parenthesesTerminalRuleCall_5());
+			newLeafNode(this_Closed_parentheses_3, grammarAccess.getCallFuncAccess().getClosed_parenthesesTerminalRuleCall_3());
 		}
 	)
 ;

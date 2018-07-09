@@ -24,12 +24,12 @@ import org.xtext.go.go.GoPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getVars <em>Vars</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getAtrb <em>Atrb</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

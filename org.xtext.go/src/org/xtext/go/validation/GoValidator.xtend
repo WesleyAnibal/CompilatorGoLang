@@ -15,6 +15,7 @@ import java.util.HashMap
 import org.xtext.go.go.DecFunc
 import org.xtext.go.go.CallFunc
 import java.util.ArrayList
+import org.xtext.go.go.Expression
 
 /**
  * This class contains custom validation rules. 
@@ -47,7 +48,6 @@ class GoValidator extends AbstractGoValidator {
 		}
 	}
 	
-
 	def checkIfCallFuncIsValid(CallFunc cf){
 		
 		if(checkIfCallFuncIdExists(cf.nameFunc.toString())){
@@ -67,8 +67,16 @@ class GoValidator extends AbstractGoValidator {
 		
 	}
 	
+	@Check
 	def addFuncToImplements(DecFunc dec){
 		funcImplements.put(dec.name.toString(), new ArrayList<String>());
+	}
+	
+	@Check
+	def callFunc(CallFunc func){
+		if (!funcImplements.containsKey(func.nameFunc) ){
+			error("erro semântico: função não existe",GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+		} 
 	}
 
 	

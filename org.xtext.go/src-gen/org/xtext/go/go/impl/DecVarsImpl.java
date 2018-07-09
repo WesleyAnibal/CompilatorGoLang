@@ -22,11 +22,11 @@ import org.xtext.go.go.GoPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.DecVarsImpl#getVars <em>Vars</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.DecVarsImpl#getAtrb <em>Atrb</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

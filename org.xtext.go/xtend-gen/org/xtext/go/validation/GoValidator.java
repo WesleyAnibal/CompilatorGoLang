@@ -62,9 +62,19 @@ public class GoValidator extends AbstractGoValidator {
     return out;
   }
   
+  @Check
   public List<String> addFuncToImplements(final DecFunc dec) {
     String _string = dec.getName().toString();
     ArrayList<String> _arrayList = new ArrayList<String>();
     return GoValidator.funcImplements.put(_string, _arrayList);
+  }
+  
+  @Check
+  public void callFunc(final CallFunc func) {
+    boolean _containsKey = GoValidator.funcImplements.containsKey(func.getNameFunc());
+    boolean _not = (!_containsKey);
+    if (_not) {
+      this.error("erro semântico: função não existe", GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+    }
   }
 }

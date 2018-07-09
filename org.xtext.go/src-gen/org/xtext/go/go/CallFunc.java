@@ -11,12 +11,11 @@ package org.xtext.go.go;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
- *   <li>{@link org.xtext.go.go.CallFunc#getNameClass <em>Name Class</em>}</li>
  *   <li>{@link org.xtext.go.go.CallFunc#getNameFunc <em>Name Func</em>}</li>
  *   <li>{@link org.xtext.go.go.CallFunc#getParam <em>Param</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.xtext.go.go.GoPackage#getCallFunc()
  * @model
@@ -24,32 +23,6 @@ package org.xtext.go.go;
  */
 public interface CallFunc extends Greeting
 {
-  /**
-   * Returns the value of the '<em><b>Name Class</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Name Class</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Name Class</em>' attribute.
-   * @see #setNameClass(String)
-   * @see org.xtext.go.go.GoPackage#getCallFunc_NameClass()
-   * @model
-   * @generated
-   */
-  String getNameClass();
-
-  /**
-   * Sets the value of the '{@link org.xtext.go.go.CallFunc#getNameClass <em>Name Class</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name Class</em>' attribute.
-   * @see #getNameClass()
-   * @generated
-   */
-  void setNameClass(String value);
-
   /**
    * Returns the value of the '<em><b>Name Func</b></em>' attribute.
    * <!-- begin-user-doc -->

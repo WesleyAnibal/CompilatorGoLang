@@ -125,7 +125,7 @@ DecFunc:
 ;
 	
 CallFunc:
-	nameClass=ID Dot nameFunc=ID Open_parentheses param=Params* Closed_parentheses
+	nameFunc=ID Open_parentheses param=Params* Closed_parentheses
 ;
 
 //Tokens

@@ -21,37 +21,16 @@ import org.xtext.go.go.Params;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
- *   <li>{@link org.xtext.go.go.impl.CallFuncImpl#getNameClass <em>Name Class</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.CallFuncImpl#getNameFunc <em>Name Func</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.CallFuncImpl#getParam <em>Param</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
 public class CallFuncImpl extends GreetingImpl implements CallFunc
 {
-  /**
-   * The default value of the '{@link #getNameClass() <em>Name Class</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNameClass()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_CLASS_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getNameClass() <em>Name Class</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNameClass()
-   * @generated
-   * @ordered
-   */
-  protected String nameClass = NAME_CLASS_EDEFAULT;
-
   /**
    * The default value of the '{@link #getNameFunc() <em>Name Func</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -101,29 +80,6 @@ public class CallFuncImpl extends GreetingImpl implements CallFunc
   protected EClass eStaticClass()
   {
     return GoPackage.Literals.CALL_FUNC;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getNameClass()
-  {
-    return nameClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setNameClass(String newNameClass)
-  {
-    String oldNameClass = nameClass;
-    nameClass = newNameClass;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.CALL_FUNC__NAME_CLASS, oldNameClass, nameClass));
   }
 
   /**
@@ -223,8 +179,6 @@ public class CallFuncImpl extends GreetingImpl implements CallFunc
   {
     switch (featureID)
     {
-      case GoPackage.CALL_FUNC__NAME_CLASS:
-        return getNameClass();
       case GoPackage.CALL_FUNC__NAME_FUNC:
         return getNameFunc();
       case GoPackage.CALL_FUNC__PARAM:
@@ -243,9 +197,6 @@ public class CallFuncImpl extends GreetingImpl implements CallFunc
   {
     switch (featureID)
     {
-      case GoPackage.CALL_FUNC__NAME_CLASS:
-        setNameClass((String)newValue);
-        return;
       case GoPackage.CALL_FUNC__NAME_FUNC:
         setNameFunc((String)newValue);
         return;
@@ -266,9 +217,6 @@ public class CallFuncImpl extends GreetingImpl implements CallFunc
   {
     switch (featureID)
     {
-      case GoPackage.CALL_FUNC__NAME_CLASS:
-        setNameClass(NAME_CLASS_EDEFAULT);
-        return;
       case GoPackage.CALL_FUNC__NAME_FUNC:
         setNameFunc(NAME_FUNC_EDEFAULT);
         return;
@@ -289,8 +237,6 @@ public class CallFuncImpl extends GreetingImpl implements CallFunc
   {
     switch (featureID)
     {
-      case GoPackage.CALL_FUNC__NAME_CLASS:
-        return NAME_CLASS_EDEFAULT == null ? nameClass != null : !NAME_CLASS_EDEFAULT.equals(nameClass);
       case GoPackage.CALL_FUNC__NAME_FUNC:
         return NAME_FUNC_EDEFAULT == null ? nameFunc != null : !NAME_FUNC_EDEFAULT.equals(nameFunc);
       case GoPackage.CALL_FUNC__PARAM:
@@ -310,9 +256,7 @@ public class CallFuncImpl extends GreetingImpl implements CallFunc
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (nameClass: ");
-    result.append(nameClass);
-    result.append(", nameFunc: ");
+    result.append(" (nameFunc: ");
     result.append(nameFunc);
     result.append(')');
     return result.toString();

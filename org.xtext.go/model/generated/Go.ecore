@@ -90,7 +90,6 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CallFunc" eSuperTypes="#//Greeting">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameFunc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="param" eType="#//Params"
         containment="true"/>

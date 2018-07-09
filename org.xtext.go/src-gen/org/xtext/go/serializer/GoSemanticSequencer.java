@@ -578,7 +578,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     CallFunc returns CallFunc
 	 *
 	 * Constraint:
-	 *     (nameClass=ID nameFunc=ID param=Params*)
+	 *     (nameFunc=ID param=Params*)
 	 */
 	protected void sequence_CallFunc(ISerializationContext context, CallFunc semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

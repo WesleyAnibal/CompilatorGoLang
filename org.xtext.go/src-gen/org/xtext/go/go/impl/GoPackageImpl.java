@@ -831,7 +831,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getCallFunc_NameClass()
+  public EAttribute getCallFunc_NameFunc()
   {
     return (EAttribute)callFuncEClass.getEStructuralFeatures().get(0);
   }
@@ -841,19 +841,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getCallFunc_NameFunc()
-  {
-    return (EAttribute)callFuncEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getCallFunc_Param()
   {
-    return (EReference)callFuncEClass.getEStructuralFeatures().get(2);
+    return (EReference)callFuncEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1066,7 +1056,6 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     createEReference(decFuncEClass, DEC_FUNC__ARGS);
 
     callFuncEClass = createEClass(CALL_FUNC);
-    createEAttribute(callFuncEClass, CALL_FUNC__NAME_CLASS);
     createEAttribute(callFuncEClass, CALL_FUNC__NAME_FUNC);
     createEReference(callFuncEClass, CALL_FUNC__PARAM);
 
@@ -1214,7 +1203,6 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEReference(getDecFunc_Args(), this.getGreeting(), null, "args", null, 0, -1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(callFuncEClass, CallFunc.class, "CallFunc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCallFunc_NameClass(), ecorePackage.getEString(), "nameClass", null, 0, 1, CallFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCallFunc_NameFunc(), ecorePackage.getEString(), "nameFunc", null, 0, 1, CallFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCallFunc_Param(), this.getParams(), null, "param", null, 0, 1, CallFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

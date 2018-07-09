@@ -18,10 +18,10 @@ import org.xtext.go.go.OperationsOneEquals;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.OperationsOneEqualsImpl#getName <em>Name</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

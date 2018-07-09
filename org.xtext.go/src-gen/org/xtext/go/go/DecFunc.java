@@ -12,12 +12,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.DecFunc#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.go.go.DecFunc#getParam <em>Param</em>}</li>
  *   <li>{@link org.xtext.go.go.DecFunc#getArgs <em>Args</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.xtext.go.go.GoPackage#getDecFunc()
  * @model

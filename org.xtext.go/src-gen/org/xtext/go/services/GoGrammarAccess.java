@@ -657,7 +657,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDoubleParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		////Removi a recursão a esquerda
-		// Numbers:
+		//Numbers:
 		//	INT | Double;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -1172,7 +1172,8 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLiteralParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//PrimaryExpression Expression:
-		//	Open_parentheses Expression Closed_parentheses | Literal;
+		//	Open_parentheses Expression Closed_parentheses
+		//	| Literal;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//Open_parentheses Expression Closed_parentheses | Literal
@@ -1442,49 +1443,37 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	public class CallFuncElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.CallFunc");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameClassAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameClassIDTerminalRuleCall_0_0 = (RuleCall)cNameClassAssignment_0.eContents().get(0);
-		private final RuleCall cDotTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Assignment cNameFuncAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameFuncIDTerminalRuleCall_2_0 = (RuleCall)cNameFuncAssignment_2.eContents().get(0);
-		private final RuleCall cOpen_parenthesesTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final Assignment cParamAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cParamParamsParserRuleCall_4_0 = (RuleCall)cParamAssignment_4.eContents().get(0);
-		private final RuleCall cClosed_parenthesesTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
+		private final Assignment cNameFuncAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameFuncIDTerminalRuleCall_0_0 = (RuleCall)cNameFuncAssignment_0.eContents().get(0);
+		private final RuleCall cOpen_parenthesesTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cParamAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cParamParamsParserRuleCall_2_0 = (RuleCall)cParamAssignment_2.eContents().get(0);
+		private final RuleCall cClosed_parenthesesTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		
 		//CallFunc:
-		//	nameClass=ID Dot nameFunc=ID Open_parentheses param=Params* Closed_parentheses;
+		//	nameFunc=ID Open_parentheses param=Params* Closed_parentheses;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//nameClass=ID Dot nameFunc=ID Open_parentheses param=Params* Closed_parentheses
+		//nameFunc=ID Open_parentheses param=Params* Closed_parentheses
 		public Group getGroup() { return cGroup; }
 		
-		//nameClass=ID
-		public Assignment getNameClassAssignment_0() { return cNameClassAssignment_0; }
-		
-		//ID
-		public RuleCall getNameClassIDTerminalRuleCall_0_0() { return cNameClassIDTerminalRuleCall_0_0; }
-		
-		//Dot
-		public RuleCall getDotTerminalRuleCall_1() { return cDotTerminalRuleCall_1; }
-		
 		//nameFunc=ID
-		public Assignment getNameFuncAssignment_2() { return cNameFuncAssignment_2; }
+		public Assignment getNameFuncAssignment_0() { return cNameFuncAssignment_0; }
 		
 		//ID
-		public RuleCall getNameFuncIDTerminalRuleCall_2_0() { return cNameFuncIDTerminalRuleCall_2_0; }
+		public RuleCall getNameFuncIDTerminalRuleCall_0_0() { return cNameFuncIDTerminalRuleCall_0_0; }
 		
 		//Open_parentheses
-		public RuleCall getOpen_parenthesesTerminalRuleCall_3() { return cOpen_parenthesesTerminalRuleCall_3; }
+		public RuleCall getOpen_parenthesesTerminalRuleCall_1() { return cOpen_parenthesesTerminalRuleCall_1; }
 		
 		//param=Params*
-		public Assignment getParamAssignment_4() { return cParamAssignment_4; }
+		public Assignment getParamAssignment_2() { return cParamAssignment_2; }
 		
 		//Params
-		public RuleCall getParamParamsParserRuleCall_4_0() { return cParamParamsParserRuleCall_4_0; }
+		public RuleCall getParamParamsParserRuleCall_2_0() { return cParamParamsParserRuleCall_2_0; }
 		
 		//Closed_parentheses
-		public RuleCall getClosed_parenthesesTerminalRuleCall_5() { return cClosed_parenthesesTerminalRuleCall_5; }
+		public RuleCall getClosed_parenthesesTerminalRuleCall_3() { return cClosed_parenthesesTerminalRuleCall_3; }
 	}
 	public class TerminalsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Terminals");
@@ -1504,7 +1493,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRANGEParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
 		
 		////Tokens
-		// Terminals:
+		//Terminals:
 		//	BREAK | CASE | CHAN | CONST | CONTINUE | ELSE | IF | FOR | FUNC | IMPORT | RETURN | PACKAGE | RANGE;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -2190,7 +2179,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	////Removi a recursão a esquerda
-	// Numbers:
+	//Numbers:
 	//	INT | Double;
 	public NumbersElements getNumbersAccess() {
 		return pNumbers;
@@ -2361,7 +2350,8 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//PrimaryExpression Expression:
-	//	Open_parentheses Expression Closed_parentheses | Literal;
+	//	Open_parentheses Expression Closed_parentheses
+	//	| Literal;
 	public PrimaryExpressionElements getPrimaryExpressionAccess() {
 		return pPrimaryExpression;
 	}
@@ -2422,7 +2412,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//CallFunc:
-	//	nameClass=ID Dot nameFunc=ID Open_parentheses param=Params* Closed_parentheses;
+	//	nameFunc=ID Open_parentheses param=Params* Closed_parentheses;
 	public CallFuncElements getCallFuncAccess() {
 		return pCallFunc;
 	}
@@ -2432,7 +2422,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	////Tokens
-	// Terminals:
+	//Terminals:
 	//	BREAK | CASE | CHAN | CONST | CONTINUE | ELSE | IF | FOR | FUNC | IMPORT | RETURN | PACKAGE | RANGE;
 	public TerminalsElements getTerminalsAccess() {
 		return pTerminals;

@@ -11,10 +11,10 @@ package org.xtext.go.go;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.operationsOne#getName <em>Name</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.xtext.go.go.GoPackage#getoperationsOne()
  * @model

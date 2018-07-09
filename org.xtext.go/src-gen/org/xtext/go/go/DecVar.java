@@ -12,12 +12,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.DecVar#getVars <em>Vars</em>}</li>
  *   <li>{@link org.xtext.go.go.DecVar#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.go.go.DecVar#getAtrb <em>Atrb</em>}</li>
  * </ul>
+ * </p>
  *
  * @see org.xtext.go.go.GoPackage#getDecVar()
  * @model

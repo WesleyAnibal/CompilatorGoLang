@@ -879,22 +879,13 @@ public interface GoPackage extends EPackage
   int CALL_FUNC = 19;
 
   /**
-   * The feature id for the '<em><b>Name Class</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_FUNC__NAME_CLASS = GREETING_FEATURE_COUNT + 0;
-
-  /**
    * The feature id for the '<em><b>Name Func</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CALL_FUNC__NAME_FUNC = GREETING_FEATURE_COUNT + 1;
+  int CALL_FUNC__NAME_FUNC = GREETING_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Param</b></em>' containment reference.
@@ -903,7 +894,7 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALL_FUNC__PARAM = GREETING_FEATURE_COUNT + 2;
+  int CALL_FUNC__PARAM = GREETING_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Call Func</em>' class.
@@ -912,7 +903,7 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALL_FUNC_FEATURE_COUNT = GREETING_FEATURE_COUNT + 3;
+  int CALL_FUNC_FEATURE_COUNT = GREETING_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.DataTypeImpl <em>Data Type</em>}' class.
@@ -2006,17 +1997,6 @@ public interface GoPackage extends EPackage
   EClass getCallFunc();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.go.go.CallFunc#getNameClass <em>Name Class</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name Class</em>'.
-   * @see org.xtext.go.go.CallFunc#getNameClass()
-   * @see #getCallFunc()
-   * @generated
-   */
-  EAttribute getCallFunc_NameClass();
-
-  /**
    * Returns the meta object for the attribute '{@link org.xtext.go.go.CallFunc#getNameFunc <em>Name Func</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2620,14 +2600,6 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EClass CALL_FUNC = eINSTANCE.getCallFunc();
-
-    /**
-     * The meta object literal for the '<em><b>Name Class</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CALL_FUNC__NAME_CLASS = eINSTANCE.getCallFunc_NameClass();
 
     /**
      * The meta object literal for the '<em><b>Name Func</b></em>' attribute feature.

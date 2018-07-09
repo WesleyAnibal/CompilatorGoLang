@@ -62,8 +62,6 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getDecImportToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getDoisPontosRule())
 			return getDoisPontosToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getDotRule())
-			return getDotToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getELSERule())
 			return getELSEToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getEOLRule())
@@ -198,16 +196,6 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return ":";
-	}
-	
-	/**
-	 * terminal Dot:
-	 * 	".";
-	 */
-	protected String getDotToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return ".";
 	}
 	
 	/**
@@ -445,7 +433,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Ambiguous syntax:
-	 *     (Modif Open_parentheses Closed_parentheses) | DecImport | EOL
+	 *     (Modif Open_parentheses Closed_parentheses) | EOL | DecImport
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)
@@ -456,13 +444,12 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ID | Numbers
+	 *     Numbers | ID
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name=ID (MinusEquals | PlusEquals) (ambiguity) (rule end)
-	 *     name=ID (MinusEquals | PlusEquals) (ambiguity) Open_Key Closed_Key (rule end)
-	 *     name=ID (MinusEquals | PlusEquals) (ambiguity) Open_Key x=Greeting
 	 *     name=ID (PlusEquals | MinusEquals) (ambiguity) (rule end)
+	 *     name=ID (PlusEquals | MinusEquals) (ambiguity) Open_Key Closed_Key (rule end)
+	 *     name=ID (PlusEquals | MinusEquals) (ambiguity) Open_Key x=Greeting
 	 */
 	protected void emit_OperationsOneEquals_IDTerminalRuleCall_2_0_or_NumbersParserRuleCall_2_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -470,12 +457,13 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     MinusEquals | PlusEquals
+	 *     PlusEquals | MinusEquals
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     name=ID (ambiguity) (ID | Numbers) (rule end)
-	 *     name=ID (ambiguity) (ID | Numbers) Open_Key Closed_Key (rule end)
-	 *     name=ID (ambiguity) (ID | Numbers) Open_Key x=Greeting
+	 *     name=ID (ambiguity) (Numbers | ID) (rule end)
+	 *     name=ID (ambiguity) (Numbers | ID) Open_Key Closed_Key (rule end)
+	 *     name=ID (ambiguity) (Numbers | ID) Open_Key x=Greeting
 	 */
 	protected void emit_OperationsOneEquals_MinusEqualsTerminalRuleCall_1_1_or_PlusEqualsTerminalRuleCall_1_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -538,7 +526,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     MinusOne | PlusOne
+	 *     PlusOne | MinusOne
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     name=ID (ambiguity) (rule end)
