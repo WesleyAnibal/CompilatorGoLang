@@ -821,22 +821,26 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Expression");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
-		private final RuleCall cOpersParserRuleCall_0_0 = (RuleCall)cAlternatives_0.eContents().get(0);
+		private final Assignment cXAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
+		private final RuleCall cXOpersParserRuleCall_0_0_0 = (RuleCall)cXAssignment_0_0.eContents().get(0);
 		private final RuleCall cOrExpressionParserRuleCall_0_1 = (RuleCall)cAlternatives_0.eContents().get(1);
 		private final RuleCall cIDTerminalRuleCall_0_2 = (RuleCall)cAlternatives_0.eContents().get(2);
 		
 		//Expression:
-		//	=> (Opers | OrExpression | ID);
+		//	=> (x=Opers | OrExpression | ID);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//=> (Opers | OrExpression | ID)
+		//=> (x=Opers | OrExpression | ID)
 		public Group getGroup() { return cGroup; }
 		
-		//Opers | OrExpression | ID
+		//x=Opers | OrExpression | ID
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 		
+		//x=Opers
+		public Assignment getXAssignment_0_0() { return cXAssignment_0_0; }
+		
 		//Opers
-		public RuleCall getOpersParserRuleCall_0_0() { return cOpersParserRuleCall_0_0; }
+		public RuleCall getXOpersParserRuleCall_0_0_0() { return cXOpersParserRuleCall_0_0_0; }
 		
 		//OrExpression
 		public RuleCall getOrExpressionParserRuleCall_0_1() { return cOrExpressionParserRuleCall_0_1; }
@@ -882,21 +886,29 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	public class OpersElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Opers");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cAdditionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cSubtrationParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final Assignment cSumAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final RuleCall cSumAdditionParserRuleCall_0_0 = (RuleCall)cSumAssignment_0.eContents().get(0);
+		private final Assignment cSubAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final RuleCall cSubSubtrationParserRuleCall_1_0 = (RuleCall)cSubAssignment_1.eContents().get(0);
 		
 		//Opers Expression:
-		//	Addition | Subtration;
+		//	sum=Addition | sub=Subtration;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Addition | Subtration
+		//sum=Addition | sub=Subtration
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
+		//sum=Addition
+		public Assignment getSumAssignment_0() { return cSumAssignment_0; }
+		
 		//Addition
-		public RuleCall getAdditionParserRuleCall_0() { return cAdditionParserRuleCall_0; }
+		public RuleCall getSumAdditionParserRuleCall_0_0() { return cSumAdditionParserRuleCall_0_0; }
+		
+		//sub=Subtration
+		public Assignment getSubAssignment_1() { return cSubAssignment_1; }
 		
 		//Subtration
-		public RuleCall getSubtrationParserRuleCall_1() { return cSubtrationParserRuleCall_1; }
+		public RuleCall getSubSubtrationParserRuleCall_1_0() { return cSubSubtrationParserRuleCall_1_0; }
 	}
 	public class AdditionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Addition");
@@ -2240,7 +2252,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Expression:
-	//	=> (Opers | OrExpression | ID);
+	//	=> (x=Opers | OrExpression | ID);
 	public ExpressionElements getExpressionAccess() {
 		return pExpression;
 	}
@@ -2260,7 +2272,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Opers Expression:
-	//	Addition | Subtration;
+	//	sum=Addition | sub=Subtration;
 	public OpersElements getOpersAccess() {
 		return pOpers;
 	}

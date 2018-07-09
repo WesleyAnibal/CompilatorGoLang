@@ -1379,7 +1379,11 @@ ruleExpression returns [EObject current=null]
 }:
 	(
 		((
-			ruleOpers
+			(
+				(
+					ruleOpers
+				)
+			)
 			    |
 			(
 				(ruleAndExpression)=>
@@ -1390,14 +1394,25 @@ ruleExpression returns [EObject current=null]
 		)
 		)=>
 		(
-			{
-				newCompositeNode(grammarAccess.getExpressionAccess().getOpersParserRuleCall_0_0());
-			}
-			this_Opers_0=ruleOpers
-			{
-				$current = $this_Opers_0.current;
-				afterParserOrEnumRuleCall();
-			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getExpressionAccess().getXOpersParserRuleCall_0_0_0());
+					}
+					lv_x_0_0=ruleOpers
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getExpressionRule());
+						}
+						set(
+							$current,
+							"x",
+							lv_x_0_0,
+							"org.xtext.go.Go.Opers");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
 			    |
 			(
 				(ruleAndExpression)=>
@@ -1500,26 +1515,44 @@ ruleOpers returns [EObject current=null]
 	(
 		(
 			(ruleSubMult)=>
-			{
-				newCompositeNode(grammarAccess.getOpersAccess().getAdditionParserRuleCall_0());
-			}
-			this_Addition_0=ruleAddition
-			{
-				$current = $this_Addition_0.current;
-				afterParserOrEnumRuleCall();
-			}
+			(
+				{
+					newCompositeNode(grammarAccess.getOpersAccess().getSumAdditionParserRuleCall_0_0());
+				}
+				lv_sum_0_0=ruleAddition
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getOpersRule());
+					}
+					set(
+						$current,
+						"sum",
+						lv_sum_0_0,
+						"org.xtext.go.Go.Addition");
+					afterParserOrEnumRuleCall();
+				}
+			)
 		)
 		    |
 		(
 			(ruleSubMult)=>
-			{
-				newCompositeNode(grammarAccess.getOpersAccess().getSubtrationParserRuleCall_1());
-			}
-			this_Subtration_1=ruleSubtration
-			{
-				$current = $this_Subtration_1.current;
-				afterParserOrEnumRuleCall();
-			}
+			(
+				{
+					newCompositeNode(grammarAccess.getOpersAccess().getSubSubtrationParserRuleCall_1_0());
+				}
+				lv_sub_1_0=ruleSubtration
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getOpersRule());
+					}
+					set(
+						$current,
+						"sub",
+						lv_sub_1_0,
+						"org.xtext.go.Go.Subtration");
+					afterParserOrEnumRuleCall();
+				}
+			)
 		)
 	)
 ;

@@ -16,6 +16,8 @@ import org.xtext.go.go.DecFunc
 import org.xtext.go.go.CallFunc
 import java.util.ArrayList
 import org.xtext.go.go.Expression
+import org.xtext.go.go.impl.ExpressionImpl
+import org.xtext.go.go.impl.LiteralImpl
 
 /**
  * This class contains custom validation rules. 
@@ -66,6 +68,20 @@ class GoValidator extends AbstractGoValidator {
 		return out;
 		
 	}
+	
+	
+	// obs.: algumas classes nao foram geradas como a Opers, entao,
+	// para contornar esse erro, na gramatica de expression, colocamos atributos como sum e sub em expression, para acessar esse tipo de tratamento.
+	@Check 
+	def checkArithmeticExp(ExpressionImpl exp) {
+		exp.add	// To DO
+	}
+	
+	@Check 
+	def checkLiterals(LiteralImpl lit) {
+		
+	}
+	
 	
 	@Check
 	def addFuncToImplements(DecFunc dec){

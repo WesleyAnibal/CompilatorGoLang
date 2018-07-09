@@ -65,7 +65,7 @@ ElseCondition:
 	(=>ELSE Open_Key then=Greeting*Closed_Key); 
   
 Expression:
-    =>(Opers | OrExpression | ID) 
+    =>(x=Opers | OrExpression | ID) 
 ;   
 
 CallFor :
@@ -73,7 +73,7 @@ CallFor :
 ;
 
 Opers returns Expression:
-	Addition |Subtration;
+	sum=Addition |sub=Subtration;
 	
 Addition returns Expression:
   =>SubMult  ({Addition.left=current} Plus right=SubMult )*;
@@ -125,7 +125,7 @@ DecFunc:
 ;
 	
 CallFunc:
-	nameFunc=ID Open_parentheses param=Params* Closed_parentheses
+	 nameFunc=ID Open_parentheses param=Params* Closed_parentheses
 ;
 
 //Tokens

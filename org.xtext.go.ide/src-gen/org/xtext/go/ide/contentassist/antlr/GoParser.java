@@ -134,7 +134,10 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getIfConditionAccess().getCondAssignment_1(), "rule__IfCondition__CondAssignment_1");
 					put(grammarAccess.getIfConditionAccess().getThenAssignment_3(), "rule__IfCondition__ThenAssignment_3");
 					put(grammarAccess.getElseConditionAccess().getThenAssignment_2(), "rule__ElseCondition__ThenAssignment_2");
+					put(grammarAccess.getExpressionAccess().getXAssignment_0_0(), "rule__Expression__XAssignment_0_0");
 					put(grammarAccess.getCallForAccess().getXAssignment_3(), "rule__CallFor__XAssignment_3");
+					put(grammarAccess.getOpersAccess().getSumAssignment_0(), "rule__Opers__SumAssignment_0");
+					put(grammarAccess.getOpersAccess().getSubAssignment_1(), "rule__Opers__SubAssignment_1");
 					put(grammarAccess.getAdditionAccess().getRightAssignment_1_2(), "rule__Addition__RightAssignment_1_2");
 					put(grammarAccess.getSubtrationAccess().getRightAssignment_1_2(), "rule__Subtration__RightAssignment_1_2");
 					put(grammarAccess.getMultiplicationAccess().getRightAssignment_1_2(), "rule__Multiplication__RightAssignment_1_2");

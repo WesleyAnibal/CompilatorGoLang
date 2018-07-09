@@ -741,13 +741,31 @@ public interface GoPackage extends EPackage
   int EXPRESSION__LEFT = VAR_FOR__LEFT;
 
   /**
+   * The feature id for the '<em><b>Sum</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__SUM = VAR_FOR_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__SUB = VAR_FOR_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESSION_FEATURE_COUNT = VAR_FOR_FEATURE_COUNT + 0;
+  int EXPRESSION_FEATURE_COUNT = VAR_FOR_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.operationsOneImpl <em>operations One</em>}' class.
@@ -989,6 +1007,24 @@ public interface GoPackage extends EPackage
   int ADDITION__LEFT = EXPRESSION__LEFT;
 
   /**
+   * The feature id for the '<em><b>Sum</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITION__SUM = EXPRESSION__SUM;
+
+  /**
+   * The feature id for the '<em><b>Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITION__SUB = EXPRESSION__SUB;
+
+  /**
    * The number of structural features of the '<em>Addition</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1051,6 +1087,24 @@ public interface GoPackage extends EPackage
    * @ordered
    */
   int SUBTRATION__LEFT = EXPRESSION__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Sum</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUBTRATION__SUM = EXPRESSION__SUM;
+
+  /**
+   * The feature id for the '<em><b>Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUBTRATION__SUB = EXPRESSION__SUB;
 
   /**
    * The number of structural features of the '<em>Subtration</em>' class.
@@ -1117,6 +1171,24 @@ public interface GoPackage extends EPackage
   int MULTIPLICATION__LEFT = EXPRESSION__LEFT;
 
   /**
+   * The feature id for the '<em><b>Sum</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATION__SUM = EXPRESSION__SUM;
+
+  /**
+   * The feature id for the '<em><b>Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATION__SUB = EXPRESSION__SUB;
+
+  /**
    * The number of structural features of the '<em>Multiplication</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1179,6 +1251,24 @@ public interface GoPackage extends EPackage
    * @ordered
    */
   int DIVISION__LEFT = EXPRESSION__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Sum</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIVISION__SUM = EXPRESSION__SUM;
+
+  /**
+   * The feature id for the '<em><b>Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIVISION__SUB = EXPRESSION__SUB;
 
   /**
    * The number of structural features of the '<em>Division</em>' class.
@@ -1245,6 +1335,24 @@ public interface GoPackage extends EPackage
   int OR_EXPRESSION__LEFT = EXPRESSION__LEFT;
 
   /**
+   * The feature id for the '<em><b>Sum</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OR_EXPRESSION__SUM = EXPRESSION__SUM;
+
+  /**
+   * The feature id for the '<em><b>Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OR_EXPRESSION__SUB = EXPRESSION__SUB;
+
+  /**
    * The number of structural features of the '<em>Or Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1307,6 +1415,24 @@ public interface GoPackage extends EPackage
    * @ordered
    */
   int AND_EXPRESSION__LEFT = EXPRESSION__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Sum</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND_EXPRESSION__SUM = EXPRESSION__SUM;
+
+  /**
+   * The feature id for the '<em><b>Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND_EXPRESSION__SUB = EXPRESSION__SUB;
 
   /**
    * The number of structural features of the '<em>And Expression</em>' class.
@@ -1373,6 +1499,24 @@ public interface GoPackage extends EPackage
   int COMPARISON_EXPRESSION__LEFT = EXPRESSION__LEFT;
 
   /**
+   * The feature id for the '<em><b>Sum</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPARISON_EXPRESSION__SUM = EXPRESSION__SUM;
+
+  /**
+   * The feature id for the '<em><b>Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPARISON_EXPRESSION__SUB = EXPRESSION__SUB;
+
+  /**
    * The number of structural features of the '<em>Comparison Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1435,6 +1579,24 @@ public interface GoPackage extends EPackage
    * @ordered
    */
   int LITERAL__LEFT = EXPRESSION__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Sum</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL__SUM = EXPRESSION__SUM;
+
+  /**
+   * The feature id for the '<em><b>Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL__SUB = EXPRESSION__SUB;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1846,6 +2008,28 @@ public interface GoPackage extends EPackage
    * @generated
    */
   EClass getExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Expression#getSum <em>Sum</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Sum</em>'.
+   * @see org.xtext.go.go.Expression#getSum()
+   * @see #getExpression()
+   * @generated
+   */
+  EReference getExpression_Sum();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Expression#getSub <em>Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Sub</em>'.
+   * @see org.xtext.go.go.Expression#getSub()
+   * @see #getExpression()
+   * @generated
+   */
+  EReference getExpression_Sub();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.CallFor <em>Call For</em>}'.
@@ -2478,6 +2662,22 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EClass EXPRESSION = eINSTANCE.getExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Sum</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__SUM = eINSTANCE.getExpression_Sum();
+
+    /**
+     * The meta object literal for the '<em><b>Sub</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__SUB = eINSTANCE.getExpression_Sub();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.CallForImpl <em>Call For</em>}' class.

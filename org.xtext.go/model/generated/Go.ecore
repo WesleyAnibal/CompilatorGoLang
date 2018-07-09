@@ -64,7 +64,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="then" eType="#//Greeting"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//varFor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//varFor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sum" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sub" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CallFor" eSuperTypes="#//Greeting">
     <eStructuralFeatures xsi:type="ecore:EReference" name="x" eType="#//Greeting"
         containment="true"/>

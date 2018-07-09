@@ -1766,9 +1766,9 @@ rule__Expression__Alternatives_0
 	}
 :
 	(
-		{ before(grammarAccess.getExpressionAccess().getOpersParserRuleCall_0_0()); }
-		ruleOpers
-		{ after(grammarAccess.getExpressionAccess().getOpersParserRuleCall_0_0()); }
+		{ before(grammarAccess.getExpressionAccess().getXAssignment_0_0()); }
+		(rule__Expression__XAssignment_0_0)
+		{ after(grammarAccess.getExpressionAccess().getXAssignment_0_0()); }
 	)
 	|
 	(
@@ -1793,15 +1793,15 @@ rule__Opers__Alternatives
 	}
 :
 	(
-		{ before(grammarAccess.getOpersAccess().getAdditionParserRuleCall_0()); }
-		(ruleAddition)
-		{ after(grammarAccess.getOpersAccess().getAdditionParserRuleCall_0()); }
+		{ before(grammarAccess.getOpersAccess().getSumAssignment_0()); }
+		(rule__Opers__SumAssignment_0)
+		{ after(grammarAccess.getOpersAccess().getSumAssignment_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getOpersAccess().getSubtrationParserRuleCall_1()); }
-		(ruleSubtration)
-		{ after(grammarAccess.getOpersAccess().getSubtrationParserRuleCall_1()); }
+		{ before(grammarAccess.getOpersAccess().getSubAssignment_1()); }
+		(rule__Opers__SubAssignment_1)
+		{ after(grammarAccess.getOpersAccess().getSubAssignment_1()); }
 	)
 ;
 finally {
@@ -6429,6 +6429,21 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__Expression__XAssignment_0_0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getExpressionAccess().getXOpersParserRuleCall_0_0_0()); }
+		ruleOpers
+		{ after(grammarAccess.getExpressionAccess().getXOpersParserRuleCall_0_0_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__CallFor__XAssignment_3
 	@init {
 		int stackSize = keepStackSize();
@@ -6438,6 +6453,36 @@ rule__CallFor__XAssignment_3
 		{ before(grammarAccess.getCallForAccess().getXGreetingParserRuleCall_3_0()); }
 		ruleGreeting
 		{ after(grammarAccess.getCallForAccess().getXGreetingParserRuleCall_3_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Opers__SumAssignment_0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getOpersAccess().getSumAdditionParserRuleCall_0_0()); }
+		ruleAddition
+		{ after(grammarAccess.getOpersAccess().getSumAdditionParserRuleCall_0_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Opers__SubAssignment_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getOpersAccess().getSubSubtrationParserRuleCall_1_0()); }
+		ruleSubtration
+		{ after(grammarAccess.getOpersAccess().getSubSubtrationParserRuleCall_1_0()); }
 	)
 ;
 finally {

@@ -12,7 +12,10 @@ import org.eclipse.xtext.validation.Check;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.DecVar;
+import org.xtext.go.go.Expression;
 import org.xtext.go.go.GoPackage;
+import org.xtext.go.go.impl.ExpressionImpl;
+import org.xtext.go.go.impl.LiteralImpl;
 import org.xtext.go.validation.AbstractGoValidator;
 
 /**
@@ -60,6 +63,16 @@ public class GoValidator extends AbstractGoValidator {
       out = true;
     }
     return out;
+  }
+  
+  @Check
+  public Expression checkArithmeticExp(final ExpressionImpl exp) {
+    return exp.getAdd();
+  }
+  
+  @Check
+  public Object checkLiterals(final LiteralImpl lit) {
+    return null;
   }
   
   @Check

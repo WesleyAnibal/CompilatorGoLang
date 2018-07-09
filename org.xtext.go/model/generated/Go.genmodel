@@ -54,7 +54,10 @@
     <genClasses ecoreClass="Go.ecore#//ElseCondition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//ElseCondition/then"/>
     </genClasses>
-    <genClasses ecoreClass="Go.ecore#//Expression"/>
+    <genClasses ecoreClass="Go.ecore#//Expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Expression/sum"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Expression/sub"/>
+    </genClasses>
     <genClasses ecoreClass="Go.ecore#//CallFor">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//CallFor/x"/>
     </genClasses>
