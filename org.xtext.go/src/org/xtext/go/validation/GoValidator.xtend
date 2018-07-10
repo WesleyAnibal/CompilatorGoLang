@@ -18,6 +18,7 @@ import java.util.ArrayList
 import org.xtext.go.go.Expression
 import org.xtext.go.go.impl.ExpressionImpl
 import org.xtext.go.go.impl.LiteralImpl
+import java.lang.reflect.Type
 
 /**
  * This class contains custom validation rules. 
@@ -78,7 +79,7 @@ class GoValidator extends AbstractGoValidator {
 	}
 	
 	@Check 
-	def checkLiterals(LiteralImpl lit) {
+	def checkLiteralsType(Type typeNumber, Type typeBoolean, Type typeString) {
 		
 	}
 	

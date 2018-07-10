@@ -4,6 +4,7 @@
 package org.xtext.go.validation;
 
 import com.google.common.base.Objects;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,10 +13,8 @@ import org.eclipse.xtext.validation.Check;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.DecVar;
-import org.xtext.go.go.Expression;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.impl.ExpressionImpl;
-import org.xtext.go.go.impl.LiteralImpl;
 import org.xtext.go.validation.AbstractGoValidator;
 
 /**
@@ -66,12 +65,13 @@ public class GoValidator extends AbstractGoValidator {
   }
   
   @Check
-  public Expression checkArithmeticExp(final ExpressionImpl exp) {
-    return exp.getAdd();
+  public Object checkArithmeticExp(final ExpressionImpl exp) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field add is undefined for the type ExpressionImpl");
   }
   
   @Check
-  public Object checkLiterals(final LiteralImpl lit) {
+  public Object checkLiteralsType(final Type typeNumber, final Type typeBoolean, final Type typeString) {
     return null;
   }
   
