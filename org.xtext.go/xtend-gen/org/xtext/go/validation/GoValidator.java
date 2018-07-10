@@ -66,12 +66,46 @@ public class GoValidator extends AbstractGoValidator {
   
   @Check
   public Object checkArithmeticExp(final ExpressionImpl exp) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field add is undefined for the type ExpressionImpl");
+    return null;
   }
   
   @Check
   public Object checkLiteralsType(final Type typeNumber, final Type typeBoolean, final Type typeString) {
+    return null;
+  }
+  
+  @Check
+  public Object checkExistingTypes() {
+    return null;
+  }
+  
+  @Check
+  public Object checkaAstractions() {
+    return null;
+  }
+  
+  @Check
+  public Object checkVariableUses() {
+    return null;
+  }
+  
+  @Check
+  public Object atribuitionComands() {
+    return null;
+  }
+  
+  @Check
+  public Object checkFunctions() {
+    return null;
+  }
+  
+  @Check
+  public Object checkBooleanExpressions() {
+    return null;
+  }
+  
+  @Check
+  public Object checkSwitch() {
     return null;
   }
   

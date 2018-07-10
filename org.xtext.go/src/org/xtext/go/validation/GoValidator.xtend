@@ -70,20 +70,56 @@ class GoValidator extends AbstractGoValidator {
 		
 	}
 	
-	
-	// obs.: algumas classes nao foram geradas como a Opers, entao,
-	// para contornar esse erro, na gramatica de expression, colocamos atributos como sum e sub em expression, para acessar esse tipo de tratamento.
+	// escopo comum
 	@Check 
 	def checkArithmeticExp(ExpressionImpl exp) {
-		exp.add	// To DO
+		// obs.: algumas classes nao foram geradas como a Opers, entao,
+		// para contornar esse erro, na gramatica de expression, colocamos atributos como sum e sub em expression, para acessar esse tipo de tratamento.
+		// TO DO
 	}
 	
 	@Check 
 	def checkLiteralsType(Type typeNumber, Type typeBoolean, Type typeString) {
-		
+		//TO DO
+	}
+	
+	@Check
+	def checkExistingTypes() {
+		//TO DO	
+	}
+	
+	@Check
+	def checkaAstractions() {
+		//TO DO
+	}
+	
+	@Check
+	def checkVariableUses() {
+		//TO DO
+	}
+	
+	@Check
+	def atribuitionComands() {
+		//TO DO
 	}
 	
 	
+	// escopo C
+	@Check
+	def checkFunctions() {
+		//TO DO
+	}
+	
+	@Check
+	def checkBooleanExpressions() {
+		//TO DO
+	}
+	
+	@Check
+	def checkSwitch() {
+		//TO DO
+	}
+		
 	@Check
 	def addFuncToImplements(DecFunc dec){
 		funcImplements.put(dec.name.toString(), new ArrayList<String>());
