@@ -89,7 +89,7 @@ class GoValidator extends AbstractGoValidator {
 	}
 	
 	@Check
-	def checkaAstractions() {
+	def checkAbstractions() {
 		//TO DO
 	}
 	

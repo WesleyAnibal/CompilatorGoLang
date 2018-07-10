@@ -80,7 +80,7 @@ public class GoValidator extends AbstractGoValidator {
   }
   
   @Check
-  public Object checkaAstractions() {
+  public Object checkAbstractions() {
     return null;
   }
   
