@@ -27,13 +27,13 @@ import org.xtext.go.go.varFor;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.varForImpl#getVar <em>Var</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.varForImpl#getAtrb <em>Atrb</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.varForImpl#getRight <em>Right</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.varForImpl#getLeft <em>Left</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -11,12 +11,12 @@ package org.xtext.go.go;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.SwitchCase#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.go.go.SwitchCase#getCas <em>Cas</em>}</li>
  *   <li>{@link org.xtext.go.go.SwitchCase#getK <em>K</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.xtext.go.go.GoPackage#getSwitchCase()
  * @model

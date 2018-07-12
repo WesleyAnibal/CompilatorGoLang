@@ -22,12 +22,12 @@ import org.xtext.go.go.SwitchCase;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.SwitchCaseImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.SwitchCaseImpl#getCas <em>Cas</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.SwitchCaseImpl#getK <em>K</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

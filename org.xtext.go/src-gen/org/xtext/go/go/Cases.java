@@ -12,11 +12,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.Cases#getX <em>X</em>}</li>
  *   <li>{@link org.xtext.go.go.Cases#getV <em>V</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.xtext.go.go.GoPackage#getCases()
  * @model

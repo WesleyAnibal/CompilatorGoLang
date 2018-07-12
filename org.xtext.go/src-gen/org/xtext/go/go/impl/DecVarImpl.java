@@ -3,19 +3,17 @@
  */
 package org.xtext.go.go.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
-
+import org.xtext.go.go.AtribVar;
 import org.xtext.go.go.DecVar;
+import org.xtext.go.go.Decl;
 import org.xtext.go.go.GoPackage;
 
 /**
@@ -24,56 +22,35 @@ import org.xtext.go.go.GoPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getVars <em>Vars</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getAtrb <em>Atrb</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getDeclaration <em>Declaration</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getAssignment <em>Assignment</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class DecVarImpl extends GreetingImpl implements DecVar
 {
   /**
-   * The cached value of the '{@link #getVars() <em>Vars</em>}' attribute list.
+   * The cached value of the '{@link #getDeclaration() <em>Declaration</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVars()
+   * @see #getDeclaration()
    * @generated
    * @ordered
    */
-  protected EList<String> vars;
+  protected Decl declaration;
 
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The cached value of the '{@link #getAssignment() <em>Assignment</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getAssignment()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
-  protected String type = TYPE_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getAtrb() <em>Atrb</em>}' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAtrb()
-   * @generated
-   * @ordered
-   */
-  protected EList<String> atrb;
+  protected AtribVar assignment;
 
   /**
    * <!-- begin-user-doc -->
@@ -101,13 +78,9 @@ public class DecVarImpl extends GreetingImpl implements DecVar
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getVars()
+  public Decl getDeclaration()
   {
-    if (vars == null)
-    {
-      vars = new EDataTypeEList<String>(String.class, this, GoPackage.DEC_VAR__VARS);
-    }
-    return vars;
+    return declaration;
   }
 
   /**
@@ -115,22 +88,16 @@ public class DecVarImpl extends GreetingImpl implements DecVar
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getType()
+  public NotificationChain basicSetDeclaration(Decl newDeclaration, NotificationChain msgs)
   {
-    return type;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setType(String newType)
-  {
-    String oldType = type;
-    type = newType;
+    Decl oldDeclaration = declaration;
+    declaration = newDeclaration;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DEC_VAR__TYPE, oldType, type));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.DEC_VAR__DECLARATION, oldDeclaration, newDeclaration);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -138,13 +105,86 @@ public class DecVarImpl extends GreetingImpl implements DecVar
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getAtrb()
+  public void setDeclaration(Decl newDeclaration)
   {
-    if (atrb == null)
+    if (newDeclaration != declaration)
     {
-      atrb = new EDataTypeEList<String>(String.class, this, GoPackage.DEC_VAR__ATRB);
+      NotificationChain msgs = null;
+      if (declaration != null)
+        msgs = ((InternalEObject)declaration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.DEC_VAR__DECLARATION, null, msgs);
+      if (newDeclaration != null)
+        msgs = ((InternalEObject)newDeclaration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.DEC_VAR__DECLARATION, null, msgs);
+      msgs = basicSetDeclaration(newDeclaration, msgs);
+      if (msgs != null) msgs.dispatch();
     }
-    return atrb;
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DEC_VAR__DECLARATION, newDeclaration, newDeclaration));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AtribVar getAssignment()
+  {
+    return assignment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAssignment(AtribVar newAssignment, NotificationChain msgs)
+  {
+    AtribVar oldAssignment = assignment;
+    assignment = newAssignment;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.DEC_VAR__ASSIGNMENT, oldAssignment, newAssignment);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAssignment(AtribVar newAssignment)
+  {
+    if (newAssignment != assignment)
+    {
+      NotificationChain msgs = null;
+      if (assignment != null)
+        msgs = ((InternalEObject)assignment).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.DEC_VAR__ASSIGNMENT, null, msgs);
+      if (newAssignment != null)
+        msgs = ((InternalEObject)newAssignment).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.DEC_VAR__ASSIGNMENT, null, msgs);
+      msgs = basicSetAssignment(newAssignment, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DEC_VAR__ASSIGNMENT, newAssignment, newAssignment));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GoPackage.DEC_VAR__DECLARATION:
+        return basicSetDeclaration(null, msgs);
+      case GoPackage.DEC_VAR__ASSIGNMENT:
+        return basicSetAssignment(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -157,12 +197,10 @@ public class DecVarImpl extends GreetingImpl implements DecVar
   {
     switch (featureID)
     {
-      case GoPackage.DEC_VAR__VARS:
-        return getVars();
-      case GoPackage.DEC_VAR__TYPE:
-        return getType();
-      case GoPackage.DEC_VAR__ATRB:
-        return getAtrb();
+      case GoPackage.DEC_VAR__DECLARATION:
+        return getDeclaration();
+      case GoPackage.DEC_VAR__ASSIGNMENT:
+        return getAssignment();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -172,22 +210,16 @@ public class DecVarImpl extends GreetingImpl implements DecVar
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case GoPackage.DEC_VAR__VARS:
-        getVars().clear();
-        getVars().addAll((Collection<? extends String>)newValue);
+      case GoPackage.DEC_VAR__DECLARATION:
+        setDeclaration((Decl)newValue);
         return;
-      case GoPackage.DEC_VAR__TYPE:
-        setType((String)newValue);
-        return;
-      case GoPackage.DEC_VAR__ATRB:
-        getAtrb().clear();
-        getAtrb().addAll((Collection<? extends String>)newValue);
+      case GoPackage.DEC_VAR__ASSIGNMENT:
+        setAssignment((AtribVar)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -203,14 +235,11 @@ public class DecVarImpl extends GreetingImpl implements DecVar
   {
     switch (featureID)
     {
-      case GoPackage.DEC_VAR__VARS:
-        getVars().clear();
+      case GoPackage.DEC_VAR__DECLARATION:
+        setDeclaration((Decl)null);
         return;
-      case GoPackage.DEC_VAR__TYPE:
-        setType(TYPE_EDEFAULT);
-        return;
-      case GoPackage.DEC_VAR__ATRB:
-        getAtrb().clear();
+      case GoPackage.DEC_VAR__ASSIGNMENT:
+        setAssignment((AtribVar)null);
         return;
     }
     super.eUnset(featureID);
@@ -226,35 +255,12 @@ public class DecVarImpl extends GreetingImpl implements DecVar
   {
     switch (featureID)
     {
-      case GoPackage.DEC_VAR__VARS:
-        return vars != null && !vars.isEmpty();
-      case GoPackage.DEC_VAR__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-      case GoPackage.DEC_VAR__ATRB:
-        return atrb != null && !atrb.isEmpty();
+      case GoPackage.DEC_VAR__DECLARATION:
+        return declaration != null;
+      case GoPackage.DEC_VAR__ASSIGNMENT:
+        return assignment != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (vars: ");
-    result.append(vars);
-    result.append(", type: ");
-    result.append(type);
-    result.append(", atrb: ");
-    result.append(atrb);
-    result.append(')');
-    return result.toString();
   }
 
 } //DecVarImpl

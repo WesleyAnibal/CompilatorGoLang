@@ -11,11 +11,11 @@ package org.xtext.go.go;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.Expression#getSum <em>Sum</em>}</li>
  *   <li>{@link org.xtext.go.go.Expression#getSub <em>Sub</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.xtext.go.go.GoPackage#getExpression()
  * @model

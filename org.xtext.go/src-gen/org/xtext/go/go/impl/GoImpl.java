@@ -27,10 +27,10 @@ import org.xtext.go.go.Greeting;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.GoImpl#getElements <em>Elements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

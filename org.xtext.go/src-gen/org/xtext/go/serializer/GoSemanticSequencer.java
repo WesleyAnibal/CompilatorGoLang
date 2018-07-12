@@ -16,6 +16,8 @@ import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequence
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.go.go.Addition;
 import org.xtext.go.go.AndExpression;
+import org.xtext.go.go.Atrib;
+import org.xtext.go.go.AtribVar;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.Cases;
@@ -89,6 +91,12 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case GoPackage.ATRIB:
+				sequence_Atrib(context, (Atrib) semanticObject); 
+				return; 
+			case GoPackage.ATRIB_VAR:
+				sequence_AtribVar(context, (AtribVar) semanticObject); 
+				return; 
 			case GoPackage.CALL_FOR:
 				sequence_CallFor(context, (CallFor) semanticObject); 
 				return; 
@@ -357,6 +365,30 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     AtribVar returns AtribVar
+	 *
+	 * Constraint:
+	 *     (vars+=ID vars+=ID* type=Types ((atrb+=Atri | atrb+=ID) atrb+=Atri? (atrb+=ID? atrb+=Atri?)*)?)
+	 */
+	protected void sequence_AtribVar(ISerializationContext context, AtribVar semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Atrib returns Atrib
+	 *
+	 * Constraint:
+	 *     (var=ID type=Types (atrib=Atri | atrib=ID))
+	 */
+	protected void sequence_Atrib(ISerializationContext context, Atrib semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Greeting returns CallFor
 	 *     CallFor returns CallFor
 	 *
@@ -554,7 +586,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DecVar returns DecVar
 	 *
 	 * Constraint:
-	 *     (vars+=ID vars+=ID* type=Types ((atrb+=Atri | atrb+=ID) atrb+=Atri? (atrb+=ID? atrb+=Atri?)*)?)
+	 *     (declaration=Decl | assignment=AtribVar)
 	 */
 	protected void sequence_DecVar(ISerializationContext context, DecVar semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -575,9 +607,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     Greeting returns Decl
 	 *     Decl returns Decl
-	 *     DecVar returns Decl
 	 *
 	 * Constraint:
 	 *     (name=ID type=Types)
@@ -586,8 +616,8 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.DECL__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.DECL__NAME));
-			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.DEC_VAR__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.DEC_VAR__TYPE));
+			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.DECL__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.DECL__TYPE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDeclAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
@@ -856,7 +886,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Params returns Params
 	 *
 	 * Constraint:
-	 *     (params+=ID params+=ID*)
+	 *     (params+=ID type+=Types (params+=ID type+=Types)*)
 	 */
 	protected void sequence_Params(ISerializationContext context, Params semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

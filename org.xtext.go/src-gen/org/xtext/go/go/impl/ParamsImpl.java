@@ -22,10 +22,11 @@ import org.xtext.go.go.Params;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.ParamsImpl#getParams <em>Params</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.ParamsImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -40,6 +41,16 @@ public class ParamsImpl extends MinimalEObjectImpl.Container implements Params
    * @ordered
    */
   protected EList<String> params;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> type;
 
   /**
    * <!-- begin-user-doc -->
@@ -81,6 +92,20 @@ public class ParamsImpl extends MinimalEObjectImpl.Container implements Params
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<String> getType()
+  {
+    if (type == null)
+    {
+      type = new EDataTypeEList<String>(String.class, this, GoPackage.PARAMS__TYPE);
+    }
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -88,6 +113,8 @@ public class ParamsImpl extends MinimalEObjectImpl.Container implements Params
     {
       case GoPackage.PARAMS__PARAMS:
         return getParams();
+      case GoPackage.PARAMS__TYPE:
+        return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -107,6 +134,10 @@ public class ParamsImpl extends MinimalEObjectImpl.Container implements Params
         getParams().clear();
         getParams().addAll((Collection<? extends String>)newValue);
         return;
+      case GoPackage.PARAMS__TYPE:
+        getType().clear();
+        getType().addAll((Collection<? extends String>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -124,6 +155,9 @@ public class ParamsImpl extends MinimalEObjectImpl.Container implements Params
       case GoPackage.PARAMS__PARAMS:
         getParams().clear();
         return;
+      case GoPackage.PARAMS__TYPE:
+        getType().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -140,6 +174,8 @@ public class ParamsImpl extends MinimalEObjectImpl.Container implements Params
     {
       case GoPackage.PARAMS__PARAMS:
         return params != null && !params.isEmpty();
+      case GoPackage.PARAMS__TYPE:
+        return type != null && !type.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -157,6 +193,8 @@ public class ParamsImpl extends MinimalEObjectImpl.Container implements Params
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (params: ");
     result.append(params);
+    result.append(", type: ");
+    result.append(type);
     result.append(')');
     return result.toString();
   }

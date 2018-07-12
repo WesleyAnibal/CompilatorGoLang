@@ -12,13 +12,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.varFor#getVar <em>Var</em>}</li>
  *   <li>{@link org.xtext.go.go.varFor#getAtrb <em>Atrb</em>}</li>
  *   <li>{@link org.xtext.go.go.varFor#getRight <em>Right</em>}</li>
  *   <li>{@link org.xtext.go.go.varFor#getLeft <em>Left</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.xtext.go.go.GoPackage#getvarFor()
  * @model

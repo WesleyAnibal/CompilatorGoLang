@@ -9,11 +9,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtext.validation.Check;
+import org.xtext.go.go.AtribVar;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.DecVar;
+import org.xtext.go.go.Decl;
 import org.xtext.go.go.GoPackage;
+import org.xtext.go.go.impl.DecVarImpl;
 import org.xtext.go.go.impl.ExpressionImpl;
 import org.xtext.go.validation.AbstractGoValidator;
 
@@ -24,27 +28,28 @@ import org.xtext.go.validation.AbstractGoValidator;
  */
 @SuppressWarnings("all")
 public class GoValidator extends AbstractGoValidator {
-  public static Map<String, List<String>> funcImplements = new HashMap<String, List<String>>();
+  public final static String SEMANTIC_ERROR = "Erro Semântico: ";
+  
+  public static Map<String, DecFunc> funcImplements = new HashMap<String, DecFunc>();
+  
+  public static Map<String, List<DecVar>> variablesDeclarationMap = new HashMap<String, List<DecVar>>();
   
   @Check
   public void checkGreetingStartsWithCapital(final DecVar g) {
-    int _size = g.getAtrb().size();
-    boolean _greaterThan = (_size > 0);
-    if (_greaterThan) {
-      int _size_1 = g.getVars().size();
-      int _size_2 = g.getAtrb().size();
-      boolean _lessThan = (_size_1 < _size_2);
-      if (_lessThan) {
-        this.error("número de atribuições maior que variaveis", GoPackage.Literals.DEC_VAR__VARS);
-      } else {
-        int _size_3 = g.getVars().size();
-        int _size_4 = g.getAtrb().size();
-        boolean _greaterThan_1 = (_size_3 > _size_4);
-        if (_greaterThan_1) {
-          this.error("número de atribuições menor que variaveis", GoPackage.Literals.DEC_VAR__VARS);
-        }
-      }
-    }
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field atrb is undefined for the type DecVar"
+      + "\nThe method or field vars is undefined for the type DecVar"
+      + "\nThe method or field atrb is undefined for the type DecVar"
+      + "\nThe method or field vars is undefined for the type DecVar"
+      + "\nThe method or field atrb is undefined for the type DecVar"
+      + "\nsize cannot be resolved"
+      + "\n> cannot be resolved"
+      + "\nsize cannot be resolved"
+      + "\n< cannot be resolved"
+      + "\nsize cannot be resolved"
+      + "\nsize cannot be resolved"
+      + "\n> cannot be resolved"
+      + "\nsize cannot be resolved");
   }
   
   public void checkIfCallFuncIsValid(final CallFunc cf) {
@@ -56,12 +61,57 @@ public class GoValidator extends AbstractGoValidator {
   
   public boolean checkIfCallFuncIdExists(final String funcName) {
     boolean out = false;
-    List<String> arr = GoValidator.funcImplements.get(funcName);
+    DecFunc arr = GoValidator.funcImplements.get(funcName);
     boolean _notEquals = (!Objects.equal(arr, null));
     if (_notEquals) {
       out = true;
     }
     return out;
+  }
+  
+  /**
+   * This function add in the map all the variables in the source code
+   */
+  @Check
+  public Boolean addVariableDeclarations(final DecVarImpl dec) {
+    boolean _xifexpression = false;
+    AtribVar _assignment = dec.getAssignment();
+    boolean _notEquals = (!Objects.equal(_assignment, null));
+    if (_notEquals) {
+      this.addAtribVarInMap(dec.getAssignment());
+    } else {
+      boolean _xifexpression_1 = false;
+      Decl _declaration = dec.getDeclaration();
+      boolean _notEquals_1 = (!Objects.equal(_declaration, null));
+      if (_notEquals_1) {
+        _xifexpression_1 = this.addDeclarionVarInMap(dec.getDeclaration());
+      }
+      _xifexpression = _xifexpression_1;
+    }
+    return Boolean.valueOf(_xifexpression);
+  }
+  
+  public void addAtribVarInMap(final AtribVar atrib) {
+    EList<String> _vars = atrib.getVars();
+    for (final String id : _vars) {
+      {
+        String _string = id.toString();
+        ArrayList<DecVar> _arrayList = new ArrayList<DecVar>();
+        GoValidator.variablesDeclarationMap.put(_string, _arrayList);
+        GoValidator.variablesDeclarationMap.get(id.toString()).add(((DecVar) atrib));
+      }
+    }
+  }
+  
+  public boolean addDeclarionVarInMap(final Decl dec) {
+    boolean _xblockexpression = false;
+    {
+      String _string = dec.getName().toString();
+      ArrayList<DecVar> _arrayList = new ArrayList<DecVar>();
+      GoValidator.variablesDeclarationMap.put(_string, _arrayList);
+      _xblockexpression = GoValidator.variablesDeclarationMap.get(dec.getName().toString()).add(((DecVar) dec));
+    }
+    return _xblockexpression;
   }
   
   @Check
@@ -110,18 +160,30 @@ public class GoValidator extends AbstractGoValidator {
   }
   
   @Check
-  public List<String> addFuncToImplements(final DecFunc dec) {
-    String _string = dec.getName().toString();
-    ArrayList<String> _arrayList = new ArrayList<String>();
-    return GoValidator.funcImplements.put(_string, _arrayList);
+  public DecFunc addFuncToImplements(final DecFunc dec) {
+    return GoValidator.funcImplements.put(dec.getName().toString(), dec);
   }
   
   @Check
-  public void callFunc(final CallFunc func) {
-    boolean _containsKey = GoValidator.funcImplements.containsKey(func.getNameFunc());
+  public void callFunc(final CallFunc callFunc) {
+    boolean _containsKey = GoValidator.funcImplements.containsKey(callFunc.getNameFunc());
     boolean _not = (!_containsKey);
     if (_not) {
-      this.error("erro semântico: função não existe", GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+      this.error((GoValidator.SEMANTIC_ERROR + "função não existe"), GoPackage.Literals.CALL_FUNC__NAME_FUNC);
     }
+    DecFunc func = GoValidator.funcImplements.get(callFunc.getNameFunc());
+    int _size = callFunc.getParam().getParams().size();
+    int _size_1 = func.getParam().getParams().size();
+    boolean _notEquals = (_size != _size_1);
+    if (_notEquals) {
+      this.error((GoValidator.SEMANTIC_ERROR + "Diferença entre a quantidade de parâmetros"), GoPackage.Literals.CALL_FUNC__PARAM);
+    }
+  }
+  
+  public void getTiposParametros(final CallFunc call) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nno viable alternative at input \'}\'"
+      + "\nType mismatch: cannot convert from element type String to Types"
+      + "\nType mismatch: cannot convert from EList<String> to Iterable<? extends Types> | Types[]");
   }
 }

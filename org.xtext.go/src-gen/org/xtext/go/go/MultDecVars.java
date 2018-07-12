@@ -11,11 +11,11 @@ package org.xtext.go.go;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.MultDecVars#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.go.go.MultDecVars#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.xtext.go.go.GoPackage#getMultDecVars()
  * @model

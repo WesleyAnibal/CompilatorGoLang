@@ -23,11 +23,11 @@ import org.xtext.go.go.Greeting;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.CasesImpl#getX <em>X</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.CasesImpl#getV <em>V</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

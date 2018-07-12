@@ -14,8 +14,6 @@ import org.xtext.go.go.Greeting;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Greeting</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

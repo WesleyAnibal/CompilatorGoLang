@@ -10,44 +10,45 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.go.go.Decl;
+import org.xtext.go.go.Atrib;
 import org.xtext.go.go.GoPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Decl</b></em>'.
+ * An implementation of the model object '<em><b>Atrib</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.go.go.impl.DeclImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.DeclImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.AtribImpl#getVar <em>Var</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.AtribImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.AtribImpl#getAtrib <em>Atrib</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DeclImpl extends MinimalEObjectImpl.Container implements Decl
+public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getVar() <em>Var</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getVar()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String VAR_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getVar() <em>Var</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getVar()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String var = VAR_EDEFAULT;
 
   /**
    * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -70,11 +71,31 @@ public class DeclImpl extends MinimalEObjectImpl.Container implements Decl
   protected String type = TYPE_EDEFAULT;
 
   /**
+   * The default value of the '{@link #getAtrib() <em>Atrib</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAtrib()
+   * @generated
+   * @ordered
+   */
+  protected static final String ATRIB_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getAtrib() <em>Atrib</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAtrib()
+   * @generated
+   * @ordered
+   */
+  protected String atrib = ATRIB_EDEFAULT;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DeclImpl()
+  protected AtribImpl()
   {
     super();
   }
@@ -87,7 +108,7 @@ public class DeclImpl extends MinimalEObjectImpl.Container implements Decl
   @Override
   protected EClass eStaticClass()
   {
-    return GoPackage.Literals.DECL;
+    return GoPackage.Literals.ATRIB;
   }
 
   /**
@@ -95,9 +116,9 @@ public class DeclImpl extends MinimalEObjectImpl.Container implements Decl
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public String getVar()
   {
-    return name;
+    return var;
   }
 
   /**
@@ -105,12 +126,12 @@ public class DeclImpl extends MinimalEObjectImpl.Container implements Decl
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setVar(String newVar)
   {
-    String oldName = name;
-    name = newName;
+    String oldVar = var;
+    var = newVar;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DECL__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.ATRIB__VAR, oldVar, var));
   }
 
   /**
@@ -133,7 +154,30 @@ public class DeclImpl extends MinimalEObjectImpl.Container implements Decl
     String oldType = type;
     type = newType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DECL__TYPE, oldType, type));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.ATRIB__TYPE, oldType, type));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getAtrib()
+  {
+    return atrib;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAtrib(String newAtrib)
+  {
+    String oldAtrib = atrib;
+    atrib = newAtrib;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.ATRIB__ATRIB, oldAtrib, atrib));
   }
 
   /**
@@ -146,10 +190,12 @@ public class DeclImpl extends MinimalEObjectImpl.Container implements Decl
   {
     switch (featureID)
     {
-      case GoPackage.DECL__NAME:
-        return getName();
-      case GoPackage.DECL__TYPE:
+      case GoPackage.ATRIB__VAR:
+        return getVar();
+      case GoPackage.ATRIB__TYPE:
         return getType();
+      case GoPackage.ATRIB__ATRIB:
+        return getAtrib();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -164,11 +210,14 @@ public class DeclImpl extends MinimalEObjectImpl.Container implements Decl
   {
     switch (featureID)
     {
-      case GoPackage.DECL__NAME:
-        setName((String)newValue);
+      case GoPackage.ATRIB__VAR:
+        setVar((String)newValue);
         return;
-      case GoPackage.DECL__TYPE:
+      case GoPackage.ATRIB__TYPE:
         setType((String)newValue);
+        return;
+      case GoPackage.ATRIB__ATRIB:
+        setAtrib((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -184,11 +233,14 @@ public class DeclImpl extends MinimalEObjectImpl.Container implements Decl
   {
     switch (featureID)
     {
-      case GoPackage.DECL__NAME:
-        setName(NAME_EDEFAULT);
+      case GoPackage.ATRIB__VAR:
+        setVar(VAR_EDEFAULT);
         return;
-      case GoPackage.DECL__TYPE:
+      case GoPackage.ATRIB__TYPE:
         setType(TYPE_EDEFAULT);
+        return;
+      case GoPackage.ATRIB__ATRIB:
+        setAtrib(ATRIB_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -204,10 +256,12 @@ public class DeclImpl extends MinimalEObjectImpl.Container implements Decl
   {
     switch (featureID)
     {
-      case GoPackage.DECL__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case GoPackage.DECL__TYPE:
+      case GoPackage.ATRIB__VAR:
+        return VAR_EDEFAULT == null ? var != null : !VAR_EDEFAULT.equals(var);
+      case GoPackage.ATRIB__TYPE:
         return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+      case GoPackage.ATRIB__ATRIB:
+        return ATRIB_EDEFAULT == null ? atrib != null : !ATRIB_EDEFAULT.equals(atrib);
     }
     return super.eIsSet(featureID);
   }
@@ -223,12 +277,14 @@ public class DeclImpl extends MinimalEObjectImpl.Container implements Decl
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
+    result.append(" (var: ");
+    result.append(var);
     result.append(", type: ");
     result.append(type);
+    result.append(", atrib: ");
+    result.append(atrib);
     result.append(')');
     return result.toString();
   }
 
-} //DeclImpl
+} //AtribImpl

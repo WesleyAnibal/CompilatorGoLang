@@ -11,11 +11,11 @@ package org.xtext.go.go;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.CallFunc#getNameFunc <em>Name Func</em>}</li>
  *   <li>{@link org.xtext.go.go.CallFunc#getParam <em>Param</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.xtext.go.go.GoPackage#getCallFunc()
  * @model

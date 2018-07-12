@@ -21,10 +21,10 @@ import org.xtext.go.go.Greeting;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.CallForImpl#getX <em>X</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

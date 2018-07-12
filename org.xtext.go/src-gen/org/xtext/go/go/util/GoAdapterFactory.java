@@ -96,6 +96,16 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createDecVarAdapter();
       }
       @Override
+      public Adapter caseAtribVar(AtribVar object)
+      {
+        return createAtribVarAdapter();
+      }
+      @Override
+      public Adapter caseAtrib(Atrib object)
+      {
+        return createAtribAdapter();
+      }
+      @Override
       public Adapter caseMultDecVars(MultDecVars object)
       {
         return createMultDecVarsAdapter();
@@ -298,6 +308,36 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDecVarAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.AtribVar <em>Atrib Var</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.AtribVar
+   * @generated
+   */
+  public Adapter createAtribVarAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Atrib <em>Atrib</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Atrib
+   * @generated
+   */
+  public Adapter createAtribAdapter()
   {
     return null;
   }

@@ -51,7 +51,7 @@ public class GoSwitch<T> extends Switch<T>
    * Checks whether this is a switch for the given package.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @parameter ePackage the package in question.
+   * @param ePackage the package in question.
    * @return whether this is a switch for the given package.
    * @generated
    */
@@ -91,8 +91,6 @@ public class GoSwitch<T> extends Switch<T>
       {
         Decl decl = (Decl)theEObject;
         T result = caseDecl(decl);
-        if (result == null) result = caseDecVar(decl);
-        if (result == null) result = caseGreeting(decl);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -101,6 +99,20 @@ public class GoSwitch<T> extends Switch<T>
         DecVar decVar = (DecVar)theEObject;
         T result = caseDecVar(decVar);
         if (result == null) result = caseGreeting(decVar);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.ATRIB_VAR:
+      {
+        AtribVar atribVar = (AtribVar)theEObject;
+        T result = caseAtribVar(atribVar);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.ATRIB:
+      {
+        Atrib atrib = (Atrib)theEObject;
+        T result = caseAtrib(atrib);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -394,6 +406,38 @@ public class GoSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDecVar(DecVar object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Atrib Var</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Atrib Var</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAtribVar(AtribVar object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Atrib</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Atrib</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAtrib(Atrib object)
   {
     return null;
   }

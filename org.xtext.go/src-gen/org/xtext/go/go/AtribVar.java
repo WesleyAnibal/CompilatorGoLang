@@ -9,22 +9,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Dec Vars</b></em>'.
+ * A representation of the model object '<em><b>Atrib Var</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.go.go.DecVars#getVars <em>Vars</em>}</li>
- *   <li>{@link org.xtext.go.go.DecVars#getAtrb <em>Atrb</em>}</li>
+ *   <li>{@link org.xtext.go.go.AtribVar#getVars <em>Vars</em>}</li>
+ *   <li>{@link org.xtext.go.go.AtribVar#getType <em>Type</em>}</li>
+ *   <li>{@link org.xtext.go.go.AtribVar#getAtrb <em>Atrb</em>}</li>
  * </ul>
  *
- * @see org.xtext.go.go.GoPackage#getDecVars()
+ * @see org.xtext.go.go.GoPackage#getAtribVar()
  * @model
  * @generated
  */
-public interface DecVars extends EObject
+public interface AtribVar extends EObject
 {
   /**
    * Returns the value of the '<em><b>Vars</b></em>' attribute list.
@@ -36,11 +37,37 @@ public interface DecVars extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Vars</em>' attribute list.
-   * @see org.xtext.go.go.GoPackage#getDecVars_Vars()
+   * @see org.xtext.go.go.GoPackage#getAtribVar_Vars()
    * @model unique="false"
    * @generated
    */
   EList<String> getVars();
+
+  /**
+   * Returns the value of the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Type</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Type</em>' attribute.
+   * @see #setType(String)
+   * @see org.xtext.go.go.GoPackage#getAtribVar_Type()
+   * @model
+   * @generated
+   */
+  String getType();
+
+  /**
+   * Sets the value of the '{@link org.xtext.go.go.AtribVar#getType <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Type</em>' attribute.
+   * @see #getType()
+   * @generated
+   */
+  void setType(String value);
 
   /**
    * Returns the value of the '<em><b>Atrb</b></em>' attribute list.
@@ -52,10 +79,10 @@ public interface DecVars extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Atrb</em>' attribute list.
-   * @see org.xtext.go.go.GoPackage#getDecVars_Atrb()
+   * @see org.xtext.go.go.GoPackage#getAtribVar_Atrb()
    * @model unique="false"
    * @generated
    */
   EList<String> getAtrb();
 
-} // DecVars
+} // AtribVar

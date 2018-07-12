@@ -21,11 +21,11 @@ import org.xtext.go.go.Params;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.CallFuncImpl#getNameFunc <em>Name Func</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.CallFuncImpl#getParam <em>Param</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.xtext.go.go.Addition;
 import org.xtext.go.go.AndExpression;
+import org.xtext.go.go.Atrib;
+import org.xtext.go.go.AtribVar;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.Cases;
@@ -77,6 +79,20 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * @generated
    */
   private EClass decVarEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass atribVarEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass atribEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -371,6 +387,16 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getDecl_Type()
+  {
+    return (EAttribute)declEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getDecVar()
   {
     return decVarEClass;
@@ -381,9 +407,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDecVar_Vars()
+  public EReference getDecVar_Declaration()
   {
-    return (EAttribute)decVarEClass.getEStructuralFeatures().get(0);
+    return (EReference)decVarEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -391,9 +417,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDecVar_Type()
+  public EReference getDecVar_Assignment()
   {
-    return (EAttribute)decVarEClass.getEStructuralFeatures().get(1);
+    return (EReference)decVarEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -401,9 +427,79 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDecVar_Atrb()
+  public EClass getAtribVar()
   {
-    return (EAttribute)decVarEClass.getEStructuralFeatures().get(2);
+    return atribVarEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAtribVar_Vars()
+  {
+    return (EAttribute)atribVarEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAtribVar_Type()
+  {
+    return (EAttribute)atribVarEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAtribVar_Atrb()
+  {
+    return (EAttribute)atribVarEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAtrib()
+  {
+    return atribEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAtrib_Var()
+  {
+    return (EAttribute)atribEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAtrib_Type()
+  {
+    return (EAttribute)atribEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAtrib_Atrib()
+  {
+    return (EAttribute)atribEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -554,6 +650,16 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
   public EAttribute getParams_Params()
   {
     return (EAttribute)paramsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getParams_Type()
+  {
+    return (EAttribute)paramsEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1013,11 +1119,21 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     declEClass = createEClass(DECL);
     createEAttribute(declEClass, DECL__NAME);
+    createEAttribute(declEClass, DECL__TYPE);
 
     decVarEClass = createEClass(DEC_VAR);
-    createEAttribute(decVarEClass, DEC_VAR__VARS);
-    createEAttribute(decVarEClass, DEC_VAR__TYPE);
-    createEAttribute(decVarEClass, DEC_VAR__ATRB);
+    createEReference(decVarEClass, DEC_VAR__DECLARATION);
+    createEReference(decVarEClass, DEC_VAR__ASSIGNMENT);
+
+    atribVarEClass = createEClass(ATRIB_VAR);
+    createEAttribute(atribVarEClass, ATRIB_VAR__VARS);
+    createEAttribute(atribVarEClass, ATRIB_VAR__TYPE);
+    createEAttribute(atribVarEClass, ATRIB_VAR__ATRB);
+
+    atribEClass = createEClass(ATRIB);
+    createEAttribute(atribEClass, ATRIB__VAR);
+    createEAttribute(atribEClass, ATRIB__TYPE);
+    createEAttribute(atribEClass, ATRIB__ATRIB);
 
     multDecVarsEClass = createEClass(MULT_DEC_VARS);
     createEAttribute(multDecVarsEClass, MULT_DEC_VARS__NAME);
@@ -1038,6 +1154,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     paramsEClass = createEClass(PARAMS);
     createEAttribute(paramsEClass, PARAMS__PARAMS);
+    createEAttribute(paramsEClass, PARAMS__TYPE);
 
     operationsOneEqualsEClass = createEClass(OPERATIONS_ONE_EQUALS);
     createEAttribute(operationsOneEqualsEClass, OPERATIONS_ONE_EQUALS__NAME);
@@ -1131,7 +1248,6 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    declEClass.getESuperTypes().add(this.getDecVar());
     decVarEClass.getESuperTypes().add(this.getGreeting());
     multDecVarsEClass.getESuperTypes().add(this.getGreeting());
     switchCaseEClass.getESuperTypes().add(this.getGreeting());
@@ -1162,11 +1278,21 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     initEClass(declEClass, Decl.class, "Decl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDecl_Name(), ecorePackage.getEString(), "name", null, 0, 1, Decl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDecl_Type(), ecorePackage.getEString(), "type", null, 0, 1, Decl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(decVarEClass, DecVar.class, "DecVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDecVar_Vars(), ecorePackage.getEString(), "vars", null, 0, -1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDecVar_Type(), ecorePackage.getEString(), "type", null, 0, 1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDecVar_Atrb(), ecorePackage.getEString(), "atrb", null, 0, -1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDecVar_Declaration(), this.getDecl(), null, "declaration", null, 0, 1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDecVar_Assignment(), this.getAtribVar(), null, "assignment", null, 0, 1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(atribVarEClass, AtribVar.class, "AtribVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAtribVar_Vars(), ecorePackage.getEString(), "vars", null, 0, -1, AtribVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAtribVar_Type(), ecorePackage.getEString(), "type", null, 0, 1, AtribVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAtribVar_Atrb(), ecorePackage.getEString(), "atrb", null, 0, -1, AtribVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(atribEClass, Atrib.class, "Atrib", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAtrib_Var(), ecorePackage.getEString(), "var", null, 0, 1, Atrib.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAtrib_Type(), ecorePackage.getEString(), "type", null, 0, 1, Atrib.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAtrib_Atrib(), ecorePackage.getEString(), "atrib", null, 0, 1, Atrib.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(multDecVarsEClass, MultDecVars.class, "MultDecVars", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMultDecVars_Name(), ecorePackage.getEString(), "name", null, 0, 1, MultDecVars.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1187,6 +1313,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     initEClass(paramsEClass, Params.class, "Params", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getParams_Params(), ecorePackage.getEString(), "params", null, 0, -1, Params.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getParams_Type(), ecorePackage.getEString(), "type", null, 0, -1, Params.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(operationsOneEqualsEClass, OperationsOneEquals.class, "OperationsOneEquals", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getOperationsOneEquals_Name(), ecorePackage.getEString(), "name", null, 0, 1, OperationsOneEquals.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

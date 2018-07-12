@@ -12,8 +12,6 @@ import org.xtext.go.go.GoPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>And Expression</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

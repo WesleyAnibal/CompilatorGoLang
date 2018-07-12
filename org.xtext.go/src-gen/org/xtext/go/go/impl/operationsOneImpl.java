@@ -18,10 +18,10 @@ import org.xtext.go.go.operationsOne;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.operationsOneImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

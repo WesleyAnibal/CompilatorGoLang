@@ -12,7 +12,16 @@ Decl:
 	Modif name=ID type=Types
 ;
 DecVar:
-	Decl |Modif vars+=ID(Comma vars+=ID)* (type=Types) ("=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*)?;
+	declaration=Decl | assignment=AtribVar
+;
+
+AtribVar:
+	Modif vars+=ID(Comma vars+=ID)* (type=Types) ("=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*)?
+;
+
+Atrib:
+	Modif var=ID type=Types "=" atrib=(Atri|ID)
+;
 
 MultDecVars:
 	Modif Open_parentheses (name=ID "=" (TypeValue | value=ID))* Closed_parentheses;
@@ -32,7 +41,7 @@ Atri:
 	
 
 Params:
-	params+=ID Types (Comma params+=ID Types)*;
+	params+=ID type+=Types (Comma params+=ID type+=Types)*;
 	
 TypeValue:
 	STRING | Numbers | Boolean;

@@ -20,11 +20,11 @@ import org.xtext.go.go.GoPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.ExpressionImpl#getSum <em>Sum</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.ExpressionImpl#getSub <em>Sub</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

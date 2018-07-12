@@ -19,6 +19,11 @@ import org.xtext.go.go.Expression
 import org.xtext.go.go.impl.ExpressionImpl
 import org.xtext.go.go.impl.LiteralImpl
 import java.lang.reflect.Type
+import org.xtext.go.go.impl.DecVarImpl
+import org.xtext.go.go.AtribVar
+import org.xtext.go.go.impl.CallFuncImpl
+import org.xtext.go.go.Params
+import java.sql.Types
 
 /**
  * This class contains custom validation rules. 
@@ -33,20 +38,25 @@ class GoValidator extends AbstractGoValidator {
 //	def checkGreetingStartsWithCapital(Greeting greeting) {
 //		if (!Character.isUpperCase(greeting.name.charAt(0))) {
 //			warning('Name should start with a capital', 
-//					GoPackage.Literals.GREETING__NAME,
+//					GoPackage.Literals.GREETING__ NAME,
 //					INVALID_NAME)
 //		}
 //	}
 
-	public static Map<String, List<String>> funcImplements = new HashMap<String, List<String>>();
+	public static final String SEMANTIC_ERROR = "Erro Semântico: ";
+	
+	public static Map<String,DecFunc> funcImplements = new HashMap<String, DecFunc>();
+	public static Map<String, List<DecVar>> variablesDeclarationMap     = new HashMap<String, List<DecVar>>();
+	
 
 	@Check
 	def checkGreetingStartsWithCapital(DecVar g) {
 		if(g.atrb.size() > 0){
+			
 			if(g.vars.size() < g.atrb.size()){
-				error("número de atribuições maior que variaveis", GoPackage.Literals.DEC_VAR__VARS);
+				error("número de atribuições maior que variaveis", GoPackage.Literals.DEC_VARS__VARS);
 			}else if(g.vars.size() > g.atrb.size()){
-				error("número de atribuições menor que variaveis", GoPackage.Literals.DEC_VAR__VARS);
+				error("número de atribuições menor que variaveis", GoPackage.Literals.DEC_VARS__VARS);
 			}
 		}
 	}
@@ -70,11 +80,37 @@ class GoValidator extends AbstractGoValidator {
 		
 	}
 	
+	/**
+	 * This function add in the map all the variables in the source code
+	 */
+	@Check
+	def addVariableDeclarations(DecVarImpl dec){
+		if(dec.assignment != null){
+			addAtribVarInMap(dec.assignment);
+		}else if(dec.declaration != null){
+			addDeclarionVarInMap(dec.declaration);
+		}
+	}
+	
+	
+	def addAtribVarInMap(AtribVar atrib){
+		for(String id : atrib.vars){
+			variablesDeclarationMap.put(id.toString(), new ArrayList());
+			variablesDeclarationMap.get(id.toString()).add(atrib as DecVar)
+		}
+	}
+	
+	def addDeclarionVarInMap(Decl dec){
+		variablesDeclarationMap.put(dec.name.toString(), new ArrayList());
+		variablesDeclarationMap.get(dec.name.toString()).add(dec as DecVar);
+	}
+	
 	// escopo comum
+	// obs.: algumas classes nao foram geradas como a Opers, entao,
+		// para contornar esse erro, na gramatica de expression, colocamos atributos como sum e sub em expression, para acessar esse tipo de tratamento.
 	@Check 
 	def checkArithmeticExp(ExpressionImpl exp) {
-		// obs.: algumas classes nao foram geradas como a Opers, entao,
-		// para contornar esse erro, na gramatica de expression, colocamos atributos como sum e sub em expression, para acessar esse tipo de tratamento.
+		
 		// TO DO
 	}
 	
@@ -122,14 +158,29 @@ class GoValidator extends AbstractGoValidator {
 		
 	@Check
 	def addFuncToImplements(DecFunc dec){
-		funcImplements.put(dec.name.toString(), new ArrayList<String>());
+		funcImplements.put(dec.name.toString(), dec);
 	}
 	
 	@Check
-	def callFunc(CallFunc func){
-		if (!funcImplements.containsKey(func.nameFunc) ){
-			error("erro semântico: função não existe",GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+	def callFunc(CallFunc callFunc){
+		if (!funcImplements.containsKey(callFunc.nameFunc) ){
+			error(SEMANTIC_ERROR + "função não existe",GoPackage.Literals.CALL_FUNC__NAME_FUNC);
 		} 
+		var DecFunc func = funcImplements.get(callFunc.nameFunc);
+		if(callFunc.param.params.size() != func.param.params.size()){
+						error(SEMANTIC_ERROR + "Diferença entre a quantidade de parâmetros",GoPackage.Literals.CALL_FUNC__PARAM);
+			
+		}
+
+	
+
+	}
+	
+	def getTiposParametros(CallFunc call){
+		var List<String> tiposParametros = new ArrayList<String>();
+		if(call.param != null){
+			for(Types type : call.param.type )
+		}
 	}
 
 	

@@ -69,6 +69,8 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
       case GoPackage.GREETING: return createGreeting();
       case GoPackage.DECL: return createDecl();
       case GoPackage.DEC_VAR: return createDecVar();
+      case GoPackage.ATRIB_VAR: return createAtribVar();
+      case GoPackage.ATRIB: return createAtrib();
       case GoPackage.MULT_DEC_VARS: return createMultDecVars();
       case GoPackage.DEC_VARS: return createDecVars();
       case GoPackage.SWITCH_CASE: return createSwitchCase();
@@ -141,6 +143,28 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     DecVarImpl decVar = new DecVarImpl();
     return decVar;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AtribVar createAtribVar()
+  {
+    AtribVarImpl atribVar = new AtribVarImpl();
+    return atribVar;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Atrib createAtrib()
+  {
+    AtribImpl atrib = new AtribImpl();
+    return atrib;
   }
 
   /**

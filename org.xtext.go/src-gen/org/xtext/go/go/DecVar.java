@@ -3,7 +3,6 @@
  */
 package org.xtext.go.go;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,12 +11,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link org.xtext.go.go.DecVar#getVars <em>Vars</em>}</li>
- *   <li>{@link org.xtext.go.go.DecVar#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.go.go.DecVar#getAtrb <em>Atrb</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.xtext.go.go.DecVar#getDeclaration <em>Declaration</em>}</li>
+ *   <li>{@link org.xtext.go.go.DecVar#getAssignment <em>Assignment</em>}</li>
+ * </ul>
  *
  * @see org.xtext.go.go.GoPackage#getDecVar()
  * @model
@@ -26,61 +24,55 @@ import org.eclipse.emf.common.util.EList;
 public interface DecVar extends Greeting
 {
   /**
-   * Returns the value of the '<em><b>Vars</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Declaration</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Vars</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Declaration</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Vars</em>' attribute list.
-   * @see org.xtext.go.go.GoPackage#getDecVar_Vars()
-   * @model unique="false"
+   * @return the value of the '<em>Declaration</em>' containment reference.
+   * @see #setDeclaration(Decl)
+   * @see org.xtext.go.go.GoPackage#getDecVar_Declaration()
+   * @model containment="true"
    * @generated
    */
-  EList<String> getVars();
+  Decl getDeclaration();
 
   /**
-   * Returns the value of the '<em><b>Type</b></em>' attribute.
+   * Sets the value of the '{@link org.xtext.go.go.DecVar#getDeclaration <em>Declaration</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Declaration</em>' containment reference.
+   * @see #getDeclaration()
+   * @generated
+   */
+  void setDeclaration(Decl value);
+
+  /**
+   * Returns the value of the '<em><b>Assignment</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Type</em>' attribute isn't clear,
+   * If the meaning of the '<em>Assignment</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' attribute.
-   * @see #setType(String)
-   * @see org.xtext.go.go.GoPackage#getDecVar_Type()
-   * @model
+   * @return the value of the '<em>Assignment</em>' containment reference.
+   * @see #setAssignment(AtribVar)
+   * @see org.xtext.go.go.GoPackage#getDecVar_Assignment()
+   * @model containment="true"
    * @generated
    */
-  String getType();
+  AtribVar getAssignment();
 
   /**
-   * Sets the value of the '{@link org.xtext.go.go.DecVar#getType <em>Type</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.go.go.DecVar#getAssignment <em>Assignment</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' attribute.
-   * @see #getType()
+   * @param value the new value of the '<em>Assignment</em>' containment reference.
+   * @see #getAssignment()
    * @generated
    */
-  void setType(String value);
-
-  /**
-   * Returns the value of the '<em><b>Atrb</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Atrb</em>' attribute list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Atrb</em>' attribute list.
-   * @see org.xtext.go.go.GoPackage#getDecVar_Atrb()
-   * @model unique="false"
-   * @generated
-   */
-  EList<String> getAtrb();
+  void setAssignment(AtribVar value);
 
 } // DecVar

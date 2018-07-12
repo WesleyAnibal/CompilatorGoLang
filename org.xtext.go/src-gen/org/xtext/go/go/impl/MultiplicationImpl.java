@@ -12,8 +12,6 @@ import org.xtext.go.go.Multiplication;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Multiplication</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
