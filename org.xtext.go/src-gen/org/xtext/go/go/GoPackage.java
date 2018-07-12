@@ -943,13 +943,22 @@ public interface GoPackage extends EPackage
   int DEC_FUNC__PARAM = GREETING_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Return</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEC_FUNC__RETURN = GREETING_FEATURE_COUNT + 2;
+
+  /**
    * The feature id for the '<em><b>Args</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DEC_FUNC__ARGS = GREETING_FEATURE_COUNT + 2;
+  int DEC_FUNC__ARGS = GREETING_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Dec Func</em>' class.
@@ -958,7 +967,7 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DEC_FUNC_FEATURE_COUNT = GREETING_FEATURE_COUNT + 3;
+  int DEC_FUNC_FEATURE_COUNT = GREETING_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.CallFuncImpl <em>Call Func</em>}' class.
@@ -2331,6 +2340,17 @@ public interface GoPackage extends EPackage
   EReference getDecFunc_Param();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.go.go.DecFunc#getReturn <em>Return</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Return</em>'.
+   * @see org.xtext.go.go.DecFunc#getReturn()
+   * @see #getDecFunc()
+   * @generated
+   */
+  EAttribute getDecFunc_Return();
+
+  /**
    * Returns the meta object for the containment reference list '{@link org.xtext.go.go.DecFunc#getArgs <em>Args</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3029,6 +3049,14 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EReference DEC_FUNC__PARAM = eINSTANCE.getDecFunc_Param();
+
+    /**
+     * The meta object literal for the '<em><b>Return</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DEC_FUNC__RETURN = eINSTANCE.getDecFunc_Return();
 
     /**
      * The meta object literal for the '<em><b>Args</b></em>' containment reference list feature.

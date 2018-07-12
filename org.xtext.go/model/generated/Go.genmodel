@@ -84,6 +84,7 @@
     <genClasses ecoreClass="Go.ecore#//DecFunc">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecFunc/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecFunc/param"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecFunc/return"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecFunc/args"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//CallFunc">

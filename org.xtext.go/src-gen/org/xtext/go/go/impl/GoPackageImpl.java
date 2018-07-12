@@ -937,9 +937,19 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getDecFunc_Return()
+  {
+    return (EAttribute)decFuncEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getDecFunc_Args()
   {
-    return (EReference)decFuncEClass.getEStructuralFeatures().get(2);
+    return (EReference)decFuncEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1192,6 +1202,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     decFuncEClass = createEClass(DEC_FUNC);
     createEAttribute(decFuncEClass, DEC_FUNC__NAME);
     createEReference(decFuncEClass, DEC_FUNC__PARAM);
+    createEAttribute(decFuncEClass, DEC_FUNC__RETURN);
     createEReference(decFuncEClass, DEC_FUNC__ARGS);
 
     callFuncEClass = createEClass(CALL_FUNC);
@@ -1351,6 +1362,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEClass(decFuncEClass, DecFunc.class, "DecFunc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDecFunc_Name(), ecorePackage.getEString(), "name", null, 0, 1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDecFunc_Param(), this.getParams(), null, "param", null, 0, 1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDecFunc_Return(), ecorePackage.getEString(), "return", null, 0, 1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDecFunc_Args(), this.getGreeting(), null, "args", null, 0, -1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(callFuncEClass, CallFunc.class, "CallFunc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

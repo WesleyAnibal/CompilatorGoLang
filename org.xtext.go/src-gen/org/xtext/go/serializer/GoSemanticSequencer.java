@@ -573,7 +573,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DecFunc returns DecFunc
 	 *
 	 * Constraint:
-	 *     (name=ID param=Params* args+=Greeting*)
+	 *     (name=ID param=Params* return=Types? args+=Greeting*)
 	 */
 	protected void sequence_DecFunc(ISerializationContext context, DecFunc semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -886,7 +886,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Params returns Params
 	 *
 	 * Constraint:
-	 *     (params+=ID type+=Types (params+=ID type+=Types)*)
+	 *     (params+=ID type+=Types? (params+=ID type+=Types?)*)
 	 */
 	protected void sequence_Params(ISerializationContext context, Params semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

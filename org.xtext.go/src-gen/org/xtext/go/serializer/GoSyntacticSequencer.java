@@ -441,7 +441,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Ambiguous syntax:
-	 *     Numbers | ID
+	 *     ID | Numbers
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) Open_parentheses* (ambiguity) (rule start)
@@ -463,7 +463,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     (Modif Open_parentheses Closed_parentheses) | EOL | DecImport
+	 *     (Modif Open_parentheses Closed_parentheses) | DecImport | EOL
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)
@@ -477,10 +477,9 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     Numbers | ID
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name=ID (MinusEquals | PlusEquals) (ambiguity) (rule end)
-	 *     name=ID (MinusEquals | PlusEquals) (ambiguity) Open_Key Closed_Key (rule end)
-	 *     name=ID (MinusEquals | PlusEquals) (ambiguity) Open_Key x=Greeting
 	 *     name=ID (PlusEquals | MinusEquals) (ambiguity) (rule end)
+	 *     name=ID (PlusEquals | MinusEquals) (ambiguity) Open_Key Closed_Key (rule end)
+	 *     name=ID (PlusEquals | MinusEquals) (ambiguity) Open_Key x=Greeting
 	 */
 	protected void emit_OperationsOneEquals_IDTerminalRuleCall_2_0_or_NumbersParserRuleCall_2_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -488,7 +487,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     MinusEquals | PlusEquals
+	 *     PlusEquals | MinusEquals
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     name=ID (ambiguity) (ID | Numbers) (rule end)
@@ -505,7 +504,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     Open_parentheses*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (Numbers | ID) (rule start)
+	 *     (rule start) (ambiguity) (ID | Numbers) (rule start)
 	 *     (rule start) (ambiguity) value=Boolean
 	 *     (rule start) (ambiguity) x=Opers
 	 *     (rule start) (ambiguity) {AndExpression.left=}
@@ -549,7 +548,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     MinusOne | PlusOne
+	 *     PlusOne | MinusOne
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     name=ID (ambiguity) (rule end)

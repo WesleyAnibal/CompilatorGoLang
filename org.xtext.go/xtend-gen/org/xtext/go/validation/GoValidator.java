@@ -169,7 +169,7 @@ public class GoValidator extends AbstractGoValidator {
     boolean _containsKey = GoValidator.funcImplements.containsKey(callFunc.getNameFunc());
     boolean _not = (!_containsKey);
     if (_not) {
-      this.error((GoValidator.SEMANTIC_ERROR + "função não existe"), GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+      this.error((GoValidator.SEMANTIC_ERROR + "função não declarada"), GoPackage.Literals.CALL_FUNC__NAME_FUNC);
     }
     DecFunc func = GoValidator.funcImplements.get(callFunc.getNameFunc());
     int _size = callFunc.getParam().getParams().size();
@@ -178,12 +178,5 @@ public class GoValidator extends AbstractGoValidator {
     if (_notEquals) {
       this.error((GoValidator.SEMANTIC_ERROR + "Diferença entre a quantidade de parâmetros"), GoPackage.Literals.CALL_FUNC__PARAM);
     }
-  }
-  
-  public void getTiposParametros(final CallFunc call) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nno viable alternative at input \'}\'"
-      + "\nType mismatch: cannot convert from element type String to Types"
-      + "\nType mismatch: cannot convert from EList<String> to Iterable<? extends Types> | Types[]");
   }
 }

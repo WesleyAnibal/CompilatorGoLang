@@ -41,7 +41,7 @@ Atri:
 	
 
 Params:
-	params+=ID type+=Types (Comma params+=ID type+=Types)*;
+	params+=ID type+=Types? (Comma params+=ID type+=Types?)*;
 	
 TypeValue:
 	STRING | Numbers | Boolean;
@@ -130,7 +130,7 @@ Literal returns Expression:
 ;
 
 DecFunc:
-	FUNC name=ID Open_parentheses param=Params* Closed_parentheses Open_Key args+=Greeting*Closed_Key
+	FUNC name=ID Open_parentheses param=Params* Closed_parentheses return=Types? Open_Key args+=Greeting*Closed_Key
 ;
 	
 CallFunc:

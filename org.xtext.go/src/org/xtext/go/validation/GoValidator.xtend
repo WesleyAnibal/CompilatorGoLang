@@ -164,24 +164,22 @@ class GoValidator extends AbstractGoValidator {
 	@Check
 	def callFunc(CallFunc callFunc){
 		if (!funcImplements.containsKey(callFunc.nameFunc) ){
-			error(SEMANTIC_ERROR + "função não existe",GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+			error(SEMANTIC_ERROR + "função não declarada",GoPackage.Literals.CALL_FUNC__NAME_FUNC);
 		} 
 		var DecFunc func = funcImplements.get(callFunc.nameFunc);
 		if(callFunc.param.params.size() != func.param.params.size()){
-						error(SEMANTIC_ERROR + "Diferença entre a quantidade de parâmetros",GoPackage.Literals.CALL_FUNC__PARAM);
+				error(SEMANTIC_ERROR + "Diferença entre a quantidade de parâmetros" ,GoPackage.Literals.CALL_FUNC__PARAM);
 			
 		}
 
-	
-
 	}
 	
-	def getTiposParametros(CallFunc call){
-		var List<String> tiposParametros = new ArrayList<String>();
-		if(call.param != null){
-			for(Types type : call.param.type )
-		}
-	}
+//	def getTiposParametros(Params call){
+//		var List<String> tiposParametros = new ArrayList<String>();
+//		if(call.tiposParametros != null){
+//			for(Types type : param. )
+//		}
+//	}
 
 	
 }

@@ -891,7 +891,7 @@ ruleParams returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
+		)?
 		(
 			this_Comma_2=RULE_COMMA
 			{
@@ -933,7 +933,7 @@ ruleParams returns [EObject current=null]
 						afterParserOrEnumRuleCall();
 					}
 				)
-			)
+			)?
 		)*
 	)
 ;
@@ -2551,16 +2551,35 @@ ruleDecFunc returns [EObject current=null]
 		{
 			newLeafNode(this_Closed_parentheses_4, grammarAccess.getDecFuncAccess().getClosed_parenthesesTerminalRuleCall_4());
 		}
-		this_Open_Key_5=RULE_OPEN_KEY
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getDecFuncAccess().getReturnTypesParserRuleCall_5_0());
+				}
+				lv_return_5_0=ruleTypes
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getDecFuncRule());
+					}
+					set(
+						$current,
+						"return",
+						lv_return_5_0,
+						"org.xtext.go.Go.Types");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		this_Open_Key_6=RULE_OPEN_KEY
 		{
-			newLeafNode(this_Open_Key_5, grammarAccess.getDecFuncAccess().getOpen_KeyTerminalRuleCall_5());
+			newLeafNode(this_Open_Key_6, grammarAccess.getDecFuncAccess().getOpen_KeyTerminalRuleCall_6());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDecFuncAccess().getArgsGreetingParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getDecFuncAccess().getArgsGreetingParserRuleCall_7_0());
 				}
-				lv_args_6_0=ruleGreeting
+				lv_args_7_0=ruleGreeting
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDecFuncRule());
@@ -2568,15 +2587,15 @@ ruleDecFunc returns [EObject current=null]
 					add(
 						$current,
 						"args",
-						lv_args_6_0,
+						lv_args_7_0,
 						"org.xtext.go.Go.Greeting");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		this_Closed_Key_7=RULE_CLOSED_KEY
+		this_Closed_Key_8=RULE_CLOSED_KEY
 		{
-			newLeafNode(this_Closed_Key_7, grammarAccess.getDecFuncAccess().getClosed_KeyTerminalRuleCall_7());
+			newLeafNode(this_Closed_Key_8, grammarAccess.getDecFuncAccess().getClosed_KeyTerminalRuleCall_8());
 		}
 	)
 ;
