@@ -35,6 +35,27 @@ public class GoValidator extends AbstractGoValidator {
   
   public static Map<String, List<DecVar>> variablesDeclarationMap = new HashMap<String, List<DecVar>>();
   
+  @Check
+  public void checkGreetingStartsWithCapital(final AtribVar g) {
+    int _size = g.getAtrb().size();
+    boolean _greaterThan = (_size > 0);
+    if (_greaterThan) {
+      int _size_1 = g.getVars().size();
+      int _size_2 = g.getAtrb().size();
+      boolean _lessThan = (_size_1 < _size_2);
+      if (_lessThan) {
+        this.error("número de atribuições maior que variaveis", GoPackage.Literals.DEC_VARS__VARS);
+      } else {
+        int _size_3 = g.getVars().size();
+        int _size_4 = g.getAtrb().size();
+        boolean _greaterThan_1 = (_size_3 > _size_4);
+        if (_greaterThan_1) {
+          this.error("número de atribuições menor que variaveis", GoPackage.Literals.DEC_VARS__VARS);
+        }
+      }
+    }
+  }
+  
   public boolean checkIfCallFuncIdExists(final String funcName) {
     boolean out = false;
     DecFunc arr = GoValidator.funcImplements.get(funcName);
@@ -164,6 +185,10 @@ public class GoValidator extends AbstractGoValidator {
     return tipos;
   }
   
+  /**
+   * Verifies the number of parameters and your respoective types between the function declaration
+   * and function call
+   */
   public void checkIfHasEqualTypes(final List<String> functionTypes, final List<String> callTypes) {
     int _size = functionTypes.size();
     int _size_1 = callTypes.size();

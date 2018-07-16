@@ -48,18 +48,18 @@ class GoValidator extends AbstractGoValidator {
 	public static Map<String,DecFunc> funcImplements = new HashMap<String, DecFunc>();
 	public static Map<String, List<DecVar>> variablesDeclarationMap     = new HashMap<String, List<DecVar>>();
 	
-//
-//	@Check
-//	def checkGreetingStartsWithCapital(DecVar g) {
-//		if(g.atrb.size() > 0){
-//			
-//			if(g.vars.size() < g.atrb.size()){
-//				error("número de atribuições maior que variaveis", GoPackage.Literals.DEC_VARS__VARS);
-//			}else if(g.vars.size() > g.atrb.size()){
-//				error("número de atribuições menor que variaveis", GoPackage.Literals.DEC_VARS__VARS);
-//			}
-//		}
-//	}
+
+	@Check
+	def checkGreetingStartsWithCapital(AtribVar g) {
+		if(g.atrb.size() > 0){
+			
+			if(g.vars.size() < g.atrb.size()){
+				error("número de atribuições maior que variaveis", GoPackage.Literals.DEC_VARS__VARS);
+			}else if(g.vars.size() > g.atrb.size()){
+				error("número de atribuições menor que variaveis", GoPackage.Literals.DEC_VARS__VARS);
+			}
+		}
+	}
 	
 
 	
@@ -179,6 +179,10 @@ class GoValidator extends AbstractGoValidator {
 			
 	}
 	
+	/**
+	 * Verifies the number of parameters and your respoective types between the function declaration
+	 * and function call
+	 */
 	def checkIfHasEqualTypes(List<String> functionTypes, List<String> callTypes){
 		if(functionTypes.size != callTypes.size()){
 			error(SEMANTIC_ERROR + "Diferença entre a quantidade de parâmetros" ,GoPackage.Literals.CALL_FUNC__PARAM);
