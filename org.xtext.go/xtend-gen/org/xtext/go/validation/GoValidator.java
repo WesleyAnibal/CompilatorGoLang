@@ -17,6 +17,7 @@ import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.DecVar;
 import org.xtext.go.go.Decl;
 import org.xtext.go.go.GoPackage;
+import org.xtext.go.go.Params;
 import org.xtext.go.go.impl.DecVarImpl;
 import org.xtext.go.go.impl.ExpressionImpl;
 import org.xtext.go.validation.AbstractGoValidator;
@@ -33,31 +34,6 @@ public class GoValidator extends AbstractGoValidator {
   public static Map<String, DecFunc> funcImplements = new HashMap<String, DecFunc>();
   
   public static Map<String, List<DecVar>> variablesDeclarationMap = new HashMap<String, List<DecVar>>();
-  
-  @Check
-  public void checkGreetingStartsWithCapital(final DecVar g) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field atrb is undefined for the type DecVar"
-      + "\nThe method or field vars is undefined for the type DecVar"
-      + "\nThe method or field atrb is undefined for the type DecVar"
-      + "\nThe method or field vars is undefined for the type DecVar"
-      + "\nThe method or field atrb is undefined for the type DecVar"
-      + "\nsize cannot be resolved"
-      + "\n> cannot be resolved"
-      + "\nsize cannot be resolved"
-      + "\n< cannot be resolved"
-      + "\nsize cannot be resolved"
-      + "\nsize cannot be resolved"
-      + "\n> cannot be resolved"
-      + "\nsize cannot be resolved");
-  }
-  
-  public void checkIfCallFuncIsValid(final CallFunc cf) {
-    boolean _checkIfCallFuncIdExists = this.checkIfCallFuncIdExists(cf.getNameFunc().toString());
-    if (_checkIfCallFuncIdExists) {
-      this.error("Identificador da função não existe", GoPackage.Literals.CALL_FUNC__NAME_FUNC);
-    }
-  }
   
   public boolean checkIfCallFuncIdExists(final String funcName) {
     boolean out = false;
@@ -172,11 +148,35 @@ public class GoValidator extends AbstractGoValidator {
       this.error((GoValidator.SEMANTIC_ERROR + "função não declarada"), GoPackage.Literals.CALL_FUNC__NAME_FUNC);
     }
     DecFunc func = GoValidator.funcImplements.get(callFunc.getNameFunc());
-    int _size = callFunc.getParam().getParams().size();
-    int _size_1 = func.getParam().getParams().size();
+    List<String> functionTypes = this.getParametersType(func.getParam());
+    List<String> callTypes = this.getParametersType(callFunc.getParam());
+    this.checkIfHasEqualTypes(functionTypes, callTypes);
+  }
+  
+  public List<String> getParametersType(final Params param) {
+    List<String> tipos = new ArrayList<String>();
+    if (((!Objects.equal(param, null)) && (!Objects.equal(param.getType(), null)))) {
+      EList<String> _type = param.getType();
+      for (final String t : _type) {
+        tipos.add(t);
+      }
+    }
+    return tipos;
+  }
+  
+  public void checkIfHasEqualTypes(final List<String> functionTypes, final List<String> callTypes) {
+    int _size = functionTypes.size();
+    int _size_1 = callTypes.size();
     boolean _notEquals = (_size != _size_1);
     if (_notEquals) {
       this.error((GoValidator.SEMANTIC_ERROR + "Diferença entre a quantidade de parâmetros"), GoPackage.Literals.CALL_FUNC__PARAM);
+    }
+    for (int i = 0; (i < functionTypes.size()); i++) {
+      boolean _equals = callTypes.get(i).equals(functionTypes.get(i));
+      boolean _not = (!_equals);
+      if (_not) {
+        this.error((GoValidator.SEMANTIC_ERROR + "Diferença entre os tipos dos parâmetros"), GoPackage.Literals.CALL_FUNC__PARAM);
+      }
     }
   }
 }

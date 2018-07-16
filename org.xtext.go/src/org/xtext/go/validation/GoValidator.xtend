@@ -48,26 +48,20 @@ class GoValidator extends AbstractGoValidator {
 	public static Map<String,DecFunc> funcImplements = new HashMap<String, DecFunc>();
 	public static Map<String, List<DecVar>> variablesDeclarationMap     = new HashMap<String, List<DecVar>>();
 	
-
-	@Check
-	def checkGreetingStartsWithCapital(DecVar g) {
-		if(g.atrb.size() > 0){
-			
-			if(g.vars.size() < g.atrb.size()){
-				error("número de atribuições maior que variaveis", GoPackage.Literals.DEC_VARS__VARS);
-			}else if(g.vars.size() > g.atrb.size()){
-				error("número de atribuições menor que variaveis", GoPackage.Literals.DEC_VARS__VARS);
-			}
-		}
-	}
+//
+//	@Check
+//	def checkGreetingStartsWithCapital(DecVar g) {
+//		if(g.atrb.size() > 0){
+//			
+//			if(g.vars.size() < g.atrb.size()){
+//				error("número de atribuições maior que variaveis", GoPackage.Literals.DEC_VARS__VARS);
+//			}else if(g.vars.size() > g.atrb.size()){
+//				error("número de atribuições menor que variaveis", GoPackage.Literals.DEC_VARS__VARS);
+//			}
+//		}
+//	}
 	
-	def checkIfCallFuncIsValid(CallFunc cf){
-		
-		if(checkIfCallFuncIdExists(cf.nameFunc.toString())){
-			error("Identificador da função não existe", GoPackage.Literals.CALL_FUNC__NAME_FUNC);
-		}
-		
-	}
+
 	
 	def boolean checkIfCallFuncIdExists(String funcName){
 		
@@ -167,11 +161,36 @@ class GoValidator extends AbstractGoValidator {
 			error(SEMANTIC_ERROR + "função não declarada",GoPackage.Literals.CALL_FUNC__NAME_FUNC);
 		} 
 		var DecFunc func = funcImplements.get(callFunc.nameFunc);
-		if(callFunc.param.params.size() != func.param.params.size()){
-				error(SEMANTIC_ERROR + "Diferença entre a quantidade de parâmetros" ,GoPackage.Literals.CALL_FUNC__PARAM);
-			
-		}
+		var List<String> functionTypes = getParametersType(func.param);
+		var List<String> callTypes = getParametersType(callFunc.param);
+		checkIfHasEqualTypes(functionTypes, callTypes);
+		
 
+	}
+	
+	def getParametersType(Params param){
+		var List<String> tipos = new ArrayList<String>();
+		if(param != null && param.type != null){
+			for(String t : param.type){
+				tipos.add(t);
+			}
+		}
+		return tipos; 
+			
+	}
+	
+	def checkIfHasEqualTypes(List<String> functionTypes, List<String> callTypes){
+		if(functionTypes.size != callTypes.size()){
+			error(SEMANTIC_ERROR + "Diferença entre a quantidade de parâmetros" ,GoPackage.Literals.CALL_FUNC__PARAM);
+		}
+		
+		for(var int i = 0; i < functionTypes.size() ; i++){
+			if(!callTypes.get(i).equals(functionTypes.get(i))){
+			error(SEMANTIC_ERROR + "Diferença entre os tipos dos parâmetros" ,GoPackage.Literals.CALL_FUNC__PARAM);
+				
+			}
+		}
+		
 	}
 	
 //	def getTiposParametros(Params call){
