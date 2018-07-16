@@ -170,13 +170,22 @@ public interface GoPackage extends EPackage
   int DEC_VAR__ASSIGNMENT = GREETING_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Atribuicao</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEC_VAR__ATRIBUICAO = GREETING_FEATURE_COUNT + 2;
+
+  /**
    * The number of structural features of the '<em>Dec Var</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DEC_VAR_FEATURE_COUNT = GREETING_FEATURE_COUNT + 2;
+  int DEC_VAR_FEATURE_COUNT = GREETING_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.AtribVarImpl <em>Atrib Var</em>}' class.
@@ -1796,6 +1805,17 @@ public interface GoPackage extends EPackage
   EReference getDecVar_Assignment();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.DecVar#getAtribuicao <em>Atribuicao</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Atribuicao</em>'.
+   * @see org.xtext.go.go.DecVar#getAtribuicao()
+   * @see #getDecVar()
+   * @generated
+   */
+  EReference getDecVar_Atribuicao();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.go.go.AtribVar <em>Atrib Var</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2607,6 +2627,14 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EReference DEC_VAR__ASSIGNMENT = eINSTANCE.getDecVar_Assignment();
+
+    /**
+     * The meta object literal for the '<em><b>Atribuicao</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DEC_VAR__ATRIBUICAO = eINSTANCE.getDecVar_Atribuicao();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.AtribVarImpl <em>Atrib Var</em>}' class.

@@ -108,6 +108,8 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getTypeValueToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getTypesRule())
 			return getTypesToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getEqualsRule())
+			return getequalsToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -411,6 +413,17 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 		return "type";
 	}
 	
+	/**
+	 * terminal equals :
+	 * 	"="
+	 * ;
+	 */
+	protected String getequalsToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "=";
+	}
+	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		if (transition.getAmbiguousSyntaxes().isEmpty()) return;
@@ -441,7 +454,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Ambiguous syntax:
-	 *     ID | Numbers
+	 *     Numbers | ID
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) Open_parentheses* (ambiguity) (rule start)
@@ -463,7 +476,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     (Modif Open_parentheses Closed_parentheses) | DecImport | EOL
+	 *     (Modif Open_parentheses Closed_parentheses) | EOL | DecImport
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)
@@ -504,7 +517,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     Open_parentheses*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (ID | Numbers) (rule start)
+	 *     (rule start) (ambiguity) (Numbers | ID) (rule start)
 	 *     (rule start) (ambiguity) value=Boolean
 	 *     (rule start) (ambiguity) x=Opers
 	 *     (rule start) (ambiguity) {AndExpression.left=}

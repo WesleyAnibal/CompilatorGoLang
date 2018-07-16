@@ -202,7 +202,7 @@ public class GoValidator extends AbstractGoValidator {
       if (_not) {
         String _get = functionTypes.get(i);
         String _plus = ((GoValidator.SEMANTIC_ERROR + "Diferença entre os tipos dos parâmetros. Tipo Esperado: ") + _get);
-        String _plus_1 = (_plus + " Tipo declarado: ");
+        String _plus_1 = (_plus + "  Tipo declarado: ");
         String _get_1 = callTypes.get(i);
         String _plus_2 = (_plus_1 + _get_1);
         this.error(_plus_2, GoPackage.Literals.CALL_FUNC__PARAM);

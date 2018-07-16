@@ -189,7 +189,7 @@ class GoValidator extends AbstractGoValidator {
 		for(var int i = 0; i < functionTypes.size() ; i++){
 			if(!callTypes.get(i).equals(functionTypes.get(i))){
 				error(SEMANTIC_ERROR + "Diferença entre os tipos dos parâmetros. Tipo Esperado: " + functionTypes.get(i) 
-							+ " Tipo declarado: " + callTypes.get(i) ,GoPackage.Literals.CALL_FUNC__PARAM
+							+ "  Tipo declarado: " + callTypes.get(i) ,GoPackage.Literals.CALL_FUNC__PARAM
 				);
 			}
 		}

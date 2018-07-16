@@ -17,6 +17,7 @@
     <genClasses ecoreClass="Go.ecore#//DecVar">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecVar/declaration"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecVar/assignment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecVar/atribuicao"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//AtribVar">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//AtribVar/vars"/>

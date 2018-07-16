@@ -12,19 +12,20 @@ Decl:
 	Modif name=ID type=Types
 ;
 DecVar:
-	declaration=Decl | assignment=AtribVar
+	declaration=Decl | assignment=AtribVar | atribuicao =Atrib
 ;
 
 AtribVar:
-	Modif vars+=ID(Comma vars+=ID)* (type=Types) ("=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*)?
+	Modif vars+=ID(Comma vars+=ID)* (type=Types) (equals atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*)?
+	
 ;
 
 Atrib:
-	Modif var=ID type=Types "=" atrib=(Atri|ID)
+	Modif var=ID type=Types equals atrib=(Atri|ID)
 ;
 
 MultDecVars:
-	Modif Open_parentheses (name=ID "=" (TypeValue | value=ID))* Closed_parentheses;
+	Modif Open_parentheses (name=ID equals (TypeValue | value=ID))* Closed_parentheses;
 	
 DecVars:
 	vars+=ID(Comma vars+=ID)* ":=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*;
@@ -123,7 +124,7 @@ operationsOne:
 	name=ID(PlusOne| MinusOne);
 	
 varFor:
-	ComparisonExpression | (Modif var+=ID Types "=" atrb+=(Atri|ID)  PontoVirgula right=Literal Operator left=Literal PontoVirgula (operationsOne| OperationsOneEquals));
+	ComparisonExpression | (Modif var+=ID Types equals atrb+=(Atri|ID)  PontoVirgula right=Literal Operator left=Literal PontoVirgula (operationsOne| OperationsOneEquals));
 
 Literal returns Expression:
     {Literal} value=Boolean | Numbers 
@@ -270,6 +271,10 @@ terminal SL_COMMENT:
 
 terminal NEWLINE:
 	('\r'? '\n');
+
+terminal equals :
+	"="
+;
 
 DataType:
 	'datatype' name=ID;

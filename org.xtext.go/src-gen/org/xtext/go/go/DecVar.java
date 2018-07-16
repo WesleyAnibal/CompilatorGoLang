@@ -15,6 +15,7 @@ package org.xtext.go.go;
  * <ul>
  *   <li>{@link org.xtext.go.go.DecVar#getDeclaration <em>Declaration</em>}</li>
  *   <li>{@link org.xtext.go.go.DecVar#getAssignment <em>Assignment</em>}</li>
+ *   <li>{@link org.xtext.go.go.DecVar#getAtribuicao <em>Atribuicao</em>}</li>
  * </ul>
  *
  * @see org.xtext.go.go.GoPackage#getDecVar()
@@ -74,5 +75,31 @@ public interface DecVar extends Greeting
    * @generated
    */
   void setAssignment(AtribVar value);
+
+  /**
+   * Returns the value of the '<em><b>Atribuicao</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Atribuicao</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Atribuicao</em>' containment reference.
+   * @see #setAtribuicao(Atrib)
+   * @see org.xtext.go.go.GoPackage#getDecVar_Atribuicao()
+   * @model containment="true"
+   * @generated
+   */
+  Atrib getAtribuicao();
+
+  /**
+   * Sets the value of the '{@link org.xtext.go.go.DecVar#getAtribuicao <em>Atribuicao</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Atribuicao</em>' containment reference.
+   * @see #getAtribuicao()
+   * @generated
+   */
+  void setAtribuicao(Atrib value);
 
 } // DecVar

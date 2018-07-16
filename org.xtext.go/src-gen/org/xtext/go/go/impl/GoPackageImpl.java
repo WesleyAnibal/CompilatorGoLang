@@ -427,6 +427,16 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getDecVar_Atribuicao()
+  {
+    return (EReference)decVarEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getAtribVar()
   {
     return atribVarEClass;
@@ -1134,6 +1144,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     decVarEClass = createEClass(DEC_VAR);
     createEReference(decVarEClass, DEC_VAR__DECLARATION);
     createEReference(decVarEClass, DEC_VAR__ASSIGNMENT);
+    createEReference(decVarEClass, DEC_VAR__ATRIBUICAO);
 
     atribVarEClass = createEClass(ATRIB_VAR);
     createEAttribute(atribVarEClass, ATRIB_VAR__VARS);
@@ -1294,6 +1305,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEClass(decVarEClass, DecVar.class, "DecVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDecVar_Declaration(), this.getDecl(), null, "declaration", null, 0, 1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDecVar_Assignment(), this.getAtribVar(), null, "assignment", null, 0, 1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDecVar_Atribuicao(), this.getAtrib(), null, "atribuicao", null, 0, 1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atribVarEClass, AtribVar.class, "AtribVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAtribVar_Vars(), ecorePackage.getEString(), "vars", null, 0, -1, AtribVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

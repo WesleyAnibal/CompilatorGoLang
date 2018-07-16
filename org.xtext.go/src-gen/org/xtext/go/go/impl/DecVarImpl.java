@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.xtext.go.go.Atrib;
 import org.xtext.go.go.AtribVar;
 import org.xtext.go.go.DecVar;
 import org.xtext.go.go.Decl;
@@ -26,6 +27,7 @@ import org.xtext.go.go.GoPackage;
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getDeclaration <em>Declaration</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getAssignment <em>Assignment</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.DecVarImpl#getAtribuicao <em>Atribuicao</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,6 +53,16 @@ public class DecVarImpl extends GreetingImpl implements DecVar
    * @ordered
    */
   protected AtribVar assignment;
+
+  /**
+   * The cached value of the '{@link #getAtribuicao() <em>Atribuicao</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAtribuicao()
+   * @generated
+   * @ordered
+   */
+  protected Atrib atribuicao;
 
   /**
    * <!-- begin-user-doc -->
@@ -174,6 +186,54 @@ public class DecVarImpl extends GreetingImpl implements DecVar
    * <!-- end-user-doc -->
    * @generated
    */
+  public Atrib getAtribuicao()
+  {
+    return atribuicao;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAtribuicao(Atrib newAtribuicao, NotificationChain msgs)
+  {
+    Atrib oldAtribuicao = atribuicao;
+    atribuicao = newAtribuicao;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.DEC_VAR__ATRIBUICAO, oldAtribuicao, newAtribuicao);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAtribuicao(Atrib newAtribuicao)
+  {
+    if (newAtribuicao != atribuicao)
+    {
+      NotificationChain msgs = null;
+      if (atribuicao != null)
+        msgs = ((InternalEObject)atribuicao).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.DEC_VAR__ATRIBUICAO, null, msgs);
+      if (newAtribuicao != null)
+        msgs = ((InternalEObject)newAtribuicao).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.DEC_VAR__ATRIBUICAO, null, msgs);
+      msgs = basicSetAtribuicao(newAtribuicao, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DEC_VAR__ATRIBUICAO, newAtribuicao, newAtribuicao));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -183,6 +243,8 @@ public class DecVarImpl extends GreetingImpl implements DecVar
         return basicSetDeclaration(null, msgs);
       case GoPackage.DEC_VAR__ASSIGNMENT:
         return basicSetAssignment(null, msgs);
+      case GoPackage.DEC_VAR__ATRIBUICAO:
+        return basicSetAtribuicao(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -201,6 +263,8 @@ public class DecVarImpl extends GreetingImpl implements DecVar
         return getDeclaration();
       case GoPackage.DEC_VAR__ASSIGNMENT:
         return getAssignment();
+      case GoPackage.DEC_VAR__ATRIBUICAO:
+        return getAtribuicao();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -220,6 +284,9 @@ public class DecVarImpl extends GreetingImpl implements DecVar
         return;
       case GoPackage.DEC_VAR__ASSIGNMENT:
         setAssignment((AtribVar)newValue);
+        return;
+      case GoPackage.DEC_VAR__ATRIBUICAO:
+        setAtribuicao((Atrib)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -241,6 +308,9 @@ public class DecVarImpl extends GreetingImpl implements DecVar
       case GoPackage.DEC_VAR__ASSIGNMENT:
         setAssignment((AtribVar)null);
         return;
+      case GoPackage.DEC_VAR__ATRIBUICAO:
+        setAtribuicao((Atrib)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -259,6 +329,8 @@ public class DecVarImpl extends GreetingImpl implements DecVar
         return declaration != null;
       case GoPackage.DEC_VAR__ASSIGNMENT:
         return assignment != null;
+      case GoPackage.DEC_VAR__ATRIBUICAO:
+        return atribuicao != null;
     }
     return super.eIsSet(featureID);
   }

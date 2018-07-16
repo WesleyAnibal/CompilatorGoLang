@@ -317,6 +317,26 @@ ruleDecVar returns [EObject current=null]
 				}
 			)
 		)
+		    |
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getDecVarAccess().getAtribuicaoAtribParserRuleCall_2_0());
+				}
+				lv_atribuicao_2_0=ruleAtrib
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getDecVarRule());
+					}
+					set(
+						$current,
+						"atribuicao",
+						lv_atribuicao_2_0,
+						"org.xtext.go.Go.Atrib");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 	)
 ;
 
@@ -405,9 +425,9 @@ ruleAtribVar returns [EObject current=null]
 			)
 		)
 		(
-			otherlv_5='='
+			this_equals_5=RULE_EQUALS
 			{
-				newLeafNode(otherlv_5, grammarAccess.getAtribVarAccess().getEqualsSignKeyword_4_0());
+				newLeafNode(this_equals_5, grammarAccess.getAtribVarAccess().getEqualsTerminalRuleCall_4_0());
 			}
 			(
 				(
@@ -491,6 +511,109 @@ ruleAtribVar returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleAtrib
+entryRuleAtrib returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getAtribRule()); }
+	iv_ruleAtrib=ruleAtrib
+	{ $current=$iv_ruleAtrib.current; }
+	EOF;
+
+// Rule Atrib
+ruleAtrib returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getAtribAccess().getModifParserRuleCall_0());
+		}
+		ruleModif
+		{
+			afterParserOrEnumRuleCall();
+		}
+		(
+			(
+				lv_var_1_0=RULE_ID
+				{
+					newLeafNode(lv_var_1_0, grammarAccess.getAtribAccess().getVarIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getAtribRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"var",
+						lv_var_1_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getAtribAccess().getTypeTypesParserRuleCall_2_0());
+				}
+				lv_type_2_0=ruleTypes
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getAtribRule());
+					}
+					set(
+						$current,
+						"type",
+						lv_type_2_0,
+						"org.xtext.go.Go.Types");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		this_equals_3=RULE_EQUALS
+		{
+			newLeafNode(this_equals_3, grammarAccess.getAtribAccess().getEqualsTerminalRuleCall_3());
+		}
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getAtribAccess().getAtribAtriParserRuleCall_4_0_0());
+					}
+					lv_atrib_4_1=ruleAtri
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getAtribRule());
+						}
+						set(
+							$current,
+							"atrib",
+							lv_atrib_4_1,
+							"org.xtext.go.Go.Atri");
+						afterParserOrEnumRuleCall();
+					}
+					    |
+					lv_atrib_4_2=RULE_ID
+					{
+						newLeafNode(lv_atrib_4_2, grammarAccess.getAtribAccess().getAtribIDTerminalRuleCall_4_0_1());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getAtribRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"atrib",
+							lv_atrib_4_2,
+							"org.eclipse.xtext.common.Terminals.ID");
+					}
+				)
+			)
+		)
+	)
+;
+
 // Entry rule entryRuleMultDecVars
 entryRuleMultDecVars returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getMultDecVarsRule()); }
@@ -537,9 +660,9 @@ ruleMultDecVars returns [EObject current=null]
 					}
 				)
 			)
-			otherlv_3='='
+			this_equals_3=RULE_EQUALS
 			{
-				newLeafNode(otherlv_3, grammarAccess.getMultDecVarsAccess().getEqualsSignKeyword_2_1());
+				newLeafNode(this_equals_3, grammarAccess.getMultDecVarsAccess().getEqualsTerminalRuleCall_2_1());
 			}
 			(
 				{
@@ -2312,9 +2435,9 @@ rulevarFor returns [EObject current=null]
 			{
 				afterParserOrEnumRuleCall();
 			}
-			otherlv_4='='
+			this_equals_4=RULE_EQUALS
 			{
-				newLeafNode(otherlv_4, grammarAccess.getVarForAccess().getEqualsSignKeyword_1_3());
+				newLeafNode(this_equals_4, grammarAccess.getVarForAccess().getEqualsTerminalRuleCall_1_3());
 			}
 			(
 				(
@@ -3265,6 +3388,8 @@ RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
 fragment RULE_NEWLINE : '\r'? '\n';
+
+RULE_EQUALS : '=';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

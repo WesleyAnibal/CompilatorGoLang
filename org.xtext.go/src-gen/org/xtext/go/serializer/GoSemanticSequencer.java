@@ -586,7 +586,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DecVar returns DecVar
 	 *
 	 * Constraint:
-	 *     (declaration=Decl | assignment=AtribVar)
+	 *     (declaration=Decl | assignment=AtribVar | atribuicao=Atrib)
 	 */
 	protected void sequence_DecVar(ISerializationContext context, DecVar semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
