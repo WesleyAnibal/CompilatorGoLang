@@ -6,20 +6,17 @@ Go:
 	(elements+=Greeting*);
 
 Greeting:
-	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition |  SwitchCase | DecImport | CallFunc | CallFor;
+	 Atrib | DecVar | DataType | DecFunc | EOL | Condition |  SwitchCase | DecImport | CallFunc | CallFor;
 
 Decl:
 	Modif name=ID Types
 ;
 DecVar:
-	Decl |Modif vars+=ID(Comma vars+=ID)* (Types) ("=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*)?;
-
-MultDecVars:
-	Modif Open_parentheses (name=ID "=" (TypeValue | value=ID))* Closed_parentheses;
+	Decl |Modif vars+=ID (Types) "=" atrb+=(Atri|ID);
 	
-DecVars:
-	vars+=ID(Comma vars+=ID)* ":=" atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*;
-	
+Atrib:
+	ID "=" atrb+=(Atri|ID)
+;
 SwitchCase:
 	SWITCH name=ID Open_Key cas=Cases* (DEFAULT DoisPontos k=Greeting*)? Closed_Key 
 ;

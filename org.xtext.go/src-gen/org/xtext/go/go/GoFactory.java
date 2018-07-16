@@ -60,22 +60,13 @@ public interface GoFactory extends EFactory
   DecVar createDecVar();
 
   /**
-   * Returns a new object of class '<em>Mult Dec Vars</em>'.
+   * Returns a new object of class '<em>Atrib</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Mult Dec Vars</em>'.
+   * @return a new object of class '<em>Atrib</em>'.
    * @generated
    */
-  MultDecVars createMultDecVars();
-
-  /**
-   * Returns a new object of class '<em>Dec Vars</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Dec Vars</em>'.
-   * @generated
-   */
-  DecVars createDecVars();
+  Atrib createAtrib();
 
   /**
    * Returns a new object of class '<em>Switch Case</em>'.

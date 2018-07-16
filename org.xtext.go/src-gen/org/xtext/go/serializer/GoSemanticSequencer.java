@@ -16,6 +16,7 @@ import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequence
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.go.go.Addition;
 import org.xtext.go.go.AndExpression;
+import org.xtext.go.go.Atrib;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.Cases;
@@ -24,7 +25,6 @@ import org.xtext.go.go.Condition;
 import org.xtext.go.go.DataType;
 import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.DecVar;
-import org.xtext.go.go.DecVars;
 import org.xtext.go.go.Decl;
 import org.xtext.go.go.Division;
 import org.xtext.go.go.ElseCondition;
@@ -32,7 +32,6 @@ import org.xtext.go.go.Go;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.IfCondition;
 import org.xtext.go.go.Literal;
-import org.xtext.go.go.MultDecVars;
 import org.xtext.go.go.Multiplication;
 import org.xtext.go.go.OperationsOneEquals;
 import org.xtext.go.go.OrExpression;
@@ -115,6 +114,9 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case GoPackage.ATRIB:
+				sequence_Atrib(context, (Atrib) semanticObject); 
+				return; 
 			case GoPackage.CALL_FOR:
 				sequence_CallFor(context, (CallFor) semanticObject); 
 				return; 
@@ -164,9 +166,6 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case GoPackage.DEC_VAR:
 				sequence_DecVar(context, (DecVar) semanticObject); 
-				return; 
-			case GoPackage.DEC_VARS:
-				sequence_DecVars(context, (DecVars) semanticObject); 
 				return; 
 			case GoPackage.DECL:
 				sequence_Decl(context, (Decl) semanticObject); 
@@ -239,9 +238,6 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case GoPackage.MULT_DEC_VARS:
-				sequence_MultDecVars(context, (MultDecVars) semanticObject); 
-				return; 
 			case GoPackage.MULTIPLICATION:
 				if (rule == grammarAccess.getGreetingRule()
 						|| rule == grammarAccess.getCallForRule()) {
@@ -457,6 +453,19 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (left=AndExpression_AndExpression_1_0 right=ComparisonExpression x=Greeting*)
 	 */
 	protected void sequence_AndExpression_CallFor(ISerializationContext context, AndExpression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Greeting returns Atrib
+	 *     Atrib returns Atrib
+	 *
+	 * Constraint:
+	 *     (atrb+=Atri | atrb+=ID)
+	 */
+	protected void sequence_Atrib(ISerializationContext context, Atrib semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -687,21 +696,9 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DecVar returns DecVar
 	 *
 	 * Constraint:
-	 *     (vars+=ID vars+=ID* ((atrb+=Atri | atrb+=ID) atrb+=ID? (atrb+=Atri? atrb+=ID?)*)?)
+	 *     (vars+=ID (atrb+=Atri | atrb+=ID))
 	 */
 	protected void sequence_DecVar(ISerializationContext context, DecVar semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     DecVars returns DecVars
-	 *
-	 * Constraint:
-	 *     (vars+=ID vars+=ID* (atrb+=Atri | atrb+=ID) atrb+=Atri? (atrb+=ID? atrb+=Atri?)*)
-	 */
-	protected void sequence_DecVars(ISerializationContext context, DecVars semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -836,19 +833,6 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getLiteralAccess().getValueBooleanParserRuleCall_0_1_0(), semanticObject.getValue());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Greeting returns MultDecVars
-	 *     MultDecVars returns MultDecVars
-	 *
-	 * Constraint:
-	 *     (name=ID value=ID?)+
-	 */
-	protected void sequence_MultDecVars(ISerializationContext context, MultDecVars semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

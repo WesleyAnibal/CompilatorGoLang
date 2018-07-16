@@ -9,39 +9,26 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
-import org.xtext.go.go.DecVars;
+import org.xtext.go.go.Atrib;
 import org.xtext.go.go.GoPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Dec Vars</b></em>'.
+ * An implementation of the model object '<em><b>Atrib</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.go.go.impl.DecVarsImpl#getVars <em>Vars</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.DecVarsImpl#getAtrb <em>Atrb</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.AtribImpl#getAtrb <em>Atrb</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DecVarsImpl extends MinimalEObjectImpl.Container implements DecVars
+public class AtribImpl extends GreetingImpl implements Atrib
 {
-  /**
-   * The cached value of the '{@link #getVars() <em>Vars</em>}' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVars()
-   * @generated
-   * @ordered
-   */
-  protected EList<String> vars;
-
   /**
    * The cached value of the '{@link #getAtrb() <em>Atrb</em>}' attribute list.
    * <!-- begin-user-doc -->
@@ -57,7 +44,7 @@ public class DecVarsImpl extends MinimalEObjectImpl.Container implements DecVars
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DecVarsImpl()
+  protected AtribImpl()
   {
     super();
   }
@@ -70,21 +57,7 @@ public class DecVarsImpl extends MinimalEObjectImpl.Container implements DecVars
   @Override
   protected EClass eStaticClass()
   {
-    return GoPackage.Literals.DEC_VARS;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<String> getVars()
-  {
-    if (vars == null)
-    {
-      vars = new EDataTypeEList<String>(String.class, this, GoPackage.DEC_VARS__VARS);
-    }
-    return vars;
+    return GoPackage.Literals.ATRIB;
   }
 
   /**
@@ -96,7 +69,7 @@ public class DecVarsImpl extends MinimalEObjectImpl.Container implements DecVars
   {
     if (atrb == null)
     {
-      atrb = new EDataTypeEList<String>(String.class, this, GoPackage.DEC_VARS__ATRB);
+      atrb = new EDataTypeEList<String>(String.class, this, GoPackage.ATRIB__ATRB);
     }
     return atrb;
   }
@@ -111,9 +84,7 @@ public class DecVarsImpl extends MinimalEObjectImpl.Container implements DecVars
   {
     switch (featureID)
     {
-      case GoPackage.DEC_VARS__VARS:
-        return getVars();
-      case GoPackage.DEC_VARS__ATRB:
+      case GoPackage.ATRIB__ATRB:
         return getAtrb();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -130,11 +101,7 @@ public class DecVarsImpl extends MinimalEObjectImpl.Container implements DecVars
   {
     switch (featureID)
     {
-      case GoPackage.DEC_VARS__VARS:
-        getVars().clear();
-        getVars().addAll((Collection<? extends String>)newValue);
-        return;
-      case GoPackage.DEC_VARS__ATRB:
+      case GoPackage.ATRIB__ATRB:
         getAtrb().clear();
         getAtrb().addAll((Collection<? extends String>)newValue);
         return;
@@ -152,10 +119,7 @@ public class DecVarsImpl extends MinimalEObjectImpl.Container implements DecVars
   {
     switch (featureID)
     {
-      case GoPackage.DEC_VARS__VARS:
-        getVars().clear();
-        return;
-      case GoPackage.DEC_VARS__ATRB:
+      case GoPackage.ATRIB__ATRB:
         getAtrb().clear();
         return;
     }
@@ -172,9 +136,7 @@ public class DecVarsImpl extends MinimalEObjectImpl.Container implements DecVars
   {
     switch (featureID)
     {
-      case GoPackage.DEC_VARS__VARS:
-        return vars != null && !vars.isEmpty();
-      case GoPackage.DEC_VARS__ATRB:
+      case GoPackage.ATRIB__ATRB:
         return atrb != null && !atrb.isEmpty();
     }
     return super.eIsSet(featureID);
@@ -191,12 +153,10 @@ public class DecVarsImpl extends MinimalEObjectImpl.Container implements DecVars
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (vars: ");
-    result.append(vars);
-    result.append(", atrb: ");
+    result.append(" (atrb: ");
     result.append(atrb);
     result.append(')');
     return result.toString();
   }
 
-} //DecVarsImpl
+} //AtribImpl

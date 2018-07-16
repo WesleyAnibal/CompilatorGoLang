@@ -104,18 +104,11 @@ public class GoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GoPackage.MULT_DEC_VARS:
+      case GoPackage.ATRIB:
       {
-        MultDecVars multDecVars = (MultDecVars)theEObject;
-        T result = caseMultDecVars(multDecVars);
-        if (result == null) result = caseGreeting(multDecVars);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GoPackage.DEC_VARS:
-      {
-        DecVars decVars = (DecVars)theEObject;
-        T result = caseDecVars(decVars);
+        Atrib atrib = (Atrib)theEObject;
+        T result = caseAtrib(atrib);
+        if (result == null) result = caseGreeting(atrib);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -399,33 +392,17 @@ public class GoSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Mult Dec Vars</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Atrib</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Mult Dec Vars</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Atrib</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseMultDecVars(MultDecVars object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Dec Vars</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Dec Vars</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDecVars(DecVars object)
+  public T caseAtrib(Atrib object)
   {
     return null;
   }

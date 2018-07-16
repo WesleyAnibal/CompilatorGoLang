@@ -113,11 +113,11 @@ ruleGreeting returns [EObject current=null]
 }:
 	(
 		{
-			newCompositeNode(grammarAccess.getGreetingAccess().getMultDecVarsParserRuleCall_0());
+			newCompositeNode(grammarAccess.getGreetingAccess().getAtribParserRuleCall_0());
 		}
-		this_MultDecVars_0=ruleMultDecVars
+		this_Atrib_0=ruleAtrib
 		{
-			$current = $this_MultDecVars_0.current;
+			$current = $this_Atrib_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
@@ -301,16 +301,39 @@ ruleDecVar returns [EObject current=null]
 					}
 				)
 			)
+			{
+				newCompositeNode(grammarAccess.getDecVarAccess().getTypesParserRuleCall_1_2());
+			}
+			ruleTypes
+			{
+				afterParserOrEnumRuleCall();
+			}
+			otherlv_4='='
+			{
+				newLeafNode(otherlv_4, grammarAccess.getDecVarAccess().getEqualsSignKeyword_1_3());
+			}
 			(
-				this_Comma_3=RULE_COMMA
-				{
-					newLeafNode(this_Comma_3, grammarAccess.getDecVarAccess().getCommaTerminalRuleCall_1_2_0());
-				}
 				(
 					(
-						lv_vars_4_0=RULE_ID
 						{
-							newLeafNode(lv_vars_4_0, grammarAccess.getDecVarAccess().getVarsIDTerminalRuleCall_1_2_1_0());
+							newCompositeNode(grammarAccess.getDecVarAccess().getAtrbAtriParserRuleCall_1_4_0_0());
+						}
+						lv_atrb_5_1=ruleAtri
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getDecVarRule());
+							}
+							add(
+								$current,
+								"atrb",
+								lv_atrb_5_1,
+								"org.xtext.go.Go.Atri");
+							afterParserOrEnumRuleCall();
+						}
+						    |
+						lv_atrb_5_2=RULE_ID
+						{
+							newLeafNode(lv_atrb_5_2, grammarAccess.getDecVarAccess().getAtrbIDTerminalRuleCall_1_4_0_1());
 						}
 						{
 							if ($current==null) {
@@ -318,117 +341,26 @@ ruleDecVar returns [EObject current=null]
 							}
 							addWithLastConsumed(
 								$current,
-								"vars",
-								lv_vars_4_0,
+								"atrb",
+								lv_atrb_5_2,
 								"org.eclipse.xtext.common.Terminals.ID");
 						}
 					)
 				)
-			)*
-			{
-				newCompositeNode(grammarAccess.getDecVarAccess().getTypesParserRuleCall_1_3());
-			}
-			ruleTypes
-			{
-				afterParserOrEnumRuleCall();
-			}
-			(
-				otherlv_6='='
-				{
-					newLeafNode(otherlv_6, grammarAccess.getDecVarAccess().getEqualsSignKeyword_1_4_0());
-				}
-				(
-					(
-						(
-							{
-								newCompositeNode(grammarAccess.getDecVarAccess().getAtrbAtriParserRuleCall_1_4_1_0_0());
-							}
-							lv_atrb_7_1=ruleAtri
-							{
-								if ($current==null) {
-									$current = createModelElementForParent(grammarAccess.getDecVarRule());
-								}
-								add(
-									$current,
-									"atrb",
-									lv_atrb_7_1,
-									"org.xtext.go.Go.Atri");
-								afterParserOrEnumRuleCall();
-							}
-							    |
-							lv_atrb_7_2=RULE_ID
-							{
-								newLeafNode(lv_atrb_7_2, grammarAccess.getDecVarAccess().getAtrbIDTerminalRuleCall_1_4_1_0_1());
-							}
-							{
-								if ($current==null) {
-									$current = createModelElement(grammarAccess.getDecVarRule());
-								}
-								addWithLastConsumed(
-									$current,
-									"atrb",
-									lv_atrb_7_2,
-									"org.eclipse.xtext.common.Terminals.ID");
-							}
-						)
-					)
-				)
-				(
-					this_Comma_8=RULE_COMMA
-					{
-						newLeafNode(this_Comma_8, grammarAccess.getDecVarAccess().getCommaTerminalRuleCall_1_4_2_0());
-					}
-					(
-						(
-							(
-								{
-									newCompositeNode(grammarAccess.getDecVarAccess().getAtrbAtriParserRuleCall_1_4_2_1_0_0());
-								}
-								lv_atrb_9_1=ruleAtri
-								{
-									if ($current==null) {
-										$current = createModelElementForParent(grammarAccess.getDecVarRule());
-									}
-									add(
-										$current,
-										"atrb",
-										lv_atrb_9_1,
-										"org.xtext.go.Go.Atri");
-									afterParserOrEnumRuleCall();
-								}
-								    |
-								lv_atrb_9_2=RULE_ID
-								{
-									newLeafNode(lv_atrb_9_2, grammarAccess.getDecVarAccess().getAtrbIDTerminalRuleCall_1_4_2_1_0_1());
-								}
-								{
-									if ($current==null) {
-										$current = createModelElement(grammarAccess.getDecVarRule());
-									}
-									addWithLastConsumed(
-										$current,
-										"atrb",
-										lv_atrb_9_2,
-										"org.eclipse.xtext.common.Terminals.ID");
-								}
-							)
-						)
-					)
-				)*
-			)?
+			)
 		)
 	)
 ;
 
-// Entry rule entryRuleMultDecVars
-entryRuleMultDecVars returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getMultDecVarsRule()); }
-	iv_ruleMultDecVars=ruleMultDecVars
-	{ $current=$iv_ruleMultDecVars.current; }
+// Entry rule entryRuleAtrib
+entryRuleAtrib returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getAtribRule()); }
+	iv_ruleAtrib=ruleAtrib
+	{ $current=$iv_ruleAtrib.current; }
 	EOF;
 
-// Rule MultDecVars
-ruleMultDecVars returns [EObject current=null]
+// Rule Atrib
+ruleAtrib returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -436,73 +368,50 @@ ruleMultDecVars returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		this_ID_0=RULE_ID
 		{
-			newCompositeNode(grammarAccess.getMultDecVarsAccess().getModifParserRuleCall_0());
+			newLeafNode(this_ID_0, grammarAccess.getAtribAccess().getIDTerminalRuleCall_0());
 		}
-		ruleModif
+		otherlv_1='='
 		{
-			afterParserOrEnumRuleCall();
-		}
-		this_Open_parentheses_1=RULE_OPEN_PARENTHESES
-		{
-			newLeafNode(this_Open_parentheses_1, grammarAccess.getMultDecVarsAccess().getOpen_parenthesesTerminalRuleCall_1());
+			newLeafNode(otherlv_1, grammarAccess.getAtribAccess().getEqualsSignKeyword_1());
 		}
 		(
 			(
 				(
-					lv_name_2_0=RULE_ID
 					{
-						newLeafNode(lv_name_2_0, grammarAccess.getMultDecVarsAccess().getNameIDTerminalRuleCall_2_0_0());
+						newCompositeNode(grammarAccess.getAtribAccess().getAtrbAtriParserRuleCall_2_0_0());
+					}
+					lv_atrb_2_1=ruleAtri
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getAtribRule());
+						}
+						add(
+							$current,
+							"atrb",
+							lv_atrb_2_1,
+							"org.xtext.go.Go.Atri");
+						afterParserOrEnumRuleCall();
+					}
+					    |
+					lv_atrb_2_2=RULE_ID
+					{
+						newLeafNode(lv_atrb_2_2, grammarAccess.getAtribAccess().getAtrbIDTerminalRuleCall_2_0_1());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getMultDecVarsRule());
+							$current = createModelElement(grammarAccess.getAtribRule());
 						}
-						setWithLastConsumed(
+						addWithLastConsumed(
 							$current,
-							"name",
-							lv_name_2_0,
+							"atrb",
+							lv_atrb_2_2,
 							"org.eclipse.xtext.common.Terminals.ID");
 					}
 				)
 			)
-			otherlv_3='='
-			{
-				newLeafNode(otherlv_3, grammarAccess.getMultDecVarsAccess().getEqualsSignKeyword_2_1());
-			}
-			(
-				{
-					newCompositeNode(grammarAccess.getMultDecVarsAccess().getTypeValueParserRuleCall_2_2_0());
-				}
-				ruleTypeValue
-				{
-					afterParserOrEnumRuleCall();
-				}
-				    |
-				(
-					(
-						lv_value_5_0=RULE_ID
-						{
-							newLeafNode(lv_value_5_0, grammarAccess.getMultDecVarsAccess().getValueIDTerminalRuleCall_2_2_1_0());
-						}
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getMultDecVarsRule());
-							}
-							setWithLastConsumed(
-								$current,
-								"value",
-								lv_value_5_0,
-								"org.eclipse.xtext.common.Terminals.ID");
-						}
-					)
-				)
-			)
-		)*
-		this_Closed_parentheses_6=RULE_CLOSED_PARENTHESES
-		{
-			newLeafNode(this_Closed_parentheses_6, grammarAccess.getMultDecVarsAccess().getClosed_parenthesesTerminalRuleCall_3());
-		}
+		)
 	)
 ;
 

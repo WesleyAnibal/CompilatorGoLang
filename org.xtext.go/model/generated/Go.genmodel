@@ -17,13 +17,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecVar/vars"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecVar/atrb"/>
     </genClasses>
-    <genClasses ecoreClass="Go.ecore#//MultDecVars">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//MultDecVars/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//MultDecVars/value"/>
-    </genClasses>
-    <genClasses ecoreClass="Go.ecore#//DecVars">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecVars/vars"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecVars/atrb"/>
+    <genClasses ecoreClass="Go.ecore#//Atrib">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Atrib/atrb"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//SwitchCase">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//SwitchCase/name"/>

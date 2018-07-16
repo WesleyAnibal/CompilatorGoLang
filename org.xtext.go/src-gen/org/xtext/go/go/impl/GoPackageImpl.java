@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.xtext.go.go.Addition;
 import org.xtext.go.go.AndExpression;
+import org.xtext.go.go.Atrib;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.Cases;
@@ -20,7 +21,6 @@ import org.xtext.go.go.Condition;
 import org.xtext.go.go.DataType;
 import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.DecVar;
-import org.xtext.go.go.DecVars;
 import org.xtext.go.go.Decl;
 import org.xtext.go.go.Division;
 import org.xtext.go.go.ElseCondition;
@@ -32,7 +32,6 @@ import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Greeting;
 import org.xtext.go.go.IfCondition;
 import org.xtext.go.go.Literal;
-import org.xtext.go.go.MultDecVars;
 import org.xtext.go.go.Multiplication;
 import org.xtext.go.go.OperationsOneEquals;
 import org.xtext.go.go.OrExpression;
@@ -83,14 +82,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass multDecVarsEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass decVarsEClass = null;
+  private EClass atribEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -401,9 +393,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getMultDecVars()
+  public EClass getAtrib()
   {
-    return multDecVarsEClass;
+    return atribEClass;
   }
 
   /**
@@ -411,49 +403,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMultDecVars_Name()
+  public EAttribute getAtrib_Atrb()
   {
-    return (EAttribute)multDecVarsEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getMultDecVars_Value()
-  {
-    return (EAttribute)multDecVarsEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getDecVars()
-  {
-    return decVarsEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getDecVars_Vars()
-  {
-    return (EAttribute)decVarsEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getDecVars_Atrb()
-  {
-    return (EAttribute)decVarsEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)atribEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -998,13 +950,8 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     createEAttribute(decVarEClass, DEC_VAR__VARS);
     createEAttribute(decVarEClass, DEC_VAR__ATRB);
 
-    multDecVarsEClass = createEClass(MULT_DEC_VARS);
-    createEAttribute(multDecVarsEClass, MULT_DEC_VARS__NAME);
-    createEAttribute(multDecVarsEClass, MULT_DEC_VARS__VALUE);
-
-    decVarsEClass = createEClass(DEC_VARS);
-    createEAttribute(decVarsEClass, DEC_VARS__VARS);
-    createEAttribute(decVarsEClass, DEC_VARS__ATRB);
+    atribEClass = createEClass(ATRIB);
+    createEAttribute(atribEClass, ATRIB__ATRB);
 
     switchCaseEClass = createEClass(SWITCH_CASE);
     createEAttribute(switchCaseEClass, SWITCH_CASE__NAME);
@@ -1111,7 +1058,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     // Add supertypes to classes
     declEClass.getESuperTypes().add(this.getDecVar());
     decVarEClass.getESuperTypes().add(this.getGreeting());
-    multDecVarsEClass.getESuperTypes().add(this.getGreeting());
+    atribEClass.getESuperTypes().add(this.getGreeting());
     switchCaseEClass.getESuperTypes().add(this.getGreeting());
     operationsOneEqualsEClass.getESuperTypes().add(this.getvarFor());
     conditionEClass.getESuperTypes().add(this.getGreeting());
@@ -1145,13 +1092,8 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEAttribute(getDecVar_Vars(), ecorePackage.getEString(), "vars", null, 0, -1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDecVar_Atrb(), ecorePackage.getEString(), "atrb", null, 0, -1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(multDecVarsEClass, MultDecVars.class, "MultDecVars", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMultDecVars_Name(), ecorePackage.getEString(), "name", null, 0, 1, MultDecVars.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMultDecVars_Value(), ecorePackage.getEString(), "value", null, 0, 1, MultDecVars.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(decVarsEClass, DecVars.class, "DecVars", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDecVars_Vars(), ecorePackage.getEString(), "vars", null, 0, -1, DecVars.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDecVars_Atrb(), ecorePackage.getEString(), "atrb", null, 0, -1, DecVars.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(atribEClass, Atrib.class, "Atrib", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAtrib_Atrb(), ecorePackage.getEString(), "atrb", null, 0, -1, Atrib.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(switchCaseEClass, SwitchCase.class, "SwitchCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSwitchCase_Name(), ecorePackage.getEString(), "name", null, 0, 1, SwitchCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -33,11 +33,8 @@ public class GoParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getGreetingAccess().getAlternatives(), "rule__Greeting__Alternatives");
 					put(grammarAccess.getDecVarAccess().getAlternatives(), "rule__DecVar__Alternatives");
-					put(grammarAccess.getDecVarAccess().getAtrbAlternatives_1_4_1_0(), "rule__DecVar__AtrbAlternatives_1_4_1_0");
-					put(grammarAccess.getDecVarAccess().getAtrbAlternatives_1_4_2_1_0(), "rule__DecVar__AtrbAlternatives_1_4_2_1_0");
-					put(grammarAccess.getMultDecVarsAccess().getAlternatives_2_2(), "rule__MultDecVars__Alternatives_2_2");
-					put(grammarAccess.getDecVarsAccess().getAtrbAlternatives_3_0(), "rule__DecVars__AtrbAlternatives_3_0");
-					put(grammarAccess.getDecVarsAccess().getAtrbAlternatives_4_1_0(), "rule__DecVars__AtrbAlternatives_4_1_0");
+					put(grammarAccess.getDecVarAccess().getAtrbAlternatives_1_4_0(), "rule__DecVar__AtrbAlternatives_1_4_0");
+					put(grammarAccess.getAtribAccess().getAtrbAlternatives_2_0(), "rule__Atrib__AtrbAlternatives_2_0");
 					put(grammarAccess.getAtriAccess().getAlternatives(), "rule__Atri__Alternatives");
 					put(grammarAccess.getTypeValueAccess().getAlternatives(), "rule__TypeValue__Alternatives");
 					put(grammarAccess.getDecImportAccess().getAlternatives_1(), "rule__DecImport__Alternatives_1");
@@ -60,14 +57,7 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBooleanAccess().getAlternatives(), "rule__Boolean__Alternatives");
 					put(grammarAccess.getDeclAccess().getGroup(), "rule__Decl__Group__0");
 					put(grammarAccess.getDecVarAccess().getGroup_1(), "rule__DecVar__Group_1__0");
-					put(grammarAccess.getDecVarAccess().getGroup_1_2(), "rule__DecVar__Group_1_2__0");
-					put(grammarAccess.getDecVarAccess().getGroup_1_4(), "rule__DecVar__Group_1_4__0");
-					put(grammarAccess.getDecVarAccess().getGroup_1_4_2(), "rule__DecVar__Group_1_4_2__0");
-					put(grammarAccess.getMultDecVarsAccess().getGroup(), "rule__MultDecVars__Group__0");
-					put(grammarAccess.getMultDecVarsAccess().getGroup_2(), "rule__MultDecVars__Group_2__0");
-					put(grammarAccess.getDecVarsAccess().getGroup(), "rule__DecVars__Group__0");
-					put(grammarAccess.getDecVarsAccess().getGroup_1(), "rule__DecVars__Group_1__0");
-					put(grammarAccess.getDecVarsAccess().getGroup_4(), "rule__DecVars__Group_4__0");
+					put(grammarAccess.getAtribAccess().getGroup(), "rule__Atrib__Group__0");
 					put(grammarAccess.getSwitchCaseAccess().getGroup(), "rule__SwitchCase__Group__0");
 					put(grammarAccess.getSwitchCaseAccess().getGroup_4(), "rule__SwitchCase__Group_4__0");
 					put(grammarAccess.getCasesAccess().getGroup(), "rule__Cases__Group__0");
@@ -109,15 +99,8 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGoAccess().getElementsAssignment(), "rule__Go__ElementsAssignment");
 					put(grammarAccess.getDeclAccess().getNameAssignment_1(), "rule__Decl__NameAssignment_1");
 					put(grammarAccess.getDecVarAccess().getVarsAssignment_1_1(), "rule__DecVar__VarsAssignment_1_1");
-					put(grammarAccess.getDecVarAccess().getVarsAssignment_1_2_1(), "rule__DecVar__VarsAssignment_1_2_1");
-					put(grammarAccess.getDecVarAccess().getAtrbAssignment_1_4_1(), "rule__DecVar__AtrbAssignment_1_4_1");
-					put(grammarAccess.getDecVarAccess().getAtrbAssignment_1_4_2_1(), "rule__DecVar__AtrbAssignment_1_4_2_1");
-					put(grammarAccess.getMultDecVarsAccess().getNameAssignment_2_0(), "rule__MultDecVars__NameAssignment_2_0");
-					put(grammarAccess.getMultDecVarsAccess().getValueAssignment_2_2_1(), "rule__MultDecVars__ValueAssignment_2_2_1");
-					put(grammarAccess.getDecVarsAccess().getVarsAssignment_0(), "rule__DecVars__VarsAssignment_0");
-					put(grammarAccess.getDecVarsAccess().getVarsAssignment_1_1(), "rule__DecVars__VarsAssignment_1_1");
-					put(grammarAccess.getDecVarsAccess().getAtrbAssignment_3(), "rule__DecVars__AtrbAssignment_3");
-					put(grammarAccess.getDecVarsAccess().getAtrbAssignment_4_1(), "rule__DecVars__AtrbAssignment_4_1");
+					put(grammarAccess.getDecVarAccess().getAtrbAssignment_1_4(), "rule__DecVar__AtrbAssignment_1_4");
+					put(grammarAccess.getAtribAccess().getAtrbAssignment_2(), "rule__Atrib__AtrbAssignment_2");
 					put(grammarAccess.getSwitchCaseAccess().getNameAssignment_1(), "rule__SwitchCase__NameAssignment_1");
 					put(grammarAccess.getSwitchCaseAccess().getCasAssignment_3(), "rule__SwitchCase__CasAssignment_3");
 					put(grammarAccess.getSwitchCaseAccess().getKAssignment_4_2(), "rule__SwitchCase__KAssignment_4_2");
