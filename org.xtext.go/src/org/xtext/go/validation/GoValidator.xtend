@@ -61,8 +61,6 @@ class GoValidator extends AbstractGoValidator {
 		}
 	}
 	
-
-	
 	def boolean checkIfCallFuncIdExists(String funcName){
 		
 		var out = false; 
@@ -161,11 +159,8 @@ class GoValidator extends AbstractGoValidator {
 			error(SEMANTIC_ERROR + "função não declarada",GoPackage.Literals.CALL_FUNC__NAME_FUNC);
 		} 
 		var DecFunc func = funcImplements.get(callFunc.nameFunc);
-		var List<String> functionTypes = getParametersType(func.param);
-		var List<String> callTypes = getParametersType(callFunc.param);
-		checkIfHasEqualTypes(functionTypes, callTypes);
 		
-
+		checkIfHasEqualTypes(func, callFunc);
 	}
 	
 	def getParametersType(Params param){
@@ -183,26 +178,33 @@ class GoValidator extends AbstractGoValidator {
 	 * Verifies the number of parameters and your respoective types between the function declaration
 	 * and function call
 	 */
-	def checkIfHasEqualTypes(List<String> functionTypes, List<String> callTypes){
-		if(functionTypes.size != callTypes.size()){
+	def checkIfHasEqualTypes(DecFunc func, CallFunc callFunc){
+		var List<String> functionTypes = getParametersType(func.param);
+		var List<String> callTypes = getParametersType(callFunc.param);
+		
+		if(getParametersSize(func.param) != getParametersSize(callFunc.param)){
 			error(SEMANTIC_ERROR + "Diferença entre a quantidade de parâmetros" ,GoPackage.Literals.CALL_FUNC__PARAM);
 		}
 		
 		for(var int i = 0; i < functionTypes.size() ; i++){
 			if(!callTypes.get(i).equals(functionTypes.get(i))){
-			error(SEMANTIC_ERROR + "Diferença entre os tipos dos parâmetros" ,GoPackage.Literals.CALL_FUNC__PARAM);
-				
+				error(SEMANTIC_ERROR + "Diferença entre os tipos dos parâmetros. Tipo Esperado: " + functionTypes.get(i) 
+							+ " Tipo declarado: " + callTypes.get(i) ,GoPackage.Literals.CALL_FUNC__PARAM
+				);
 			}
 		}
-		
+	}
+
+	def getParametersSize(Params param){
+		var List<String> tipos = new ArrayList<String>();
+		if(param != null && param.params != null){
+			for(String t : param.params){
+				tipos.add(t);
+			}
+		}
+		return tipos.size(); 
+			
 	}
 	
-//	def getTiposParametros(Params call){
-//		var List<String> tiposParametros = new ArrayList<String>();
-//		if(call.tiposParametros != null){
-//			for(Types type : param. )
-//		}
-//	}
-
 	
 }

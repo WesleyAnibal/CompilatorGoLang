@@ -169,9 +169,7 @@ public class GoValidator extends AbstractGoValidator {
       this.error((GoValidator.SEMANTIC_ERROR + "função não declarada"), GoPackage.Literals.CALL_FUNC__NAME_FUNC);
     }
     DecFunc func = GoValidator.funcImplements.get(callFunc.getNameFunc());
-    List<String> functionTypes = this.getParametersType(func.getParam());
-    List<String> callTypes = this.getParametersType(callFunc.getParam());
-    this.checkIfHasEqualTypes(functionTypes, callTypes);
+    this.checkIfHasEqualTypes(func, callFunc);
   }
   
   public List<String> getParametersType(final Params param) {
@@ -189,10 +187,12 @@ public class GoValidator extends AbstractGoValidator {
    * Verifies the number of parameters and your respoective types between the function declaration
    * and function call
    */
-  public void checkIfHasEqualTypes(final List<String> functionTypes, final List<String> callTypes) {
-    int _size = functionTypes.size();
-    int _size_1 = callTypes.size();
-    boolean _notEquals = (_size != _size_1);
+  public void checkIfHasEqualTypes(final DecFunc func, final CallFunc callFunc) {
+    List<String> functionTypes = this.getParametersType(func.getParam());
+    List<String> callTypes = this.getParametersType(callFunc.getParam());
+    int _parametersSize = this.getParametersSize(func.getParam());
+    int _parametersSize_1 = this.getParametersSize(callFunc.getParam());
+    boolean _notEquals = (_parametersSize != _parametersSize_1);
     if (_notEquals) {
       this.error((GoValidator.SEMANTIC_ERROR + "Diferença entre a quantidade de parâmetros"), GoPackage.Literals.CALL_FUNC__PARAM);
     }
@@ -200,8 +200,24 @@ public class GoValidator extends AbstractGoValidator {
       boolean _equals = callTypes.get(i).equals(functionTypes.get(i));
       boolean _not = (!_equals);
       if (_not) {
-        this.error((GoValidator.SEMANTIC_ERROR + "Diferença entre os tipos dos parâmetros"), GoPackage.Literals.CALL_FUNC__PARAM);
+        String _get = functionTypes.get(i);
+        String _plus = ((GoValidator.SEMANTIC_ERROR + "Diferença entre os tipos dos parâmetros. Tipo Esperado: ") + _get);
+        String _plus_1 = (_plus + " Tipo declarado: ");
+        String _get_1 = callTypes.get(i);
+        String _plus_2 = (_plus_1 + _get_1);
+        this.error(_plus_2, GoPackage.Literals.CALL_FUNC__PARAM);
       }
     }
+  }
+  
+  public int getParametersSize(final Params param) {
+    List<String> tipos = new ArrayList<String>();
+    if (((!Objects.equal(param, null)) && (!Objects.equal(param.getParams(), null)))) {
+      EList<String> _params = param.getParams();
+      for (final String t : _params) {
+        tipos.add(t);
+      }
+    }
+    return tipos.size();
   }
 }
