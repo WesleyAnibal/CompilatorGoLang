@@ -24,6 +24,8 @@ import org.xtext.go.go.AtribVar
 import org.xtext.go.go.impl.CallFuncImpl
 import org.xtext.go.go.Params
 import java.sql.Types
+import org.xtext.go.go.Atrib
+import org.xtext.go.go.impl.AtribImpl
 
 /**
  * This class contains custom validation rules. 
@@ -76,11 +78,13 @@ class GoValidator extends AbstractGoValidator {
 	 * This function add in the map all the variables in the source code
 	 */
 	@Check
-	def addVariableDeclarations(DecVarImpl dec){
-		if(dec.assignment != null){
+	def addVariableDeclarations(DecVar dec){
+		if(dec.assignment instanceof Decl){
 			addAtribVarInMap(dec.assignment);
-		}else if(dec.declaration != null){
+		}else if(dec.declaration instanceof AtribVar){
 			addDeclarionVarInMap(dec.declaration);
+		} else if(dec.atribuicao instanceof Atrib){
+			addAtribuicaoVarInMap(dec.atribuicao);
 		}
 	}
 	
@@ -96,6 +100,13 @@ class GoValidator extends AbstractGoValidator {
 		variablesDeclarationMap.put(dec.name.toString(), new ArrayList());
 		variablesDeclarationMap.get(dec.name.toString()).add(dec as DecVar);
 	}
+	
+	def addAtribuicaoVarInMap(Atrib dec){
+		variablesDeclarationMap.put(dec.name.toString(), new ArrayList());
+		variablesDeclarationMap.get(dec.name.toString()).add(dec as DecVar);
+	}
+	
+
 	
 	// escopo comum
 	// obs.: algumas classes nao foram geradas como a Opers, entao,

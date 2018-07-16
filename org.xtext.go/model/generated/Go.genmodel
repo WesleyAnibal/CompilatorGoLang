@@ -25,7 +25,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//AtribVar/atrb"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//Atrib">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Atrib/var"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Atrib/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Atrib/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Atrib/atrib"/>
     </genClasses>

@@ -9341,26 +9341,26 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib__Group__1__Impl"
-    // InternalGo.g:2617:1: rule__Atrib__Group__1__Impl : ( ( rule__Atrib__VarAssignment_1 ) ) ;
+    // InternalGo.g:2617:1: rule__Atrib__Group__1__Impl : ( ( rule__Atrib__NameAssignment_1 ) ) ;
     public final void rule__Atrib__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2621:1: ( ( ( rule__Atrib__VarAssignment_1 ) ) )
-            // InternalGo.g:2622:1: ( ( rule__Atrib__VarAssignment_1 ) )
+            // InternalGo.g:2621:1: ( ( ( rule__Atrib__NameAssignment_1 ) ) )
+            // InternalGo.g:2622:1: ( ( rule__Atrib__NameAssignment_1 ) )
             {
-            // InternalGo.g:2622:1: ( ( rule__Atrib__VarAssignment_1 ) )
-            // InternalGo.g:2623:2: ( rule__Atrib__VarAssignment_1 )
+            // InternalGo.g:2622:1: ( ( rule__Atrib__NameAssignment_1 ) )
+            // InternalGo.g:2623:2: ( rule__Atrib__NameAssignment_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getAtribAccess().getVarAssignment_1()); 
+               before(grammarAccess.getAtribAccess().getNameAssignment_1()); 
             }
-            // InternalGo.g:2624:2: ( rule__Atrib__VarAssignment_1 )
-            // InternalGo.g:2624:3: rule__Atrib__VarAssignment_1
+            // InternalGo.g:2624:2: ( rule__Atrib__NameAssignment_1 )
+            // InternalGo.g:2624:3: rule__Atrib__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Atrib__VarAssignment_1();
+            rule__Atrib__NameAssignment_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -9368,7 +9368,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getAtribAccess().getVarAssignment_1()); 
+               after(grammarAccess.getAtribAccess().getNameAssignment_1()); 
             }
 
             }
@@ -21660,9 +21660,9 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__AtribVar__AtrbAssignment_4_2_1"
 
 
-    // $ANTLR start "rule__Atrib__VarAssignment_1"
-    // InternalGo.g:6476:1: rule__Atrib__VarAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Atrib__VarAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Atrib__NameAssignment_1"
+    // InternalGo.g:6476:1: rule__Atrib__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Atrib__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -21674,11 +21674,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             // InternalGo.g:6482:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getAtribAccess().getVarIDTerminalRuleCall_1_0()); 
+               before(grammarAccess.getAtribAccess().getNameIDTerminalRuleCall_1_0()); 
             }
             match(input,RULE_ID,FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getAtribAccess().getVarIDTerminalRuleCall_1_0()); 
+               after(grammarAccess.getAtribAccess().getNameIDTerminalRuleCall_1_0()); 
             }
 
             }
@@ -21698,7 +21698,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Atrib__VarAssignment_1"
+    // $ANTLR end "rule__Atrib__NameAssignment_1"
 
 
     // $ANTLR start "rule__Atrib__TypeAssignment_2"

@@ -254,8 +254,8 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Atrib");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cModifParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Assignment cVarAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cVarIDTerminalRuleCall_1_0 = (RuleCall)cVarAssignment_1.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cTypeTypesParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
 		private final RuleCall cEqualsTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
@@ -265,20 +265,20 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAtribIDTerminalRuleCall_4_0_1 = (RuleCall)cAtribAlternatives_4_0.eContents().get(1);
 		
 		//Atrib:
-		//	Modif var=ID type=Types equals atrib=(Atri | ID);
+		//	Modif name=ID type=Types equals atrib=(Atri | ID);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Modif var=ID type=Types equals atrib=(Atri | ID)
+		//Modif name=ID type=Types equals atrib=(Atri | ID)
 		public Group getGroup() { return cGroup; }
 		
 		//Modif
 		public RuleCall getModifParserRuleCall_0() { return cModifParserRuleCall_0; }
 		
-		//var=ID
-		public Assignment getVarAssignment_1() { return cVarAssignment_1; }
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 		
 		//ID
-		public RuleCall getVarIDTerminalRuleCall_1_0() { return cVarIDTerminalRuleCall_1_0; }
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 		
 		//type=Types
 		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
@@ -2210,7 +2210,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Atrib:
-	//	Modif var=ID type=Types equals atrib=(Atri | ID);
+	//	Modif name=ID type=Types equals atrib=(Atri | ID);
 	public AtribElements getAtribAccess() {
 		return pAtrib;
 	}

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.go.go.Atrib#getVar <em>Var</em>}</li>
+ *   <li>{@link org.xtext.go.go.Atrib#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.go.go.Atrib#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.go.go.Atrib#getAtrib <em>Atrib</em>}</li>
  * </ul>
@@ -26,30 +26,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface Atrib extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Var</b></em>' attribute.
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Var</em>' attribute isn't clear,
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Var</em>' attribute.
-   * @see #setVar(String)
-   * @see org.xtext.go.go.GoPackage#getAtrib_Var()
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see org.xtext.go.go.GoPackage#getAtrib_Name()
    * @model
    * @generated
    */
-  String getVar();
+  String getName();
 
   /**
-   * Sets the value of the '{@link org.xtext.go.go.Atrib#getVar <em>Var</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.go.go.Atrib#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Var</em>' attribute.
-   * @see #getVar()
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
    * @generated
    */
-  void setVar(String value);
+  void setName(String value);
 
   /**
    * Returns the value of the '<em><b>Type</b></em>' attribute.

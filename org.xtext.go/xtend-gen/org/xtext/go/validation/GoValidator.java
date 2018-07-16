@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtext.validation.Check;
+import org.xtext.go.go.Atrib;
 import org.xtext.go.go.AtribVar;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.DecFunc;
@@ -18,7 +19,6 @@ import org.xtext.go.go.DecVar;
 import org.xtext.go.go.Decl;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Params;
-import org.xtext.go.go.impl.DecVarImpl;
 import org.xtext.go.go.impl.ExpressionImpl;
 import org.xtext.go.validation.AbstractGoValidator;
 
@@ -70,18 +70,23 @@ public class GoValidator extends AbstractGoValidator {
    * This function add in the map all the variables in the source code
    */
   @Check
-  public Boolean addVariableDeclarations(final DecVarImpl dec) {
+  public Boolean addVariableDeclarations(final DecVar dec) {
     boolean _xifexpression = false;
     AtribVar _assignment = dec.getAssignment();
-    boolean _notEquals = (!Objects.equal(_assignment, null));
-    if (_notEquals) {
+    if ((_assignment instanceof Decl)) {
       this.addAtribVarInMap(dec.getAssignment());
     } else {
       boolean _xifexpression_1 = false;
       Decl _declaration = dec.getDeclaration();
-      boolean _notEquals_1 = (!Objects.equal(_declaration, null));
-      if (_notEquals_1) {
+      if ((_declaration instanceof AtribVar)) {
         _xifexpression_1 = this.addDeclarionVarInMap(dec.getDeclaration());
+      } else {
+        boolean _xifexpression_2 = false;
+        Atrib _atribuicao = dec.getAtribuicao();
+        if ((_atribuicao instanceof Atrib)) {
+          _xifexpression_2 = this.addAtribuicaoVarInMap(dec.getAtribuicao());
+        }
+        _xifexpression_1 = _xifexpression_2;
       }
       _xifexpression = _xifexpression_1;
     }
@@ -101,6 +106,17 @@ public class GoValidator extends AbstractGoValidator {
   }
   
   public boolean addDeclarionVarInMap(final Decl dec) {
+    boolean _xblockexpression = false;
+    {
+      String _string = dec.getName().toString();
+      ArrayList<DecVar> _arrayList = new ArrayList<DecVar>();
+      GoValidator.variablesDeclarationMap.put(_string, _arrayList);
+      _xblockexpression = GoValidator.variablesDeclarationMap.get(dec.getName().toString()).add(((DecVar) dec));
+    }
+    return _xblockexpression;
+  }
+  
+  public boolean addAtribuicaoVarInMap(final Atrib dec) {
     boolean _xblockexpression = false;
     {
       String _string = dec.getName().toString();

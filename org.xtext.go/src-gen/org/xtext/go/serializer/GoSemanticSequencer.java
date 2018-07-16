@@ -380,7 +380,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Atrib returns Atrib
 	 *
 	 * Constraint:
-	 *     (var=ID type=Types (atrib=Atri | atrib=ID))
+	 *     (name=ID type=Types (atrib=Atri | atrib=ID))
 	 */
 	protected void sequence_Atrib(ISerializationContext context, Atrib semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

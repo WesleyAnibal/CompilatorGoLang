@@ -21,7 +21,7 @@ import org.xtext.go.go.GoPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.go.go.impl.AtribImpl#getVar <em>Var</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.AtribImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.AtribImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.AtribImpl#getAtrib <em>Atrib</em>}</li>
  * </ul>
@@ -31,24 +31,24 @@ import org.xtext.go.go.GoPackage;
 public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
 {
   /**
-   * The default value of the '{@link #getVar() <em>Var</em>}' attribute.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVar()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final String VAR_EDEFAULT = null;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getVar() <em>Var</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVar()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected String var = VAR_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -116,9 +116,9 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getVar()
+  public String getName()
   {
-    return var;
+    return name;
   }
 
   /**
@@ -126,12 +126,12 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVar(String newVar)
+  public void setName(String newName)
   {
-    String oldVar = var;
-    var = newVar;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.ATRIB__VAR, oldVar, var));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.ATRIB__NAME, oldName, name));
   }
 
   /**
@@ -190,8 +190,8 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
   {
     switch (featureID)
     {
-      case GoPackage.ATRIB__VAR:
-        return getVar();
+      case GoPackage.ATRIB__NAME:
+        return getName();
       case GoPackage.ATRIB__TYPE:
         return getType();
       case GoPackage.ATRIB__ATRIB:
@@ -210,8 +210,8 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
   {
     switch (featureID)
     {
-      case GoPackage.ATRIB__VAR:
-        setVar((String)newValue);
+      case GoPackage.ATRIB__NAME:
+        setName((String)newValue);
         return;
       case GoPackage.ATRIB__TYPE:
         setType((String)newValue);
@@ -233,8 +233,8 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
   {
     switch (featureID)
     {
-      case GoPackage.ATRIB__VAR:
-        setVar(VAR_EDEFAULT);
+      case GoPackage.ATRIB__NAME:
+        setName(NAME_EDEFAULT);
         return;
       case GoPackage.ATRIB__TYPE:
         setType(TYPE_EDEFAULT);
@@ -256,8 +256,8 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
   {
     switch (featureID)
     {
-      case GoPackage.ATRIB__VAR:
-        return VAR_EDEFAULT == null ? var != null : !VAR_EDEFAULT.equals(var);
+      case GoPackage.ATRIB__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case GoPackage.ATRIB__TYPE:
         return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
       case GoPackage.ATRIB__ATRIB:
@@ -277,8 +277,8 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (var: ");
-    result.append(var);
+    result.append(" (name: ");
+    result.append(name);
     result.append(", type: ");
     result.append(type);
     result.append(", atrib: ");

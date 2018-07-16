@@ -244,13 +244,13 @@ public interface GoPackage extends EPackage
   int ATRIB = 5;
 
   /**
-   * The feature id for the '<em><b>Var</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATRIB__VAR = 0;
+  int ATRIB__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1869,15 +1869,15 @@ public interface GoPackage extends EPackage
   EClass getAtrib();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.go.go.Atrib#getVar <em>Var</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.go.go.Atrib#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Var</em>'.
-   * @see org.xtext.go.go.Atrib#getVar()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.go.go.Atrib#getName()
    * @see #getAtrib()
    * @generated
    */
-  EAttribute getAtrib_Var();
+  EAttribute getAtrib_Name();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.go.go.Atrib#getType <em>Type</em>}'.
@@ -2681,12 +2681,12 @@ public interface GoPackage extends EPackage
     EClass ATRIB = eINSTANCE.getAtrib();
 
     /**
-     * The meta object literal for the '<em><b>Var</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ATRIB__VAR = eINSTANCE.getAtrib_Var();
+    EAttribute ATRIB__NAME = eINSTANCE.getAtrib_Name();
 
     /**
      * The meta object literal for the '<em><b>Type</b></em>' attribute feature.

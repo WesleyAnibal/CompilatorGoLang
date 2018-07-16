@@ -12,7 +12,7 @@ Decl:
 	Modif name=ID type=Types
 ;
 DecVar:
-	declaration=Decl | assignment=AtribVar | atribuicao =Atrib
+	declaration=Decl | assignment=AtribVar | atribuicao=Atrib
 ;
 
 AtribVar:
@@ -21,7 +21,7 @@ AtribVar:
 ;
 
 Atrib:
-	Modif var=ID type=Types equals atrib=(Atri|ID)
+	Modif name=ID type=Types equals atrib=(Atri|ID)
 ;
 
 MultDecVars:

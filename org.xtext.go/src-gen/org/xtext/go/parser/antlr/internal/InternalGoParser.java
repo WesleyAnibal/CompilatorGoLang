@@ -1436,11 +1436,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAtrib"
-    // InternalGo.g:522:1: ruleAtrib returns [EObject current=null] : ( ruleModif ( (lv_var_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypes ) ) this_equals_3= RULE_EQUALS ( ( (lv_atrib_4_1= ruleAtri | lv_atrib_4_2= RULE_ID ) ) ) ) ;
+    // InternalGo.g:522:1: ruleAtrib returns [EObject current=null] : ( ruleModif ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypes ) ) this_equals_3= RULE_EQUALS ( ( (lv_atrib_4_1= ruleAtri | lv_atrib_4_2= RULE_ID ) ) ) ) ;
     public final EObject ruleAtrib() throws RecognitionException {
         EObject current = null;
 
-        Token lv_var_1_0=null;
+        Token lv_name_1_0=null;
         Token this_equals_3=null;
         Token lv_atrib_4_2=null;
         AntlrDatatypeRuleToken lv_type_2_0 = null;
@@ -1452,11 +1452,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:528:2: ( ( ruleModif ( (lv_var_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypes ) ) this_equals_3= RULE_EQUALS ( ( (lv_atrib_4_1= ruleAtri | lv_atrib_4_2= RULE_ID ) ) ) ) )
-            // InternalGo.g:529:2: ( ruleModif ( (lv_var_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypes ) ) this_equals_3= RULE_EQUALS ( ( (lv_atrib_4_1= ruleAtri | lv_atrib_4_2= RULE_ID ) ) ) )
+            // InternalGo.g:528:2: ( ( ruleModif ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypes ) ) this_equals_3= RULE_EQUALS ( ( (lv_atrib_4_1= ruleAtri | lv_atrib_4_2= RULE_ID ) ) ) ) )
+            // InternalGo.g:529:2: ( ruleModif ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypes ) ) this_equals_3= RULE_EQUALS ( ( (lv_atrib_4_1= ruleAtri | lv_atrib_4_2= RULE_ID ) ) ) )
             {
-            // InternalGo.g:529:2: ( ruleModif ( (lv_var_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypes ) ) this_equals_3= RULE_EQUALS ( ( (lv_atrib_4_1= ruleAtri | lv_atrib_4_2= RULE_ID ) ) ) )
-            // InternalGo.g:530:3: ruleModif ( (lv_var_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypes ) ) this_equals_3= RULE_EQUALS ( ( (lv_atrib_4_1= ruleAtri | lv_atrib_4_2= RULE_ID ) ) )
+            // InternalGo.g:529:2: ( ruleModif ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypes ) ) this_equals_3= RULE_EQUALS ( ( (lv_atrib_4_1= ruleAtri | lv_atrib_4_2= RULE_ID ) ) ) )
+            // InternalGo.g:530:3: ruleModif ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypes ) ) this_equals_3= RULE_EQUALS ( ( (lv_atrib_4_1= ruleAtri | lv_atrib_4_2= RULE_ID ) ) )
             {
             if ( state.backtracking==0 ) {
 
@@ -1473,16 +1473,16 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalGo.g:537:3: ( (lv_var_1_0= RULE_ID ) )
-            // InternalGo.g:538:4: (lv_var_1_0= RULE_ID )
+            // InternalGo.g:537:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalGo.g:538:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalGo.g:538:4: (lv_var_1_0= RULE_ID )
-            // InternalGo.g:539:5: lv_var_1_0= RULE_ID
+            // InternalGo.g:538:4: (lv_name_1_0= RULE_ID )
+            // InternalGo.g:539:5: lv_name_1_0= RULE_ID
             {
-            lv_var_1_0=(Token)match(input,RULE_ID,FOLLOW_5); if (state.failed) return current;
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(lv_var_1_0, grammarAccess.getAtribAccess().getVarIDTerminalRuleCall_1_0());
+              					newLeafNode(lv_name_1_0, grammarAccess.getAtribAccess().getNameIDTerminalRuleCall_1_0());
               				
             }
             if ( state.backtracking==0 ) {
@@ -1492,8 +1492,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
               					}
               					setWithLastConsumed(
               						current,
-              						"var",
-              						lv_var_1_0,
+              						"name",
+              						lv_name_1_0,
               						"org.eclipse.xtext.common.Terminals.ID");
               				
             }

@@ -487,7 +487,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getAtrib_Var()
+  public EAttribute getAtrib_Name()
   {
     return (EAttribute)atribEClass.getEStructuralFeatures().get(0);
   }
@@ -1152,7 +1152,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     createEAttribute(atribVarEClass, ATRIB_VAR__ATRB);
 
     atribEClass = createEClass(ATRIB);
-    createEAttribute(atribEClass, ATRIB__VAR);
+    createEAttribute(atribEClass, ATRIB__NAME);
     createEAttribute(atribEClass, ATRIB__TYPE);
     createEAttribute(atribEClass, ATRIB__ATRIB);
 
@@ -1313,7 +1313,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEAttribute(getAtribVar_Atrb(), ecorePackage.getEString(), "atrb", null, 0, -1, AtribVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atribEClass, Atrib.class, "Atrib", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAtrib_Var(), ecorePackage.getEString(), "var", null, 0, 1, Atrib.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAtrib_Name(), ecorePackage.getEString(), "name", null, 0, 1, Atrib.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAtrib_Type(), ecorePackage.getEString(), "type", null, 0, 1, Atrib.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAtrib_Atrib(), ecorePackage.getEString(), "atrib", null, 0, 1, Atrib.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
