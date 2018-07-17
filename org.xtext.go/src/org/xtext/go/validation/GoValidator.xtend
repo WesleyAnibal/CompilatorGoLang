@@ -26,6 +26,7 @@ import org.xtext.go.go.Params
 import java.sql.Types
 import org.xtext.go.go.Atrib
 import org.xtext.go.go.impl.AtribImpl
+import org.xtext.go.go.Variable
 
 /**
  * This class contains custom validation rules. 
@@ -111,57 +112,27 @@ class GoValidator extends AbstractGoValidator {
 	// escopo comum
 	// obs.: algumas classes nao foram geradas como a Opers, entao,
 		// para contornar esse erro, na gramatica de expression, colocamos atributos como sum e sub em expression, para acessar esse tipo de tratamento.
-	@Check 
-	def checkArithmeticExp(ExpressionImpl exp) {
+	
+	
+	@Check
+	def checkIfVariableIsDeclarated(Variable variable){
+		if(!variablesDeclarationMap.containsKey(variable.name)){
+			error(SEMANTIC_ERROR + "variavel não declarada", GoPackage.Literals.VARIABLE__NAME);
+		}
 		
-		// TO DO
-	}
-	
-	@Check 
-	def checkLiteralsType(Type typeNumber, Type typeBoolean, Type typeString) {
-		//TO DO
-	}
-	
-	@Check
-	def checkExistingTypes() {
-		//TO DO	
-	}
-	
-	@Check
-	def checkAbstractions() {
-		//TO DO
-	}
-	
-	@Check
-	def checkVariableUses() {
-		//TO DO
-	}
-	
-	@Check
-	def atribuitionComands() {
-		//TO DO
-	}
-	
-	
-	// escopo C
-	@Check
-	def checkFunctions() {
-		//TO DO
-	}
-	
-	@Check
-	def checkBooleanExpressions() {
-		//TO DO
-	}
-	
-	@Check
-	def checkSwitch() {
-		//TO DO
 	}
 		
 	@Check
 	def addFuncToImplements(DecFunc dec){
-		funcImplements.put(dec.name.toString(), dec);
+		funcImplements.put(dec.name.toString(), dec);			
+
+	}
+	
+	@Check 
+	def checkIfFunctionOverhead(DecFunc dec){
+		if (!funcImplements.containsKey(dec.name) ){
+			error(SEMANTIC_ERROR + "função não declarada",GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+		} 
 	}
 	
 	@Check

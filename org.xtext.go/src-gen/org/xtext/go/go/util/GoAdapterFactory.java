@@ -101,6 +101,11 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createAtribVarAdapter();
       }
       @Override
+      public Adapter caseVariable(Variable object)
+      {
+        return createVariableAdapter();
+      }
+      @Override
       public Adapter caseAtrib(Atrib object)
       {
         return createAtribAdapter();
@@ -323,6 +328,21 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAtribVarAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Variable <em>Variable</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Variable
+   * @generated
+   */
+  public Adapter createVariableAdapter()
   {
     return null;
   }

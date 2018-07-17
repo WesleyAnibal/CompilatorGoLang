@@ -196,6 +196,15 @@ ruleGreeting returns [EObject current=null]
 			$current = $this_CallFor_9.current;
 			afterParserOrEnumRuleCall();
 		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getGreetingAccess().getVariableParserRuleCall_10());
+		}
+		this_Variable_10=ruleVariable
+		{
+			$current = $this_Variable_10.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -508,6 +517,41 @@ ruleAtribVar returns [EObject current=null]
 				)
 			)*
 		)?
+	)
+;
+
+// Entry rule entryRuleVariable
+entryRuleVariable returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVariableRule()); }
+	iv_ruleVariable=ruleVariable
+	{ $current=$iv_ruleVariable.current; }
+	EOF;
+
+// Rule Variable
+ruleVariable returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			lv_name_0_0=RULE_ID
+			{
+				newLeafNode(lv_name_0_0, grammarAccess.getVariableAccess().getNameIDTerminalRuleCall_0());
+			}
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getVariableRule());
+				}
+				setWithLastConsumed(
+					$current,
+					"name",
+					lv_name_0_0,
+					"org.eclipse.xtext.common.Terminals.ID");
+			}
+		)
 	)
 ;
 

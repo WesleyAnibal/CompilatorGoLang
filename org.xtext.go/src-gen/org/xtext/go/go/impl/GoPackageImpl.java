@@ -41,6 +41,7 @@ import org.xtext.go.go.OrExpression;
 import org.xtext.go.go.Params;
 import org.xtext.go.go.Subtration;
 import org.xtext.go.go.SwitchCase;
+import org.xtext.go.go.Variable;
 import org.xtext.go.go.operationsOne;
 import org.xtext.go.go.varFor;
 
@@ -86,6 +87,13 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * @generated
    */
   private EClass atribVarEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass variableEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -470,6 +478,26 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
   public EAttribute getAtribVar_Atrb()
   {
     return (EAttribute)atribVarEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVariable()
+  {
+    return variableEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getVariable_Name()
+  {
+    return (EAttribute)variableEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1151,6 +1179,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     createEAttribute(atribVarEClass, ATRIB_VAR__TYPE);
     createEAttribute(atribVarEClass, ATRIB_VAR__ATRB);
 
+    variableEClass = createEClass(VARIABLE);
+    createEAttribute(variableEClass, VARIABLE__NAME);
+
     atribEClass = createEClass(ATRIB);
     createEAttribute(atribEClass, ATRIB__NAME);
     createEAttribute(atribEClass, ATRIB__TYPE);
@@ -1271,6 +1302,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     // Add supertypes to classes
     decVarEClass.getESuperTypes().add(this.getGreeting());
+    variableEClass.getESuperTypes().add(this.getGreeting());
     multDecVarsEClass.getESuperTypes().add(this.getGreeting());
     switchCaseEClass.getESuperTypes().add(this.getGreeting());
     operationsOneEqualsEClass.getESuperTypes().add(this.getvarFor());
@@ -1311,6 +1343,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEAttribute(getAtribVar_Vars(), ecorePackage.getEString(), "vars", null, 0, -1, AtribVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAtribVar_Type(), ecorePackage.getEString(), "type", null, 0, 1, AtribVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAtribVar_Atrb(), ecorePackage.getEString(), "atrb", null, 0, -1, AtribVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atribEClass, Atrib.class, "Atrib", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAtrib_Name(), ecorePackage.getEString(), "name", null, 0, 1, Atrib.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

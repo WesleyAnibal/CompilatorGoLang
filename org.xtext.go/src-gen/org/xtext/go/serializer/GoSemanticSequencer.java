@@ -42,6 +42,7 @@ import org.xtext.go.go.OrExpression;
 import org.xtext.go.go.Params;
 import org.xtext.go.go.Subtration;
 import org.xtext.go.go.SwitchCase;
+import org.xtext.go.go.Variable;
 import org.xtext.go.go.operationsOne;
 import org.xtext.go.go.varFor;
 import org.xtext.go.services.GoGrammarAccess;
@@ -270,6 +271,9 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case GoPackage.SWITCH_CASE:
 				sequence_SwitchCase(context, (SwitchCase) semanticObject); 
+				return; 
+			case GoPackage.VARIABLE:
+				sequence_Variable(context, (Variable) semanticObject); 
 				return; 
 			case GoPackage.OPERATIONS_ONE:
 				sequence_operationsOne(context, (operationsOne) semanticObject); 
@@ -925,6 +929,25 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_SwitchCase(ISerializationContext context, SwitchCase semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Greeting returns Variable
+	 *     Variable returns Variable
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_Variable(ISerializationContext context, Variable semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.VARIABLE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.VARIABLE__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getVariableAccess().getNameIDTerminalRuleCall_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	

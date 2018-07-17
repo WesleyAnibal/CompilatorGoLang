@@ -6,7 +6,7 @@ Go:
 	(elements+=Greeting*);
 
 Greeting:
-	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition |  SwitchCase | DecImport | CallFunc | CallFor;
+	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition |  SwitchCase | DecImport | CallFunc | CallFor | Variable;
 
 Decl:
 	Modif name=ID type=Types
@@ -18,6 +18,10 @@ DecVar:
 AtribVar:
 	Modif vars+=ID(Comma vars+=ID)* (type=Types) (equals atrb+=(Atri|ID)(Comma atrb+=(Atri|ID))*)?
 	
+;
+
+Variable:
+	name=ID
 ;
 
 Atrib:

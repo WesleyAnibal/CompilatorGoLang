@@ -51,12 +51,13 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDecImportParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		private final RuleCall cCallFuncParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		private final RuleCall cCallForParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cVariableParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
 		
 		//Greeting:
-		//	MultDecVars | DecVar | DataType | DecFunc | EOL | Condition | SwitchCase | DecImport | CallFunc | CallFor;
+		//	MultDecVars | DecVar | DataType | DecFunc | EOL | Condition | SwitchCase | DecImport | CallFunc | CallFor | Variable;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//MultDecVars | DecVar | DataType | DecFunc | EOL | Condition | SwitchCase | DecImport | CallFunc | CallFor
+		//MultDecVars | DecVar | DataType | DecFunc | EOL | Condition | SwitchCase | DecImport | CallFunc | CallFor | Variable
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//MultDecVars
@@ -88,6 +89,9 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//CallFor
 		public RuleCall getCallForParserRuleCall_9() { return cCallForParserRuleCall_9; }
+		
+		//Variable
+		public RuleCall getVariableParserRuleCall_10() { return cVariableParserRuleCall_10; }
 	}
 	public class DeclElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Decl");
@@ -249,6 +253,21 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//ID
 		public RuleCall getAtrbIDTerminalRuleCall_4_2_1_0_1() { return cAtrbIDTerminalRuleCall_4_2_1_0_1; }
+	}
+	public class VariableElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Variable");
+		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
+		
+		//Variable:
+		//	name=ID;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name=ID
+		public Assignment getNameAssignment() { return cNameAssignment; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0() { return cNameIDTerminalRuleCall_0; }
 	}
 	public class AtribElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Atrib");
@@ -1953,6 +1972,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	private final DeclElements pDecl;
 	private final DecVarElements pDecVar;
 	private final AtribVarElements pAtribVar;
+	private final VariableElements pVariable;
 	private final AtribElements pAtrib;
 	private final MultDecVarsElements pMultDecVars;
 	private final DecVarsElements pDecVars;
@@ -2049,6 +2069,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		this.pDecl = new DeclElements();
 		this.pDecVar = new DecVarElements();
 		this.pAtribVar = new AtribVarElements();
+		this.pVariable = new VariableElements();
 		this.pAtrib = new AtribElements();
 		this.pMultDecVars = new MultDecVarsElements();
 		this.pDecVars = new DecVarsElements();
@@ -2170,7 +2191,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Greeting:
-	//	MultDecVars | DecVar | DataType | DecFunc | EOL | Condition | SwitchCase | DecImport | CallFunc | CallFor;
+	//	MultDecVars | DecVar | DataType | DecFunc | EOL | Condition | SwitchCase | DecImport | CallFunc | CallFor | Variable;
 	public GreetingElements getGreetingAccess() {
 		return pGreeting;
 	}
@@ -2207,6 +2228,16 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getAtribVarRule() {
 		return getAtribVarAccess().getRule();
+	}
+	
+	//Variable:
+	//	name=ID;
+	public VariableElements getVariableAccess() {
+		return pVariable;
+	}
+	
+	public ParserRule getVariableRule() {
+		return getVariableAccess().getRule();
 	}
 	
 	//Atrib:

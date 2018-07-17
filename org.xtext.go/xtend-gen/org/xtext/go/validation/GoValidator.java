@@ -4,7 +4,6 @@
 package org.xtext.go.validation;
 
 import com.google.common.base.Objects;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,7 +18,7 @@ import org.xtext.go.go.DecVar;
 import org.xtext.go.go.Decl;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Params;
-import org.xtext.go.go.impl.ExpressionImpl;
+import org.xtext.go.go.Variable;
 import org.xtext.go.validation.AbstractGoValidator;
 
 /**
@@ -128,53 +127,26 @@ public class GoValidator extends AbstractGoValidator {
   }
   
   @Check
-  public Object checkArithmeticExp(final ExpressionImpl exp) {
-    return null;
-  }
-  
-  @Check
-  public Object checkLiteralsType(final Type typeNumber, final Type typeBoolean, final Type typeString) {
-    return null;
-  }
-  
-  @Check
-  public Object checkExistingTypes() {
-    return null;
-  }
-  
-  @Check
-  public Object checkAbstractions() {
-    return null;
-  }
-  
-  @Check
-  public Object checkVariableUses() {
-    return null;
-  }
-  
-  @Check
-  public Object atribuitionComands() {
-    return null;
-  }
-  
-  @Check
-  public Object checkFunctions() {
-    return null;
-  }
-  
-  @Check
-  public Object checkBooleanExpressions() {
-    return null;
-  }
-  
-  @Check
-  public Object checkSwitch() {
-    return null;
+  public void checkIfVariableIsDeclarated(final Variable variable) {
+    boolean _containsKey = GoValidator.variablesDeclarationMap.containsKey(variable.getName());
+    boolean _not = (!_containsKey);
+    if (_not) {
+      this.error((GoValidator.SEMANTIC_ERROR + "variavel não declarada"), GoPackage.Literals.VARIABLE__NAME);
+    }
   }
   
   @Check
   public DecFunc addFuncToImplements(final DecFunc dec) {
     return GoValidator.funcImplements.put(dec.getName().toString(), dec);
+  }
+  
+  @Check
+  public void checkIfFunctionOverhead(final DecFunc dec) {
+    boolean _containsKey = GoValidator.funcImplements.containsKey(dec.getName());
+    boolean _not = (!_containsKey);
+    if (_not) {
+      this.error((GoValidator.SEMANTIC_ERROR + "função não declarada"), GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+    }
   }
   
   @Check

@@ -234,6 +234,34 @@ public interface GoPackage extends EPackage
   int ATRIB_VAR_FEATURE_COUNT = 3;
 
   /**
+   * The meta object id for the '{@link org.xtext.go.go.impl.VariableImpl <em>Variable</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.go.go.impl.VariableImpl
+   * @see org.xtext.go.go.impl.GoPackageImpl#getVariable()
+   * @generated
+   */
+  int VARIABLE = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__NAME = GREETING_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Variable</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_FEATURE_COUNT = GREETING_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.go.go.impl.AtribImpl <em>Atrib</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -241,7 +269,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getAtrib()
    * @generated
    */
-  int ATRIB = 5;
+  int ATRIB = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -287,7 +315,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getMultDecVars()
    * @generated
    */
-  int MULT_DEC_VARS = 6;
+  int MULT_DEC_VARS = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -324,7 +352,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDecVars()
    * @generated
    */
-  int DEC_VARS = 7;
+  int DEC_VARS = 8;
 
   /**
    * The feature id for the '<em><b>Vars</b></em>' attribute list.
@@ -361,7 +389,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getSwitchCase()
    * @generated
    */
-  int SWITCH_CASE = 8;
+  int SWITCH_CASE = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -407,7 +435,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getCases()
    * @generated
    */
-  int CASES = 9;
+  int CASES = 10;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -444,7 +472,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getParams()
    * @generated
    */
-  int PARAMS = 10;
+  int PARAMS = 11;
 
   /**
    * The feature id for the '<em><b>Params</b></em>' attribute list.
@@ -481,7 +509,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getCallFor()
    * @generated
    */
-  int CALL_FOR = 17;
+  int CALL_FOR = 18;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -509,7 +537,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getvarFor()
    * @generated
    */
-  int VAR_FOR = 19;
+  int VAR_FOR = 20;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -573,7 +601,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getOperationsOneEquals()
    * @generated
    */
-  int OPERATIONS_ONE_EQUALS = 11;
+  int OPERATIONS_ONE_EQUALS = 12;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -646,7 +674,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getCondition()
    * @generated
    */
-  int CONDITION = 12;
+  int CONDITION = 13;
 
   /**
    * The feature id for the '<em><b>If</b></em>' containment reference.
@@ -692,7 +720,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getElseIfCondition()
    * @generated
    */
-  int ELSE_IF_CONDITION = 14;
+  int ELSE_IF_CONDITION = 15;
 
   /**
    * The number of structural features of the '<em>Else If Condition</em>' class.
@@ -711,7 +739,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getIfCondition()
    * @generated
    */
-  int IF_CONDITION = 13;
+  int IF_CONDITION = 14;
 
   /**
    * The feature id for the '<em><b>Cond</b></em>' containment reference.
@@ -748,7 +776,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getElseCondition()
    * @generated
    */
-  int ELSE_CONDITION = 15;
+  int ELSE_CONDITION = 16;
 
   /**
    * The feature id for the '<em><b>Then</b></em>' containment reference.
@@ -776,7 +804,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 16;
+  int EXPRESSION = 17;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -858,7 +886,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getoperationsOne()
    * @generated
    */
-  int OPERATIONS_ONE = 18;
+  int OPERATIONS_ONE = 19;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -931,7 +959,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDecFunc()
    * @generated
    */
-  int DEC_FUNC = 20;
+  int DEC_FUNC = 21;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -986,7 +1014,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getCallFunc()
    * @generated
    */
-  int CALL_FUNC = 21;
+  int CALL_FUNC = 22;
 
   /**
    * The feature id for the '<em><b>Name Func</b></em>' attribute.
@@ -1023,7 +1051,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDataType()
    * @generated
    */
-  int DATA_TYPE = 22;
+  int DATA_TYPE = 23;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1051,7 +1079,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getAddition()
    * @generated
    */
-  int ADDITION = 23;
+  int ADDITION = 24;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1133,7 +1161,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getSubtration()
    * @generated
    */
-  int SUBTRATION = 24;
+  int SUBTRATION = 25;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1215,7 +1243,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getMultiplication()
    * @generated
    */
-  int MULTIPLICATION = 25;
+  int MULTIPLICATION = 26;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1297,7 +1325,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDivision()
    * @generated
    */
-  int DIVISION = 26;
+  int DIVISION = 27;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1379,7 +1407,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getOrExpression()
    * @generated
    */
-  int OR_EXPRESSION = 27;
+  int OR_EXPRESSION = 28;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1461,7 +1489,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getAndExpression()
    * @generated
    */
-  int AND_EXPRESSION = 28;
+  int AND_EXPRESSION = 29;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1543,7 +1571,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getComparisonExpression()
    * @generated
    */
-  int COMPARISON_EXPRESSION = 29;
+  int COMPARISON_EXPRESSION = 30;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1625,7 +1653,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 30;
+  int LITERAL = 31;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1857,6 +1885,27 @@ public interface GoPackage extends EPackage
    * @generated
    */
   EAttribute getAtribVar_Atrb();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.go.go.Variable <em>Variable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Variable</em>'.
+   * @see org.xtext.go.go.Variable
+   * @generated
+   */
+  EClass getVariable();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.go.go.Variable#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.go.go.Variable#getName()
+   * @see #getVariable()
+   * @generated
+   */
+  EAttribute getVariable_Name();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.Atrib <em>Atrib</em>}'.
@@ -2669,6 +2718,24 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EAttribute ATRIB_VAR__ATRB = eINSTANCE.getAtribVar_Atrb();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.go.go.impl.VariableImpl <em>Variable</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.go.go.impl.VariableImpl
+     * @see org.xtext.go.go.impl.GoPackageImpl#getVariable()
+     * @generated
+     */
+    EClass VARIABLE = eINSTANCE.getVariable();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.AtribImpl <em>Atrib</em>}' class.

@@ -454,7 +454,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Ambiguous syntax:
-	 *     Numbers | ID
+	 *     ID | Numbers
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) Open_parentheses* (ambiguity) (rule start)
@@ -476,7 +476,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     (Modif Open_parentheses Closed_parentheses) | EOL | DecImport
+	 *     (Modif Open_parentheses Closed_parentheses) | DecImport | EOL
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)
@@ -487,12 +487,13 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     Numbers | ID
+	 *     ID | Numbers
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     name=ID (MinusEquals | PlusEquals) (ambiguity) (rule end)
+	 *     name=ID (MinusEquals | PlusEquals) (ambiguity) Open_Key Closed_Key (rule end)
+	 *     name=ID (MinusEquals | PlusEquals) (ambiguity) Open_Key x=Greeting
 	 *     name=ID (PlusEquals | MinusEquals) (ambiguity) (rule end)
-	 *     name=ID (PlusEquals | MinusEquals) (ambiguity) Open_Key Closed_Key (rule end)
-	 *     name=ID (PlusEquals | MinusEquals) (ambiguity) Open_Key x=Greeting
 	 */
 	protected void emit_OperationsOneEquals_IDTerminalRuleCall_2_0_or_NumbersParserRuleCall_2_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -500,13 +501,12 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     PlusEquals | MinusEquals
+	 *     MinusEquals | PlusEquals
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     name=ID (ambiguity) (ID | Numbers) (rule end)
-	 *     name=ID (ambiguity) (Numbers | ID) (rule end)
-	 *     name=ID (ambiguity) (Numbers | ID) Open_Key Closed_Key (rule end)
-	 *     name=ID (ambiguity) (Numbers | ID) Open_Key x=Greeting
+	 *     name=ID (ambiguity) (ID | Numbers) Open_Key Closed_Key (rule end)
+	 *     name=ID (ambiguity) (ID | Numbers) Open_Key x=Greeting
 	 */
 	protected void emit_OperationsOneEquals_MinusEqualsTerminalRuleCall_1_1_or_PlusEqualsTerminalRuleCall_1_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -517,7 +517,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     Open_parentheses*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (Numbers | ID) (rule start)
+	 *     (rule start) (ambiguity) (ID | Numbers) (rule start)
 	 *     (rule start) (ambiguity) value=Boolean
 	 *     (rule start) (ambiguity) x=Opers
 	 *     (rule start) (ambiguity) {AndExpression.left=}
