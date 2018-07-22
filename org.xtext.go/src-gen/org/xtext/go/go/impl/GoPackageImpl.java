@@ -1518,6 +1518,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     // Add supertypes to classes
     decVarEClass.getESuperTypes().add(this.getGreeting());
     variableEClass.getESuperTypes().add(this.getGreeting());
+    variableEClass.getESuperTypes().add(this.getAtrib_Aux());
     multDecVarsEClass.getESuperTypes().add(this.getGreeting());
     switchCaseEClass.getESuperTypes().add(this.getGreeting());
     atriEClass.getESuperTypes().add(this.getAtrib_Aux());

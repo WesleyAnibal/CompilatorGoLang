@@ -1714,9 +1714,9 @@ rule__Atrib_Aux__Alternatives
 	)
 	|
 	(
-		{ before(grammarAccess.getAtrib_AuxAccess().getIDTerminalRuleCall_1()); }
-		RULE_ID
-		{ after(grammarAccess.getAtrib_AuxAccess().getIDTerminalRuleCall_1()); }
+		{ before(grammarAccess.getAtrib_AuxAccess().getVariableParserRuleCall_1()); }
+		ruleVariable
+		{ after(grammarAccess.getAtrib_AuxAccess().getVariableParserRuleCall_1()); }
 	)
 ;
 finally {

@@ -21,7 +21,7 @@ AtribVar:
 ;
 
 Atrib_Aux:
-	Atri|ID
+	Atri|Variable
 ;
 
 Variable:

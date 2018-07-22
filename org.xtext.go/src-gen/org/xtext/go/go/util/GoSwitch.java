@@ -158,6 +158,7 @@ public class GoSwitch<T> extends Switch<T>
         Variable variable = (Variable)theEObject;
         T result = caseVariable(variable);
         if (result == null) result = caseGreeting(variable);
+        if (result == null) result = caseAtrib_Aux(variable);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

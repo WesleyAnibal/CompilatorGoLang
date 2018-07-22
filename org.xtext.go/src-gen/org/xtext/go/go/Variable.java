@@ -20,7 +20,7 @@ package org.xtext.go.go;
  * @model
  * @generated
  */
-public interface Variable extends Greeting
+public interface Variable extends Greeting, Atrib_Aux
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

@@ -80,7 +80,45 @@ public class GoValidator extends AbstractGoValidator {
     return _xblockexpression;
   }
   
+  /**
+   * Check if the declaration variables are in accord with the golang specification
+   */
   public void checkTypeDeclarationAtrib(final Atrib dec) {
+    this.atribDeclarationTypes(dec);
+    Atrib_Aux _atrib = dec.getAtrib();
+    if ((_atrib instanceof Variable)) {
+      Atrib_Aux _atrib_1 = dec.getAtrib();
+      Variable variable = ((Variable) _atrib_1);
+      boolean _containsKey = GoValidator.variablesDeclarationMap.containsKey(variable.getName());
+      boolean _not = (!_containsKey);
+      if (_not) {
+        String _name = variable.getName();
+        String _plus = ((GoValidator.SEMANTIC_ERROR + "Não é possível atribuir valor. Variavel ") + _name);
+        String _plus_1 = (_plus + " não declarada");
+        this.error(_plus_1, 
+          GoPackage.Literals.ATRIB_VAR__ATRB);
+      } else {
+        Atrib atrib = GoValidator.variablesDeclarationMap.get(variable.getName());
+        this.checkIfAtribsAreCompatible(dec, atrib);
+      }
+    }
+  }
+  
+  public void checkIfAtribsAreCompatible(final Atrib dec, final Atrib atrib) {
+    boolean _equals = atrib.getType().equals(dec.getType());
+    boolean _not = (!_equals);
+    if (_not) {
+      String _type = atrib.getType();
+      String _plus = ((GoValidator.SEMANTIC_ERROR + "não é possível converter ") + _type);
+      String _plus_1 = (_plus + " para ");
+      String _type_1 = dec.getType();
+      String _plus_2 = (_plus_1 + _type_1);
+      this.error(_plus_2, 
+        GoPackage.Literals.ATRIB__TYPE);
+    }
+  }
+  
+  public void atribDeclarationTypes(final Atrib dec) {
     Atrib_Aux _atrib = dec.getAtrib();
     if ((_atrib instanceof TypeValue)) {
       if ((dec.getType().equals("string") && (dec.getAtrib() instanceof Numbers))) {
@@ -89,7 +127,8 @@ public class GoValidator extends AbstractGoValidator {
       if (((!dec.getType().equals("string")) && (dec.getAtrib() instanceof Str))) {
         String _type = dec.getType();
         String _plus = ((GoValidator.SEMANTIC_ERROR + "não é possível converter string para ") + _type);
-        this.error(_plus, GoPackage.Literals.ATRIB__TYPE);
+        this.error(_plus, 
+          GoPackage.Literals.ATRIB__TYPE);
       }
     }
   }
@@ -147,10 +186,12 @@ public class GoValidator extends AbstractGoValidator {
       if (_not) {
         String _get = functionTypes.get(i);
         String _plus = ((GoValidator.SEMANTIC_ERROR + "Diferença entre os tipos dos parâmetros. Tipo Esperado: ") + _get);
-        String _plus_1 = (_plus + "  Tipo declarado: ");
+        String _plus_1 = (_plus + 
+          "  Tipo declarado: ");
         String _get_1 = callTypes.get(i);
         String _plus_2 = (_plus_1 + _get_1);
-        this.error(_plus_2, GoPackage.Literals.CALL_FUNC__PARAM);
+        this.error(_plus_2, 
+          GoPackage.Literals.CALL_FUNC__PARAM);
       }
     }
   }

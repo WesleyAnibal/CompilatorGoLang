@@ -1086,6 +1086,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Contexts:
 	 *     Greeting returns Variable
+	 *     Atrib_Aux returns Variable
 	 *     Variable returns Variable
 	 *
 	 * Constraint:

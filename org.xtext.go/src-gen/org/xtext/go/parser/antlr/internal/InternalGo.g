@@ -511,9 +511,13 @@ ruleAtrib_Aux returns [EObject current=null]
 			afterParserOrEnumRuleCall();
 		}
 		    |
-		this_ID_1=RULE_ID
 		{
-			newLeafNode(this_ID_1, grammarAccess.getAtrib_AuxAccess().getIDTerminalRuleCall_1());
+			newCompositeNode(grammarAccess.getAtrib_AuxAccess().getVariableParserRuleCall_1());
+		}
+		this_Variable_1=ruleVariable
+		{
+			$current = $this_Variable_1.current;
+			afterParserOrEnumRuleCall();
 		}
 	)
 ;

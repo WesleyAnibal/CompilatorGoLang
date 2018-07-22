@@ -32,7 +32,7 @@ public class InternalGoLexer extends Lexer {
     public static final int T__54=54;
     public static final int T__60=60;
     public static final int T__61=61;
-    public static final int RULE_ID=5;
+    public static final int RULE_ID=8;
     public static final int RULE_EOL=4;
     public static final int RULE_COMMA=11;
     public static final int RULE_PLUSONE=9;
@@ -46,8 +46,8 @@ public class InternalGoLexer extends Lexer {
     public static final int RULE_PONTOVIRGULA=26;
     public static final int RULE_NEWLINE=27;
     public static final int RULE_ASTERICS=24;
-    public static final int RULE_STRING=6;
-    public static final int RULE_MINUSEQUALS=8;
+    public static final int RULE_STRING=5;
+    public static final int RULE_MINUSEQUALS=7;
     public static final int RULE_SL_COMMENT=30;
     public static final int T__37=37;
     public static final int T__38=38;
@@ -61,7 +61,7 @@ public class InternalGoLexer extends Lexer {
     public static final int RULE_DOT=21;
     public static final int EOF=-1;
     public static final int RULE_WS=31;
-    public static final int RULE_PLUSEQUALS=7;
+    public static final int RULE_PLUSEQUALS=6;
     public static final int RULE_CLOSED_KEY=16;
     public static final int RULE_ANY_OTHER=32;
     public static final int RULE_MINUS=23;
