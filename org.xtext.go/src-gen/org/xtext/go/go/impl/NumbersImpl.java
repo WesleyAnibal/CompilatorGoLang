@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.xtext.go.go.AtribAux;
+import org.xtext.go.go.Atrib_Aux;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.Expression;
 import org.xtext.go.go.GoPackage;
@@ -78,7 +78,7 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
    * @generated
    * @ordered
    */
-  protected EList<AtribAux> atrb;
+  protected EList<Atrib_Aux> atrb;
 
   /**
    * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
@@ -238,11 +238,11 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<AtribAux> getAtrb()
+  public EList<Atrib_Aux> getAtrb()
   {
     if (atrb == null)
     {
-      atrb = new EObjectContainmentEList<AtribAux>(AtribAux.class, this, GoPackage.NUMBERS__ATRB);
+      atrb = new EObjectContainmentEList<Atrib_Aux>(Atrib_Aux.class, this, GoPackage.NUMBERS__ATRB);
     }
     return atrb;
   }
@@ -590,7 +590,7 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
         return;
       case GoPackage.NUMBERS__ATRB:
         getAtrb().clear();
-        getAtrb().addAll((Collection<? extends AtribAux>)newValue);
+        getAtrb().addAll((Collection<? extends Atrib_Aux>)newValue);
         return;
       case GoPackage.NUMBERS__RIGHT:
         setRight((Expression)newValue);
@@ -695,6 +695,13 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
   @Override
   public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
   {
+    if (baseClass == Greeting.class)
+    {
+      switch (derivedFeatureID)
+      {
+        default: return -1;
+      }
+    }
     if (baseClass == CallFor.class)
     {
       switch (derivedFeatureID)
@@ -734,6 +741,13 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
   @Override
   public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
   {
+    if (baseClass == Greeting.class)
+    {
+      switch (baseFeatureID)
+      {
+        default: return -1;
+      }
+    }
     if (baseClass == CallFor.class)
     {
       switch (baseFeatureID)

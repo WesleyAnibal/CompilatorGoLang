@@ -15,7 +15,7 @@ import org.xtext.go.go.TypeValue;
  *
  * @generated
  */
-public class TypeValueImpl extends GreetingImpl implements TypeValue
+public class TypeValueImpl extends AtriImpl implements TypeValue
 {
   /**
    * <!-- begin-user-doc -->

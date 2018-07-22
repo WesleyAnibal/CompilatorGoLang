@@ -14,8 +14,8 @@ import org.xtext.go.go.Addition;
 import org.xtext.go.go.AndExpression;
 import org.xtext.go.go.Atri;
 import org.xtext.go.go.Atrib;
-import org.xtext.go.go.AtribAux;
 import org.xtext.go.go.AtribVar;
+import org.xtext.go.go.Atrib_Aux;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.Cases;
@@ -137,6 +137,11 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createAtribVarAdapter();
       }
       @Override
+      public Adapter caseAtrib_Aux(Atrib_Aux object)
+      {
+        return createAtrib_AuxAdapter();
+      }
+      @Override
       public Adapter caseVariable(Variable object)
       {
         return createVariableAdapter();
@@ -155,11 +160,6 @@ public class GoAdapterFactory extends AdapterFactoryImpl
       public Adapter caseDecVars(DecVars object)
       {
         return createDecVarsAdapter();
-      }
-      @Override
-      public Adapter caseAtribAux(AtribAux object)
-      {
-        return createAtribAuxAdapter();
       }
       @Override
       public Adapter caseSwitchCase(SwitchCase object)
@@ -394,6 +394,21 @@ public class GoAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Atrib_Aux <em>Atrib Aux</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Atrib_Aux
+   * @generated
+   */
+  public Adapter createAtrib_AuxAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.go.go.Variable <em>Variable</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -449,21 +464,6 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDecVarsAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.go.go.AtribAux <em>Atrib Aux</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.go.go.AtribAux
-   * @generated
-   */
-  public Adapter createAtribAuxAdapter()
   {
     return null;
   }

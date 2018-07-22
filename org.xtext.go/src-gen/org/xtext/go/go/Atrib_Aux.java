@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see org.xtext.go.go.GoPackage#getAtribAux()
+ * @see org.xtext.go.go.GoPackage#getAtrib_Aux()
  * @model
  * @generated
  */
-public interface AtribAux extends EObject
+public interface Atrib_Aux extends EObject
 {
-} // AtribAux
+} // Atrib_Aux

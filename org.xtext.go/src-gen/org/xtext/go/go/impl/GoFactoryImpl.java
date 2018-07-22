@@ -15,8 +15,8 @@ import org.xtext.go.go.Addition;
 import org.xtext.go.go.AndExpression;
 import org.xtext.go.go.Atri;
 import org.xtext.go.go.Atrib;
-import org.xtext.go.go.AtribAux;
 import org.xtext.go.go.AtribVar;
+import org.xtext.go.go.Atrib_Aux;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.Cases;
@@ -107,11 +107,11 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
       case GoPackage.DECL: return createDecl();
       case GoPackage.DEC_VAR: return createDecVar();
       case GoPackage.ATRIB_VAR: return createAtribVar();
+      case GoPackage.ATRIB_AUX: return createAtrib_Aux();
       case GoPackage.VARIABLE: return createVariable();
       case GoPackage.ATRIB: return createAtrib();
       case GoPackage.MULT_DEC_VARS: return createMultDecVars();
       case GoPackage.DEC_VARS: return createDecVars();
-      case GoPackage.ATRIB_AUX: return createAtribAux();
       case GoPackage.SWITCH_CASE: return createSwitchCase();
       case GoPackage.CASES: return createCases();
       case GoPackage.ATRI: return createAtri();
@@ -204,6 +204,17 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Atrib_Aux createAtrib_Aux()
+  {
+    Atrib_AuxImpl atrib_Aux = new Atrib_AuxImpl();
+    return atrib_Aux;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Variable createVariable()
   {
     VariableImpl variable = new VariableImpl();
@@ -241,17 +252,6 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     DecVarsImpl decVars = new DecVarsImpl();
     return decVars;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AtribAux createAtribAux()
-  {
-    AtribAuxImpl atribAux = new AtribAuxImpl();
-    return atribAux;
   }
 
   /**

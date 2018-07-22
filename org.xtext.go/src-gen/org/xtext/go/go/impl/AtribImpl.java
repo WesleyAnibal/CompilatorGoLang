@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.go.go.Atrib;
+import org.xtext.go.go.Atrib_Aux;
 import org.xtext.go.go.GoPackage;
-import org.xtext.go.go.Greeting;
 
 /**
  * <!-- begin-user-doc -->
@@ -81,7 +81,7 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
    * @generated
    * @ordered
    */
-  protected Greeting atrib;
+  protected Atrib_Aux atrib;
 
   /**
    * <!-- begin-user-doc -->
@@ -155,7 +155,7 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
    * <!-- end-user-doc -->
    * @generated
    */
-  public Greeting getAtrib()
+  public Atrib_Aux getAtrib()
   {
     return atrib;
   }
@@ -165,9 +165,9 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAtrib(Greeting newAtrib, NotificationChain msgs)
+  public NotificationChain basicSetAtrib(Atrib_Aux newAtrib, NotificationChain msgs)
   {
-    Greeting oldAtrib = atrib;
+    Atrib_Aux oldAtrib = atrib;
     atrib = newAtrib;
     if (eNotificationRequired())
     {
@@ -182,7 +182,7 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAtrib(Greeting newAtrib)
+  public void setAtrib(Atrib_Aux newAtrib)
   {
     if (newAtrib != atrib)
     {
@@ -251,7 +251,7 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
         setType((String)newValue);
         return;
       case GoPackage.ATRIB__ATRIB:
-        setAtrib((Greeting)newValue);
+        setAtrib((Atrib_Aux)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -274,7 +274,7 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
         setType(TYPE_EDEFAULT);
         return;
       case GoPackage.ATRIB__ATRIB:
-        setAtrib((Greeting)null);
+        setAtrib((Atrib_Aux)null);
         return;
     }
     super.eUnset(featureID);

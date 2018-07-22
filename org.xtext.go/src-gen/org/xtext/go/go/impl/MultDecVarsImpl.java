@@ -24,7 +24,7 @@ import org.xtext.go.go.TypeValue;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.MultDecVarsImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.MultDecVarsImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.MultDecVarsImpl#getTypw <em>Typw</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.MultDecVarsImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
@@ -53,14 +53,14 @@ public class MultDecVarsImpl extends GreetingImpl implements MultDecVars
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
+   * The cached value of the '{@link #getTypw() <em>Typw</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getTypw()
    * @generated
    * @ordered
    */
-  protected TypeValue type;
+  protected TypeValue typw;
 
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -131,9 +131,9 @@ public class MultDecVarsImpl extends GreetingImpl implements MultDecVars
    * <!-- end-user-doc -->
    * @generated
    */
-  public TypeValue getType()
+  public TypeValue getTypw()
   {
-    return type;
+    return typw;
   }
 
   /**
@@ -141,13 +141,13 @@ public class MultDecVarsImpl extends GreetingImpl implements MultDecVars
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetType(TypeValue newType, NotificationChain msgs)
+  public NotificationChain basicSetTypw(TypeValue newTypw, NotificationChain msgs)
   {
-    TypeValue oldType = type;
-    type = newType;
+    TypeValue oldTypw = typw;
+    typw = newTypw;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.MULT_DEC_VARS__TYPE, oldType, newType);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.MULT_DEC_VARS__TYPW, oldTypw, newTypw);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -158,20 +158,20 @@ public class MultDecVarsImpl extends GreetingImpl implements MultDecVars
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(TypeValue newType)
+  public void setTypw(TypeValue newTypw)
   {
-    if (newType != type)
+    if (newTypw != typw)
     {
       NotificationChain msgs = null;
-      if (type != null)
-        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.MULT_DEC_VARS__TYPE, null, msgs);
-      if (newType != null)
-        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.MULT_DEC_VARS__TYPE, null, msgs);
-      msgs = basicSetType(newType, msgs);
+      if (typw != null)
+        msgs = ((InternalEObject)typw).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.MULT_DEC_VARS__TYPW, null, msgs);
+      if (newTypw != null)
+        msgs = ((InternalEObject)newTypw).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.MULT_DEC_VARS__TYPW, null, msgs);
+      msgs = basicSetTypw(newTypw, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.MULT_DEC_VARS__TYPE, newType, newType));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.MULT_DEC_VARS__TYPW, newTypw, newTypw));
   }
 
   /**
@@ -207,8 +207,8 @@ public class MultDecVarsImpl extends GreetingImpl implements MultDecVars
   {
     switch (featureID)
     {
-      case GoPackage.MULT_DEC_VARS__TYPE:
-        return basicSetType(null, msgs);
+      case GoPackage.MULT_DEC_VARS__TYPW:
+        return basicSetTypw(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -225,8 +225,8 @@ public class MultDecVarsImpl extends GreetingImpl implements MultDecVars
     {
       case GoPackage.MULT_DEC_VARS__NAME:
         return getName();
-      case GoPackage.MULT_DEC_VARS__TYPE:
-        return getType();
+      case GoPackage.MULT_DEC_VARS__TYPW:
+        return getTypw();
       case GoPackage.MULT_DEC_VARS__VALUE:
         return getValue();
     }
@@ -246,8 +246,8 @@ public class MultDecVarsImpl extends GreetingImpl implements MultDecVars
       case GoPackage.MULT_DEC_VARS__NAME:
         setName((String)newValue);
         return;
-      case GoPackage.MULT_DEC_VARS__TYPE:
-        setType((TypeValue)newValue);
+      case GoPackage.MULT_DEC_VARS__TYPW:
+        setTypw((TypeValue)newValue);
         return;
       case GoPackage.MULT_DEC_VARS__VALUE:
         setValue((String)newValue);
@@ -269,8 +269,8 @@ public class MultDecVarsImpl extends GreetingImpl implements MultDecVars
       case GoPackage.MULT_DEC_VARS__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case GoPackage.MULT_DEC_VARS__TYPE:
-        setType((TypeValue)null);
+      case GoPackage.MULT_DEC_VARS__TYPW:
+        setTypw((TypeValue)null);
         return;
       case GoPackage.MULT_DEC_VARS__VALUE:
         setValue(VALUE_EDEFAULT);
@@ -291,8 +291,8 @@ public class MultDecVarsImpl extends GreetingImpl implements MultDecVars
     {
       case GoPackage.MULT_DEC_VARS__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case GoPackage.MULT_DEC_VARS__TYPE:
-        return type != null;
+      case GoPackage.MULT_DEC_VARS__TYPW:
+        return typw != null;
       case GoPackage.MULT_DEC_VARS__VALUE:
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
     }

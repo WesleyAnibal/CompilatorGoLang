@@ -14,6 +14,6 @@ package org.xtext.go.go;
  * @model
  * @generated
  */
-public interface TypeValue extends Greeting
+public interface TypeValue extends Atri
 {
 } // TypeValue

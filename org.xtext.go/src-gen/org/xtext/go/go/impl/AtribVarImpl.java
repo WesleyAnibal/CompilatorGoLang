@@ -20,8 +20,8 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.xtext.go.go.AtribAux;
 import org.xtext.go.go.AtribVar;
+import org.xtext.go.go.Atrib_Aux;
 import org.xtext.go.go.GoPackage;
 
 /**
@@ -79,7 +79,7 @@ public class AtribVarImpl extends MinimalEObjectImpl.Container implements AtribV
    * @generated
    * @ordered
    */
-  protected EList<AtribAux> atrb;
+  protected EList<Atrib_Aux> atrb;
 
   /**
    * <!-- begin-user-doc -->
@@ -144,11 +144,11 @@ public class AtribVarImpl extends MinimalEObjectImpl.Container implements AtribV
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<AtribAux> getAtrb()
+  public EList<Atrib_Aux> getAtrb()
   {
     if (atrb == null)
     {
-      atrb = new EObjectContainmentEList<AtribAux>(AtribAux.class, this, GoPackage.ATRIB_VAR__ATRB);
+      atrb = new EObjectContainmentEList<Atrib_Aux>(Atrib_Aux.class, this, GoPackage.ATRIB_VAR__ATRB);
     }
     return atrb;
   }
@@ -209,7 +209,7 @@ public class AtribVarImpl extends MinimalEObjectImpl.Container implements AtribV
         return;
       case GoPackage.ATRIB_VAR__ATRB:
         getAtrb().clear();
-        getAtrb().addAll((Collection<? extends AtribAux>)newValue);
+        getAtrb().addAll((Collection<? extends Atrib_Aux>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

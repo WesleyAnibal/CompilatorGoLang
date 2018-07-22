@@ -71,7 +71,7 @@ public interface AtribVar extends EObject
 
   /**
    * Returns the value of the '<em><b>Atrb</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.go.go.AtribAux}.
+   * The list contents are of type {@link org.xtext.go.go.Atrib_Aux}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Atrb</em>' containment reference list isn't clear,
@@ -83,6 +83,6 @@ public interface AtribVar extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<AtribAux> getAtrb();
+  EList<Atrib_Aux> getAtrb();
 
 } // AtribVar

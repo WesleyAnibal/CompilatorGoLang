@@ -12,8 +12,8 @@ import org.xtext.go.go.Addition;
 import org.xtext.go.go.AndExpression;
 import org.xtext.go.go.Atri;
 import org.xtext.go.go.Atrib;
-import org.xtext.go.go.AtribAux;
 import org.xtext.go.go.AtribVar;
+import org.xtext.go.go.Atrib_Aux;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.Cases;
@@ -145,6 +145,13 @@ public class GoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GoPackage.ATRIB_AUX:
+      {
+        Atrib_Aux atrib_Aux = (Atrib_Aux)theEObject;
+        T result = caseAtrib_Aux(atrib_Aux);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GoPackage.VARIABLE:
       {
         Variable variable = (Variable)theEObject;
@@ -175,13 +182,6 @@ public class GoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GoPackage.ATRIB_AUX:
-      {
-        AtribAux atribAux = (AtribAux)theEObject;
-        T result = caseAtribAux(atribAux);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case GoPackage.SWITCH_CASE:
       {
         SwitchCase switchCase = (SwitchCase)theEObject;
@@ -201,7 +201,7 @@ public class GoSwitch<T> extends Switch<T>
       {
         Atri atri = (Atri)theEObject;
         T result = caseAtri(atri);
-        if (result == null) result = caseAtribAux(atri);
+        if (result == null) result = caseAtrib_Aux(atri);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -216,7 +216,8 @@ public class GoSwitch<T> extends Switch<T>
       {
         TypeValue typeValue = (TypeValue)theEObject;
         T result = caseTypeValue(typeValue);
-        if (result == null) result = caseGreeting(typeValue);
+        if (result == null) result = caseAtri(typeValue);
+        if (result == null) result = caseAtrib_Aux(typeValue);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -236,7 +237,9 @@ public class GoSwitch<T> extends Switch<T>
         T result = caseNumbers(numbers);
         if (result == null) result = caseTypeValue(numbers);
         if (result == null) result = caseExpression(numbers);
+        if (result == null) result = caseAtri(numbers);
         if (result == null) result = casevarFor(numbers);
+        if (result == null) result = caseAtrib_Aux(numbers);
         if (result == null) result = caseCallFor(numbers);
         if (result == null) result = caseGreeting(numbers);
         if (result == null) result = defaultCase(theEObject);
@@ -513,6 +516,22 @@ public class GoSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Atrib Aux</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Atrib Aux</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAtrib_Aux(Atrib_Aux object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Variable</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -572,22 +591,6 @@ public class GoSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDecVars(DecVars object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Atrib Aux</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Atrib Aux</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAtribAux(AtribAux object)
   {
     return null;
   }

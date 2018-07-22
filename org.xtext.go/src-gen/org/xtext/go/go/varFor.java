@@ -44,7 +44,7 @@ public interface varFor extends CallFor
 
   /**
    * Returns the value of the '<em><b>Atrb</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.go.go.AtribAux}.
+   * The list contents are of type {@link org.xtext.go.go.Atrib_Aux}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Atrb</em>' containment reference list isn't clear,
@@ -56,7 +56,7 @@ public interface varFor extends CallFor
    * @model containment="true"
    * @generated
    */
-  EList<AtribAux> getAtrb();
+  EList<Atrib_Aux> getAtrb();
 
   /**
    * Returns the value of the '<em><b>Right</b></em>' containment reference.

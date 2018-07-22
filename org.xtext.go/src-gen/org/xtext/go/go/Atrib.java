@@ -86,12 +86,12 @@ public interface Atrib extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Atrib</em>' containment reference.
-   * @see #setAtrib(Greeting)
+   * @see #setAtrib(Atrib_Aux)
    * @see org.xtext.go.go.GoPackage#getAtrib_Atrib()
    * @model containment="true"
    * @generated
    */
-  Greeting getAtrib();
+  Atrib_Aux getAtrib();
 
   /**
    * Sets the value of the '{@link org.xtext.go.go.Atrib#getAtrib <em>Atrib</em>}' containment reference.
@@ -101,6 +101,6 @@ public interface Atrib extends EObject
    * @see #getAtrib()
    * @generated
    */
-  void setAtrib(Greeting value);
+  void setAtrib(Atrib_Aux value);
 
 } // Atrib

@@ -69,6 +69,15 @@ public interface GoFactory extends EFactory
   AtribVar createAtribVar();
 
   /**
+   * Returns a new object of class '<em>Atrib Aux</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Atrib Aux</em>'.
+   * @generated
+   */
+  Atrib_Aux createAtrib_Aux();
+
+  /**
    * Returns a new object of class '<em>Variable</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -103,15 +112,6 @@ public interface GoFactory extends EFactory
    * @generated
    */
   DecVars createDecVars();
-
-  /**
-   * Returns a new object of class '<em>Atrib Aux</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Atrib Aux</em>'.
-   * @generated
-   */
-  AtribAux createAtribAux();
 
   /**
    * Returns a new object of class '<em>Switch Case</em>'.

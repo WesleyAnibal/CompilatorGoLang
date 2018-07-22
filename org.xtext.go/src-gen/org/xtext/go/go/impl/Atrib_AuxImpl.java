@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.go.go.AtribAux;
+import org.xtext.go.go.Atrib_Aux;
 import org.xtext.go.go.GoPackage;
 
 /**
@@ -17,14 +17,14 @@ import org.xtext.go.go.GoPackage;
  *
  * @generated
  */
-public class AtribAuxImpl extends MinimalEObjectImpl.Container implements AtribAux
+public class Atrib_AuxImpl extends MinimalEObjectImpl.Container implements Atrib_Aux
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AtribAuxImpl()
+  protected Atrib_AuxImpl()
   {
     super();
   }
@@ -40,4 +40,4 @@ public class AtribAuxImpl extends MinimalEObjectImpl.Container implements AtribA
     return GoPackage.Literals.ATRIB_AUX;
   }
 
-} //AtribAuxImpl
+} //Atrib_AuxImpl

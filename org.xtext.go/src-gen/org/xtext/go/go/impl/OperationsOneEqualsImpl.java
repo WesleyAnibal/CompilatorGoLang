@@ -24,7 +24,7 @@ import org.xtext.go.go.OperationsOneEquals;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.OperationsOneEqualsImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.OperationsOneEqualsImpl#getM <em>M</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.OperationsOneEqualsImpl#getN <em>N</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,14 +52,14 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getM() <em>M</em>}' containment reference.
+   * The cached value of the '{@link #getN() <em>N</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getM()
+   * @see #getN()
    * @generated
    * @ordered
    */
-  protected Numbers m;
+  protected Numbers n;
 
   /**
    * <!-- begin-user-doc -->
@@ -110,9 +110,9 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
    * <!-- end-user-doc -->
    * @generated
    */
-  public Numbers getM()
+  public Numbers getN()
   {
-    return m;
+    return n;
   }
 
   /**
@@ -120,13 +120,13 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetM(Numbers newM, NotificationChain msgs)
+  public NotificationChain basicSetN(Numbers newN, NotificationChain msgs)
   {
-    Numbers oldM = m;
-    m = newM;
+    Numbers oldN = n;
+    n = newN;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.OPERATIONS_ONE_EQUALS__M, oldM, newM);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.OPERATIONS_ONE_EQUALS__N, oldN, newN);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -137,20 +137,20 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setM(Numbers newM)
+  public void setN(Numbers newN)
   {
-    if (newM != m)
+    if (newN != n)
     {
       NotificationChain msgs = null;
-      if (m != null)
-        msgs = ((InternalEObject)m).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.OPERATIONS_ONE_EQUALS__M, null, msgs);
-      if (newM != null)
-        msgs = ((InternalEObject)newM).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.OPERATIONS_ONE_EQUALS__M, null, msgs);
-      msgs = basicSetM(newM, msgs);
+      if (n != null)
+        msgs = ((InternalEObject)n).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.OPERATIONS_ONE_EQUALS__N, null, msgs);
+      if (newN != null)
+        msgs = ((InternalEObject)newN).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.OPERATIONS_ONE_EQUALS__N, null, msgs);
+      msgs = basicSetN(newN, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.OPERATIONS_ONE_EQUALS__M, newM, newM));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.OPERATIONS_ONE_EQUALS__N, newN, newN));
   }
 
   /**
@@ -163,8 +163,8 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
   {
     switch (featureID)
     {
-      case GoPackage.OPERATIONS_ONE_EQUALS__M:
-        return basicSetM(null, msgs);
+      case GoPackage.OPERATIONS_ONE_EQUALS__N:
+        return basicSetN(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -181,8 +181,8 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
     {
       case GoPackage.OPERATIONS_ONE_EQUALS__NAME:
         return getName();
-      case GoPackage.OPERATIONS_ONE_EQUALS__M:
-        return getM();
+      case GoPackage.OPERATIONS_ONE_EQUALS__N:
+        return getN();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -200,8 +200,8 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
       case GoPackage.OPERATIONS_ONE_EQUALS__NAME:
         setName((String)newValue);
         return;
-      case GoPackage.OPERATIONS_ONE_EQUALS__M:
-        setM((Numbers)newValue);
+      case GoPackage.OPERATIONS_ONE_EQUALS__N:
+        setN((Numbers)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -220,8 +220,8 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
       case GoPackage.OPERATIONS_ONE_EQUALS__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case GoPackage.OPERATIONS_ONE_EQUALS__M:
-        setM((Numbers)null);
+      case GoPackage.OPERATIONS_ONE_EQUALS__N:
+        setN((Numbers)null);
         return;
     }
     super.eUnset(featureID);
@@ -239,8 +239,8 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
     {
       case GoPackage.OPERATIONS_ONE_EQUALS__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case GoPackage.OPERATIONS_ONE_EQUALS__M:
-        return m != null;
+      case GoPackage.OPERATIONS_ONE_EQUALS__N:
+        return n != null;
     }
     return super.eIsSet(featureID);
   }

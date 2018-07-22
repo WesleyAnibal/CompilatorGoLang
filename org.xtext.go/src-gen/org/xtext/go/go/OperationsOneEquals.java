@@ -14,7 +14,7 @@ package org.xtext.go.go;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.OperationsOneEquals#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.go.go.OperationsOneEquals#getM <em>M</em>}</li>
+ *   <li>{@link org.xtext.go.go.OperationsOneEquals#getN <em>N</em>}</li>
  * </ul>
  *
  * @see org.xtext.go.go.GoPackage#getOperationsOneEquals()
@@ -50,29 +50,29 @@ public interface OperationsOneEquals extends varFor
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>M</b></em>' containment reference.
+   * Returns the value of the '<em><b>N</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>M</em>' containment reference isn't clear,
+   * If the meaning of the '<em>N</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>M</em>' containment reference.
-   * @see #setM(Numbers)
-   * @see org.xtext.go.go.GoPackage#getOperationsOneEquals_M()
+   * @return the value of the '<em>N</em>' containment reference.
+   * @see #setN(Numbers)
+   * @see org.xtext.go.go.GoPackage#getOperationsOneEquals_N()
    * @model containment="true"
    * @generated
    */
-  Numbers getM();
+  Numbers getN();
 
   /**
-   * Sets the value of the '{@link org.xtext.go.go.OperationsOneEquals#getM <em>M</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.go.go.OperationsOneEquals#getN <em>N</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>M</em>' containment reference.
-   * @see #getM()
+   * @param value the new value of the '<em>N</em>' containment reference.
+   * @see #getN()
    * @generated
    */
-  void setM(Numbers value);
+  void setN(Numbers value);
 
 } // OperationsOneEquals

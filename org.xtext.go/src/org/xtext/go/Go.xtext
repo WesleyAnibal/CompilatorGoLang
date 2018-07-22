@@ -6,7 +6,7 @@ Go:
 	(elements+=Greeting*);
 
 Greeting:
-	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition |  SwitchCase | TypeValue | DecImport | CallFunc | CallFor | Variable;
+	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition |  SwitchCase | DecImport | CallFunc | CallFor | Variable;
 
 Decl:
 	Modif name=ID type=Types
@@ -16,8 +16,12 @@ DecVar:
 ;
 
 AtribVar:
-	Modif vars+=ID(Comma vars+=ID)* (type=Types) (equals atrb+=AtribAux(Comma atrb+=AtribAux)*)?
+	Modif vars+=ID(Comma vars+=ID)* (type=Types) (equals atrb+=Atrib_Aux(Comma atrb+=Atrib_Aux*))?
 	
+;
+
+Atrib_Aux:
+	Atri|ID
 ;
 
 Variable:
@@ -25,18 +29,14 @@ Variable:
 ;
 
 Atrib:
-	Modif name=ID type=Types equals atrib=(TypeValue|Variable) 
+	Modif name=ID type=Types equals atrib=Atrib_Aux
 ;
 
 MultDecVars:
-	Modif Open_parentheses (name=ID equals (type=TypeValue | value=ID))* Closed_parentheses;
+	Modif Open_parentheses (name=ID equals (typw=TypeValue | value=ID))* Closed_parentheses;
 	
 DecVars:
-	vars+=ID(Comma vars+=ID)* ":=" atrb+=AtribAux(Comma atrb+=AtribAux)*;
-	
-AtribAux:
-	Atri|ID
-;
+	vars+=ID(Comma vars+=ID)* ":=" atrb+=Atrib_Aux(Comma atrb+=Atrib_Aux*);
 	
 SwitchCase:
 	SWITCH name=ID Open_Key cas=Cases* (DEFAULT DoisPontos k=Greeting*)? Closed_Key 
@@ -46,21 +46,21 @@ Cases:
 	CASE x=Expression DoisPontos v=Greeting*;
 	
 Atri:
-	Open_brackets INT? Closed_brackets type=Types(Open_Key value=TypeValue Closed_Key)? | value=TypeValue ;
+	Open_brackets INT? Closed_brackets Types(Open_Key TypeValue Closed_Key)? | TypeValue ;
 	
 
 Params:
 	params+=ID type+=Types? (Comma params+=ID type+=Types?)*;
 	
 TypeValue:
-	Numbers | Boolean | STRING;
+	STRING | Numbers | Boolean;
 
 
 DecImport:
 	IMPORT (STRING | Open_parentheses STRING+ Closed_parentheses);
 	
 OperationsOneEquals:
-	name=ID(PlusEquals| MinusEquals)(ID|m=Numbers);
+	name=ID(PlusEquals| MinusEquals)(ID|n=Numbers);
 //Removi a recursão a esquerda
 
 
@@ -68,7 +68,7 @@ Numbers:
 	int=INT | d=Double;
 	
 Double:
-	d = INT Dot INT;
+	d=INT Dot INT;
 	
 Condition: 
     (if=IfCondition(elseif=ElseIfCondition)*(else=ElseCondition)?);
@@ -132,7 +132,7 @@ operationsOne:
 	name=ID(PlusOne| MinusOne);
 	
 varFor:
-	ComparisonExpression | (Modif var+=ID Types equals atrb+=AtribAux  PontoVirgula right=Literal Operator left=Literal PontoVirgula (operationsOne| OperationsOneEquals));
+	ComparisonExpression | (Modif var+=ID Types equals atrb+=Atrib_Aux PontoVirgula right=Literal Operator left=Literal PontoVirgula (operationsOne| OperationsOneEquals));
 
 Literal returns Expression:
     {Literal} value=Boolean | Numbers 

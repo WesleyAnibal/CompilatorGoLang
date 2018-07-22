@@ -52,7 +52,7 @@ class GoValidator extends AbstractGoValidator {
 	public static final String SEMANTIC_ERROR = "Erro Semântico: ";
 	
 	public static Map<String,DecFunc> funcImplements = new HashMap<String, DecFunc>();
-	public static Map<String, DecVar> variablesDeclarationMap     = new HashMap<String, DecVar>();
+	public static Map<String, List<DecVar>> variablesDeclarationMap     = new HashMap<String, List<DecVar>>();
 	
 
 	@Check
@@ -95,21 +95,22 @@ class GoValidator extends AbstractGoValidator {
 	
 	def addAtribVarInMap(AtribVar atrib){
 		for(String id : atrib.vars){
-			variablesDeclarationMap.put(id.toString(), atrib as DecVar);
+			variablesDeclarationMap.put(id.toString(), new ArrayList());
+			variablesDeclarationMap.get(id.toString()).add(atrib as DecVar)
 		}
 	}
 	
 	def addDeclarionVarInMap(Decl dec){
-		variablesDeclarationMap.put(dec.name.toString(), dec as DecVar);
+		variablesDeclarationMap.put(dec.name.toString(), new ArrayList());
+		variablesDeclarationMap.get(dec.name.toString()).add(dec as DecVar);
 	}
 	
 	def addAtribuicaoVarInMap(Atrib dec){
-		
-		checkTypeDeclarationAtrib(dec);		
-		
-
-		variablesDeclarationMap.put(dec.name.toString(), dec as DecVar);
+		checkTypeDeclarationAtrib(dec);
+		variablesDeclarationMap.put(dec.name.toString(), new ArrayList());
+		variablesDeclarationMap.get(dec.name.toString()).add(dec as DecVar);
 	}
+
 	
 	def checkTypeDeclarationAtrib (Atrib dec) {
 		if(dec.atrib instanceof TypeValue){
@@ -117,10 +118,6 @@ class GoValidator extends AbstractGoValidator {
 				error(SEMANTIC_ERROR + "não é possível converter string para number" , GoPackage.Literals.DEC_VAR__ATRIBUICAO);
 			
 			}
-		}
-		if(dec.atrib instanceof Variable){
-			var Variable vab = dec.atrib as Variable;
-			checkIfVariableIsDeclarated(vab);
 		}
 		
 	}
@@ -202,8 +199,8 @@ class GoValidator extends AbstractGoValidator {
 		
 		var List<String> tipos = new ArrayList<String>();
 		if(param !== null && param.type !== null){
-			for(String id : param.params){
-				tipos.add(getDecVarType(id))
+			for(String id : param.type){
+				tipos.add(id)
 			}
 		}
 		return tipos; 

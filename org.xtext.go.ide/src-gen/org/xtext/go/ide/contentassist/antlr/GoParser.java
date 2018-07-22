@@ -33,9 +33,8 @@ public class GoParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getGreetingAccess().getAlternatives(), "rule__Greeting__Alternatives");
 					put(grammarAccess.getDecVarAccess().getAlternatives(), "rule__DecVar__Alternatives");
-					put(grammarAccess.getAtribAccess().getAtribAlternatives_4_0(), "rule__Atrib__AtribAlternatives_4_0");
+					put(grammarAccess.getAtrib_AuxAccess().getAlternatives(), "rule__Atrib_Aux__Alternatives");
 					put(grammarAccess.getMultDecVarsAccess().getAlternatives_2_2(), "rule__MultDecVars__Alternatives_2_2");
-					put(grammarAccess.getAtribAuxAccess().getAlternatives(), "rule__AtribAux__Alternatives");
 					put(grammarAccess.getAtriAccess().getAlternatives(), "rule__Atri__Alternatives");
 					put(grammarAccess.getTypeValueAccess().getAlternatives(), "rule__TypeValue__Alternatives");
 					put(grammarAccess.getDecImportAccess().getAlternatives_1(), "rule__DecImport__Alternatives_1");
@@ -120,7 +119,7 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAtribAccess().getTypeAssignment_2(), "rule__Atrib__TypeAssignment_2");
 					put(grammarAccess.getAtribAccess().getAtribAssignment_4(), "rule__Atrib__AtribAssignment_4");
 					put(grammarAccess.getMultDecVarsAccess().getNameAssignment_2_0(), "rule__MultDecVars__NameAssignment_2_0");
-					put(grammarAccess.getMultDecVarsAccess().getTypeAssignment_2_2_0(), "rule__MultDecVars__TypeAssignment_2_2_0");
+					put(grammarAccess.getMultDecVarsAccess().getTypwAssignment_2_2_0(), "rule__MultDecVars__TypwAssignment_2_2_0");
 					put(grammarAccess.getMultDecVarsAccess().getValueAssignment_2_2_1(), "rule__MultDecVars__ValueAssignment_2_2_1");
 					put(grammarAccess.getDecVarsAccess().getVarsAssignment_0(), "rule__DecVars__VarsAssignment_0");
 					put(grammarAccess.getDecVarsAccess().getVarsAssignment_1_1(), "rule__DecVars__VarsAssignment_1_1");
@@ -131,15 +130,12 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSwitchCaseAccess().getKAssignment_4_2(), "rule__SwitchCase__KAssignment_4_2");
 					put(grammarAccess.getCasesAccess().getXAssignment_1(), "rule__Cases__XAssignment_1");
 					put(grammarAccess.getCasesAccess().getVAssignment_3(), "rule__Cases__VAssignment_3");
-					put(grammarAccess.getAtriAccess().getTypeAssignment_0_3(), "rule__Atri__TypeAssignment_0_3");
-					put(grammarAccess.getAtriAccess().getValueAssignment_0_4_1(), "rule__Atri__ValueAssignment_0_4_1");
-					put(grammarAccess.getAtriAccess().getValueAssignment_1(), "rule__Atri__ValueAssignment_1");
 					put(grammarAccess.getParamsAccess().getParamsAssignment_0(), "rule__Params__ParamsAssignment_0");
 					put(grammarAccess.getParamsAccess().getTypeAssignment_1(), "rule__Params__TypeAssignment_1");
 					put(grammarAccess.getParamsAccess().getParamsAssignment_2_1(), "rule__Params__ParamsAssignment_2_1");
 					put(grammarAccess.getParamsAccess().getTypeAssignment_2_2(), "rule__Params__TypeAssignment_2_2");
 					put(grammarAccess.getOperationsOneEqualsAccess().getNameAssignment_0(), "rule__OperationsOneEquals__NameAssignment_0");
-					put(grammarAccess.getOperationsOneEqualsAccess().getMAssignment_2_1(), "rule__OperationsOneEquals__MAssignment_2_1");
+					put(grammarAccess.getOperationsOneEqualsAccess().getNAssignment_2_1(), "rule__OperationsOneEquals__NAssignment_2_1");
 					put(grammarAccess.getNumbersAccess().getIntAssignment_0(), "rule__Numbers__IntAssignment_0");
 					put(grammarAccess.getNumbersAccess().getDAssignment_1(), "rule__Numbers__DAssignment_1");
 					put(grammarAccess.getDoubleAccess().getDAssignment_0(), "rule__Double__DAssignment_0");

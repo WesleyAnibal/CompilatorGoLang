@@ -24,6 +24,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//AtribVar/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//AtribVar/atrb"/>
     </genClasses>
+    <genClasses ecoreClass="Go.ecore#//Atrib_Aux"/>
     <genClasses ecoreClass="Go.ecore#//Variable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Variable/name"/>
     </genClasses>
@@ -34,14 +35,13 @@
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//MultDecVars">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//MultDecVars/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//MultDecVars/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//MultDecVars/typw"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//MultDecVars/value"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//DecVars">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecVars/vars"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecVars/atrb"/>
     </genClasses>
-    <genClasses ecoreClass="Go.ecore#//AtribAux"/>
     <genClasses ecoreClass="Go.ecore#//SwitchCase">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//SwitchCase/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//SwitchCase/cas"/>
@@ -51,10 +51,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Cases/x"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Cases/v"/>
     </genClasses>
-    <genClasses ecoreClass="Go.ecore#//Atri">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Atri/type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Atri/value"/>
-    </genClasses>
+    <genClasses ecoreClass="Go.ecore#//Atri"/>
     <genClasses ecoreClass="Go.ecore#//Params">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Params/params"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Params/type"/>
@@ -62,7 +59,7 @@
     <genClasses ecoreClass="Go.ecore#//TypeValue"/>
     <genClasses ecoreClass="Go.ecore#//OperationsOneEquals">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//OperationsOneEquals/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//OperationsOneEquals/m"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//OperationsOneEquals/n"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//Numbers">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Numbers/int"/>
