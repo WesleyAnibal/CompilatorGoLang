@@ -221,9 +221,4 @@ public class GoValidator extends AbstractGoValidator {
     }
     return tipos;
   }
-  
-  public String getDecVarType(final String id) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nType mismatch: cannot convert from List<DecVar> to DecVar");
-  }
 }

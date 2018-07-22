@@ -110,7 +110,6 @@ class GoValidator extends AbstractGoValidator {
 		variablesDeclarationMap.put(dec.name.toString(), new ArrayList());
 		variablesDeclarationMap.get(dec.name.toString()).add(dec as DecVar);
 	}
-
 	
 	def checkTypeDeclarationAtrib (Atrib dec) {
 		if(dec.atrib instanceof TypeValue){
@@ -207,19 +206,7 @@ class GoValidator extends AbstractGoValidator {
 			
 	}
 	
-	def getDecVarType(String id){
-		if(!variablesDeclarationMap.containsKey(id)){
-			error(SEMANTIC_ERROR + "variavel não declarada", GoPackage.Literals.VARIABLE__NAME);
-		}else{
-			var DecVar dec = variablesDeclarationMap.get(id);
-			if(dec instanceof Atrib){
-				var Atrib atrib = dec as Atrib; 
-				return atrib.type;
-			}
-		}
-		
-		
-	}
+
 	
 	
 	
