@@ -3,6 +3,7 @@
  */
 package org.xtext.go.go;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +15,6 @@ package org.xtext.go.go;
  * @model
  * @generated
  */
-public interface Greeting extends Type
+public interface Greeting extends EObject
 {
 } // Greeting

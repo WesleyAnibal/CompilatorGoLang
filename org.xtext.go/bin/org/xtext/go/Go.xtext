@@ -2,18 +2,290 @@ grammar org.xtext.go.Go with org.eclipse.xtext.common.Terminals
 
 generate go "http://www.xtext.org/go/Go"
 
-Model:
-	 types+=Type*;
+Go:
+	(elements+=Greeting*);
 
-Type: DataType | Greeting;
-	
 Greeting:
-	'print' '('name=ID')';
+	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition |  SwitchCase | DecImport | CallFunc | CallFor | Variable;
+
+Decl:
+	Modif name=ID type=Types
+;
+DecVar:
+	declaration=Decl | assignment=AtribVar | atribuicao=Atrib
+;
+
+AtribVar:
+	Modif vars+=ID(Comma vars+=ID)* (type=Types) (equals atrb+=Atrib_Aux(Comma atrb+=Atrib_Aux*))?
+	
+;
+
+Atrib_Aux:
+	Atri|Variable
+;
+
+Variable:
+	name=ID
+;
+
+Atrib:
+	Modif name=ID type=Types equals atrib=Atrib_Aux
+;
+
+MultDecVars:
+	Modif Open_parentheses (name=ID equals (typw=TypeValue | value=ID))* Closed_parentheses;
+	
+DecVars:
+	vars+=ID(Comma vars+=ID)* ":=" atrb+=Atrib_Aux(Comma atrb+=Atrib_Aux*);
+	
+SwitchCase:
+	SWITCH name=ID Open_Key cas=Cases* (DEFAULT DoisPontos k=Greeting*)? Closed_Key 
+;
+
+Cases:
+	CASE x=Expression DoisPontos v=Greeting*;
+	
+Atri:
+	Open_brackets INT? Closed_brackets Types(Open_Key TypeValue Closed_Key)? | TypeValue ;
+	
+
+Params:
+	params+=ID type+=Types? (Comma params+=ID type+=Types?)*;
+	
+TypeValue:
+	Str | Numbers | Boolean;
+
+Str:
+	s=STRING
+;
+
+DecImport:
+	IMPORT (STRING | Open_parentheses STRING+ Closed_parentheses);
+	
+OperationsOneEquals:
+	name=ID(PlusEquals| MinusEquals)(ID|n=Numbers);
+//Removi a recursão a esquerda
+
+
+Numbers:
+	int=INT | d=Double;
+	
+Double:
+	d=INT Dot INT;
+	
+Condition: 
+    (if=IfCondition(elseif=ElseIfCondition)*(else=ElseCondition)?);
+    
+IfCondition:
+	IF cond=OrExpression Open_Key then=Greeting*Closed_Key;
+    
+ElseIfCondition:
+	(=>ELSE IfCondition);
+	
+ElseCondition:
+	(=>ELSE Open_Key then=Greeting*Closed_Key); 
+  
+Expression:
+    =>(x=Opers | OrExpression | ID) 
+;   
+
+CallFor :
+	FOR varFor? Open_Key x=Greeting* Closed_Key
+;
+
+Opers returns Expression:
+	sum=Addition |sub=Subtration;
+	
+Addition returns Expression:
+  =>SubMult  ({Addition.left=current} Plus right=SubMult )*;
+
+Subtration returns Expression:
+	 =>SubMult  ({Subtration.left=current} Minus right=SubMult )*;
+	
+Multiplication returns Expression:
+  =>PrimaryExpression ({Multiplication.left=current} Asterics right=PrimaryExpression)*;
+  
+Division returns Expression:
+	=>PrimaryExpression ({Division.left=current} Bar right=PrimaryExpression)*;
+
+SubMult returns Expression:
+	(Multiplication| Division)
+;	
+
+OrExpression returns Expression:
+    =>AndExpression ({OrExpression.left=current} "||" right=AndExpression)*  
+;   
+
+AndExpression returns Expression:
+    =>ComparisonExpression ({AndExpression.left=current} "&&" right=ComparisonExpression)*  
+;
+
+ComparisonExpression returns Expression:
+    =>PrimaryExpression ({ComparisonExpression.left=current} Operator right=PrimaryExpression)*
+;
+
+PrimaryExpression returns Expression:
+    Open_parentheses Expression Closed_parentheses
+    | Literal
+;
+
+Operator:
+	"<"|"<="|"=="|">="|">";
+operationsOne:
+	name=ID(PlusOne| MinusOne);
+	
+varFor:
+	ComparisonExpression | (Modif var+=ID Types equals atrb+=Atrib_Aux PontoVirgula right=Literal Operator left=Literal PontoVirgula (operationsOne| OperationsOneEquals));
+
+Literal returns Expression:
+    {Literal} value=Boolean | Numbers 
+;
+
+DecFunc:
+	FUNC name=ID Open_parentheses param=Params* Closed_parentheses return=Types? Open_Key args+=Greeting*Closed_Key
+;
+	
+CallFunc:
+	 nameFunc=ID Open_parentheses param=Params* Closed_parentheses
+;
+
+//Tokens
+
+Terminals:
+	(BREAK|CASE|CHAN|CONST|CONTINUE|ELSE|IF|FOR|FUNC|IMPORT|RETURN|PACKAGE|RANGE);
+
+Types:
+	TYPE | "string" |"int" | "bool"| "byte" | "rune" |"float32" | "float64";
+
+Modif:
+	VAR | CONST;
+	
+terminal PontoVirgula:
+	";";
+	
+terminal Open_Key:
+	"{";
+
+terminal Closed_Key:
+	"}";
+
+terminal Open_brackets:
+	"[";
+
+terminal Closed_brackets:
+	"]";
+	
+terminal Dot:
+	".";
+
+terminal Comma:
+	",";
+	
+terminal Open_parentheses:
+	"(";
+
+terminal Closed_parentheses:
+	")";
+Boolean:
+	val="true" | val="false";
+		
+BREAK:
+	"break";
+
+CASE:
+	"case";
+
+CHAN:
+	"chan";
+
+CONST:
+	"const";
+
+CONTINUE:
+	"continue";
+
+ELSE:
+	"else";
+
+FOR:
+	"for";
+	
+FUNC:
+	"func";
+
+IF:
+	"if";
+	
+IMPORT:
+	"import";	
+
+RETURN:
+	"return";
+	
+PACKAGE:
+	"package";
+	
+TYPE:
+	"type";
+	
+VAR:
+	"var";
+DEFAULT:
+"default";
+
+SWITCH:
+	"switch";
+
+STRUCT:
+	"struct";
+
+RANGE:
+	"range";
+	
+terminal Bar:
+	"/";
+	
+terminal Asterics:
+	"*";
+
+terminal DoisPontos:
+ 	":"	
+;
+
+terminal Minus:
+	"-";
+	
+terminal MinusOne:
+	"--";
+	
+terminal Plus:
+	"+";
+
+terminal PlusEquals:
+	"+=";
+	
+terminal MinusEquals:
+	"-=";
+terminal PlusOne:
+	"++";
+terminal EOL:
+	NEWLINE | COMMENTS;
+	
+terminal COMMENTS:
+	ML_COMMENT | SL_COMMENT;
+	
+terminal ML_COMMENT:
+	"/*"->"*/";
+	
+terminal SL_COMMENT:
+	'//' !('\n'|'\r')* ('\r'? '\n')?;
+
+terminal NEWLINE:
+	('\r'? '\n');
+
+terminal equals :
+	"="
+;
 
 DataType:
-	'Type' name=ID ';';
-	
-@Override 
-terminal ID:
-	('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
-	
+	'datatype' name=ID;

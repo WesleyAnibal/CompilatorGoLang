@@ -5,6 +5,8 @@ package org.xtext.go.go.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Greeting;
 
@@ -15,7 +17,7 @@ import org.xtext.go.go.Greeting;
  *
  * @generated
  */
-public class GreetingImpl extends TypeImpl implements Greeting
+public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeting
 {
   /**
    * <!-- begin-user-doc -->

@@ -11,7 +11,45 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.xtext.go.go.*;
+import org.xtext.go.go.Addition;
+import org.xtext.go.go.AndExpression;
+import org.xtext.go.go.Atri;
+import org.xtext.go.go.Atrib;
+import org.xtext.go.go.AtribVar;
+import org.xtext.go.go.Atrib_Aux;
+import org.xtext.go.go.CallFor;
+import org.xtext.go.go.CallFunc;
+import org.xtext.go.go.Cases;
+import org.xtext.go.go.ComparisonExpression;
+import org.xtext.go.go.Condition;
+import org.xtext.go.go.DataType;
+import org.xtext.go.go.DecFunc;
+import org.xtext.go.go.DecVar;
+import org.xtext.go.go.DecVars;
+import org.xtext.go.go.Decl;
+import org.xtext.go.go.Division;
+import org.xtext.go.go.ElseCondition;
+import org.xtext.go.go.ElseIfCondition;
+import org.xtext.go.go.Expression;
+import org.xtext.go.go.Go;
+import org.xtext.go.go.GoFactory;
+import org.xtext.go.go.GoPackage;
+import org.xtext.go.go.Greeting;
+import org.xtext.go.go.IfCondition;
+import org.xtext.go.go.Literal;
+import org.xtext.go.go.MultDecVars;
+import org.xtext.go.go.Multiplication;
+import org.xtext.go.go.Numbers;
+import org.xtext.go.go.OperationsOneEquals;
+import org.xtext.go.go.OrExpression;
+import org.xtext.go.go.Params;
+import org.xtext.go.go.Str;
+import org.xtext.go.go.Subtration;
+import org.xtext.go.go.SwitchCase;
+import org.xtext.go.go.TypeValue;
+import org.xtext.go.go.Variable;
+import org.xtext.go.go.operationsOne;
+import org.xtext.go.go.varFor;
 
 /**
  * <!-- begin-user-doc -->
@@ -65,10 +103,45 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     switch (eClass.getClassifierID())
     {
-      case GoPackage.MODEL: return createModel();
-      case GoPackage.TYPE: return createType();
+      case GoPackage.GO: return createGo();
       case GoPackage.GREETING: return createGreeting();
+      case GoPackage.DECL: return createDecl();
+      case GoPackage.DEC_VAR: return createDecVar();
+      case GoPackage.ATRIB_VAR: return createAtribVar();
+      case GoPackage.ATRIB_AUX: return createAtrib_Aux();
+      case GoPackage.VARIABLE: return createVariable();
+      case GoPackage.ATRIB: return createAtrib();
+      case GoPackage.MULT_DEC_VARS: return createMultDecVars();
+      case GoPackage.DEC_VARS: return createDecVars();
+      case GoPackage.SWITCH_CASE: return createSwitchCase();
+      case GoPackage.CASES: return createCases();
+      case GoPackage.ATRI: return createAtri();
+      case GoPackage.PARAMS: return createParams();
+      case GoPackage.TYPE_VALUE: return createTypeValue();
+      case GoPackage.STR: return createStr();
+      case GoPackage.OPERATIONS_ONE_EQUALS: return createOperationsOneEquals();
+      case GoPackage.NUMBERS: return createNumbers();
+      case GoPackage.DOUBLE: return createDouble();
+      case GoPackage.CONDITION: return createCondition();
+      case GoPackage.IF_CONDITION: return createIfCondition();
+      case GoPackage.ELSE_IF_CONDITION: return createElseIfCondition();
+      case GoPackage.ELSE_CONDITION: return createElseCondition();
+      case GoPackage.EXPRESSION: return createExpression();
+      case GoPackage.CALL_FOR: return createCallFor();
+      case GoPackage.OPERATIONS_ONE: return createoperationsOne();
+      case GoPackage.VAR_FOR: return createvarFor();
+      case GoPackage.DEC_FUNC: return createDecFunc();
+      case GoPackage.CALL_FUNC: return createCallFunc();
+      case GoPackage.BOOLEAN: return createBoolean();
       case GoPackage.DATA_TYPE: return createDataType();
+      case GoPackage.ADDITION: return createAddition();
+      case GoPackage.SUBTRATION: return createSubtration();
+      case GoPackage.MULTIPLICATION: return createMultiplication();
+      case GoPackage.DIVISION: return createDivision();
+      case GoPackage.OR_EXPRESSION: return createOrExpression();
+      case GoPackage.AND_EXPRESSION: return createAndExpression();
+      case GoPackage.COMPARISON_EXPRESSION: return createComparisonExpression();
+      case GoPackage.LITERAL: return createLiteral();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -79,21 +152,10 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Model createModel()
+  public Go createGo()
   {
-    ModelImpl model = new ModelImpl();
-    return model;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Type createType()
-  {
-    TypeImpl type = new TypeImpl();
-    return type;
+    GoImpl go = new GoImpl();
+    return go;
   }
 
   /**
@@ -112,10 +174,406 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Decl createDecl()
+  {
+    DeclImpl decl = new DeclImpl();
+    return decl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DecVar createDecVar()
+  {
+    DecVarImpl decVar = new DecVarImpl();
+    return decVar;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AtribVar createAtribVar()
+  {
+    AtribVarImpl atribVar = new AtribVarImpl();
+    return atribVar;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Atrib_Aux createAtrib_Aux()
+  {
+    Atrib_AuxImpl atrib_Aux = new Atrib_AuxImpl();
+    return atrib_Aux;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Variable createVariable()
+  {
+    VariableImpl variable = new VariableImpl();
+    return variable;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Atrib createAtrib()
+  {
+    AtribImpl atrib = new AtribImpl();
+    return atrib;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MultDecVars createMultDecVars()
+  {
+    MultDecVarsImpl multDecVars = new MultDecVarsImpl();
+    return multDecVars;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DecVars createDecVars()
+  {
+    DecVarsImpl decVars = new DecVarsImpl();
+    return decVars;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SwitchCase createSwitchCase()
+  {
+    SwitchCaseImpl switchCase = new SwitchCaseImpl();
+    return switchCase;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Cases createCases()
+  {
+    CasesImpl cases = new CasesImpl();
+    return cases;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Atri createAtri()
+  {
+    AtriImpl atri = new AtriImpl();
+    return atri;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Params createParams()
+  {
+    ParamsImpl params = new ParamsImpl();
+    return params;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TypeValue createTypeValue()
+  {
+    TypeValueImpl typeValue = new TypeValueImpl();
+    return typeValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Str createStr()
+  {
+    StrImpl str = new StrImpl();
+    return str;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OperationsOneEquals createOperationsOneEquals()
+  {
+    OperationsOneEqualsImpl operationsOneEquals = new OperationsOneEqualsImpl();
+    return operationsOneEquals;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Numbers createNumbers()
+  {
+    NumbersImpl numbers = new NumbersImpl();
+    return numbers;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public org.xtext.go.go.Double createDouble()
+  {
+    DoubleImpl double_ = new DoubleImpl();
+    return double_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Condition createCondition()
+  {
+    ConditionImpl condition = new ConditionImpl();
+    return condition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IfCondition createIfCondition()
+  {
+    IfConditionImpl ifCondition = new IfConditionImpl();
+    return ifCondition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ElseIfCondition createElseIfCondition()
+  {
+    ElseIfConditionImpl elseIfCondition = new ElseIfConditionImpl();
+    return elseIfCondition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ElseCondition createElseCondition()
+  {
+    ElseConditionImpl elseCondition = new ElseConditionImpl();
+    return elseCondition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression createExpression()
+  {
+    ExpressionImpl expression = new ExpressionImpl();
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CallFor createCallFor()
+  {
+    CallForImpl callFor = new CallForImpl();
+    return callFor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public operationsOne createoperationsOne()
+  {
+    operationsOneImpl operationsOne = new operationsOneImpl();
+    return operationsOne;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public varFor createvarFor()
+  {
+    varForImpl varFor = new varForImpl();
+    return varFor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DecFunc createDecFunc()
+  {
+    DecFuncImpl decFunc = new DecFuncImpl();
+    return decFunc;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CallFunc createCallFunc()
+  {
+    CallFuncImpl callFunc = new CallFuncImpl();
+    return callFunc;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public org.xtext.go.go.Boolean createBoolean()
+  {
+    BooleanImpl boolean_ = new BooleanImpl();
+    return boolean_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public DataType createDataType()
   {
     DataTypeImpl dataType = new DataTypeImpl();
     return dataType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Addition createAddition()
+  {
+    AdditionImpl addition = new AdditionImpl();
+    return addition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Subtration createSubtration()
+  {
+    SubtrationImpl subtration = new SubtrationImpl();
+    return subtration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Multiplication createMultiplication()
+  {
+    MultiplicationImpl multiplication = new MultiplicationImpl();
+    return multiplication;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Division createDivision()
+  {
+    DivisionImpl division = new DivisionImpl();
+    return division;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OrExpression createOrExpression()
+  {
+    OrExpressionImpl orExpression = new OrExpressionImpl();
+    return orExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AndExpression createAndExpression()
+  {
+    AndExpressionImpl andExpression = new AndExpressionImpl();
+    return andExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ComparisonExpression createComparisonExpression()
+  {
+    ComparisonExpressionImpl comparisonExpression = new ComparisonExpressionImpl();
+    return comparisonExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Literal createLiteral()
+  {
+    LiteralImpl literal = new LiteralImpl();
+    return literal;
   }
 
   /**
