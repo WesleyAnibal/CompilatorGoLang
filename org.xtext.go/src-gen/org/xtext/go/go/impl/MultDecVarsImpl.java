@@ -4,13 +4,16 @@
 package org.xtext.go.go.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.MultDecVars;
+import org.xtext.go.go.TypeValue;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,6 +24,7 @@ import org.xtext.go.go.MultDecVars;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.MultDecVarsImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.MultDecVarsImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.MultDecVarsImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
@@ -47,6 +51,16 @@ public class MultDecVarsImpl extends GreetingImpl implements MultDecVars
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected TypeValue type;
 
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -117,6 +131,54 @@ public class MultDecVarsImpl extends GreetingImpl implements MultDecVars
    * <!-- end-user-doc -->
    * @generated
    */
+  public TypeValue getType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetType(TypeValue newType, NotificationChain msgs)
+  {
+    TypeValue oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.MULT_DEC_VARS__TYPE, oldType, newType);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(TypeValue newType)
+  {
+    if (newType != type)
+    {
+      NotificationChain msgs = null;
+      if (type != null)
+        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.MULT_DEC_VARS__TYPE, null, msgs);
+      if (newType != null)
+        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.MULT_DEC_VARS__TYPE, null, msgs);
+      msgs = basicSetType(newType, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.MULT_DEC_VARS__TYPE, newType, newType));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getValue()
   {
     return value;
@@ -141,12 +203,30 @@ public class MultDecVarsImpl extends GreetingImpl implements MultDecVars
    * @generated
    */
   @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GoPackage.MULT_DEC_VARS__TYPE:
+        return basicSetType(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
       case GoPackage.MULT_DEC_VARS__NAME:
         return getName();
+      case GoPackage.MULT_DEC_VARS__TYPE:
+        return getType();
       case GoPackage.MULT_DEC_VARS__VALUE:
         return getValue();
     }
@@ -165,6 +245,9 @@ public class MultDecVarsImpl extends GreetingImpl implements MultDecVars
     {
       case GoPackage.MULT_DEC_VARS__NAME:
         setName((String)newValue);
+        return;
+      case GoPackage.MULT_DEC_VARS__TYPE:
+        setType((TypeValue)newValue);
         return;
       case GoPackage.MULT_DEC_VARS__VALUE:
         setValue((String)newValue);
@@ -186,6 +269,9 @@ public class MultDecVarsImpl extends GreetingImpl implements MultDecVars
       case GoPackage.MULT_DEC_VARS__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case GoPackage.MULT_DEC_VARS__TYPE:
+        setType((TypeValue)null);
+        return;
       case GoPackage.MULT_DEC_VARS__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
@@ -205,6 +291,8 @@ public class MultDecVarsImpl extends GreetingImpl implements MultDecVars
     {
       case GoPackage.MULT_DEC_VARS__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case GoPackage.MULT_DEC_VARS__TYPE:
+        return type != null;
       case GoPackage.MULT_DEC_VARS__VALUE:
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
     }

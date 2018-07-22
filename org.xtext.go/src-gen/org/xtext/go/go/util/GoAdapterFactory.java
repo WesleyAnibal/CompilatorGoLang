@@ -10,7 +10,43 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.xtext.go.go.*;
+import org.xtext.go.go.Addition;
+import org.xtext.go.go.AndExpression;
+import org.xtext.go.go.Atri;
+import org.xtext.go.go.Atrib;
+import org.xtext.go.go.AtribAux;
+import org.xtext.go.go.AtribVar;
+import org.xtext.go.go.CallFor;
+import org.xtext.go.go.CallFunc;
+import org.xtext.go.go.Cases;
+import org.xtext.go.go.ComparisonExpression;
+import org.xtext.go.go.Condition;
+import org.xtext.go.go.DataType;
+import org.xtext.go.go.DecFunc;
+import org.xtext.go.go.DecVar;
+import org.xtext.go.go.DecVars;
+import org.xtext.go.go.Decl;
+import org.xtext.go.go.Division;
+import org.xtext.go.go.ElseCondition;
+import org.xtext.go.go.ElseIfCondition;
+import org.xtext.go.go.Expression;
+import org.xtext.go.go.Go;
+import org.xtext.go.go.GoPackage;
+import org.xtext.go.go.Greeting;
+import org.xtext.go.go.IfCondition;
+import org.xtext.go.go.Literal;
+import org.xtext.go.go.MultDecVars;
+import org.xtext.go.go.Multiplication;
+import org.xtext.go.go.Numbers;
+import org.xtext.go.go.OperationsOneEquals;
+import org.xtext.go.go.OrExpression;
+import org.xtext.go.go.Params;
+import org.xtext.go.go.Subtration;
+import org.xtext.go.go.SwitchCase;
+import org.xtext.go.go.TypeValue;
+import org.xtext.go.go.Variable;
+import org.xtext.go.go.operationsOne;
+import org.xtext.go.go.varFor;
 
 /**
  * <!-- begin-user-doc -->
@@ -121,6 +157,11 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createDecVarsAdapter();
       }
       @Override
+      public Adapter caseAtribAux(AtribAux object)
+      {
+        return createAtribAuxAdapter();
+      }
+      @Override
       public Adapter caseSwitchCase(SwitchCase object)
       {
         return createSwitchCaseAdapter();
@@ -131,14 +172,34 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createCasesAdapter();
       }
       @Override
+      public Adapter caseAtri(Atri object)
+      {
+        return createAtriAdapter();
+      }
+      @Override
       public Adapter caseParams(Params object)
       {
         return createParamsAdapter();
       }
       @Override
+      public Adapter caseTypeValue(TypeValue object)
+      {
+        return createTypeValueAdapter();
+      }
+      @Override
       public Adapter caseOperationsOneEquals(OperationsOneEquals object)
       {
         return createOperationsOneEqualsAdapter();
+      }
+      @Override
+      public Adapter caseNumbers(Numbers object)
+      {
+        return createNumbersAdapter();
+      }
+      @Override
+      public Adapter caseDouble(org.xtext.go.go.Double object)
+      {
+        return createDoubleAdapter();
       }
       @Override
       public Adapter caseCondition(Condition object)
@@ -393,6 +454,21 @@ public class GoAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.AtribAux <em>Atrib Aux</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.AtribAux
+   * @generated
+   */
+  public Adapter createAtribAuxAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.go.go.SwitchCase <em>Switch Case</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -423,6 +499,21 @@ public class GoAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Atri <em>Atri</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Atri
+   * @generated
+   */
+  public Adapter createAtriAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.go.go.Params <em>Params</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -438,6 +529,21 @@ public class GoAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.TypeValue <em>Type Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.TypeValue
+   * @generated
+   */
+  public Adapter createTypeValueAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.go.go.OperationsOneEquals <em>Operations One Equals</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -448,6 +554,36 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createOperationsOneEqualsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Numbers <em>Numbers</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Numbers
+   * @generated
+   */
+  public Adapter createNumbersAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Double <em>Double</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Double
+   * @generated
+   */
+  public Adapter createDoubleAdapter()
   {
     return null;
   }

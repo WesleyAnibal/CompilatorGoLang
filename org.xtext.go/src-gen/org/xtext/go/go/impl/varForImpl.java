@@ -16,7 +16,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.xtext.go.go.AtribAux;
 import org.xtext.go.go.Expression;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.varFor;
@@ -50,14 +53,14 @@ public class varForImpl extends CallForImpl implements varFor
   protected EList<String> var;
 
   /**
-   * The cached value of the '{@link #getAtrb() <em>Atrb</em>}' attribute list.
+   * The cached value of the '{@link #getAtrb() <em>Atrb</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getAtrb()
    * @generated
    * @ordered
    */
-  protected EList<String> atrb;
+  protected EList<AtribAux> atrb;
 
   /**
    * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
@@ -119,11 +122,11 @@ public class varForImpl extends CallForImpl implements varFor
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getAtrb()
+  public EList<AtribAux> getAtrb()
   {
     if (atrb == null)
     {
-      atrb = new EDataTypeEList<String>(String.class, this, GoPackage.VAR_FOR__ATRB);
+      atrb = new EObjectContainmentEList<AtribAux>(AtribAux.class, this, GoPackage.VAR_FOR__ATRB);
     }
     return atrb;
   }
@@ -234,6 +237,8 @@ public class varForImpl extends CallForImpl implements varFor
   {
     switch (featureID)
     {
+      case GoPackage.VAR_FOR__ATRB:
+        return ((InternalEList<?>)getAtrb()).basicRemove(otherEnd, msgs);
       case GoPackage.VAR_FOR__RIGHT:
         return basicSetRight(null, msgs);
       case GoPackage.VAR_FOR__LEFT:
@@ -281,7 +286,7 @@ public class varForImpl extends CallForImpl implements varFor
         return;
       case GoPackage.VAR_FOR__ATRB:
         getAtrb().clear();
-        getAtrb().addAll((Collection<? extends String>)newValue);
+        getAtrb().addAll((Collection<? extends AtribAux>)newValue);
         return;
       case GoPackage.VAR_FOR__RIGHT:
         setRight((Expression)newValue);
@@ -354,8 +359,6 @@ public class varForImpl extends CallForImpl implements varFor
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (var: ");
     result.append(var);
-    result.append(", atrb: ");
-    result.append(atrb);
     result.append(')');
     return result.toString();
   }

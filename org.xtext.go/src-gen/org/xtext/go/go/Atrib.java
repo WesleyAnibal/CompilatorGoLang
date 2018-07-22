@@ -78,29 +78,29 @@ public interface Atrib extends EObject
   void setType(String value);
 
   /**
-   * Returns the value of the '<em><b>Atrib</b></em>' attribute.
+   * Returns the value of the '<em><b>Atrib</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Atrib</em>' attribute isn't clear,
+   * If the meaning of the '<em>Atrib</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Atrib</em>' attribute.
-   * @see #setAtrib(String)
+   * @return the value of the '<em>Atrib</em>' containment reference.
+   * @see #setAtrib(Greeting)
    * @see org.xtext.go.go.GoPackage#getAtrib_Atrib()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getAtrib();
+  Greeting getAtrib();
 
   /**
-   * Sets the value of the '{@link org.xtext.go.go.Atrib#getAtrib <em>Atrib</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.go.go.Atrib#getAtrib <em>Atrib</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Atrib</em>' attribute.
+   * @param value the new value of the '<em>Atrib</em>' containment reference.
    * @see #getAtrib()
    * @generated
    */
-  void setAtrib(String value);
+  void setAtrib(Greeting value);
 
 } // Atrib

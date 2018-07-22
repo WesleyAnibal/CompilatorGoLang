@@ -4,12 +4,15 @@
 package org.xtext.go.go.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.go.go.GoPackage;
+import org.xtext.go.go.Numbers;
 import org.xtext.go.go.OperationsOneEquals;
 
 /**
@@ -21,6 +24,7 @@ import org.xtext.go.go.OperationsOneEquals;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.OperationsOneEqualsImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.OperationsOneEqualsImpl#getM <em>M</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,6 +50,16 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getM() <em>M</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getM()
+   * @generated
+   * @ordered
+   */
+  protected Numbers m;
 
   /**
    * <!-- begin-user-doc -->
@@ -96,6 +110,70 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
    * <!-- end-user-doc -->
    * @generated
    */
+  public Numbers getM()
+  {
+    return m;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetM(Numbers newM, NotificationChain msgs)
+  {
+    Numbers oldM = m;
+    m = newM;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.OPERATIONS_ONE_EQUALS__M, oldM, newM);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setM(Numbers newM)
+  {
+    if (newM != m)
+    {
+      NotificationChain msgs = null;
+      if (m != null)
+        msgs = ((InternalEObject)m).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.OPERATIONS_ONE_EQUALS__M, null, msgs);
+      if (newM != null)
+        msgs = ((InternalEObject)newM).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.OPERATIONS_ONE_EQUALS__M, null, msgs);
+      msgs = basicSetM(newM, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.OPERATIONS_ONE_EQUALS__M, newM, newM));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GoPackage.OPERATIONS_ONE_EQUALS__M:
+        return basicSetM(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -103,6 +181,8 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
     {
       case GoPackage.OPERATIONS_ONE_EQUALS__NAME:
         return getName();
+      case GoPackage.OPERATIONS_ONE_EQUALS__M:
+        return getM();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,6 +199,9 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
     {
       case GoPackage.OPERATIONS_ONE_EQUALS__NAME:
         setName((String)newValue);
+        return;
+      case GoPackage.OPERATIONS_ONE_EQUALS__M:
+        setM((Numbers)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,6 +220,9 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
       case GoPackage.OPERATIONS_ONE_EQUALS__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case GoPackage.OPERATIONS_ONE_EQUALS__M:
+        setM((Numbers)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -153,6 +239,8 @@ public class OperationsOneEqualsImpl extends varForImpl implements OperationsOne
     {
       case GoPackage.OPERATIONS_ONE_EQUALS__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case GoPackage.OPERATIONS_ONE_EQUALS__M:
+        return m != null;
     }
     return super.eIsSet(featureID);
   }

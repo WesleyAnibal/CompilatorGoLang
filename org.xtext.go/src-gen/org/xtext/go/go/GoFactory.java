@@ -105,6 +105,15 @@ public interface GoFactory extends EFactory
   DecVars createDecVars();
 
   /**
+   * Returns a new object of class '<em>Atrib Aux</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Atrib Aux</em>'.
+   * @generated
+   */
+  AtribAux createAtribAux();
+
+  /**
    * Returns a new object of class '<em>Switch Case</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -123,6 +132,15 @@ public interface GoFactory extends EFactory
   Cases createCases();
 
   /**
+   * Returns a new object of class '<em>Atri</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Atri</em>'.
+   * @generated
+   */
+  Atri createAtri();
+
+  /**
    * Returns a new object of class '<em>Params</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -132,6 +150,15 @@ public interface GoFactory extends EFactory
   Params createParams();
 
   /**
+   * Returns a new object of class '<em>Type Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Type Value</em>'.
+   * @generated
+   */
+  TypeValue createTypeValue();
+
+  /**
    * Returns a new object of class '<em>Operations One Equals</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -139,6 +166,24 @@ public interface GoFactory extends EFactory
    * @generated
    */
   OperationsOneEquals createOperationsOneEquals();
+
+  /**
+   * Returns a new object of class '<em>Numbers</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Numbers</em>'.
+   * @generated
+   */
+  Numbers createNumbers();
+
+  /**
+   * Returns a new object of class '<em>Double</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Double</em>'.
+   * @generated
+   */
+  Double createDouble();
 
   /**
    * Returns a new object of class '<em>Condition</em>'.

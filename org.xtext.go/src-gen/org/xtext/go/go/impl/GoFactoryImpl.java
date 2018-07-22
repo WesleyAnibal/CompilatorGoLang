@@ -11,7 +11,44 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.xtext.go.go.*;
+import org.xtext.go.go.Addition;
+import org.xtext.go.go.AndExpression;
+import org.xtext.go.go.Atri;
+import org.xtext.go.go.Atrib;
+import org.xtext.go.go.AtribAux;
+import org.xtext.go.go.AtribVar;
+import org.xtext.go.go.CallFor;
+import org.xtext.go.go.CallFunc;
+import org.xtext.go.go.Cases;
+import org.xtext.go.go.ComparisonExpression;
+import org.xtext.go.go.Condition;
+import org.xtext.go.go.DataType;
+import org.xtext.go.go.DecFunc;
+import org.xtext.go.go.DecVar;
+import org.xtext.go.go.DecVars;
+import org.xtext.go.go.Decl;
+import org.xtext.go.go.Division;
+import org.xtext.go.go.ElseCondition;
+import org.xtext.go.go.ElseIfCondition;
+import org.xtext.go.go.Expression;
+import org.xtext.go.go.Go;
+import org.xtext.go.go.GoFactory;
+import org.xtext.go.go.GoPackage;
+import org.xtext.go.go.Greeting;
+import org.xtext.go.go.IfCondition;
+import org.xtext.go.go.Literal;
+import org.xtext.go.go.MultDecVars;
+import org.xtext.go.go.Multiplication;
+import org.xtext.go.go.Numbers;
+import org.xtext.go.go.OperationsOneEquals;
+import org.xtext.go.go.OrExpression;
+import org.xtext.go.go.Params;
+import org.xtext.go.go.Subtration;
+import org.xtext.go.go.SwitchCase;
+import org.xtext.go.go.TypeValue;
+import org.xtext.go.go.Variable;
+import org.xtext.go.go.operationsOne;
+import org.xtext.go.go.varFor;
 
 /**
  * <!-- begin-user-doc -->
@@ -74,10 +111,15 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
       case GoPackage.ATRIB: return createAtrib();
       case GoPackage.MULT_DEC_VARS: return createMultDecVars();
       case GoPackage.DEC_VARS: return createDecVars();
+      case GoPackage.ATRIB_AUX: return createAtribAux();
       case GoPackage.SWITCH_CASE: return createSwitchCase();
       case GoPackage.CASES: return createCases();
+      case GoPackage.ATRI: return createAtri();
       case GoPackage.PARAMS: return createParams();
+      case GoPackage.TYPE_VALUE: return createTypeValue();
       case GoPackage.OPERATIONS_ONE_EQUALS: return createOperationsOneEquals();
+      case GoPackage.NUMBERS: return createNumbers();
+      case GoPackage.DOUBLE: return createDouble();
       case GoPackage.CONDITION: return createCondition();
       case GoPackage.IF_CONDITION: return createIfCondition();
       case GoPackage.ELSE_IF_CONDITION: return createElseIfCondition();
@@ -206,6 +248,17 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public AtribAux createAtribAux()
+  {
+    AtribAuxImpl atribAux = new AtribAuxImpl();
+    return atribAux;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public SwitchCase createSwitchCase()
   {
     SwitchCaseImpl switchCase = new SwitchCaseImpl();
@@ -228,6 +281,17 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Atri createAtri()
+  {
+    AtriImpl atri = new AtriImpl();
+    return atri;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Params createParams()
   {
     ParamsImpl params = new ParamsImpl();
@@ -239,10 +303,43 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public TypeValue createTypeValue()
+  {
+    TypeValueImpl typeValue = new TypeValueImpl();
+    return typeValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public OperationsOneEquals createOperationsOneEquals()
   {
     OperationsOneEqualsImpl operationsOneEquals = new OperationsOneEqualsImpl();
     return operationsOneEquals;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Numbers createNumbers()
+  {
+    NumbersImpl numbers = new NumbersImpl();
+    return numbers;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public org.xtext.go.go.Double createDouble()
+  {
+    DoubleImpl double_ = new DoubleImpl();
+    return double_;
   }
 
   /**

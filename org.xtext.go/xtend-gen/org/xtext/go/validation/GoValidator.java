@@ -17,7 +17,10 @@ import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.DecVar;
 import org.xtext.go.go.Decl;
 import org.xtext.go.go.GoPackage;
+import org.xtext.go.go.Greeting;
+import org.xtext.go.go.Numbers;
 import org.xtext.go.go.Params;
+import org.xtext.go.go.TypeValue;
 import org.xtext.go.go.Variable;
 import org.xtext.go.validation.AbstractGoValidator;
 
@@ -32,7 +35,7 @@ public class GoValidator extends AbstractGoValidator {
   
   public static Map<String, DecFunc> funcImplements = new HashMap<String, DecFunc>();
   
-  public static Map<String, List<DecVar>> variablesDeclarationMap = new HashMap<String, List<DecVar>>();
+  public static Map<String, DecVar> variablesDeclarationMap = new HashMap<String, DecVar>();
   
   @Check
   public void checkGreetingStartsWithCapital(final AtribVar g) {
@@ -69,18 +72,18 @@ public class GoValidator extends AbstractGoValidator {
    * This function add in the map all the variables in the source code
    */
   @Check
-  public Boolean addVariableDeclarations(final DecVar dec) {
-    boolean _xifexpression = false;
+  public DecVar addVariableDeclarations(final DecVar dec) {
+    DecVar _xifexpression = null;
     AtribVar _assignment = dec.getAssignment();
     if ((_assignment instanceof Decl)) {
       this.addAtribVarInMap(dec.getAssignment());
     } else {
-      boolean _xifexpression_1 = false;
+      DecVar _xifexpression_1 = null;
       Decl _declaration = dec.getDeclaration();
       if ((_declaration instanceof AtribVar)) {
         _xifexpression_1 = this.addDeclarionVarInMap(dec.getDeclaration());
       } else {
-        boolean _xifexpression_2 = false;
+        DecVar _xifexpression_2 = null;
         Atrib _atribuicao = dec.getAtribuicao();
         if ((_atribuicao instanceof Atrib)) {
           _xifexpression_2 = this.addAtribuicaoVarInMap(dec.getAtribuicao());
@@ -89,41 +92,42 @@ public class GoValidator extends AbstractGoValidator {
       }
       _xifexpression = _xifexpression_1;
     }
-    return Boolean.valueOf(_xifexpression);
+    return _xifexpression;
   }
   
   public void addAtribVarInMap(final AtribVar atrib) {
     EList<String> _vars = atrib.getVars();
     for (final String id : _vars) {
-      {
-        String _string = id.toString();
-        ArrayList<DecVar> _arrayList = new ArrayList<DecVar>();
-        GoValidator.variablesDeclarationMap.put(_string, _arrayList);
-        GoValidator.variablesDeclarationMap.get(id.toString()).add(((DecVar) atrib));
+      GoValidator.variablesDeclarationMap.put(id.toString(), ((DecVar) atrib));
+    }
+  }
+  
+  public DecVar addDeclarionVarInMap(final Decl dec) {
+    return GoValidator.variablesDeclarationMap.put(dec.getName().toString(), ((DecVar) dec));
+  }
+  
+  public DecVar addAtribuicaoVarInMap(final Atrib dec) {
+    DecVar _xblockexpression = null;
+    {
+      this.checkTypeDeclarationAtrib(dec);
+      _xblockexpression = GoValidator.variablesDeclarationMap.put(dec.getName().toString(), ((DecVar) dec));
+    }
+    return _xblockexpression;
+  }
+  
+  public void checkTypeDeclarationAtrib(final Atrib dec) {
+    Greeting _atrib = dec.getAtrib();
+    if ((_atrib instanceof TypeValue)) {
+      if ((dec.getType().equals("string") && (dec.getAtrib() instanceof Numbers))) {
+        this.error((GoValidator.SEMANTIC_ERROR + "não é possível converter string para number"), GoPackage.Literals.DEC_VAR__ATRIBUICAO);
       }
     }
-  }
-  
-  public boolean addDeclarionVarInMap(final Decl dec) {
-    boolean _xblockexpression = false;
-    {
-      String _string = dec.getName().toString();
-      ArrayList<DecVar> _arrayList = new ArrayList<DecVar>();
-      GoValidator.variablesDeclarationMap.put(_string, _arrayList);
-      _xblockexpression = GoValidator.variablesDeclarationMap.get(dec.getName().toString()).add(((DecVar) dec));
+    Greeting _atrib_1 = dec.getAtrib();
+    if ((_atrib_1 instanceof Variable)) {
+      Greeting _atrib_2 = dec.getAtrib();
+      Variable vab = ((Variable) _atrib_2);
+      this.checkIfVariableIsDeclarated(vab);
     }
-    return _xblockexpression;
-  }
-  
-  public boolean addAtribuicaoVarInMap(final Atrib dec) {
-    boolean _xblockexpression = false;
-    {
-      String _string = dec.getName().toString();
-      ArrayList<DecVar> _arrayList = new ArrayList<DecVar>();
-      GoValidator.variablesDeclarationMap.put(_string, _arrayList);
-      _xblockexpression = GoValidator.variablesDeclarationMap.get(dec.getName().toString()).add(((DecVar) dec));
-    }
-    return _xblockexpression;
   }
   
   @Check
@@ -160,30 +164,19 @@ public class GoValidator extends AbstractGoValidator {
     this.checkIfHasEqualTypes(func, callFunc);
   }
   
-  public List<String> getParametersType(final Params param) {
-    List<String> tipos = new ArrayList<String>();
-    if (((!Objects.equal(param, null)) && (!Objects.equal(param.getType(), null)))) {
-      EList<String> _type = param.getType();
-      for (final String t : _type) {
-        tipos.add(t);
-      }
-    }
-    return tipos;
-  }
-  
   /**
    * Verifies the number of parameters and your respoective types between the function declaration
    * and function call
    */
   public void checkIfHasEqualTypes(final DecFunc func, final CallFunc callFunc) {
-    List<String> functionTypes = this.getParametersType(func.getParam());
-    List<String> callTypes = this.getParametersType(callFunc.getParam());
     int _parametersSize = this.getParametersSize(func.getParam());
     int _parametersSize_1 = this.getParametersSize(callFunc.getParam());
     boolean _notEquals = (_parametersSize != _parametersSize_1);
     if (_notEquals) {
       this.error((GoValidator.SEMANTIC_ERROR + "Diferença entre a quantidade de parâmetros"), GoPackage.Literals.CALL_FUNC__PARAM);
     }
+    List<String> functionTypes = this.getParametersType(func.getParam());
+    List<String> callTypes = this.getParametersType(callFunc.getParam());
     for (int i = 0; (i < functionTypes.size()); i++) {
       boolean _equals = callTypes.get(i).equals(functionTypes.get(i));
       boolean _not = (!_equals);
@@ -207,5 +200,31 @@ public class GoValidator extends AbstractGoValidator {
       }
     }
     return tipos.size();
+  }
+  
+  public List<String> getParametersType(final Params param) {
+    List<String> tipos = new ArrayList<String>();
+    if (((param != null) && (param.getType() != null))) {
+      EList<String> _params = param.getParams();
+      for (final String id : _params) {
+        tipos.add(this.getDecVarType(id));
+      }
+    }
+    return tipos;
+  }
+  
+  public String getDecVarType(final String id) {
+    boolean _containsKey = GoValidator.variablesDeclarationMap.containsKey(id);
+    boolean _not = (!_containsKey);
+    if (_not) {
+      this.error((GoValidator.SEMANTIC_ERROR + "variavel não declarada"), GoPackage.Literals.VARIABLE__NAME);
+    } else {
+      DecVar dec = GoValidator.variablesDeclarationMap.get(id);
+      if ((dec instanceof Atrib)) {
+        Atrib atrib = ((Atrib) dec);
+        return atrib.getType();
+      }
+    }
+    return null;
   }
 }

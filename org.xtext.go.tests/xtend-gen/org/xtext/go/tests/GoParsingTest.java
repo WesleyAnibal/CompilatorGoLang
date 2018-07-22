@@ -9,10 +9,9 @@ import org.eclipse.xtext.testing.XtextRunner;
 import org.eclipse.xtext.testing.util.ParseHelper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.xtext.go.tests.GoInjectorProvider;
 
-@RunWith(XtextRunner.class)
-@InjectWith(GoInjectorProvider.class)
+@RunWith(XtextRunner.class)/* 
+@InjectWith(/* name is null */) */
 @SuppressWarnings("all")
 public class GoParsingTest {
   @Inject

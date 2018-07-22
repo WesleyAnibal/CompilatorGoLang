@@ -8,7 +8,43 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.xtext.go.go.*;
+import org.xtext.go.go.Addition;
+import org.xtext.go.go.AndExpression;
+import org.xtext.go.go.Atri;
+import org.xtext.go.go.Atrib;
+import org.xtext.go.go.AtribAux;
+import org.xtext.go.go.AtribVar;
+import org.xtext.go.go.CallFor;
+import org.xtext.go.go.CallFunc;
+import org.xtext.go.go.Cases;
+import org.xtext.go.go.ComparisonExpression;
+import org.xtext.go.go.Condition;
+import org.xtext.go.go.DataType;
+import org.xtext.go.go.DecFunc;
+import org.xtext.go.go.DecVar;
+import org.xtext.go.go.DecVars;
+import org.xtext.go.go.Decl;
+import org.xtext.go.go.Division;
+import org.xtext.go.go.ElseCondition;
+import org.xtext.go.go.ElseIfCondition;
+import org.xtext.go.go.Expression;
+import org.xtext.go.go.Go;
+import org.xtext.go.go.GoPackage;
+import org.xtext.go.go.Greeting;
+import org.xtext.go.go.IfCondition;
+import org.xtext.go.go.Literal;
+import org.xtext.go.go.MultDecVars;
+import org.xtext.go.go.Multiplication;
+import org.xtext.go.go.Numbers;
+import org.xtext.go.go.OperationsOneEquals;
+import org.xtext.go.go.OrExpression;
+import org.xtext.go.go.Params;
+import org.xtext.go.go.Subtration;
+import org.xtext.go.go.SwitchCase;
+import org.xtext.go.go.TypeValue;
+import org.xtext.go.go.Variable;
+import org.xtext.go.go.operationsOne;
+import org.xtext.go.go.varFor;
 
 /**
  * <!-- begin-user-doc -->
@@ -139,6 +175,13 @@ public class GoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GoPackage.ATRIB_AUX:
+      {
+        AtribAux atribAux = (AtribAux)theEObject;
+        T result = caseAtribAux(atribAux);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GoPackage.SWITCH_CASE:
       {
         SwitchCase switchCase = (SwitchCase)theEObject;
@@ -154,10 +197,26 @@ public class GoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GoPackage.ATRI:
+      {
+        Atri atri = (Atri)theEObject;
+        T result = caseAtri(atri);
+        if (result == null) result = caseAtribAux(atri);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GoPackage.PARAMS:
       {
         Params params = (Params)theEObject;
         T result = caseParams(params);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.TYPE_VALUE:
+      {
+        TypeValue typeValue = (TypeValue)theEObject;
+        T result = caseTypeValue(typeValue);
+        if (result == null) result = caseGreeting(typeValue);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -168,6 +227,25 @@ public class GoSwitch<T> extends Switch<T>
         if (result == null) result = casevarFor(operationsOneEquals);
         if (result == null) result = caseCallFor(operationsOneEquals);
         if (result == null) result = caseGreeting(operationsOneEquals);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.NUMBERS:
+      {
+        Numbers numbers = (Numbers)theEObject;
+        T result = caseNumbers(numbers);
+        if (result == null) result = caseTypeValue(numbers);
+        if (result == null) result = caseExpression(numbers);
+        if (result == null) result = casevarFor(numbers);
+        if (result == null) result = caseCallFor(numbers);
+        if (result == null) result = caseGreeting(numbers);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.DOUBLE:
+      {
+        org.xtext.go.go.Double double_ = (org.xtext.go.go.Double)theEObject;
+        T result = caseDouble(double_);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -499,6 +577,22 @@ public class GoSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Atrib Aux</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Atrib Aux</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAtribAux(AtribAux object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Switch Case</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -531,6 +625,22 @@ public class GoSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Atri</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Atri</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAtri(Atri object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Params</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -547,6 +657,22 @@ public class GoSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Type Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Type Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTypeValue(TypeValue object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Operations One Equals</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -558,6 +684,38 @@ public class GoSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseOperationsOneEquals(OperationsOneEquals object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Numbers</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Numbers</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNumbers(Numbers object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Double</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Double</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDouble(org.xtext.go.go.Double object)
   {
     return null;
   }

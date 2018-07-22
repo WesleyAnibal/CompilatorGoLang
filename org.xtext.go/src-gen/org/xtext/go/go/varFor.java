@@ -43,20 +43,20 @@ public interface varFor extends CallFor
   EList<String> getVar();
 
   /**
-   * Returns the value of the '<em><b>Atrb</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Atrb</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.go.go.AtribAux}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Atrb</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Atrb</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Atrb</em>' attribute list.
+   * @return the value of the '<em>Atrb</em>' containment reference list.
    * @see org.xtext.go.go.GoPackage#getvarFor_Atrb()
-   * @model unique="false"
+   * @model containment="true"
    * @generated
    */
-  EList<String> getAtrb();
+  EList<AtribAux> getAtrb();
 
   /**
    * Returns the value of the '<em><b>Right</b></em>' containment reference.

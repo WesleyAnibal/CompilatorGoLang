@@ -14,6 +14,7 @@ package org.xtext.go.go;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.MultDecVars#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.go.go.MultDecVars#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.go.go.MultDecVars#getValue <em>Value</em>}</li>
  * </ul>
  *
@@ -48,6 +49,32 @@ public interface MultDecVars extends Greeting
    * @generated
    */
   void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Type</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Type</em>' containment reference.
+   * @see #setType(TypeValue)
+   * @see org.xtext.go.go.GoPackage#getMultDecVars_Type()
+   * @model containment="true"
+   * @generated
+   */
+  TypeValue getType();
+
+  /**
+   * Sets the value of the '{@link org.xtext.go.go.MultDecVars#getType <em>Type</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Type</em>' containment reference.
+   * @see #getType()
+   * @generated
+   */
+  void setType(TypeValue value);
 
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.

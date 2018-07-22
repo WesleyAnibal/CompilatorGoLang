@@ -10,49 +10,27 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.go.go.Atrib;
+import org.xtext.go.go.Atri;
 import org.xtext.go.go.GoPackage;
-import org.xtext.go.go.Greeting;
+import org.xtext.go.go.TypeValue;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Atrib</b></em>'.
+ * An implementation of the model object '<em><b>Atri</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.go.go.impl.AtribImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.AtribImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.AtribImpl#getAtrib <em>Atrib</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.AtriImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.AtriImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
+public class AtriImpl extends AtribAuxImpl implements Atri
 {
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The default value of the '{@link #getType() <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -74,21 +52,21 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
   protected String type = TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getAtrib() <em>Atrib</em>}' containment reference.
+   * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAtrib()
+   * @see #getValue()
    * @generated
    * @ordered
    */
-  protected Greeting atrib;
+  protected TypeValue value;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AtribImpl()
+  protected AtriImpl()
   {
     super();
   }
@@ -101,30 +79,7 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
   @Override
   protected EClass eStaticClass()
   {
-    return GoPackage.Literals.ATRIB;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.ATRIB__NAME, oldName, name));
+    return GoPackage.Literals.ATRI;
   }
 
   /**
@@ -147,7 +102,7 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
     String oldType = type;
     type = newType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.ATRIB__TYPE, oldType, type));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.ATRI__TYPE, oldType, type));
   }
 
   /**
@@ -155,9 +110,9 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
    * <!-- end-user-doc -->
    * @generated
    */
-  public Greeting getAtrib()
+  public TypeValue getValue()
   {
-    return atrib;
+    return value;
   }
 
   /**
@@ -165,13 +120,13 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAtrib(Greeting newAtrib, NotificationChain msgs)
+  public NotificationChain basicSetValue(TypeValue newValue, NotificationChain msgs)
   {
-    Greeting oldAtrib = atrib;
-    atrib = newAtrib;
+    TypeValue oldValue = value;
+    value = newValue;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.ATRIB__ATRIB, oldAtrib, newAtrib);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.ATRI__VALUE, oldValue, newValue);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -182,20 +137,20 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAtrib(Greeting newAtrib)
+  public void setValue(TypeValue newValue)
   {
-    if (newAtrib != atrib)
+    if (newValue != value)
     {
       NotificationChain msgs = null;
-      if (atrib != null)
-        msgs = ((InternalEObject)atrib).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.ATRIB__ATRIB, null, msgs);
-      if (newAtrib != null)
-        msgs = ((InternalEObject)newAtrib).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.ATRIB__ATRIB, null, msgs);
-      msgs = basicSetAtrib(newAtrib, msgs);
+      if (value != null)
+        msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.ATRI__VALUE, null, msgs);
+      if (newValue != null)
+        msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.ATRI__VALUE, null, msgs);
+      msgs = basicSetValue(newValue, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.ATRIB__ATRIB, newAtrib, newAtrib));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.ATRI__VALUE, newValue, newValue));
   }
 
   /**
@@ -208,8 +163,8 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
   {
     switch (featureID)
     {
-      case GoPackage.ATRIB__ATRIB:
-        return basicSetAtrib(null, msgs);
+      case GoPackage.ATRI__VALUE:
+        return basicSetValue(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -224,12 +179,10 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
   {
     switch (featureID)
     {
-      case GoPackage.ATRIB__NAME:
-        return getName();
-      case GoPackage.ATRIB__TYPE:
+      case GoPackage.ATRI__TYPE:
         return getType();
-      case GoPackage.ATRIB__ATRIB:
-        return getAtrib();
+      case GoPackage.ATRI__VALUE:
+        return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -244,14 +197,11 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
   {
     switch (featureID)
     {
-      case GoPackage.ATRIB__NAME:
-        setName((String)newValue);
-        return;
-      case GoPackage.ATRIB__TYPE:
+      case GoPackage.ATRI__TYPE:
         setType((String)newValue);
         return;
-      case GoPackage.ATRIB__ATRIB:
-        setAtrib((Greeting)newValue);
+      case GoPackage.ATRI__VALUE:
+        setValue((TypeValue)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -267,14 +217,11 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
   {
     switch (featureID)
     {
-      case GoPackage.ATRIB__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case GoPackage.ATRIB__TYPE:
+      case GoPackage.ATRI__TYPE:
         setType(TYPE_EDEFAULT);
         return;
-      case GoPackage.ATRIB__ATRIB:
-        setAtrib((Greeting)null);
+      case GoPackage.ATRI__VALUE:
+        setValue((TypeValue)null);
         return;
     }
     super.eUnset(featureID);
@@ -290,12 +237,10 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
   {
     switch (featureID)
     {
-      case GoPackage.ATRIB__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case GoPackage.ATRIB__TYPE:
+      case GoPackage.ATRI__TYPE:
         return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-      case GoPackage.ATRIB__ATRIB:
-        return atrib != null;
+      case GoPackage.ATRI__VALUE:
+        return value != null;
     }
     return super.eIsSet(featureID);
   }
@@ -311,12 +256,10 @@ public class AtribImpl extends MinimalEObjectImpl.Container implements Atrib
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", type: ");
+    result.append(" (type: ");
     result.append(type);
     result.append(')');
     return result.toString();
   }
 
-} //AtribImpl
+} //AtriImpl

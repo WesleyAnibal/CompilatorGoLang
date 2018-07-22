@@ -27,6 +27,9 @@ import java.sql.Types
 import org.xtext.go.go.Atrib
 import org.xtext.go.go.impl.AtribImpl
 import org.xtext.go.go.Variable
+import org.xtext.go.go.TypeValue
+import org.xtext.go.go.Atri
+import org.xtext.go.go.Numbers
 
 /**
  * This class contains custom validation rules. 
@@ -49,7 +52,7 @@ class GoValidator extends AbstractGoValidator {
 	public static final String SEMANTIC_ERROR = "Erro Semântico: ";
 	
 	public static Map<String,DecFunc> funcImplements = new HashMap<String, DecFunc>();
-	public static Map<String, List<DecVar>> variablesDeclarationMap     = new HashMap<String, List<DecVar>>();
+	public static Map<String, DecVar> variablesDeclarationMap     = new HashMap<String, DecVar>();
 	
 
 	@Check
@@ -92,21 +95,35 @@ class GoValidator extends AbstractGoValidator {
 	
 	def addAtribVarInMap(AtribVar atrib){
 		for(String id : atrib.vars){
-			variablesDeclarationMap.put(id.toString(), new ArrayList());
-			variablesDeclarationMap.get(id.toString()).add(atrib as DecVar)
+			variablesDeclarationMap.put(id.toString(), atrib as DecVar);
 		}
 	}
 	
 	def addDeclarionVarInMap(Decl dec){
-		variablesDeclarationMap.put(dec.name.toString(), new ArrayList());
-		variablesDeclarationMap.get(dec.name.toString()).add(dec as DecVar);
+		variablesDeclarationMap.put(dec.name.toString(), dec as DecVar);
 	}
 	
 	def addAtribuicaoVarInMap(Atrib dec){
-		variablesDeclarationMap.put(dec.name.toString(), new ArrayList());
-		variablesDeclarationMap.get(dec.name.toString()).add(dec as DecVar);
+		
+		checkTypeDeclarationAtrib(dec);		
+		
+
+		variablesDeclarationMap.put(dec.name.toString(), dec as DecVar);
 	}
 	
+	def checkTypeDeclarationAtrib (Atrib dec) {
+		if(dec.atrib instanceof TypeValue){
+			if(dec.type.equals("string") &&  dec.atrib instanceof Numbers){
+				error(SEMANTIC_ERROR + "não é possível converter string para number" , GoPackage.Literals.DEC_VAR__ATRIBUICAO);
+			
+			}
+		}
+		if(dec.atrib instanceof Variable){
+			var Variable vab = dec.atrib as Variable;
+			checkIfVariableIsDeclarated(vab);
+		}
+		
+	}
 
 	
 	// escopo comum
@@ -145,28 +162,21 @@ class GoValidator extends AbstractGoValidator {
 		checkIfHasEqualTypes(func, callFunc);
 	}
 	
-	def getParametersType(Params param){
-		var List<String> tipos = new ArrayList<String>();
-		if(param != null && param.type != null){
-			for(String t : param.type){
-				tipos.add(t);
-			}
-		}
-		return tipos; 
-			
-	}
+
 	
 	/**
 	 * Verifies the number of parameters and your respoective types between the function declaration
 	 * and function call
 	 */
 	def checkIfHasEqualTypes(DecFunc func, CallFunc callFunc){
-		var List<String> functionTypes = getParametersType(func.param);
-		var List<String> callTypes = getParametersType(callFunc.param);
-		
 		if(getParametersSize(func.param) != getParametersSize(callFunc.param)){
 			error(SEMANTIC_ERROR + "Diferença entre a quantidade de parâmetros" ,GoPackage.Literals.CALL_FUNC__PARAM);
 		}
+		
+		var List<String> functionTypes = getParametersType(func.param);
+		var List<String> callTypes = getParametersType(callFunc.param);
+		
+		
 		
 		for(var int i = 0; i < functionTypes.size() ; i++){
 			if(!callTypes.get(i).equals(functionTypes.get(i))){
@@ -187,6 +197,34 @@ class GoValidator extends AbstractGoValidator {
 		return tipos.size(); 
 			
 	}
+	
+	def getParametersType(Params param){
+		
+		var List<String> tipos = new ArrayList<String>();
+		if(param !== null && param.type !== null){
+			for(String id : param.params){
+				tipos.add(getDecVarType(id))
+			}
+		}
+		return tipos; 
+			
+	}
+	
+	def getDecVarType(String id){
+		if(!variablesDeclarationMap.containsKey(id)){
+			error(SEMANTIC_ERROR + "variavel não declarada", GoPackage.Literals.VARIABLE__NAME);
+		}else{
+			var DecVar dec = variablesDeclarationMap.get(id);
+			if(dec instanceof Atrib){
+				var Atrib atrib = dec as Atrib; 
+				return atrib.type;
+			}
+		}
+		
+		
+	}
+	
+	
 	
 	
 }

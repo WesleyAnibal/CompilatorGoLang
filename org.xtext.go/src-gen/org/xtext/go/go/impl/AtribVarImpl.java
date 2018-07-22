@@ -6,16 +6,21 @@ package org.xtext.go.go.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.xtext.go.go.AtribAux;
 import org.xtext.go.go.AtribVar;
 import org.xtext.go.go.GoPackage;
 
@@ -67,14 +72,14 @@ public class AtribVarImpl extends MinimalEObjectImpl.Container implements AtribV
   protected String type = TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getAtrb() <em>Atrb</em>}' attribute list.
+   * The cached value of the '{@link #getAtrb() <em>Atrb</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getAtrb()
    * @generated
    * @ordered
    */
-  protected EList<String> atrb;
+  protected EList<AtribAux> atrb;
 
   /**
    * <!-- begin-user-doc -->
@@ -139,13 +144,29 @@ public class AtribVarImpl extends MinimalEObjectImpl.Container implements AtribV
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getAtrb()
+  public EList<AtribAux> getAtrb()
   {
     if (atrb == null)
     {
-      atrb = new EDataTypeEList<String>(String.class, this, GoPackage.ATRIB_VAR__ATRB);
+      atrb = new EObjectContainmentEList<AtribAux>(AtribAux.class, this, GoPackage.ATRIB_VAR__ATRB);
     }
     return atrb;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GoPackage.ATRIB_VAR__ATRB:
+        return ((InternalEList<?>)getAtrb()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -188,7 +209,7 @@ public class AtribVarImpl extends MinimalEObjectImpl.Container implements AtribV
         return;
       case GoPackage.ATRIB_VAR__ATRB:
         getAtrb().clear();
-        getAtrb().addAll((Collection<? extends String>)newValue);
+        getAtrb().addAll((Collection<? extends AtribAux>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -252,8 +273,6 @@ public class AtribVarImpl extends MinimalEObjectImpl.Container implements AtribV
     result.append(vars);
     result.append(", type: ");
     result.append(type);
-    result.append(", atrb: ");
-    result.append(atrb);
     result.append(')');
     return result.toString();
   }

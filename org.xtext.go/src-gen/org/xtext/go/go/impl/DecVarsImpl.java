@@ -5,14 +5,20 @@ package org.xtext.go.go.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.xtext.go.go.AtribAux;
 import org.xtext.go.go.DecVars;
 import org.xtext.go.go.GoPackage;
 
@@ -43,14 +49,14 @@ public class DecVarsImpl extends MinimalEObjectImpl.Container implements DecVars
   protected EList<String> vars;
 
   /**
-   * The cached value of the '{@link #getAtrb() <em>Atrb</em>}' attribute list.
+   * The cached value of the '{@link #getAtrb() <em>Atrb</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getAtrb()
    * @generated
    * @ordered
    */
-  protected EList<String> atrb;
+  protected EList<AtribAux> atrb;
 
   /**
    * <!-- begin-user-doc -->
@@ -92,13 +98,29 @@ public class DecVarsImpl extends MinimalEObjectImpl.Container implements DecVars
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getAtrb()
+  public EList<AtribAux> getAtrb()
   {
     if (atrb == null)
     {
-      atrb = new EDataTypeEList<String>(String.class, this, GoPackage.DEC_VARS__ATRB);
+      atrb = new EObjectContainmentEList<AtribAux>(AtribAux.class, this, GoPackage.DEC_VARS__ATRB);
     }
     return atrb;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GoPackage.DEC_VARS__ATRB:
+        return ((InternalEList<?>)getAtrb()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -136,7 +158,7 @@ public class DecVarsImpl extends MinimalEObjectImpl.Container implements DecVars
         return;
       case GoPackage.DEC_VARS__ATRB:
         getAtrb().clear();
-        getAtrb().addAll((Collection<? extends String>)newValue);
+        getAtrb().addAll((Collection<? extends AtribAux>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -193,8 +215,6 @@ public class DecVarsImpl extends MinimalEObjectImpl.Container implements DecVars
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (vars: ");
     result.append(vars);
-    result.append(", atrb: ");
-    result.append(atrb);
     result.append(')');
     return result.toString();
   }
