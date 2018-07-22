@@ -42,6 +42,7 @@ import org.xtext.go.go.Numbers;
 import org.xtext.go.go.OperationsOneEquals;
 import org.xtext.go.go.OrExpression;
 import org.xtext.go.go.Params;
+import org.xtext.go.go.Str;
 import org.xtext.go.go.Subtration;
 import org.xtext.go.go.SwitchCase;
 import org.xtext.go.go.TypeValue;
@@ -167,6 +168,13 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass strEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass operationsOneEqualsEClass = null;
 
   /**
@@ -252,6 +260,13 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * @generated
    */
   private EClass callFuncEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass booleanEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -784,6 +799,26 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getStr()
+  {
+    return strEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getStr_S()
+  {
+    return (EAttribute)strEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getOperationsOneEquals()
   {
     return operationsOneEqualsEClass;
@@ -1164,6 +1199,26 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getBoolean()
+  {
+    return booleanEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBoolean_Val()
+  {
+    return (EAttribute)booleanEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getDataType()
   {
     return dataTypeEClass;
@@ -1264,9 +1319,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getLiteral_Value()
+  public EReference getLiteral_Value()
   {
-    return (EAttribute)literalEClass.getEStructuralFeatures().get(0);
+    return (EReference)literalEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1354,6 +1409,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     typeValueEClass = createEClass(TYPE_VALUE);
 
+    strEClass = createEClass(STR);
+    createEAttribute(strEClass, STR__S);
+
     operationsOneEqualsEClass = createEClass(OPERATIONS_ONE_EQUALS);
     createEAttribute(operationsOneEqualsEClass, OPERATIONS_ONE_EQUALS__NAME);
     createEReference(operationsOneEqualsEClass, OPERATIONS_ONE_EQUALS__N);
@@ -1405,6 +1463,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     createEAttribute(callFuncEClass, CALL_FUNC__NAME_FUNC);
     createEReference(callFuncEClass, CALL_FUNC__PARAM);
 
+    booleanEClass = createEClass(BOOLEAN);
+    createEAttribute(booleanEClass, BOOLEAN__VAL);
+
     dataTypeEClass = createEClass(DATA_TYPE);
     createEAttribute(dataTypeEClass, DATA_TYPE__NAME);
 
@@ -1423,7 +1484,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     comparisonExpressionEClass = createEClass(COMPARISON_EXPRESSION);
 
     literalEClass = createEClass(LITERAL);
-    createEAttribute(literalEClass, LITERAL__VALUE);
+    createEReference(literalEClass, LITERAL__VALUE);
   }
 
   /**
@@ -1461,6 +1522,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     switchCaseEClass.getESuperTypes().add(this.getGreeting());
     atriEClass.getESuperTypes().add(this.getAtrib_Aux());
     typeValueEClass.getESuperTypes().add(this.getAtri());
+    strEClass.getESuperTypes().add(this.getTypeValue());
     operationsOneEqualsEClass.getESuperTypes().add(this.getvarFor());
     numbersEClass.getESuperTypes().add(this.getTypeValue());
     numbersEClass.getESuperTypes().add(this.getExpression());
@@ -1472,6 +1534,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     varForEClass.getESuperTypes().add(this.getCallFor());
     decFuncEClass.getESuperTypes().add(this.getGreeting());
     callFuncEClass.getESuperTypes().add(this.getGreeting());
+    booleanEClass.getESuperTypes().add(this.getTypeValue());
     dataTypeEClass.getESuperTypes().add(this.getGreeting());
     additionEClass.getESuperTypes().add(this.getExpression());
     subtrationEClass.getESuperTypes().add(this.getExpression());
@@ -1538,6 +1601,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     initEClass(typeValueEClass, TypeValue.class, "TypeValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+    initEClass(strEClass, Str.class, "Str", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getStr_S(), ecorePackage.getEString(), "s", null, 0, 1, Str.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(operationsOneEqualsEClass, OperationsOneEquals.class, "OperationsOneEquals", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getOperationsOneEquals_Name(), ecorePackage.getEString(), "name", null, 0, 1, OperationsOneEquals.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperationsOneEquals_N(), this.getNumbers(), null, "n", null, 0, 1, OperationsOneEquals.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1589,6 +1655,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEAttribute(getCallFunc_NameFunc(), ecorePackage.getEString(), "nameFunc", null, 0, 1, CallFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCallFunc_Param(), this.getParams(), null, "param", null, 0, 1, CallFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(booleanEClass, org.xtext.go.go.Boolean.class, "Boolean", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBoolean_Val(), ecorePackage.getEString(), "val", null, 0, 1, org.xtext.go.go.Boolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDataType_Name(), ecorePackage.getEString(), "name", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1607,7 +1676,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEClass(comparisonExpressionEClass, ComparisonExpression.class, "ComparisonExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLiteral_Value(), ecorePackage.getEString(), "value", null, 0, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLiteral_Value(), this.getBoolean(), null, "value", null, 0, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

@@ -22,27 +22,27 @@ import org.xtext.go.services.GoGrammarAccess;
 public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected GoGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Atri_TypeValue_BooleanParserRuleCall_2_or_STRINGTerminalRuleCall_0_or___Open_bracketsTerminalRuleCall_0_0_INTTerminalRuleCall_0_1_q_Closed_bracketsTerminalRuleCall_0_2_TypesParserRuleCall_0_3__;
+	protected AbstractElementAlias match_Atri_Atrib_Aux_IDTerminalRuleCall_1_or___Open_bracketsTerminalRuleCall_0_0_INTTerminalRuleCall_0_1_q_Closed_bracketsTerminalRuleCall_0_2_TypesParserRuleCall_0_3__;
+	protected AbstractElementAlias match_Atri_INTTerminalRuleCall_0_1_q;
 	protected AbstractElementAlias match_Atri___Open_bracketsTerminalRuleCall_0_0_INTTerminalRuleCall_0_1_q_Closed_bracketsTerminalRuleCall_0_2_TypesParserRuleCall_0_3_Open_KeyTerminalRuleCall_0_4_0__q;
 	protected AbstractElementAlias match_Greeting_MultDecVars_DecImportParserRuleCall_7_or_EOLTerminalRuleCall_4_or___ModifParserRuleCall_0_Open_parenthesesTerminalRuleCall_1_Closed_parenthesesTerminalRuleCall_3__;
 	protected AbstractElementAlias match_OperationsOneEquals_MinusEqualsTerminalRuleCall_1_1_or_PlusEqualsTerminalRuleCall_1_0;
 	protected AbstractElementAlias match_PrimaryExpression_Open_parenthesesTerminalRuleCall_0_0_a;
 	protected AbstractElementAlias match_PrimaryExpression_Open_parenthesesTerminalRuleCall_0_0_p;
 	protected AbstractElementAlias match_SwitchCase___DEFAULTParserRuleCall_4_0_DoisPontosTerminalRuleCall_4_1__q;
-	protected AbstractElementAlias match_TypeValue_BooleanParserRuleCall_2_or_STRINGTerminalRuleCall_0;
 	protected AbstractElementAlias match_operationsOne_MinusOneTerminalRuleCall_1_1_or_PlusOneTerminalRuleCall_1_0;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (GoGrammarAccess) access;
-		match_Atri_TypeValue_BooleanParserRuleCall_2_or_STRINGTerminalRuleCall_0_or___Open_bracketsTerminalRuleCall_0_0_INTTerminalRuleCall_0_1_q_Closed_bracketsTerminalRuleCall_0_2_TypesParserRuleCall_0_3__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getAtriAccess().getOpen_bracketsTerminalRuleCall_0_0()), new TokenAlias(false, true, grammarAccess.getAtriAccess().getINTTerminalRuleCall_0_1()), new TokenAlias(false, false, grammarAccess.getAtriAccess().getClosed_bracketsTerminalRuleCall_0_2()), new TokenAlias(false, false, grammarAccess.getAtriAccess().getTypesParserRuleCall_0_3())), new TokenAlias(false, false, grammarAccess.getTypeValueAccess().getBooleanParserRuleCall_2()), new TokenAlias(false, false, grammarAccess.getTypeValueAccess().getSTRINGTerminalRuleCall_0()));
+		match_Atri_Atrib_Aux_IDTerminalRuleCall_1_or___Open_bracketsTerminalRuleCall_0_0_INTTerminalRuleCall_0_1_q_Closed_bracketsTerminalRuleCall_0_2_TypesParserRuleCall_0_3__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getAtriAccess().getOpen_bracketsTerminalRuleCall_0_0()), new TokenAlias(false, true, grammarAccess.getAtriAccess().getINTTerminalRuleCall_0_1()), new TokenAlias(false, false, grammarAccess.getAtriAccess().getClosed_bracketsTerminalRuleCall_0_2()), new TokenAlias(false, false, grammarAccess.getAtriAccess().getTypesParserRuleCall_0_3())), new TokenAlias(false, false, grammarAccess.getAtrib_AuxAccess().getIDTerminalRuleCall_1()));
+		match_Atri_INTTerminalRuleCall_0_1_q = new TokenAlias(false, true, grammarAccess.getAtriAccess().getINTTerminalRuleCall_0_1());
 		match_Atri___Open_bracketsTerminalRuleCall_0_0_INTTerminalRuleCall_0_1_q_Closed_bracketsTerminalRuleCall_0_2_TypesParserRuleCall_0_3_Open_KeyTerminalRuleCall_0_4_0__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getAtriAccess().getOpen_bracketsTerminalRuleCall_0_0()), new TokenAlias(false, true, grammarAccess.getAtriAccess().getINTTerminalRuleCall_0_1()), new TokenAlias(false, false, grammarAccess.getAtriAccess().getClosed_bracketsTerminalRuleCall_0_2()), new TokenAlias(false, false, grammarAccess.getAtriAccess().getTypesParserRuleCall_0_3()), new TokenAlias(false, false, grammarAccess.getAtriAccess().getOpen_KeyTerminalRuleCall_0_4_0()));
 		match_Greeting_MultDecVars_DecImportParserRuleCall_7_or_EOLTerminalRuleCall_4_or___ModifParserRuleCall_0_Open_parenthesesTerminalRuleCall_1_Closed_parenthesesTerminalRuleCall_3__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getMultDecVarsAccess().getModifParserRuleCall_0()), new TokenAlias(false, false, grammarAccess.getMultDecVarsAccess().getOpen_parenthesesTerminalRuleCall_1()), new TokenAlias(false, false, grammarAccess.getMultDecVarsAccess().getClosed_parenthesesTerminalRuleCall_3())), new TokenAlias(false, false, grammarAccess.getGreetingAccess().getDecImportParserRuleCall_7()), new TokenAlias(false, false, grammarAccess.getGreetingAccess().getEOLTerminalRuleCall_4()));
 		match_OperationsOneEquals_MinusEqualsTerminalRuleCall_1_1_or_PlusEqualsTerminalRuleCall_1_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getOperationsOneEqualsAccess().getMinusEqualsTerminalRuleCall_1_1()), new TokenAlias(false, false, grammarAccess.getOperationsOneEqualsAccess().getPlusEqualsTerminalRuleCall_1_0()));
 		match_PrimaryExpression_Open_parenthesesTerminalRuleCall_0_0_a = new TokenAlias(true, true, grammarAccess.getPrimaryExpressionAccess().getOpen_parenthesesTerminalRuleCall_0_0());
 		match_PrimaryExpression_Open_parenthesesTerminalRuleCall_0_0_p = new TokenAlias(true, false, grammarAccess.getPrimaryExpressionAccess().getOpen_parenthesesTerminalRuleCall_0_0());
 		match_SwitchCase___DEFAULTParserRuleCall_4_0_DoisPontosTerminalRuleCall_4_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSwitchCaseAccess().getDEFAULTParserRuleCall_4_0()), new TokenAlias(false, false, grammarAccess.getSwitchCaseAccess().getDoisPontosTerminalRuleCall_4_1()));
-		match_TypeValue_BooleanParserRuleCall_2_or_STRINGTerminalRuleCall_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getTypeValueAccess().getBooleanParserRuleCall_2()), new TokenAlias(false, false, grammarAccess.getTypeValueAccess().getSTRINGTerminalRuleCall_0()));
 		match_operationsOne_MinusOneTerminalRuleCall_1_1_or_PlusOneTerminalRuleCall_1_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getOperationsOneAccess().getMinusOneTerminalRuleCall_1_1()), new TokenAlias(false, false, grammarAccess.getOperationsOneAccess().getPlusOneTerminalRuleCall_1_0()));
 	}
 	
@@ -52,8 +52,6 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getAstericsToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getBarRule())
 			return getBarToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getBooleanRule())
-			return getBooleanToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getCASERule())
 			return getCASEToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getClosed_KeyRule())
@@ -110,8 +108,6 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getPlusOneToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getPontoVirgulaRule())
 			return getPontoVirgulaToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getSTRINGRule())
-			return getSTRINGToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSWITCHRule())
 			return getSWITCHToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getTypesRule())
@@ -139,16 +135,6 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return "/";
-	}
-	
-	/**
-	 * Boolean:
-	 * 	"true" | "false";
-	 */
-	protected String getBooleanToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "true";
 	}
 	
 	/**
@@ -431,18 +417,6 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	}
 	
 	/**
-	 * terminal STRING:
-	 * 			'"' ( '\\' .  | !('\\'|'"') )* '"' |
-	 * 			"'" ( '\\' .  | !('\\'|"'") )* "'"
-	 * 		;
-	 */
-	protected String getSTRINGToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "\"\"";
-	}
-	
-	/**
 	 * SWITCH:
 	 * 	"switch";
 	 */
@@ -479,8 +453,10 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Atri_TypeValue_BooleanParserRuleCall_2_or_STRINGTerminalRuleCall_0_or___Open_bracketsTerminalRuleCall_0_0_INTTerminalRuleCall_0_1_q_Closed_bracketsTerminalRuleCall_0_2_TypesParserRuleCall_0_3__.equals(syntax))
-				emit_Atri_TypeValue_BooleanParserRuleCall_2_or_STRINGTerminalRuleCall_0_or___Open_bracketsTerminalRuleCall_0_0_INTTerminalRuleCall_0_1_q_Closed_bracketsTerminalRuleCall_0_2_TypesParserRuleCall_0_3__(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_Atri_Atrib_Aux_IDTerminalRuleCall_1_or___Open_bracketsTerminalRuleCall_0_0_INTTerminalRuleCall_0_1_q_Closed_bracketsTerminalRuleCall_0_2_TypesParserRuleCall_0_3__.equals(syntax))
+				emit_Atri_Atrib_Aux_IDTerminalRuleCall_1_or___Open_bracketsTerminalRuleCall_0_0_INTTerminalRuleCall_0_1_q_Closed_bracketsTerminalRuleCall_0_2_TypesParserRuleCall_0_3__(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Atri_INTTerminalRuleCall_0_1_q.equals(syntax))
+				emit_Atri_INTTerminalRuleCall_0_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Atri___Open_bracketsTerminalRuleCall_0_0_INTTerminalRuleCall_0_1_q_Closed_bracketsTerminalRuleCall_0_2_TypesParserRuleCall_0_3_Open_KeyTerminalRuleCall_0_4_0__q.equals(syntax))
 				emit_Atri___Open_bracketsTerminalRuleCall_0_0_INTTerminalRuleCall_0_1_q_Closed_bracketsTerminalRuleCall_0_2_TypesParserRuleCall_0_3_Open_KeyTerminalRuleCall_0_4_0__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Greeting_MultDecVars_DecImportParserRuleCall_7_or_EOLTerminalRuleCall_4_or___ModifParserRuleCall_0_Open_parenthesesTerminalRuleCall_1_Closed_parenthesesTerminalRuleCall_3__.equals(syntax))
@@ -493,8 +469,6 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_PrimaryExpression_Open_parenthesesTerminalRuleCall_0_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_SwitchCase___DEFAULTParserRuleCall_4_0_DoisPontosTerminalRuleCall_4_1__q.equals(syntax))
 				emit_SwitchCase___DEFAULTParserRuleCall_4_0_DoisPontosTerminalRuleCall_4_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_TypeValue_BooleanParserRuleCall_2_or_STRINGTerminalRuleCall_0.equals(syntax))
-				emit_TypeValue_BooleanParserRuleCall_2_or_STRINGTerminalRuleCall_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_operationsOne_MinusOneTerminalRuleCall_1_1_or_PlusOneTerminalRuleCall_1_0.equals(syntax))
 				emit_operationsOne_MinusOneTerminalRuleCall_1_1_or_PlusOneTerminalRuleCall_1_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
@@ -503,12 +477,23 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Ambiguous syntax:
-	 *     (Open_brackets INT? Closed_brackets Types) | STRING | Boolean
+	 *     ID | (Open_brackets INT? Closed_brackets Types)
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)
 	 */
-	protected void emit_Atri_TypeValue_BooleanParserRuleCall_2_or_STRINGTerminalRuleCall_0_or___Open_bracketsTerminalRuleCall_0_0_INTTerminalRuleCall_0_1_q_Closed_bracketsTerminalRuleCall_0_2_TypesParserRuleCall_0_3__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Atri_Atrib_Aux_IDTerminalRuleCall_1_or___Open_bracketsTerminalRuleCall_0_0_INTTerminalRuleCall_0_1_q_Closed_bracketsTerminalRuleCall_0_2_TypesParserRuleCall_0_3__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     INT?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) Open_brackets (ambiguity) Closed_brackets Types (rule start)
+	 */
+	protected void emit_Atri_INTTerminalRuleCall_0_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -519,6 +504,9 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) d=Double
 	 *     (rule start) (ambiguity) int=INT
+	 *     (rule start) (ambiguity) s=STRING
+	 *     (rule start) (ambiguity) val='false'
+	 *     (rule start) (ambiguity) val='true'
 	 */
 	protected void emit_Atri___Open_bracketsTerminalRuleCall_0_0_INTTerminalRuleCall_0_1_q_Closed_bracketsTerminalRuleCall_0_2_TypesParserRuleCall_0_3_Open_KeyTerminalRuleCall_0_4_0__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -526,7 +514,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     (Modif Open_parentheses Closed_parentheses) | DecImport | EOL
+	 *     (Modif Open_parentheses Closed_parentheses) | EOL | DecImport
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)
@@ -537,7 +525,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     MinusEquals | PlusEquals
+	 *     PlusEquals | MinusEquals
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     name=ID (ambiguity) ID (rule end)
@@ -598,17 +586,6 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     name=ID Open_Key (ambiguity) Closed_Key (rule end)
 	 */
 	protected void emit_SwitchCase___DEFAULTParserRuleCall_4_0_DoisPontosTerminalRuleCall_4_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     STRING | Boolean
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 */
-	protected void emit_TypeValue_BooleanParserRuleCall_2_or_STRINGTerminalRuleCall_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

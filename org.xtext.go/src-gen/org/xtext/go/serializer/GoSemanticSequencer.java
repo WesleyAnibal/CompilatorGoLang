@@ -41,6 +41,7 @@ import org.xtext.go.go.Numbers;
 import org.xtext.go.go.OperationsOneEquals;
 import org.xtext.go.go.OrExpression;
 import org.xtext.go.go.Params;
+import org.xtext.go.go.Str;
 import org.xtext.go.go.Subtration;
 import org.xtext.go.go.SwitchCase;
 import org.xtext.go.go.Variable;
@@ -98,6 +99,9 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case GoPackage.ATRIB_VAR:
 				sequence_AtribVar(context, (AtribVar) semanticObject); 
+				return; 
+			case GoPackage.BOOLEAN:
+				sequence_Boolean(context, (org.xtext.go.go.Boolean) semanticObject); 
 				return; 
 			case GoPackage.CALL_FOR:
 				sequence_CallFor(context, (CallFor) semanticObject); 
@@ -303,6 +307,9 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case GoPackage.PARAMS:
 				sequence_Params(context, (Params) semanticObject); 
 				return; 
+			case GoPackage.STR:
+				sequence_Str(context, (Str) semanticObject); 
+				return; 
 			case GoPackage.SUBTRATION:
 				sequence_Subtration(context, (Subtration) semanticObject); 
 				return; 
@@ -437,6 +444,21 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		feeder.accept(grammarAccess.getAtribAccess().getTypeTypesParserRuleCall_2_0(), semanticObject.getType());
 		feeder.accept(grammarAccess.getAtribAccess().getAtribAtrib_AuxParserRuleCall_4_0(), semanticObject.getAtrib());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Atrib_Aux returns Boolean
+	 *     Atri returns Boolean
+	 *     TypeValue returns Boolean
+	 *     Boolean returns Boolean
+	 *
+	 * Constraint:
+	 *     (val='true' | val='false')
+	 */
+	protected void sequence_Boolean(ISerializationContext context, org.xtext.go.go.Boolean semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1002,6 +1024,27 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_Params(ISerializationContext context, Params semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Atrib_Aux returns Str
+	 *     Atri returns Str
+	 *     TypeValue returns Str
+	 *     Str returns Str
+	 *
+	 * Constraint:
+	 *     s=STRING
+	 */
+	protected void sequence_Str(ISerializationContext context, Str semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.STR__S) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.STR__S));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getStrAccess().getSSTRINGTerminalRuleCall_0(), semanticObject.getS());
+		feeder.finish();
 	}
 	
 	

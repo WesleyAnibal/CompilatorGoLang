@@ -1092,9 +1092,13 @@ ruleTypeValue returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		this_STRING_0=RULE_STRING
 		{
-			newLeafNode(this_STRING_0, grammarAccess.getTypeValueAccess().getSTRINGTerminalRuleCall_0());
+			newCompositeNode(grammarAccess.getTypeValueAccess().getStrParserRuleCall_0());
+		}
+		this_Str_0=ruleStr
+		{
+			$current = $this_Str_0.current;
+			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
@@ -1109,10 +1113,46 @@ ruleTypeValue returns [EObject current=null]
 		{
 			newCompositeNode(grammarAccess.getTypeValueAccess().getBooleanParserRuleCall_2());
 		}
-		ruleBoolean
+		this_Boolean_2=ruleBoolean
 		{
+			$current = $this_Boolean_2.current;
 			afterParserOrEnumRuleCall();
 		}
+	)
+;
+
+// Entry rule entryRuleStr
+entryRuleStr returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getStrRule()); }
+	iv_ruleStr=ruleStr
+	{ $current=$iv_ruleStr.current; }
+	EOF;
+
+// Rule Str
+ruleStr returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			lv_s_0_0=RULE_STRING
+			{
+				newLeafNode(lv_s_0_0, grammarAccess.getStrAccess().getSSTRINGTerminalRuleCall_0());
+			}
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getStrRule());
+				}
+				setWithLastConsumed(
+					$current,
+					"s",
+					lv_s_0_0,
+					"org.eclipse.xtext.common.Terminals.STRING");
+			}
+		)
 	)
 ;
 
@@ -2927,14 +2967,14 @@ ruleModif returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 ;
 
 // Entry rule entryRuleBoolean
-entryRuleBoolean returns [String current=null]:
+entryRuleBoolean returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getBooleanRule()); }
 	iv_ruleBoolean=ruleBoolean
-	{ $current=$iv_ruleBoolean.current.getText(); }
+	{ $current=$iv_ruleBoolean.current; }
 	EOF;
 
 // Rule Boolean
-ruleBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+ruleBoolean returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -2942,17 +2982,35 @@ ruleBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
 	leaveRule();
 }:
 	(
-		kw='true'
-		{
-			$current.merge(kw);
-			newLeafNode(kw, grammarAccess.getBooleanAccess().getTrueKeyword_0());
-		}
+		(
+			(
+				lv_val_0_0='true'
+				{
+					newLeafNode(lv_val_0_0, grammarAccess.getBooleanAccess().getValTrueKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getBooleanRule());
+					}
+					setWithLastConsumed($current, "val", lv_val_0_0, "true");
+				}
+			)
+		)
 		    |
-		kw='false'
-		{
-			$current.merge(kw);
-			newLeafNode(kw, grammarAccess.getBooleanAccess().getFalseKeyword_1());
-		}
+		(
+			(
+				lv_val_1_0='false'
+				{
+					newLeafNode(lv_val_1_0, grammarAccess.getBooleanAccess().getValFalseKeyword_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getBooleanRule());
+					}
+					setWithLastConsumed($current, "val", lv_val_1_0, "false");
+				}
+			)
+		)
 	)
 ;
 

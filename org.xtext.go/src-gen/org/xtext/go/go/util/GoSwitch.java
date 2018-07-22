@@ -39,6 +39,7 @@ import org.xtext.go.go.Numbers;
 import org.xtext.go.go.OperationsOneEquals;
 import org.xtext.go.go.OrExpression;
 import org.xtext.go.go.Params;
+import org.xtext.go.go.Str;
 import org.xtext.go.go.Subtration;
 import org.xtext.go.go.SwitchCase;
 import org.xtext.go.go.TypeValue;
@@ -221,6 +222,16 @@ public class GoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GoPackage.STR:
+      {
+        Str str = (Str)theEObject;
+        T result = caseStr(str);
+        if (result == null) result = caseTypeValue(str);
+        if (result == null) result = caseAtri(str);
+        if (result == null) result = caseAtrib_Aux(str);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GoPackage.OPERATIONS_ONE_EQUALS:
       {
         OperationsOneEquals operationsOneEquals = (OperationsOneEquals)theEObject;
@@ -332,6 +343,16 @@ public class GoSwitch<T> extends Switch<T>
         CallFunc callFunc = (CallFunc)theEObject;
         T result = caseCallFunc(callFunc);
         if (result == null) result = caseGreeting(callFunc);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.BOOLEAN:
+      {
+        org.xtext.go.go.Boolean boolean_ = (org.xtext.go.go.Boolean)theEObject;
+        T result = caseBoolean(boolean_);
+        if (result == null) result = caseTypeValue(boolean_);
+        if (result == null) result = caseAtri(boolean_);
+        if (result == null) result = caseAtrib_Aux(boolean_);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -676,6 +697,22 @@ public class GoSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Str</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Str</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStr(Str object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Operations One Equals</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -879,6 +916,22 @@ public class GoSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseCallFunc(CallFunc object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Boolean</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Boolean</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBoolean(org.xtext.go.go.Boolean object)
   {
     return null;
   }

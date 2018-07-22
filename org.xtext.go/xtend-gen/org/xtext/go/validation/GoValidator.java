@@ -15,11 +15,10 @@ import org.xtext.go.go.AtribVar;
 import org.xtext.go.go.Atrib_Aux;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.DecFunc;
-import org.xtext.go.go.DecVar;
-import org.xtext.go.go.Decl;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Numbers;
 import org.xtext.go.go.Params;
+import org.xtext.go.go.Str;
 import org.xtext.go.go.TypeValue;
 import org.xtext.go.go.Variable;
 import org.xtext.go.validation.AbstractGoValidator;
@@ -35,7 +34,7 @@ public class GoValidator extends AbstractGoValidator {
   
   public static Map<String, DecFunc> funcImplements = new HashMap<String, DecFunc>();
   
-  public static Map<String, List<DecVar>> variablesDeclarationMap = new HashMap<String, List<DecVar>>();
+  public static Map<String, Atrib> variablesDeclarationMap = new HashMap<String, Atrib>();
   
   @Check
   public void checkGreetingStartsWithCapital(final AtribVar g) {
@@ -72,60 +71,11 @@ public class GoValidator extends AbstractGoValidator {
    * This function add in the map all the variables in the source code
    */
   @Check
-  public Boolean addVariableDeclarations(final DecVar dec) {
-    boolean _xifexpression = false;
-    AtribVar _assignment = dec.getAssignment();
-    if ((_assignment instanceof Decl)) {
-      this.addAtribVarInMap(dec.getAssignment());
-    } else {
-      boolean _xifexpression_1 = false;
-      Decl _declaration = dec.getDeclaration();
-      if ((_declaration instanceof AtribVar)) {
-        _xifexpression_1 = this.addDeclarionVarInMap(dec.getDeclaration());
-      } else {
-        boolean _xifexpression_2 = false;
-        Atrib _atribuicao = dec.getAtribuicao();
-        if ((_atribuicao instanceof Atrib)) {
-          _xifexpression_2 = this.addAtribuicaoVarInMap(dec.getAtribuicao());
-        }
-        _xifexpression_1 = _xifexpression_2;
-      }
-      _xifexpression = _xifexpression_1;
-    }
-    return Boolean.valueOf(_xifexpression);
-  }
-  
-  public void addAtribVarInMap(final AtribVar atrib) {
-    EList<String> _vars = atrib.getVars();
-    for (final String id : _vars) {
-      {
-        String _string = id.toString();
-        ArrayList<DecVar> _arrayList = new ArrayList<DecVar>();
-        GoValidator.variablesDeclarationMap.put(_string, _arrayList);
-        GoValidator.variablesDeclarationMap.get(id.toString()).add(((DecVar) atrib));
-      }
-    }
-  }
-  
-  public boolean addDeclarionVarInMap(final Decl dec) {
-    boolean _xblockexpression = false;
-    {
-      String _string = dec.getName().toString();
-      ArrayList<DecVar> _arrayList = new ArrayList<DecVar>();
-      GoValidator.variablesDeclarationMap.put(_string, _arrayList);
-      _xblockexpression = GoValidator.variablesDeclarationMap.get(dec.getName().toString()).add(((DecVar) dec));
-    }
-    return _xblockexpression;
-  }
-  
-  public boolean addAtribuicaoVarInMap(final Atrib dec) {
-    boolean _xblockexpression = false;
+  public Atrib addVariableDeclarations(final Atrib dec) {
+    Atrib _xblockexpression = null;
     {
       this.checkTypeDeclarationAtrib(dec);
-      String _string = dec.getName().toString();
-      ArrayList<DecVar> _arrayList = new ArrayList<DecVar>();
-      GoValidator.variablesDeclarationMap.put(_string, _arrayList);
-      _xblockexpression = GoValidator.variablesDeclarationMap.get(dec.getName().toString()).add(((DecVar) dec));
+      _xblockexpression = GoValidator.variablesDeclarationMap.put(dec.getName().toString(), dec);
     }
     return _xblockexpression;
   }
@@ -134,7 +84,12 @@ public class GoValidator extends AbstractGoValidator {
     Atrib_Aux _atrib = dec.getAtrib();
     if ((_atrib instanceof TypeValue)) {
       if ((dec.getType().equals("string") && (dec.getAtrib() instanceof Numbers))) {
-        this.error((GoValidator.SEMANTIC_ERROR + "não é possível converter string para number"), GoPackage.Literals.DEC_VAR__ATRIBUICAO);
+        this.error((GoValidator.SEMANTIC_ERROR + "não é possível converter number para string"), GoPackage.Literals.ATRIB__TYPE);
+      }
+      if (((!dec.getType().equals("string")) && (dec.getAtrib() instanceof Str))) {
+        String _type = dec.getType();
+        String _plus = ((GoValidator.SEMANTIC_ERROR + "não é possível converter string para ") + _type);
+        this.error(_plus, GoPackage.Literals.ATRIB__TYPE);
       }
     }
   }

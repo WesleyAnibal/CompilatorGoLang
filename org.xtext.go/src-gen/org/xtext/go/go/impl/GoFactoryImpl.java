@@ -43,6 +43,7 @@ import org.xtext.go.go.Numbers;
 import org.xtext.go.go.OperationsOneEquals;
 import org.xtext.go.go.OrExpression;
 import org.xtext.go.go.Params;
+import org.xtext.go.go.Str;
 import org.xtext.go.go.Subtration;
 import org.xtext.go.go.SwitchCase;
 import org.xtext.go.go.TypeValue;
@@ -117,6 +118,7 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
       case GoPackage.ATRI: return createAtri();
       case GoPackage.PARAMS: return createParams();
       case GoPackage.TYPE_VALUE: return createTypeValue();
+      case GoPackage.STR: return createStr();
       case GoPackage.OPERATIONS_ONE_EQUALS: return createOperationsOneEquals();
       case GoPackage.NUMBERS: return createNumbers();
       case GoPackage.DOUBLE: return createDouble();
@@ -130,6 +132,7 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
       case GoPackage.VAR_FOR: return createvarFor();
       case GoPackage.DEC_FUNC: return createDecFunc();
       case GoPackage.CALL_FUNC: return createCallFunc();
+      case GoPackage.BOOLEAN: return createBoolean();
       case GoPackage.DATA_TYPE: return createDataType();
       case GoPackage.ADDITION: return createAddition();
       case GoPackage.SUBTRATION: return createSubtration();
@@ -314,6 +317,17 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Str createStr()
+  {
+    StrImpl str = new StrImpl();
+    return str;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public OperationsOneEquals createOperationsOneEquals()
   {
     OperationsOneEqualsImpl operationsOneEquals = new OperationsOneEqualsImpl();
@@ -450,6 +464,17 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     CallFuncImpl callFunc = new CallFuncImpl();
     return callFunc;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public org.xtext.go.go.Boolean createBoolean()
+  {
+    BooleanImpl boolean_ = new BooleanImpl();
+    return boolean_;
   }
 
   /**

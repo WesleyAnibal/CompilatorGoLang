@@ -568,6 +568,34 @@ public interface GoPackage extends EPackage
   int TYPE_VALUE_FEATURE_COUNT = ATRI_FEATURE_COUNT + 0;
 
   /**
+   * The meta object id for the '{@link org.xtext.go.go.impl.StrImpl <em>Str</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.go.go.impl.StrImpl
+   * @see org.xtext.go.go.impl.GoPackageImpl#getStr()
+   * @generated
+   */
+  int STR = 15;
+
+  /**
+   * The feature id for the '<em><b>S</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STR__S = TYPE_VALUE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Str</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STR_FEATURE_COUNT = TYPE_VALUE_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.go.go.impl.CallForImpl <em>Call For</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -575,7 +603,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getCallFor()
    * @generated
    */
-  int CALL_FOR = 23;
+  int CALL_FOR = 24;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -603,7 +631,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getvarFor()
    * @generated
    */
-  int VAR_FOR = 25;
+  int VAR_FOR = 26;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -667,7 +695,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getOperationsOneEquals()
    * @generated
    */
-  int OPERATIONS_ONE_EQUALS = 15;
+  int OPERATIONS_ONE_EQUALS = 16;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -749,7 +777,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getNumbers()
    * @generated
    */
-  int NUMBERS = 16;
+  int NUMBERS = 17;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -849,7 +877,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDouble()
    * @generated
    */
-  int DOUBLE = 17;
+  int DOUBLE = 18;
 
   /**
    * The feature id for the '<em><b>D</b></em>' attribute.
@@ -877,7 +905,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getCondition()
    * @generated
    */
-  int CONDITION = 18;
+  int CONDITION = 19;
 
   /**
    * The feature id for the '<em><b>If</b></em>' containment reference.
@@ -923,7 +951,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getElseIfCondition()
    * @generated
    */
-  int ELSE_IF_CONDITION = 20;
+  int ELSE_IF_CONDITION = 21;
 
   /**
    * The number of structural features of the '<em>Else If Condition</em>' class.
@@ -942,7 +970,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getIfCondition()
    * @generated
    */
-  int IF_CONDITION = 19;
+  int IF_CONDITION = 20;
 
   /**
    * The feature id for the '<em><b>Cond</b></em>' containment reference.
@@ -979,7 +1007,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getElseCondition()
    * @generated
    */
-  int ELSE_CONDITION = 21;
+  int ELSE_CONDITION = 22;
 
   /**
    * The feature id for the '<em><b>Then</b></em>' containment reference.
@@ -1007,7 +1035,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 22;
+  int EXPRESSION = 23;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1089,7 +1117,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getoperationsOne()
    * @generated
    */
-  int OPERATIONS_ONE = 24;
+  int OPERATIONS_ONE = 25;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1162,7 +1190,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDecFunc()
    * @generated
    */
-  int DEC_FUNC = 26;
+  int DEC_FUNC = 27;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1217,7 +1245,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getCallFunc()
    * @generated
    */
-  int CALL_FUNC = 27;
+  int CALL_FUNC = 28;
 
   /**
    * The feature id for the '<em><b>Name Func</b></em>' attribute.
@@ -1247,6 +1275,34 @@ public interface GoPackage extends EPackage
   int CALL_FUNC_FEATURE_COUNT = GREETING_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.go.go.impl.BooleanImpl <em>Boolean</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.go.go.impl.BooleanImpl
+   * @see org.xtext.go.go.impl.GoPackageImpl#getBoolean()
+   * @generated
+   */
+  int BOOLEAN = 29;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN__VAL = TYPE_VALUE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Boolean</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_FEATURE_COUNT = TYPE_VALUE_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.go.go.impl.DataTypeImpl <em>Data Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1254,7 +1310,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDataType()
    * @generated
    */
-  int DATA_TYPE = 28;
+  int DATA_TYPE = 30;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1282,7 +1338,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getAddition()
    * @generated
    */
-  int ADDITION = 29;
+  int ADDITION = 31;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1364,7 +1420,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getSubtration()
    * @generated
    */
-  int SUBTRATION = 30;
+  int SUBTRATION = 32;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1446,7 +1502,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getMultiplication()
    * @generated
    */
-  int MULTIPLICATION = 31;
+  int MULTIPLICATION = 33;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1528,7 +1584,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDivision()
    * @generated
    */
-  int DIVISION = 32;
+  int DIVISION = 34;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1610,7 +1666,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getOrExpression()
    * @generated
    */
-  int OR_EXPRESSION = 33;
+  int OR_EXPRESSION = 35;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1692,7 +1748,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getAndExpression()
    * @generated
    */
-  int AND_EXPRESSION = 34;
+  int AND_EXPRESSION = 36;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1774,7 +1830,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getComparisonExpression()
    * @generated
    */
-  int COMPARISON_EXPRESSION = 35;
+  int COMPARISON_EXPRESSION = 37;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1856,7 +1912,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 36;
+  int LITERAL = 38;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1922,7 +1978,7 @@ public interface GoPackage extends EPackage
   int LITERAL__SUB = EXPRESSION__SUB;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -2366,6 +2422,27 @@ public interface GoPackage extends EPackage
   EClass getTypeValue();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.go.go.Str <em>Str</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Str</em>'.
+   * @see org.xtext.go.go.Str
+   * @generated
+   */
+  EClass getStr();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.go.go.Str#getS <em>S</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>S</em>'.
+   * @see org.xtext.go.go.Str#getS()
+   * @see #getStr()
+   * @generated
+   */
+  EAttribute getStr_S();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.go.go.OperationsOneEquals <em>Operations One Equals</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2771,6 +2848,27 @@ public interface GoPackage extends EPackage
   EReference getCallFunc_Param();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.go.go.Boolean <em>Boolean</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Boolean</em>'.
+   * @see org.xtext.go.go.Boolean
+   * @generated
+   */
+  EClass getBoolean();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.go.go.Boolean#getVal <em>Val</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Val</em>'.
+   * @see org.xtext.go.go.Boolean#getVal()
+   * @see #getBoolean()
+   * @generated
+   */
+  EAttribute getBoolean_Val();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.go.go.DataType <em>Data Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2872,15 +2970,15 @@ public interface GoPackage extends EPackage
   EClass getLiteral();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.go.go.Literal#getValue <em>Value</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Literal#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
+   * @return the meta object for the containment reference '<em>Value</em>'.
    * @see org.xtext.go.go.Literal#getValue()
    * @see #getLiteral()
    * @generated
    */
-  EAttribute getLiteral_Value();
+  EReference getLiteral_Value();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -3256,6 +3354,24 @@ public interface GoPackage extends EPackage
     EClass TYPE_VALUE = eINSTANCE.getTypeValue();
 
     /**
+     * The meta object literal for the '{@link org.xtext.go.go.impl.StrImpl <em>Str</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.go.go.impl.StrImpl
+     * @see org.xtext.go.go.impl.GoPackageImpl#getStr()
+     * @generated
+     */
+    EClass STR = eINSTANCE.getStr();
+
+    /**
+     * The meta object literal for the '<em><b>S</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STR__S = eINSTANCE.getStr_S();
+
+    /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.OperationsOneEqualsImpl <em>Operations One Equals</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3586,6 +3702,24 @@ public interface GoPackage extends EPackage
     EReference CALL_FUNC__PARAM = eINSTANCE.getCallFunc_Param();
 
     /**
+     * The meta object literal for the '{@link org.xtext.go.go.impl.BooleanImpl <em>Boolean</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.go.go.impl.BooleanImpl
+     * @see org.xtext.go.go.impl.GoPackageImpl#getBoolean()
+     * @generated
+     */
+    EClass BOOLEAN = eINSTANCE.getBoolean();
+
+    /**
+     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BOOLEAN__VAL = eINSTANCE.getBoolean_Val();
+
+    /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.DataTypeImpl <em>Data Type</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3684,12 +3818,12 @@ public interface GoPackage extends EPackage
     EClass LITERAL = eINSTANCE.getLiteral();
 
     /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute LITERAL__VALUE = eINSTANCE.getLiteral_Value();
+    EReference LITERAL__VALUE = eINSTANCE.getLiteral_Value();
 
   }
 

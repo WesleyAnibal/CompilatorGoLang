@@ -41,6 +41,7 @@ import org.xtext.go.go.Numbers;
 import org.xtext.go.go.OperationsOneEquals;
 import org.xtext.go.go.OrExpression;
 import org.xtext.go.go.Params;
+import org.xtext.go.go.Str;
 import org.xtext.go.go.Subtration;
 import org.xtext.go.go.SwitchCase;
 import org.xtext.go.go.TypeValue;
@@ -187,6 +188,11 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createTypeValueAdapter();
       }
       @Override
+      public Adapter caseStr(Str object)
+      {
+        return createStrAdapter();
+      }
+      @Override
       public Adapter caseOperationsOneEquals(OperationsOneEquals object)
       {
         return createOperationsOneEqualsAdapter();
@@ -250,6 +256,11 @@ public class GoAdapterFactory extends AdapterFactoryImpl
       public Adapter caseCallFunc(CallFunc object)
       {
         return createCallFuncAdapter();
+      }
+      @Override
+      public Adapter caseBoolean(org.xtext.go.go.Boolean object)
+      {
+        return createBooleanAdapter();
       }
       @Override
       public Adapter caseDataType(DataType object)
@@ -544,6 +555,21 @@ public class GoAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Str <em>Str</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Str
+   * @generated
+   */
+  public Adapter createStrAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.go.go.OperationsOneEquals <em>Operations One Equals</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -734,6 +760,21 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createCallFuncAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Boolean <em>Boolean</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Boolean
+   * @generated
+   */
+  public Adapter createBooleanAdapter()
   {
     return null;
   }

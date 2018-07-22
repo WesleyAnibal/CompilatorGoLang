@@ -57,6 +57,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Params/type"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//TypeValue"/>
+    <genClasses ecoreClass="Go.ecore#//Str">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Str/s"/>
+    </genClasses>
     <genClasses ecoreClass="Go.ecore#//OperationsOneEquals">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//OperationsOneEquals/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//OperationsOneEquals/n"/>
@@ -107,6 +110,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//CallFunc/nameFunc"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//CallFunc/param"/>
     </genClasses>
+    <genClasses ecoreClass="Go.ecore#//Boolean">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Boolean/val"/>
+    </genClasses>
     <genClasses ecoreClass="Go.ecore#//DataType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DataType/name"/>
     </genClasses>
@@ -118,7 +124,7 @@
     <genClasses ecoreClass="Go.ecore#//AndExpression"/>
     <genClasses ecoreClass="Go.ecore#//ComparisonExpression"/>
     <genClasses ecoreClass="Go.ecore#//Literal">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Literal/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Literal/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

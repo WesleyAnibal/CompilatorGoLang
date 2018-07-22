@@ -53,8 +53,11 @@ Params:
 	params+=ID type+=Types? (Comma params+=ID type+=Types?)*;
 	
 TypeValue:
-	STRING | Numbers | Boolean;
+	Str | Numbers | Boolean;
 
+Str:
+	s=STRING
+;
 
 DecImport:
 	IMPORT (STRING | Open_parentheses STRING+ Closed_parentheses);
@@ -184,7 +187,7 @@ terminal Open_parentheses:
 terminal Closed_parentheses:
 	")";
 Boolean:
-	"true" | "false";
+	val="true" | val="false";
 		
 BREAK:
 	"break";

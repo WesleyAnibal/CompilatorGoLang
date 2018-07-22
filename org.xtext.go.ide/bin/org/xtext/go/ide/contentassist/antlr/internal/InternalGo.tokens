@@ -1,4 +1,4 @@
-'&&'=65
+'&&'=63
 '<'=50
 '<='=51
 '=='=52
@@ -11,10 +11,10 @@
 'chan'=35
 'const'=36
 'continue'=37
-'datatype'=66
+'datatype'=64
 'default'=47
 'else'=38
-'false'=63
+'false'=66
 'float32'=60
 'float64'=61
 'for'=39
@@ -28,10 +28,10 @@
 'rune'=59
 'string'=55
 'switch'=48
-'true'=62
+'true'=65
 'type'=45
 'var'=46
-'||'=64
+'||'=62
 RULE_ANY_OTHER=32
 RULE_ASTERICS=24
 RULE_BAR=25

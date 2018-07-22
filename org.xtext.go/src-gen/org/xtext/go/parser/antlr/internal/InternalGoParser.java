@@ -3057,22 +3057,25 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTypeValue"
-    // InternalGo.g:1087:1: ruleTypeValue returns [EObject current=null] : (this_STRING_0= RULE_STRING | this_Numbers_1= ruleNumbers | ruleBoolean ) ;
+    // InternalGo.g:1087:1: ruleTypeValue returns [EObject current=null] : (this_Str_0= ruleStr | this_Numbers_1= ruleNumbers | this_Boolean_2= ruleBoolean ) ;
     public final EObject ruleTypeValue() throws RecognitionException {
         EObject current = null;
 
-        Token this_STRING_0=null;
+        EObject this_Str_0 = null;
+
         EObject this_Numbers_1 = null;
+
+        EObject this_Boolean_2 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalGo.g:1093:2: ( (this_STRING_0= RULE_STRING | this_Numbers_1= ruleNumbers | ruleBoolean ) )
-            // InternalGo.g:1094:2: (this_STRING_0= RULE_STRING | this_Numbers_1= ruleNumbers | ruleBoolean )
+            // InternalGo.g:1093:2: ( (this_Str_0= ruleStr | this_Numbers_1= ruleNumbers | this_Boolean_2= ruleBoolean ) )
+            // InternalGo.g:1094:2: (this_Str_0= ruleStr | this_Numbers_1= ruleNumbers | this_Boolean_2= ruleBoolean )
             {
-            // InternalGo.g:1094:2: (this_STRING_0= RULE_STRING | this_Numbers_1= ruleNumbers | ruleBoolean )
+            // InternalGo.g:1094:2: (this_Str_0= ruleStr | this_Numbers_1= ruleNumbers | this_Boolean_2= ruleBoolean )
             int alt20=3;
             switch ( input.LA(1) ) {
             case RULE_STRING:
@@ -3101,19 +3104,29 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             switch (alt20) {
                 case 1 :
-                    // InternalGo.g:1095:3: this_STRING_0= RULE_STRING
+                    // InternalGo.g:1095:3: this_Str_0= ruleStr
                     {
-                    this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(this_STRING_0, grammarAccess.getTypeValueAccess().getSTRINGTerminalRuleCall_0());
+                      			newCompositeNode(grammarAccess.getTypeValueAccess().getStrParserRuleCall_0());
+                      		
+                    }
+                    pushFollow(FOLLOW_2);
+                    this_Str_0=ruleStr();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_Str_0;
+                      			afterParserOrEnumRuleCall();
                       		
                     }
 
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:1100:3: this_Numbers_1= ruleNumbers
+                    // InternalGo.g:1104:3: this_Numbers_1= ruleNumbers
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3135,7 +3148,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalGo.g:1109:3: ruleBoolean
+                    // InternalGo.g:1113:3: this_Boolean_2= ruleBoolean
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3143,12 +3156,13 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                       		
                     }
                     pushFollow(FOLLOW_2);
-                    ruleBoolean();
+                    this_Boolean_2=ruleBoolean();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
+                      			current = this_Boolean_2;
                       			afterParserOrEnumRuleCall();
                       		
                     }
@@ -3179,8 +3193,113 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleTypeValue"
 
 
+    // $ANTLR start "entryRuleStr"
+    // InternalGo.g:1125:1: entryRuleStr returns [EObject current=null] : iv_ruleStr= ruleStr EOF ;
+    public final EObject entryRuleStr() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleStr = null;
+
+
+        try {
+            // InternalGo.g:1125:44: (iv_ruleStr= ruleStr EOF )
+            // InternalGo.g:1126:2: iv_ruleStr= ruleStr EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getStrRule()); 
+            }
+            pushFollow(FOLLOW_1);
+            iv_ruleStr=ruleStr();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleStr; 
+            }
+            match(input,EOF,FOLLOW_2); if (state.failed) return current;
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleStr"
+
+
+    // $ANTLR start "ruleStr"
+    // InternalGo.g:1132:1: ruleStr returns [EObject current=null] : ( (lv_s_0_0= RULE_STRING ) ) ;
+    public final EObject ruleStr() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_s_0_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalGo.g:1138:2: ( ( (lv_s_0_0= RULE_STRING ) ) )
+            // InternalGo.g:1139:2: ( (lv_s_0_0= RULE_STRING ) )
+            {
+            // InternalGo.g:1139:2: ( (lv_s_0_0= RULE_STRING ) )
+            // InternalGo.g:1140:3: (lv_s_0_0= RULE_STRING )
+            {
+            // InternalGo.g:1140:3: (lv_s_0_0= RULE_STRING )
+            // InternalGo.g:1141:4: lv_s_0_0= RULE_STRING
+            {
+            lv_s_0_0=(Token)match(input,RULE_STRING,FOLLOW_2); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              				newLeafNode(lv_s_0_0, grammarAccess.getStrAccess().getSSTRINGTerminalRuleCall_0());
+              			
+            }
+            if ( state.backtracking==0 ) {
+
+              				if (current==null) {
+              					current = createModelElement(grammarAccess.getStrRule());
+              				}
+              				setWithLastConsumed(
+              					current,
+              					"s",
+              					lv_s_0_0,
+              					"org.eclipse.xtext.common.Terminals.STRING");
+              			
+            }
+
+            }
+
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+
+              	leaveRule();
+
+            }
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleStr"
+
+
     // $ANTLR start "entryRuleDecImport"
-    // InternalGo.g:1120:1: entryRuleDecImport returns [String current=null] : iv_ruleDecImport= ruleDecImport EOF ;
+    // InternalGo.g:1160:1: entryRuleDecImport returns [String current=null] : iv_ruleDecImport= ruleDecImport EOF ;
     public final String entryRuleDecImport() throws RecognitionException {
         String current = null;
 
@@ -3188,8 +3307,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:1120:49: (iv_ruleDecImport= ruleDecImport EOF )
-            // InternalGo.g:1121:2: iv_ruleDecImport= ruleDecImport EOF
+            // InternalGo.g:1160:49: (iv_ruleDecImport= ruleDecImport EOF )
+            // InternalGo.g:1161:2: iv_ruleDecImport= ruleDecImport EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDecImportRule()); 
@@ -3220,7 +3339,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDecImport"
-    // InternalGo.g:1127:1: ruleDecImport returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_IMPORT_0= ruleIMPORT (this_STRING_1= RULE_STRING | (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ) ) ) ;
+    // InternalGo.g:1167:1: ruleDecImport returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_IMPORT_0= ruleIMPORT (this_STRING_1= RULE_STRING | (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ) ) ) ;
     public final AntlrDatatypeRuleToken ruleDecImport() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3235,11 +3354,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:1133:2: ( (this_IMPORT_0= ruleIMPORT (this_STRING_1= RULE_STRING | (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ) ) ) )
-            // InternalGo.g:1134:2: (this_IMPORT_0= ruleIMPORT (this_STRING_1= RULE_STRING | (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ) ) )
+            // InternalGo.g:1173:2: ( (this_IMPORT_0= ruleIMPORT (this_STRING_1= RULE_STRING | (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ) ) ) )
+            // InternalGo.g:1174:2: (this_IMPORT_0= ruleIMPORT (this_STRING_1= RULE_STRING | (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ) ) )
             {
-            // InternalGo.g:1134:2: (this_IMPORT_0= ruleIMPORT (this_STRING_1= RULE_STRING | (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ) ) )
-            // InternalGo.g:1135:3: this_IMPORT_0= ruleIMPORT (this_STRING_1= RULE_STRING | (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ) )
+            // InternalGo.g:1174:2: (this_IMPORT_0= ruleIMPORT (this_STRING_1= RULE_STRING | (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ) ) )
+            // InternalGo.g:1175:3: this_IMPORT_0= ruleIMPORT (this_STRING_1= RULE_STRING | (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ) )
             {
             if ( state.backtracking==0 ) {
 
@@ -3261,7 +3380,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalGo.g:1145:3: (this_STRING_1= RULE_STRING | (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ) )
+            // InternalGo.g:1185:3: (this_STRING_1= RULE_STRING | (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ) )
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -3280,7 +3399,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             }
             switch (alt22) {
                 case 1 :
-                    // InternalGo.g:1146:4: this_STRING_1= RULE_STRING
+                    // InternalGo.g:1186:4: this_STRING_1= RULE_STRING
                     {
                     this_STRING_1=(Token)match(input,RULE_STRING,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3297,10 +3416,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:1154:4: (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES )
+                    // InternalGo.g:1194:4: (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES )
                     {
-                    // InternalGo.g:1154:4: (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES )
-                    // InternalGo.g:1155:5: this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES
+                    // InternalGo.g:1194:4: (this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES )
+                    // InternalGo.g:1195:5: this_Open_parentheses_2= RULE_OPEN_PARENTHESES (this_STRING_3= RULE_STRING )+ this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES
                     {
                     this_Open_parentheses_2=(Token)match(input,RULE_OPEN_PARENTHESES,FOLLOW_28); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3313,7 +3432,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                       					newLeafNode(this_Open_parentheses_2, grammarAccess.getDecImportAccess().getOpen_parenthesesTerminalRuleCall_1_1_0());
                       				
                     }
-                    // InternalGo.g:1162:5: (this_STRING_3= RULE_STRING )+
+                    // InternalGo.g:1202:5: (this_STRING_3= RULE_STRING )+
                     int cnt21=0;
                     loop21:
                     do {
@@ -3327,7 +3446,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                         switch (alt21) {
                     	case 1 :
-                    	    // InternalGo.g:1163:6: this_STRING_3= RULE_STRING
+                    	    // InternalGo.g:1203:6: this_STRING_3= RULE_STRING
                     	    {
                     	    this_STRING_3=(Token)match(input,RULE_STRING,FOLLOW_29); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
@@ -3399,7 +3518,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOperationsOneEquals"
-    // InternalGo.g:1184:1: entryRuleOperationsOneEquals returns [EObject current=null] : iv_ruleOperationsOneEquals= ruleOperationsOneEquals EOF ;
+    // InternalGo.g:1224:1: entryRuleOperationsOneEquals returns [EObject current=null] : iv_ruleOperationsOneEquals= ruleOperationsOneEquals EOF ;
     public final EObject entryRuleOperationsOneEquals() throws RecognitionException {
         EObject current = null;
 
@@ -3407,8 +3526,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:1184:60: (iv_ruleOperationsOneEquals= ruleOperationsOneEquals EOF )
-            // InternalGo.g:1185:2: iv_ruleOperationsOneEquals= ruleOperationsOneEquals EOF
+            // InternalGo.g:1224:60: (iv_ruleOperationsOneEquals= ruleOperationsOneEquals EOF )
+            // InternalGo.g:1225:2: iv_ruleOperationsOneEquals= ruleOperationsOneEquals EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOperationsOneEqualsRule()); 
@@ -3439,7 +3558,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperationsOneEquals"
-    // InternalGo.g:1191:1: ruleOperationsOneEquals returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusEquals_1= RULE_PLUSEQUALS | this_MinusEquals_2= RULE_MINUSEQUALS ) (this_ID_3= RULE_ID | ( (lv_n_4_0= ruleNumbers ) ) ) ) ;
+    // InternalGo.g:1231:1: ruleOperationsOneEquals returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusEquals_1= RULE_PLUSEQUALS | this_MinusEquals_2= RULE_MINUSEQUALS ) (this_ID_3= RULE_ID | ( (lv_n_4_0= ruleNumbers ) ) ) ) ;
     public final EObject ruleOperationsOneEquals() throws RecognitionException {
         EObject current = null;
 
@@ -3454,17 +3573,17 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:1197:2: ( ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusEquals_1= RULE_PLUSEQUALS | this_MinusEquals_2= RULE_MINUSEQUALS ) (this_ID_3= RULE_ID | ( (lv_n_4_0= ruleNumbers ) ) ) ) )
-            // InternalGo.g:1198:2: ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusEquals_1= RULE_PLUSEQUALS | this_MinusEquals_2= RULE_MINUSEQUALS ) (this_ID_3= RULE_ID | ( (lv_n_4_0= ruleNumbers ) ) ) )
+            // InternalGo.g:1237:2: ( ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusEquals_1= RULE_PLUSEQUALS | this_MinusEquals_2= RULE_MINUSEQUALS ) (this_ID_3= RULE_ID | ( (lv_n_4_0= ruleNumbers ) ) ) ) )
+            // InternalGo.g:1238:2: ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusEquals_1= RULE_PLUSEQUALS | this_MinusEquals_2= RULE_MINUSEQUALS ) (this_ID_3= RULE_ID | ( (lv_n_4_0= ruleNumbers ) ) ) )
             {
-            // InternalGo.g:1198:2: ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusEquals_1= RULE_PLUSEQUALS | this_MinusEquals_2= RULE_MINUSEQUALS ) (this_ID_3= RULE_ID | ( (lv_n_4_0= ruleNumbers ) ) ) )
-            // InternalGo.g:1199:3: ( (lv_name_0_0= RULE_ID ) ) (this_PlusEquals_1= RULE_PLUSEQUALS | this_MinusEquals_2= RULE_MINUSEQUALS ) (this_ID_3= RULE_ID | ( (lv_n_4_0= ruleNumbers ) ) )
+            // InternalGo.g:1238:2: ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusEquals_1= RULE_PLUSEQUALS | this_MinusEquals_2= RULE_MINUSEQUALS ) (this_ID_3= RULE_ID | ( (lv_n_4_0= ruleNumbers ) ) ) )
+            // InternalGo.g:1239:3: ( (lv_name_0_0= RULE_ID ) ) (this_PlusEquals_1= RULE_PLUSEQUALS | this_MinusEquals_2= RULE_MINUSEQUALS ) (this_ID_3= RULE_ID | ( (lv_n_4_0= ruleNumbers ) ) )
             {
-            // InternalGo.g:1199:3: ( (lv_name_0_0= RULE_ID ) )
-            // InternalGo.g:1200:4: (lv_name_0_0= RULE_ID )
+            // InternalGo.g:1239:3: ( (lv_name_0_0= RULE_ID ) )
+            // InternalGo.g:1240:4: (lv_name_0_0= RULE_ID )
             {
-            // InternalGo.g:1200:4: (lv_name_0_0= RULE_ID )
-            // InternalGo.g:1201:5: lv_name_0_0= RULE_ID
+            // InternalGo.g:1240:4: (lv_name_0_0= RULE_ID )
+            // InternalGo.g:1241:5: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_30); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3490,7 +3609,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalGo.g:1217:3: (this_PlusEquals_1= RULE_PLUSEQUALS | this_MinusEquals_2= RULE_MINUSEQUALS )
+            // InternalGo.g:1257:3: (this_PlusEquals_1= RULE_PLUSEQUALS | this_MinusEquals_2= RULE_MINUSEQUALS )
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -3509,7 +3628,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             }
             switch (alt23) {
                 case 1 :
-                    // InternalGo.g:1218:4: this_PlusEquals_1= RULE_PLUSEQUALS
+                    // InternalGo.g:1258:4: this_PlusEquals_1= RULE_PLUSEQUALS
                     {
                     this_PlusEquals_1=(Token)match(input,RULE_PLUSEQUALS,FOLLOW_31); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3521,7 +3640,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:1223:4: this_MinusEquals_2= RULE_MINUSEQUALS
+                    // InternalGo.g:1263:4: this_MinusEquals_2= RULE_MINUSEQUALS
                     {
                     this_MinusEquals_2=(Token)match(input,RULE_MINUSEQUALS,FOLLOW_31); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3535,7 +3654,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalGo.g:1228:3: (this_ID_3= RULE_ID | ( (lv_n_4_0= ruleNumbers ) ) )
+            // InternalGo.g:1268:3: (this_ID_3= RULE_ID | ( (lv_n_4_0= ruleNumbers ) ) )
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -3554,7 +3673,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             }
             switch (alt24) {
                 case 1 :
-                    // InternalGo.g:1229:4: this_ID_3= RULE_ID
+                    // InternalGo.g:1269:4: this_ID_3= RULE_ID
                     {
                     this_ID_3=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3566,13 +3685,13 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:1234:4: ( (lv_n_4_0= ruleNumbers ) )
+                    // InternalGo.g:1274:4: ( (lv_n_4_0= ruleNumbers ) )
                     {
-                    // InternalGo.g:1234:4: ( (lv_n_4_0= ruleNumbers ) )
-                    // InternalGo.g:1235:5: (lv_n_4_0= ruleNumbers )
+                    // InternalGo.g:1274:4: ( (lv_n_4_0= ruleNumbers ) )
+                    // InternalGo.g:1275:5: (lv_n_4_0= ruleNumbers )
                     {
-                    // InternalGo.g:1235:5: (lv_n_4_0= ruleNumbers )
-                    // InternalGo.g:1236:6: lv_n_4_0= ruleNumbers
+                    // InternalGo.g:1275:5: (lv_n_4_0= ruleNumbers )
+                    // InternalGo.g:1276:6: lv_n_4_0= ruleNumbers
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3634,7 +3753,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumbers"
-    // InternalGo.g:1258:1: entryRuleNumbers returns [EObject current=null] : iv_ruleNumbers= ruleNumbers EOF ;
+    // InternalGo.g:1298:1: entryRuleNumbers returns [EObject current=null] : iv_ruleNumbers= ruleNumbers EOF ;
     public final EObject entryRuleNumbers() throws RecognitionException {
         EObject current = null;
 
@@ -3642,8 +3761,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:1258:48: (iv_ruleNumbers= ruleNumbers EOF )
-            // InternalGo.g:1259:2: iv_ruleNumbers= ruleNumbers EOF
+            // InternalGo.g:1298:48: (iv_ruleNumbers= ruleNumbers EOF )
+            // InternalGo.g:1299:2: iv_ruleNumbers= ruleNumbers EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNumbersRule()); 
@@ -3674,7 +3793,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumbers"
-    // InternalGo.g:1265:1: ruleNumbers returns [EObject current=null] : ( ( (lv_int_0_0= RULE_INT ) ) | ( (lv_d_1_0= ruleDouble ) ) ) ;
+    // InternalGo.g:1305:1: ruleNumbers returns [EObject current=null] : ( ( (lv_int_0_0= RULE_INT ) ) | ( (lv_d_1_0= ruleDouble ) ) ) ;
     public final EObject ruleNumbers() throws RecognitionException {
         EObject current = null;
 
@@ -3686,21 +3805,21 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:1271:2: ( ( ( (lv_int_0_0= RULE_INT ) ) | ( (lv_d_1_0= ruleDouble ) ) ) )
-            // InternalGo.g:1272:2: ( ( (lv_int_0_0= RULE_INT ) ) | ( (lv_d_1_0= ruleDouble ) ) )
+            // InternalGo.g:1311:2: ( ( ( (lv_int_0_0= RULE_INT ) ) | ( (lv_d_1_0= ruleDouble ) ) ) )
+            // InternalGo.g:1312:2: ( ( (lv_int_0_0= RULE_INT ) ) | ( (lv_d_1_0= ruleDouble ) ) )
             {
-            // InternalGo.g:1272:2: ( ( (lv_int_0_0= RULE_INT ) ) | ( (lv_d_1_0= ruleDouble ) ) )
+            // InternalGo.g:1312:2: ( ( (lv_int_0_0= RULE_INT ) ) | ( (lv_d_1_0= ruleDouble ) ) )
             int alt25=2;
             int LA25_0 = input.LA(1);
 
             if ( (LA25_0==RULE_INT) ) {
                 int LA25_1 = input.LA(2);
 
-                if ( (LA25_1==RULE_DOT) ) {
-                    alt25=2;
-                }
-                else if ( (LA25_1==EOF||(LA25_1>=RULE_EOL && LA25_1<=RULE_COMMA)||(LA25_1>=RULE_CLOSED_PARENTHESES && LA25_1<=RULE_INT)||LA25_1==RULE_STRING||(LA25_1>=RULE_PLUS && LA25_1<=RULE_BAR)||LA25_1==RULE_PONTOVIRGULA||(LA25_1>=33 && LA25_1<=39)||(LA25_1>=47 && LA25_1<=48)||LA25_1==50||LA25_1==52||(LA25_1>=55 && LA25_1<=58)||(LA25_1>=62 && LA25_1<=64)||LA25_1==66) ) {
+                if ( (LA25_1==EOF||(LA25_1>=RULE_EOL && LA25_1<=RULE_COMMA)||(LA25_1>=RULE_CLOSED_PARENTHESES && LA25_1<=RULE_INT)||LA25_1==RULE_STRING||(LA25_1>=RULE_PLUS && LA25_1<=RULE_BAR)||LA25_1==RULE_PONTOVIRGULA||(LA25_1>=33 && LA25_1<=39)||(LA25_1>=47 && LA25_1<=48)||LA25_1==50||LA25_1==52||(LA25_1>=55 && LA25_1<=58)||(LA25_1>=62 && LA25_1<=64)||LA25_1==66) ) {
                     alt25=1;
+                }
+                else if ( (LA25_1==RULE_DOT) ) {
+                    alt25=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -3719,13 +3838,13 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             }
             switch (alt25) {
                 case 1 :
-                    // InternalGo.g:1273:3: ( (lv_int_0_0= RULE_INT ) )
+                    // InternalGo.g:1313:3: ( (lv_int_0_0= RULE_INT ) )
                     {
-                    // InternalGo.g:1273:3: ( (lv_int_0_0= RULE_INT ) )
-                    // InternalGo.g:1274:4: (lv_int_0_0= RULE_INT )
+                    // InternalGo.g:1313:3: ( (lv_int_0_0= RULE_INT ) )
+                    // InternalGo.g:1314:4: (lv_int_0_0= RULE_INT )
                     {
-                    // InternalGo.g:1274:4: (lv_int_0_0= RULE_INT )
-                    // InternalGo.g:1275:5: lv_int_0_0= RULE_INT
+                    // InternalGo.g:1314:4: (lv_int_0_0= RULE_INT )
+                    // InternalGo.g:1315:5: lv_int_0_0= RULE_INT
                     {
                     lv_int_0_0=(Token)match(input,RULE_INT,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -3755,13 +3874,13 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:1292:3: ( (lv_d_1_0= ruleDouble ) )
+                    // InternalGo.g:1332:3: ( (lv_d_1_0= ruleDouble ) )
                     {
-                    // InternalGo.g:1292:3: ( (lv_d_1_0= ruleDouble ) )
-                    // InternalGo.g:1293:4: (lv_d_1_0= ruleDouble )
+                    // InternalGo.g:1332:3: ( (lv_d_1_0= ruleDouble ) )
+                    // InternalGo.g:1333:4: (lv_d_1_0= ruleDouble )
                     {
-                    // InternalGo.g:1293:4: (lv_d_1_0= ruleDouble )
-                    // InternalGo.g:1294:5: lv_d_1_0= ruleDouble
+                    // InternalGo.g:1333:4: (lv_d_1_0= ruleDouble )
+                    // InternalGo.g:1334:5: lv_d_1_0= ruleDouble
                     {
                     if ( state.backtracking==0 ) {
 
@@ -3820,7 +3939,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDouble"
-    // InternalGo.g:1315:1: entryRuleDouble returns [EObject current=null] : iv_ruleDouble= ruleDouble EOF ;
+    // InternalGo.g:1355:1: entryRuleDouble returns [EObject current=null] : iv_ruleDouble= ruleDouble EOF ;
     public final EObject entryRuleDouble() throws RecognitionException {
         EObject current = null;
 
@@ -3828,8 +3947,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:1315:47: (iv_ruleDouble= ruleDouble EOF )
-            // InternalGo.g:1316:2: iv_ruleDouble= ruleDouble EOF
+            // InternalGo.g:1355:47: (iv_ruleDouble= ruleDouble EOF )
+            // InternalGo.g:1356:2: iv_ruleDouble= ruleDouble EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDoubleRule()); 
@@ -3860,7 +3979,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDouble"
-    // InternalGo.g:1322:1: ruleDouble returns [EObject current=null] : ( ( (lv_d_0_0= RULE_INT ) ) this_Dot_1= RULE_DOT this_INT_2= RULE_INT ) ;
+    // InternalGo.g:1362:1: ruleDouble returns [EObject current=null] : ( ( (lv_d_0_0= RULE_INT ) ) this_Dot_1= RULE_DOT this_INT_2= RULE_INT ) ;
     public final EObject ruleDouble() throws RecognitionException {
         EObject current = null;
 
@@ -3872,17 +3991,17 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:1328:2: ( ( ( (lv_d_0_0= RULE_INT ) ) this_Dot_1= RULE_DOT this_INT_2= RULE_INT ) )
-            // InternalGo.g:1329:2: ( ( (lv_d_0_0= RULE_INT ) ) this_Dot_1= RULE_DOT this_INT_2= RULE_INT )
+            // InternalGo.g:1368:2: ( ( ( (lv_d_0_0= RULE_INT ) ) this_Dot_1= RULE_DOT this_INT_2= RULE_INT ) )
+            // InternalGo.g:1369:2: ( ( (lv_d_0_0= RULE_INT ) ) this_Dot_1= RULE_DOT this_INT_2= RULE_INT )
             {
-            // InternalGo.g:1329:2: ( ( (lv_d_0_0= RULE_INT ) ) this_Dot_1= RULE_DOT this_INT_2= RULE_INT )
-            // InternalGo.g:1330:3: ( (lv_d_0_0= RULE_INT ) ) this_Dot_1= RULE_DOT this_INT_2= RULE_INT
+            // InternalGo.g:1369:2: ( ( (lv_d_0_0= RULE_INT ) ) this_Dot_1= RULE_DOT this_INT_2= RULE_INT )
+            // InternalGo.g:1370:3: ( (lv_d_0_0= RULE_INT ) ) this_Dot_1= RULE_DOT this_INT_2= RULE_INT
             {
-            // InternalGo.g:1330:3: ( (lv_d_0_0= RULE_INT ) )
-            // InternalGo.g:1331:4: (lv_d_0_0= RULE_INT )
+            // InternalGo.g:1370:3: ( (lv_d_0_0= RULE_INT ) )
+            // InternalGo.g:1371:4: (lv_d_0_0= RULE_INT )
             {
-            // InternalGo.g:1331:4: (lv_d_0_0= RULE_INT )
-            // InternalGo.g:1332:5: lv_d_0_0= RULE_INT
+            // InternalGo.g:1371:4: (lv_d_0_0= RULE_INT )
+            // InternalGo.g:1372:5: lv_d_0_0= RULE_INT
             {
             lv_d_0_0=(Token)match(input,RULE_INT,FOLLOW_32); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3945,7 +4064,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCondition"
-    // InternalGo.g:1360:1: entryRuleCondition returns [EObject current=null] : iv_ruleCondition= ruleCondition EOF ;
+    // InternalGo.g:1400:1: entryRuleCondition returns [EObject current=null] : iv_ruleCondition= ruleCondition EOF ;
     public final EObject entryRuleCondition() throws RecognitionException {
         EObject current = null;
 
@@ -3953,8 +4072,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:1360:50: (iv_ruleCondition= ruleCondition EOF )
-            // InternalGo.g:1361:2: iv_ruleCondition= ruleCondition EOF
+            // InternalGo.g:1400:50: (iv_ruleCondition= ruleCondition EOF )
+            // InternalGo.g:1401:2: iv_ruleCondition= ruleCondition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConditionRule()); 
@@ -3985,7 +4104,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCondition"
-    // InternalGo.g:1367:1: ruleCondition returns [EObject current=null] : ( ( (lv_if_0_0= ruleIfCondition ) ) ( ( ruleELSE )=> (lv_elseif_1_0= ruleElseIfCondition ) )* ( ( ruleELSE )=> (lv_else_2_0= ruleElseCondition ) )? ) ;
+    // InternalGo.g:1407:1: ruleCondition returns [EObject current=null] : ( ( (lv_if_0_0= ruleIfCondition ) ) ( ( ruleELSE )=> (lv_elseif_1_0= ruleElseIfCondition ) )* ( ( ruleELSE )=> (lv_else_2_0= ruleElseCondition ) )? ) ;
     public final EObject ruleCondition() throws RecognitionException {
         EObject current = null;
 
@@ -4000,17 +4119,17 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:1373:2: ( ( ( (lv_if_0_0= ruleIfCondition ) ) ( ( ruleELSE )=> (lv_elseif_1_0= ruleElseIfCondition ) )* ( ( ruleELSE )=> (lv_else_2_0= ruleElseCondition ) )? ) )
-            // InternalGo.g:1374:2: ( ( (lv_if_0_0= ruleIfCondition ) ) ( ( ruleELSE )=> (lv_elseif_1_0= ruleElseIfCondition ) )* ( ( ruleELSE )=> (lv_else_2_0= ruleElseCondition ) )? )
+            // InternalGo.g:1413:2: ( ( ( (lv_if_0_0= ruleIfCondition ) ) ( ( ruleELSE )=> (lv_elseif_1_0= ruleElseIfCondition ) )* ( ( ruleELSE )=> (lv_else_2_0= ruleElseCondition ) )? ) )
+            // InternalGo.g:1414:2: ( ( (lv_if_0_0= ruleIfCondition ) ) ( ( ruleELSE )=> (lv_elseif_1_0= ruleElseIfCondition ) )* ( ( ruleELSE )=> (lv_else_2_0= ruleElseCondition ) )? )
             {
-            // InternalGo.g:1374:2: ( ( (lv_if_0_0= ruleIfCondition ) ) ( ( ruleELSE )=> (lv_elseif_1_0= ruleElseIfCondition ) )* ( ( ruleELSE )=> (lv_else_2_0= ruleElseCondition ) )? )
-            // InternalGo.g:1375:3: ( (lv_if_0_0= ruleIfCondition ) ) ( ( ruleELSE )=> (lv_elseif_1_0= ruleElseIfCondition ) )* ( ( ruleELSE )=> (lv_else_2_0= ruleElseCondition ) )?
+            // InternalGo.g:1414:2: ( ( (lv_if_0_0= ruleIfCondition ) ) ( ( ruleELSE )=> (lv_elseif_1_0= ruleElseIfCondition ) )* ( ( ruleELSE )=> (lv_else_2_0= ruleElseCondition ) )? )
+            // InternalGo.g:1415:3: ( (lv_if_0_0= ruleIfCondition ) ) ( ( ruleELSE )=> (lv_elseif_1_0= ruleElseIfCondition ) )* ( ( ruleELSE )=> (lv_else_2_0= ruleElseCondition ) )?
             {
-            // InternalGo.g:1375:3: ( (lv_if_0_0= ruleIfCondition ) )
-            // InternalGo.g:1376:4: (lv_if_0_0= ruleIfCondition )
+            // InternalGo.g:1415:3: ( (lv_if_0_0= ruleIfCondition ) )
+            // InternalGo.g:1416:4: (lv_if_0_0= ruleIfCondition )
             {
-            // InternalGo.g:1376:4: (lv_if_0_0= ruleIfCondition )
-            // InternalGo.g:1377:5: lv_if_0_0= ruleIfCondition
+            // InternalGo.g:1416:4: (lv_if_0_0= ruleIfCondition )
+            // InternalGo.g:1417:5: lv_if_0_0= ruleIfCondition
             {
             if ( state.backtracking==0 ) {
 
@@ -4041,7 +4160,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalGo.g:1394:3: ( ( ruleELSE )=> (lv_elseif_1_0= ruleElseIfCondition ) )*
+            // InternalGo.g:1434:3: ( ( ruleELSE )=> (lv_elseif_1_0= ruleElseIfCondition ) )*
             loop26:
             do {
                 int alt26=2;
@@ -4060,10 +4179,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                 switch (alt26) {
             	case 1 :
-            	    // InternalGo.g:1395:4: ( ruleELSE )=> (lv_elseif_1_0= ruleElseIfCondition )
+            	    // InternalGo.g:1435:4: ( ruleELSE )=> (lv_elseif_1_0= ruleElseIfCondition )
             	    {
-            	    // InternalGo.g:1396:4: (lv_elseif_1_0= ruleElseIfCondition )
-            	    // InternalGo.g:1397:5: lv_elseif_1_0= ruleElseIfCondition
+            	    // InternalGo.g:1436:4: (lv_elseif_1_0= ruleElseIfCondition )
+            	    // InternalGo.g:1437:5: lv_elseif_1_0= ruleElseIfCondition
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -4100,7 +4219,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalGo.g:1414:3: ( ( ruleELSE )=> (lv_else_2_0= ruleElseCondition ) )?
+            // InternalGo.g:1454:3: ( ( ruleELSE )=> (lv_else_2_0= ruleElseCondition ) )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -4109,10 +4228,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             }
             switch (alt27) {
                 case 1 :
-                    // InternalGo.g:1415:4: ( ruleELSE )=> (lv_else_2_0= ruleElseCondition )
+                    // InternalGo.g:1455:4: ( ruleELSE )=> (lv_else_2_0= ruleElseCondition )
                     {
-                    // InternalGo.g:1416:4: (lv_else_2_0= ruleElseCondition )
-                    // InternalGo.g:1417:5: lv_else_2_0= ruleElseCondition
+                    // InternalGo.g:1456:4: (lv_else_2_0= ruleElseCondition )
+                    // InternalGo.g:1457:5: lv_else_2_0= ruleElseCondition
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4171,7 +4290,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIfCondition"
-    // InternalGo.g:1438:1: entryRuleIfCondition returns [EObject current=null] : iv_ruleIfCondition= ruleIfCondition EOF ;
+    // InternalGo.g:1478:1: entryRuleIfCondition returns [EObject current=null] : iv_ruleIfCondition= ruleIfCondition EOF ;
     public final EObject entryRuleIfCondition() throws RecognitionException {
         EObject current = null;
 
@@ -4179,8 +4298,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:1438:52: (iv_ruleIfCondition= ruleIfCondition EOF )
-            // InternalGo.g:1439:2: iv_ruleIfCondition= ruleIfCondition EOF
+            // InternalGo.g:1478:52: (iv_ruleIfCondition= ruleIfCondition EOF )
+            // InternalGo.g:1479:2: iv_ruleIfCondition= ruleIfCondition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIfConditionRule()); 
@@ -4211,7 +4330,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIfCondition"
-    // InternalGo.g:1445:1: ruleIfCondition returns [EObject current=null] : ( ruleIF ( ( ruleAndExpression )=> (lv_cond_1_0= ruleOrExpression ) ) this_Open_Key_2= RULE_OPEN_KEY ( (lv_then_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY ) ;
+    // InternalGo.g:1485:1: ruleIfCondition returns [EObject current=null] : ( ruleIF ( ( ruleAndExpression )=> (lv_cond_1_0= ruleOrExpression ) ) this_Open_Key_2= RULE_OPEN_KEY ( (lv_then_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY ) ;
     public final EObject ruleIfCondition() throws RecognitionException {
         EObject current = null;
 
@@ -4226,11 +4345,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:1451:2: ( ( ruleIF ( ( ruleAndExpression )=> (lv_cond_1_0= ruleOrExpression ) ) this_Open_Key_2= RULE_OPEN_KEY ( (lv_then_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY ) )
-            // InternalGo.g:1452:2: ( ruleIF ( ( ruleAndExpression )=> (lv_cond_1_0= ruleOrExpression ) ) this_Open_Key_2= RULE_OPEN_KEY ( (lv_then_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY )
+            // InternalGo.g:1491:2: ( ( ruleIF ( ( ruleAndExpression )=> (lv_cond_1_0= ruleOrExpression ) ) this_Open_Key_2= RULE_OPEN_KEY ( (lv_then_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY ) )
+            // InternalGo.g:1492:2: ( ruleIF ( ( ruleAndExpression )=> (lv_cond_1_0= ruleOrExpression ) ) this_Open_Key_2= RULE_OPEN_KEY ( (lv_then_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY )
             {
-            // InternalGo.g:1452:2: ( ruleIF ( ( ruleAndExpression )=> (lv_cond_1_0= ruleOrExpression ) ) this_Open_Key_2= RULE_OPEN_KEY ( (lv_then_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY )
-            // InternalGo.g:1453:3: ruleIF ( ( ruleAndExpression )=> (lv_cond_1_0= ruleOrExpression ) ) this_Open_Key_2= RULE_OPEN_KEY ( (lv_then_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY
+            // InternalGo.g:1492:2: ( ruleIF ( ( ruleAndExpression )=> (lv_cond_1_0= ruleOrExpression ) ) this_Open_Key_2= RULE_OPEN_KEY ( (lv_then_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY )
+            // InternalGo.g:1493:3: ruleIF ( ( ruleAndExpression )=> (lv_cond_1_0= ruleOrExpression ) ) this_Open_Key_2= RULE_OPEN_KEY ( (lv_then_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY
             {
             if ( state.backtracking==0 ) {
 
@@ -4247,11 +4366,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalGo.g:1460:3: ( ( ruleAndExpression )=> (lv_cond_1_0= ruleOrExpression ) )
-            // InternalGo.g:1461:4: ( ruleAndExpression )=> (lv_cond_1_0= ruleOrExpression )
+            // InternalGo.g:1500:3: ( ( ruleAndExpression )=> (lv_cond_1_0= ruleOrExpression ) )
+            // InternalGo.g:1501:4: ( ruleAndExpression )=> (lv_cond_1_0= ruleOrExpression )
             {
-            // InternalGo.g:1462:4: (lv_cond_1_0= ruleOrExpression )
-            // InternalGo.g:1463:5: lv_cond_1_0= ruleOrExpression
+            // InternalGo.g:1502:4: (lv_cond_1_0= ruleOrExpression )
+            // InternalGo.g:1503:5: lv_cond_1_0= ruleOrExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -4288,7 +4407,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_Open_Key_2, grammarAccess.getIfConditionAccess().getOpen_KeyTerminalRuleCall_2());
               		
             }
-            // InternalGo.g:1484:3: ( (lv_then_3_0= ruleGreeting ) )*
+            // InternalGo.g:1524:3: ( (lv_then_3_0= ruleGreeting ) )*
             loop28:
             do {
                 int alt28=2;
@@ -4301,10 +4420,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                 switch (alt28) {
             	case 1 :
-            	    // InternalGo.g:1485:4: (lv_then_3_0= ruleGreeting )
+            	    // InternalGo.g:1525:4: (lv_then_3_0= ruleGreeting )
             	    {
-            	    // InternalGo.g:1485:4: (lv_then_3_0= ruleGreeting )
-            	    // InternalGo.g:1486:5: lv_then_3_0= ruleGreeting
+            	    // InternalGo.g:1525:4: (lv_then_3_0= ruleGreeting )
+            	    // InternalGo.g:1526:5: lv_then_3_0= ruleGreeting
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -4372,7 +4491,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleElseIfCondition"
-    // InternalGo.g:1511:1: entryRuleElseIfCondition returns [EObject current=null] : iv_ruleElseIfCondition= ruleElseIfCondition EOF ;
+    // InternalGo.g:1551:1: entryRuleElseIfCondition returns [EObject current=null] : iv_ruleElseIfCondition= ruleElseIfCondition EOF ;
     public final EObject entryRuleElseIfCondition() throws RecognitionException {
         EObject current = null;
 
@@ -4380,8 +4499,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:1511:56: (iv_ruleElseIfCondition= ruleElseIfCondition EOF )
-            // InternalGo.g:1512:2: iv_ruleElseIfCondition= ruleElseIfCondition EOF
+            // InternalGo.g:1551:56: (iv_ruleElseIfCondition= ruleElseIfCondition EOF )
+            // InternalGo.g:1552:2: iv_ruleElseIfCondition= ruleElseIfCondition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getElseIfConditionRule()); 
@@ -4412,7 +4531,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleElseIfCondition"
-    // InternalGo.g:1518:1: ruleElseIfCondition returns [EObject current=null] : ( ( ( ruleELSE )=> ruleELSE ) this_IfCondition_1= ruleIfCondition ) ;
+    // InternalGo.g:1558:1: ruleElseIfCondition returns [EObject current=null] : ( ( ( ruleELSE )=> ruleELSE ) this_IfCondition_1= ruleIfCondition ) ;
     public final EObject ruleElseIfCondition() throws RecognitionException {
         EObject current = null;
 
@@ -4423,14 +4542,14 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:1524:2: ( ( ( ( ruleELSE )=> ruleELSE ) this_IfCondition_1= ruleIfCondition ) )
-            // InternalGo.g:1525:2: ( ( ( ruleELSE )=> ruleELSE ) this_IfCondition_1= ruleIfCondition )
+            // InternalGo.g:1564:2: ( ( ( ( ruleELSE )=> ruleELSE ) this_IfCondition_1= ruleIfCondition ) )
+            // InternalGo.g:1565:2: ( ( ( ruleELSE )=> ruleELSE ) this_IfCondition_1= ruleIfCondition )
             {
-            // InternalGo.g:1525:2: ( ( ( ruleELSE )=> ruleELSE ) this_IfCondition_1= ruleIfCondition )
-            // InternalGo.g:1526:3: ( ( ruleELSE )=> ruleELSE ) this_IfCondition_1= ruleIfCondition
+            // InternalGo.g:1565:2: ( ( ( ruleELSE )=> ruleELSE ) this_IfCondition_1= ruleIfCondition )
+            // InternalGo.g:1566:3: ( ( ruleELSE )=> ruleELSE ) this_IfCondition_1= ruleIfCondition
             {
-            // InternalGo.g:1526:3: ( ( ruleELSE )=> ruleELSE )
-            // InternalGo.g:1527:4: ( ruleELSE )=> ruleELSE
+            // InternalGo.g:1566:3: ( ( ruleELSE )=> ruleELSE )
+            // InternalGo.g:1567:4: ( ruleELSE )=> ruleELSE
             {
             if ( state.backtracking==0 ) {
 
@@ -4491,7 +4610,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleElseCondition"
-    // InternalGo.g:1548:1: entryRuleElseCondition returns [EObject current=null] : iv_ruleElseCondition= ruleElseCondition EOF ;
+    // InternalGo.g:1588:1: entryRuleElseCondition returns [EObject current=null] : iv_ruleElseCondition= ruleElseCondition EOF ;
     public final EObject entryRuleElseCondition() throws RecognitionException {
         EObject current = null;
 
@@ -4499,8 +4618,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:1548:54: (iv_ruleElseCondition= ruleElseCondition EOF )
-            // InternalGo.g:1549:2: iv_ruleElseCondition= ruleElseCondition EOF
+            // InternalGo.g:1588:54: (iv_ruleElseCondition= ruleElseCondition EOF )
+            // InternalGo.g:1589:2: iv_ruleElseCondition= ruleElseCondition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getElseConditionRule()); 
@@ -4531,7 +4650,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleElseCondition"
-    // InternalGo.g:1555:1: ruleElseCondition returns [EObject current=null] : ( ( ( ruleELSE )=> ruleELSE ) this_Open_Key_1= RULE_OPEN_KEY ( (lv_then_2_0= ruleGreeting ) )* this_Closed_Key_3= RULE_CLOSED_KEY ) ;
+    // InternalGo.g:1595:1: ruleElseCondition returns [EObject current=null] : ( ( ( ruleELSE )=> ruleELSE ) this_Open_Key_1= RULE_OPEN_KEY ( (lv_then_2_0= ruleGreeting ) )* this_Closed_Key_3= RULE_CLOSED_KEY ) ;
     public final EObject ruleElseCondition() throws RecognitionException {
         EObject current = null;
 
@@ -4544,14 +4663,14 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:1561:2: ( ( ( ( ruleELSE )=> ruleELSE ) this_Open_Key_1= RULE_OPEN_KEY ( (lv_then_2_0= ruleGreeting ) )* this_Closed_Key_3= RULE_CLOSED_KEY ) )
-            // InternalGo.g:1562:2: ( ( ( ruleELSE )=> ruleELSE ) this_Open_Key_1= RULE_OPEN_KEY ( (lv_then_2_0= ruleGreeting ) )* this_Closed_Key_3= RULE_CLOSED_KEY )
+            // InternalGo.g:1601:2: ( ( ( ( ruleELSE )=> ruleELSE ) this_Open_Key_1= RULE_OPEN_KEY ( (lv_then_2_0= ruleGreeting ) )* this_Closed_Key_3= RULE_CLOSED_KEY ) )
+            // InternalGo.g:1602:2: ( ( ( ruleELSE )=> ruleELSE ) this_Open_Key_1= RULE_OPEN_KEY ( (lv_then_2_0= ruleGreeting ) )* this_Closed_Key_3= RULE_CLOSED_KEY )
             {
-            // InternalGo.g:1562:2: ( ( ( ruleELSE )=> ruleELSE ) this_Open_Key_1= RULE_OPEN_KEY ( (lv_then_2_0= ruleGreeting ) )* this_Closed_Key_3= RULE_CLOSED_KEY )
-            // InternalGo.g:1563:3: ( ( ruleELSE )=> ruleELSE ) this_Open_Key_1= RULE_OPEN_KEY ( (lv_then_2_0= ruleGreeting ) )* this_Closed_Key_3= RULE_CLOSED_KEY
+            // InternalGo.g:1602:2: ( ( ( ruleELSE )=> ruleELSE ) this_Open_Key_1= RULE_OPEN_KEY ( (lv_then_2_0= ruleGreeting ) )* this_Closed_Key_3= RULE_CLOSED_KEY )
+            // InternalGo.g:1603:3: ( ( ruleELSE )=> ruleELSE ) this_Open_Key_1= RULE_OPEN_KEY ( (lv_then_2_0= ruleGreeting ) )* this_Closed_Key_3= RULE_CLOSED_KEY
             {
-            // InternalGo.g:1563:3: ( ( ruleELSE )=> ruleELSE )
-            // InternalGo.g:1564:4: ( ruleELSE )=> ruleELSE
+            // InternalGo.g:1603:3: ( ( ruleELSE )=> ruleELSE )
+            // InternalGo.g:1604:4: ( ruleELSE )=> ruleELSE
             {
             if ( state.backtracking==0 ) {
 
@@ -4577,7 +4696,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_Open_Key_1, grammarAccess.getElseConditionAccess().getOpen_KeyTerminalRuleCall_1());
               		
             }
-            // InternalGo.g:1577:3: ( (lv_then_2_0= ruleGreeting ) )*
+            // InternalGo.g:1617:3: ( (lv_then_2_0= ruleGreeting ) )*
             loop29:
             do {
                 int alt29=2;
@@ -4590,10 +4709,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                 switch (alt29) {
             	case 1 :
-            	    // InternalGo.g:1578:4: (lv_then_2_0= ruleGreeting )
+            	    // InternalGo.g:1618:4: (lv_then_2_0= ruleGreeting )
             	    {
-            	    // InternalGo.g:1578:4: (lv_then_2_0= ruleGreeting )
-            	    // InternalGo.g:1579:5: lv_then_2_0= ruleGreeting
+            	    // InternalGo.g:1618:4: (lv_then_2_0= ruleGreeting )
+            	    // InternalGo.g:1619:5: lv_then_2_0= ruleGreeting
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -4661,7 +4780,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpression"
-    // InternalGo.g:1604:1: entryRuleExpression returns [EObject current=null] : iv_ruleExpression= ruleExpression EOF ;
+    // InternalGo.g:1644:1: entryRuleExpression returns [EObject current=null] : iv_ruleExpression= ruleExpression EOF ;
     public final EObject entryRuleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4669,8 +4788,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:1604:51: (iv_ruleExpression= ruleExpression EOF )
-            // InternalGo.g:1605:2: iv_ruleExpression= ruleExpression EOF
+            // InternalGo.g:1644:51: (iv_ruleExpression= ruleExpression EOF )
+            // InternalGo.g:1645:2: iv_ruleExpression= ruleExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getExpressionRule()); 
@@ -4701,7 +4820,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpression"
-    // InternalGo.g:1611:1: ruleExpression returns [EObject current=null] : ( ( ( ( ( ruleOpers ) ) | ( ( ruleAndExpression )=> ruleOrExpression ) | RULE_ID ) )=> ( ( (lv_x_0_0= ruleOpers ) ) | ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression ) | this_ID_2= RULE_ID ) ) ;
+    // InternalGo.g:1651:1: ruleExpression returns [EObject current=null] : ( ( ( ( ( ruleOpers ) ) | ( ( ruleAndExpression )=> ruleOrExpression ) | RULE_ID ) )=> ( ( (lv_x_0_0= ruleOpers ) ) | ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression ) | this_ID_2= RULE_ID ) ) ;
     public final EObject ruleExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4715,13 +4834,13 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:1617:2: ( ( ( ( ( ( ruleOpers ) ) | ( ( ruleAndExpression )=> ruleOrExpression ) | RULE_ID ) )=> ( ( (lv_x_0_0= ruleOpers ) ) | ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression ) | this_ID_2= RULE_ID ) ) )
-            // InternalGo.g:1618:2: ( ( ( ( ( ruleOpers ) ) | ( ( ruleAndExpression )=> ruleOrExpression ) | RULE_ID ) )=> ( ( (lv_x_0_0= ruleOpers ) ) | ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression ) | this_ID_2= RULE_ID ) )
+            // InternalGo.g:1657:2: ( ( ( ( ( ( ruleOpers ) ) | ( ( ruleAndExpression )=> ruleOrExpression ) | RULE_ID ) )=> ( ( (lv_x_0_0= ruleOpers ) ) | ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression ) | this_ID_2= RULE_ID ) ) )
+            // InternalGo.g:1658:2: ( ( ( ( ( ruleOpers ) ) | ( ( ruleAndExpression )=> ruleOrExpression ) | RULE_ID ) )=> ( ( (lv_x_0_0= ruleOpers ) ) | ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression ) | this_ID_2= RULE_ID ) )
             {
-            // InternalGo.g:1618:2: ( ( ( ( ( ruleOpers ) ) | ( ( ruleAndExpression )=> ruleOrExpression ) | RULE_ID ) )=> ( ( (lv_x_0_0= ruleOpers ) ) | ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression ) | this_ID_2= RULE_ID ) )
-            // InternalGo.g:1619:3: ( ( ( ( ruleOpers ) ) | ( ( ruleAndExpression )=> ruleOrExpression ) | RULE_ID ) )=> ( ( (lv_x_0_0= ruleOpers ) ) | ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression ) | this_ID_2= RULE_ID )
+            // InternalGo.g:1658:2: ( ( ( ( ( ruleOpers ) ) | ( ( ruleAndExpression )=> ruleOrExpression ) | RULE_ID ) )=> ( ( (lv_x_0_0= ruleOpers ) ) | ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression ) | this_ID_2= RULE_ID ) )
+            // InternalGo.g:1659:3: ( ( ( ( ruleOpers ) ) | ( ( ruleAndExpression )=> ruleOrExpression ) | RULE_ID ) )=> ( ( (lv_x_0_0= ruleOpers ) ) | ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression ) | this_ID_2= RULE_ID )
             {
-            // InternalGo.g:1634:3: ( ( (lv_x_0_0= ruleOpers ) ) | ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression ) | this_ID_2= RULE_ID )
+            // InternalGo.g:1674:3: ( ( (lv_x_0_0= ruleOpers ) ) | ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression ) | this_ID_2= RULE_ID )
             int alt30=3;
             switch ( input.LA(1) ) {
             case RULE_OPEN_PARENTHESES:
@@ -4815,13 +4934,13 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             switch (alt30) {
                 case 1 :
-                    // InternalGo.g:1635:4: ( (lv_x_0_0= ruleOpers ) )
+                    // InternalGo.g:1675:4: ( (lv_x_0_0= ruleOpers ) )
                     {
-                    // InternalGo.g:1635:4: ( (lv_x_0_0= ruleOpers ) )
-                    // InternalGo.g:1636:5: (lv_x_0_0= ruleOpers )
+                    // InternalGo.g:1675:4: ( (lv_x_0_0= ruleOpers ) )
+                    // InternalGo.g:1676:5: (lv_x_0_0= ruleOpers )
                     {
-                    // InternalGo.g:1636:5: (lv_x_0_0= ruleOpers )
-                    // InternalGo.g:1637:6: lv_x_0_0= ruleOpers
+                    // InternalGo.g:1676:5: (lv_x_0_0= ruleOpers )
+                    // InternalGo.g:1677:6: lv_x_0_0= ruleOpers
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4856,10 +4975,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:1655:4: ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression )
+                    // InternalGo.g:1695:4: ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression )
                     {
-                    // InternalGo.g:1655:4: ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression )
-                    // InternalGo.g:1656:5: ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression
+                    // InternalGo.g:1695:4: ( ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression )
+                    // InternalGo.g:1696:5: ( ruleAndExpression )=>this_OrExpression_1= ruleOrExpression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -4884,7 +5003,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalGo.g:1667:4: this_ID_2= RULE_ID
+                    // InternalGo.g:1707:4: this_ID_2= RULE_ID
                     {
                     this_ID_2=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4923,7 +5042,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCallFor"
-    // InternalGo.g:1676:1: entryRuleCallFor returns [EObject current=null] : iv_ruleCallFor= ruleCallFor EOF ;
+    // InternalGo.g:1716:1: entryRuleCallFor returns [EObject current=null] : iv_ruleCallFor= ruleCallFor EOF ;
     public final EObject entryRuleCallFor() throws RecognitionException {
         EObject current = null;
 
@@ -4931,8 +5050,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:1676:48: (iv_ruleCallFor= ruleCallFor EOF )
-            // InternalGo.g:1677:2: iv_ruleCallFor= ruleCallFor EOF
+            // InternalGo.g:1716:48: (iv_ruleCallFor= ruleCallFor EOF )
+            // InternalGo.g:1717:2: iv_ruleCallFor= ruleCallFor EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCallForRule()); 
@@ -4963,7 +5082,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCallFor"
-    // InternalGo.g:1683:1: ruleCallFor returns [EObject current=null] : ( ruleFOR (this_varFor_1= rulevarFor )? this_Open_Key_2= RULE_OPEN_KEY ( (lv_x_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY ) ;
+    // InternalGo.g:1723:1: ruleCallFor returns [EObject current=null] : ( ruleFOR (this_varFor_1= rulevarFor )? this_Open_Key_2= RULE_OPEN_KEY ( (lv_x_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY ) ;
     public final EObject ruleCallFor() throws RecognitionException {
         EObject current = null;
 
@@ -4978,11 +5097,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:1689:2: ( ( ruleFOR (this_varFor_1= rulevarFor )? this_Open_Key_2= RULE_OPEN_KEY ( (lv_x_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY ) )
-            // InternalGo.g:1690:2: ( ruleFOR (this_varFor_1= rulevarFor )? this_Open_Key_2= RULE_OPEN_KEY ( (lv_x_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY )
+            // InternalGo.g:1729:2: ( ( ruleFOR (this_varFor_1= rulevarFor )? this_Open_Key_2= RULE_OPEN_KEY ( (lv_x_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY ) )
+            // InternalGo.g:1730:2: ( ruleFOR (this_varFor_1= rulevarFor )? this_Open_Key_2= RULE_OPEN_KEY ( (lv_x_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY )
             {
-            // InternalGo.g:1690:2: ( ruleFOR (this_varFor_1= rulevarFor )? this_Open_Key_2= RULE_OPEN_KEY ( (lv_x_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY )
-            // InternalGo.g:1691:3: ruleFOR (this_varFor_1= rulevarFor )? this_Open_Key_2= RULE_OPEN_KEY ( (lv_x_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY
+            // InternalGo.g:1730:2: ( ruleFOR (this_varFor_1= rulevarFor )? this_Open_Key_2= RULE_OPEN_KEY ( (lv_x_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY )
+            // InternalGo.g:1731:3: ruleFOR (this_varFor_1= rulevarFor )? this_Open_Key_2= RULE_OPEN_KEY ( (lv_x_3_0= ruleGreeting ) )* this_Closed_Key_4= RULE_CLOSED_KEY
             {
             if ( state.backtracking==0 ) {
 
@@ -4999,7 +5118,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalGo.g:1698:3: (this_varFor_1= rulevarFor )?
+            // InternalGo.g:1738:3: (this_varFor_1= rulevarFor )?
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -5008,7 +5127,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             }
             switch (alt31) {
                 case 1 :
-                    // InternalGo.g:1699:4: this_varFor_1= rulevarFor
+                    // InternalGo.g:1739:4: this_varFor_1= rulevarFor
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5038,7 +5157,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_Open_Key_2, grammarAccess.getCallForAccess().getOpen_KeyTerminalRuleCall_2());
               		
             }
-            // InternalGo.g:1712:3: ( (lv_x_3_0= ruleGreeting ) )*
+            // InternalGo.g:1752:3: ( (lv_x_3_0= ruleGreeting ) )*
             loop32:
             do {
                 int alt32=2;
@@ -5051,10 +5170,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                 switch (alt32) {
             	case 1 :
-            	    // InternalGo.g:1713:4: (lv_x_3_0= ruleGreeting )
+            	    // InternalGo.g:1753:4: (lv_x_3_0= ruleGreeting )
             	    {
-            	    // InternalGo.g:1713:4: (lv_x_3_0= ruleGreeting )
-            	    // InternalGo.g:1714:5: lv_x_3_0= ruleGreeting
+            	    // InternalGo.g:1753:4: (lv_x_3_0= ruleGreeting )
+            	    // InternalGo.g:1754:5: lv_x_3_0= ruleGreeting
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -5122,7 +5241,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOpers"
-    // InternalGo.g:1739:1: entryRuleOpers returns [EObject current=null] : iv_ruleOpers= ruleOpers EOF ;
+    // InternalGo.g:1779:1: entryRuleOpers returns [EObject current=null] : iv_ruleOpers= ruleOpers EOF ;
     public final EObject entryRuleOpers() throws RecognitionException {
         EObject current = null;
 
@@ -5130,8 +5249,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:1739:46: (iv_ruleOpers= ruleOpers EOF )
-            // InternalGo.g:1740:2: iv_ruleOpers= ruleOpers EOF
+            // InternalGo.g:1779:46: (iv_ruleOpers= ruleOpers EOF )
+            // InternalGo.g:1780:2: iv_ruleOpers= ruleOpers EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOpersRule()); 
@@ -5162,7 +5281,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOpers"
-    // InternalGo.g:1746:1: ruleOpers returns [EObject current=null] : ( ( ( ruleSubMult )=> (lv_sum_0_0= ruleAddition ) ) | ( ( ruleSubMult )=> (lv_sub_1_0= ruleSubtration ) ) ) ;
+    // InternalGo.g:1786:1: ruleOpers returns [EObject current=null] : ( ( ( ruleSubMult )=> (lv_sum_0_0= ruleAddition ) ) | ( ( ruleSubMult )=> (lv_sub_1_0= ruleSubtration ) ) ) ;
     public final EObject ruleOpers() throws RecognitionException {
         EObject current = null;
 
@@ -5175,10 +5294,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:1752:2: ( ( ( ( ruleSubMult )=> (lv_sum_0_0= ruleAddition ) ) | ( ( ruleSubMult )=> (lv_sub_1_0= ruleSubtration ) ) ) )
-            // InternalGo.g:1753:2: ( ( ( ruleSubMult )=> (lv_sum_0_0= ruleAddition ) ) | ( ( ruleSubMult )=> (lv_sub_1_0= ruleSubtration ) ) )
+            // InternalGo.g:1792:2: ( ( ( ( ruleSubMult )=> (lv_sum_0_0= ruleAddition ) ) | ( ( ruleSubMult )=> (lv_sub_1_0= ruleSubtration ) ) ) )
+            // InternalGo.g:1793:2: ( ( ( ruleSubMult )=> (lv_sum_0_0= ruleAddition ) ) | ( ( ruleSubMult )=> (lv_sub_1_0= ruleSubtration ) ) )
             {
-            // InternalGo.g:1753:2: ( ( ( ruleSubMult )=> (lv_sum_0_0= ruleAddition ) ) | ( ( ruleSubMult )=> (lv_sub_1_0= ruleSubtration ) ) )
+            // InternalGo.g:1793:2: ( ( ( ruleSubMult )=> (lv_sum_0_0= ruleAddition ) ) | ( ( ruleSubMult )=> (lv_sub_1_0= ruleSubtration ) ) )
             int alt33=2;
             switch ( input.LA(1) ) {
             case RULE_OPEN_PARENTHESES:
@@ -5267,13 +5386,13 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             switch (alt33) {
                 case 1 :
-                    // InternalGo.g:1754:3: ( ( ruleSubMult )=> (lv_sum_0_0= ruleAddition ) )
+                    // InternalGo.g:1794:3: ( ( ruleSubMult )=> (lv_sum_0_0= ruleAddition ) )
                     {
-                    // InternalGo.g:1754:3: ( ( ruleSubMult )=> (lv_sum_0_0= ruleAddition ) )
-                    // InternalGo.g:1755:4: ( ruleSubMult )=> (lv_sum_0_0= ruleAddition )
+                    // InternalGo.g:1794:3: ( ( ruleSubMult )=> (lv_sum_0_0= ruleAddition ) )
+                    // InternalGo.g:1795:4: ( ruleSubMult )=> (lv_sum_0_0= ruleAddition )
                     {
-                    // InternalGo.g:1756:4: (lv_sum_0_0= ruleAddition )
-                    // InternalGo.g:1757:5: lv_sum_0_0= ruleAddition
+                    // InternalGo.g:1796:4: (lv_sum_0_0= ruleAddition )
+                    // InternalGo.g:1797:5: lv_sum_0_0= ruleAddition
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5308,13 +5427,13 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:1775:3: ( ( ruleSubMult )=> (lv_sub_1_0= ruleSubtration ) )
+                    // InternalGo.g:1815:3: ( ( ruleSubMult )=> (lv_sub_1_0= ruleSubtration ) )
                     {
-                    // InternalGo.g:1775:3: ( ( ruleSubMult )=> (lv_sub_1_0= ruleSubtration ) )
-                    // InternalGo.g:1776:4: ( ruleSubMult )=> (lv_sub_1_0= ruleSubtration )
+                    // InternalGo.g:1815:3: ( ( ruleSubMult )=> (lv_sub_1_0= ruleSubtration ) )
+                    // InternalGo.g:1816:4: ( ruleSubMult )=> (lv_sub_1_0= ruleSubtration )
                     {
-                    // InternalGo.g:1777:4: (lv_sub_1_0= ruleSubtration )
-                    // InternalGo.g:1778:5: lv_sub_1_0= ruleSubtration
+                    // InternalGo.g:1817:4: (lv_sub_1_0= ruleSubtration )
+                    // InternalGo.g:1818:5: lv_sub_1_0= ruleSubtration
                     {
                     if ( state.backtracking==0 ) {
 
@@ -5373,7 +5492,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAddition"
-    // InternalGo.g:1799:1: entryRuleAddition returns [EObject current=null] : iv_ruleAddition= ruleAddition EOF ;
+    // InternalGo.g:1839:1: entryRuleAddition returns [EObject current=null] : iv_ruleAddition= ruleAddition EOF ;
     public final EObject entryRuleAddition() throws RecognitionException {
         EObject current = null;
 
@@ -5381,8 +5500,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:1799:49: (iv_ruleAddition= ruleAddition EOF )
-            // InternalGo.g:1800:2: iv_ruleAddition= ruleAddition EOF
+            // InternalGo.g:1839:49: (iv_ruleAddition= ruleAddition EOF )
+            // InternalGo.g:1840:2: iv_ruleAddition= ruleAddition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAdditionRule()); 
@@ -5413,7 +5532,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAddition"
-    // InternalGo.g:1806:1: ruleAddition returns [EObject current=null] : ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Plus_2= RULE_PLUS ( (lv_right_3_0= ruleSubMult ) ) )* ) ;
+    // InternalGo.g:1846:1: ruleAddition returns [EObject current=null] : ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Plus_2= RULE_PLUS ( (lv_right_3_0= ruleSubMult ) ) )* ) ;
     public final EObject ruleAddition() throws RecognitionException {
         EObject current = null;
 
@@ -5427,14 +5546,14 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:1812:2: ( ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Plus_2= RULE_PLUS ( (lv_right_3_0= ruleSubMult ) ) )* ) )
-            // InternalGo.g:1813:2: ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Plus_2= RULE_PLUS ( (lv_right_3_0= ruleSubMult ) ) )* )
+            // InternalGo.g:1852:2: ( ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Plus_2= RULE_PLUS ( (lv_right_3_0= ruleSubMult ) ) )* ) )
+            // InternalGo.g:1853:2: ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Plus_2= RULE_PLUS ( (lv_right_3_0= ruleSubMult ) ) )* )
             {
-            // InternalGo.g:1813:2: ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Plus_2= RULE_PLUS ( (lv_right_3_0= ruleSubMult ) ) )* )
-            // InternalGo.g:1814:3: ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Plus_2= RULE_PLUS ( (lv_right_3_0= ruleSubMult ) ) )*
+            // InternalGo.g:1853:2: ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Plus_2= RULE_PLUS ( (lv_right_3_0= ruleSubMult ) ) )* )
+            // InternalGo.g:1854:3: ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Plus_2= RULE_PLUS ( (lv_right_3_0= ruleSubMult ) ) )*
             {
-            // InternalGo.g:1814:3: ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult )
-            // InternalGo.g:1815:4: ( ruleSubMult )=>this_SubMult_0= ruleSubMult
+            // InternalGo.g:1854:3: ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult )
+            // InternalGo.g:1855:4: ( ruleSubMult )=>this_SubMult_0= ruleSubMult
             {
             if ( state.backtracking==0 ) {
 
@@ -5455,7 +5574,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalGo.g:1825:3: ( () this_Plus_2= RULE_PLUS ( (lv_right_3_0= ruleSubMult ) ) )*
+            // InternalGo.g:1865:3: ( () this_Plus_2= RULE_PLUS ( (lv_right_3_0= ruleSubMult ) ) )*
             loop34:
             do {
                 int alt34=2;
@@ -5468,10 +5587,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                 switch (alt34) {
             	case 1 :
-            	    // InternalGo.g:1826:4: () this_Plus_2= RULE_PLUS ( (lv_right_3_0= ruleSubMult ) )
+            	    // InternalGo.g:1866:4: () this_Plus_2= RULE_PLUS ( (lv_right_3_0= ruleSubMult ) )
             	    {
-            	    // InternalGo.g:1826:4: ()
-            	    // InternalGo.g:1827:5: 
+            	    // InternalGo.g:1866:4: ()
+            	    // InternalGo.g:1867:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -5489,11 +5608,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(this_Plus_2, grammarAccess.getAdditionAccess().getPlusTerminalRuleCall_1_1());
             	      			
             	    }
-            	    // InternalGo.g:1837:4: ( (lv_right_3_0= ruleSubMult ) )
-            	    // InternalGo.g:1838:5: (lv_right_3_0= ruleSubMult )
+            	    // InternalGo.g:1877:4: ( (lv_right_3_0= ruleSubMult ) )
+            	    // InternalGo.g:1878:5: (lv_right_3_0= ruleSubMult )
             	    {
-            	    // InternalGo.g:1838:5: (lv_right_3_0= ruleSubMult )
-            	    // InternalGo.g:1839:6: lv_right_3_0= ruleSubMult
+            	    // InternalGo.g:1878:5: (lv_right_3_0= ruleSubMult )
+            	    // InternalGo.g:1879:6: lv_right_3_0= ruleSubMult
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -5558,7 +5677,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSubtration"
-    // InternalGo.g:1861:1: entryRuleSubtration returns [EObject current=null] : iv_ruleSubtration= ruleSubtration EOF ;
+    // InternalGo.g:1901:1: entryRuleSubtration returns [EObject current=null] : iv_ruleSubtration= ruleSubtration EOF ;
     public final EObject entryRuleSubtration() throws RecognitionException {
         EObject current = null;
 
@@ -5566,8 +5685,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:1861:51: (iv_ruleSubtration= ruleSubtration EOF )
-            // InternalGo.g:1862:2: iv_ruleSubtration= ruleSubtration EOF
+            // InternalGo.g:1901:51: (iv_ruleSubtration= ruleSubtration EOF )
+            // InternalGo.g:1902:2: iv_ruleSubtration= ruleSubtration EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSubtrationRule()); 
@@ -5598,7 +5717,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSubtration"
-    // InternalGo.g:1868:1: ruleSubtration returns [EObject current=null] : ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Minus_2= RULE_MINUS ( (lv_right_3_0= ruleSubMult ) ) )* ) ;
+    // InternalGo.g:1908:1: ruleSubtration returns [EObject current=null] : ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Minus_2= RULE_MINUS ( (lv_right_3_0= ruleSubMult ) ) )* ) ;
     public final EObject ruleSubtration() throws RecognitionException {
         EObject current = null;
 
@@ -5612,14 +5731,14 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:1874:2: ( ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Minus_2= RULE_MINUS ( (lv_right_3_0= ruleSubMult ) ) )* ) )
-            // InternalGo.g:1875:2: ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Minus_2= RULE_MINUS ( (lv_right_3_0= ruleSubMult ) ) )* )
+            // InternalGo.g:1914:2: ( ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Minus_2= RULE_MINUS ( (lv_right_3_0= ruleSubMult ) ) )* ) )
+            // InternalGo.g:1915:2: ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Minus_2= RULE_MINUS ( (lv_right_3_0= ruleSubMult ) ) )* )
             {
-            // InternalGo.g:1875:2: ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Minus_2= RULE_MINUS ( (lv_right_3_0= ruleSubMult ) ) )* )
-            // InternalGo.g:1876:3: ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Minus_2= RULE_MINUS ( (lv_right_3_0= ruleSubMult ) ) )*
+            // InternalGo.g:1915:2: ( ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Minus_2= RULE_MINUS ( (lv_right_3_0= ruleSubMult ) ) )* )
+            // InternalGo.g:1916:3: ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult ) ( () this_Minus_2= RULE_MINUS ( (lv_right_3_0= ruleSubMult ) ) )*
             {
-            // InternalGo.g:1876:3: ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult )
-            // InternalGo.g:1877:4: ( ruleSubMult )=>this_SubMult_0= ruleSubMult
+            // InternalGo.g:1916:3: ( ( ruleSubMult )=>this_SubMult_0= ruleSubMult )
+            // InternalGo.g:1917:4: ( ruleSubMult )=>this_SubMult_0= ruleSubMult
             {
             if ( state.backtracking==0 ) {
 
@@ -5640,7 +5759,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalGo.g:1887:3: ( () this_Minus_2= RULE_MINUS ( (lv_right_3_0= ruleSubMult ) ) )*
+            // InternalGo.g:1927:3: ( () this_Minus_2= RULE_MINUS ( (lv_right_3_0= ruleSubMult ) ) )*
             loop35:
             do {
                 int alt35=2;
@@ -5653,10 +5772,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                 switch (alt35) {
             	case 1 :
-            	    // InternalGo.g:1888:4: () this_Minus_2= RULE_MINUS ( (lv_right_3_0= ruleSubMult ) )
+            	    // InternalGo.g:1928:4: () this_Minus_2= RULE_MINUS ( (lv_right_3_0= ruleSubMult ) )
             	    {
-            	    // InternalGo.g:1888:4: ()
-            	    // InternalGo.g:1889:5: 
+            	    // InternalGo.g:1928:4: ()
+            	    // InternalGo.g:1929:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -5674,11 +5793,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(this_Minus_2, grammarAccess.getSubtrationAccess().getMinusTerminalRuleCall_1_1());
             	      			
             	    }
-            	    // InternalGo.g:1899:4: ( (lv_right_3_0= ruleSubMult ) )
-            	    // InternalGo.g:1900:5: (lv_right_3_0= ruleSubMult )
+            	    // InternalGo.g:1939:4: ( (lv_right_3_0= ruleSubMult ) )
+            	    // InternalGo.g:1940:5: (lv_right_3_0= ruleSubMult )
             	    {
-            	    // InternalGo.g:1900:5: (lv_right_3_0= ruleSubMult )
-            	    // InternalGo.g:1901:6: lv_right_3_0= ruleSubMult
+            	    // InternalGo.g:1940:5: (lv_right_3_0= ruleSubMult )
+            	    // InternalGo.g:1941:6: lv_right_3_0= ruleSubMult
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -5743,7 +5862,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMultiplication"
-    // InternalGo.g:1923:1: entryRuleMultiplication returns [EObject current=null] : iv_ruleMultiplication= ruleMultiplication EOF ;
+    // InternalGo.g:1963:1: entryRuleMultiplication returns [EObject current=null] : iv_ruleMultiplication= ruleMultiplication EOF ;
     public final EObject entryRuleMultiplication() throws RecognitionException {
         EObject current = null;
 
@@ -5751,8 +5870,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:1923:55: (iv_ruleMultiplication= ruleMultiplication EOF )
-            // InternalGo.g:1924:2: iv_ruleMultiplication= ruleMultiplication EOF
+            // InternalGo.g:1963:55: (iv_ruleMultiplication= ruleMultiplication EOF )
+            // InternalGo.g:1964:2: iv_ruleMultiplication= ruleMultiplication EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMultiplicationRule()); 
@@ -5783,7 +5902,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMultiplication"
-    // InternalGo.g:1930:1: ruleMultiplication returns [EObject current=null] : ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Asterics_2= RULE_ASTERICS ( (lv_right_3_0= rulePrimaryExpression ) ) )* ) ;
+    // InternalGo.g:1970:1: ruleMultiplication returns [EObject current=null] : ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Asterics_2= RULE_ASTERICS ( (lv_right_3_0= rulePrimaryExpression ) ) )* ) ;
     public final EObject ruleMultiplication() throws RecognitionException {
         EObject current = null;
 
@@ -5797,14 +5916,14 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:1936:2: ( ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Asterics_2= RULE_ASTERICS ( (lv_right_3_0= rulePrimaryExpression ) ) )* ) )
-            // InternalGo.g:1937:2: ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Asterics_2= RULE_ASTERICS ( (lv_right_3_0= rulePrimaryExpression ) ) )* )
+            // InternalGo.g:1976:2: ( ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Asterics_2= RULE_ASTERICS ( (lv_right_3_0= rulePrimaryExpression ) ) )* ) )
+            // InternalGo.g:1977:2: ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Asterics_2= RULE_ASTERICS ( (lv_right_3_0= rulePrimaryExpression ) ) )* )
             {
-            // InternalGo.g:1937:2: ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Asterics_2= RULE_ASTERICS ( (lv_right_3_0= rulePrimaryExpression ) ) )* )
-            // InternalGo.g:1938:3: ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Asterics_2= RULE_ASTERICS ( (lv_right_3_0= rulePrimaryExpression ) ) )*
+            // InternalGo.g:1977:2: ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Asterics_2= RULE_ASTERICS ( (lv_right_3_0= rulePrimaryExpression ) ) )* )
+            // InternalGo.g:1978:3: ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Asterics_2= RULE_ASTERICS ( (lv_right_3_0= rulePrimaryExpression ) ) )*
             {
-            // InternalGo.g:1938:3: ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression )
-            // InternalGo.g:1939:4: ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression
+            // InternalGo.g:1978:3: ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression )
+            // InternalGo.g:1979:4: ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -5825,7 +5944,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalGo.g:1949:3: ( () this_Asterics_2= RULE_ASTERICS ( (lv_right_3_0= rulePrimaryExpression ) ) )*
+            // InternalGo.g:1989:3: ( () this_Asterics_2= RULE_ASTERICS ( (lv_right_3_0= rulePrimaryExpression ) ) )*
             loop36:
             do {
                 int alt36=2;
@@ -5838,10 +5957,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                 switch (alt36) {
             	case 1 :
-            	    // InternalGo.g:1950:4: () this_Asterics_2= RULE_ASTERICS ( (lv_right_3_0= rulePrimaryExpression ) )
+            	    // InternalGo.g:1990:4: () this_Asterics_2= RULE_ASTERICS ( (lv_right_3_0= rulePrimaryExpression ) )
             	    {
-            	    // InternalGo.g:1950:4: ()
-            	    // InternalGo.g:1951:5: 
+            	    // InternalGo.g:1990:4: ()
+            	    // InternalGo.g:1991:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -5859,11 +5978,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(this_Asterics_2, grammarAccess.getMultiplicationAccess().getAstericsTerminalRuleCall_1_1());
             	      			
             	    }
-            	    // InternalGo.g:1961:4: ( (lv_right_3_0= rulePrimaryExpression ) )
-            	    // InternalGo.g:1962:5: (lv_right_3_0= rulePrimaryExpression )
+            	    // InternalGo.g:2001:4: ( (lv_right_3_0= rulePrimaryExpression ) )
+            	    // InternalGo.g:2002:5: (lv_right_3_0= rulePrimaryExpression )
             	    {
-            	    // InternalGo.g:1962:5: (lv_right_3_0= rulePrimaryExpression )
-            	    // InternalGo.g:1963:6: lv_right_3_0= rulePrimaryExpression
+            	    // InternalGo.g:2002:5: (lv_right_3_0= rulePrimaryExpression )
+            	    // InternalGo.g:2003:6: lv_right_3_0= rulePrimaryExpression
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -5928,7 +6047,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDivision"
-    // InternalGo.g:1985:1: entryRuleDivision returns [EObject current=null] : iv_ruleDivision= ruleDivision EOF ;
+    // InternalGo.g:2025:1: entryRuleDivision returns [EObject current=null] : iv_ruleDivision= ruleDivision EOF ;
     public final EObject entryRuleDivision() throws RecognitionException {
         EObject current = null;
 
@@ -5936,8 +6055,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:1985:49: (iv_ruleDivision= ruleDivision EOF )
-            // InternalGo.g:1986:2: iv_ruleDivision= ruleDivision EOF
+            // InternalGo.g:2025:49: (iv_ruleDivision= ruleDivision EOF )
+            // InternalGo.g:2026:2: iv_ruleDivision= ruleDivision EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDivisionRule()); 
@@ -5968,7 +6087,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDivision"
-    // InternalGo.g:1992:1: ruleDivision returns [EObject current=null] : ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Bar_2= RULE_BAR ( (lv_right_3_0= rulePrimaryExpression ) ) )* ) ;
+    // InternalGo.g:2032:1: ruleDivision returns [EObject current=null] : ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Bar_2= RULE_BAR ( (lv_right_3_0= rulePrimaryExpression ) ) )* ) ;
     public final EObject ruleDivision() throws RecognitionException {
         EObject current = null;
 
@@ -5982,14 +6101,14 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:1998:2: ( ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Bar_2= RULE_BAR ( (lv_right_3_0= rulePrimaryExpression ) ) )* ) )
-            // InternalGo.g:1999:2: ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Bar_2= RULE_BAR ( (lv_right_3_0= rulePrimaryExpression ) ) )* )
+            // InternalGo.g:2038:2: ( ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Bar_2= RULE_BAR ( (lv_right_3_0= rulePrimaryExpression ) ) )* ) )
+            // InternalGo.g:2039:2: ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Bar_2= RULE_BAR ( (lv_right_3_0= rulePrimaryExpression ) ) )* )
             {
-            // InternalGo.g:1999:2: ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Bar_2= RULE_BAR ( (lv_right_3_0= rulePrimaryExpression ) ) )* )
-            // InternalGo.g:2000:3: ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Bar_2= RULE_BAR ( (lv_right_3_0= rulePrimaryExpression ) ) )*
+            // InternalGo.g:2039:2: ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Bar_2= RULE_BAR ( (lv_right_3_0= rulePrimaryExpression ) ) )* )
+            // InternalGo.g:2040:3: ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () this_Bar_2= RULE_BAR ( (lv_right_3_0= rulePrimaryExpression ) ) )*
             {
-            // InternalGo.g:2000:3: ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression )
-            // InternalGo.g:2001:4: ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression
+            // InternalGo.g:2040:3: ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression )
+            // InternalGo.g:2041:4: ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -6010,7 +6129,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalGo.g:2011:3: ( () this_Bar_2= RULE_BAR ( (lv_right_3_0= rulePrimaryExpression ) ) )*
+            // InternalGo.g:2051:3: ( () this_Bar_2= RULE_BAR ( (lv_right_3_0= rulePrimaryExpression ) ) )*
             loop37:
             do {
                 int alt37=2;
@@ -6023,10 +6142,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                 switch (alt37) {
             	case 1 :
-            	    // InternalGo.g:2012:4: () this_Bar_2= RULE_BAR ( (lv_right_3_0= rulePrimaryExpression ) )
+            	    // InternalGo.g:2052:4: () this_Bar_2= RULE_BAR ( (lv_right_3_0= rulePrimaryExpression ) )
             	    {
-            	    // InternalGo.g:2012:4: ()
-            	    // InternalGo.g:2013:5: 
+            	    // InternalGo.g:2052:4: ()
+            	    // InternalGo.g:2053:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -6044,11 +6163,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(this_Bar_2, grammarAccess.getDivisionAccess().getBarTerminalRuleCall_1_1());
             	      			
             	    }
-            	    // InternalGo.g:2023:4: ( (lv_right_3_0= rulePrimaryExpression ) )
-            	    // InternalGo.g:2024:5: (lv_right_3_0= rulePrimaryExpression )
+            	    // InternalGo.g:2063:4: ( (lv_right_3_0= rulePrimaryExpression ) )
+            	    // InternalGo.g:2064:5: (lv_right_3_0= rulePrimaryExpression )
             	    {
-            	    // InternalGo.g:2024:5: (lv_right_3_0= rulePrimaryExpression )
-            	    // InternalGo.g:2025:6: lv_right_3_0= rulePrimaryExpression
+            	    // InternalGo.g:2064:5: (lv_right_3_0= rulePrimaryExpression )
+            	    // InternalGo.g:2065:6: lv_right_3_0= rulePrimaryExpression
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -6113,7 +6232,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSubMult"
-    // InternalGo.g:2047:1: entryRuleSubMult returns [EObject current=null] : iv_ruleSubMult= ruleSubMult EOF ;
+    // InternalGo.g:2087:1: entryRuleSubMult returns [EObject current=null] : iv_ruleSubMult= ruleSubMult EOF ;
     public final EObject entryRuleSubMult() throws RecognitionException {
         EObject current = null;
 
@@ -6121,8 +6240,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:2047:48: (iv_ruleSubMult= ruleSubMult EOF )
-            // InternalGo.g:2048:2: iv_ruleSubMult= ruleSubMult EOF
+            // InternalGo.g:2087:48: (iv_ruleSubMult= ruleSubMult EOF )
+            // InternalGo.g:2088:2: iv_ruleSubMult= ruleSubMult EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSubMultRule()); 
@@ -6153,7 +6272,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSubMult"
-    // InternalGo.g:2054:1: ruleSubMult returns [EObject current=null] : ( ( ( rulePrimaryExpression )=>this_Multiplication_0= ruleMultiplication ) | ( ( rulePrimaryExpression )=>this_Division_1= ruleDivision ) ) ;
+    // InternalGo.g:2094:1: ruleSubMult returns [EObject current=null] : ( ( ( rulePrimaryExpression )=>this_Multiplication_0= ruleMultiplication ) | ( ( rulePrimaryExpression )=>this_Division_1= ruleDivision ) ) ;
     public final EObject ruleSubMult() throws RecognitionException {
         EObject current = null;
 
@@ -6166,10 +6285,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2060:2: ( ( ( ( rulePrimaryExpression )=>this_Multiplication_0= ruleMultiplication ) | ( ( rulePrimaryExpression )=>this_Division_1= ruleDivision ) ) )
-            // InternalGo.g:2061:2: ( ( ( rulePrimaryExpression )=>this_Multiplication_0= ruleMultiplication ) | ( ( rulePrimaryExpression )=>this_Division_1= ruleDivision ) )
+            // InternalGo.g:2100:2: ( ( ( ( rulePrimaryExpression )=>this_Multiplication_0= ruleMultiplication ) | ( ( rulePrimaryExpression )=>this_Division_1= ruleDivision ) ) )
+            // InternalGo.g:2101:2: ( ( ( rulePrimaryExpression )=>this_Multiplication_0= ruleMultiplication ) | ( ( rulePrimaryExpression )=>this_Division_1= ruleDivision ) )
             {
-            // InternalGo.g:2061:2: ( ( ( rulePrimaryExpression )=>this_Multiplication_0= ruleMultiplication ) | ( ( rulePrimaryExpression )=>this_Division_1= ruleDivision ) )
+            // InternalGo.g:2101:2: ( ( ( rulePrimaryExpression )=>this_Multiplication_0= ruleMultiplication ) | ( ( rulePrimaryExpression )=>this_Division_1= ruleDivision ) )
             int alt38=2;
             switch ( input.LA(1) ) {
             case RULE_OPEN_PARENTHESES:
@@ -6258,10 +6377,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             switch (alt38) {
                 case 1 :
-                    // InternalGo.g:2062:3: ( ( rulePrimaryExpression )=>this_Multiplication_0= ruleMultiplication )
+                    // InternalGo.g:2102:3: ( ( rulePrimaryExpression )=>this_Multiplication_0= ruleMultiplication )
                     {
-                    // InternalGo.g:2062:3: ( ( rulePrimaryExpression )=>this_Multiplication_0= ruleMultiplication )
-                    // InternalGo.g:2063:4: ( rulePrimaryExpression )=>this_Multiplication_0= ruleMultiplication
+                    // InternalGo.g:2102:3: ( ( rulePrimaryExpression )=>this_Multiplication_0= ruleMultiplication )
+                    // InternalGo.g:2103:4: ( rulePrimaryExpression )=>this_Multiplication_0= ruleMultiplication
                     {
                     if ( state.backtracking==0 ) {
 
@@ -6286,10 +6405,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2074:3: ( ( rulePrimaryExpression )=>this_Division_1= ruleDivision )
+                    // InternalGo.g:2114:3: ( ( rulePrimaryExpression )=>this_Division_1= ruleDivision )
                     {
-                    // InternalGo.g:2074:3: ( ( rulePrimaryExpression )=>this_Division_1= ruleDivision )
-                    // InternalGo.g:2075:4: ( rulePrimaryExpression )=>this_Division_1= ruleDivision
+                    // InternalGo.g:2114:3: ( ( rulePrimaryExpression )=>this_Division_1= ruleDivision )
+                    // InternalGo.g:2115:4: ( rulePrimaryExpression )=>this_Division_1= ruleDivision
                     {
                     if ( state.backtracking==0 ) {
 
@@ -6338,7 +6457,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOrExpression"
-    // InternalGo.g:2089:1: entryRuleOrExpression returns [EObject current=null] : iv_ruleOrExpression= ruleOrExpression EOF ;
+    // InternalGo.g:2129:1: entryRuleOrExpression returns [EObject current=null] : iv_ruleOrExpression= ruleOrExpression EOF ;
     public final EObject entryRuleOrExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6346,8 +6465,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:2089:53: (iv_ruleOrExpression= ruleOrExpression EOF )
-            // InternalGo.g:2090:2: iv_ruleOrExpression= ruleOrExpression EOF
+            // InternalGo.g:2129:53: (iv_ruleOrExpression= ruleOrExpression EOF )
+            // InternalGo.g:2130:2: iv_ruleOrExpression= ruleOrExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOrExpressionRule()); 
@@ -6378,7 +6497,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOrExpression"
-    // InternalGo.g:2096:1: ruleOrExpression returns [EObject current=null] : ( ( ( ruleAndExpression )=>this_AndExpression_0= ruleAndExpression ) ( () otherlv_2= '||' ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) ) )* ) ;
+    // InternalGo.g:2136:1: ruleOrExpression returns [EObject current=null] : ( ( ( ruleAndExpression )=>this_AndExpression_0= ruleAndExpression ) ( () otherlv_2= '||' ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) ) )* ) ;
     public final EObject ruleOrExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6392,14 +6511,14 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2102:2: ( ( ( ( ruleAndExpression )=>this_AndExpression_0= ruleAndExpression ) ( () otherlv_2= '||' ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) ) )* ) )
-            // InternalGo.g:2103:2: ( ( ( ruleAndExpression )=>this_AndExpression_0= ruleAndExpression ) ( () otherlv_2= '||' ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) ) )* )
+            // InternalGo.g:2142:2: ( ( ( ( ruleAndExpression )=>this_AndExpression_0= ruleAndExpression ) ( () otherlv_2= '||' ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) ) )* ) )
+            // InternalGo.g:2143:2: ( ( ( ruleAndExpression )=>this_AndExpression_0= ruleAndExpression ) ( () otherlv_2= '||' ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) ) )* )
             {
-            // InternalGo.g:2103:2: ( ( ( ruleAndExpression )=>this_AndExpression_0= ruleAndExpression ) ( () otherlv_2= '||' ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) ) )* )
-            // InternalGo.g:2104:3: ( ( ruleAndExpression )=>this_AndExpression_0= ruleAndExpression ) ( () otherlv_2= '||' ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) ) )*
+            // InternalGo.g:2143:2: ( ( ( ruleAndExpression )=>this_AndExpression_0= ruleAndExpression ) ( () otherlv_2= '||' ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) ) )* )
+            // InternalGo.g:2144:3: ( ( ruleAndExpression )=>this_AndExpression_0= ruleAndExpression ) ( () otherlv_2= '||' ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) ) )*
             {
-            // InternalGo.g:2104:3: ( ( ruleAndExpression )=>this_AndExpression_0= ruleAndExpression )
-            // InternalGo.g:2105:4: ( ruleAndExpression )=>this_AndExpression_0= ruleAndExpression
+            // InternalGo.g:2144:3: ( ( ruleAndExpression )=>this_AndExpression_0= ruleAndExpression )
+            // InternalGo.g:2145:4: ( ruleAndExpression )=>this_AndExpression_0= ruleAndExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -6420,7 +6539,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalGo.g:2115:3: ( () otherlv_2= '||' ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) ) )*
+            // InternalGo.g:2155:3: ( () otherlv_2= '||' ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) ) )*
             loop39:
             do {
                 int alt39=2;
@@ -6433,10 +6552,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                 switch (alt39) {
             	case 1 :
-            	    // InternalGo.g:2116:4: () otherlv_2= '||' ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) )
+            	    // InternalGo.g:2156:4: () otherlv_2= '||' ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) )
             	    {
-            	    // InternalGo.g:2116:4: ()
-            	    // InternalGo.g:2117:5: 
+            	    // InternalGo.g:2156:4: ()
+            	    // InternalGo.g:2157:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -6454,11 +6573,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(otherlv_2, grammarAccess.getOrExpressionAccess().getVerticalLineVerticalLineKeyword_1_1());
             	      			
             	    }
-            	    // InternalGo.g:2127:4: ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) )
-            	    // InternalGo.g:2128:5: ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression )
+            	    // InternalGo.g:2167:4: ( ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression ) )
+            	    // InternalGo.g:2168:5: ( ruleComparisonExpression )=> (lv_right_3_0= ruleAndExpression )
             	    {
-            	    // InternalGo.g:2129:5: (lv_right_3_0= ruleAndExpression )
-            	    // InternalGo.g:2130:6: lv_right_3_0= ruleAndExpression
+            	    // InternalGo.g:2169:5: (lv_right_3_0= ruleAndExpression )
+            	    // InternalGo.g:2170:6: lv_right_3_0= ruleAndExpression
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -6523,7 +6642,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAndExpression"
-    // InternalGo.g:2152:1: entryRuleAndExpression returns [EObject current=null] : iv_ruleAndExpression= ruleAndExpression EOF ;
+    // InternalGo.g:2192:1: entryRuleAndExpression returns [EObject current=null] : iv_ruleAndExpression= ruleAndExpression EOF ;
     public final EObject entryRuleAndExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6531,8 +6650,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:2152:54: (iv_ruleAndExpression= ruleAndExpression EOF )
-            // InternalGo.g:2153:2: iv_ruleAndExpression= ruleAndExpression EOF
+            // InternalGo.g:2192:54: (iv_ruleAndExpression= ruleAndExpression EOF )
+            // InternalGo.g:2193:2: iv_ruleAndExpression= ruleAndExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAndExpressionRule()); 
@@ -6563,7 +6682,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAndExpression"
-    // InternalGo.g:2159:1: ruleAndExpression returns [EObject current=null] : ( ( ( ruleComparisonExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) ( () otherlv_2= '&&' ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) ) )* ) ;
+    // InternalGo.g:2199:1: ruleAndExpression returns [EObject current=null] : ( ( ( ruleComparisonExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) ( () otherlv_2= '&&' ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) ) )* ) ;
     public final EObject ruleAndExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6577,14 +6696,14 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2165:2: ( ( ( ( ruleComparisonExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) ( () otherlv_2= '&&' ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) ) )* ) )
-            // InternalGo.g:2166:2: ( ( ( ruleComparisonExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) ( () otherlv_2= '&&' ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) ) )* )
+            // InternalGo.g:2205:2: ( ( ( ( ruleComparisonExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) ( () otherlv_2= '&&' ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) ) )* ) )
+            // InternalGo.g:2206:2: ( ( ( ruleComparisonExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) ( () otherlv_2= '&&' ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) ) )* )
             {
-            // InternalGo.g:2166:2: ( ( ( ruleComparisonExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) ( () otherlv_2= '&&' ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) ) )* )
-            // InternalGo.g:2167:3: ( ( ruleComparisonExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) ( () otherlv_2= '&&' ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) ) )*
+            // InternalGo.g:2206:2: ( ( ( ruleComparisonExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) ( () otherlv_2= '&&' ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) ) )* )
+            // InternalGo.g:2207:3: ( ( ruleComparisonExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) ( () otherlv_2= '&&' ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) ) )*
             {
-            // InternalGo.g:2167:3: ( ( ruleComparisonExpression )=>this_ComparisonExpression_0= ruleComparisonExpression )
-            // InternalGo.g:2168:4: ( ruleComparisonExpression )=>this_ComparisonExpression_0= ruleComparisonExpression
+            // InternalGo.g:2207:3: ( ( ruleComparisonExpression )=>this_ComparisonExpression_0= ruleComparisonExpression )
+            // InternalGo.g:2208:4: ( ruleComparisonExpression )=>this_ComparisonExpression_0= ruleComparisonExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -6605,7 +6724,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalGo.g:2178:3: ( () otherlv_2= '&&' ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) ) )*
+            // InternalGo.g:2218:3: ( () otherlv_2= '&&' ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) ) )*
             loop40:
             do {
                 int alt40=2;
@@ -6618,10 +6737,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                 switch (alt40) {
             	case 1 :
-            	    // InternalGo.g:2179:4: () otherlv_2= '&&' ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) )
+            	    // InternalGo.g:2219:4: () otherlv_2= '&&' ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) )
             	    {
-            	    // InternalGo.g:2179:4: ()
-            	    // InternalGo.g:2180:5: 
+            	    // InternalGo.g:2219:4: ()
+            	    // InternalGo.g:2220:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -6639,11 +6758,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(otherlv_2, grammarAccess.getAndExpressionAccess().getAmpersandAmpersandKeyword_1_1());
             	      			
             	    }
-            	    // InternalGo.g:2190:4: ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) )
-            	    // InternalGo.g:2191:5: ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression )
+            	    // InternalGo.g:2230:4: ( ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression ) )
+            	    // InternalGo.g:2231:5: ( rulePrimaryExpression )=> (lv_right_3_0= ruleComparisonExpression )
             	    {
-            	    // InternalGo.g:2192:5: (lv_right_3_0= ruleComparisonExpression )
-            	    // InternalGo.g:2193:6: lv_right_3_0= ruleComparisonExpression
+            	    // InternalGo.g:2232:5: (lv_right_3_0= ruleComparisonExpression )
+            	    // InternalGo.g:2233:6: lv_right_3_0= ruleComparisonExpression
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -6708,7 +6827,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleComparisonExpression"
-    // InternalGo.g:2215:1: entryRuleComparisonExpression returns [EObject current=null] : iv_ruleComparisonExpression= ruleComparisonExpression EOF ;
+    // InternalGo.g:2255:1: entryRuleComparisonExpression returns [EObject current=null] : iv_ruleComparisonExpression= ruleComparisonExpression EOF ;
     public final EObject entryRuleComparisonExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6716,8 +6835,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:2215:61: (iv_ruleComparisonExpression= ruleComparisonExpression EOF )
-            // InternalGo.g:2216:2: iv_ruleComparisonExpression= ruleComparisonExpression EOF
+            // InternalGo.g:2255:61: (iv_ruleComparisonExpression= ruleComparisonExpression EOF )
+            // InternalGo.g:2256:2: iv_ruleComparisonExpression= ruleComparisonExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getComparisonExpressionRule()); 
@@ -6748,7 +6867,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComparisonExpression"
-    // InternalGo.g:2222:1: ruleComparisonExpression returns [EObject current=null] : ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () ruleOperator ( (lv_right_3_0= rulePrimaryExpression ) ) )* ) ;
+    // InternalGo.g:2262:1: ruleComparisonExpression returns [EObject current=null] : ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () ruleOperator ( (lv_right_3_0= rulePrimaryExpression ) ) )* ) ;
     public final EObject ruleComparisonExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6761,14 +6880,14 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2228:2: ( ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () ruleOperator ( (lv_right_3_0= rulePrimaryExpression ) ) )* ) )
-            // InternalGo.g:2229:2: ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () ruleOperator ( (lv_right_3_0= rulePrimaryExpression ) ) )* )
+            // InternalGo.g:2268:2: ( ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () ruleOperator ( (lv_right_3_0= rulePrimaryExpression ) ) )* ) )
+            // InternalGo.g:2269:2: ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () ruleOperator ( (lv_right_3_0= rulePrimaryExpression ) ) )* )
             {
-            // InternalGo.g:2229:2: ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () ruleOperator ( (lv_right_3_0= rulePrimaryExpression ) ) )* )
-            // InternalGo.g:2230:3: ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () ruleOperator ( (lv_right_3_0= rulePrimaryExpression ) ) )*
+            // InternalGo.g:2269:2: ( ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () ruleOperator ( (lv_right_3_0= rulePrimaryExpression ) ) )* )
+            // InternalGo.g:2270:3: ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression ) ( () ruleOperator ( (lv_right_3_0= rulePrimaryExpression ) ) )*
             {
-            // InternalGo.g:2230:3: ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression )
-            // InternalGo.g:2231:4: ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression
+            // InternalGo.g:2270:3: ( ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression )
+            // InternalGo.g:2271:4: ( rulePrimaryExpression )=>this_PrimaryExpression_0= rulePrimaryExpression
             {
             if ( state.backtracking==0 ) {
 
@@ -6789,7 +6908,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalGo.g:2241:3: ( () ruleOperator ( (lv_right_3_0= rulePrimaryExpression ) ) )*
+            // InternalGo.g:2281:3: ( () ruleOperator ( (lv_right_3_0= rulePrimaryExpression ) ) )*
             loop41:
             do {
                 int alt41=2;
@@ -6802,10 +6921,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                 switch (alt41) {
             	case 1 :
-            	    // InternalGo.g:2242:4: () ruleOperator ( (lv_right_3_0= rulePrimaryExpression ) )
+            	    // InternalGo.g:2282:4: () ruleOperator ( (lv_right_3_0= rulePrimaryExpression ) )
             	    {
-            	    // InternalGo.g:2242:4: ()
-            	    // InternalGo.g:2243:5: 
+            	    // InternalGo.g:2282:4: ()
+            	    // InternalGo.g:2283:5: 
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -6832,11 +6951,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             	      				afterParserOrEnumRuleCall();
             	      			
             	    }
-            	    // InternalGo.g:2256:4: ( (lv_right_3_0= rulePrimaryExpression ) )
-            	    // InternalGo.g:2257:5: (lv_right_3_0= rulePrimaryExpression )
+            	    // InternalGo.g:2296:4: ( (lv_right_3_0= rulePrimaryExpression ) )
+            	    // InternalGo.g:2297:5: (lv_right_3_0= rulePrimaryExpression )
             	    {
-            	    // InternalGo.g:2257:5: (lv_right_3_0= rulePrimaryExpression )
-            	    // InternalGo.g:2258:6: lv_right_3_0= rulePrimaryExpression
+            	    // InternalGo.g:2297:5: (lv_right_3_0= rulePrimaryExpression )
+            	    // InternalGo.g:2298:6: lv_right_3_0= rulePrimaryExpression
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -6901,7 +7020,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePrimaryExpression"
-    // InternalGo.g:2280:1: entryRulePrimaryExpression returns [EObject current=null] : iv_rulePrimaryExpression= rulePrimaryExpression EOF ;
+    // InternalGo.g:2320:1: entryRulePrimaryExpression returns [EObject current=null] : iv_rulePrimaryExpression= rulePrimaryExpression EOF ;
     public final EObject entryRulePrimaryExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6909,8 +7028,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:2280:58: (iv_rulePrimaryExpression= rulePrimaryExpression EOF )
-            // InternalGo.g:2281:2: iv_rulePrimaryExpression= rulePrimaryExpression EOF
+            // InternalGo.g:2320:58: (iv_rulePrimaryExpression= rulePrimaryExpression EOF )
+            // InternalGo.g:2321:2: iv_rulePrimaryExpression= rulePrimaryExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPrimaryExpressionRule()); 
@@ -6941,7 +7060,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePrimaryExpression"
-    // InternalGo.g:2287:1: rulePrimaryExpression returns [EObject current=null] : ( (this_Open_parentheses_0= RULE_OPEN_PARENTHESES this_Expression_1= ruleExpression this_Closed_parentheses_2= RULE_CLOSED_PARENTHESES ) | this_Literal_3= ruleLiteral ) ;
+    // InternalGo.g:2327:1: rulePrimaryExpression returns [EObject current=null] : ( (this_Open_parentheses_0= RULE_OPEN_PARENTHESES this_Expression_1= ruleExpression this_Closed_parentheses_2= RULE_CLOSED_PARENTHESES ) | this_Literal_3= ruleLiteral ) ;
     public final EObject rulePrimaryExpression() throws RecognitionException {
         EObject current = null;
 
@@ -6956,10 +7075,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2293:2: ( ( (this_Open_parentheses_0= RULE_OPEN_PARENTHESES this_Expression_1= ruleExpression this_Closed_parentheses_2= RULE_CLOSED_PARENTHESES ) | this_Literal_3= ruleLiteral ) )
-            // InternalGo.g:2294:2: ( (this_Open_parentheses_0= RULE_OPEN_PARENTHESES this_Expression_1= ruleExpression this_Closed_parentheses_2= RULE_CLOSED_PARENTHESES ) | this_Literal_3= ruleLiteral )
+            // InternalGo.g:2333:2: ( ( (this_Open_parentheses_0= RULE_OPEN_PARENTHESES this_Expression_1= ruleExpression this_Closed_parentheses_2= RULE_CLOSED_PARENTHESES ) | this_Literal_3= ruleLiteral ) )
+            // InternalGo.g:2334:2: ( (this_Open_parentheses_0= RULE_OPEN_PARENTHESES this_Expression_1= ruleExpression this_Closed_parentheses_2= RULE_CLOSED_PARENTHESES ) | this_Literal_3= ruleLiteral )
             {
-            // InternalGo.g:2294:2: ( (this_Open_parentheses_0= RULE_OPEN_PARENTHESES this_Expression_1= ruleExpression this_Closed_parentheses_2= RULE_CLOSED_PARENTHESES ) | this_Literal_3= ruleLiteral )
+            // InternalGo.g:2334:2: ( (this_Open_parentheses_0= RULE_OPEN_PARENTHESES this_Expression_1= ruleExpression this_Closed_parentheses_2= RULE_CLOSED_PARENTHESES ) | this_Literal_3= ruleLiteral )
             int alt42=2;
             int LA42_0 = input.LA(1);
 
@@ -6978,10 +7097,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             }
             switch (alt42) {
                 case 1 :
-                    // InternalGo.g:2295:3: (this_Open_parentheses_0= RULE_OPEN_PARENTHESES this_Expression_1= ruleExpression this_Closed_parentheses_2= RULE_CLOSED_PARENTHESES )
+                    // InternalGo.g:2335:3: (this_Open_parentheses_0= RULE_OPEN_PARENTHESES this_Expression_1= ruleExpression this_Closed_parentheses_2= RULE_CLOSED_PARENTHESES )
                     {
-                    // InternalGo.g:2295:3: (this_Open_parentheses_0= RULE_OPEN_PARENTHESES this_Expression_1= ruleExpression this_Closed_parentheses_2= RULE_CLOSED_PARENTHESES )
-                    // InternalGo.g:2296:4: this_Open_parentheses_0= RULE_OPEN_PARENTHESES this_Expression_1= ruleExpression this_Closed_parentheses_2= RULE_CLOSED_PARENTHESES
+                    // InternalGo.g:2335:3: (this_Open_parentheses_0= RULE_OPEN_PARENTHESES this_Expression_1= ruleExpression this_Closed_parentheses_2= RULE_CLOSED_PARENTHESES )
+                    // InternalGo.g:2336:4: this_Open_parentheses_0= RULE_OPEN_PARENTHESES this_Expression_1= ruleExpression this_Closed_parentheses_2= RULE_CLOSED_PARENTHESES
                     {
                     this_Open_parentheses_0=(Token)match(input,RULE_OPEN_PARENTHESES,FOLLOW_18); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7018,7 +7137,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2314:3: this_Literal_3= ruleLiteral
+                    // InternalGo.g:2354:3: this_Literal_3= ruleLiteral
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7064,7 +7183,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOperator"
-    // InternalGo.g:2326:1: entryRuleOperator returns [String current=null] : iv_ruleOperator= ruleOperator EOF ;
+    // InternalGo.g:2366:1: entryRuleOperator returns [String current=null] : iv_ruleOperator= ruleOperator EOF ;
     public final String entryRuleOperator() throws RecognitionException {
         String current = null;
 
@@ -7072,8 +7191,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:2326:48: (iv_ruleOperator= ruleOperator EOF )
-            // InternalGo.g:2327:2: iv_ruleOperator= ruleOperator EOF
+            // InternalGo.g:2366:48: (iv_ruleOperator= ruleOperator EOF )
+            // InternalGo.g:2367:2: iv_ruleOperator= ruleOperator EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOperatorRule()); 
@@ -7104,7 +7223,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperator"
-    // InternalGo.g:2333:1: ruleOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '<' | kw= '<=' | kw= '==' | kw= '>=' | kw= '>' ) ;
+    // InternalGo.g:2373:1: ruleOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '<' | kw= '<=' | kw= '==' | kw= '>=' | kw= '>' ) ;
     public final AntlrDatatypeRuleToken ruleOperator() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -7114,10 +7233,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2339:2: ( (kw= '<' | kw= '<=' | kw= '==' | kw= '>=' | kw= '>' ) )
-            // InternalGo.g:2340:2: (kw= '<' | kw= '<=' | kw= '==' | kw= '>=' | kw= '>' )
+            // InternalGo.g:2379:2: ( (kw= '<' | kw= '<=' | kw= '==' | kw= '>=' | kw= '>' ) )
+            // InternalGo.g:2380:2: (kw= '<' | kw= '<=' | kw= '==' | kw= '>=' | kw= '>' )
             {
-            // InternalGo.g:2340:2: (kw= '<' | kw= '<=' | kw= '==' | kw= '>=' | kw= '>' )
+            // InternalGo.g:2380:2: (kw= '<' | kw= '<=' | kw= '==' | kw= '>=' | kw= '>' )
             int alt43=5;
             switch ( input.LA(1) ) {
             case 35:
@@ -7155,7 +7274,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             switch (alt43) {
                 case 1 :
-                    // InternalGo.g:2341:3: kw= '<'
+                    // InternalGo.g:2381:3: kw= '<'
                     {
                     kw=(Token)match(input,35,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7168,7 +7287,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2347:3: kw= '<='
+                    // InternalGo.g:2387:3: kw= '<='
                     {
                     kw=(Token)match(input,36,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7181,7 +7300,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalGo.g:2353:3: kw= '=='
+                    // InternalGo.g:2393:3: kw= '=='
                     {
                     kw=(Token)match(input,37,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7194,7 +7313,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalGo.g:2359:3: kw= '>='
+                    // InternalGo.g:2399:3: kw= '>='
                     {
                     kw=(Token)match(input,38,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7207,7 +7326,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalGo.g:2365:3: kw= '>'
+                    // InternalGo.g:2405:3: kw= '>'
                     {
                     kw=(Token)match(input,39,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7244,7 +7363,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleoperationsOne"
-    // InternalGo.g:2374:1: entryRuleoperationsOne returns [EObject current=null] : iv_ruleoperationsOne= ruleoperationsOne EOF ;
+    // InternalGo.g:2414:1: entryRuleoperationsOne returns [EObject current=null] : iv_ruleoperationsOne= ruleoperationsOne EOF ;
     public final EObject entryRuleoperationsOne() throws RecognitionException {
         EObject current = null;
 
@@ -7252,8 +7371,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:2374:54: (iv_ruleoperationsOne= ruleoperationsOne EOF )
-            // InternalGo.g:2375:2: iv_ruleoperationsOne= ruleoperationsOne EOF
+            // InternalGo.g:2414:54: (iv_ruleoperationsOne= ruleoperationsOne EOF )
+            // InternalGo.g:2415:2: iv_ruleoperationsOne= ruleoperationsOne EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOperationsOneRule()); 
@@ -7284,7 +7403,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleoperationsOne"
-    // InternalGo.g:2381:1: ruleoperationsOne returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusOne_1= RULE_PLUSONE | this_MinusOne_2= RULE_MINUSONE ) ) ;
+    // InternalGo.g:2421:1: ruleoperationsOne returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusOne_1= RULE_PLUSONE | this_MinusOne_2= RULE_MINUSONE ) ) ;
     public final EObject ruleoperationsOne() throws RecognitionException {
         EObject current = null;
 
@@ -7296,17 +7415,17 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2387:2: ( ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusOne_1= RULE_PLUSONE | this_MinusOne_2= RULE_MINUSONE ) ) )
-            // InternalGo.g:2388:2: ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusOne_1= RULE_PLUSONE | this_MinusOne_2= RULE_MINUSONE ) )
+            // InternalGo.g:2427:2: ( ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusOne_1= RULE_PLUSONE | this_MinusOne_2= RULE_MINUSONE ) ) )
+            // InternalGo.g:2428:2: ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusOne_1= RULE_PLUSONE | this_MinusOne_2= RULE_MINUSONE ) )
             {
-            // InternalGo.g:2388:2: ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusOne_1= RULE_PLUSONE | this_MinusOne_2= RULE_MINUSONE ) )
-            // InternalGo.g:2389:3: ( (lv_name_0_0= RULE_ID ) ) (this_PlusOne_1= RULE_PLUSONE | this_MinusOne_2= RULE_MINUSONE )
+            // InternalGo.g:2428:2: ( ( (lv_name_0_0= RULE_ID ) ) (this_PlusOne_1= RULE_PLUSONE | this_MinusOne_2= RULE_MINUSONE ) )
+            // InternalGo.g:2429:3: ( (lv_name_0_0= RULE_ID ) ) (this_PlusOne_1= RULE_PLUSONE | this_MinusOne_2= RULE_MINUSONE )
             {
-            // InternalGo.g:2389:3: ( (lv_name_0_0= RULE_ID ) )
-            // InternalGo.g:2390:4: (lv_name_0_0= RULE_ID )
+            // InternalGo.g:2429:3: ( (lv_name_0_0= RULE_ID ) )
+            // InternalGo.g:2430:4: (lv_name_0_0= RULE_ID )
             {
-            // InternalGo.g:2390:4: (lv_name_0_0= RULE_ID )
-            // InternalGo.g:2391:5: lv_name_0_0= RULE_ID
+            // InternalGo.g:2430:4: (lv_name_0_0= RULE_ID )
+            // InternalGo.g:2431:5: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_46); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -7332,7 +7451,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalGo.g:2407:3: (this_PlusOne_1= RULE_PLUSONE | this_MinusOne_2= RULE_MINUSONE )
+            // InternalGo.g:2447:3: (this_PlusOne_1= RULE_PLUSONE | this_MinusOne_2= RULE_MINUSONE )
             int alt44=2;
             int LA44_0 = input.LA(1);
 
@@ -7351,7 +7470,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             }
             switch (alt44) {
                 case 1 :
-                    // InternalGo.g:2408:4: this_PlusOne_1= RULE_PLUSONE
+                    // InternalGo.g:2448:4: this_PlusOne_1= RULE_PLUSONE
                     {
                     this_PlusOne_1=(Token)match(input,RULE_PLUSONE,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7363,7 +7482,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2413:4: this_MinusOne_2= RULE_MINUSONE
+                    // InternalGo.g:2453:4: this_MinusOne_2= RULE_MINUSONE
                     {
                     this_MinusOne_2=(Token)match(input,RULE_MINUSONE,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7402,7 +7521,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulevarFor"
-    // InternalGo.g:2422:1: entryRulevarFor returns [EObject current=null] : iv_rulevarFor= rulevarFor EOF ;
+    // InternalGo.g:2462:1: entryRulevarFor returns [EObject current=null] : iv_rulevarFor= rulevarFor EOF ;
     public final EObject entryRulevarFor() throws RecognitionException {
         EObject current = null;
 
@@ -7410,8 +7529,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:2422:47: (iv_rulevarFor= rulevarFor EOF )
-            // InternalGo.g:2423:2: iv_rulevarFor= rulevarFor EOF
+            // InternalGo.g:2462:47: (iv_rulevarFor= rulevarFor EOF )
+            // InternalGo.g:2463:2: iv_rulevarFor= rulevarFor EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVarForRule()); 
@@ -7442,7 +7561,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevarFor"
-    // InternalGo.g:2429:1: rulevarFor returns [EObject current=null] : ( ( ( rulePrimaryExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) | ( ruleModif ( (lv_var_2_0= RULE_ID ) ) ruleTypes this_equals_4= RULE_EQUALS ( (lv_atrb_5_0= ruleAtrib_Aux ) ) this_PontoVirgula_6= RULE_PONTOVIRGULA ( (lv_right_7_0= ruleLiteral ) ) ruleOperator ( (lv_left_9_0= ruleLiteral ) ) this_PontoVirgula_10= RULE_PONTOVIRGULA (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals ) ) ) ;
+    // InternalGo.g:2469:1: rulevarFor returns [EObject current=null] : ( ( ( rulePrimaryExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) | ( ruleModif ( (lv_var_2_0= RULE_ID ) ) ruleTypes this_equals_4= RULE_EQUALS ( (lv_atrb_5_0= ruleAtrib_Aux ) ) this_PontoVirgula_6= RULE_PONTOVIRGULA ( (lv_right_7_0= ruleLiteral ) ) ruleOperator ( (lv_left_9_0= ruleLiteral ) ) this_PontoVirgula_10= RULE_PONTOVIRGULA (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals ) ) ) ;
     public final EObject rulevarFor() throws RecognitionException {
         EObject current = null;
 
@@ -7467,10 +7586,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2435:2: ( ( ( ( rulePrimaryExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) | ( ruleModif ( (lv_var_2_0= RULE_ID ) ) ruleTypes this_equals_4= RULE_EQUALS ( (lv_atrb_5_0= ruleAtrib_Aux ) ) this_PontoVirgula_6= RULE_PONTOVIRGULA ( (lv_right_7_0= ruleLiteral ) ) ruleOperator ( (lv_left_9_0= ruleLiteral ) ) this_PontoVirgula_10= RULE_PONTOVIRGULA (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals ) ) ) )
-            // InternalGo.g:2436:2: ( ( ( rulePrimaryExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) | ( ruleModif ( (lv_var_2_0= RULE_ID ) ) ruleTypes this_equals_4= RULE_EQUALS ( (lv_atrb_5_0= ruleAtrib_Aux ) ) this_PontoVirgula_6= RULE_PONTOVIRGULA ( (lv_right_7_0= ruleLiteral ) ) ruleOperator ( (lv_left_9_0= ruleLiteral ) ) this_PontoVirgula_10= RULE_PONTOVIRGULA (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals ) ) )
+            // InternalGo.g:2475:2: ( ( ( ( rulePrimaryExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) | ( ruleModif ( (lv_var_2_0= RULE_ID ) ) ruleTypes this_equals_4= RULE_EQUALS ( (lv_atrb_5_0= ruleAtrib_Aux ) ) this_PontoVirgula_6= RULE_PONTOVIRGULA ( (lv_right_7_0= ruleLiteral ) ) ruleOperator ( (lv_left_9_0= ruleLiteral ) ) this_PontoVirgula_10= RULE_PONTOVIRGULA (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals ) ) ) )
+            // InternalGo.g:2476:2: ( ( ( rulePrimaryExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) | ( ruleModif ( (lv_var_2_0= RULE_ID ) ) ruleTypes this_equals_4= RULE_EQUALS ( (lv_atrb_5_0= ruleAtrib_Aux ) ) this_PontoVirgula_6= RULE_PONTOVIRGULA ( (lv_right_7_0= ruleLiteral ) ) ruleOperator ( (lv_left_9_0= ruleLiteral ) ) this_PontoVirgula_10= RULE_PONTOVIRGULA (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals ) ) )
             {
-            // InternalGo.g:2436:2: ( ( ( rulePrimaryExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) | ( ruleModif ( (lv_var_2_0= RULE_ID ) ) ruleTypes this_equals_4= RULE_EQUALS ( (lv_atrb_5_0= ruleAtrib_Aux ) ) this_PontoVirgula_6= RULE_PONTOVIRGULA ( (lv_right_7_0= ruleLiteral ) ) ruleOperator ( (lv_left_9_0= ruleLiteral ) ) this_PontoVirgula_10= RULE_PONTOVIRGULA (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals ) ) )
+            // InternalGo.g:2476:2: ( ( ( rulePrimaryExpression )=>this_ComparisonExpression_0= ruleComparisonExpression ) | ( ruleModif ( (lv_var_2_0= RULE_ID ) ) ruleTypes this_equals_4= RULE_EQUALS ( (lv_atrb_5_0= ruleAtrib_Aux ) ) this_PontoVirgula_6= RULE_PONTOVIRGULA ( (lv_right_7_0= ruleLiteral ) ) ruleOperator ( (lv_left_9_0= ruleLiteral ) ) this_PontoVirgula_10= RULE_PONTOVIRGULA (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals ) ) )
             int alt46=2;
             int LA46_0 = input.LA(1);
 
@@ -7498,10 +7617,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             }
             switch (alt46) {
                 case 1 :
-                    // InternalGo.g:2437:3: ( ( rulePrimaryExpression )=>this_ComparisonExpression_0= ruleComparisonExpression )
+                    // InternalGo.g:2477:3: ( ( rulePrimaryExpression )=>this_ComparisonExpression_0= ruleComparisonExpression )
                     {
-                    // InternalGo.g:2437:3: ( ( rulePrimaryExpression )=>this_ComparisonExpression_0= ruleComparisonExpression )
-                    // InternalGo.g:2438:4: ( rulePrimaryExpression )=>this_ComparisonExpression_0= ruleComparisonExpression
+                    // InternalGo.g:2477:3: ( ( rulePrimaryExpression )=>this_ComparisonExpression_0= ruleComparisonExpression )
+                    // InternalGo.g:2478:4: ( rulePrimaryExpression )=>this_ComparisonExpression_0= ruleComparisonExpression
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7526,10 +7645,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2449:3: ( ruleModif ( (lv_var_2_0= RULE_ID ) ) ruleTypes this_equals_4= RULE_EQUALS ( (lv_atrb_5_0= ruleAtrib_Aux ) ) this_PontoVirgula_6= RULE_PONTOVIRGULA ( (lv_right_7_0= ruleLiteral ) ) ruleOperator ( (lv_left_9_0= ruleLiteral ) ) this_PontoVirgula_10= RULE_PONTOVIRGULA (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals ) )
+                    // InternalGo.g:2489:3: ( ruleModif ( (lv_var_2_0= RULE_ID ) ) ruleTypes this_equals_4= RULE_EQUALS ( (lv_atrb_5_0= ruleAtrib_Aux ) ) this_PontoVirgula_6= RULE_PONTOVIRGULA ( (lv_right_7_0= ruleLiteral ) ) ruleOperator ( (lv_left_9_0= ruleLiteral ) ) this_PontoVirgula_10= RULE_PONTOVIRGULA (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals ) )
                     {
-                    // InternalGo.g:2449:3: ( ruleModif ( (lv_var_2_0= RULE_ID ) ) ruleTypes this_equals_4= RULE_EQUALS ( (lv_atrb_5_0= ruleAtrib_Aux ) ) this_PontoVirgula_6= RULE_PONTOVIRGULA ( (lv_right_7_0= ruleLiteral ) ) ruleOperator ( (lv_left_9_0= ruleLiteral ) ) this_PontoVirgula_10= RULE_PONTOVIRGULA (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals ) )
-                    // InternalGo.g:2450:4: ruleModif ( (lv_var_2_0= RULE_ID ) ) ruleTypes this_equals_4= RULE_EQUALS ( (lv_atrb_5_0= ruleAtrib_Aux ) ) this_PontoVirgula_6= RULE_PONTOVIRGULA ( (lv_right_7_0= ruleLiteral ) ) ruleOperator ( (lv_left_9_0= ruleLiteral ) ) this_PontoVirgula_10= RULE_PONTOVIRGULA (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals )
+                    // InternalGo.g:2489:3: ( ruleModif ( (lv_var_2_0= RULE_ID ) ) ruleTypes this_equals_4= RULE_EQUALS ( (lv_atrb_5_0= ruleAtrib_Aux ) ) this_PontoVirgula_6= RULE_PONTOVIRGULA ( (lv_right_7_0= ruleLiteral ) ) ruleOperator ( (lv_left_9_0= ruleLiteral ) ) this_PontoVirgula_10= RULE_PONTOVIRGULA (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals ) )
+                    // InternalGo.g:2490:4: ruleModif ( (lv_var_2_0= RULE_ID ) ) ruleTypes this_equals_4= RULE_EQUALS ( (lv_atrb_5_0= ruleAtrib_Aux ) ) this_PontoVirgula_6= RULE_PONTOVIRGULA ( (lv_right_7_0= ruleLiteral ) ) ruleOperator ( (lv_left_9_0= ruleLiteral ) ) this_PontoVirgula_10= RULE_PONTOVIRGULA (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals )
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7546,11 +7665,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                       				afterParserOrEnumRuleCall();
                       			
                     }
-                    // InternalGo.g:2457:4: ( (lv_var_2_0= RULE_ID ) )
-                    // InternalGo.g:2458:5: (lv_var_2_0= RULE_ID )
+                    // InternalGo.g:2497:4: ( (lv_var_2_0= RULE_ID ) )
+                    // InternalGo.g:2498:5: (lv_var_2_0= RULE_ID )
                     {
-                    // InternalGo.g:2458:5: (lv_var_2_0= RULE_ID )
-                    // InternalGo.g:2459:6: lv_var_2_0= RULE_ID
+                    // InternalGo.g:2498:5: (lv_var_2_0= RULE_ID )
+                    // InternalGo.g:2499:6: lv_var_2_0= RULE_ID
                     {
                     lv_var_2_0=(Token)match(input,RULE_ID,FOLLOW_5); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -7597,11 +7716,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                       				newLeafNode(this_equals_4, grammarAccess.getVarForAccess().getEqualsTerminalRuleCall_1_3());
                       			
                     }
-                    // InternalGo.g:2486:4: ( (lv_atrb_5_0= ruleAtrib_Aux ) )
-                    // InternalGo.g:2487:5: (lv_atrb_5_0= ruleAtrib_Aux )
+                    // InternalGo.g:2526:4: ( (lv_atrb_5_0= ruleAtrib_Aux ) )
+                    // InternalGo.g:2527:5: (lv_atrb_5_0= ruleAtrib_Aux )
                     {
-                    // InternalGo.g:2487:5: (lv_atrb_5_0= ruleAtrib_Aux )
-                    // InternalGo.g:2488:6: lv_atrb_5_0= ruleAtrib_Aux
+                    // InternalGo.g:2527:5: (lv_atrb_5_0= ruleAtrib_Aux )
+                    // InternalGo.g:2528:6: lv_atrb_5_0= ruleAtrib_Aux
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7638,11 +7757,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                       				newLeafNode(this_PontoVirgula_6, grammarAccess.getVarForAccess().getPontoVirgulaTerminalRuleCall_1_5());
                       			
                     }
-                    // InternalGo.g:2509:4: ( (lv_right_7_0= ruleLiteral ) )
-                    // InternalGo.g:2510:5: (lv_right_7_0= ruleLiteral )
+                    // InternalGo.g:2549:4: ( (lv_right_7_0= ruleLiteral ) )
+                    // InternalGo.g:2550:5: (lv_right_7_0= ruleLiteral )
                     {
-                    // InternalGo.g:2510:5: (lv_right_7_0= ruleLiteral )
-                    // InternalGo.g:2511:6: lv_right_7_0= ruleLiteral
+                    // InternalGo.g:2550:5: (lv_right_7_0= ruleLiteral )
+                    // InternalGo.g:2551:6: lv_right_7_0= ruleLiteral
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7688,11 +7807,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                       				afterParserOrEnumRuleCall();
                       			
                     }
-                    // InternalGo.g:2535:4: ( (lv_left_9_0= ruleLiteral ) )
-                    // InternalGo.g:2536:5: (lv_left_9_0= ruleLiteral )
+                    // InternalGo.g:2575:4: ( (lv_left_9_0= ruleLiteral ) )
+                    // InternalGo.g:2576:5: (lv_left_9_0= ruleLiteral )
                     {
-                    // InternalGo.g:2536:5: (lv_left_9_0= ruleLiteral )
-                    // InternalGo.g:2537:6: lv_left_9_0= ruleLiteral
+                    // InternalGo.g:2576:5: (lv_left_9_0= ruleLiteral )
+                    // InternalGo.g:2577:6: lv_left_9_0= ruleLiteral
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7729,7 +7848,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                       				newLeafNode(this_PontoVirgula_10, grammarAccess.getVarForAccess().getPontoVirgulaTerminalRuleCall_1_9());
                       			
                     }
-                    // InternalGo.g:2558:4: (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals )
+                    // InternalGo.g:2598:4: (this_operationsOne_11= ruleoperationsOne | this_OperationsOneEquals_12= ruleOperationsOneEquals )
                     int alt45=2;
                     int LA45_0 = input.LA(1);
 
@@ -7759,7 +7878,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt45) {
                         case 1 :
-                            // InternalGo.g:2559:5: this_operationsOne_11= ruleoperationsOne
+                            // InternalGo.g:2599:5: this_operationsOne_11= ruleoperationsOne
                             {
                             if ( state.backtracking==0 ) {
 
@@ -7781,7 +7900,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalGo.g:2568:5: this_OperationsOneEquals_12= ruleOperationsOneEquals
+                            // InternalGo.g:2608:5: this_OperationsOneEquals_12= ruleOperationsOneEquals
                             {
                             if ( state.backtracking==0 ) {
 
@@ -7836,7 +7955,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLiteral"
-    // InternalGo.g:2582:1: entryRuleLiteral returns [EObject current=null] : iv_ruleLiteral= ruleLiteral EOF ;
+    // InternalGo.g:2622:1: entryRuleLiteral returns [EObject current=null] : iv_ruleLiteral= ruleLiteral EOF ;
     public final EObject entryRuleLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -7844,8 +7963,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:2582:48: (iv_ruleLiteral= ruleLiteral EOF )
-            // InternalGo.g:2583:2: iv_ruleLiteral= ruleLiteral EOF
+            // InternalGo.g:2622:48: (iv_ruleLiteral= ruleLiteral EOF )
+            // InternalGo.g:2623:2: iv_ruleLiteral= ruleLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLiteralRule()); 
@@ -7876,11 +7995,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLiteral"
-    // InternalGo.g:2589:1: ruleLiteral returns [EObject current=null] : ( ( () ( (lv_value_1_0= ruleBoolean ) ) ) | this_Numbers_2= ruleNumbers ) ;
+    // InternalGo.g:2629:1: ruleLiteral returns [EObject current=null] : ( ( () ( (lv_value_1_0= ruleBoolean ) ) ) | this_Numbers_2= ruleNumbers ) ;
     public final EObject ruleLiteral() throws RecognitionException {
         EObject current = null;
 
-        AntlrDatatypeRuleToken lv_value_1_0 = null;
+        EObject lv_value_1_0 = null;
 
         EObject this_Numbers_2 = null;
 
@@ -7889,10 +8008,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2595:2: ( ( ( () ( (lv_value_1_0= ruleBoolean ) ) ) | this_Numbers_2= ruleNumbers ) )
-            // InternalGo.g:2596:2: ( ( () ( (lv_value_1_0= ruleBoolean ) ) ) | this_Numbers_2= ruleNumbers )
+            // InternalGo.g:2635:2: ( ( ( () ( (lv_value_1_0= ruleBoolean ) ) ) | this_Numbers_2= ruleNumbers ) )
+            // InternalGo.g:2636:2: ( ( () ( (lv_value_1_0= ruleBoolean ) ) ) | this_Numbers_2= ruleNumbers )
             {
-            // InternalGo.g:2596:2: ( ( () ( (lv_value_1_0= ruleBoolean ) ) ) | this_Numbers_2= ruleNumbers )
+            // InternalGo.g:2636:2: ( ( () ( (lv_value_1_0= ruleBoolean ) ) ) | this_Numbers_2= ruleNumbers )
             int alt47=2;
             int LA47_0 = input.LA(1);
 
@@ -7911,13 +8030,13 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             }
             switch (alt47) {
                 case 1 :
-                    // InternalGo.g:2597:3: ( () ( (lv_value_1_0= ruleBoolean ) ) )
+                    // InternalGo.g:2637:3: ( () ( (lv_value_1_0= ruleBoolean ) ) )
                     {
-                    // InternalGo.g:2597:3: ( () ( (lv_value_1_0= ruleBoolean ) ) )
-                    // InternalGo.g:2598:4: () ( (lv_value_1_0= ruleBoolean ) )
+                    // InternalGo.g:2637:3: ( () ( (lv_value_1_0= ruleBoolean ) ) )
+                    // InternalGo.g:2638:4: () ( (lv_value_1_0= ruleBoolean ) )
                     {
-                    // InternalGo.g:2598:4: ()
-                    // InternalGo.g:2599:5: 
+                    // InternalGo.g:2638:4: ()
+                    // InternalGo.g:2639:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7929,11 +8048,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalGo.g:2605:4: ( (lv_value_1_0= ruleBoolean ) )
-                    // InternalGo.g:2606:5: (lv_value_1_0= ruleBoolean )
+                    // InternalGo.g:2645:4: ( (lv_value_1_0= ruleBoolean ) )
+                    // InternalGo.g:2646:5: (lv_value_1_0= ruleBoolean )
                     {
-                    // InternalGo.g:2606:5: (lv_value_1_0= ruleBoolean )
-                    // InternalGo.g:2607:6: lv_value_1_0= ruleBoolean
+                    // InternalGo.g:2646:5: (lv_value_1_0= ruleBoolean )
+                    // InternalGo.g:2647:6: lv_value_1_0= ruleBoolean
                     {
                     if ( state.backtracking==0 ) {
 
@@ -7971,7 +8090,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2626:3: this_Numbers_2= ruleNumbers
+                    // InternalGo.g:2666:3: this_Numbers_2= ruleNumbers
                     {
                     if ( state.backtracking==0 ) {
 
@@ -8017,7 +8136,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDecFunc"
-    // InternalGo.g:2638:1: entryRuleDecFunc returns [EObject current=null] : iv_ruleDecFunc= ruleDecFunc EOF ;
+    // InternalGo.g:2678:1: entryRuleDecFunc returns [EObject current=null] : iv_ruleDecFunc= ruleDecFunc EOF ;
     public final EObject entryRuleDecFunc() throws RecognitionException {
         EObject current = null;
 
@@ -8025,8 +8144,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:2638:48: (iv_ruleDecFunc= ruleDecFunc EOF )
-            // InternalGo.g:2639:2: iv_ruleDecFunc= ruleDecFunc EOF
+            // InternalGo.g:2678:48: (iv_ruleDecFunc= ruleDecFunc EOF )
+            // InternalGo.g:2679:2: iv_ruleDecFunc= ruleDecFunc EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDecFuncRule()); 
@@ -8057,7 +8176,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDecFunc"
-    // InternalGo.g:2645:1: ruleDecFunc returns [EObject current=null] : ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_return_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY ) ;
+    // InternalGo.g:2685:1: ruleDecFunc returns [EObject current=null] : ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_return_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY ) ;
     public final EObject ruleDecFunc() throws RecognitionException {
         EObject current = null;
 
@@ -8077,11 +8196,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2651:2: ( ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_return_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY ) )
-            // InternalGo.g:2652:2: ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_return_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY )
+            // InternalGo.g:2691:2: ( ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_return_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY ) )
+            // InternalGo.g:2692:2: ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_return_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY )
             {
-            // InternalGo.g:2652:2: ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_return_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY )
-            // InternalGo.g:2653:3: ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_return_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY
+            // InternalGo.g:2692:2: ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_return_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY )
+            // InternalGo.g:2693:3: ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_return_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY
             {
             if ( state.backtracking==0 ) {
 
@@ -8098,11 +8217,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            // InternalGo.g:2660:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalGo.g:2661:4: (lv_name_1_0= RULE_ID )
+            // InternalGo.g:2700:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalGo.g:2701:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalGo.g:2661:4: (lv_name_1_0= RULE_ID )
-            // InternalGo.g:2662:5: lv_name_1_0= RULE_ID
+            // InternalGo.g:2701:4: (lv_name_1_0= RULE_ID )
+            // InternalGo.g:2702:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_12); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -8134,7 +8253,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_Open_parentheses_2, grammarAccess.getDecFuncAccess().getOpen_parenthesesTerminalRuleCall_2());
               		
             }
-            // InternalGo.g:2682:3: ( (lv_param_3_0= ruleParams ) )*
+            // InternalGo.g:2722:3: ( (lv_param_3_0= ruleParams ) )*
             loop48:
             do {
                 int alt48=2;
@@ -8147,10 +8266,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                 switch (alt48) {
             	case 1 :
-            	    // InternalGo.g:2683:4: (lv_param_3_0= ruleParams )
+            	    // InternalGo.g:2723:4: (lv_param_3_0= ruleParams )
             	    {
-            	    // InternalGo.g:2683:4: (lv_param_3_0= ruleParams )
-            	    // InternalGo.g:2684:5: lv_param_3_0= ruleParams
+            	    // InternalGo.g:2723:4: (lv_param_3_0= ruleParams )
+            	    // InternalGo.g:2724:5: lv_param_3_0= ruleParams
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -8193,7 +8312,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_Closed_parentheses_4, grammarAccess.getDecFuncAccess().getClosed_parenthesesTerminalRuleCall_4());
               		
             }
-            // InternalGo.g:2705:3: ( (lv_return_5_0= ruleTypes ) )?
+            // InternalGo.g:2745:3: ( (lv_return_5_0= ruleTypes ) )?
             int alt49=2;
             int LA49_0 = input.LA(1);
 
@@ -8202,10 +8321,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             }
             switch (alt49) {
                 case 1 :
-                    // InternalGo.g:2706:4: (lv_return_5_0= ruleTypes )
+                    // InternalGo.g:2746:4: (lv_return_5_0= ruleTypes )
                     {
-                    // InternalGo.g:2706:4: (lv_return_5_0= ruleTypes )
-                    // InternalGo.g:2707:5: lv_return_5_0= ruleTypes
+                    // InternalGo.g:2746:4: (lv_return_5_0= ruleTypes )
+                    // InternalGo.g:2747:5: lv_return_5_0= ruleTypes
                     {
                     if ( state.backtracking==0 ) {
 
@@ -8245,7 +8364,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_Open_Key_6, grammarAccess.getDecFuncAccess().getOpen_KeyTerminalRuleCall_6());
               		
             }
-            // InternalGo.g:2728:3: ( (lv_args_7_0= ruleGreeting ) )*
+            // InternalGo.g:2768:3: ( (lv_args_7_0= ruleGreeting ) )*
             loop50:
             do {
                 int alt50=2;
@@ -8258,10 +8377,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                 switch (alt50) {
             	case 1 :
-            	    // InternalGo.g:2729:4: (lv_args_7_0= ruleGreeting )
+            	    // InternalGo.g:2769:4: (lv_args_7_0= ruleGreeting )
             	    {
-            	    // InternalGo.g:2729:4: (lv_args_7_0= ruleGreeting )
-            	    // InternalGo.g:2730:5: lv_args_7_0= ruleGreeting
+            	    // InternalGo.g:2769:4: (lv_args_7_0= ruleGreeting )
+            	    // InternalGo.g:2770:5: lv_args_7_0= ruleGreeting
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -8329,7 +8448,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCallFunc"
-    // InternalGo.g:2755:1: entryRuleCallFunc returns [EObject current=null] : iv_ruleCallFunc= ruleCallFunc EOF ;
+    // InternalGo.g:2795:1: entryRuleCallFunc returns [EObject current=null] : iv_ruleCallFunc= ruleCallFunc EOF ;
     public final EObject entryRuleCallFunc() throws RecognitionException {
         EObject current = null;
 
@@ -8337,8 +8456,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:2755:49: (iv_ruleCallFunc= ruleCallFunc EOF )
-            // InternalGo.g:2756:2: iv_ruleCallFunc= ruleCallFunc EOF
+            // InternalGo.g:2795:49: (iv_ruleCallFunc= ruleCallFunc EOF )
+            // InternalGo.g:2796:2: iv_ruleCallFunc= ruleCallFunc EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCallFuncRule()); 
@@ -8369,7 +8488,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCallFunc"
-    // InternalGo.g:2762:1: ruleCallFunc returns [EObject current=null] : ( ( (lv_nameFunc_0_0= RULE_ID ) ) this_Open_parentheses_1= RULE_OPEN_PARENTHESES ( (lv_param_2_0= ruleParams ) )* this_Closed_parentheses_3= RULE_CLOSED_PARENTHESES ) ;
+    // InternalGo.g:2802:1: ruleCallFunc returns [EObject current=null] : ( ( (lv_nameFunc_0_0= RULE_ID ) ) this_Open_parentheses_1= RULE_OPEN_PARENTHESES ( (lv_param_2_0= ruleParams ) )* this_Closed_parentheses_3= RULE_CLOSED_PARENTHESES ) ;
     public final EObject ruleCallFunc() throws RecognitionException {
         EObject current = null;
 
@@ -8383,17 +8502,17 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2768:2: ( ( ( (lv_nameFunc_0_0= RULE_ID ) ) this_Open_parentheses_1= RULE_OPEN_PARENTHESES ( (lv_param_2_0= ruleParams ) )* this_Closed_parentheses_3= RULE_CLOSED_PARENTHESES ) )
-            // InternalGo.g:2769:2: ( ( (lv_nameFunc_0_0= RULE_ID ) ) this_Open_parentheses_1= RULE_OPEN_PARENTHESES ( (lv_param_2_0= ruleParams ) )* this_Closed_parentheses_3= RULE_CLOSED_PARENTHESES )
+            // InternalGo.g:2808:2: ( ( ( (lv_nameFunc_0_0= RULE_ID ) ) this_Open_parentheses_1= RULE_OPEN_PARENTHESES ( (lv_param_2_0= ruleParams ) )* this_Closed_parentheses_3= RULE_CLOSED_PARENTHESES ) )
+            // InternalGo.g:2809:2: ( ( (lv_nameFunc_0_0= RULE_ID ) ) this_Open_parentheses_1= RULE_OPEN_PARENTHESES ( (lv_param_2_0= ruleParams ) )* this_Closed_parentheses_3= RULE_CLOSED_PARENTHESES )
             {
-            // InternalGo.g:2769:2: ( ( (lv_nameFunc_0_0= RULE_ID ) ) this_Open_parentheses_1= RULE_OPEN_PARENTHESES ( (lv_param_2_0= ruleParams ) )* this_Closed_parentheses_3= RULE_CLOSED_PARENTHESES )
-            // InternalGo.g:2770:3: ( (lv_nameFunc_0_0= RULE_ID ) ) this_Open_parentheses_1= RULE_OPEN_PARENTHESES ( (lv_param_2_0= ruleParams ) )* this_Closed_parentheses_3= RULE_CLOSED_PARENTHESES
+            // InternalGo.g:2809:2: ( ( (lv_nameFunc_0_0= RULE_ID ) ) this_Open_parentheses_1= RULE_OPEN_PARENTHESES ( (lv_param_2_0= ruleParams ) )* this_Closed_parentheses_3= RULE_CLOSED_PARENTHESES )
+            // InternalGo.g:2810:3: ( (lv_nameFunc_0_0= RULE_ID ) ) this_Open_parentheses_1= RULE_OPEN_PARENTHESES ( (lv_param_2_0= ruleParams ) )* this_Closed_parentheses_3= RULE_CLOSED_PARENTHESES
             {
-            // InternalGo.g:2770:3: ( (lv_nameFunc_0_0= RULE_ID ) )
-            // InternalGo.g:2771:4: (lv_nameFunc_0_0= RULE_ID )
+            // InternalGo.g:2810:3: ( (lv_nameFunc_0_0= RULE_ID ) )
+            // InternalGo.g:2811:4: (lv_nameFunc_0_0= RULE_ID )
             {
-            // InternalGo.g:2771:4: (lv_nameFunc_0_0= RULE_ID )
-            // InternalGo.g:2772:5: lv_nameFunc_0_0= RULE_ID
+            // InternalGo.g:2811:4: (lv_nameFunc_0_0= RULE_ID )
+            // InternalGo.g:2812:5: lv_nameFunc_0_0= RULE_ID
             {
             lv_nameFunc_0_0=(Token)match(input,RULE_ID,FOLLOW_12); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -8425,7 +8544,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_Open_parentheses_1, grammarAccess.getCallFuncAccess().getOpen_parenthesesTerminalRuleCall_1());
               		
             }
-            // InternalGo.g:2792:3: ( (lv_param_2_0= ruleParams ) )*
+            // InternalGo.g:2832:3: ( (lv_param_2_0= ruleParams ) )*
             loop51:
             do {
                 int alt51=2;
@@ -8438,10 +8557,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
                 switch (alt51) {
             	case 1 :
-            	    // InternalGo.g:2793:4: (lv_param_2_0= ruleParams )
+            	    // InternalGo.g:2833:4: (lv_param_2_0= ruleParams )
             	    {
-            	    // InternalGo.g:2793:4: (lv_param_2_0= ruleParams )
-            	    // InternalGo.g:2794:5: lv_param_2_0= ruleParams
+            	    // InternalGo.g:2833:4: (lv_param_2_0= ruleParams )
+            	    // InternalGo.g:2834:5: lv_param_2_0= ruleParams
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -8509,7 +8628,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTypes"
-    // InternalGo.g:2819:1: entryRuleTypes returns [String current=null] : iv_ruleTypes= ruleTypes EOF ;
+    // InternalGo.g:2859:1: entryRuleTypes returns [String current=null] : iv_ruleTypes= ruleTypes EOF ;
     public final String entryRuleTypes() throws RecognitionException {
         String current = null;
 
@@ -8517,8 +8636,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:2819:45: (iv_ruleTypes= ruleTypes EOF )
-            // InternalGo.g:2820:2: iv_ruleTypes= ruleTypes EOF
+            // InternalGo.g:2859:45: (iv_ruleTypes= ruleTypes EOF )
+            // InternalGo.g:2860:2: iv_ruleTypes= ruleTypes EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTypesRule()); 
@@ -8549,7 +8668,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTypes"
-    // InternalGo.g:2826:1: ruleTypes returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_TYPE_0= ruleTYPE | kw= 'string' | kw= 'int' | kw= 'bool' | kw= 'byte' | kw= 'rune' | kw= 'float32' | kw= 'float64' ) ;
+    // InternalGo.g:2866:1: ruleTypes returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_TYPE_0= ruleTYPE | kw= 'string' | kw= 'int' | kw= 'bool' | kw= 'byte' | kw= 'rune' | kw= 'float32' | kw= 'float64' ) ;
     public final AntlrDatatypeRuleToken ruleTypes() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -8561,10 +8680,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2832:2: ( (this_TYPE_0= ruleTYPE | kw= 'string' | kw= 'int' | kw= 'bool' | kw= 'byte' | kw= 'rune' | kw= 'float32' | kw= 'float64' ) )
-            // InternalGo.g:2833:2: (this_TYPE_0= ruleTYPE | kw= 'string' | kw= 'int' | kw= 'bool' | kw= 'byte' | kw= 'rune' | kw= 'float32' | kw= 'float64' )
+            // InternalGo.g:2872:2: ( (this_TYPE_0= ruleTYPE | kw= 'string' | kw= 'int' | kw= 'bool' | kw= 'byte' | kw= 'rune' | kw= 'float32' | kw= 'float64' ) )
+            // InternalGo.g:2873:2: (this_TYPE_0= ruleTYPE | kw= 'string' | kw= 'int' | kw= 'bool' | kw= 'byte' | kw= 'rune' | kw= 'float32' | kw= 'float64' )
             {
-            // InternalGo.g:2833:2: (this_TYPE_0= ruleTYPE | kw= 'string' | kw= 'int' | kw= 'bool' | kw= 'byte' | kw= 'rune' | kw= 'float32' | kw= 'float64' )
+            // InternalGo.g:2873:2: (this_TYPE_0= ruleTYPE | kw= 'string' | kw= 'int' | kw= 'bool' | kw= 'byte' | kw= 'rune' | kw= 'float32' | kw= 'float64' )
             int alt52=8;
             switch ( input.LA(1) ) {
             case 61:
@@ -8617,7 +8736,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
             switch (alt52) {
                 case 1 :
-                    // InternalGo.g:2834:3: this_TYPE_0= ruleTYPE
+                    // InternalGo.g:2874:3: this_TYPE_0= ruleTYPE
                     {
                     if ( state.backtracking==0 ) {
 
@@ -8643,7 +8762,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2845:3: kw= 'string'
+                    // InternalGo.g:2885:3: kw= 'string'
                     {
                     kw=(Token)match(input,40,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -8656,7 +8775,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalGo.g:2851:3: kw= 'int'
+                    // InternalGo.g:2891:3: kw= 'int'
                     {
                     kw=(Token)match(input,41,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -8669,7 +8788,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalGo.g:2857:3: kw= 'bool'
+                    // InternalGo.g:2897:3: kw= 'bool'
                     {
                     kw=(Token)match(input,42,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -8682,7 +8801,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalGo.g:2863:3: kw= 'byte'
+                    // InternalGo.g:2903:3: kw= 'byte'
                     {
                     kw=(Token)match(input,43,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -8695,7 +8814,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalGo.g:2869:3: kw= 'rune'
+                    // InternalGo.g:2909:3: kw= 'rune'
                     {
                     kw=(Token)match(input,44,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -8708,7 +8827,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalGo.g:2875:3: kw= 'float32'
+                    // InternalGo.g:2915:3: kw= 'float32'
                     {
                     kw=(Token)match(input,45,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -8721,7 +8840,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalGo.g:2881:3: kw= 'float64'
+                    // InternalGo.g:2921:3: kw= 'float64'
                     {
                     kw=(Token)match(input,46,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -8758,7 +8877,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleModif"
-    // InternalGo.g:2890:1: entryRuleModif returns [String current=null] : iv_ruleModif= ruleModif EOF ;
+    // InternalGo.g:2930:1: entryRuleModif returns [String current=null] : iv_ruleModif= ruleModif EOF ;
     public final String entryRuleModif() throws RecognitionException {
         String current = null;
 
@@ -8766,8 +8885,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:2890:45: (iv_ruleModif= ruleModif EOF )
-            // InternalGo.g:2891:2: iv_ruleModif= ruleModif EOF
+            // InternalGo.g:2930:45: (iv_ruleModif= ruleModif EOF )
+            // InternalGo.g:2931:2: iv_ruleModif= ruleModif EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getModifRule()); 
@@ -8798,7 +8917,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModif"
-    // InternalGo.g:2897:1: ruleModif returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_VAR_0= ruleVAR | this_CONST_1= ruleCONST ) ;
+    // InternalGo.g:2937:1: ruleModif returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_VAR_0= ruleVAR | this_CONST_1= ruleCONST ) ;
     public final AntlrDatatypeRuleToken ruleModif() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -8811,10 +8930,10 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2903:2: ( (this_VAR_0= ruleVAR | this_CONST_1= ruleCONST ) )
-            // InternalGo.g:2904:2: (this_VAR_0= ruleVAR | this_CONST_1= ruleCONST )
+            // InternalGo.g:2943:2: ( (this_VAR_0= ruleVAR | this_CONST_1= ruleCONST ) )
+            // InternalGo.g:2944:2: (this_VAR_0= ruleVAR | this_CONST_1= ruleCONST )
             {
-            // InternalGo.g:2904:2: (this_VAR_0= ruleVAR | this_CONST_1= ruleCONST )
+            // InternalGo.g:2944:2: (this_VAR_0= ruleVAR | this_CONST_1= ruleCONST )
             int alt53=2;
             int LA53_0 = input.LA(1);
 
@@ -8833,7 +8952,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             }
             switch (alt53) {
                 case 1 :
-                    // InternalGo.g:2905:3: this_VAR_0= ruleVAR
+                    // InternalGo.g:2945:3: this_VAR_0= ruleVAR
                     {
                     if ( state.backtracking==0 ) {
 
@@ -8859,7 +8978,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2916:3: this_CONST_1= ruleCONST
+                    // InternalGo.g:2956:3: this_CONST_1= ruleCONST
                     {
                     if ( state.backtracking==0 ) {
 
@@ -8909,16 +9028,16 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBoolean"
-    // InternalGo.g:2930:1: entryRuleBoolean returns [String current=null] : iv_ruleBoolean= ruleBoolean EOF ;
-    public final String entryRuleBoolean() throws RecognitionException {
-        String current = null;
+    // InternalGo.g:2970:1: entryRuleBoolean returns [EObject current=null] : iv_ruleBoolean= ruleBoolean EOF ;
+    public final EObject entryRuleBoolean() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleBoolean = null;
+        EObject iv_ruleBoolean = null;
 
 
         try {
-            // InternalGo.g:2930:47: (iv_ruleBoolean= ruleBoolean EOF )
-            // InternalGo.g:2931:2: iv_ruleBoolean= ruleBoolean EOF
+            // InternalGo.g:2970:48: (iv_ruleBoolean= ruleBoolean EOF )
+            // InternalGo.g:2971:2: iv_ruleBoolean= ruleBoolean EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBooleanRule()); 
@@ -8929,7 +9048,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleBoolean.getText(); 
+               current =iv_ruleBoolean; 
             }
             match(input,EOF,FOLLOW_2); if (state.failed) return current;
 
@@ -8949,20 +9068,21 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBoolean"
-    // InternalGo.g:2937:1: ruleBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
-    public final AntlrDatatypeRuleToken ruleBoolean() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // InternalGo.g:2977:1: ruleBoolean returns [EObject current=null] : ( ( (lv_val_0_0= 'true' ) ) | ( (lv_val_1_0= 'false' ) ) ) ;
+    public final EObject ruleBoolean() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
+        Token lv_val_0_0=null;
+        Token lv_val_1_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalGo.g:2943:2: ( (kw= 'true' | kw= 'false' ) )
-            // InternalGo.g:2944:2: (kw= 'true' | kw= 'false' )
+            // InternalGo.g:2983:2: ( ( ( (lv_val_0_0= 'true' ) ) | ( (lv_val_1_0= 'false' ) ) ) )
+            // InternalGo.g:2984:2: ( ( (lv_val_0_0= 'true' ) ) | ( (lv_val_1_0= 'false' ) ) )
             {
-            // InternalGo.g:2944:2: (kw= 'true' | kw= 'false' )
+            // InternalGo.g:2984:2: ( ( (lv_val_0_0= 'true' ) ) | ( (lv_val_1_0= 'false' ) ) )
             int alt54=2;
             int LA54_0 = input.LA(1);
 
@@ -8981,28 +9101,66 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             }
             switch (alt54) {
                 case 1 :
-                    // InternalGo.g:2945:3: kw= 'true'
+                    // InternalGo.g:2985:3: ( (lv_val_0_0= 'true' ) )
                     {
-                    kw=(Token)match(input,47,FOLLOW_2); if (state.failed) return current;
+                    // InternalGo.g:2985:3: ( (lv_val_0_0= 'true' ) )
+                    // InternalGo.g:2986:4: (lv_val_0_0= 'true' )
+                    {
+                    // InternalGo.g:2986:4: (lv_val_0_0= 'true' )
+                    // InternalGo.g:2987:5: lv_val_0_0= 'true'
+                    {
+                    lv_val_0_0=(Token)match(input,47,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			current.merge(kw);
-                      			newLeafNode(kw, grammarAccess.getBooleanAccess().getTrueKeyword_0());
-                      		
+                      					newLeafNode(lv_val_0_0, grammarAccess.getBooleanAccess().getValTrueKeyword_0_0());
+                      				
                     }
+                    if ( state.backtracking==0 ) {
+
+                      					if (current==null) {
+                      						current = createModelElement(grammarAccess.getBooleanRule());
+                      					}
+                      					setWithLastConsumed(current, "val", lv_val_0_0, "true");
+                      				
+                    }
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2951:3: kw= 'false'
+                    // InternalGo.g:3000:3: ( (lv_val_1_0= 'false' ) )
                     {
-                    kw=(Token)match(input,48,FOLLOW_2); if (state.failed) return current;
+                    // InternalGo.g:3000:3: ( (lv_val_1_0= 'false' ) )
+                    // InternalGo.g:3001:4: (lv_val_1_0= 'false' )
+                    {
+                    // InternalGo.g:3001:4: (lv_val_1_0= 'false' )
+                    // InternalGo.g:3002:5: lv_val_1_0= 'false'
+                    {
+                    lv_val_1_0=(Token)match(input,48,FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			current.merge(kw);
-                      			newLeafNode(kw, grammarAccess.getBooleanAccess().getFalseKeyword_1());
-                      		
+                      					newLeafNode(lv_val_1_0, grammarAccess.getBooleanAccess().getValFalseKeyword_1_0());
+                      				
                     }
+                    if ( state.backtracking==0 ) {
+
+                      					if (current==null) {
+                      						current = createModelElement(grammarAccess.getBooleanRule());
+                      					}
+                      					setWithLastConsumed(current, "val", lv_val_1_0, "false");
+                      				
+                    }
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
@@ -9031,7 +9189,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBREAK"
-    // InternalGo.g:2960:1: entryRuleBREAK returns [String current=null] : iv_ruleBREAK= ruleBREAK EOF ;
+    // InternalGo.g:3018:1: entryRuleBREAK returns [String current=null] : iv_ruleBREAK= ruleBREAK EOF ;
     public final String entryRuleBREAK() throws RecognitionException {
         String current = null;
 
@@ -9039,8 +9197,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:2960:45: (iv_ruleBREAK= ruleBREAK EOF )
-            // InternalGo.g:2961:2: iv_ruleBREAK= ruleBREAK EOF
+            // InternalGo.g:3018:45: (iv_ruleBREAK= ruleBREAK EOF )
+            // InternalGo.g:3019:2: iv_ruleBREAK= ruleBREAK EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBREAKRule()); 
@@ -9071,7 +9229,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBREAK"
-    // InternalGo.g:2967:1: ruleBREAK returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'break' ;
+    // InternalGo.g:3025:1: ruleBREAK returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'break' ;
     public final AntlrDatatypeRuleToken ruleBREAK() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9081,8 +9239,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2973:2: (kw= 'break' )
-            // InternalGo.g:2974:2: kw= 'break'
+            // InternalGo.g:3031:2: (kw= 'break' )
+            // InternalGo.g:3032:2: kw= 'break'
             {
             kw=(Token)match(input,49,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9113,7 +9271,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCASE"
-    // InternalGo.g:2982:1: entryRuleCASE returns [String current=null] : iv_ruleCASE= ruleCASE EOF ;
+    // InternalGo.g:3040:1: entryRuleCASE returns [String current=null] : iv_ruleCASE= ruleCASE EOF ;
     public final String entryRuleCASE() throws RecognitionException {
         String current = null;
 
@@ -9121,8 +9279,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:2982:44: (iv_ruleCASE= ruleCASE EOF )
-            // InternalGo.g:2983:2: iv_ruleCASE= ruleCASE EOF
+            // InternalGo.g:3040:44: (iv_ruleCASE= ruleCASE EOF )
+            // InternalGo.g:3041:2: iv_ruleCASE= ruleCASE EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCASERule()); 
@@ -9153,7 +9311,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCASE"
-    // InternalGo.g:2989:1: ruleCASE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'case' ;
+    // InternalGo.g:3047:1: ruleCASE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'case' ;
     public final AntlrDatatypeRuleToken ruleCASE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9163,8 +9321,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2995:2: (kw= 'case' )
-            // InternalGo.g:2996:2: kw= 'case'
+            // InternalGo.g:3053:2: (kw= 'case' )
+            // InternalGo.g:3054:2: kw= 'case'
             {
             kw=(Token)match(input,50,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9195,7 +9353,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCHAN"
-    // InternalGo.g:3004:1: entryRuleCHAN returns [String current=null] : iv_ruleCHAN= ruleCHAN EOF ;
+    // InternalGo.g:3062:1: entryRuleCHAN returns [String current=null] : iv_ruleCHAN= ruleCHAN EOF ;
     public final String entryRuleCHAN() throws RecognitionException {
         String current = null;
 
@@ -9203,8 +9361,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3004:44: (iv_ruleCHAN= ruleCHAN EOF )
-            // InternalGo.g:3005:2: iv_ruleCHAN= ruleCHAN EOF
+            // InternalGo.g:3062:44: (iv_ruleCHAN= ruleCHAN EOF )
+            // InternalGo.g:3063:2: iv_ruleCHAN= ruleCHAN EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCHANRule()); 
@@ -9235,7 +9393,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCHAN"
-    // InternalGo.g:3011:1: ruleCHAN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'chan' ;
+    // InternalGo.g:3069:1: ruleCHAN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'chan' ;
     public final AntlrDatatypeRuleToken ruleCHAN() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9245,8 +9403,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3017:2: (kw= 'chan' )
-            // InternalGo.g:3018:2: kw= 'chan'
+            // InternalGo.g:3075:2: (kw= 'chan' )
+            // InternalGo.g:3076:2: kw= 'chan'
             {
             kw=(Token)match(input,51,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9277,7 +9435,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCONST"
-    // InternalGo.g:3026:1: entryRuleCONST returns [String current=null] : iv_ruleCONST= ruleCONST EOF ;
+    // InternalGo.g:3084:1: entryRuleCONST returns [String current=null] : iv_ruleCONST= ruleCONST EOF ;
     public final String entryRuleCONST() throws RecognitionException {
         String current = null;
 
@@ -9285,8 +9443,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3026:45: (iv_ruleCONST= ruleCONST EOF )
-            // InternalGo.g:3027:2: iv_ruleCONST= ruleCONST EOF
+            // InternalGo.g:3084:45: (iv_ruleCONST= ruleCONST EOF )
+            // InternalGo.g:3085:2: iv_ruleCONST= ruleCONST EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCONSTRule()); 
@@ -9317,7 +9475,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCONST"
-    // InternalGo.g:3033:1: ruleCONST returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'const' ;
+    // InternalGo.g:3091:1: ruleCONST returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'const' ;
     public final AntlrDatatypeRuleToken ruleCONST() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9327,8 +9485,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3039:2: (kw= 'const' )
-            // InternalGo.g:3040:2: kw= 'const'
+            // InternalGo.g:3097:2: (kw= 'const' )
+            // InternalGo.g:3098:2: kw= 'const'
             {
             kw=(Token)match(input,52,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9359,7 +9517,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCONTINUE"
-    // InternalGo.g:3048:1: entryRuleCONTINUE returns [String current=null] : iv_ruleCONTINUE= ruleCONTINUE EOF ;
+    // InternalGo.g:3106:1: entryRuleCONTINUE returns [String current=null] : iv_ruleCONTINUE= ruleCONTINUE EOF ;
     public final String entryRuleCONTINUE() throws RecognitionException {
         String current = null;
 
@@ -9367,8 +9525,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3048:48: (iv_ruleCONTINUE= ruleCONTINUE EOF )
-            // InternalGo.g:3049:2: iv_ruleCONTINUE= ruleCONTINUE EOF
+            // InternalGo.g:3106:48: (iv_ruleCONTINUE= ruleCONTINUE EOF )
+            // InternalGo.g:3107:2: iv_ruleCONTINUE= ruleCONTINUE EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCONTINUERule()); 
@@ -9399,7 +9557,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCONTINUE"
-    // InternalGo.g:3055:1: ruleCONTINUE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'continue' ;
+    // InternalGo.g:3113:1: ruleCONTINUE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'continue' ;
     public final AntlrDatatypeRuleToken ruleCONTINUE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9409,8 +9567,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3061:2: (kw= 'continue' )
-            // InternalGo.g:3062:2: kw= 'continue'
+            // InternalGo.g:3119:2: (kw= 'continue' )
+            // InternalGo.g:3120:2: kw= 'continue'
             {
             kw=(Token)match(input,53,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9441,7 +9599,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleELSE"
-    // InternalGo.g:3070:1: entryRuleELSE returns [String current=null] : iv_ruleELSE= ruleELSE EOF ;
+    // InternalGo.g:3128:1: entryRuleELSE returns [String current=null] : iv_ruleELSE= ruleELSE EOF ;
     public final String entryRuleELSE() throws RecognitionException {
         String current = null;
 
@@ -9449,8 +9607,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3070:44: (iv_ruleELSE= ruleELSE EOF )
-            // InternalGo.g:3071:2: iv_ruleELSE= ruleELSE EOF
+            // InternalGo.g:3128:44: (iv_ruleELSE= ruleELSE EOF )
+            // InternalGo.g:3129:2: iv_ruleELSE= ruleELSE EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getELSERule()); 
@@ -9481,7 +9639,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleELSE"
-    // InternalGo.g:3077:1: ruleELSE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'else' ;
+    // InternalGo.g:3135:1: ruleELSE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'else' ;
     public final AntlrDatatypeRuleToken ruleELSE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9491,8 +9649,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3083:2: (kw= 'else' )
-            // InternalGo.g:3084:2: kw= 'else'
+            // InternalGo.g:3141:2: (kw= 'else' )
+            // InternalGo.g:3142:2: kw= 'else'
             {
             kw=(Token)match(input,54,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9523,7 +9681,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFOR"
-    // InternalGo.g:3092:1: entryRuleFOR returns [String current=null] : iv_ruleFOR= ruleFOR EOF ;
+    // InternalGo.g:3150:1: entryRuleFOR returns [String current=null] : iv_ruleFOR= ruleFOR EOF ;
     public final String entryRuleFOR() throws RecognitionException {
         String current = null;
 
@@ -9531,8 +9689,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3092:43: (iv_ruleFOR= ruleFOR EOF )
-            // InternalGo.g:3093:2: iv_ruleFOR= ruleFOR EOF
+            // InternalGo.g:3150:43: (iv_ruleFOR= ruleFOR EOF )
+            // InternalGo.g:3151:2: iv_ruleFOR= ruleFOR EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFORRule()); 
@@ -9563,7 +9721,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFOR"
-    // InternalGo.g:3099:1: ruleFOR returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'for' ;
+    // InternalGo.g:3157:1: ruleFOR returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'for' ;
     public final AntlrDatatypeRuleToken ruleFOR() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9573,8 +9731,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3105:2: (kw= 'for' )
-            // InternalGo.g:3106:2: kw= 'for'
+            // InternalGo.g:3163:2: (kw= 'for' )
+            // InternalGo.g:3164:2: kw= 'for'
             {
             kw=(Token)match(input,55,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9605,7 +9763,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFUNC"
-    // InternalGo.g:3114:1: entryRuleFUNC returns [String current=null] : iv_ruleFUNC= ruleFUNC EOF ;
+    // InternalGo.g:3172:1: entryRuleFUNC returns [String current=null] : iv_ruleFUNC= ruleFUNC EOF ;
     public final String entryRuleFUNC() throws RecognitionException {
         String current = null;
 
@@ -9613,8 +9771,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3114:44: (iv_ruleFUNC= ruleFUNC EOF )
-            // InternalGo.g:3115:2: iv_ruleFUNC= ruleFUNC EOF
+            // InternalGo.g:3172:44: (iv_ruleFUNC= ruleFUNC EOF )
+            // InternalGo.g:3173:2: iv_ruleFUNC= ruleFUNC EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFUNCRule()); 
@@ -9645,7 +9803,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFUNC"
-    // InternalGo.g:3121:1: ruleFUNC returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'func' ;
+    // InternalGo.g:3179:1: ruleFUNC returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'func' ;
     public final AntlrDatatypeRuleToken ruleFUNC() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9655,8 +9813,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3127:2: (kw= 'func' )
-            // InternalGo.g:3128:2: kw= 'func'
+            // InternalGo.g:3185:2: (kw= 'func' )
+            // InternalGo.g:3186:2: kw= 'func'
             {
             kw=(Token)match(input,56,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9687,7 +9845,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIF"
-    // InternalGo.g:3136:1: entryRuleIF returns [String current=null] : iv_ruleIF= ruleIF EOF ;
+    // InternalGo.g:3194:1: entryRuleIF returns [String current=null] : iv_ruleIF= ruleIF EOF ;
     public final String entryRuleIF() throws RecognitionException {
         String current = null;
 
@@ -9695,8 +9853,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3136:42: (iv_ruleIF= ruleIF EOF )
-            // InternalGo.g:3137:2: iv_ruleIF= ruleIF EOF
+            // InternalGo.g:3194:42: (iv_ruleIF= ruleIF EOF )
+            // InternalGo.g:3195:2: iv_ruleIF= ruleIF EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIFRule()); 
@@ -9727,7 +9885,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIF"
-    // InternalGo.g:3143:1: ruleIF returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'if' ;
+    // InternalGo.g:3201:1: ruleIF returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'if' ;
     public final AntlrDatatypeRuleToken ruleIF() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9737,8 +9895,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3149:2: (kw= 'if' )
-            // InternalGo.g:3150:2: kw= 'if'
+            // InternalGo.g:3207:2: (kw= 'if' )
+            // InternalGo.g:3208:2: kw= 'if'
             {
             kw=(Token)match(input,57,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9769,7 +9927,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIMPORT"
-    // InternalGo.g:3158:1: entryRuleIMPORT returns [String current=null] : iv_ruleIMPORT= ruleIMPORT EOF ;
+    // InternalGo.g:3216:1: entryRuleIMPORT returns [String current=null] : iv_ruleIMPORT= ruleIMPORT EOF ;
     public final String entryRuleIMPORT() throws RecognitionException {
         String current = null;
 
@@ -9777,8 +9935,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3158:46: (iv_ruleIMPORT= ruleIMPORT EOF )
-            // InternalGo.g:3159:2: iv_ruleIMPORT= ruleIMPORT EOF
+            // InternalGo.g:3216:46: (iv_ruleIMPORT= ruleIMPORT EOF )
+            // InternalGo.g:3217:2: iv_ruleIMPORT= ruleIMPORT EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIMPORTRule()); 
@@ -9809,7 +9967,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIMPORT"
-    // InternalGo.g:3165:1: ruleIMPORT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'import' ;
+    // InternalGo.g:3223:1: ruleIMPORT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'import' ;
     public final AntlrDatatypeRuleToken ruleIMPORT() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9819,8 +9977,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3171:2: (kw= 'import' )
-            // InternalGo.g:3172:2: kw= 'import'
+            // InternalGo.g:3229:2: (kw= 'import' )
+            // InternalGo.g:3230:2: kw= 'import'
             {
             kw=(Token)match(input,58,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9851,7 +10009,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRETURN"
-    // InternalGo.g:3180:1: entryRuleRETURN returns [String current=null] : iv_ruleRETURN= ruleRETURN EOF ;
+    // InternalGo.g:3238:1: entryRuleRETURN returns [String current=null] : iv_ruleRETURN= ruleRETURN EOF ;
     public final String entryRuleRETURN() throws RecognitionException {
         String current = null;
 
@@ -9859,8 +10017,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3180:46: (iv_ruleRETURN= ruleRETURN EOF )
-            // InternalGo.g:3181:2: iv_ruleRETURN= ruleRETURN EOF
+            // InternalGo.g:3238:46: (iv_ruleRETURN= ruleRETURN EOF )
+            // InternalGo.g:3239:2: iv_ruleRETURN= ruleRETURN EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRETURNRule()); 
@@ -9891,7 +10049,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRETURN"
-    // InternalGo.g:3187:1: ruleRETURN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'return' ;
+    // InternalGo.g:3245:1: ruleRETURN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'return' ;
     public final AntlrDatatypeRuleToken ruleRETURN() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9901,8 +10059,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3193:2: (kw= 'return' )
-            // InternalGo.g:3194:2: kw= 'return'
+            // InternalGo.g:3251:2: (kw= 'return' )
+            // InternalGo.g:3252:2: kw= 'return'
             {
             kw=(Token)match(input,59,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9933,7 +10091,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePACKAGE"
-    // InternalGo.g:3202:1: entryRulePACKAGE returns [String current=null] : iv_rulePACKAGE= rulePACKAGE EOF ;
+    // InternalGo.g:3260:1: entryRulePACKAGE returns [String current=null] : iv_rulePACKAGE= rulePACKAGE EOF ;
     public final String entryRulePACKAGE() throws RecognitionException {
         String current = null;
 
@@ -9941,8 +10099,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3202:47: (iv_rulePACKAGE= rulePACKAGE EOF )
-            // InternalGo.g:3203:2: iv_rulePACKAGE= rulePACKAGE EOF
+            // InternalGo.g:3260:47: (iv_rulePACKAGE= rulePACKAGE EOF )
+            // InternalGo.g:3261:2: iv_rulePACKAGE= rulePACKAGE EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPACKAGERule()); 
@@ -9973,7 +10131,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePACKAGE"
-    // InternalGo.g:3209:1: rulePACKAGE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'package' ;
+    // InternalGo.g:3267:1: rulePACKAGE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'package' ;
     public final AntlrDatatypeRuleToken rulePACKAGE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9983,8 +10141,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3215:2: (kw= 'package' )
-            // InternalGo.g:3216:2: kw= 'package'
+            // InternalGo.g:3273:2: (kw= 'package' )
+            // InternalGo.g:3274:2: kw= 'package'
             {
             kw=(Token)match(input,60,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -10015,7 +10173,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTYPE"
-    // InternalGo.g:3224:1: entryRuleTYPE returns [String current=null] : iv_ruleTYPE= ruleTYPE EOF ;
+    // InternalGo.g:3282:1: entryRuleTYPE returns [String current=null] : iv_ruleTYPE= ruleTYPE EOF ;
     public final String entryRuleTYPE() throws RecognitionException {
         String current = null;
 
@@ -10023,8 +10181,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3224:44: (iv_ruleTYPE= ruleTYPE EOF )
-            // InternalGo.g:3225:2: iv_ruleTYPE= ruleTYPE EOF
+            // InternalGo.g:3282:44: (iv_ruleTYPE= ruleTYPE EOF )
+            // InternalGo.g:3283:2: iv_ruleTYPE= ruleTYPE EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTYPERule()); 
@@ -10055,7 +10213,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTYPE"
-    // InternalGo.g:3231:1: ruleTYPE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'type' ;
+    // InternalGo.g:3289:1: ruleTYPE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'type' ;
     public final AntlrDatatypeRuleToken ruleTYPE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10065,8 +10223,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3237:2: (kw= 'type' )
-            // InternalGo.g:3238:2: kw= 'type'
+            // InternalGo.g:3295:2: (kw= 'type' )
+            // InternalGo.g:3296:2: kw= 'type'
             {
             kw=(Token)match(input,61,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -10097,7 +10255,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVAR"
-    // InternalGo.g:3246:1: entryRuleVAR returns [String current=null] : iv_ruleVAR= ruleVAR EOF ;
+    // InternalGo.g:3304:1: entryRuleVAR returns [String current=null] : iv_ruleVAR= ruleVAR EOF ;
     public final String entryRuleVAR() throws RecognitionException {
         String current = null;
 
@@ -10105,8 +10263,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3246:43: (iv_ruleVAR= ruleVAR EOF )
-            // InternalGo.g:3247:2: iv_ruleVAR= ruleVAR EOF
+            // InternalGo.g:3304:43: (iv_ruleVAR= ruleVAR EOF )
+            // InternalGo.g:3305:2: iv_ruleVAR= ruleVAR EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVARRule()); 
@@ -10137,7 +10295,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVAR"
-    // InternalGo.g:3253:1: ruleVAR returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'var' ;
+    // InternalGo.g:3311:1: ruleVAR returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'var' ;
     public final AntlrDatatypeRuleToken ruleVAR() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10147,8 +10305,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3259:2: (kw= 'var' )
-            // InternalGo.g:3260:2: kw= 'var'
+            // InternalGo.g:3317:2: (kw= 'var' )
+            // InternalGo.g:3318:2: kw= 'var'
             {
             kw=(Token)match(input,62,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -10179,7 +10337,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDEFAULT"
-    // InternalGo.g:3268:1: entryRuleDEFAULT returns [String current=null] : iv_ruleDEFAULT= ruleDEFAULT EOF ;
+    // InternalGo.g:3326:1: entryRuleDEFAULT returns [String current=null] : iv_ruleDEFAULT= ruleDEFAULT EOF ;
     public final String entryRuleDEFAULT() throws RecognitionException {
         String current = null;
 
@@ -10187,8 +10345,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3268:47: (iv_ruleDEFAULT= ruleDEFAULT EOF )
-            // InternalGo.g:3269:2: iv_ruleDEFAULT= ruleDEFAULT EOF
+            // InternalGo.g:3326:47: (iv_ruleDEFAULT= ruleDEFAULT EOF )
+            // InternalGo.g:3327:2: iv_ruleDEFAULT= ruleDEFAULT EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDEFAULTRule()); 
@@ -10219,7 +10377,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDEFAULT"
-    // InternalGo.g:3275:1: ruleDEFAULT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'default' ;
+    // InternalGo.g:3333:1: ruleDEFAULT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'default' ;
     public final AntlrDatatypeRuleToken ruleDEFAULT() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10229,8 +10387,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3281:2: (kw= 'default' )
-            // InternalGo.g:3282:2: kw= 'default'
+            // InternalGo.g:3339:2: (kw= 'default' )
+            // InternalGo.g:3340:2: kw= 'default'
             {
             kw=(Token)match(input,63,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -10261,7 +10419,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSWITCH"
-    // InternalGo.g:3290:1: entryRuleSWITCH returns [String current=null] : iv_ruleSWITCH= ruleSWITCH EOF ;
+    // InternalGo.g:3348:1: entryRuleSWITCH returns [String current=null] : iv_ruleSWITCH= ruleSWITCH EOF ;
     public final String entryRuleSWITCH() throws RecognitionException {
         String current = null;
 
@@ -10269,8 +10427,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3290:46: (iv_ruleSWITCH= ruleSWITCH EOF )
-            // InternalGo.g:3291:2: iv_ruleSWITCH= ruleSWITCH EOF
+            // InternalGo.g:3348:46: (iv_ruleSWITCH= ruleSWITCH EOF )
+            // InternalGo.g:3349:2: iv_ruleSWITCH= ruleSWITCH EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSWITCHRule()); 
@@ -10301,7 +10459,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSWITCH"
-    // InternalGo.g:3297:1: ruleSWITCH returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'switch' ;
+    // InternalGo.g:3355:1: ruleSWITCH returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'switch' ;
     public final AntlrDatatypeRuleToken ruleSWITCH() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10311,8 +10469,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3303:2: (kw= 'switch' )
-            // InternalGo.g:3304:2: kw= 'switch'
+            // InternalGo.g:3361:2: (kw= 'switch' )
+            // InternalGo.g:3362:2: kw= 'switch'
             {
             kw=(Token)match(input,64,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -10343,7 +10501,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRANGE"
-    // InternalGo.g:3312:1: entryRuleRANGE returns [String current=null] : iv_ruleRANGE= ruleRANGE EOF ;
+    // InternalGo.g:3370:1: entryRuleRANGE returns [String current=null] : iv_ruleRANGE= ruleRANGE EOF ;
     public final String entryRuleRANGE() throws RecognitionException {
         String current = null;
 
@@ -10351,8 +10509,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3312:45: (iv_ruleRANGE= ruleRANGE EOF )
-            // InternalGo.g:3313:2: iv_ruleRANGE= ruleRANGE EOF
+            // InternalGo.g:3370:45: (iv_ruleRANGE= ruleRANGE EOF )
+            // InternalGo.g:3371:2: iv_ruleRANGE= ruleRANGE EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRANGERule()); 
@@ -10383,7 +10541,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRANGE"
-    // InternalGo.g:3319:1: ruleRANGE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'range' ;
+    // InternalGo.g:3377:1: ruleRANGE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'range' ;
     public final AntlrDatatypeRuleToken ruleRANGE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10393,8 +10551,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3325:2: (kw= 'range' )
-            // InternalGo.g:3326:2: kw= 'range'
+            // InternalGo.g:3383:2: (kw= 'range' )
+            // InternalGo.g:3384:2: kw= 'range'
             {
             kw=(Token)match(input,65,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -10425,7 +10583,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDataType"
-    // InternalGo.g:3334:1: entryRuleDataType returns [EObject current=null] : iv_ruleDataType= ruleDataType EOF ;
+    // InternalGo.g:3392:1: entryRuleDataType returns [EObject current=null] : iv_ruleDataType= ruleDataType EOF ;
     public final EObject entryRuleDataType() throws RecognitionException {
         EObject current = null;
 
@@ -10433,8 +10591,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalGo.g:3334:49: (iv_ruleDataType= ruleDataType EOF )
-            // InternalGo.g:3335:2: iv_ruleDataType= ruleDataType EOF
+            // InternalGo.g:3392:49: (iv_ruleDataType= ruleDataType EOF )
+            // InternalGo.g:3393:2: iv_ruleDataType= ruleDataType EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDataTypeRule()); 
@@ -10465,7 +10623,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDataType"
-    // InternalGo.g:3341:1: ruleDataType returns [EObject current=null] : (otherlv_0= 'datatype' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalGo.g:3399:1: ruleDataType returns [EObject current=null] : (otherlv_0= 'datatype' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleDataType() throws RecognitionException {
         EObject current = null;
 
@@ -10476,11 +10634,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:3347:2: ( (otherlv_0= 'datatype' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalGo.g:3348:2: (otherlv_0= 'datatype' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalGo.g:3405:2: ( (otherlv_0= 'datatype' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalGo.g:3406:2: (otherlv_0= 'datatype' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalGo.g:3348:2: (otherlv_0= 'datatype' ( (lv_name_1_0= RULE_ID ) ) )
-            // InternalGo.g:3349:3: otherlv_0= 'datatype' ( (lv_name_1_0= RULE_ID ) )
+            // InternalGo.g:3406:2: (otherlv_0= 'datatype' ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalGo.g:3407:3: otherlv_0= 'datatype' ( (lv_name_1_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,66,FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -10488,11 +10646,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getDataTypeAccess().getDatatypeKeyword_0());
               		
             }
-            // InternalGo.g:3353:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalGo.g:3354:4: (lv_name_1_0= RULE_ID )
+            // InternalGo.g:3411:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalGo.g:3412:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalGo.g:3354:4: (lv_name_1_0= RULE_ID )
-            // InternalGo.g:3355:5: lv_name_1_0= RULE_ID
+            // InternalGo.g:3412:4: (lv_name_1_0= RULE_ID )
+            // InternalGo.g:3413:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -10543,8 +10701,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred1_InternalGo
     public final void synpred1_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:1395:4: ( ruleELSE )
-        // InternalGo.g:1395:5: ruleELSE
+        // InternalGo.g:1435:4: ( ruleELSE )
+        // InternalGo.g:1435:5: ruleELSE
         {
         pushFollow(FOLLOW_2);
         ruleELSE();
@@ -10558,8 +10716,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred2_InternalGo
     public final void synpred2_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:1415:4: ( ruleELSE )
-        // InternalGo.g:1415:5: ruleELSE
+        // InternalGo.g:1455:4: ( ruleELSE )
+        // InternalGo.g:1455:5: ruleELSE
         {
         pushFollow(FOLLOW_2);
         ruleELSE();
@@ -10573,8 +10731,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred8_InternalGo
     public final void synpred8_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:1656:5: ( ruleAndExpression )
-        // InternalGo.g:1656:6: ruleAndExpression
+        // InternalGo.g:1696:5: ( ruleAndExpression )
+        // InternalGo.g:1696:6: ruleAndExpression
         {
         pushFollow(FOLLOW_2);
         ruleAndExpression();
@@ -10588,8 +10746,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred9_InternalGo
     public final void synpred9_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:1755:4: ( ruleSubMult )
-        // InternalGo.g:1755:5: ruleSubMult
+        // InternalGo.g:1795:4: ( ruleSubMult )
+        // InternalGo.g:1795:5: ruleSubMult
         {
         pushFollow(FOLLOW_2);
         ruleSubMult();
@@ -10603,8 +10761,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred10_InternalGo
     public final void synpred10_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:1776:4: ( ruleSubMult )
-        // InternalGo.g:1776:5: ruleSubMult
+        // InternalGo.g:1816:4: ( ruleSubMult )
+        // InternalGo.g:1816:5: ruleSubMult
         {
         pushFollow(FOLLOW_2);
         ruleSubMult();
@@ -10618,8 +10776,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred15_InternalGo
     public final void synpred15_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:2063:4: ( rulePrimaryExpression )
-        // InternalGo.g:2063:5: rulePrimaryExpression
+        // InternalGo.g:2103:4: ( rulePrimaryExpression )
+        // InternalGo.g:2103:5: rulePrimaryExpression
         {
         pushFollow(FOLLOW_2);
         rulePrimaryExpression();
@@ -10633,8 +10791,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred16_InternalGo
     public final void synpred16_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:2075:4: ( rulePrimaryExpression )
-        // InternalGo.g:2075:5: rulePrimaryExpression
+        // InternalGo.g:2115:4: ( rulePrimaryExpression )
+        // InternalGo.g:2115:5: rulePrimaryExpression
         {
         pushFollow(FOLLOW_2);
         rulePrimaryExpression();
@@ -10648,8 +10806,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
     // $ANTLR start synpred22_InternalGo
     public final void synpred22_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:2438:4: ( rulePrimaryExpression )
-        // InternalGo.g:2438:5: rulePrimaryExpression
+        // InternalGo.g:2478:4: ( rulePrimaryExpression )
+        // InternalGo.g:2478:5: rulePrimaryExpression
         {
         pushFollow(FOLLOW_2);
         rulePrimaryExpression();
@@ -10828,24 +10986,24 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             return "114:2: (this_MultDecVars_0= ruleMultDecVars | this_DecVar_1= ruleDecVar | this_DataType_2= ruleDataType | this_DecFunc_3= ruleDecFunc | this_EOL_4= RULE_EOL | this_Condition_5= ruleCondition | this_SwitchCase_6= ruleSwitchCase | ruleDecImport | this_CallFunc_8= ruleCallFunc | this_CallFor_9= ruleCallFor | this_Variable_10= ruleVariable )";
         }
     }
-    static final String dfa_8s = "\4\uffff\10\16\3\uffff";
-    static final String dfa_9s = "\1\64\2\5\1\6\10\4\3\uffff";
-    static final String dfa_10s = "\1\76\2\5\1\75\10\102\3\uffff";
-    static final String dfa_11s = "\14\uffff\1\2\1\3\1\1";
+    static final String dfa_8s = "\5\uffff\10\16\2\uffff";
+    static final String dfa_9s = "\1\64\2\5\1\6\1\uffff\10\4\2\uffff";
+    static final String dfa_10s = "\1\76\2\5\1\75\1\uffff\10\102\2\uffff";
+    static final String dfa_11s = "\4\uffff\1\2\10\uffff\1\3\1\1";
     static final String[] dfa_12s = {
             "\1\2\11\uffff\1\1",
             "\1\3",
             "\1\3",
-            "\1\14\41\uffff\1\5\1\6\1\7\1\10\1\11\1\12\1\13\16\uffff\1\4",
-            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
-            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
-            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
-            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
-            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
-            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
-            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
-            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
+            "\1\4\41\uffff\1\6\1\7\1\10\1\11\1\12\1\13\1\14\16\uffff\1\5",
             "",
+            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
+            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
+            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
+            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
+            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
+            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
+            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
+            "\2\16\1\uffff\1\15\4\uffff\1\16\45\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\1\uffff\1\16",
             "",
             ""
     };

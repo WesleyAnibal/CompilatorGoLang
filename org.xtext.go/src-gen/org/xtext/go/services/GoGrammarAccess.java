@@ -636,25 +636,40 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	public class TypeValueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.TypeValue");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cSTRINGTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cStrParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cNumbersParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cBooleanParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//TypeValue:
-		//	STRING | Numbers | Boolean;
+		//	Str | Numbers | Boolean;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//STRING | Numbers | Boolean
+		//Str | Numbers | Boolean
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_0() { return cSTRINGTerminalRuleCall_0; }
+		//Str
+		public RuleCall getStrParserRuleCall_0() { return cStrParserRuleCall_0; }
 		
 		//Numbers
 		public RuleCall getNumbersParserRuleCall_1() { return cNumbersParserRuleCall_1; }
 		
 		//Boolean
 		public RuleCall getBooleanParserRuleCall_2() { return cBooleanParserRuleCall_2; }
+	}
+	public class StrElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Str");
+		private final Assignment cSAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cSSTRINGTerminalRuleCall_0 = (RuleCall)cSAssignment.eContents().get(0);
+		
+		//Str:
+		//	s=STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//s=STRING
+		public Assignment getSAssignment() { return cSAssignment; }
+		
+		//STRING
+		public RuleCall getSSTRINGTerminalRuleCall_0() { return cSSTRINGTerminalRuleCall_0; }
 	}
 	public class DecImportElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.DecImport");
@@ -1719,21 +1734,29 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	public class BooleanElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Boolean");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Keyword cTrueKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
-		private final Keyword cFalseKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Assignment cValAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final Keyword cValTrueKeyword_0_0 = (Keyword)cValAssignment_0.eContents().get(0);
+		private final Assignment cValAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final Keyword cValFalseKeyword_1_0 = (Keyword)cValAssignment_1.eContents().get(0);
 		
 		//Boolean:
-		//	"true" | "false";
+		//	val="true" | val="false";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//"true" | "false"
+		//val="true" | val="false"
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
+		//val="true"
+		public Assignment getValAssignment_0() { return cValAssignment_0; }
+		
 		//"true"
-		public Keyword getTrueKeyword_0() { return cTrueKeyword_0; }
+		public Keyword getValTrueKeyword_0_0() { return cValTrueKeyword_0_0; }
+		
+		//val="false"
+		public Assignment getValAssignment_1() { return cValAssignment_1; }
 		
 		//"false"
-		public Keyword getFalseKeyword_1() { return cFalseKeyword_1; }
+		public Keyword getValFalseKeyword_1_0() { return cValFalseKeyword_1_0; }
 	}
 	public class BREAKElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.BREAK");
@@ -1973,6 +1996,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	private final AtriElements pAtri;
 	private final ParamsElements pParams;
 	private final TypeValueElements pTypeValue;
+	private final StrElements pStr;
 	private final DecImportElements pDecImport;
 	private final OperationsOneEqualsElements pOperationsOneEquals;
 	private final NumbersElements pNumbers;
@@ -2071,6 +2095,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		this.pAtri = new AtriElements();
 		this.pParams = new ParamsElements();
 		this.pTypeValue = new TypeValueElements();
+		this.pStr = new StrElements();
 		this.pDecImport = new DecImportElements();
 		this.pOperationsOneEquals = new OperationsOneEqualsElements();
 		this.pNumbers = new NumbersElements();
@@ -2314,13 +2339,23 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//TypeValue:
-	//	STRING | Numbers | Boolean;
+	//	Str | Numbers | Boolean;
 	public TypeValueElements getTypeValueAccess() {
 		return pTypeValue;
 	}
 	
 	public ParserRule getTypeValueRule() {
 		return getTypeValueAccess().getRule();
+	}
+	
+	//Str:
+	//	s=STRING;
+	public StrElements getStrAccess() {
+		return pStr;
+	}
+	
+	public ParserRule getStrRule() {
+		return getStrAccess().getRule();
 	}
 	
 	//DecImport:
@@ -2671,7 +2706,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Boolean:
-	//	"true" | "false";
+	//	val="true" | val="false";
 	public BooleanElements getBooleanAccess() {
 		return pBoolean;
 	}

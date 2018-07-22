@@ -159,6 +159,15 @@ public interface GoFactory extends EFactory
   TypeValue createTypeValue();
 
   /**
+   * Returns a new object of class '<em>Str</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Str</em>'.
+   * @generated
+   */
+  Str createStr();
+
+  /**
    * Returns a new object of class '<em>Operations One Equals</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -274,6 +283,15 @@ public interface GoFactory extends EFactory
    * @generated
    */
   CallFunc createCallFunc();
+
+  /**
+   * Returns a new object of class '<em>Boolean</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Boolean</em>'.
+   * @generated
+   */
+  Boolean createBoolean();
 
   /**
    * Returns a new object of class '<em>Data Type</em>'.

@@ -134,6 +134,7 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParamsAccess().getTypeAssignment_1(), "rule__Params__TypeAssignment_1");
 					put(grammarAccess.getParamsAccess().getParamsAssignment_2_1(), "rule__Params__ParamsAssignment_2_1");
 					put(grammarAccess.getParamsAccess().getTypeAssignment_2_2(), "rule__Params__TypeAssignment_2_2");
+					put(grammarAccess.getStrAccess().getSAssignment(), "rule__Str__SAssignment");
 					put(grammarAccess.getOperationsOneEqualsAccess().getNameAssignment_0(), "rule__OperationsOneEquals__NameAssignment_0");
 					put(grammarAccess.getOperationsOneEqualsAccess().getNAssignment_2_1(), "rule__OperationsOneEquals__NAssignment_2_1");
 					put(grammarAccess.getNumbersAccess().getIntAssignment_0(), "rule__Numbers__IntAssignment_0");
@@ -168,6 +169,8 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDecFuncAccess().getArgsAssignment_7(), "rule__DecFunc__ArgsAssignment_7");
 					put(grammarAccess.getCallFuncAccess().getNameFuncAssignment_0(), "rule__CallFunc__NameFuncAssignment_0");
 					put(grammarAccess.getCallFuncAccess().getParamAssignment_2(), "rule__CallFunc__ParamAssignment_2");
+					put(grammarAccess.getBooleanAccess().getValAssignment_0(), "rule__Boolean__ValAssignment_0");
+					put(grammarAccess.getBooleanAccess().getValAssignment_1(), "rule__Boolean__ValAssignment_1");
 					put(grammarAccess.getDataTypeAccess().getNameAssignment_1(), "rule__DataType__NameAssignment_1");
 				}
 			};

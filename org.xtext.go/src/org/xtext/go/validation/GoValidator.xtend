@@ -30,6 +30,7 @@ import org.xtext.go.go.Variable
 import org.xtext.go.go.TypeValue
 import org.xtext.go.go.Atri
 import org.xtext.go.go.Numbers
+import org.xtext.go.go.Str
 
 /**
  * This class contains custom validation rules. 
@@ -52,7 +53,7 @@ class GoValidator extends AbstractGoValidator {
 	public static final String SEMANTIC_ERROR = "Erro Semântico: ";
 	
 	public static Map<String,DecFunc> funcImplements = new HashMap<String, DecFunc>();
-	public static Map<String, List<DecVar>> variablesDeclarationMap     = new HashMap<String, List<DecVar>>();
+	public static Map<String, Atrib> variablesDeclarationMap     = new HashMap<String, Atrib>();
 	
 
 	@Check
@@ -82,39 +83,20 @@ class GoValidator extends AbstractGoValidator {
 	 * This function add in the map all the variables in the source code
 	 */
 	@Check
-	def addVariableDeclarations(DecVar dec){
-		if(dec.assignment instanceof Decl){
-			addAtribVarInMap(dec.assignment);
-		}else if(dec.declaration instanceof AtribVar){
-			addDeclarionVarInMap(dec.declaration);
-		} else if(dec.atribuicao instanceof Atrib){
-			addAtribuicaoVarInMap(dec.atribuicao);
-		}
-	}
-	
-	
-	def addAtribVarInMap(AtribVar atrib){
-		for(String id : atrib.vars){
-			variablesDeclarationMap.put(id.toString(), new ArrayList());
-			variablesDeclarationMap.get(id.toString()).add(atrib as DecVar)
-		}
-	}
-	
-	def addDeclarionVarInMap(Decl dec){
-		variablesDeclarationMap.put(dec.name.toString(), new ArrayList());
-		variablesDeclarationMap.get(dec.name.toString()).add(dec as DecVar);
-	}
-	
-	def addAtribuicaoVarInMap(Atrib dec){
+	def addVariableDeclarations(Atrib dec){
 		checkTypeDeclarationAtrib(dec);
-		variablesDeclarationMap.put(dec.name.toString(), new ArrayList());
-		variablesDeclarationMap.get(dec.name.toString()).add(dec as DecVar);
+		variablesDeclarationMap.put(dec.name.toString(), dec);
 	}
+
 	
 	def checkTypeDeclarationAtrib (Atrib dec) {
 		if(dec.atrib instanceof TypeValue){
 			if(dec.type.equals("string") &&  dec.atrib instanceof Numbers){
-				error(SEMANTIC_ERROR + "não é possível converter string para number" , GoPackage.Literals.DEC_VAR__ATRIBUICAO);
+				error(SEMANTIC_ERROR + "não é possível converter number para string" , GoPackage.Literals.ATRIB__TYPE);
+			
+			}
+			if(!dec.type.equals("string") &&  dec.atrib instanceof Str){
+				error(SEMANTIC_ERROR + "não é possível converter string para " + dec.type , GoPackage.Literals.ATRIB__TYPE);
 			
 			}
 		}

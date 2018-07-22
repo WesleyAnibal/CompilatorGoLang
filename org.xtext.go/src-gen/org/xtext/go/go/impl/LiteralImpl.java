@@ -4,8 +4,10 @@
 package org.xtext.go.go.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -28,24 +30,14 @@ import org.xtext.go.go.Literal;
 public class LiteralImpl extends ExpressionImpl implements Literal
 {
   /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getValue()
    * @generated
    * @ordered
    */
-  protected static final String VALUE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getValue()
-   * @generated
-   * @ordered
-   */
-  protected String value = VALUE_EDEFAULT;
+  protected org.xtext.go.go.Boolean value;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,7 +65,7 @@ public class LiteralImpl extends ExpressionImpl implements Literal
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getValue()
+  public org.xtext.go.go.Boolean getValue()
   {
     return value;
   }
@@ -83,12 +75,53 @@ public class LiteralImpl extends ExpressionImpl implements Literal
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(String newValue)
+  public NotificationChain basicSetValue(org.xtext.go.go.Boolean newValue, NotificationChain msgs)
   {
-    String oldValue = value;
+    org.xtext.go.go.Boolean oldValue = value;
     value = newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.LITERAL__VALUE, oldValue, value));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.LITERAL__VALUE, oldValue, newValue);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setValue(org.xtext.go.go.Boolean newValue)
+  {
+    if (newValue != value)
+    {
+      NotificationChain msgs = null;
+      if (value != null)
+        msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.LITERAL__VALUE, null, msgs);
+      if (newValue != null)
+        msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.LITERAL__VALUE, null, msgs);
+      msgs = basicSetValue(newValue, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.LITERAL__VALUE, newValue, newValue));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GoPackage.LITERAL__VALUE:
+        return basicSetValue(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -118,7 +151,7 @@ public class LiteralImpl extends ExpressionImpl implements Literal
     switch (featureID)
     {
       case GoPackage.LITERAL__VALUE:
-        setValue((String)newValue);
+        setValue((org.xtext.go.go.Boolean)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -135,7 +168,7 @@ public class LiteralImpl extends ExpressionImpl implements Literal
     switch (featureID)
     {
       case GoPackage.LITERAL__VALUE:
-        setValue(VALUE_EDEFAULT);
+        setValue((org.xtext.go.go.Boolean)null);
         return;
     }
     super.eUnset(featureID);
@@ -152,26 +185,9 @@ public class LiteralImpl extends ExpressionImpl implements Literal
     switch (featureID)
     {
       case GoPackage.LITERAL__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+        return value != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (value: ");
-    result.append(value);
-    result.append(')');
-    return result.toString();
   }
 
 } //LiteralImpl
