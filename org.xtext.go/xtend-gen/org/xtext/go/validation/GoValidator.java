@@ -104,6 +104,9 @@ public class GoValidator extends AbstractGoValidator {
     }
   }
   
+  /**
+   * Given two Atrib entitys, this function check if both has the same type.
+   */
   public void checkIfAtribsAreCompatible(final Atrib dec, final Atrib atrib) {
     boolean _equals = atrib.getType().equals(dec.getType());
     boolean _not = (!_equals);
@@ -118,6 +121,10 @@ public class GoValidator extends AbstractGoValidator {
     }
   }
   
+  /**
+   * Given a pure declaration, (var c int = 3), this function verifies if the types are in accord with
+   * the hierarchy type.
+   */
   public void atribDeclarationTypes(final Atrib dec) {
     Atrib_Aux _atrib = dec.getAtrib();
     if ((_atrib instanceof TypeValue)) {

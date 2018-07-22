@@ -105,15 +105,21 @@ class GoValidator extends AbstractGoValidator {
 		}
 
 	}
-	
-	def checkIfAtribsAreCompatible(Atrib dec, Atrib atrib){
-		if(!atrib.type.equals(dec.type)){
-						error(SEMANTIC_ERROR + "não é possível converter "+ atrib.type + " para " + dec.type,
-							GoPackage.Literals.ATRIB__TYPE);
-				}
-	}
-	
 
+	/**
+	 * Given two Atrib entitys, this function check if both has the same type.
+	 */
+	def checkIfAtribsAreCompatible(Atrib dec, Atrib atrib) {
+		if (!atrib.type.equals(dec.type)) {
+			error(SEMANTIC_ERROR + "não é possível converter " + atrib.type + " para " + dec.type,
+				GoPackage.Literals.ATRIB__TYPE);
+		}
+	}
+
+	/**
+	 * Given a pure declaration, (var c int = 3), this function verifies if the types are in accord with 
+	 * the hierarchy type. 
+	 */
 	def atribDeclarationTypes(Atrib dec) {
 		if (dec.atrib instanceof TypeValue) {
 			if (dec.type.equals("string") && dec.atrib instanceof Numbers) {
