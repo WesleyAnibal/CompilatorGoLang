@@ -212,5 +212,19 @@ class GoValidator extends AbstractGoValidator {
 		return tipos;
 
 	}
+	
+	/**
+	 * Verifies if the Arithmetic Expressions types are equal.
+	 */
+	@Check
+	def checkAritmethicExpressions(Expression e) {
+		var l = e.left.class;
+		var r = e.right.class;
+		if(!(l.equals(r))) {
+			error(SEMANTIC_ERROR + "Diferença entre os tipos dos parâmetros. Tipo Esperado: " + l 
+								+ "  Tipo declarado: " + r ,GoPackage.Literals.EXPRESSION
+			);
+		}
+	}
 
 }

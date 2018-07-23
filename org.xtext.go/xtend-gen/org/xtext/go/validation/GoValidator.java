@@ -15,6 +15,7 @@ import org.xtext.go.go.AtribVar;
 import org.xtext.go.go.Atrib_Aux;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.DecFunc;
+import org.xtext.go.go.Expression;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Numbers;
 import org.xtext.go.go.Params;
@@ -223,5 +224,14 @@ public class GoValidator extends AbstractGoValidator {
       }
     }
     return tipos;
+  }
+  
+  /**
+   * Verifies if the Arithmetic Expressions types are equal.
+   */
+  @Check
+  public void checkAritmethicExpressions(final Expression e) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nType mismatch: cannot convert from EClass to EStructuralFeature");
   }
 }
