@@ -31,6 +31,7 @@ import org.xtext.go.go.TypeValue
 import org.xtext.go.go.Atri
 import org.xtext.go.go.Numbers
 import org.xtext.go.go.Str
+import org.eclipse.emf.ecore.EAttribute
 
 /**
  * This class contains custom validation rules. 
@@ -103,6 +104,11 @@ class GoValidator extends AbstractGoValidator {
 				checkIfAtribsAreCompatible(dec, atrib);
 			}
 		}
+		if (dec.atrib instanceof CallFunc){
+			var CallFunc call = dec.atrib as CallFunc;
+			checkIfFunctionExists(call, GoPackage.Literals.ATRIB_VAR__TYPE );
+		}
+		
 
 	}
 
@@ -159,13 +165,24 @@ class GoValidator extends AbstractGoValidator {
 
 	@Check
 	def callFunc(CallFunc callFunc) {
-		if (!funcImplements.containsKey(callFunc.nameFunc)) {
-			error(SEMANTIC_ERROR + "função não declarada", GoPackage.Literals.CALL_FUNC__NAME_FUNC);
-		}
+		checkIfFunctionExists(callFunc, GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+//		if (!funcImplements.containsKey(callFunc.nameFunc)) {
+//			error(SEMANTIC_ERROR + "função não declarada", GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+//		}
 		var DecFunc func = funcImplements.get(callFunc.nameFunc);
 
 		checkIfHasEqualTypes(func, callFunc);
 	}
+	
+	/**
+	 * Auxiliary method that allows know if a callFunc is already declared
+	 */
+	def checkIfFunctionExists(CallFunc callFunc, EAttribute pack ){
+		if (!funcImplements.containsKey(callFunc.nameFunc)) {
+			error(SEMANTIC_ERROR + "função não declarada", pack);
+		}
+	}
+	
 
 	/**
 	 * Verifies the number of parameters and your respoective types between the function declaration

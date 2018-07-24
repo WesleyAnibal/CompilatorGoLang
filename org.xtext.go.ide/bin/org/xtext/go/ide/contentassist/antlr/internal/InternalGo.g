@@ -1718,6 +1718,12 @@ rule__Atrib_Aux__Alternatives
 		ruleVariable
 		{ after(grammarAccess.getAtrib_AuxAccess().getVariableParserRuleCall_1()); }
 	)
+	|
+	(
+		{ before(grammarAccess.getAtrib_AuxAccess().getCallFuncParserRuleCall_2()); }
+		ruleCallFunc
+		{ after(grammarAccess.getAtrib_AuxAccess().getCallFuncParserRuleCall_2()); }
+	)
 ;
 finally {
 	restoreStackSize(stackSize);

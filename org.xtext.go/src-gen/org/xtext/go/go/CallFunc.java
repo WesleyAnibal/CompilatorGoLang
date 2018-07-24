@@ -21,7 +21,7 @@ package org.xtext.go.go;
  * @model
  * @generated
  */
-public interface CallFunc extends Greeting
+public interface CallFunc extends Greeting, Atrib_Aux
 {
   /**
    * Returns the value of the '<em><b>Name Func</b></em>' attribute.

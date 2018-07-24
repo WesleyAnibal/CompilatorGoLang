@@ -21,7 +21,7 @@ AtribVar:
 ;
 
 Atrib_Aux:
-	Atri|Variable
+	Atri|Variable|CallFunc
 ;
 
 Variable:

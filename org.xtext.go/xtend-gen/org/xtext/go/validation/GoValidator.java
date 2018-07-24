@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.xtext.validation.Check;
 import org.xtext.go.go.Atrib;
 import org.xtext.go.go.AtribVar;
@@ -102,6 +103,12 @@ public class GoValidator extends AbstractGoValidator {
         this.checkIfAtribsAreCompatible(dec, atrib);
       }
     }
+    Atrib_Aux _atrib_2 = dec.getAtrib();
+    if ((_atrib_2 instanceof CallFunc)) {
+      Atrib_Aux _atrib_3 = dec.getAtrib();
+      CallFunc call = ((CallFunc) _atrib_3);
+      this.checkIfFunctionExists(call, GoPackage.Literals.ATRIB_VAR__TYPE);
+    }
   }
   
   /**
@@ -165,13 +172,20 @@ public class GoValidator extends AbstractGoValidator {
   
   @Check
   public void callFunc(final CallFunc callFunc) {
+    this.checkIfFunctionExists(callFunc, GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+    DecFunc func = GoValidator.funcImplements.get(callFunc.getNameFunc());
+    this.checkIfHasEqualTypes(func, callFunc);
+  }
+  
+  /**
+   * Auxiliary method that allows know if a callFunc is already declared
+   */
+  public void checkIfFunctionExists(final CallFunc callFunc, final EAttribute pack) {
     boolean _containsKey = GoValidator.funcImplements.containsKey(callFunc.getNameFunc());
     boolean _not = (!_containsKey);
     if (_not) {
-      this.error((GoValidator.SEMANTIC_ERROR + "função não declarada"), GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+      this.error((GoValidator.SEMANTIC_ERROR + "função não declarada"), pack);
     }
-    DecFunc func = GoValidator.funcImplements.get(callFunc.getNameFunc());
-    this.checkIfHasEqualTypes(func, callFunc);
   }
   
   /**

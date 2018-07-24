@@ -519,6 +519,15 @@ ruleAtrib_Aux returns [EObject current=null]
 			$current = $this_Variable_1.current;
 			afterParserOrEnumRuleCall();
 		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getAtrib_AuxAccess().getCallFuncParserRuleCall_2());
+		}
+		this_CallFunc_2=ruleCallFunc
+		{
+			$current = $this_CallFunc_2.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 

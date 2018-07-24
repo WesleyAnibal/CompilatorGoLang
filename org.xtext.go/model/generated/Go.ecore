@@ -131,7 +131,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="args" upperBound="-1" eType="#//Greeting"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CallFunc" eSuperTypes="#//Greeting">
+  <eClassifiers xsi:type="ecore:EClass" name="CallFunc" eSuperTypes="#//Greeting #//Atrib_Aux">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameFunc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="param" eType="#//Params"
         containment="true"/>

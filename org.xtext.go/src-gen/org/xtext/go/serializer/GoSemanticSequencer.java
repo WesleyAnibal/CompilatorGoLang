@@ -563,6 +563,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Contexts:
 	 *     Greeting returns CallFunc
+	 *     Atrib_Aux returns CallFunc
 	 *     CallFunc returns CallFunc
 	 *
 	 * Constraint:

@@ -243,12 +243,13 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cAtriParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cVariableParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cCallFuncParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//Atrib_Aux:
-		//	Atri | Variable;
+		//	Atri | Variable | CallFunc;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Atri | Variable
+		//Atri | Variable | CallFunc
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//Atri
@@ -256,6 +257,9 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Variable
 		public RuleCall getVariableParserRuleCall_1() { return cVariableParserRuleCall_1; }
+		
+		//CallFunc
+		public RuleCall getCallFuncParserRuleCall_2() { return cCallFuncParserRuleCall_2; }
 	}
 	public class VariableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Variable");
@@ -2249,7 +2253,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Atrib_Aux:
-	//	Atri | Variable;
+	//	Atri | Variable | CallFunc;
 	public Atrib_AuxElements getAtrib_AuxAccess() {
 		return pAtrib_Aux;
 	}

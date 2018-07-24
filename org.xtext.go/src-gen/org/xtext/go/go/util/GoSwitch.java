@@ -344,6 +344,7 @@ public class GoSwitch<T> extends Switch<T>
         CallFunc callFunc = (CallFunc)theEObject;
         T result = caseCallFunc(callFunc);
         if (result == null) result = caseGreeting(callFunc);
+        if (result == null) result = caseAtrib_Aux(callFunc);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

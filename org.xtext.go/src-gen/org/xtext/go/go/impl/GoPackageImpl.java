@@ -1535,6 +1535,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     varForEClass.getESuperTypes().add(this.getCallFor());
     decFuncEClass.getESuperTypes().add(this.getGreeting());
     callFuncEClass.getESuperTypes().add(this.getGreeting());
+    callFuncEClass.getESuperTypes().add(this.getAtrib_Aux());
     booleanEClass.getESuperTypes().add(this.getTypeValue());
     dataTypeEClass.getESuperTypes().add(this.getGreeting());
     additionEClass.getESuperTypes().add(this.getExpression());
