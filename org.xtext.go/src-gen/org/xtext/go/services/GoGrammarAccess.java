@@ -1521,18 +1521,18 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cParamAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cParamParamsParserRuleCall_3_0 = (RuleCall)cParamAssignment_3.eContents().get(0);
 		private final RuleCall cClosed_parenthesesTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
-		private final Assignment cReturnAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cReturnTypesParserRuleCall_5_0 = (RuleCall)cReturnAssignment_5.eContents().get(0);
+		private final Assignment cReturnTypeAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cReturnTypeTypesParserRuleCall_5_0 = (RuleCall)cReturnTypeAssignment_5.eContents().get(0);
 		private final RuleCall cOpen_KeyTerminalRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
 		private final Assignment cArgsAssignment_7 = (Assignment)cGroup.eContents().get(7);
 		private final RuleCall cArgsGreetingParserRuleCall_7_0 = (RuleCall)cArgsAssignment_7.eContents().get(0);
 		private final RuleCall cClosed_KeyTerminalRuleCall_8 = (RuleCall)cGroup.eContents().get(8);
 		
 		//DecFunc:
-		//	FUNC name=ID Open_parentheses param=Params* Closed_parentheses return=Types? Open_Key args+=Greeting* Closed_Key;
+		//	FUNC name=ID Open_parentheses param=Params* Closed_parentheses returnType=Types? Open_Key args+=Greeting* Closed_Key;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//FUNC name=ID Open_parentheses param=Params* Closed_parentheses return=Types? Open_Key args+=Greeting* Closed_Key
+		//FUNC name=ID Open_parentheses param=Params* Closed_parentheses returnType=Types? Open_Key args+=Greeting* Closed_Key
 		public Group getGroup() { return cGroup; }
 		
 		//FUNC
@@ -1556,11 +1556,11 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		//Closed_parentheses
 		public RuleCall getClosed_parenthesesTerminalRuleCall_4() { return cClosed_parenthesesTerminalRuleCall_4; }
 		
-		//return=Types?
-		public Assignment getReturnAssignment_5() { return cReturnAssignment_5; }
+		//returnType=Types?
+		public Assignment getReturnTypeAssignment_5() { return cReturnTypeAssignment_5; }
 		
 		//Types
-		public RuleCall getReturnTypesParserRuleCall_5_0() { return cReturnTypesParserRuleCall_5_0; }
+		public RuleCall getReturnTypeTypesParserRuleCall_5_0() { return cReturnTypeTypesParserRuleCall_5_0; }
 		
 		//Open_Key
 		public RuleCall getOpen_KeyTerminalRuleCall_6() { return cOpen_KeyTerminalRuleCall_6; }
@@ -2605,7 +2605,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DecFunc:
-	//	FUNC name=ID Open_parentheses param=Params* Closed_parentheses return=Types? Open_Key args+=Greeting* Closed_Key;
+	//	FUNC name=ID Open_parentheses param=Params* Closed_parentheses returnType=Types? Open_Key args+=Greeting* Closed_Key;
 	public DecFuncElements getDecFuncAccess() {
 		return pDecFunc;
 	}

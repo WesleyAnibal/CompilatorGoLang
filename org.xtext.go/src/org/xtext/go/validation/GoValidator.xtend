@@ -92,24 +92,64 @@ class GoValidator extends AbstractGoValidator {
 	 * 	 
 	 * */
 	def checkTypeDeclarationAtrib(Atrib dec) {
-
+		var EAttribute erro = GoPackage.Literals.ATRIB_VAR__TYPE;
 		atribDeclarationTypes(dec);
 		if (dec.atrib instanceof Variable) {
 			var Variable variable = dec.atrib as Variable;
 			if (!variablesDeclarationMap.containsKey(variable.name)) {
 				error(SEMANTIC_ERROR + "Não é possível atribuir valor. Variavel " + variable.name + " não declarada",
-					GoPackage.Literals.ATRIB_VAR__ATRB);
+					erro);
 			} else {
 				var Atrib atrib = variablesDeclarationMap.get(variable.name);
 				checkIfAtribsAreCompatible(dec, atrib);
 			}
 		}
-		if (dec.atrib instanceof CallFunc){
+		if (dec.atrib instanceof CallFunc) {
 			var CallFunc call = dec.atrib as CallFunc;
-			checkIfFunctionExists(call, GoPackage.Literals.ATRIB_VAR__TYPE );
-		}
-		
+			 checkIfFunctionExists(call, erro );
+			var DecFunc decF = funcImplements.get(call.nameFunc);
+			if (decF.returnType === null) {
+				error(
+					SEMANTIC_ERROR + "Não é possível atribuir valor a variável. Funcao sem tipo de retorno.",
+					GoPackage.Literals.ATRIB__TYPE
+				);
+			}
 
+			checkIfFunctionHasReturnType(call, erro)
+		    checkTypeFunctionWithAtrib(call, dec, GoPackage.Literals.ATRIB__TYPE);
+		}
+	}
+
+	def checkIfFunctionHasReturnType(CallFunc call, EAttribute pack) {
+		var DecFunc dec = funcImplements.get(call.nameFunc);
+		if (dec.returnType === null) {
+			error(
+				SEMANTIC_ERROR + "Não é possível atribuir valor a variável. Funcao sem tipo de retorno.",
+				pack
+			);
+		}
+
+	}
+
+	def checkTypeFunctionWithAtrib(CallFunc call, Atrib atrib, EAttribute pack) {
+		var DecFunc dec = funcImplements.get(call.nameFunc);
+		if (!atrib.type.equals(dec.returnType)) {
+			error(
+				SEMANTIC_ERROR + "retorno da função é diferente do tipo da variável. Tipo da Função: " +
+					dec.returnType + " Tipo da variável: " + atrib.type,
+				pack
+			);
+		}
+
+	}
+
+	/**
+	 * Auxiliary method that allows know if a callFunc is already declared
+	 */
+	def checkIfFunctionExists(CallFunc callFunc, EAttribute pack) {
+		if (!funcImplements.containsKey(callFunc.nameFunc)) {
+			error(SEMANTIC_ERROR + "função não declarada", pack);
+		}
 	}
 
 	/**
@@ -166,23 +206,10 @@ class GoValidator extends AbstractGoValidator {
 	@Check
 	def callFunc(CallFunc callFunc) {
 		checkIfFunctionExists(callFunc, GoPackage.Literals.CALL_FUNC__NAME_FUNC);
-//		if (!funcImplements.containsKey(callFunc.nameFunc)) {
-//			error(SEMANTIC_ERROR + "função não declarada", GoPackage.Literals.CALL_FUNC__NAME_FUNC);
-//		}
 		var DecFunc func = funcImplements.get(callFunc.nameFunc);
 
 		checkIfHasEqualTypes(func, callFunc);
 	}
-	
-	/**
-	 * Auxiliary method that allows know if a callFunc is already declared
-	 */
-	def checkIfFunctionExists(CallFunc callFunc, EAttribute pack ){
-		if (!funcImplements.containsKey(callFunc.nameFunc)) {
-			error(SEMANTIC_ERROR + "função não declarada", pack);
-		}
-	}
-	
 
 	/**
 	 * Verifies the number of parameters and your respoective types between the function declaration

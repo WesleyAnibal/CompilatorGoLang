@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.xtext.go.go.DecFunc#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.go.go.DecFunc#getParam <em>Param</em>}</li>
- *   <li>{@link org.xtext.go.go.DecFunc#getReturn <em>Return</em>}</li>
+ *   <li>{@link org.xtext.go.go.DecFunc#getReturnType <em>Return Type</em>}</li>
  *   <li>{@link org.xtext.go.go.DecFunc#getArgs <em>Args</em>}</li>
  * </ul>
  *
@@ -79,30 +79,30 @@ public interface DecFunc extends Greeting
   void setParam(Params value);
 
   /**
-   * Returns the value of the '<em><b>Return</b></em>' attribute.
+   * Returns the value of the '<em><b>Return Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Return</em>' attribute isn't clear,
+   * If the meaning of the '<em>Return Type</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Return</em>' attribute.
-   * @see #setReturn(String)
-   * @see org.xtext.go.go.GoPackage#getDecFunc_Return()
+   * @return the value of the '<em>Return Type</em>' attribute.
+   * @see #setReturnType(String)
+   * @see org.xtext.go.go.GoPackage#getDecFunc_ReturnType()
    * @model
    * @generated
    */
-  String getReturn();
+  String getReturnType();
 
   /**
-   * Sets the value of the '{@link org.xtext.go.go.DecFunc#getReturn <em>Return</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.go.go.DecFunc#getReturnType <em>Return Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Return</em>' attribute.
-   * @see #getReturn()
+   * @param value the new value of the '<em>Return Type</em>' attribute.
+   * @see #getReturnType()
    * @generated
    */
-  void setReturn(String value);
+  void setReturnType(String value);
 
   /**
    * Returns the value of the '<em><b>Args</b></em>' containment reference list.

@@ -20470,22 +20470,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__5__Impl"
-    // InternalGo.g:6077:1: rule__DecFunc__Group__5__Impl : ( ( rule__DecFunc__ReturnAssignment_5 )? ) ;
+    // InternalGo.g:6077:1: rule__DecFunc__Group__5__Impl : ( ( rule__DecFunc__ReturnTypeAssignment_5 )? ) ;
     public final void rule__DecFunc__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6081:1: ( ( ( rule__DecFunc__ReturnAssignment_5 )? ) )
-            // InternalGo.g:6082:1: ( ( rule__DecFunc__ReturnAssignment_5 )? )
+            // InternalGo.g:6081:1: ( ( ( rule__DecFunc__ReturnTypeAssignment_5 )? ) )
+            // InternalGo.g:6082:1: ( ( rule__DecFunc__ReturnTypeAssignment_5 )? )
             {
-            // InternalGo.g:6082:1: ( ( rule__DecFunc__ReturnAssignment_5 )? )
-            // InternalGo.g:6083:2: ( rule__DecFunc__ReturnAssignment_5 )?
+            // InternalGo.g:6082:1: ( ( rule__DecFunc__ReturnTypeAssignment_5 )? )
+            // InternalGo.g:6083:2: ( rule__DecFunc__ReturnTypeAssignment_5 )?
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDecFuncAccess().getReturnAssignment_5()); 
+               before(grammarAccess.getDecFuncAccess().getReturnTypeAssignment_5()); 
             }
-            // InternalGo.g:6084:2: ( rule__DecFunc__ReturnAssignment_5 )?
+            // InternalGo.g:6084:2: ( rule__DecFunc__ReturnTypeAssignment_5 )?
             int alt52=2;
             int LA52_0 = input.LA(1);
 
@@ -20494,10 +20494,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt52) {
                 case 1 :
-                    // InternalGo.g:6084:3: rule__DecFunc__ReturnAssignment_5
+                    // InternalGo.g:6084:3: rule__DecFunc__ReturnTypeAssignment_5
                     {
                     pushFollow(FOLLOW_2);
-                    rule__DecFunc__ReturnAssignment_5();
+                    rule__DecFunc__ReturnTypeAssignment_5();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -20508,7 +20508,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDecFuncAccess().getReturnAssignment_5()); 
+               after(grammarAccess.getDecFuncAccess().getReturnTypeAssignment_5()); 
             }
 
             }
@@ -23845,9 +23845,9 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__DecFunc__ParamAssignment_3"
 
 
-    // $ANTLR start "rule__DecFunc__ReturnAssignment_5"
-    // InternalGo.g:7205:1: rule__DecFunc__ReturnAssignment_5 : ( ruleTypes ) ;
-    public final void rule__DecFunc__ReturnAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__DecFunc__ReturnTypeAssignment_5"
+    // InternalGo.g:7205:1: rule__DecFunc__ReturnTypeAssignment_5 : ( ruleTypes ) ;
+    public final void rule__DecFunc__ReturnTypeAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -23859,7 +23859,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             // InternalGo.g:7211:3: ruleTypes
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDecFuncAccess().getReturnTypesParserRuleCall_5_0()); 
+               before(grammarAccess.getDecFuncAccess().getReturnTypeTypesParserRuleCall_5_0()); 
             }
             pushFollow(FOLLOW_2);
             ruleTypes();
@@ -23867,7 +23867,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDecFuncAccess().getReturnTypesParserRuleCall_5_0()); 
+               after(grammarAccess.getDecFuncAccess().getReturnTypeTypesParserRuleCall_5_0()); 
             }
 
             }
@@ -23887,7 +23887,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__DecFunc__ReturnAssignment_5"
+    // $ANTLR end "rule__DecFunc__ReturnTypeAssignment_5"
 
 
     // $ANTLR start "rule__DecFunc__ArgsAssignment_7"

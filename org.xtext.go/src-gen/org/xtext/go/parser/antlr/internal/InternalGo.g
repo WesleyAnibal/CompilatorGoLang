@@ -2758,17 +2758,17 @@ ruleDecFunc returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDecFuncAccess().getReturnTypesParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getDecFuncAccess().getReturnTypeTypesParserRuleCall_5_0());
 				}
-				lv_return_5_0=ruleTypes
+				lv_returnType_5_0=ruleTypes
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDecFuncRule());
 					}
 					set(
 						$current,
-						"return",
-						lv_return_5_0,
+						"returnType",
+						lv_returnType_5_0,
 						"org.xtext.go.Go.Types");
 					afterParserOrEnumRuleCall();
 				}

@@ -6080,9 +6080,9 @@ rule__DecFunc__Group__5__Impl
 	}
 :
 (
-	{ before(grammarAccess.getDecFuncAccess().getReturnAssignment_5()); }
-	(rule__DecFunc__ReturnAssignment_5)?
-	{ after(grammarAccess.getDecFuncAccess().getReturnAssignment_5()); }
+	{ before(grammarAccess.getDecFuncAccess().getReturnTypeAssignment_5()); }
+	(rule__DecFunc__ReturnTypeAssignment_5)?
+	{ after(grammarAccess.getDecFuncAccess().getReturnTypeAssignment_5()); }
 )
 ;
 finally {
@@ -7202,15 +7202,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__DecFunc__ReturnAssignment_5
+rule__DecFunc__ReturnTypeAssignment_5
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getDecFuncAccess().getReturnTypesParserRuleCall_5_0()); }
+		{ before(grammarAccess.getDecFuncAccess().getReturnTypeTypesParserRuleCall_5_0()); }
 		ruleTypes
-		{ after(grammarAccess.getDecFuncAccess().getReturnTypesParserRuleCall_5_0()); }
+		{ after(grammarAccess.getDecFuncAccess().getReturnTypeTypesParserRuleCall_5_0()); }
 	)
 ;
 finally {

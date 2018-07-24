@@ -33,7 +33,7 @@ import org.xtext.go.go.Params;
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getParam <em>Param</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getReturn <em>Return</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getReturnType <em>Return Type</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getArgs <em>Args</em>}</li>
  * </ul>
  *
@@ -72,24 +72,24 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
   protected Params param;
 
   /**
-   * The default value of the '{@link #getReturn() <em>Return</em>}' attribute.
+   * The default value of the '{@link #getReturnType() <em>Return Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getReturn()
+   * @see #getReturnType()
    * @generated
    * @ordered
    */
-  protected static final String RETURN_EDEFAULT = null;
+  protected static final String RETURN_TYPE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getReturn() <em>Return</em>}' attribute.
+   * The cached value of the '{@link #getReturnType() <em>Return Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getReturn()
+   * @see #getReturnType()
    * @generated
    * @ordered
    */
-  protected String return_ = RETURN_EDEFAULT;
+  protected String returnType = RETURN_TYPE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getArgs() <em>Args</em>}' containment reference list.
@@ -198,9 +198,9 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getReturn()
+  public String getReturnType()
   {
-    return return_;
+    return returnType;
   }
 
   /**
@@ -208,12 +208,12 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setReturn(String newReturn)
+  public void setReturnType(String newReturnType)
   {
-    String oldReturn = return_;
-    return_ = newReturn;
+    String oldReturnType = returnType;
+    returnType = newReturnType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DEC_FUNC__RETURN, oldReturn, return_));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DEC_FUNC__RETURN_TYPE, oldReturnType, returnType));
   }
 
   /**
@@ -262,8 +262,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
         return getName();
       case GoPackage.DEC_FUNC__PARAM:
         return getParam();
-      case GoPackage.DEC_FUNC__RETURN:
-        return getReturn();
+      case GoPackage.DEC_FUNC__RETURN_TYPE:
+        return getReturnType();
       case GoPackage.DEC_FUNC__ARGS:
         return getArgs();
     }
@@ -287,8 +287,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
       case GoPackage.DEC_FUNC__PARAM:
         setParam((Params)newValue);
         return;
-      case GoPackage.DEC_FUNC__RETURN:
-        setReturn((String)newValue);
+      case GoPackage.DEC_FUNC__RETURN_TYPE:
+        setReturnType((String)newValue);
         return;
       case GoPackage.DEC_FUNC__ARGS:
         getArgs().clear();
@@ -314,8 +314,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
       case GoPackage.DEC_FUNC__PARAM:
         setParam((Params)null);
         return;
-      case GoPackage.DEC_FUNC__RETURN:
-        setReturn(RETURN_EDEFAULT);
+      case GoPackage.DEC_FUNC__RETURN_TYPE:
+        setReturnType(RETURN_TYPE_EDEFAULT);
         return;
       case GoPackage.DEC_FUNC__ARGS:
         getArgs().clear();
@@ -338,8 +338,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case GoPackage.DEC_FUNC__PARAM:
         return param != null;
-      case GoPackage.DEC_FUNC__RETURN:
-        return RETURN_EDEFAULT == null ? return_ != null : !RETURN_EDEFAULT.equals(return_);
+      case GoPackage.DEC_FUNC__RETURN_TYPE:
+        return RETURN_TYPE_EDEFAULT == null ? returnType != null : !RETURN_TYPE_EDEFAULT.equals(returnType);
       case GoPackage.DEC_FUNC__ARGS:
         return args != null && !args.isEmpty();
     }
@@ -359,8 +359,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", return: ");
-    result.append(return_);
+    result.append(", returnType: ");
+    result.append(returnType);
     result.append(')');
     return result.toString();
   }

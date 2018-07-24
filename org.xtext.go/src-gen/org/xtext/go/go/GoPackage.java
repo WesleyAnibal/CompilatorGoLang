@@ -1211,13 +1211,13 @@ public interface GoPackage extends EPackage
   int DEC_FUNC__PARAM = GREETING_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Return</b></em>' attribute.
+   * The feature id for the '<em><b>Return Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DEC_FUNC__RETURN = GREETING_FEATURE_COUNT + 2;
+  int DEC_FUNC__RETURN_TYPE = GREETING_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -2794,15 +2794,15 @@ public interface GoPackage extends EPackage
   EReference getDecFunc_Param();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.go.go.DecFunc#getReturn <em>Return</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.go.go.DecFunc#getReturnType <em>Return Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Return</em>'.
-   * @see org.xtext.go.go.DecFunc#getReturn()
+   * @return the meta object for the attribute '<em>Return Type</em>'.
+   * @see org.xtext.go.go.DecFunc#getReturnType()
    * @see #getDecFunc()
    * @generated
    */
-  EAttribute getDecFunc_Return();
+  EAttribute getDecFunc_ReturnType();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.go.go.DecFunc#getArgs <em>Args</em>}'.
@@ -3660,12 +3660,12 @@ public interface GoPackage extends EPackage
     EReference DEC_FUNC__PARAM = eINSTANCE.getDecFunc_Param();
 
     /**
-     * The meta object literal for the '<em><b>Return</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Return Type</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DEC_FUNC__RETURN = eINSTANCE.getDecFunc_Return();
+    EAttribute DEC_FUNC__RETURN_TYPE = eINSTANCE.getDecFunc_ReturnType();
 
     /**
      * The meta object literal for the '<em><b>Args</b></em>' containment reference list feature.

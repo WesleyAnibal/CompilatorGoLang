@@ -8225,7 +8225,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDecFunc"
-    // InternalGo.g:2698:1: ruleDecFunc returns [EObject current=null] : ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_return_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY ) ;
+    // InternalGo.g:2698:1: ruleDecFunc returns [EObject current=null] : ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_returnType_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY ) ;
     public final EObject ruleDecFunc() throws RecognitionException {
         EObject current = null;
 
@@ -8236,7 +8236,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         Token this_Closed_Key_8=null;
         EObject lv_param_3_0 = null;
 
-        AntlrDatatypeRuleToken lv_return_5_0 = null;
+        AntlrDatatypeRuleToken lv_returnType_5_0 = null;
 
         EObject lv_args_7_0 = null;
 
@@ -8245,11 +8245,11 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalGo.g:2704:2: ( ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_return_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY ) )
-            // InternalGo.g:2705:2: ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_return_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY )
+            // InternalGo.g:2704:2: ( ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_returnType_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY ) )
+            // InternalGo.g:2705:2: ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_returnType_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY )
             {
-            // InternalGo.g:2705:2: ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_return_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY )
-            // InternalGo.g:2706:3: ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_return_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY
+            // InternalGo.g:2705:2: ( ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_returnType_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY )
+            // InternalGo.g:2706:3: ruleFUNC ( (lv_name_1_0= RULE_ID ) ) this_Open_parentheses_2= RULE_OPEN_PARENTHESES ( (lv_param_3_0= ruleParams ) )* this_Closed_parentheses_4= RULE_CLOSED_PARENTHESES ( (lv_returnType_5_0= ruleTypes ) )? this_Open_Key_6= RULE_OPEN_KEY ( (lv_args_7_0= ruleGreeting ) )* this_Closed_Key_8= RULE_CLOSED_KEY
             {
             if ( state.backtracking==0 ) {
 
@@ -8361,7 +8361,7 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_Closed_parentheses_4, grammarAccess.getDecFuncAccess().getClosed_parenthesesTerminalRuleCall_4());
               		
             }
-            // InternalGo.g:2758:3: ( (lv_return_5_0= ruleTypes ) )?
+            // InternalGo.g:2758:3: ( (lv_returnType_5_0= ruleTypes ) )?
             int alt49=2;
             int LA49_0 = input.LA(1);
 
@@ -8370,18 +8370,18 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
             }
             switch (alt49) {
                 case 1 :
-                    // InternalGo.g:2759:4: (lv_return_5_0= ruleTypes )
+                    // InternalGo.g:2759:4: (lv_returnType_5_0= ruleTypes )
                     {
-                    // InternalGo.g:2759:4: (lv_return_5_0= ruleTypes )
-                    // InternalGo.g:2760:5: lv_return_5_0= ruleTypes
+                    // InternalGo.g:2759:4: (lv_returnType_5_0= ruleTypes )
+                    // InternalGo.g:2760:5: lv_returnType_5_0= ruleTypes
                     {
                     if ( state.backtracking==0 ) {
 
-                      					newCompositeNode(grammarAccess.getDecFuncAccess().getReturnTypesParserRuleCall_5_0());
+                      					newCompositeNode(grammarAccess.getDecFuncAccess().getReturnTypeTypesParserRuleCall_5_0());
                       				
                     }
                     pushFollow(FOLLOW_15);
-                    lv_return_5_0=ruleTypes();
+                    lv_returnType_5_0=ruleTypes();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -8392,8 +8392,8 @@ public class InternalGoParser extends AbstractInternalAntlrParser {
                       					}
                       					set(
                       						current,
-                      						"return",
-                      						lv_return_5_0,
+                      						"returnType",
+                      						lv_returnType_5_0,
                       						"org.xtext.go.Go.Types");
                       					afterParserOrEnumRuleCall();
                       				

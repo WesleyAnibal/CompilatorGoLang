@@ -142,7 +142,7 @@ Literal returns Expression:
 ;
 
 DecFunc:
-	FUNC name=ID Open_parentheses param=Params* Closed_parentheses return=Types? Open_Key args+=Greeting*Closed_Key
+	FUNC name=ID Open_parentheses param=Params* Closed_parentheses returnType=Types? Open_Key args+=Greeting*Closed_Key
 ;
 	
 CallFunc:

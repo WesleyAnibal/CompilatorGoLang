@@ -85,6 +85,7 @@ public class GoValidator extends AbstractGoValidator {
    * Check if the declaration variables are in accord with the golang specification
    */
   public void checkTypeDeclarationAtrib(final Atrib dec) {
+    EAttribute erro = GoPackage.Literals.ATRIB_VAR__TYPE;
     this.atribDeclarationTypes(dec);
     Atrib_Aux _atrib = dec.getAtrib();
     if ((_atrib instanceof Variable)) {
@@ -96,8 +97,7 @@ public class GoValidator extends AbstractGoValidator {
         String _name = variable.getName();
         String _plus = ((GoValidator.SEMANTIC_ERROR + "Não é possível atribuir valor. Variavel ") + _name);
         String _plus_1 = (_plus + " não declarada");
-        this.error(_plus_1, 
-          GoPackage.Literals.ATRIB_VAR__ATRB);
+        this.error(_plus_1, erro);
       } else {
         Atrib atrib = GoValidator.variablesDeclarationMap.get(variable.getName());
         this.checkIfAtribsAreCompatible(dec, atrib);
@@ -107,7 +107,52 @@ public class GoValidator extends AbstractGoValidator {
     if ((_atrib_2 instanceof CallFunc)) {
       Atrib_Aux _atrib_3 = dec.getAtrib();
       CallFunc call = ((CallFunc) _atrib_3);
-      this.checkIfFunctionExists(call, GoPackage.Literals.ATRIB_VAR__TYPE);
+      this.checkIfFunctionExists(call, erro);
+      DecFunc decF = GoValidator.funcImplements.get(call.getNameFunc());
+      String _returnType = decF.getReturnType();
+      boolean _tripleEquals = (_returnType == null);
+      if (_tripleEquals) {
+        this.error(
+          (GoValidator.SEMANTIC_ERROR + "Não é possível atribuir valor a variável. Funcao sem tipo de retorno."), 
+          GoPackage.Literals.ATRIB__TYPE);
+      }
+      this.checkIfFunctionHasReturnType(call, erro);
+      this.checkTypeFunctionWithAtrib(call, dec, GoPackage.Literals.ATRIB__TYPE);
+    }
+  }
+  
+  public void checkIfFunctionHasReturnType(final CallFunc call, final EAttribute pack) {
+    DecFunc dec = GoValidator.funcImplements.get(call.getNameFunc());
+    String _returnType = dec.getReturnType();
+    boolean _tripleEquals = (_returnType == null);
+    if (_tripleEquals) {
+      this.error(
+        (GoValidator.SEMANTIC_ERROR + "Não é possível atribuir valor a variável. Funcao sem tipo de retorno."), pack);
+    }
+  }
+  
+  public void checkTypeFunctionWithAtrib(final CallFunc call, final Atrib atrib, final EAttribute pack) {
+    DecFunc dec = GoValidator.funcImplements.get(call.getNameFunc());
+    boolean _equals = atrib.getType().equals(dec.getReturnType());
+    boolean _not = (!_equals);
+    if (_not) {
+      String _returnType = dec.getReturnType();
+      String _plus = ((GoValidator.SEMANTIC_ERROR + "retorno da função é diferente do tipo da variável. Tipo da Função: ") + _returnType);
+      String _plus_1 = (_plus + " Tipo da variável: ");
+      String _type = atrib.getType();
+      String _plus_2 = (_plus_1 + _type);
+      this.error(_plus_2, pack);
+    }
+  }
+  
+  /**
+   * Auxiliary method that allows know if a callFunc is already declared
+   */
+  public void checkIfFunctionExists(final CallFunc callFunc, final EAttribute pack) {
+    boolean _containsKey = GoValidator.funcImplements.containsKey(callFunc.getNameFunc());
+    boolean _not = (!_containsKey);
+    if (_not) {
+      this.error((GoValidator.SEMANTIC_ERROR + "função não declarada"), pack);
     }
   }
   
@@ -175,17 +220,6 @@ public class GoValidator extends AbstractGoValidator {
     this.checkIfFunctionExists(callFunc, GoPackage.Literals.CALL_FUNC__NAME_FUNC);
     DecFunc func = GoValidator.funcImplements.get(callFunc.getNameFunc());
     this.checkIfHasEqualTypes(func, callFunc);
-  }
-  
-  /**
-   * Auxiliary method that allows know if a callFunc is already declared
-   */
-  public void checkIfFunctionExists(final CallFunc callFunc, final EAttribute pack) {
-    boolean _containsKey = GoValidator.funcImplements.containsKey(callFunc.getNameFunc());
-    boolean _not = (!_containsKey);
-    if (_not) {
-      this.error((GoValidator.SEMANTIC_ERROR + "função não declarada"), pack);
-    }
   }
   
   /**
