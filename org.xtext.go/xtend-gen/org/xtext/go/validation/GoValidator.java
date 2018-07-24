@@ -214,12 +214,28 @@ public class GoValidator extends AbstractGoValidator {
     return tipos.size();
   }
   
+  public Atrib getVariableById(final String name) {
+    return GoValidator.variablesDeclarationMap.get(name);
+  }
+  
   public List<String> getParametersType(final Params param) {
     List<String> tipos = new ArrayList<String>();
     if (((param != null) && (param.getType() != null))) {
-      EList<String> _type = param.getType();
-      for (final String id : _type) {
-        tipos.add(id);
+      int _size = param.getType().size();
+      boolean _equals = (_size == 0);
+      if (_equals) {
+        EList<String> _params = param.getParams();
+        for (final String id : _params) {
+          {
+            Atrib variable = this.getVariableById(id);
+            tipos.add(variable.getType());
+          }
+        }
+      } else {
+        EList<String> _type = param.getType();
+        for (final String t : _type) {
+          tipos.add(t);
+        }
       }
     }
     return tipos;

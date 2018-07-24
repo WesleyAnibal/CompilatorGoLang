@@ -201,13 +201,25 @@ class GoValidator extends AbstractGoValidator {
 
 	}
 
+	def getVariableById(String name) {
+		return variablesDeclarationMap.get(name);
+	}
+
 	def getParametersType(Params param) {
 
 		var List<String> tipos = new ArrayList<String>();
 		if (param !== null && param.type !== null) {
-			for (String id : param.type) {
-				tipos.add(id)
+			if (param.type.size() == 0) {
+				for (String id : param.params) {
+					var Atrib variable = getVariableById(id);
+					tipos.add(variable.type);
+				}
+			} else {
+				for (String t : param.type) {
+					tipos.add(t)
+				}
 			}
+
 		}
 		return tipos;
 
