@@ -234,13 +234,15 @@ class GoValidator extends AbstractGoValidator {
 	 */
 	def atribDeclarationTypes(Atrib dec) {
 		if (dec.atrib instanceof TypeValue) {
-			if (dec.type.equals("string") && dec.atrib instanceof Numbers) {
-				error(SEMANTIC_ERROR + "não é possível converter number para string", GoPackage.Literals.ATRIB__TYPE);
-			}
-			if (!dec.type.equals("string") && dec.atrib instanceof Str) {
-				error(SEMANTIC_ERROR + "não é possível converter string para " + dec.type,
-					GoPackage.Literals.ATRIB__TYPE);
-			}
+			var TypeValue type = dec.atrib as TypeValue;
+			checkIfIsTypeCompatible(dec.type, type,  GoPackage.Literals.ATRIB__TYPE);
+//			if (dec.type.equals("string") && dec.atrib instanceof Numbers) {
+//				error(SEMANTIC_ERROR + "não é possível converter number para string", GoPackage.Literals.ATRIB__TYPE);
+//			}
+//			if (!dec.type.equals("string") && dec.atrib instanceof Str) {
+//				error(SEMANTIC_ERROR + "não é possível converter string para " + dec.type,
+//					GoPackage.Literals.ATRIB__TYPE);
+//			}
 		}
 
 	}

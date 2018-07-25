@@ -18,7 +18,6 @@ import org.xtext.go.go.Bool;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.GoPackage;
-import org.xtext.go.go.Numbers;
 import org.xtext.go.go.Params;
 import org.xtext.go.go.ReAtrib;
 import org.xtext.go.go.Str;
@@ -273,15 +272,9 @@ public class GoValidator extends AbstractGoValidator {
   public void atribDeclarationTypes(final Atrib dec) {
     Atrib_Aux _atrib = dec.getAtrib();
     if ((_atrib instanceof TypeValue)) {
-      if ((dec.getType().equals("string") && (dec.getAtrib() instanceof Numbers))) {
-        this.error((GoValidator.SEMANTIC_ERROR + "não é possível converter number para string"), GoPackage.Literals.ATRIB__TYPE);
-      }
-      if (((!dec.getType().equals("string")) && (dec.getAtrib() instanceof Str))) {
-        String _type = dec.getType();
-        String _plus = ((GoValidator.SEMANTIC_ERROR + "não é possível converter string para ") + _type);
-        this.error(_plus, 
-          GoPackage.Literals.ATRIB__TYPE);
-      }
+      Atrib_Aux _atrib_1 = dec.getAtrib();
+      TypeValue type = ((TypeValue) _atrib_1);
+      this.checkIfIsTypeCompatible(dec.getType(), type, GoPackage.Literals.ATRIB__TYPE);
     }
   }
   
