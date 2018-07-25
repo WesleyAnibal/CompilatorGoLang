@@ -6,7 +6,7 @@ Go:
 	(elements+=Greeting*);
 
 Greeting:
-	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition |  SwitchCase | DecImport | CallFunc | CallFor | Variable;
+	 MultDecVars | DecVar | DataType | DecFunc | EOL | Condition |  SwitchCase | DecImport | CallFunc | CallFor | Variable;
 
 Decl:
 	Modif name=ID type=Types
@@ -21,7 +21,7 @@ AtribVar:
 ;
 
 Atrib_Aux:
-	Atri|Variable|CallFunc
+	Operations|Atri|Variable|CallFunc
 ;
 
 Variable:
@@ -57,7 +57,7 @@ Params:
 	params+=ID type+=Types? (Comma params+=ID type+=Types?)*;
 	
 TypeValue:
-	Str | Numbers | Bool;
+	Str | Numbers | Bool ;
 
 Str:
 	s=STRING
@@ -81,6 +81,20 @@ Intg:
 Double:
 	d=INT Dot INT;
 	
+Operations:
+	T o=I;
+
+I:
+	((Plus T o=I)|(Minus T o=I))?;	
+T: 
+	F o=Y;
+	
+Y:
+	((Asterics o=F o=Y) |(Bar o=F o=Y))?;
+	
+F:
+	Open_parentheses o=Operations Closed_parentheses| Numbers;
+	
 Condition: 
     (if=IfCondition(elseif=ElseIfCondition)*(else=ElseCondition)?);
     
@@ -94,7 +108,7 @@ ElseCondition:
 	(=>ELSE Open_Key then=Greeting*Closed_Key); 
   
 Expression:
-    =>(x=Opers | OrExpression | ID) 
+    =>(x=Operations | boolean=OrExpression | ID) 
 ;   
 
 CallFor :

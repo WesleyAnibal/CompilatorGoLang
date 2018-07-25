@@ -82,7 +82,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="n" eType="#//Numbers" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Numbers" eSuperTypes="#//TypeValue #//Expression">
+  <eClassifiers xsi:type="ecore:EClass" name="Numbers" eSuperTypes="#//TypeValue #//F #//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="int" eType="#//Intg" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="d" eType="#//Double" containment="true"/>
   </eClassifiers>
@@ -92,6 +92,17 @@
   <eClassifiers xsi:type="ecore:EClass" name="Double">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="d" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operations" eSuperTypes="#//Atrib_Aux"/>
+  <eClassifiers xsi:type="ecore:EClass" name="I"/>
+  <eClassifiers xsi:type="ecore:EClass" name="T" eSuperTypes="#//Operations #//I">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="o" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Y">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="o" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="F" eSuperTypes="#//T"/>
   <eClassifiers xsi:type="ecore:EClass" name="Condition" eSuperTypes="#//Greeting">
     <eStructuralFeatures xsi:type="ecore:EReference" name="if" eType="#//IfCondition"
         containment="true"/>
@@ -112,13 +123,15 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//varFor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boolean" eType="#//Expression"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sum" eType="#//Expression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sub" eType="#//Expression"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CallFor" eSuperTypes="#//Greeting">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="x" eType="#//Greeting"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="x" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="operationsOne" eSuperTypes="#//varFor">
