@@ -808,29 +808,44 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Numbers");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Assignment cIntAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final RuleCall cIntINTTerminalRuleCall_0_0 = (RuleCall)cIntAssignment_0.eContents().get(0);
+		private final RuleCall cIntIntgParserRuleCall_0_0 = (RuleCall)cIntAssignment_0.eContents().get(0);
 		private final Assignment cDAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final RuleCall cDDoubleParserRuleCall_1_0 = (RuleCall)cDAssignment_1.eContents().get(0);
 		
 		////Removi a recursão a esquerda
 		// Numbers:
-		//	int=INT | d=Double;
+		//	int=Intg | d=Double;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//int=INT | d=Double
+		//int=Intg | d=Double
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//int=INT
+		//int=Intg
 		public Assignment getIntAssignment_0() { return cIntAssignment_0; }
 		
-		//INT
-		public RuleCall getIntINTTerminalRuleCall_0_0() { return cIntINTTerminalRuleCall_0_0; }
+		//Intg
+		public RuleCall getIntIntgParserRuleCall_0_0() { return cIntIntgParserRuleCall_0_0; }
 		
 		//d=Double
 		public Assignment getDAssignment_1() { return cDAssignment_1; }
 		
 		//Double
 		public RuleCall getDDoubleParserRuleCall_1_0() { return cDDoubleParserRuleCall_1_0; }
+	}
+	public class IntgElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Intg");
+		private final Assignment cIAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cIINTTerminalRuleCall_0 = (RuleCall)cIAssignment.eContents().get(0);
+		
+		//Intg:
+		//	i=INT;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//i=INT
+		public Assignment getIAssignment() { return cIAssignment; }
+		
+		//INT
+		public RuleCall getIINTTerminalRuleCall_0() { return cIINTTerminalRuleCall_0; }
 	}
 	public class DoubleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Double");
@@ -2048,6 +2063,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	private final DecImportElements pDecImport;
 	private final OperationsOneEqualsElements pOperationsOneEquals;
 	private final NumbersElements pNumbers;
+	private final IntgElements pIntg;
 	private final DoubleElements pDouble;
 	private final ConditionElements pCondition;
 	private final IfConditionElements pIfCondition;
@@ -2148,6 +2164,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		this.pDecImport = new DecImportElements();
 		this.pOperationsOneEquals = new OperationsOneEqualsElements();
 		this.pNumbers = new NumbersElements();
+		this.pIntg = new IntgElements();
 		this.pDouble = new DoubleElements();
 		this.pCondition = new ConditionElements();
 		this.pIfCondition = new IfConditionElements();
@@ -2439,13 +2456,23 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	
 	////Removi a recursão a esquerda
 	// Numbers:
-	//	int=INT | d=Double;
+	//	int=Intg | d=Double;
 	public NumbersElements getNumbersAccess() {
 		return pNumbers;
 	}
 	
 	public ParserRule getNumbersRule() {
 		return getNumbersAccess().getRule();
+	}
+	
+	//Intg:
+	//	i=INT;
+	public IntgElements getIntgAccess() {
+		return pIntg;
+	}
+	
+	public ParserRule getIntgRule() {
+		return getIntgAccess().getRule();
 	}
 	
 	//Double:

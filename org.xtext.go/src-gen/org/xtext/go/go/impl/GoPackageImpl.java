@@ -36,6 +36,7 @@ import org.xtext.go.go.GoFactory;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Greeting;
 import org.xtext.go.go.IfCondition;
+import org.xtext.go.go.Intg;
 import org.xtext.go.go.Literal;
 import org.xtext.go.go.MultDecVars;
 import org.xtext.go.go.Multiplication;
@@ -192,6 +193,13 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * @generated
    */
   private EClass numbersEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass intgEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -918,9 +926,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getNumbers_Int()
+  public EReference getNumbers_Int()
   {
-    return (EAttribute)numbersEClass.getEStructuralFeatures().get(0);
+    return (EReference)numbersEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -931,6 +939,26 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
   public EReference getNumbers_D()
   {
     return (EReference)numbersEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIntg()
+  {
+    return intgEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIntg_I()
+  {
+    return (EAttribute)intgEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1482,8 +1510,11 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     createEReference(operationsOneEqualsEClass, OPERATIONS_ONE_EQUALS__N);
 
     numbersEClass = createEClass(NUMBERS);
-    createEAttribute(numbersEClass, NUMBERS__INT);
+    createEReference(numbersEClass, NUMBERS__INT);
     createEReference(numbersEClass, NUMBERS__D);
+
+    intgEClass = createEClass(INTG);
+    createEAttribute(intgEClass, INTG__I);
 
     doubleEClass = createEClass(DOUBLE);
     createEAttribute(doubleEClass, DOUBLE__D);
@@ -1682,8 +1713,11 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEReference(getOperationsOneEquals_N(), this.getNumbers(), null, "n", null, 0, 1, OperationsOneEquals.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(numbersEClass, Numbers.class, "Numbers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNumbers_Int(), ecorePackage.getEInt(), "int", null, 0, 1, Numbers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNumbers_Int(), this.getIntg(), null, "int", null, 0, 1, Numbers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getNumbers_D(), this.getDouble(), null, "d", null, 0, 1, Numbers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(intgEClass, Intg.class, "Intg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIntg_I(), ecorePackage.getEInt(), "i", null, 0, 1, Intg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(doubleEClass, org.xtext.go.go.Double.class, "Double", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDouble_D(), ecorePackage.getEInt(), "d", null, 0, 1, org.xtext.go.go.Double.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

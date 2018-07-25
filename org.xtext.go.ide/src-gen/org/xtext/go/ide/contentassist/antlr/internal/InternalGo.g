@@ -525,6 +525,31 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Entry rule entryRuleIntg
+entryRuleIntg
+:
+{ before(grammarAccess.getIntgRule()); }
+	 ruleIntg
+{ after(grammarAccess.getIntgRule()); } 
+	 EOF 
+;
+
+// Rule Intg
+ruleIntg 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getIntgAccess().getIAssignment()); }
+		(rule__Intg__IAssignment)
+		{ after(grammarAccess.getIntgAccess().getIAssignment()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Entry rule entryRuleDouble
 entryRuleDouble
 :
@@ -6960,9 +6985,9 @@ rule__Numbers__IntAssignment_0
 	}
 :
 	(
-		{ before(grammarAccess.getNumbersAccess().getIntINTTerminalRuleCall_0_0()); }
-		RULE_INT
-		{ after(grammarAccess.getNumbersAccess().getIntINTTerminalRuleCall_0_0()); }
+		{ before(grammarAccess.getNumbersAccess().getIntIntgParserRuleCall_0_0()); }
+		ruleIntg
+		{ after(grammarAccess.getNumbersAccess().getIntIntgParserRuleCall_0_0()); }
 	)
 ;
 finally {
@@ -6978,6 +7003,21 @@ rule__Numbers__DAssignment_1
 		{ before(grammarAccess.getNumbersAccess().getDDoubleParserRuleCall_1_0()); }
 		ruleDouble
 		{ after(grammarAccess.getNumbersAccess().getDDoubleParserRuleCall_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Intg__IAssignment
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getIntgAccess().getIINTTerminalRuleCall_0()); }
+		RULE_INT
+		{ after(grammarAccess.getIntgAccess().getIINTTerminalRuleCall_0()); }
 	)
 ;
 finally {

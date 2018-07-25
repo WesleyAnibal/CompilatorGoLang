@@ -18,6 +18,8 @@ import org.xtext.go.go.Bool;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.GoPackage;
+import org.xtext.go.go.Intg;
+import org.xtext.go.go.Numbers;
 import org.xtext.go.go.Params;
 import org.xtext.go.go.ReAtrib;
 import org.xtext.go.go.Str;
@@ -101,29 +103,51 @@ public class GoValidator extends AbstractGoValidator {
   
   public void checkIfIsTypeCompatible(final String t1, final TypeValue t2, final EAttribute pack) {
     if ((t1.equals("bool") && (!(t2 instanceof Bool)))) {
-      String _string = t2.toString();
+      String _string = t1.toString();
       String _plus = ((GoValidator.SEMANTIC_ERROR + "Não é possível converter ") + _string);
-      String _plus_1 = (_plus + " para boolean");
-      this.error(_plus_1, pack);
+      String _plus_1 = (_plus + " para ");
+      String _typeNameFromTypeValue = this.getTypeNameFromTypeValue(t2);
+      String _plus_2 = (_plus_1 + _typeNameFromTypeValue);
+      this.error(_plus_2, pack);
     }
-    if (((!t2.equals("bool")) && (t2 instanceof Bool))) {
-      String _string_1 = t2.toString();
-      String _plus_2 = ((GoValidator.SEMANTIC_ERROR + "Não é possível converter ") + _string_1);
-      String _plus_3 = (_plus_2 + " para boolean");
-      this.error(_plus_3, pack);
+    if (((!t1.equals("bool")) && (t2 instanceof Bool))) {
+      String _string_1 = t1.toString();
+      String _plus_3 = ((GoValidator.SEMANTIC_ERROR + "Não é possível converter ") + _string_1);
+      String _plus_4 = (_plus_3 + " para boolean");
+      this.error(_plus_4, pack);
     }
     if (((!t1.equals("string")) && (t2 instanceof Str))) {
       String _string_2 = t1.toString();
-      String _plus_4 = ((GoValidator.SEMANTIC_ERROR + "Não é possível converter ") + _string_2);
-      String _plus_5 = (_plus_4 + " para string");
-      this.error(_plus_5, pack);
+      String _plus_5 = ((GoValidator.SEMANTIC_ERROR + "Não é possível converter ") + _string_2);
+      String _plus_6 = (_plus_5 + " para string");
+      this.error(_plus_6, pack);
     }
     if ((t1.equals("string") && (!(t2 instanceof Str)))) {
-      String _string_3 = t2.toString();
-      String _plus_6 = ((GoValidator.SEMANTIC_ERROR + "Não é possível converter ") + _string_3);
-      String _plus_7 = (_plus_6 + " para string");
-      this.error(_plus_7, pack);
+      String _string_3 = t1.toString();
+      String _plus_7 = ((GoValidator.SEMANTIC_ERROR + "Não é possível converter ") + _string_3);
+      String _plus_8 = (_plus_7 + " para ");
+      String _typeNameFromTypeValue_1 = this.getTypeNameFromTypeValue(t2);
+      String _plus_9 = (_plus_8 + _typeNameFromTypeValue_1);
+      this.error(_plus_9, pack);
     }
+  }
+  
+  public String getTypeNameFromTypeValue(final TypeValue typeValue) {
+    if ((typeValue instanceof Str)) {
+      return "string";
+    }
+    if ((typeValue instanceof Numbers)) {
+      Numbers n = ((Numbers) typeValue);
+      if ((n instanceof Intg)) {
+        return "int";
+      } else {
+        return "float";
+      }
+    }
+    if ((typeValue instanceof Bool)) {
+      return "bool";
+    }
+    return null;
   }
   
   /**

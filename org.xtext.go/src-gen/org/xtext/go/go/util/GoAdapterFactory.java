@@ -35,6 +35,7 @@ import org.xtext.go.go.Go;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Greeting;
 import org.xtext.go.go.IfCondition;
+import org.xtext.go.go.Intg;
 import org.xtext.go.go.Literal;
 import org.xtext.go.go.MultDecVars;
 import org.xtext.go.go.Multiplication;
@@ -208,6 +209,11 @@ public class GoAdapterFactory extends AdapterFactoryImpl
       public Adapter caseNumbers(Numbers object)
       {
         return createNumbersAdapter();
+      }
+      @Override
+      public Adapter caseIntg(Intg object)
+      {
+        return createIntgAdapter();
       }
       @Override
       public Adapter caseDouble(org.xtext.go.go.Double object)
@@ -617,6 +623,21 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createNumbersAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Intg <em>Intg</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.Intg
+   * @generated
+   */
+  public Adapter createIntgAdapter()
   {
     return null;
   }

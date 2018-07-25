@@ -195,6 +195,15 @@ public interface GoFactory extends EFactory
   Numbers createNumbers();
 
   /**
+   * Returns a new object of class '<em>Intg</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Intg</em>'.
+   * @generated
+   */
+  Intg createIntg();
+
+  /**
    * Returns a new object of class '<em>Double</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

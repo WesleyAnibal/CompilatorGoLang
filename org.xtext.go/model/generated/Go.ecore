@@ -83,8 +83,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="n" eType="#//Numbers" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Numbers" eSuperTypes="#//TypeValue #//Expression">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="int" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="int" eType="#//Intg" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="d" eType="#//Double" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Intg">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="i" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Double">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="d" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

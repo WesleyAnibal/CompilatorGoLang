@@ -71,8 +71,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//OperationsOneEquals/n"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//Numbers">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Numbers/int"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Numbers/int"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Numbers/d"/>
+    </genClasses>
+    <genClasses ecoreClass="Go.ecore#//Intg">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Intg/i"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//Double">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Double/d"/>

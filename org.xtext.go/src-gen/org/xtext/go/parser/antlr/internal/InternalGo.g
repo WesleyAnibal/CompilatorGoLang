@@ -1417,19 +1417,20 @@ ruleNumbers returns [EObject current=null]
 	(
 		(
 			(
-				lv_int_0_0=RULE_INT
 				{
-					newLeafNode(lv_int_0_0, grammarAccess.getNumbersAccess().getIntINTTerminalRuleCall_0_0());
+					newCompositeNode(grammarAccess.getNumbersAccess().getIntIntgParserRuleCall_0_0());
 				}
+				lv_int_0_0=ruleIntg
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getNumbersRule());
+						$current = createModelElementForParent(grammarAccess.getNumbersRule());
 					}
-					setWithLastConsumed(
+					set(
 						$current,
 						"int",
 						lv_int_0_0,
-						"org.eclipse.xtext.common.Terminals.INT");
+						"org.xtext.go.Go.Intg");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -1452,6 +1453,41 @@ ruleNumbers returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
+		)
+	)
+;
+
+// Entry rule entryRuleIntg
+entryRuleIntg returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getIntgRule()); }
+	iv_ruleIntg=ruleIntg
+	{ $current=$iv_ruleIntg.current; }
+	EOF;
+
+// Rule Intg
+ruleIntg returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			lv_i_0_0=RULE_INT
+			{
+				newLeafNode(lv_i_0_0, grammarAccess.getIntgAccess().getIINTTerminalRuleCall_0());
+			}
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getIntgRule());
+				}
+				setWithLastConsumed(
+					$current,
+					"i",
+					lv_i_0_0,
+					"org.eclipse.xtext.common.Terminals.INT");
+			}
 		)
 	)
 ;

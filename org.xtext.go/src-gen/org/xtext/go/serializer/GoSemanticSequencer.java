@@ -35,6 +35,7 @@ import org.xtext.go.go.Expression;
 import org.xtext.go.go.Go;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.IfCondition;
+import org.xtext.go.go.Intg;
 import org.xtext.go.go.Literal;
 import org.xtext.go.go.MultDecVars;
 import org.xtext.go.go.Multiplication;
@@ -206,6 +207,9 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case GoPackage.IF_CONDITION:
 				sequence_IfCondition(context, (IfCondition) semanticObject); 
+				return; 
+			case GoPackage.INTG:
+				sequence_Intg(context, (Intg) semanticObject); 
 				return; 
 			case GoPackage.LITERAL:
 				if (rule == grammarAccess.getGreetingRule()
@@ -528,7 +532,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     CallFor returns Numbers
 	 *
 	 * Constraint:
-	 *     ((int=INT | d=Double) x=Greeting*)
+	 *     ((int=Intg | d=Double) x=Greeting*)
 	 */
 	protected void sequence_CallFor_Numbers(ISerializationContext context, Numbers semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -842,6 +846,24 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     Intg returns Intg
+	 *
+	 * Constraint:
+	 *     i=INT
+	 */
+	protected void sequence_Intg(ISerializationContext context, Intg semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.INTG__I) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.INTG__I));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getIntgAccess().getIINTTerminalRuleCall_0(), semanticObject.getI());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Expression returns Literal
 	 *     Addition returns Literal
 	 *     Addition.Addition_1_0 returns Literal
@@ -943,7 +965,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Literal returns Numbers
 	 *
 	 * Constraint:
-	 *     (int=INT | d=Double)
+	 *     (int=Intg | d=Double)
 	 */
 	protected void sequence_Numbers(ISerializationContext context, Numbers semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

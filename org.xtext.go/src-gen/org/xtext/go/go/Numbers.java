@@ -24,30 +24,30 @@ package org.xtext.go.go;
 public interface Numbers extends TypeValue, Expression
 {
   /**
-   * Returns the value of the '<em><b>Int</b></em>' attribute.
+   * Returns the value of the '<em><b>Int</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Int</em>' attribute isn't clear,
+   * If the meaning of the '<em>Int</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Int</em>' attribute.
-   * @see #setInt(int)
+   * @return the value of the '<em>Int</em>' containment reference.
+   * @see #setInt(Intg)
    * @see org.xtext.go.go.GoPackage#getNumbers_Int()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  int getInt();
+  Intg getInt();
 
   /**
-   * Sets the value of the '{@link org.xtext.go.go.Numbers#getInt <em>Int</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.go.go.Numbers#getInt <em>Int</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Int</em>' attribute.
+   * @param value the new value of the '<em>Int</em>' containment reference.
    * @see #getInt()
    * @generated
    */
-  void setInt(int value);
+  void setInt(Intg value);
 
   /**
    * Returns the value of the '<em><b>D</b></em>' containment reference.

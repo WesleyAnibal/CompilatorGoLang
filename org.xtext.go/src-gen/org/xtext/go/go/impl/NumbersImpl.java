@@ -24,6 +24,7 @@ import org.xtext.go.go.CallFor;
 import org.xtext.go.go.Expression;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Greeting;
+import org.xtext.go.go.Intg;
 import org.xtext.go.go.Numbers;
 import org.xtext.go.go.varFor;
 
@@ -121,24 +122,14 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
   protected Expression sub;
 
   /**
-   * The default value of the '{@link #getInt() <em>Int</em>}' attribute.
+   * The cached value of the '{@link #getInt() <em>Int</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getInt()
    * @generated
    * @ordered
    */
-  protected static final int INT_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getInt() <em>Int</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getInt()
-   * @generated
-   * @ordered
-   */
-  protected int int_ = INT_EDEFAULT;
+  protected Intg int_;
 
   /**
    * The cached value of the '{@link #getD() <em>D</em>}' containment reference.
@@ -444,7 +435,7 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getInt()
+  public Intg getInt()
   {
     return int_;
   }
@@ -454,12 +445,37 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setInt(int newInt)
+  public NotificationChain basicSetInt(Intg newInt, NotificationChain msgs)
   {
-    int oldInt = int_;
+    Intg oldInt = int_;
     int_ = newInt;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.NUMBERS__INT, oldInt, int_));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.NUMBERS__INT, oldInt, newInt);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setInt(Intg newInt)
+  {
+    if (newInt != int_)
+    {
+      NotificationChain msgs = null;
+      if (int_ != null)
+        msgs = ((InternalEObject)int_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.NUMBERS__INT, null, msgs);
+      if (newInt != null)
+        msgs = ((InternalEObject)newInt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.NUMBERS__INT, null, msgs);
+      msgs = basicSetInt(newInt, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.NUMBERS__INT, newInt, newInt));
   }
 
   /**
@@ -532,6 +548,8 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
         return basicSetSum(null, msgs);
       case GoPackage.NUMBERS__SUB:
         return basicSetSub(null, msgs);
+      case GoPackage.NUMBERS__INT:
+        return basicSetInt(null, msgs);
       case GoPackage.NUMBERS__D:
         return basicSetD(null, msgs);
     }
@@ -605,7 +623,7 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
         setSub((Expression)newValue);
         return;
       case GoPackage.NUMBERS__INT:
-        setInt((Integer)newValue);
+        setInt((Intg)newValue);
         return;
       case GoPackage.NUMBERS__D:
         setD((org.xtext.go.go.Double)newValue);
@@ -646,7 +664,7 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
         setSub((Expression)null);
         return;
       case GoPackage.NUMBERS__INT:
-        setInt(INT_EDEFAULT);
+        setInt((Intg)null);
         return;
       case GoPackage.NUMBERS__D:
         setD((org.xtext.go.go.Double)null);
@@ -680,7 +698,7 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
       case GoPackage.NUMBERS__SUB:
         return sub != null;
       case GoPackage.NUMBERS__INT:
-        return int_ != INT_EDEFAULT;
+        return int_ != null;
       case GoPackage.NUMBERS__D:
         return d != null;
     }
@@ -792,8 +810,6 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (var: ");
     result.append(var);
-    result.append(", int: ");
-    result.append(int_);
     result.append(')');
     return result.toString();
   }

@@ -488,7 +488,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) d=Double
-	 *     (rule start) (ambiguity) int=INT
+	 *     (rule start) (ambiguity) int=Intg
 	 *     (rule start) (ambiguity) s=STRING
 	 *     (rule start) (ambiguity) val='false'
 	 *     (rule start) (ambiguity) val='true'
@@ -529,14 +529,14 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) ID (rule start)
 	 *     (rule start) (ambiguity) d=Double
-	 *     (rule start) (ambiguity) int=INT
+	 *     (rule start) (ambiguity) int=Intg
 	 *     (rule start) (ambiguity) value=Bool
 	 *     (rule start) (ambiguity) x=Opers
 	 *     (rule start) (ambiguity) {AndExpression.left=}
 	 *     (rule start) (ambiguity) {ComparisonExpression.left=}
 	 *     (rule start) (ambiguity) {OrExpression.left=}
 	 *     (rule start) FOR (ambiguity) d=Double
-	 *     (rule start) FOR (ambiguity) int=INT
+	 *     (rule start) FOR (ambiguity) int=Intg
 	 *     (rule start) FOR (ambiguity) value=Bool
 	 *     (rule start) FOR (ambiguity) {ComparisonExpression.left=}
 	 */

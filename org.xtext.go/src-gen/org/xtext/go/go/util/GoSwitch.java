@@ -33,6 +33,7 @@ import org.xtext.go.go.Go;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Greeting;
 import org.xtext.go.go.IfCondition;
+import org.xtext.go.go.Intg;
 import org.xtext.go.go.Literal;
 import org.xtext.go.go.MultDecVars;
 import org.xtext.go.go.Multiplication;
@@ -263,6 +264,13 @@ public class GoSwitch<T> extends Switch<T>
         if (result == null) result = caseAtrib_Aux(numbers);
         if (result == null) result = caseCallFor(numbers);
         if (result == null) result = caseGreeting(numbers);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.INTG:
+      {
+        Intg intg = (Intg)theEObject;
+        T result = caseIntg(intg);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -767,6 +775,22 @@ public class GoSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseNumbers(Numbers object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Intg</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Intg</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIntg(Intg object)
   {
     return null;
   }

@@ -144,6 +144,7 @@ public class GoParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getOperationsOneEqualsAccess().getNAssignment_2_1(), "rule__OperationsOneEquals__NAssignment_2_1");
 			builder.put(grammarAccess.getNumbersAccess().getIntAssignment_0(), "rule__Numbers__IntAssignment_0");
 			builder.put(grammarAccess.getNumbersAccess().getDAssignment_1(), "rule__Numbers__DAssignment_1");
+			builder.put(grammarAccess.getIntgAccess().getIAssignment(), "rule__Intg__IAssignment");
 			builder.put(grammarAccess.getDoubleAccess().getDAssignment_0(), "rule__Double__DAssignment_0");
 			builder.put(grammarAccess.getConditionAccess().getIfAssignment_0(), "rule__Condition__IfAssignment_0");
 			builder.put(grammarAccess.getConditionAccess().getElseifAssignment_1(), "rule__Condition__ElseifAssignment_1");

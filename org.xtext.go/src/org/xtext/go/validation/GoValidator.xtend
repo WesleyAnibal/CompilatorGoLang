@@ -34,6 +34,7 @@ import org.xtext.go.go.Str
 import org.eclipse.emf.ecore.EAttribute
 import org.xtext.go.go.ReAtrib
 import org.xtext.go.go.Bool
+import org.xtext.go.go.Intg
 
 /**
  * This class contains custom validation rules. 
@@ -106,22 +107,40 @@ class GoValidator extends AbstractGoValidator {
 	def checkIfIsTypeCompatible(String t1, TypeValue t2, EAttribute pack){
 		
 		if(t1.equals("bool") && !(t2 instanceof Bool)){
-			error(SEMANTIC_ERROR + "Não é possível converter " + t2.toString() +  " para boolean", pack);
+			error(SEMANTIC_ERROR + "Não é possível converter " + t1.toString() +  " para " +  getTypeNameFromTypeValue(t2), pack);
 		}
-		if(!t2.equals("bool") && (t2 instanceof Bool)){
-			error(SEMANTIC_ERROR + "Não é possível converter " + t2.toString() +  " para boolean", pack);
+		if(!t1.equals("bool") && (t2 instanceof Bool)){
+			error(SEMANTIC_ERROR + "Não é possível converter " + t1.toString() +  " para boolean", pack);
 		}
 		if(!t1.equals("string")&& (t2 instanceof Str)){
+			
 			error(SEMANTIC_ERROR + "Não é possível converter " + t1.toString() +  " para string", pack);
 		}
 		
 		
 		if(t1.equals("string")&& !(t2 instanceof Str)){
-			error(SEMANTIC_ERROR + "Não é possível converter " + t2.toString() +  " para string", pack);
+			error(SEMANTIC_ERROR + "Não é possível converter " + t1.toString() +  " para " + getTypeNameFromTypeValue(t2) , pack);
 		}
 		
 		
 		
+	}
+	
+	def getTypeNameFromTypeValue(TypeValue typeValue){
+		if(typeValue instanceof Str){
+			return "string";
+		}
+		if(typeValue instanceof Numbers){
+			var Numbers n = typeValue as Numbers;
+			if(n instanceof Intg){
+				return "int";
+			}else{
+				return "float"
+			}
+		}
+		if(typeValue instanceof Bool){
+			return "bool";
+		}
 	}
 
 	/**

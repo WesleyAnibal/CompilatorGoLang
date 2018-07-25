@@ -72,7 +72,11 @@ OperationsOneEquals:
 
 
 Numbers:
-	int=INT | d=Double;
+	int=Intg | d=Double;
+
+Intg:
+	i=INT
+;	
 	
 Double:
 	d=INT Dot INT;

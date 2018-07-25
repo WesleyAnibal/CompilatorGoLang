@@ -37,6 +37,7 @@ import org.xtext.go.go.GoFactory;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Greeting;
 import org.xtext.go.go.IfCondition;
+import org.xtext.go.go.Intg;
 import org.xtext.go.go.Literal;
 import org.xtext.go.go.MultDecVars;
 import org.xtext.go.go.Multiplication;
@@ -124,6 +125,7 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
       case GoPackage.STR: return createStr();
       case GoPackage.OPERATIONS_ONE_EQUALS: return createOperationsOneEquals();
       case GoPackage.NUMBERS: return createNumbers();
+      case GoPackage.INTG: return createIntg();
       case GoPackage.DOUBLE: return createDouble();
       case GoPackage.CONDITION: return createCondition();
       case GoPackage.IF_CONDITION: return createIfCondition();
@@ -357,6 +359,17 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     NumbersImpl numbers = new NumbersImpl();
     return numbers;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Intg createIntg()
+  {
+    IntgImpl intg = new IntgImpl();
+    return intg;
   }
 
   /**
