@@ -32,6 +32,7 @@ import org.xtext.go.go.Atri
 import org.xtext.go.go.Numbers
 import org.xtext.go.go.Str
 import org.eclipse.emf.ecore.EAttribute
+import org.xtext.go.go.ReAtrib
 
 /**
  * This class contains custom validation rules. 
@@ -78,6 +79,22 @@ class GoValidator extends AbstractGoValidator {
 
 	}
 
+	@Check
+	def reassignmentVar(ReAtrib re) {
+		if (!variablesDeclarationMap.containsKey(re.name)) {
+			error(SEMANTIC_ERROR + "Não é possível reaatribuir valor. Variavel " + re.name + " não declarada",
+				GoPackage.Literals.RE_ATRIB__NAME);
+		} else {
+			var Atrib at = variablesDeclarationMap.get(re.name);
+			if (at.modifier.equals("const")) {
+				error(SEMANTIC_ERROR + "Não é possível reaatribuir valor para variáveis const.",
+					GoPackage.Literals.RE_ATRIB__NAME);
+			}
+
+		}
+
+	}
+
 	/**
 	 * This function add in the map all the variables in the source code
 	 */
@@ -106,7 +123,7 @@ class GoValidator extends AbstractGoValidator {
 		}
 		if (dec.atrib instanceof CallFunc) {
 			var CallFunc call = dec.atrib as CallFunc;
-			 checkIfFunctionExists(call, erro );
+			checkIfFunctionExists(call, erro);
 			var DecFunc decF = funcImplements.get(call.nameFunc);
 			if (decF.returnType === null) {
 				error(
@@ -116,7 +133,7 @@ class GoValidator extends AbstractGoValidator {
 			}
 
 			checkIfFunctionHasReturnType(call, erro)
-		    checkTypeFunctionWithAtrib(call, dec, GoPackage.Literals.ATRIB__TYPE);
+			checkTypeFunctionWithAtrib(call, dec, GoPackage.Literals.ATRIB__TYPE);
 		}
 	}
 

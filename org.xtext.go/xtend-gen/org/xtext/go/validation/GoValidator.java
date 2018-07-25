@@ -19,6 +19,7 @@ import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Numbers;
 import org.xtext.go.go.Params;
+import org.xtext.go.go.ReAtrib;
 import org.xtext.go.go.Str;
 import org.xtext.go.go.TypeValue;
 import org.xtext.go.go.Variable;
@@ -66,6 +67,26 @@ public class GoValidator extends AbstractGoValidator {
       out = true;
     }
     return out;
+  }
+  
+  @Check
+  public void reassignmentVar(final ReAtrib re) {
+    boolean _containsKey = GoValidator.variablesDeclarationMap.containsKey(re.getName());
+    boolean _not = (!_containsKey);
+    if (_not) {
+      String _name = re.getName();
+      String _plus = ((GoValidator.SEMANTIC_ERROR + "Não é possível reaatribuir valor. Variavel ") + _name);
+      String _plus_1 = (_plus + " não declarada");
+      this.error(_plus_1, 
+        GoPackage.Literals.RE_ATRIB__NAME);
+    } else {
+      Atrib at = GoValidator.variablesDeclarationMap.get(re.getName());
+      boolean _equals = at.getModifier().equals("const");
+      if (_equals) {
+        this.error((GoValidator.SEMANTIC_ERROR + "Não é possível reaatribuir valor para variáveis const."), 
+          GoPackage.Literals.RE_ATRIB__NAME);
+      }
+    }
   }
   
   /**
