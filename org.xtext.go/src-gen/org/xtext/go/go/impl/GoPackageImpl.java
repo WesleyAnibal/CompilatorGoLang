@@ -16,6 +16,7 @@ import org.xtext.go.go.Atri;
 import org.xtext.go.go.Atrib;
 import org.xtext.go.go.AtribVar;
 import org.xtext.go.go.Atrib_Aux;
+import org.xtext.go.go.Bool;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.Cases;
@@ -274,7 +275,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass booleanEClass = null;
+  private EClass boolEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1257,9 +1258,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getBoolean()
+  public EClass getBool()
   {
-    return booleanEClass;
+    return boolEClass;
   }
 
   /**
@@ -1267,9 +1268,9 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getBoolean_Val()
+  public EAttribute getBool_Val()
   {
-    return (EAttribute)booleanEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)boolEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1527,8 +1528,8 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     createEAttribute(callFuncEClass, CALL_FUNC__NAME_FUNC);
     createEReference(callFuncEClass, CALL_FUNC__PARAM);
 
-    booleanEClass = createEClass(BOOLEAN);
-    createEAttribute(booleanEClass, BOOLEAN__VAL);
+    boolEClass = createEClass(BOOL);
+    createEAttribute(boolEClass, BOOL__VAL);
 
     dataTypeEClass = createEClass(DATA_TYPE);
     createEAttribute(dataTypeEClass, DATA_TYPE__NAME);
@@ -1600,7 +1601,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     decFuncEClass.getESuperTypes().add(this.getGreeting());
     callFuncEClass.getESuperTypes().add(this.getGreeting());
     callFuncEClass.getESuperTypes().add(this.getAtrib_Aux());
-    booleanEClass.getESuperTypes().add(this.getTypeValue());
+    boolEClass.getESuperTypes().add(this.getTypeValue());
     dataTypeEClass.getESuperTypes().add(this.getGreeting());
     additionEClass.getESuperTypes().add(this.getExpression());
     subtrationEClass.getESuperTypes().add(this.getExpression());
@@ -1727,8 +1728,8 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEAttribute(getCallFunc_NameFunc(), ecorePackage.getEString(), "nameFunc", null, 0, 1, CallFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCallFunc_Param(), this.getParams(), null, "param", null, 0, 1, CallFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(booleanEClass, org.xtext.go.go.Boolean.class, "Boolean", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getBoolean_Val(), ecorePackage.getEString(), "val", null, 0, 1, org.xtext.go.go.Boolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(boolEClass, Bool.class, "Bool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBool_Val(), ecorePackage.getEString(), "val", null, 0, 1, Bool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDataType_Name(), ecorePackage.getEString(), "name", null, 0, 1, DataType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1748,7 +1749,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEClass(comparisonExpressionEClass, ComparisonExpression.class, "ComparisonExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getLiteral_Value(), this.getBoolean(), null, "value", null, 0, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLiteral_Value(), this.getBool(), null, "value", null, 0, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

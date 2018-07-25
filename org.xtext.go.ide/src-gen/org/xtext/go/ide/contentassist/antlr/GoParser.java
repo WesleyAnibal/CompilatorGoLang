@@ -53,7 +53,7 @@ public class GoParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getTerminalsAccess().getAlternatives(), "rule__Terminals__Alternatives");
 			builder.put(grammarAccess.getTypesAccess().getAlternatives(), "rule__Types__Alternatives");
 			builder.put(grammarAccess.getModifAccess().getAlternatives(), "rule__Modif__Alternatives");
-			builder.put(grammarAccess.getBooleanAccess().getAlternatives(), "rule__Boolean__Alternatives");
+			builder.put(grammarAccess.getBoolAccess().getAlternatives(), "rule__Bool__Alternatives");
 			builder.put(grammarAccess.getDeclAccess().getGroup(), "rule__Decl__Group__0");
 			builder.put(grammarAccess.getAtribVarAccess().getGroup(), "rule__AtribVar__Group__0");
 			builder.put(grammarAccess.getAtribVarAccess().getGroup_2(), "rule__AtribVar__Group_2__0");
@@ -174,8 +174,8 @@ public class GoParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getDecFuncAccess().getArgsAssignment_7(), "rule__DecFunc__ArgsAssignment_7");
 			builder.put(grammarAccess.getCallFuncAccess().getNameFuncAssignment_0(), "rule__CallFunc__NameFuncAssignment_0");
 			builder.put(grammarAccess.getCallFuncAccess().getParamAssignment_2(), "rule__CallFunc__ParamAssignment_2");
-			builder.put(grammarAccess.getBooleanAccess().getValAssignment_0(), "rule__Boolean__ValAssignment_0");
-			builder.put(grammarAccess.getBooleanAccess().getValAssignment_1(), "rule__Boolean__ValAssignment_1");
+			builder.put(grammarAccess.getBoolAccess().getValAssignment_0(), "rule__Bool__ValAssignment_0");
+			builder.put(grammarAccess.getBoolAccess().getValAssignment_1(), "rule__Bool__ValAssignment_1");
 			builder.put(grammarAccess.getDataTypeAccess().getNameAssignment_1(), "rule__DataType__NameAssignment_1");
 		}
 	}

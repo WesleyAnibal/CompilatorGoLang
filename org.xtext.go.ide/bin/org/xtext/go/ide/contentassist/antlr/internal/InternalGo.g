@@ -1150,25 +1150,25 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleBoolean
-entryRuleBoolean
+// Entry rule entryRuleBool
+entryRuleBool
 :
-{ before(grammarAccess.getBooleanRule()); }
-	 ruleBoolean
-{ after(grammarAccess.getBooleanRule()); } 
+{ before(grammarAccess.getBoolRule()); }
+	 ruleBool
+{ after(grammarAccess.getBoolRule()); } 
 	 EOF 
 ;
 
-// Rule Boolean
-ruleBoolean 
+// Rule Bool
+ruleBool 
 	@init {
 		int stackSize = keepStackSize();
 	}
 	:
 	(
-		{ before(grammarAccess.getBooleanAccess().getAlternatives()); }
-		(rule__Boolean__Alternatives)
-		{ after(grammarAccess.getBooleanAccess().getAlternatives()); }
+		{ before(grammarAccess.getBoolAccess().getAlternatives()); }
+		(rule__Bool__Alternatives)
+		{ after(grammarAccess.getBoolAccess().getAlternatives()); }
 	)
 ;
 finally {
@@ -1820,9 +1820,9 @@ rule__TypeValue__Alternatives
 	)
 	|
 	(
-		{ before(grammarAccess.getTypeValueAccess().getBooleanParserRuleCall_2()); }
-		ruleBoolean
-		{ after(grammarAccess.getTypeValueAccess().getBooleanParserRuleCall_2()); }
+		{ before(grammarAccess.getTypeValueAccess().getBoolParserRuleCall_2()); }
+		ruleBool
+		{ after(grammarAccess.getTypeValueAccess().getBoolParserRuleCall_2()); }
 	)
 ;
 finally {
@@ -2204,21 +2204,21 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Boolean__Alternatives
+rule__Bool__Alternatives
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getBooleanAccess().getValAssignment_0()); }
-		(rule__Boolean__ValAssignment_0)
-		{ after(grammarAccess.getBooleanAccess().getValAssignment_0()); }
+		{ before(grammarAccess.getBoolAccess().getValAssignment_0()); }
+		(rule__Bool__ValAssignment_0)
+		{ after(grammarAccess.getBoolAccess().getValAssignment_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getBooleanAccess().getValAssignment_1()); }
-		(rule__Boolean__ValAssignment_1)
-		{ after(grammarAccess.getBooleanAccess().getValAssignment_1()); }
+		{ before(grammarAccess.getBoolAccess().getValAssignment_1()); }
+		(rule__Bool__ValAssignment_1)
+		{ after(grammarAccess.getBoolAccess().getValAssignment_1()); }
 	)
 ;
 finally {
@@ -7335,9 +7335,9 @@ rule__Literal__ValueAssignment_0_1
 	}
 :
 	(
-		{ before(grammarAccess.getLiteralAccess().getValueBooleanParserRuleCall_0_1_0()); }
-		ruleBoolean
-		{ after(grammarAccess.getLiteralAccess().getValueBooleanParserRuleCall_0_1_0()); }
+		{ before(grammarAccess.getLiteralAccess().getValueBoolParserRuleCall_0_1_0()); }
+		ruleBool
+		{ after(grammarAccess.getLiteralAccess().getValueBoolParserRuleCall_0_1_0()); }
 	)
 ;
 finally {
@@ -7434,38 +7434,38 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Boolean__ValAssignment_0
+rule__Bool__ValAssignment_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getBooleanAccess().getValTrueKeyword_0_0()); }
+		{ before(grammarAccess.getBoolAccess().getValTrueKeyword_0_0()); }
 		(
-			{ before(grammarAccess.getBooleanAccess().getValTrueKeyword_0_0()); }
+			{ before(grammarAccess.getBoolAccess().getValTrueKeyword_0_0()); }
 			'true'
-			{ after(grammarAccess.getBooleanAccess().getValTrueKeyword_0_0()); }
+			{ after(grammarAccess.getBoolAccess().getValTrueKeyword_0_0()); }
 		)
-		{ after(grammarAccess.getBooleanAccess().getValTrueKeyword_0_0()); }
+		{ after(grammarAccess.getBoolAccess().getValTrueKeyword_0_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Boolean__ValAssignment_1
+rule__Bool__ValAssignment_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getBooleanAccess().getValFalseKeyword_1_0()); }
+		{ before(grammarAccess.getBoolAccess().getValFalseKeyword_1_0()); }
 		(
-			{ before(grammarAccess.getBooleanAccess().getValFalseKeyword_1_0()); }
+			{ before(grammarAccess.getBoolAccess().getValFalseKeyword_1_0()); }
 			'false'
-			{ after(grammarAccess.getBooleanAccess().getValFalseKeyword_1_0()); }
+			{ after(grammarAccess.getBoolAccess().getValFalseKeyword_1_0()); }
 		)
-		{ after(grammarAccess.getBooleanAccess().getValFalseKeyword_1_0()); }
+		{ after(grammarAccess.getBoolAccess().getValFalseKeyword_1_0()); }
 	)
 ;
 finally {

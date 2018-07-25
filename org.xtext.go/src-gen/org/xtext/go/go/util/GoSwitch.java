@@ -14,6 +14,7 @@ import org.xtext.go.go.Atri;
 import org.xtext.go.go.Atrib;
 import org.xtext.go.go.AtribVar;
 import org.xtext.go.go.Atrib_Aux;
+import org.xtext.go.go.Bool;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.Cases;
@@ -356,13 +357,13 @@ public class GoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GoPackage.BOOLEAN:
+      case GoPackage.BOOL:
       {
-        org.xtext.go.go.Boolean boolean_ = (org.xtext.go.go.Boolean)theEObject;
-        T result = caseBoolean(boolean_);
-        if (result == null) result = caseTypeValue(boolean_);
-        if (result == null) result = caseAtri(boolean_);
-        if (result == null) result = caseAtrib_Aux(boolean_);
+        Bool bool = (Bool)theEObject;
+        T result = caseBool(bool);
+        if (result == null) result = caseTypeValue(bool);
+        if (result == null) result = caseAtri(bool);
+        if (result == null) result = caseAtrib_Aux(bool);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -947,17 +948,17 @@ public class GoSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Boolean</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Bool</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Boolean</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Bool</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseBoolean(org.xtext.go.go.Boolean object)
+  public T caseBool(Bool object)
   {
     return null;
   }

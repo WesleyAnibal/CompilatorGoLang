@@ -530,14 +530,14 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) ID (rule start)
 	 *     (rule start) (ambiguity) d=Double
 	 *     (rule start) (ambiguity) int=INT
-	 *     (rule start) (ambiguity) value=Boolean
+	 *     (rule start) (ambiguity) value=Bool
 	 *     (rule start) (ambiguity) x=Opers
 	 *     (rule start) (ambiguity) {AndExpression.left=}
 	 *     (rule start) (ambiguity) {ComparisonExpression.left=}
 	 *     (rule start) (ambiguity) {OrExpression.left=}
 	 *     (rule start) FOR (ambiguity) d=Double
 	 *     (rule start) FOR (ambiguity) int=INT
-	 *     (rule start) FOR (ambiguity) value=Boolean
+	 *     (rule start) FOR (ambiguity) value=Bool
 	 *     (rule start) FOR (ambiguity) {ComparisonExpression.left=}
 	 */
 	protected void emit_PrimaryExpression_Open_parenthesesTerminalRuleCall_0_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {

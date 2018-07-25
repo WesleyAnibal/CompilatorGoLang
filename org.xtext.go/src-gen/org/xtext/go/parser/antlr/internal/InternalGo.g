@@ -1216,11 +1216,11 @@ ruleTypeValue returns [EObject current=null]
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getTypeValueAccess().getBooleanParserRuleCall_2());
+			newCompositeNode(grammarAccess.getTypeValueAccess().getBoolParserRuleCall_2());
 		}
-		this_Boolean_2=ruleBoolean
+		this_Bool_2=ruleBool
 		{
-			$current = $this_Boolean_2.current;
+			$current = $this_Bool_2.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
@@ -2750,9 +2750,9 @@ ruleLiteral returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getLiteralAccess().getValueBooleanParserRuleCall_0_1_0());
+						newCompositeNode(grammarAccess.getLiteralAccess().getValueBoolParserRuleCall_0_1_0());
 					}
-					lv_value_1_0=ruleBoolean
+					lv_value_1_0=ruleBool
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getLiteralRule());
@@ -2761,7 +2761,7 @@ ruleLiteral returns [EObject current=null]
 							$current,
 							"value",
 							lv_value_1_0,
-							"org.xtext.go.Go.Boolean");
+							"org.xtext.go.Go.Bool");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -3071,15 +3071,15 @@ ruleModif returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 	)
 ;
 
-// Entry rule entryRuleBoolean
-entryRuleBoolean returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getBooleanRule()); }
-	iv_ruleBoolean=ruleBoolean
-	{ $current=$iv_ruleBoolean.current; }
+// Entry rule entryRuleBool
+entryRuleBool returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getBoolRule()); }
+	iv_ruleBool=ruleBool
+	{ $current=$iv_ruleBool.current; }
 	EOF;
 
-// Rule Boolean
-ruleBoolean returns [EObject current=null]
+// Rule Bool
+ruleBool returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -3091,11 +3091,11 @@ ruleBoolean returns [EObject current=null]
 			(
 				lv_val_0_0='true'
 				{
-					newLeafNode(lv_val_0_0, grammarAccess.getBooleanAccess().getValTrueKeyword_0_0());
+					newLeafNode(lv_val_0_0, grammarAccess.getBoolAccess().getValTrueKeyword_0_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getBooleanRule());
+						$current = createModelElement(grammarAccess.getBoolRule());
 					}
 					setWithLastConsumed($current, "val", lv_val_0_0, "true");
 				}
@@ -3106,11 +3106,11 @@ ruleBoolean returns [EObject current=null]
 			(
 				lv_val_1_0='false'
 				{
-					newLeafNode(lv_val_1_0, grammarAccess.getBooleanAccess().getValFalseKeyword_1_0());
+					newLeafNode(lv_val_1_0, grammarAccess.getBoolAccess().getValFalseKeyword_1_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getBooleanRule());
+						$current = createModelElement(grammarAccess.getBoolRule());
 					}
 					setWithLastConsumed($current, "val", lv_val_1_0, "false");
 				}

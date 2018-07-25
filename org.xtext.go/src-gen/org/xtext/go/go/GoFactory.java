@@ -294,13 +294,13 @@ public interface GoFactory extends EFactory
   CallFunc createCallFunc();
 
   /**
-   * Returns a new object of class '<em>Boolean</em>'.
+   * Returns a new object of class '<em>Bool</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Boolean</em>'.
+   * @return a new object of class '<em>Bool</em>'.
    * @generated
    */
-  Boolean createBoolean();
+  Bool createBool();
 
   /**
    * Returns a new object of class '<em>Data Type</em>'.

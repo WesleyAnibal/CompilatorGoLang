@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.xtext.go.go.Bool;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Literal;
 
@@ -37,7 +38,7 @@ public class LiteralImpl extends ExpressionImpl implements Literal
    * @generated
    * @ordered
    */
-  protected org.xtext.go.go.Boolean value;
+  protected Bool value;
 
   /**
    * <!-- begin-user-doc -->
@@ -65,7 +66,7 @@ public class LiteralImpl extends ExpressionImpl implements Literal
    * <!-- end-user-doc -->
    * @generated
    */
-  public org.xtext.go.go.Boolean getValue()
+  public Bool getValue()
   {
     return value;
   }
@@ -75,9 +76,9 @@ public class LiteralImpl extends ExpressionImpl implements Literal
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetValue(org.xtext.go.go.Boolean newValue, NotificationChain msgs)
+  public NotificationChain basicSetValue(Bool newValue, NotificationChain msgs)
   {
-    org.xtext.go.go.Boolean oldValue = value;
+    Bool oldValue = value;
     value = newValue;
     if (eNotificationRequired())
     {
@@ -92,7 +93,7 @@ public class LiteralImpl extends ExpressionImpl implements Literal
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(org.xtext.go.go.Boolean newValue)
+  public void setValue(Bool newValue)
   {
     if (newValue != value)
     {
@@ -151,7 +152,7 @@ public class LiteralImpl extends ExpressionImpl implements Literal
     switch (featureID)
     {
       case GoPackage.LITERAL__VALUE:
-        setValue((org.xtext.go.go.Boolean)newValue);
+        setValue((Bool)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -168,7 +169,7 @@ public class LiteralImpl extends ExpressionImpl implements Literal
     switch (featureID)
     {
       case GoPackage.LITERAL__VALUE:
-        setValue((org.xtext.go.go.Boolean)null);
+        setValue((Bool)null);
         return;
     }
     super.eUnset(featureID);

@@ -18,6 +18,7 @@ import org.xtext.go.go.Addition;
 import org.xtext.go.go.AndExpression;
 import org.xtext.go.go.Atrib;
 import org.xtext.go.go.AtribVar;
+import org.xtext.go.go.Bool;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.Cases;
@@ -101,8 +102,8 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case GoPackage.ATRIB_VAR:
 				sequence_AtribVar(context, (AtribVar) semanticObject); 
 				return; 
-			case GoPackage.BOOLEAN:
-				sequence_Boolean(context, (org.xtext.go.go.Boolean) semanticObject); 
+			case GoPackage.BOOL:
+				sequence_Bool(context, (Bool) semanticObject); 
 				return; 
 			case GoPackage.CALL_FOR:
 				sequence_CallFor(context, (CallFor) semanticObject); 
@@ -456,15 +457,15 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     Atrib_Aux returns Boolean
-	 *     Atri returns Boolean
-	 *     TypeValue returns Boolean
-	 *     Boolean returns Boolean
+	 *     Atrib_Aux returns Bool
+	 *     Atri returns Bool
+	 *     TypeValue returns Bool
+	 *     Bool returns Bool
 	 *
 	 * Constraint:
 	 *     (val='true' | val='false')
 	 */
-	protected void sequence_Boolean(ISerializationContext context, org.xtext.go.go.Boolean semanticObject) {
+	protected void sequence_Bool(ISerializationContext context, Bool semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -514,7 +515,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     CallFor returns Literal
 	 *
 	 * Constraint:
-	 *     (value=Boolean x=Greeting*)
+	 *     (value=Bool x=Greeting*)
 	 */
 	protected void sequence_CallFor_Literal(ISerializationContext context, Literal semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -862,7 +863,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Literal returns Literal
 	 *
 	 * Constraint:
-	 *     value=Boolean
+	 *     value=Bool
 	 */
 	protected void sequence_Literal(ISerializationContext context, Literal semanticObject) {
 		if (errorAcceptor != null) {
@@ -870,7 +871,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.LITERAL__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLiteralAccess().getValueBooleanParserRuleCall_0_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getLiteralAccess().getValueBoolParserRuleCall_0_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	

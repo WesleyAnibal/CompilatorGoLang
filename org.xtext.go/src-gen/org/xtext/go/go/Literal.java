@@ -31,12 +31,12 @@ public interface Literal extends Expression
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Value</em>' containment reference.
-   * @see #setValue(org.xtext.go.go.Boolean)
+   * @see #setValue(Bool)
    * @see org.xtext.go.go.GoPackage#getLiteral_Value()
    * @model containment="true"
    * @generated
    */
-  org.xtext.go.go.Boolean getValue();
+  Bool getValue();
 
   /**
    * Sets the value of the '{@link org.xtext.go.go.Literal#getValue <em>Value</em>}' containment reference.
@@ -46,6 +46,6 @@ public interface Literal extends Expression
    * @see #getValue()
    * @generated
    */
-  void setValue(org.xtext.go.go.Boolean value);
+  void setValue(Bool value);
 
 } // Literal

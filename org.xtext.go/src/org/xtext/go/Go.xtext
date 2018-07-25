@@ -57,7 +57,7 @@ Params:
 	params+=ID type+=Types? (Comma params+=ID type+=Types?)*;
 	
 TypeValue:
-	Str | Numbers | Boolean;
+	Str | Numbers | Bool;
 
 Str:
 	s=STRING
@@ -142,7 +142,7 @@ varFor:
 	ComparisonExpression | (Modif var+=ID Types equals atrb+=Atrib_Aux PontoVirgula right=Literal Operator left=Literal PontoVirgula (operationsOne| OperationsOneEquals));
 
 Literal returns Expression:
-    {Literal} value=Boolean | Numbers 
+    {Literal} value=Bool | Numbers 
 ;
 
 DecFunc:
@@ -190,7 +190,7 @@ terminal Open_parentheses:
 
 terminal Closed_parentheses:
 	")";
-Boolean:
+Bool:
 	val="true" | val="false";
 		
 BREAK:

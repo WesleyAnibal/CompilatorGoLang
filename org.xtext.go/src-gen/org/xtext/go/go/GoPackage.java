@@ -1330,14 +1330,14 @@ public interface GoPackage extends EPackage
   int CALL_FUNC_FEATURE_COUNT = GREETING_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.go.go.impl.BooleanImpl <em>Boolean</em>}' class.
+   * The meta object id for the '{@link org.xtext.go.go.impl.BoolImpl <em>Bool</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.go.go.impl.BooleanImpl
-   * @see org.xtext.go.go.impl.GoPackageImpl#getBoolean()
+   * @see org.xtext.go.go.impl.BoolImpl
+   * @see org.xtext.go.go.impl.GoPackageImpl#getBool()
    * @generated
    */
-  int BOOLEAN = 30;
+  int BOOL = 30;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -1346,16 +1346,16 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BOOLEAN__VAL = TYPE_VALUE_FEATURE_COUNT + 0;
+  int BOOL__VAL = TYPE_VALUE_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Boolean</em>' class.
+   * The number of structural features of the '<em>Bool</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BOOLEAN_FEATURE_COUNT = TYPE_VALUE_FEATURE_COUNT + 1;
+  int BOOL_FEATURE_COUNT = TYPE_VALUE_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.DataTypeImpl <em>Data Type</em>}' class.
@@ -2957,25 +2957,25 @@ public interface GoPackage extends EPackage
   EReference getCallFunc_Param();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.go.go.Boolean <em>Boolean</em>}'.
+   * Returns the meta object for class '{@link org.xtext.go.go.Bool <em>Bool</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Boolean</em>'.
-   * @see org.xtext.go.go.Boolean
+   * @return the meta object for class '<em>Bool</em>'.
+   * @see org.xtext.go.go.Bool
    * @generated
    */
-  EClass getBoolean();
+  EClass getBool();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.go.go.Boolean#getVal <em>Val</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.go.go.Bool#getVal <em>Val</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Val</em>'.
-   * @see org.xtext.go.go.Boolean#getVal()
-   * @see #getBoolean()
+   * @see org.xtext.go.go.Bool#getVal()
+   * @see #getBool()
    * @generated
    */
-  EAttribute getBoolean_Val();
+  EAttribute getBool_Val();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.DataType <em>Data Type</em>}'.
@@ -3853,14 +3853,14 @@ public interface GoPackage extends EPackage
     EReference CALL_FUNC__PARAM = eINSTANCE.getCallFunc_Param();
 
     /**
-     * The meta object literal for the '{@link org.xtext.go.go.impl.BooleanImpl <em>Boolean</em>}' class.
+     * The meta object literal for the '{@link org.xtext.go.go.impl.BoolImpl <em>Bool</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.go.go.impl.BooleanImpl
-     * @see org.xtext.go.go.impl.GoPackageImpl#getBoolean()
+     * @see org.xtext.go.go.impl.BoolImpl
+     * @see org.xtext.go.go.impl.GoPackageImpl#getBool()
      * @generated
      */
-    EClass BOOLEAN = eINSTANCE.getBoolean();
+    EClass BOOL = eINSTANCE.getBool();
 
     /**
      * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
@@ -3868,7 +3868,7 @@ public interface GoPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute BOOLEAN__VAL = eINSTANCE.getBoolean_Val();
+    EAttribute BOOL__VAL = eINSTANCE.getBool_Val();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.DataTypeImpl <em>Data Type</em>}' class.

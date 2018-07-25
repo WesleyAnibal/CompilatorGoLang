@@ -17,6 +17,7 @@ import org.xtext.go.go.Atri;
 import org.xtext.go.go.Atrib;
 import org.xtext.go.go.AtribVar;
 import org.xtext.go.go.Atrib_Aux;
+import org.xtext.go.go.Bool;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.Cases;
@@ -134,7 +135,7 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
       case GoPackage.VAR_FOR: return createvarFor();
       case GoPackage.DEC_FUNC: return createDecFunc();
       case GoPackage.CALL_FUNC: return createCallFunc();
-      case GoPackage.BOOLEAN: return createBoolean();
+      case GoPackage.BOOL: return createBool();
       case GoPackage.DATA_TYPE: return createDataType();
       case GoPackage.ADDITION: return createAddition();
       case GoPackage.SUBTRATION: return createSubtration();
@@ -484,10 +485,10 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public org.xtext.go.go.Boolean createBoolean()
+  public Bool createBool()
   {
-    BooleanImpl boolean_ = new BooleanImpl();
-    return boolean_;
+    BoolImpl bool = new BoolImpl();
+    return bool;
   }
 
   /**

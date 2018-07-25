@@ -33,6 +33,7 @@ import org.xtext.go.go.Numbers
 import org.xtext.go.go.Str
 import org.eclipse.emf.ecore.EAttribute
 import org.xtext.go.go.ReAtrib
+import org.xtext.go.go.Bool
 
 /**
  * This class contains custom validation rules. 
@@ -52,6 +53,7 @@ class GoValidator extends AbstractGoValidator {
 //		}
 //	}
 	public static final String SEMANTIC_ERROR = "Erro Semântico: ";
+	public static final String SYNTACTIC_ERROR = "Erro Sintático: ";
 
 	public static Map<String, DecFunc> funcImplements = new HashMap<String, DecFunc>();
 	public static Map<String, Atrib> variablesDeclarationMap = new HashMap<String, Atrib>();
@@ -90,9 +92,56 @@ class GoValidator extends AbstractGoValidator {
 				error(SEMANTIC_ERROR + "Não é possível reaatribuir valor para variáveis const.",
 					GoPackage.Literals.RE_ATRIB__NAME);
 			}
+		}
+		validateReassignmentWithVariable(re);
+		if (re.atrib instanceof TypeValue) {
+			var TypeValue type = re.atrib as TypeValue;
+			var Atrib at = variablesDeclarationMap.get(re.name);
+			checkIfIsTypeCompatible(at.type, type, GoPackage.Literals.RE_ATRIB__NAME)
 
 		}
 
+	}
+	
+	def checkIfIsTypeCompatible(String t1, TypeValue t2, EAttribute pack){
+		
+		if(t1.equals("bool") && !(t2 instanceof Bool)){
+			error(SEMANTIC_ERROR + "Não é possível converter " + t2.toString() +  " para boolean", pack);
+		}
+		if(!t2.equals("bool") && (t2 instanceof Bool)){
+			error(SEMANTIC_ERROR + "Não é possível converter " + t2.toString() +  " para boolean", pack);
+		}
+		if(!t1.equals("string")&& (t2 instanceof Str)){
+			error(SEMANTIC_ERROR + "Não é possível converter " + t1.toString() +  " para string", pack);
+		}
+		
+		
+		if(t1.equals("string")&& !(t2 instanceof Str)){
+			error(SEMANTIC_ERROR + "Não é possível converter " + t2.toString() +  " para string", pack);
+		}
+		
+		
+		
+	}
+
+	/**
+	 * Verifies a var reassignment with another var
+	 */
+	def validateReassignmentWithVariable(ReAtrib re) {
+		if (re.atrib instanceof Variable) {
+			var Variable variable = re.atrib as Variable;
+			if (!variablesDeclarationMap.containsKey(variable.name)) {
+				error(SEMANTIC_ERROR + "Não é possível reatribuir valor. Variavel " + variable.name + " não declarada",
+					GoPackage.Literals.RE_ATRIB__ATRIB);
+			} else {
+				var Atrib assgn = variablesDeclarationMap.get(re.name);
+				var Atrib atrib = variablesDeclarationMap.get(variable.name);
+				if (!assgn.type.equals(atrib.type)) {
+					error(SEMANTIC_ERROR + "não é possível converter " + atrib.type + " para " + assgn.type,
+						GoPackage.Literals.RE_ATRIB__ATRIB);
+				}
+			}
+		}
 	}
 
 	/**

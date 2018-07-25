@@ -685,13 +685,13 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cStrParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cNumbersParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cBooleanParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cBoolParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//TypeValue:
-		//	Str | Numbers | Boolean;
+		//	Str | Numbers | Bool;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Str | Numbers | Boolean
+		//Str | Numbers | Bool
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//Str
@@ -700,8 +700,8 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		//Numbers
 		public RuleCall getNumbersParserRuleCall_1() { return cNumbersParserRuleCall_1; }
 		
-		//Boolean
-		public RuleCall getBooleanParserRuleCall_2() { return cBooleanParserRuleCall_2; }
+		//Bool
+		public RuleCall getBoolParserRuleCall_2() { return cBoolParserRuleCall_2; }
 	}
 	public class StrElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Str");
@@ -1529,27 +1529,27 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Action cLiteralAction_0_0 = (Action)cGroup_0.eContents().get(0);
 		private final Assignment cValueAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cValueBooleanParserRuleCall_0_1_0 = (RuleCall)cValueAssignment_0_1.eContents().get(0);
+		private final RuleCall cValueBoolParserRuleCall_0_1_0 = (RuleCall)cValueAssignment_0_1.eContents().get(0);
 		private final RuleCall cNumbersParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Literal Expression:
-		//	{Literal} value=Boolean | Numbers;
+		//	{Literal} value=Bool | Numbers;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Literal} value=Boolean | Numbers
+		//{Literal} value=Bool | Numbers
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//{Literal} value=Boolean
+		//{Literal} value=Bool
 		public Group getGroup_0() { return cGroup_0; }
 		
 		//{Literal}
 		public Action getLiteralAction_0_0() { return cLiteralAction_0_0; }
 		
-		//value=Boolean
+		//value=Bool
 		public Assignment getValueAssignment_0_1() { return cValueAssignment_0_1; }
 		
-		//Boolean
-		public RuleCall getValueBooleanParserRuleCall_0_1_0() { return cValueBooleanParserRuleCall_0_1_0; }
+		//Bool
+		public RuleCall getValueBoolParserRuleCall_0_1_0() { return cValueBoolParserRuleCall_0_1_0; }
 		
 		//Numbers
 		public RuleCall getNumbersParserRuleCall_1() { return cNumbersParserRuleCall_1; }
@@ -1778,15 +1778,15 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		//CONST
 		public RuleCall getCONSTParserRuleCall_1() { return cCONSTParserRuleCall_1; }
 	}
-	public class BooleanElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Boolean");
+	public class BoolElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Bool");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Assignment cValAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
 		private final Keyword cValTrueKeyword_0_0 = (Keyword)cValAssignment_0.eContents().get(0);
 		private final Assignment cValAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final Keyword cValFalseKeyword_1_0 = (Keyword)cValAssignment_1.eContents().get(0);
 		
-		//Boolean:
+		//Bool:
 		//	val="true" | val="false";
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -2083,7 +2083,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	private final TerminalRule tComma;
 	private final TerminalRule tOpen_parentheses;
 	private final TerminalRule tClosed_parentheses;
-	private final BooleanElements pBoolean;
+	private final BoolElements pBool;
 	private final BREAKElements pBREAK;
 	private final CASEElements pCASE;
 	private final CHANElements pCHAN;
@@ -2183,7 +2183,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		this.tComma = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Comma");
 		this.tOpen_parentheses = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Open_parentheses");
 		this.tClosed_parentheses = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Closed_parentheses");
-		this.pBoolean = new BooleanElements();
+		this.pBool = new BoolElements();
 		this.pBREAK = new BREAKElements();
 		this.pCASE = new CASEElements();
 		this.pCHAN = new CHANElements();
@@ -2398,7 +2398,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//TypeValue:
-	//	Str | Numbers | Boolean;
+	//	Str | Numbers | Bool;
 	public TypeValueElements getTypeValueAccess() {
 		return pTypeValue;
 	}
@@ -2650,7 +2650,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Literal Expression:
-	//	{Literal} value=Boolean | Numbers;
+	//	{Literal} value=Bool | Numbers;
 	public LiteralElements getLiteralAccess() {
 		return pLiteral;
 	}
@@ -2764,14 +2764,14 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		return tClosed_parentheses;
 	}
 	
-	//Boolean:
+	//Bool:
 	//	val="true" | val="false";
-	public BooleanElements getBooleanAccess() {
-		return pBoolean;
+	public BoolElements getBoolAccess() {
+		return pBool;
 	}
 	
-	public ParserRule getBooleanRule() {
-		return getBooleanAccess().getRule();
+	public ParserRule getBoolRule() {
+		return getBoolAccess().getRule();
 	}
 	
 	//BREAK:

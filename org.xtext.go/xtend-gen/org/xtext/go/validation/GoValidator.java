@@ -14,6 +14,7 @@ import org.eclipse.xtext.validation.Check;
 import org.xtext.go.go.Atrib;
 import org.xtext.go.go.AtribVar;
 import org.xtext.go.go.Atrib_Aux;
+import org.xtext.go.go.Bool;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.DecFunc;
 import org.xtext.go.go.GoPackage;
@@ -33,6 +34,8 @@ import org.xtext.go.validation.AbstractGoValidator;
 @SuppressWarnings("all")
 public class GoValidator extends AbstractGoValidator {
   public final static String SEMANTIC_ERROR = "Erro Semântico: ";
+  
+  public final static String SYNTACTIC_ERROR = "Erro Sintático: ";
   
   public static Map<String, DecFunc> funcImplements = new HashMap<String, DecFunc>();
   
@@ -85,6 +88,75 @@ public class GoValidator extends AbstractGoValidator {
       if (_equals) {
         this.error((GoValidator.SEMANTIC_ERROR + "Não é possível reaatribuir valor para variáveis const."), 
           GoPackage.Literals.RE_ATRIB__NAME);
+      }
+    }
+    this.validateReassignmentWithVariable(re);
+    Atrib_Aux _atrib = re.getAtrib();
+    if ((_atrib instanceof TypeValue)) {
+      Atrib_Aux _atrib_1 = re.getAtrib();
+      TypeValue type = ((TypeValue) _atrib_1);
+      Atrib at_1 = GoValidator.variablesDeclarationMap.get(re.getName());
+      this.checkIfIsTypeCompatible(at_1.getType(), type, GoPackage.Literals.RE_ATRIB__NAME);
+    }
+  }
+  
+  public void checkIfIsTypeCompatible(final String t1, final TypeValue t2, final EAttribute pack) {
+    if ((t1.equals("bool") && (!(t2 instanceof Bool)))) {
+      String _string = t2.toString();
+      String _plus = ((GoValidator.SEMANTIC_ERROR + "Não é possível converter ") + _string);
+      String _plus_1 = (_plus + " para boolean");
+      this.error(_plus_1, pack);
+    }
+    if (((!t2.equals("bool")) && (t2 instanceof Bool))) {
+      String _string_1 = t2.toString();
+      String _plus_2 = ((GoValidator.SEMANTIC_ERROR + "Não é possível converter ") + _string_1);
+      String _plus_3 = (_plus_2 + " para boolean");
+      this.error(_plus_3, pack);
+    }
+    if (((!t1.equals("string")) && (t2 instanceof Str))) {
+      String _string_2 = t1.toString();
+      String _plus_4 = ((GoValidator.SEMANTIC_ERROR + "Não é possível converter ") + _string_2);
+      String _plus_5 = (_plus_4 + " para string");
+      this.error(_plus_5, pack);
+    }
+    if ((t1.equals("string") && (!(t2 instanceof Str)))) {
+      String _string_3 = t2.toString();
+      String _plus_6 = ((GoValidator.SEMANTIC_ERROR + "Não é possível converter ") + _string_3);
+      String _plus_7 = (_plus_6 + " para string");
+      this.error(_plus_7, pack);
+    }
+  }
+  
+  /**
+   * Verifies a var reassignment with another var
+   */
+  public void validateReassignmentWithVariable(final ReAtrib re) {
+    Atrib_Aux _atrib = re.getAtrib();
+    if ((_atrib instanceof Variable)) {
+      Atrib_Aux _atrib_1 = re.getAtrib();
+      Variable variable = ((Variable) _atrib_1);
+      boolean _containsKey = GoValidator.variablesDeclarationMap.containsKey(variable.getName());
+      boolean _not = (!_containsKey);
+      if (_not) {
+        String _name = variable.getName();
+        String _plus = ((GoValidator.SEMANTIC_ERROR + "Não é possível reatribuir valor. Variavel ") + _name);
+        String _plus_1 = (_plus + " não declarada");
+        this.error(_plus_1, 
+          GoPackage.Literals.RE_ATRIB__ATRIB);
+      } else {
+        Atrib assgn = GoValidator.variablesDeclarationMap.get(re.getName());
+        Atrib atrib = GoValidator.variablesDeclarationMap.get(variable.getName());
+        boolean _equals = assgn.getType().equals(atrib.getType());
+        boolean _not_1 = (!_equals);
+        if (_not_1) {
+          String _type = atrib.getType();
+          String _plus_2 = ((GoValidator.SEMANTIC_ERROR + "não é possível converter ") + _type);
+          String _plus_3 = (_plus_2 + " para ");
+          String _type_1 = assgn.getType();
+          String _plus_4 = (_plus_3 + _type_1);
+          this.error(_plus_4, 
+            GoPackage.Literals.RE_ATRIB__ATRIB);
+        }
       }
     }
   }

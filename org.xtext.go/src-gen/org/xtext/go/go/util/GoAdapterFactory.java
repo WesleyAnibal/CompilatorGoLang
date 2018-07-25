@@ -16,6 +16,7 @@ import org.xtext.go.go.Atri;
 import org.xtext.go.go.Atrib;
 import org.xtext.go.go.AtribVar;
 import org.xtext.go.go.Atrib_Aux;
+import org.xtext.go.go.Bool;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.Cases;
@@ -264,9 +265,9 @@ public class GoAdapterFactory extends AdapterFactoryImpl
         return createCallFuncAdapter();
       }
       @Override
-      public Adapter caseBoolean(org.xtext.go.go.Boolean object)
+      public Adapter caseBool(Bool object)
       {
-        return createBooleanAdapter();
+        return createBoolAdapter();
       }
       @Override
       public Adapter caseDataType(DataType object)
@@ -786,16 +787,16 @@ public class GoAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Boolean <em>Boolean</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.Bool <em>Bool</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.go.go.Boolean
+   * @see org.xtext.go.go.Bool
    * @generated
    */
-  public Adapter createBooleanAdapter()
+  public Adapter createBoolAdapter()
   {
     return null;
   }

@@ -9,22 +9,23 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.xtext.go.go.Bool;
 import org.xtext.go.go.GoPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Boolean</b></em>'.
+ * An implementation of the model object '<em><b>Bool</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.go.go.impl.BooleanImpl#getVal <em>Val</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.BoolImpl#getVal <em>Val</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class BooleanImpl extends TypeValueImpl implements org.xtext.go.go.Boolean
+public class BoolImpl extends TypeValueImpl implements Bool
 {
   /**
    * The default value of the '{@link #getVal() <em>Val</em>}' attribute.
@@ -51,7 +52,7 @@ public class BooleanImpl extends TypeValueImpl implements org.xtext.go.go.Boolea
    * <!-- end-user-doc -->
    * @generated
    */
-  protected BooleanImpl()
+  protected BoolImpl()
   {
     super();
   }
@@ -64,7 +65,7 @@ public class BooleanImpl extends TypeValueImpl implements org.xtext.go.go.Boolea
   @Override
   protected EClass eStaticClass()
   {
-    return GoPackage.Literals.BOOLEAN;
+    return GoPackage.Literals.BOOL;
   }
 
   /**
@@ -87,7 +88,7 @@ public class BooleanImpl extends TypeValueImpl implements org.xtext.go.go.Boolea
     String oldVal = val;
     val = newVal;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.BOOLEAN__VAL, oldVal, val));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.BOOL__VAL, oldVal, val));
   }
 
   /**
@@ -100,7 +101,7 @@ public class BooleanImpl extends TypeValueImpl implements org.xtext.go.go.Boolea
   {
     switch (featureID)
     {
-      case GoPackage.BOOLEAN__VAL:
+      case GoPackage.BOOL__VAL:
         return getVal();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -116,7 +117,7 @@ public class BooleanImpl extends TypeValueImpl implements org.xtext.go.go.Boolea
   {
     switch (featureID)
     {
-      case GoPackage.BOOLEAN__VAL:
+      case GoPackage.BOOL__VAL:
         setVal((String)newValue);
         return;
     }
@@ -133,7 +134,7 @@ public class BooleanImpl extends TypeValueImpl implements org.xtext.go.go.Boolea
   {
     switch (featureID)
     {
-      case GoPackage.BOOLEAN__VAL:
+      case GoPackage.BOOL__VAL:
         setVal(VAL_EDEFAULT);
         return;
     }
@@ -150,7 +151,7 @@ public class BooleanImpl extends TypeValueImpl implements org.xtext.go.go.Boolea
   {
     switch (featureID)
     {
-      case GoPackage.BOOLEAN__VAL:
+      case GoPackage.BOOL__VAL:
         return VAL_EDEFAULT == null ? val != null : !VAL_EDEFAULT.equals(val);
     }
     return super.eIsSet(featureID);
@@ -173,4 +174,4 @@ public class BooleanImpl extends TypeValueImpl implements org.xtext.go.go.Boolea
     return result.toString();
   }
 
-} //BooleanImpl
+} //BoolImpl

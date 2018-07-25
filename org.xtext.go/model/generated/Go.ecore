@@ -144,7 +144,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="param" eType="#//Params"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Boolean" eSuperTypes="#//TypeValue">
+  <eClassifiers xsi:type="ecore:EClass" name="Bool" eSuperTypes="#//TypeValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="#//Greeting">
@@ -158,7 +158,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="AndExpression" eSuperTypes="#//Expression"/>
   <eClassifiers xsi:type="ecore:EClass" name="ComparisonExpression" eSuperTypes="#//Expression"/>
   <eClassifiers xsi:type="ecore:EClass" name="Literal" eSuperTypes="#//Expression">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Boolean"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Bool"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

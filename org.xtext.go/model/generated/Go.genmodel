@@ -116,8 +116,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//CallFunc/nameFunc"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//CallFunc/param"/>
     </genClasses>
-    <genClasses ecoreClass="Go.ecore#//Boolean">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Boolean/val"/>
+    <genClasses ecoreClass="Go.ecore#//Bool">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Bool/val"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//DataType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DataType/name"/>
