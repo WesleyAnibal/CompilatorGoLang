@@ -158,6 +158,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="FunctionBody">
     <eStructuralFeatures xsi:type="ecore:EReference" name="args" upperBound="-1" eType="#//Greeting"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ret" eType="#//FunctionReturn"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionReturn">
     <eStructuralFeatures xsi:type="ecore:EReference" name="returnType" eType="#//Atrib_Aux"
         containment="true"/>
   </eClassifiers>

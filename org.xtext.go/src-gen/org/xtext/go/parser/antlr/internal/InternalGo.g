@@ -3271,31 +3271,67 @@ ruleFunctionBody returns [EObject current=null]
 			)
 		)*
 		(
-			{
-				newCompositeNode(grammarAccess.getFunctionBodyAccess().getRETURNParserRuleCall_1_0());
-			}
-			ruleRETURN
-			{
-				afterParserOrEnumRuleCall();
-			}
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getFunctionBodyAccess().getReturnTypeAtrib_AuxParserRuleCall_1_1_0());
+				{
+					newCompositeNode(grammarAccess.getFunctionBodyAccess().getRetFunctionReturnParserRuleCall_1_0());
+				}
+				lv_ret_1_0=ruleFunctionReturn
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getFunctionBodyRule());
 					}
-					lv_returnType_2_0=ruleAtrib_Aux
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getFunctionBodyRule());
-						}
-						set(
-							$current,
-							"returnType",
-							lv_returnType_2_0,
-							"org.xtext.go.Go.Atrib_Aux");
-						afterParserOrEnumRuleCall();
+					set(
+						$current,
+						"ret",
+						lv_ret_1_0,
+						"org.xtext.go.Go.FunctionReturn");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+	)
+;
+
+// Entry rule entryRuleFunctionReturn
+entryRuleFunctionReturn returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getFunctionReturnRule()); }
+	iv_ruleFunctionReturn=ruleFunctionReturn
+	{ $current=$iv_ruleFunctionReturn.current; }
+	EOF;
+
+// Rule FunctionReturn
+ruleFunctionReturn returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getFunctionReturnAccess().getRETURNParserRuleCall_0());
+		}
+		ruleRETURN
+		{
+			afterParserOrEnumRuleCall();
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getFunctionReturnAccess().getReturnTypeAtrib_AuxParserRuleCall_1_0());
+				}
+				lv_returnType_1_0=ruleAtrib_Aux
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getFunctionReturnRule());
 					}
-				)
+					set(
+						$current,
+						"returnType",
+						lv_returnType_1_0,
+						"org.xtext.go.Go.Atrib_Aux");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)?
 	)
@@ -3943,7 +3979,7 @@ RULE_PONTOVIRGULA : ';';
 
 RULE_OPEN_KEY : '{';
 
-RULE_CLOSED_KEY : '}';
+RULE_CLOSED_KEY : '\n'? '}';
 
 RULE_OPEN_BRACKETS : '[';
 

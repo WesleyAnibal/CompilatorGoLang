@@ -1489,13 +1489,13 @@ public interface GoPackage extends EPackage
   int FUNCTION_BODY__ARGS = 0;
 
   /**
-   * The feature id for the '<em><b>Return Type</b></em>' containment reference.
+   * The feature id for the '<em><b>Ret</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FUNCTION_BODY__RETURN_TYPE = 1;
+  int FUNCTION_BODY__RET = 1;
 
   /**
    * The number of structural features of the '<em>Function Body</em>' class.
@@ -1507,6 +1507,34 @@ public interface GoPackage extends EPackage
   int FUNCTION_BODY_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.go.go.impl.FunctionReturnImpl <em>Function Return</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.go.go.impl.FunctionReturnImpl
+   * @see org.xtext.go.go.impl.GoPackageImpl#getFunctionReturn()
+   * @generated
+   */
+  int FUNCTION_RETURN = 36;
+
+  /**
+   * The feature id for the '<em><b>Return Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_RETURN__RETURN_TYPE = 0;
+
+  /**
+   * The number of structural features of the '<em>Function Return</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_RETURN_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.go.go.impl.CallFuncImpl <em>Call Func</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1514,7 +1542,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getCallFunc()
    * @generated
    */
-  int CALL_FUNC = 36;
+  int CALL_FUNC = 37;
 
   /**
    * The feature id for the '<em><b>Name Func</b></em>' attribute.
@@ -1551,7 +1579,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getBool()
    * @generated
    */
-  int BOOL = 37;
+  int BOOL = 38;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -1579,7 +1607,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDataType()
    * @generated
    */
-  int DATA_TYPE = 38;
+  int DATA_TYPE = 39;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1607,7 +1635,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getAddition()
    * @generated
    */
-  int ADDITION = 39;
+  int ADDITION = 40;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1698,7 +1726,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getSubtration()
    * @generated
    */
-  int SUBTRATION = 40;
+  int SUBTRATION = 41;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1789,7 +1817,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getMultiplication()
    * @generated
    */
-  int MULTIPLICATION = 41;
+  int MULTIPLICATION = 42;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1880,7 +1908,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getDivision()
    * @generated
    */
-  int DIVISION = 42;
+  int DIVISION = 43;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -1971,7 +1999,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getOrExpression()
    * @generated
    */
-  int OR_EXPRESSION = 43;
+  int OR_EXPRESSION = 44;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -2062,7 +2090,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getAndExpression()
    * @generated
    */
-  int AND_EXPRESSION = 44;
+  int AND_EXPRESSION = 45;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -2153,7 +2181,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getComparisonExpression()
    * @generated
    */
-  int COMPARISON_EXPRESSION = 45;
+  int COMPARISON_EXPRESSION = 46;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -2244,7 +2272,7 @@ public interface GoPackage extends EPackage
    * @see org.xtext.go.go.impl.GoPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 46;
+  int LITERAL = 47;
 
   /**
    * The feature id for the '<em><b>X</b></em>' containment reference.
@@ -3336,15 +3364,36 @@ public interface GoPackage extends EPackage
   EReference getFunctionBody_Args();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.go.go.FunctionBody#getReturnType <em>Return Type</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.FunctionBody#getRet <em>Ret</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Return Type</em>'.
-   * @see org.xtext.go.go.FunctionBody#getReturnType()
+   * @return the meta object for the containment reference '<em>Ret</em>'.
+   * @see org.xtext.go.go.FunctionBody#getRet()
    * @see #getFunctionBody()
    * @generated
    */
-  EReference getFunctionBody_ReturnType();
+  EReference getFunctionBody_Ret();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.go.go.FunctionReturn <em>Function Return</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Function Return</em>'.
+   * @see org.xtext.go.go.FunctionReturn
+   * @generated
+   */
+  EClass getFunctionReturn();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.FunctionReturn#getReturnType <em>Return Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Return Type</em>'.
+   * @see org.xtext.go.go.FunctionReturn#getReturnType()
+   * @see #getFunctionReturn()
+   * @generated
+   */
+  EReference getFunctionReturn_ReturnType();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.CallFunc <em>Call Func</em>}'.
@@ -4359,12 +4408,30 @@ public interface GoPackage extends EPackage
     EReference FUNCTION_BODY__ARGS = eINSTANCE.getFunctionBody_Args();
 
     /**
+     * The meta object literal for the '<em><b>Ret</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FUNCTION_BODY__RET = eINSTANCE.getFunctionBody_Ret();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.go.go.impl.FunctionReturnImpl <em>Function Return</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.go.go.impl.FunctionReturnImpl
+     * @see org.xtext.go.go.impl.GoPackageImpl#getFunctionReturn()
+     * @generated
+     */
+    EClass FUNCTION_RETURN = eINSTANCE.getFunctionReturn();
+
+    /**
      * The meta object literal for the '<em><b>Return Type</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FUNCTION_BODY__RETURN_TYPE = eINSTANCE.getFunctionBody_ReturnType();
+    EReference FUNCTION_RETURN__RETURN_TYPE = eINSTANCE.getFunctionReturn_ReturnType();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.CallFuncImpl <em>Call Func</em>}' class.

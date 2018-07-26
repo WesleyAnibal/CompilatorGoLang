@@ -19,8 +19,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.xtext.go.go.Atrib_Aux;
 import org.xtext.go.go.FunctionBody;
+import org.xtext.go.go.FunctionReturn;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Greeting;
 
@@ -32,7 +32,7 @@ import org.xtext.go.go.Greeting;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.FunctionBodyImpl#getArgs <em>Args</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.FunctionBodyImpl#getReturnType <em>Return Type</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.FunctionBodyImpl#getRet <em>Ret</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,14 +51,14 @@ public class FunctionBodyImpl extends MinimalEObjectImpl.Container implements Fu
   protected EList<Greeting> args;
 
   /**
-   * The cached value of the '{@link #getReturnType() <em>Return Type</em>}' containment reference.
+   * The cached value of the '{@link #getRet() <em>Ret</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getReturnType()
+   * @see #getRet()
    * @generated
    * @ordered
    */
-  protected Atrib_Aux returnType;
+  protected FunctionReturn ret;
 
   /**
    * <!-- begin-user-doc -->
@@ -100,9 +100,9 @@ public class FunctionBodyImpl extends MinimalEObjectImpl.Container implements Fu
    * <!-- end-user-doc -->
    * @generated
    */
-  public Atrib_Aux getReturnType()
+  public FunctionReturn getRet()
   {
-    return returnType;
+    return ret;
   }
 
   /**
@@ -110,13 +110,13 @@ public class FunctionBodyImpl extends MinimalEObjectImpl.Container implements Fu
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetReturnType(Atrib_Aux newReturnType, NotificationChain msgs)
+  public NotificationChain basicSetRet(FunctionReturn newRet, NotificationChain msgs)
   {
-    Atrib_Aux oldReturnType = returnType;
-    returnType = newReturnType;
+    FunctionReturn oldRet = ret;
+    ret = newRet;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.FUNCTION_BODY__RETURN_TYPE, oldReturnType, newReturnType);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.FUNCTION_BODY__RET, oldRet, newRet);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -127,20 +127,20 @@ public class FunctionBodyImpl extends MinimalEObjectImpl.Container implements Fu
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setReturnType(Atrib_Aux newReturnType)
+  public void setRet(FunctionReturn newRet)
   {
-    if (newReturnType != returnType)
+    if (newRet != ret)
     {
       NotificationChain msgs = null;
-      if (returnType != null)
-        msgs = ((InternalEObject)returnType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.FUNCTION_BODY__RETURN_TYPE, null, msgs);
-      if (newReturnType != null)
-        msgs = ((InternalEObject)newReturnType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.FUNCTION_BODY__RETURN_TYPE, null, msgs);
-      msgs = basicSetReturnType(newReturnType, msgs);
+      if (ret != null)
+        msgs = ((InternalEObject)ret).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.FUNCTION_BODY__RET, null, msgs);
+      if (newRet != null)
+        msgs = ((InternalEObject)newRet).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.FUNCTION_BODY__RET, null, msgs);
+      msgs = basicSetRet(newRet, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.FUNCTION_BODY__RETURN_TYPE, newReturnType, newReturnType));
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.FUNCTION_BODY__RET, newRet, newRet));
   }
 
   /**
@@ -155,8 +155,8 @@ public class FunctionBodyImpl extends MinimalEObjectImpl.Container implements Fu
     {
       case GoPackage.FUNCTION_BODY__ARGS:
         return ((InternalEList<?>)getArgs()).basicRemove(otherEnd, msgs);
-      case GoPackage.FUNCTION_BODY__RETURN_TYPE:
-        return basicSetReturnType(null, msgs);
+      case GoPackage.FUNCTION_BODY__RET:
+        return basicSetRet(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -173,8 +173,8 @@ public class FunctionBodyImpl extends MinimalEObjectImpl.Container implements Fu
     {
       case GoPackage.FUNCTION_BODY__ARGS:
         return getArgs();
-      case GoPackage.FUNCTION_BODY__RETURN_TYPE:
-        return getReturnType();
+      case GoPackage.FUNCTION_BODY__RET:
+        return getRet();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -194,8 +194,8 @@ public class FunctionBodyImpl extends MinimalEObjectImpl.Container implements Fu
         getArgs().clear();
         getArgs().addAll((Collection<? extends Greeting>)newValue);
         return;
-      case GoPackage.FUNCTION_BODY__RETURN_TYPE:
-        setReturnType((Atrib_Aux)newValue);
+      case GoPackage.FUNCTION_BODY__RET:
+        setRet((FunctionReturn)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -214,8 +214,8 @@ public class FunctionBodyImpl extends MinimalEObjectImpl.Container implements Fu
       case GoPackage.FUNCTION_BODY__ARGS:
         getArgs().clear();
         return;
-      case GoPackage.FUNCTION_BODY__RETURN_TYPE:
-        setReturnType((Atrib_Aux)null);
+      case GoPackage.FUNCTION_BODY__RET:
+        setRet((FunctionReturn)null);
         return;
     }
     super.eUnset(featureID);
@@ -233,8 +233,8 @@ public class FunctionBodyImpl extends MinimalEObjectImpl.Container implements Fu
     {
       case GoPackage.FUNCTION_BODY__ARGS:
         return args != null && !args.isEmpty();
-      case GoPackage.FUNCTION_BODY__RETURN_TYPE:
-        return returnType != null;
+      case GoPackage.FUNCTION_BODY__RET:
+        return ret != null;
     }
     return super.eIsSet(featureID);
   }

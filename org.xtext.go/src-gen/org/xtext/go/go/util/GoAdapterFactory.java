@@ -33,6 +33,7 @@ import org.xtext.go.go.ElseIfCondition;
 import org.xtext.go.go.Expression;
 import org.xtext.go.go.F;
 import org.xtext.go.go.FunctionBody;
+import org.xtext.go.go.FunctionReturn;
 import org.xtext.go.go.Go;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Greeting;
@@ -300,6 +301,11 @@ public class GoAdapterFactory extends AdapterFactoryImpl
       public Adapter caseFunctionBody(FunctionBody object)
       {
         return createFunctionBodyAdapter();
+      }
+      @Override
+      public Adapter caseFunctionReturn(FunctionReturn object)
+      {
+        return createFunctionReturnAdapter();
       }
       @Override
       public Adapter caseCallFunc(CallFunc object)
@@ -914,6 +920,21 @@ public class GoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFunctionBodyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.go.go.FunctionReturn <em>Function Return</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.go.go.FunctionReturn
+   * @generated
+   */
+  public Adapter createFunctionReturnAdapter()
   {
     return null;
   }

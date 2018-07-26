@@ -149,7 +149,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * terminal Closed_Key:
-	 * 	"}";
+	 * 	"\n"?"}";
 	 */
 	protected String getClosed_KeyToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)

@@ -168,7 +168,11 @@ DecFunc:
 ;
 
 FunctionBody:
-	args+=Greeting*  (RETURN returnType=Atrib_Aux)?
+	args+=Greeting*  ret=FunctionReturn?
+;
+
+FunctionReturn:
+	RETURN returnType=Atrib_Aux?
 ;
 	
 CallFunc:
@@ -190,10 +194,10 @@ terminal PontoVirgula:
 	";";
 	
 terminal Open_Key:
-	"{";
+	"\n"?"{";
 
 terminal Closed_Key:
-	"}";
+	"\n"?"}";
 
 terminal Open_brackets:
 	"[";

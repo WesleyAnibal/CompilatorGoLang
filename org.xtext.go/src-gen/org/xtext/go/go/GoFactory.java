@@ -348,6 +348,15 @@ public interface GoFactory extends EFactory
   FunctionBody createFunctionBody();
 
   /**
+   * Returns a new object of class '<em>Function Return</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Function Return</em>'.
+   * @generated
+   */
+  FunctionReturn createFunctionReturn();
+
+  /**
    * Returns a new object of class '<em>Call Func</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

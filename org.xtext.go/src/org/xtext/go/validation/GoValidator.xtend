@@ -286,10 +286,21 @@ class GoValidator extends AbstractGoValidator {
 	def addFuncToImplements(DecFunc dec) {
 		funcImplements.put(dec.name.toString(), dec);
 		variablesInFunction.put(dec.name, new ArrayList<Atrib>());
-		
+		verifiesReturnFunctionAndReturnBody(dec);
 		mapVariableInBodyFunction(dec);
 		verifiesBodyFunction(dec);
 
+	}
+	
+	def verifiesReturnFunctionAndReturnBody(DecFunc dec){
+		var FunctionBody body = dec.body;
+		if(dec.returnType === null && body.ret !== null  ){
+			error(SEMANTIC_ERROR + "Função void: não precisa de retorno", GoPackage.Literals.DEC_FUNC__RETURN_TYPE);
+		}
+		if(dec.returnType !== null && body.ret === null){
+			error(SEMANTIC_ERROR + "Retorno nao encontrado", GoPackage.Literals.DEC_FUNC__RETURN_TYPE);
+		}
+		
 	}
 
 	def mapVariableInBodyFunction(DecFunc dec) {
@@ -318,17 +329,9 @@ class GoValidator extends AbstractGoValidator {
 				var Variable variable = gret as Variable;
 				if(!searchVariable(dec.name, variable.name)){
 					if(!variablesDeclarationMap.containsKey(variable.name))
-						error(SEMANTIC_ERROR + "Variavel nao declarada no escopo da função", GoPackage.Literals.DEC_FUNC__BODY);
+						error(SEMANTIC_ERROR + "Variavel não declarada no escopo da função", GoPackage.Literals.DEC_FUNC__BODY);
 				}
 			}
-
-//			if (gret instanceof DecVar) {
-//				var DecVar variable = gret as DecVar;
-//				if (variable instanceof Atrib) {
-//					var Atrib atrib = variable as Atrib;
-//					variablesInFunction.get(dec.name).add(atrib);
-//				}
-//			}
 		}
 	}
 	

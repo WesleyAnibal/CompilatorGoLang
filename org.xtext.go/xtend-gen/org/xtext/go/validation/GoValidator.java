@@ -324,8 +324,19 @@ public class GoValidator extends AbstractGoValidator {
     String _name = dec.getName();
     ArrayList<Atrib> _arrayList = new ArrayList<Atrib>();
     GoValidator.variablesInFunction.put(_name, _arrayList);
+    this.verifiesReturnFunctionAndReturnBody(dec);
     this.mapVariableInBodyFunction(dec);
     this.verifiesBodyFunction(dec);
+  }
+  
+  public void verifiesReturnFunctionAndReturnBody(final DecFunc dec) {
+    FunctionBody body = dec.getBody();
+    if (((dec.getReturnType() == null) && (body.getRet() != null))) {
+      this.error((GoValidator.SEMANTIC_ERROR + "Função void: não precisa de retorno"), GoPackage.Literals.DEC_FUNC__RETURN_TYPE);
+    }
+    if (((dec.getReturnType() != null) && (body.getRet() == null))) {
+      this.error((GoValidator.SEMANTIC_ERROR + "Retorno nao encontrado"), GoPackage.Literals.DEC_FUNC__RETURN_TYPE);
+    }
   }
   
   public void mapVariableInBodyFunction(final DecFunc dec) {
@@ -356,7 +367,7 @@ public class GoValidator extends AbstractGoValidator {
           boolean _containsKey = GoValidator.variablesDeclarationMap.containsKey(variable.getName());
           boolean _not_1 = (!_containsKey);
           if (_not_1) {
-            this.error((GoValidator.SEMANTIC_ERROR + "Variavel nao declarada no escopo da função"), GoPackage.Literals.DEC_FUNC__BODY);
+            this.error((GoValidator.SEMANTIC_ERROR + "Variavel não declarada no escopo da função"), GoPackage.Literals.DEC_FUNC__BODY);
           }
         }
       }

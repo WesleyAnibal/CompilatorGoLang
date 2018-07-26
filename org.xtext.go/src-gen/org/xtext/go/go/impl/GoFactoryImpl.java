@@ -34,6 +34,7 @@ import org.xtext.go.go.ElseIfCondition;
 import org.xtext.go.go.Expression;
 import org.xtext.go.go.F;
 import org.xtext.go.go.FunctionBody;
+import org.xtext.go.go.FunctionReturn;
 import org.xtext.go.go.Go;
 import org.xtext.go.go.GoFactory;
 import org.xtext.go.go.GoPackage;
@@ -148,6 +149,7 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
       case GoPackage.VAR_FOR: return createvarFor();
       case GoPackage.DEC_FUNC: return createDecFunc();
       case GoPackage.FUNCTION_BODY: return createFunctionBody();
+      case GoPackage.FUNCTION_RETURN: return createFunctionReturn();
       case GoPackage.CALL_FUNC: return createCallFunc();
       case GoPackage.BOOL: return createBool();
       case GoPackage.DATA_TYPE: return createDataType();
@@ -558,6 +560,17 @@ public class GoFactoryImpl extends EFactoryImpl implements GoFactory
   {
     FunctionBodyImpl functionBody = new FunctionBodyImpl();
     return functionBody;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FunctionReturn createFunctionReturn()
+  {
+    FunctionReturnImpl functionReturn = new FunctionReturnImpl();
+    return functionReturn;
   }
 
   /**

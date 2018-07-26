@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.go.go.FunctionBody#getArgs <em>Args</em>}</li>
- *   <li>{@link org.xtext.go.go.FunctionBody#getReturnType <em>Return Type</em>}</li>
+ *   <li>{@link org.xtext.go.go.FunctionBody#getRet <em>Ret</em>}</li>
  * </ul>
  * </p>
  *
@@ -43,29 +43,29 @@ public interface FunctionBody extends EObject
   EList<Greeting> getArgs();
 
   /**
-   * Returns the value of the '<em><b>Return Type</b></em>' containment reference.
+   * Returns the value of the '<em><b>Ret</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Return Type</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Ret</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Return Type</em>' containment reference.
-   * @see #setReturnType(Atrib_Aux)
-   * @see org.xtext.go.go.GoPackage#getFunctionBody_ReturnType()
+   * @return the value of the '<em>Ret</em>' containment reference.
+   * @see #setRet(FunctionReturn)
+   * @see org.xtext.go.go.GoPackage#getFunctionBody_Ret()
    * @model containment="true"
    * @generated
    */
-  Atrib_Aux getReturnType();
+  FunctionReturn getRet();
 
   /**
-   * Sets the value of the '{@link org.xtext.go.go.FunctionBody#getReturnType <em>Return Type</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.go.go.FunctionBody#getRet <em>Ret</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Return Type</em>' containment reference.
-   * @see #getReturnType()
+   * @param value the new value of the '<em>Ret</em>' containment reference.
+   * @see #getRet()
    * @generated
    */
-  void setReturnType(Atrib_Aux value);
+  void setRet(FunctionReturn value);
 
 } // FunctionBody
