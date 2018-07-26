@@ -30,6 +30,8 @@ import org.xtext.go.go.ElseCondition;
 import org.xtext.go.go.ElseIfCondition;
 import org.xtext.go.go.Expression;
 import org.xtext.go.go.F;
+import org.xtext.go.go.FunctionBody;
+import org.xtext.go.go.FunctionReturn;
 import org.xtext.go.go.Go;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Greeting;
@@ -411,6 +413,20 @@ public class GoSwitch<T1> extends Switch<T1>
         DecFunc decFunc = (DecFunc)theEObject;
         T1 result = caseDecFunc(decFunc);
         if (result == null) result = caseGreeting(decFunc);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.FUNCTION_BODY:
+      {
+        FunctionBody functionBody = (FunctionBody)theEObject;
+        T1 result = caseFunctionBody(functionBody);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GoPackage.FUNCTION_RETURN:
+      {
+        FunctionReturn functionReturn = (FunctionReturn)theEObject;
+        T1 result = caseFunctionReturn(functionReturn);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1089,6 +1105,38 @@ public class GoSwitch<T1> extends Switch<T1>
    * @generated
    */
   public T1 caseDecFunc(DecFunc object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Function Body</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Function Body</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T1 caseFunctionBody(FunctionBody object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Function Return</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Function Return</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T1 caseFunctionReturn(FunctionReturn object)
   {
     return null;
   }

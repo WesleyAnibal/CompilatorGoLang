@@ -129,18 +129,18 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Assignment cDeclarationAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
 		private final RuleCall cDeclarationDeclParserRuleCall_0_0 = (RuleCall)cDeclarationAssignment_0.eContents().get(0);
-		private final Assignment cAssignmentAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cAssignmentAtribVarParserRuleCall_1_0 = (RuleCall)cAssignmentAssignment_1.eContents().get(0);
-		private final Assignment cAtribuicaoAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final RuleCall cAtribuicaoAtribParserRuleCall_2_0 = (RuleCall)cAtribuicaoAssignment_2.eContents().get(0);
+		private final Assignment cAtribuicaoAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final RuleCall cAtribuicaoAtribParserRuleCall_1_0 = (RuleCall)cAtribuicaoAssignment_1.eContents().get(0);
+		private final Assignment cAssignmentAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
+		private final RuleCall cAssignmentAtribVarParserRuleCall_2_0 = (RuleCall)cAssignmentAssignment_2.eContents().get(0);
 		private final Assignment cReassignmentAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
 		private final RuleCall cReassignmentReAtribParserRuleCall_3_0 = (RuleCall)cReassignmentAssignment_3.eContents().get(0);
 		
 		//DecVar:
-		//	declaration=Decl | assignment=AtribVar | atribuicao=Atrib | reassignment=ReAtrib;
+		//	declaration=Decl | atribuicao=Atrib | assignment=AtribVar | reassignment=ReAtrib;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//declaration=Decl | assignment=AtribVar | atribuicao=Atrib | reassignment=ReAtrib
+		//declaration=Decl | atribuicao=Atrib | assignment=AtribVar | reassignment=ReAtrib
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//declaration=Decl
@@ -149,17 +149,17 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		//Decl
 		public RuleCall getDeclarationDeclParserRuleCall_0_0() { return cDeclarationDeclParserRuleCall_0_0; }
 		
-		//assignment=AtribVar
-		public Assignment getAssignmentAssignment_1() { return cAssignmentAssignment_1; }
-		
-		//AtribVar
-		public RuleCall getAssignmentAtribVarParserRuleCall_1_0() { return cAssignmentAtribVarParserRuleCall_1_0; }
-		
 		//atribuicao=Atrib
-		public Assignment getAtribuicaoAssignment_2() { return cAtribuicaoAssignment_2; }
+		public Assignment getAtribuicaoAssignment_1() { return cAtribuicaoAssignment_1; }
 		
 		//Atrib
-		public RuleCall getAtribuicaoAtribParserRuleCall_2_0() { return cAtribuicaoAtribParserRuleCall_2_0; }
+		public RuleCall getAtribuicaoAtribParserRuleCall_1_0() { return cAtribuicaoAtribParserRuleCall_1_0; }
+		
+		//assignment=AtribVar
+		public Assignment getAssignmentAssignment_2() { return cAssignmentAssignment_2; }
+		
+		//AtribVar
+		public RuleCall getAssignmentAtribVarParserRuleCall_2_0() { return cAssignmentAtribVarParserRuleCall_2_0; }
 		
 		//reassignment=ReAtrib
 		public Assignment getReassignmentAssignment_3() { return cReassignmentAssignment_3; }
@@ -1752,15 +1752,16 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cReturnTypeAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cReturnTypeTypesParserRuleCall_5_0 = (RuleCall)cReturnTypeAssignment_5.eContents().get(0);
 		private final RuleCall cOpen_KeyTerminalRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
-		private final Assignment cArgsAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cArgsGreetingParserRuleCall_7_0 = (RuleCall)cArgsAssignment_7.eContents().get(0);
+		private final Assignment cBodyAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cBodyFunctionBodyParserRuleCall_7_0 = (RuleCall)cBodyAssignment_7.eContents().get(0);
 		private final RuleCall cClosed_KeyTerminalRuleCall_8 = (RuleCall)cGroup.eContents().get(8);
 		
 		//DecFunc:
-		//	FUNC name=ID Open_parentheses param=Params* Closed_parentheses returnType=Types? Open_Key args+=Greeting* Closed_Key;
+		//	FUNC name=ID Open_parentheses param=Params* Closed_parentheses returnType=Types? Open_Key body=FunctionBody
+		//	Closed_Key;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//FUNC name=ID Open_parentheses param=Params* Closed_parentheses returnType=Types? Open_Key args+=Greeting* Closed_Key
+		//FUNC name=ID Open_parentheses param=Params* Closed_parentheses returnType=Types? Open_Key body=FunctionBody Closed_Key
 		public Group getGroup() { return cGroup; }
 		
 		//FUNC
@@ -1793,14 +1794,64 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		//Open_Key
 		public RuleCall getOpen_KeyTerminalRuleCall_6() { return cOpen_KeyTerminalRuleCall_6; }
 		
-		//args+=Greeting*
-		public Assignment getArgsAssignment_7() { return cArgsAssignment_7; }
+		//body=FunctionBody
+		public Assignment getBodyAssignment_7() { return cBodyAssignment_7; }
 		
-		//Greeting
-		public RuleCall getArgsGreetingParserRuleCall_7_0() { return cArgsGreetingParserRuleCall_7_0; }
+		//FunctionBody
+		public RuleCall getBodyFunctionBodyParserRuleCall_7_0() { return cBodyFunctionBodyParserRuleCall_7_0; }
 		
 		//Closed_Key
 		public RuleCall getClosed_KeyTerminalRuleCall_8() { return cClosed_KeyTerminalRuleCall_8; }
+	}
+	public class FunctionBodyElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.FunctionBody");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cArgsAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cArgsGreetingParserRuleCall_0_0 = (RuleCall)cArgsAssignment_0.eContents().get(0);
+		private final Assignment cRetAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cRetFunctionReturnParserRuleCall_1_0 = (RuleCall)cRetAssignment_1.eContents().get(0);
+		
+		//FunctionBody:
+		//	args+=Greeting* ret=FunctionReturn?;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//args+=Greeting* ret=FunctionReturn?
+		public Group getGroup() { return cGroup; }
+		
+		//args+=Greeting*
+		public Assignment getArgsAssignment_0() { return cArgsAssignment_0; }
+		
+		//Greeting
+		public RuleCall getArgsGreetingParserRuleCall_0_0() { return cArgsGreetingParserRuleCall_0_0; }
+		
+		//ret=FunctionReturn?
+		public Assignment getRetAssignment_1() { return cRetAssignment_1; }
+		
+		//FunctionReturn
+		public RuleCall getRetFunctionReturnParserRuleCall_1_0() { return cRetFunctionReturnParserRuleCall_1_0; }
+	}
+	public class FunctionReturnElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.FunctionReturn");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cRETURNParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cReturnTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cReturnTypeAtrib_AuxParserRuleCall_1_0 = (RuleCall)cReturnTypeAssignment_1.eContents().get(0);
+		
+		//FunctionReturn:
+		//	RETURN returnType=Atrib_Aux?;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//RETURN returnType=Atrib_Aux?
+		public Group getGroup() { return cGroup; }
+		
+		//RETURN
+		public RuleCall getRETURNParserRuleCall_0() { return cRETURNParserRuleCall_0; }
+		
+		//returnType=Atrib_Aux?
+		public Assignment getReturnTypeAssignment_1() { return cReturnTypeAssignment_1; }
+		
+		//Atrib_Aux
+		public RuleCall getReturnTypeAtrib_AuxParserRuleCall_1_0() { return cReturnTypeAtrib_AuxParserRuleCall_1_0; }
 	}
 	public class CallFuncElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.CallFunc");
@@ -2261,6 +2312,8 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	private final VarForElements pVarFor;
 	private final LiteralElements pLiteral;
 	private final DecFuncElements pDecFunc;
+	private final FunctionBodyElements pFunctionBody;
+	private final FunctionReturnElements pFunctionReturn;
 	private final CallFuncElements pCallFunc;
 	private final TerminalsElements pTerminals;
 	private final TypesElements pTypes;
@@ -2367,6 +2420,8 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVarFor = new VarForElements();
 		this.pLiteral = new LiteralElements();
 		this.pDecFunc = new DecFuncElements();
+		this.pFunctionBody = new FunctionBodyElements();
+		this.pFunctionReturn = new FunctionReturnElements();
 		this.pCallFunc = new CallFuncElements();
 		this.pTerminals = new TerminalsElements();
 		this.pTypes = new TypesElements();
@@ -2475,7 +2530,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DecVar:
-	//	declaration=Decl | assignment=AtribVar | atribuicao=Atrib | reassignment=ReAtrib;
+	//	declaration=Decl | atribuicao=Atrib | assignment=AtribVar | reassignment=ReAtrib;
 	public DecVarElements getDecVarAccess() {
 		return pDecVar;
 	}
@@ -2917,13 +2972,34 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DecFunc:
-	//	FUNC name=ID Open_parentheses param=Params* Closed_parentheses returnType=Types? Open_Key args+=Greeting* Closed_Key;
+	//	FUNC name=ID Open_parentheses param=Params* Closed_parentheses returnType=Types? Open_Key body=FunctionBody
+	//	Closed_Key;
 	public DecFuncElements getDecFuncAccess() {
 		return pDecFunc;
 	}
 	
 	public ParserRule getDecFuncRule() {
 		return getDecFuncAccess().getRule();
+	}
+	
+	//FunctionBody:
+	//	args+=Greeting* ret=FunctionReturn?;
+	public FunctionBodyElements getFunctionBodyAccess() {
+		return pFunctionBody;
+	}
+	
+	public ParserRule getFunctionBodyRule() {
+		return getFunctionBodyAccess().getRule();
+	}
+	
+	//FunctionReturn:
+	//	RETURN returnType=Atrib_Aux?;
+	public FunctionReturnElements getFunctionReturnAccess() {
+		return pFunctionReturn;
+	}
+	
+	public ParserRule getFunctionReturnRule() {
+		return getFunctionReturnAccess().getRule();
 	}
 	
 	//CallFunc:
@@ -2974,13 +3050,13 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//terminal Open_Key:
-	//	"{";
+	//	"\n"? "{";
 	public TerminalRule getOpen_KeyRule() {
 		return tOpen_Key;
 	}
 	
 	//terminal Closed_Key:
-	//	"}";
+	//	"\n"? "}";
 	public TerminalRule getClosed_KeyRule() {
 		return tClosed_Key;
 	}

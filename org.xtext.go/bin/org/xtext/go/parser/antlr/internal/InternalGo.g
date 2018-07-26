@@ -310,18 +310,18 @@ ruleDecVar returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDecVarAccess().getAssignmentAtribVarParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getDecVarAccess().getAtribuicaoAtribParserRuleCall_1_0());
 				}
-				lv_assignment_1_0=ruleAtribVar
+				lv_atribuicao_1_0=ruleAtrib
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDecVarRule());
 					}
 					set(
 						$current,
-						"assignment",
-						lv_assignment_1_0,
-						"org.xtext.go.Go.AtribVar");
+						"atribuicao",
+						lv_atribuicao_1_0,
+						"org.xtext.go.Go.Atrib");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -330,18 +330,18 @@ ruleDecVar returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDecVarAccess().getAtribuicaoAtribParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getDecVarAccess().getAssignmentAtribVarParserRuleCall_2_0());
 				}
-				lv_atribuicao_2_0=ruleAtrib
+				lv_assignment_2_0=ruleAtribVar
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDecVarRule());
 					}
 					set(
 						$current,
-						"atribuicao",
-						lv_atribuicao_2_0,
-						"org.xtext.go.Go.Atrib");
+						"assignment",
+						lv_assignment_2_0,
+						"org.xtext.go.Go.AtribVar");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -3164,26 +3164,128 @@ ruleDecFunc returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDecFuncAccess().getArgsGreetingParserRuleCall_7_0());
+					newCompositeNode(grammarAccess.getDecFuncAccess().getBodyFunctionBodyParserRuleCall_7_0());
 				}
-				lv_args_7_0=ruleGreeting
+				lv_body_7_0=ruleFunctionBody
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDecFuncRule());
 					}
+					set(
+						$current,
+						"body",
+						lv_body_7_0,
+						"org.xtext.go.Go.FunctionBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		this_Closed_Key_8=RULE_CLOSED_KEY
+		{
+			newLeafNode(this_Closed_Key_8, grammarAccess.getDecFuncAccess().getClosed_KeyTerminalRuleCall_8());
+		}
+	)
+;
+
+// Entry rule entryRuleFunctionBody
+entryRuleFunctionBody returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getFunctionBodyRule()); }
+	iv_ruleFunctionBody=ruleFunctionBody
+	{ $current=$iv_ruleFunctionBody.current; }
+	EOF;
+
+// Rule FunctionBody
+ruleFunctionBody returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getFunctionBodyAccess().getArgsGreetingParserRuleCall_0_0());
+				}
+				lv_args_0_0=ruleGreeting
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getFunctionBodyRule());
+					}
 					add(
 						$current,
 						"args",
-						lv_args_7_0,
+						lv_args_0_0,
 						"org.xtext.go.Go.Greeting");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		this_Closed_Key_8=RULE_CLOSED_KEY
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getFunctionBodyAccess().getRetFunctionReturnParserRuleCall_1_0());
+				}
+				lv_ret_1_0=ruleFunctionReturn
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getFunctionBodyRule());
+					}
+					set(
+						$current,
+						"ret",
+						lv_ret_1_0,
+						"org.xtext.go.Go.FunctionReturn");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+	)
+;
+
+// Entry rule entryRuleFunctionReturn
+entryRuleFunctionReturn returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getFunctionReturnRule()); }
+	iv_ruleFunctionReturn=ruleFunctionReturn
+	{ $current=$iv_ruleFunctionReturn.current; }
+	EOF;
+
+// Rule FunctionReturn
+ruleFunctionReturn returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
 		{
-			newLeafNode(this_Closed_Key_8, grammarAccess.getDecFuncAccess().getClosed_KeyTerminalRuleCall_8());
+			newCompositeNode(grammarAccess.getFunctionReturnAccess().getRETURNParserRuleCall_0());
 		}
+		ruleRETURN
+		{
+			afterParserOrEnumRuleCall();
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getFunctionReturnAccess().getReturnTypeAtrib_AuxParserRuleCall_1_0());
+				}
+				lv_returnType_1_0=ruleAtrib_Aux
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getFunctionReturnRule());
+					}
+					set(
+						$current,
+						"returnType",
+						lv_returnType_1_0,
+						"org.xtext.go.Go.Atrib_Aux");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
 	)
 ;
 
@@ -3827,9 +3929,9 @@ ruleDataType returns [EObject current=null]
 
 RULE_PONTOVIRGULA : ';';
 
-RULE_OPEN_KEY : '{';
+RULE_OPEN_KEY : '\n'? '{';
 
-RULE_CLOSED_KEY : '}';
+RULE_CLOSED_KEY : '\n'? '}';
 
 RULE_OPEN_BRACKETS : '[';
 

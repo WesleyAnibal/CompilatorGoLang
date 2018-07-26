@@ -12,7 +12,7 @@ Decl:
 	Modif name=ID type=Types
 ;
 DecVar:
-	declaration=Decl | assignment=AtribVar | atribuicao=Atrib | reassignment =ReAtrib
+	declaration=Decl | atribuicao=Atrib | assignment=AtribVar | reassignment =ReAtrib
 ;
 
 AtribVar:
@@ -163,7 +163,15 @@ Literal returns Expression:
 ;
 
 DecFunc:
-	FUNC name=ID Open_parentheses param=Params* Closed_parentheses returnType=Types? Open_Key args+=Greeting*Closed_Key
+	FUNC name=ID Open_parentheses param=Params* Closed_parentheses returnType=Types? Open_Key body=FunctionBody Closed_Key
+;
+
+FunctionBody:
+	args+=Greeting*  ret=FunctionReturn?
+;
+
+FunctionReturn:
+	RETURN returnType=Atrib_Aux?
 ;
 	
 CallFunc:
@@ -185,10 +193,10 @@ terminal PontoVirgula:
 	";";
 	
 terminal Open_Key:
-	"{";
+	"\n"?"{";
 
 terminal Closed_Key:
-	"}";
+	"\n"?"}";
 
 terminal Open_brackets:
 	"[";

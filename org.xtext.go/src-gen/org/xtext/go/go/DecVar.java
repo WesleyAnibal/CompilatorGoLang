@@ -14,8 +14,8 @@ package org.xtext.go.go;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.go.go.DecVar#getDeclaration <em>Declaration</em>}</li>
- *   <li>{@link org.xtext.go.go.DecVar#getAssignment <em>Assignment</em>}</li>
  *   <li>{@link org.xtext.go.go.DecVar#getAtribuicao <em>Atribuicao</em>}</li>
+ *   <li>{@link org.xtext.go.go.DecVar#getAssignment <em>Assignment</em>}</li>
  *   <li>{@link org.xtext.go.go.DecVar#getReassignment <em>Reassignment</em>}</li>
  * </ul>
  *
@@ -52,32 +52,6 @@ public interface DecVar extends Greeting
   void setDeclaration(Decl value);
 
   /**
-   * Returns the value of the '<em><b>Assignment</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Assignment</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Assignment</em>' containment reference.
-   * @see #setAssignment(AtribVar)
-   * @see org.xtext.go.go.GoPackage#getDecVar_Assignment()
-   * @model containment="true"
-   * @generated
-   */
-  AtribVar getAssignment();
-
-  /**
-   * Sets the value of the '{@link org.xtext.go.go.DecVar#getAssignment <em>Assignment</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Assignment</em>' containment reference.
-   * @see #getAssignment()
-   * @generated
-   */
-  void setAssignment(AtribVar value);
-
-  /**
    * Returns the value of the '<em><b>Atribuicao</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
@@ -102,6 +76,32 @@ public interface DecVar extends Greeting
    * @generated
    */
   void setAtribuicao(Atrib value);
+
+  /**
+   * Returns the value of the '<em><b>Assignment</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Assignment</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Assignment</em>' containment reference.
+   * @see #setAssignment(AtribVar)
+   * @see org.xtext.go.go.GoPackage#getDecVar_Assignment()
+   * @model containment="true"
+   * @generated
+   */
+  AtribVar getAssignment();
+
+  /**
+   * Sets the value of the '{@link org.xtext.go.go.DecVar#getAssignment <em>Assignment</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Assignment</em>' containment reference.
+   * @see #getAssignment()
+   * @generated
+   */
+  void setAssignment(AtribVar value);
 
   /**
    * Returns the value of the '<em><b>Reassignment</b></em>' containment reference.

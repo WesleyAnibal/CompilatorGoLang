@@ -33,6 +33,8 @@ import org.xtext.go.go.Division;
 import org.xtext.go.go.ElseCondition;
 import org.xtext.go.go.Expression;
 import org.xtext.go.go.F;
+import org.xtext.go.go.FunctionBody;
+import org.xtext.go.go.FunctionReturn;
 import org.xtext.go.go.Go;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.IfCondition;
@@ -195,6 +197,12 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case GoPackage.FUNCTION_BODY:
+				sequence_FunctionBody(context, (FunctionBody) semanticObject); 
+				return; 
+			case GoPackage.FUNCTION_RETURN:
+				sequence_FunctionReturn(context, (FunctionReturn) semanticObject); 
+				return; 
 			case GoPackage.GO:
 				sequence_Go(context, (Go) semanticObject); 
 				return; 
@@ -696,7 +704,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DecFunc returns DecFunc
 	 *
 	 * Constraint:
-	 *     (name=ID param=Params* returnType=Types? args+=Greeting*)
+	 *     (name=ID param=Params* returnType=Types? body=FunctionBody)
 	 */
 	protected void sequence_DecFunc(ISerializationContext context, DecFunc semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -709,7 +717,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DecVar returns DecVar
 	 *
 	 * Constraint:
-	 *     (declaration=Decl | assignment=AtribVar | atribuicao=Atrib | reassignment=ReAtrib)
+	 *     (declaration=Decl | atribuicao=Atrib | assignment=AtribVar | reassignment=ReAtrib)
 	 */
 	protected void sequence_DecVar(ISerializationContext context, DecVar semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -887,6 +895,36 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_F_T(ISerializationContext context, F semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     FunctionBody returns FunctionBody
+	 *
+	 * Constraint:
+	 *     ((args+=Greeting+ ret=FunctionReturn) | ret=FunctionReturn)?
+	 */
+	protected void sequence_FunctionBody(ISerializationContext context, FunctionBody semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     FunctionReturn returns FunctionReturn
+	 *
+	 * Constraint:
+	 *     returnType=Atrib_Aux
+	 */
+	protected void sequence_FunctionReturn(ISerializationContext context, FunctionReturn semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GoPackage.Literals.FUNCTION_RETURN__RETURN_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GoPackage.Literals.FUNCTION_RETURN__RETURN_TYPE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFunctionReturnAccess().getReturnTypeAtrib_AuxParserRuleCall_1_0(), semanticObject.getReturnType());
+		feeder.finish();
 	}
 	
 	

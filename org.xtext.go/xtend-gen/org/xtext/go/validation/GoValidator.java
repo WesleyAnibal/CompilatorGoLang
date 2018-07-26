@@ -17,7 +17,10 @@ import org.xtext.go.go.Atrib_Aux;
 import org.xtext.go.go.Bool;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.DecFunc;
+import org.xtext.go.go.DecVar;
+import org.xtext.go.go.FunctionBody;
 import org.xtext.go.go.GoPackage;
+import org.xtext.go.go.Greeting;
 import org.xtext.go.go.Intg;
 import org.xtext.go.go.Numbers;
 import org.xtext.go.go.Params;
@@ -41,6 +44,10 @@ public class GoValidator extends AbstractGoValidator {
   public static Map<String, DecFunc> funcImplements = new HashMap<String, DecFunc>();
   
   public static Map<String, Atrib> variablesDeclarationMap = new HashMap<String, Atrib>();
+  
+  public static Map<String, List<Atrib>> variablesInFunction = new HashMap<String, List<Atrib>>();
+  
+  private Object v;
   
   @Check
   public void checkGreetingStartsWithCapital(final AtribVar g) {
@@ -312,17 +319,70 @@ public class GoValidator extends AbstractGoValidator {
   }
   
   @Check
-  public DecFunc addFuncToImplements(final DecFunc dec) {
-    return GoValidator.funcImplements.put(dec.getName().toString(), dec);
+  public void addFuncToImplements(final DecFunc dec) {
+    GoValidator.funcImplements.put(dec.getName().toString(), dec);
+    String _name = dec.getName();
+    ArrayList<Atrib> _arrayList = new ArrayList<Atrib>();
+    GoValidator.variablesInFunction.put(_name, _arrayList);
+    this.verifiesReturnFunctionAndReturnBody(dec);
+    this.mapVariableInBodyFunction(dec);
+    this.verifiesBodyFunction(dec);
   }
   
-  @Check
-  public void checkIfFunctionOverhead(final DecFunc dec) {
-    boolean _containsKey = GoValidator.funcImplements.containsKey(dec.getName());
-    boolean _not = (!_containsKey);
-    if (_not) {
-      this.error((GoValidator.SEMANTIC_ERROR + "função não declarada"), GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+  public void verifiesReturnFunctionAndReturnBody(final DecFunc dec) {
+    FunctionBody body = dec.getBody();
+    if (((dec.getReturnType() == null) && (body.getRet() != null))) {
+      this.error((GoValidator.SEMANTIC_ERROR + "Função void: não precisa de retorno"), GoPackage.Literals.DEC_FUNC__RETURN_TYPE);
     }
+    if (((dec.getReturnType() != null) && (body.getRet() == null))) {
+      this.error((GoValidator.SEMANTIC_ERROR + "Retorno nao encontrado"), GoPackage.Literals.DEC_FUNC__RETURN_TYPE);
+    }
+  }
+  
+  public void mapVariableInBodyFunction(final DecFunc dec) {
+    FunctionBody body = dec.getBody();
+    EList<Greeting> _args = body.getArgs();
+    for (final Greeting gret : _args) {
+      if ((gret instanceof DecVar)) {
+        DecVar variable = ((DecVar) gret);
+        Atrib _atribuicao = variable.getAtribuicao();
+        boolean _tripleNotEquals = (_atribuicao != null);
+        if (_tripleNotEquals) {
+          Atrib atrib = variable.getAtribuicao();
+          GoValidator.variablesInFunction.get(dec.getName()).add(atrib);
+        }
+      }
+    }
+  }
+  
+  public void verifiesBodyFunction(final DecFunc dec) {
+    FunctionBody body = dec.getBody();
+    EList<Greeting> _args = body.getArgs();
+    for (final Greeting gret : _args) {
+      if ((gret instanceof Variable)) {
+        Variable variable = ((Variable) gret);
+        boolean _searchVariable = this.searchVariable(dec.getName(), variable.getName());
+        boolean _not = (!_searchVariable);
+        if (_not) {
+          boolean _containsKey = GoValidator.variablesDeclarationMap.containsKey(variable.getName());
+          boolean _not_1 = (!_containsKey);
+          if (_not_1) {
+            this.error((GoValidator.SEMANTIC_ERROR + "Variavel não declarada no escopo da função"), GoPackage.Literals.DEC_FUNC__BODY);
+          }
+        }
+      }
+    }
+  }
+  
+  public boolean searchVariable(final String nameFunc, final String nameVar) {
+    List<Atrib> attrs = GoValidator.variablesInFunction.get(nameFunc);
+    for (final Atrib at : attrs) {
+      boolean _equals = at.getName().equals(nameVar);
+      if (_equals) {
+        return true;
+      }
+    }
+    return false;
   }
   
   @Check

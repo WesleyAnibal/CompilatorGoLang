@@ -31,6 +31,8 @@ import org.xtext.go.go.Division;
 import org.xtext.go.go.ElseCondition;
 import org.xtext.go.go.ElseIfCondition;
 import org.xtext.go.go.Expression;
+import org.xtext.go.go.FunctionBody;
+import org.xtext.go.go.FunctionReturn;
 import org.xtext.go.go.Go;
 import org.xtext.go.go.GoFactory;
 import org.xtext.go.go.GoPackage;
@@ -312,6 +314,20 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass functionBodyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass functionReturnEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass callFuncEClass = null;
 
   /**
@@ -532,7 +548,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDecVar_Assignment()
+  public EReference getDecVar_Atribuicao()
   {
     return (EReference)decVarEClass.getEStructuralFeatures().get(1);
   }
@@ -542,7 +558,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDecVar_Atribuicao()
+  public EReference getDecVar_Assignment()
   {
     return (EReference)decVarEClass.getEStructuralFeatures().get(2);
   }
@@ -1312,9 +1328,59 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDecFunc_Args()
+  public EReference getDecFunc_Body()
   {
     return (EReference)decFuncEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFunctionBody()
+  {
+    return functionBodyEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFunctionBody_Args()
+  {
+    return (EReference)functionBodyEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFunctionBody_Ret()
+  {
+    return (EReference)functionBodyEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFunctionReturn()
+  {
+    return functionReturnEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFunctionReturn_ReturnType()
+  {
+    return (EReference)functionReturnEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1658,8 +1724,8 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     decVarEClass = createEClass(DEC_VAR);
     createEReference(decVarEClass, DEC_VAR__DECLARATION);
-    createEReference(decVarEClass, DEC_VAR__ASSIGNMENT);
     createEReference(decVarEClass, DEC_VAR__ATRIBUICAO);
+    createEReference(decVarEClass, DEC_VAR__ASSIGNMENT);
     createEReference(decVarEClass, DEC_VAR__REASSIGNMENT);
 
     atribVarEClass = createEClass(ATRIB_VAR);
@@ -1767,7 +1833,14 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     createEAttribute(decFuncEClass, DEC_FUNC__NAME);
     createEReference(decFuncEClass, DEC_FUNC__PARAM);
     createEAttribute(decFuncEClass, DEC_FUNC__RETURN_TYPE);
-    createEReference(decFuncEClass, DEC_FUNC__ARGS);
+    createEReference(decFuncEClass, DEC_FUNC__BODY);
+
+    functionBodyEClass = createEClass(FUNCTION_BODY);
+    createEReference(functionBodyEClass, FUNCTION_BODY__ARGS);
+    createEReference(functionBodyEClass, FUNCTION_BODY__RET);
+
+    functionReturnEClass = createEClass(FUNCTION_RETURN);
+    createEReference(functionReturnEClass, FUNCTION_RETURN__RETURN_TYPE);
 
     callFuncEClass = createEClass(CALL_FUNC);
     createEAttribute(callFuncEClass, CALL_FUNC__NAME_FUNC);
@@ -1892,8 +1965,8 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     initEClass(decVarEClass, DecVar.class, "DecVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDecVar_Declaration(), this.getDecl(), null, "declaration", null, 0, 1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDecVar_Assignment(), this.getAtribVar(), null, "assignment", null, 0, 1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDecVar_Atribuicao(), this.getAtrib(), null, "atribuicao", null, 0, 1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDecVar_Assignment(), this.getAtribVar(), null, "assignment", null, 0, 1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDecVar_Reassignment(), this.getReAtrib(), null, "reassignment", null, 0, 1, DecVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atribVarEClass, AtribVar.class, "AtribVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2001,7 +2074,14 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
     initEAttribute(getDecFunc_Name(), ecorePackage.getEString(), "name", null, 0, 1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDecFunc_Param(), this.getParams(), null, "param", null, 0, 1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDecFunc_ReturnType(), ecorePackage.getEString(), "returnType", null, 0, 1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDecFunc_Args(), this.getGreeting(), null, "args", null, 0, -1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDecFunc_Body(), this.getFunctionBody(), null, "body", null, 0, 1, DecFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(functionBodyEClass, FunctionBody.class, "FunctionBody", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFunctionBody_Args(), this.getGreeting(), null, "args", null, 0, -1, FunctionBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFunctionBody_Ret(), this.getFunctionReturn(), null, "ret", null, 0, 1, FunctionBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(functionReturnEClass, FunctionReturn.class, "FunctionReturn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFunctionReturn_ReturnType(), this.getAtrib_Aux(), null, "returnType", null, 0, 1, FunctionReturn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(callFuncEClass, CallFunc.class, "CallFunc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCallFunc_NameFunc(), ecorePackage.getEString(), "nameFunc", null, 0, 1, CallFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

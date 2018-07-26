@@ -3,24 +3,17 @@
  */
 package org.xtext.go.go.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.xtext.go.go.DecFunc;
+import org.xtext.go.go.FunctionBody;
 import org.xtext.go.go.GoPackage;
-import org.xtext.go.go.Greeting;
 import org.xtext.go.go.Params;
 
 /**
@@ -34,7 +27,7 @@ import org.xtext.go.go.Params;
  *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getParam <em>Param</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getReturnType <em>Return Type</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getArgs <em>Args</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.DecFuncImpl#getBody <em>Body</em>}</li>
  * </ul>
  *
  * @generated
@@ -92,14 +85,14 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
   protected String returnType = RETURN_TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getArgs() <em>Args</em>}' containment reference list.
+   * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getArgs()
+   * @see #getBody()
    * @generated
    * @ordered
    */
-  protected EList<Greeting> args;
+  protected FunctionBody body;
 
   /**
    * <!-- begin-user-doc -->
@@ -221,13 +214,47 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Greeting> getArgs()
+  public FunctionBody getBody()
   {
-    if (args == null)
+    return body;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetBody(FunctionBody newBody, NotificationChain msgs)
+  {
+    FunctionBody oldBody = body;
+    body = newBody;
+    if (eNotificationRequired())
     {
-      args = new EObjectContainmentEList<Greeting>(Greeting.class, this, GoPackage.DEC_FUNC__ARGS);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.DEC_FUNC__BODY, oldBody, newBody);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return args;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setBody(FunctionBody newBody)
+  {
+    if (newBody != body)
+    {
+      NotificationChain msgs = null;
+      if (body != null)
+        msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.DEC_FUNC__BODY, null, msgs);
+      if (newBody != null)
+        msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.DEC_FUNC__BODY, null, msgs);
+      msgs = basicSetBody(newBody, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.DEC_FUNC__BODY, newBody, newBody));
   }
 
   /**
@@ -242,8 +269,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
     {
       case GoPackage.DEC_FUNC__PARAM:
         return basicSetParam(null, msgs);
-      case GoPackage.DEC_FUNC__ARGS:
-        return ((InternalEList<?>)getArgs()).basicRemove(otherEnd, msgs);
+      case GoPackage.DEC_FUNC__BODY:
+        return basicSetBody(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -264,8 +291,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
         return getParam();
       case GoPackage.DEC_FUNC__RETURN_TYPE:
         return getReturnType();
-      case GoPackage.DEC_FUNC__ARGS:
-        return getArgs();
+      case GoPackage.DEC_FUNC__BODY:
+        return getBody();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -275,7 +302,6 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -290,9 +316,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
       case GoPackage.DEC_FUNC__RETURN_TYPE:
         setReturnType((String)newValue);
         return;
-      case GoPackage.DEC_FUNC__ARGS:
-        getArgs().clear();
-        getArgs().addAll((Collection<? extends Greeting>)newValue);
+      case GoPackage.DEC_FUNC__BODY:
+        setBody((FunctionBody)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -317,8 +342,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
       case GoPackage.DEC_FUNC__RETURN_TYPE:
         setReturnType(RETURN_TYPE_EDEFAULT);
         return;
-      case GoPackage.DEC_FUNC__ARGS:
-        getArgs().clear();
+      case GoPackage.DEC_FUNC__BODY:
+        setBody((FunctionBody)null);
         return;
     }
     super.eUnset(featureID);
@@ -340,8 +365,8 @@ public class DecFuncImpl extends GreetingImpl implements DecFunc
         return param != null;
       case GoPackage.DEC_FUNC__RETURN_TYPE:
         return RETURN_TYPE_EDEFAULT == null ? returnType != null : !RETURN_TYPE_EDEFAULT.equals(returnType);
-      case GoPackage.DEC_FUNC__ARGS:
-        return args != null && !args.isEmpty();
+      case GoPackage.DEC_FUNC__BODY:
+        return body != null;
     }
     return super.eIsSet(featureID);
   }

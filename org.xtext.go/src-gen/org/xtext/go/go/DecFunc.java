@@ -3,7 +3,6 @@
  */
 package org.xtext.go.go;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.xtext.go.go.DecFunc#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.go.go.DecFunc#getParam <em>Param</em>}</li>
  *   <li>{@link org.xtext.go.go.DecFunc#getReturnType <em>Return Type</em>}</li>
- *   <li>{@link org.xtext.go.go.DecFunc#getArgs <em>Args</em>}</li>
+ *   <li>{@link org.xtext.go.go.DecFunc#getBody <em>Body</em>}</li>
  * </ul>
  *
  * @see org.xtext.go.go.GoPackage#getDecFunc()
@@ -105,19 +104,29 @@ public interface DecFunc extends Greeting
   void setReturnType(String value);
 
   /**
-   * Returns the value of the '<em><b>Args</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.go.go.Greeting}.
+   * Returns the value of the '<em><b>Body</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Args</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Body</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Args</em>' containment reference list.
-   * @see org.xtext.go.go.GoPackage#getDecFunc_Args()
+   * @return the value of the '<em>Body</em>' containment reference.
+   * @see #setBody(FunctionBody)
+   * @see org.xtext.go.go.GoPackage#getDecFunc_Body()
    * @model containment="true"
    * @generated
    */
-  EList<Greeting> getArgs();
+  FunctionBody getBody();
+
+  /**
+   * Sets the value of the '{@link org.xtext.go.go.DecFunc#getBody <em>Body</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Body</em>' containment reference.
+   * @see #getBody()
+   * @generated
+   */
+  void setBody(FunctionBody value);
 
 } // DecFunc

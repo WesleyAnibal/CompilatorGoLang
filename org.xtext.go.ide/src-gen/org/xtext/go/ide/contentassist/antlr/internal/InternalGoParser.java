@@ -4075,12 +4075,182 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleDecFunc"
 
 
+    // $ANTLR start "entryRuleFunctionBody"
+    // InternalGo.g:1204:1: entryRuleFunctionBody : ruleFunctionBody EOF ;
+    public final void entryRuleFunctionBody() throws RecognitionException {
+        try {
+            // InternalGo.g:1205:1: ( ruleFunctionBody EOF )
+            // InternalGo.g:1206:1: ruleFunctionBody EOF
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getFunctionBodyRule()); 
+            }
+            pushFollow(FOLLOW_1);
+            ruleFunctionBody();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getFunctionBodyRule()); 
+            }
+            match(input,EOF,FOLLOW_2); if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleFunctionBody"
+
+
+    // $ANTLR start "ruleFunctionBody"
+    // InternalGo.g:1213:1: ruleFunctionBody : ( ( rule__FunctionBody__Group__0 ) ) ;
+    public final void ruleFunctionBody() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGo.g:1217:2: ( ( ( rule__FunctionBody__Group__0 ) ) )
+            // InternalGo.g:1218:2: ( ( rule__FunctionBody__Group__0 ) )
+            {
+            // InternalGo.g:1218:2: ( ( rule__FunctionBody__Group__0 ) )
+            // InternalGo.g:1219:3: ( rule__FunctionBody__Group__0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getFunctionBodyAccess().getGroup()); 
+            }
+            // InternalGo.g:1220:3: ( rule__FunctionBody__Group__0 )
+            // InternalGo.g:1220:4: rule__FunctionBody__Group__0
+            {
+            pushFollow(FOLLOW_2);
+            rule__FunctionBody__Group__0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getFunctionBodyAccess().getGroup()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleFunctionBody"
+
+
+    // $ANTLR start "entryRuleFunctionReturn"
+    // InternalGo.g:1229:1: entryRuleFunctionReturn : ruleFunctionReturn EOF ;
+    public final void entryRuleFunctionReturn() throws RecognitionException {
+        try {
+            // InternalGo.g:1230:1: ( ruleFunctionReturn EOF )
+            // InternalGo.g:1231:1: ruleFunctionReturn EOF
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getFunctionReturnRule()); 
+            }
+            pushFollow(FOLLOW_1);
+            ruleFunctionReturn();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getFunctionReturnRule()); 
+            }
+            match(input,EOF,FOLLOW_2); if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleFunctionReturn"
+
+
+    // $ANTLR start "ruleFunctionReturn"
+    // InternalGo.g:1238:1: ruleFunctionReturn : ( ( rule__FunctionReturn__Group__0 ) ) ;
+    public final void ruleFunctionReturn() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGo.g:1242:2: ( ( ( rule__FunctionReturn__Group__0 ) ) )
+            // InternalGo.g:1243:2: ( ( rule__FunctionReturn__Group__0 ) )
+            {
+            // InternalGo.g:1243:2: ( ( rule__FunctionReturn__Group__0 ) )
+            // InternalGo.g:1244:3: ( rule__FunctionReturn__Group__0 )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getFunctionReturnAccess().getGroup()); 
+            }
+            // InternalGo.g:1245:3: ( rule__FunctionReturn__Group__0 )
+            // InternalGo.g:1245:4: rule__FunctionReturn__Group__0
+            {
+            pushFollow(FOLLOW_2);
+            rule__FunctionReturn__Group__0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getFunctionReturnAccess().getGroup()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleFunctionReturn"
+
+
     // $ANTLR start "entryRuleCallFunc"
-    // InternalGo.g:1204:1: entryRuleCallFunc : ruleCallFunc EOF ;
+    // InternalGo.g:1254:1: entryRuleCallFunc : ruleCallFunc EOF ;
     public final void entryRuleCallFunc() throws RecognitionException {
         try {
-            // InternalGo.g:1205:1: ( ruleCallFunc EOF )
-            // InternalGo.g:1206:1: ruleCallFunc EOF
+            // InternalGo.g:1255:1: ( ruleCallFunc EOF )
+            // InternalGo.g:1256:1: ruleCallFunc EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallFuncRule()); 
@@ -4110,23 +4280,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCallFunc"
-    // InternalGo.g:1213:1: ruleCallFunc : ( ( rule__CallFunc__Group__0 ) ) ;
+    // InternalGo.g:1263:1: ruleCallFunc : ( ( rule__CallFunc__Group__0 ) ) ;
     public final void ruleCallFunc() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1217:2: ( ( ( rule__CallFunc__Group__0 ) ) )
-            // InternalGo.g:1218:2: ( ( rule__CallFunc__Group__0 ) )
+            // InternalGo.g:1267:2: ( ( ( rule__CallFunc__Group__0 ) ) )
+            // InternalGo.g:1268:2: ( ( rule__CallFunc__Group__0 ) )
             {
-            // InternalGo.g:1218:2: ( ( rule__CallFunc__Group__0 ) )
-            // InternalGo.g:1219:3: ( rule__CallFunc__Group__0 )
+            // InternalGo.g:1268:2: ( ( rule__CallFunc__Group__0 ) )
+            // InternalGo.g:1269:3: ( rule__CallFunc__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallFuncAccess().getGroup()); 
             }
-            // InternalGo.g:1220:3: ( rule__CallFunc__Group__0 )
-            // InternalGo.g:1220:4: rule__CallFunc__Group__0
+            // InternalGo.g:1270:3: ( rule__CallFunc__Group__0 )
+            // InternalGo.g:1270:4: rule__CallFunc__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__CallFunc__Group__0();
@@ -4161,11 +4331,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleTypes"
-    // InternalGo.g:1229:1: entryRuleTypes : ruleTypes EOF ;
+    // InternalGo.g:1279:1: entryRuleTypes : ruleTypes EOF ;
     public final void entryRuleTypes() throws RecognitionException {
         try {
-            // InternalGo.g:1230:1: ( ruleTypes EOF )
-            // InternalGo.g:1231:1: ruleTypes EOF
+            // InternalGo.g:1280:1: ( ruleTypes EOF )
+            // InternalGo.g:1281:1: ruleTypes EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypesRule()); 
@@ -4195,23 +4365,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleTypes"
-    // InternalGo.g:1238:1: ruleTypes : ( ( rule__Types__Alternatives ) ) ;
+    // InternalGo.g:1288:1: ruleTypes : ( ( rule__Types__Alternatives ) ) ;
     public final void ruleTypes() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1242:2: ( ( ( rule__Types__Alternatives ) ) )
-            // InternalGo.g:1243:2: ( ( rule__Types__Alternatives ) )
+            // InternalGo.g:1292:2: ( ( ( rule__Types__Alternatives ) ) )
+            // InternalGo.g:1293:2: ( ( rule__Types__Alternatives ) )
             {
-            // InternalGo.g:1243:2: ( ( rule__Types__Alternatives ) )
-            // InternalGo.g:1244:3: ( rule__Types__Alternatives )
+            // InternalGo.g:1293:2: ( ( rule__Types__Alternatives ) )
+            // InternalGo.g:1294:3: ( rule__Types__Alternatives )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypesAccess().getAlternatives()); 
             }
-            // InternalGo.g:1245:3: ( rule__Types__Alternatives )
-            // InternalGo.g:1245:4: rule__Types__Alternatives
+            // InternalGo.g:1295:3: ( rule__Types__Alternatives )
+            // InternalGo.g:1295:4: rule__Types__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__Types__Alternatives();
@@ -4246,11 +4416,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleModif"
-    // InternalGo.g:1254:1: entryRuleModif : ruleModif EOF ;
+    // InternalGo.g:1304:1: entryRuleModif : ruleModif EOF ;
     public final void entryRuleModif() throws RecognitionException {
         try {
-            // InternalGo.g:1255:1: ( ruleModif EOF )
-            // InternalGo.g:1256:1: ruleModif EOF
+            // InternalGo.g:1305:1: ( ruleModif EOF )
+            // InternalGo.g:1306:1: ruleModif EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModifRule()); 
@@ -4280,23 +4450,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleModif"
-    // InternalGo.g:1263:1: ruleModif : ( ( rule__Modif__Alternatives ) ) ;
+    // InternalGo.g:1313:1: ruleModif : ( ( rule__Modif__Alternatives ) ) ;
     public final void ruleModif() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1267:2: ( ( ( rule__Modif__Alternatives ) ) )
-            // InternalGo.g:1268:2: ( ( rule__Modif__Alternatives ) )
+            // InternalGo.g:1317:2: ( ( ( rule__Modif__Alternatives ) ) )
+            // InternalGo.g:1318:2: ( ( rule__Modif__Alternatives ) )
             {
-            // InternalGo.g:1268:2: ( ( rule__Modif__Alternatives ) )
-            // InternalGo.g:1269:3: ( rule__Modif__Alternatives )
+            // InternalGo.g:1318:2: ( ( rule__Modif__Alternatives ) )
+            // InternalGo.g:1319:3: ( rule__Modif__Alternatives )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModifAccess().getAlternatives()); 
             }
-            // InternalGo.g:1270:3: ( rule__Modif__Alternatives )
-            // InternalGo.g:1270:4: rule__Modif__Alternatives
+            // InternalGo.g:1320:3: ( rule__Modif__Alternatives )
+            // InternalGo.g:1320:4: rule__Modif__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__Modif__Alternatives();
@@ -4331,11 +4501,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleBool"
-    // InternalGo.g:1279:1: entryRuleBool : ruleBool EOF ;
+    // InternalGo.g:1329:1: entryRuleBool : ruleBool EOF ;
     public final void entryRuleBool() throws RecognitionException {
         try {
-            // InternalGo.g:1280:1: ( ruleBool EOF )
-            // InternalGo.g:1281:1: ruleBool EOF
+            // InternalGo.g:1330:1: ( ruleBool EOF )
+            // InternalGo.g:1331:1: ruleBool EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolRule()); 
@@ -4365,23 +4535,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleBool"
-    // InternalGo.g:1288:1: ruleBool : ( ( rule__Bool__Alternatives ) ) ;
+    // InternalGo.g:1338:1: ruleBool : ( ( rule__Bool__Alternatives ) ) ;
     public final void ruleBool() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1292:2: ( ( ( rule__Bool__Alternatives ) ) )
-            // InternalGo.g:1293:2: ( ( rule__Bool__Alternatives ) )
+            // InternalGo.g:1342:2: ( ( ( rule__Bool__Alternatives ) ) )
+            // InternalGo.g:1343:2: ( ( rule__Bool__Alternatives ) )
             {
-            // InternalGo.g:1293:2: ( ( rule__Bool__Alternatives ) )
-            // InternalGo.g:1294:3: ( rule__Bool__Alternatives )
+            // InternalGo.g:1343:2: ( ( rule__Bool__Alternatives ) )
+            // InternalGo.g:1344:3: ( rule__Bool__Alternatives )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolAccess().getAlternatives()); 
             }
-            // InternalGo.g:1295:3: ( rule__Bool__Alternatives )
-            // InternalGo.g:1295:4: rule__Bool__Alternatives
+            // InternalGo.g:1345:3: ( rule__Bool__Alternatives )
+            // InternalGo.g:1345:4: rule__Bool__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__Bool__Alternatives();
@@ -4416,11 +4586,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleBREAK"
-    // InternalGo.g:1304:1: entryRuleBREAK : ruleBREAK EOF ;
+    // InternalGo.g:1354:1: entryRuleBREAK : ruleBREAK EOF ;
     public final void entryRuleBREAK() throws RecognitionException {
         try {
-            // InternalGo.g:1305:1: ( ruleBREAK EOF )
-            // InternalGo.g:1306:1: ruleBREAK EOF
+            // InternalGo.g:1355:1: ( ruleBREAK EOF )
+            // InternalGo.g:1356:1: ruleBREAK EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBREAKRule()); 
@@ -4450,17 +4620,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleBREAK"
-    // InternalGo.g:1313:1: ruleBREAK : ( 'break' ) ;
+    // InternalGo.g:1363:1: ruleBREAK : ( 'break' ) ;
     public final void ruleBREAK() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1317:2: ( ( 'break' ) )
-            // InternalGo.g:1318:2: ( 'break' )
+            // InternalGo.g:1367:2: ( ( 'break' ) )
+            // InternalGo.g:1368:2: ( 'break' )
             {
-            // InternalGo.g:1318:2: ( 'break' )
-            // InternalGo.g:1319:3: 'break'
+            // InternalGo.g:1368:2: ( 'break' )
+            // InternalGo.g:1369:3: 'break'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBREAKAccess().getBreakKeyword()); 
@@ -4491,11 +4661,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleCASE"
-    // InternalGo.g:1329:1: entryRuleCASE : ruleCASE EOF ;
+    // InternalGo.g:1379:1: entryRuleCASE : ruleCASE EOF ;
     public final void entryRuleCASE() throws RecognitionException {
         try {
-            // InternalGo.g:1330:1: ( ruleCASE EOF )
-            // InternalGo.g:1331:1: ruleCASE EOF
+            // InternalGo.g:1380:1: ( ruleCASE EOF )
+            // InternalGo.g:1381:1: ruleCASE EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCASERule()); 
@@ -4525,17 +4695,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCASE"
-    // InternalGo.g:1338:1: ruleCASE : ( 'case' ) ;
+    // InternalGo.g:1388:1: ruleCASE : ( 'case' ) ;
     public final void ruleCASE() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1342:2: ( ( 'case' ) )
-            // InternalGo.g:1343:2: ( 'case' )
+            // InternalGo.g:1392:2: ( ( 'case' ) )
+            // InternalGo.g:1393:2: ( 'case' )
             {
-            // InternalGo.g:1343:2: ( 'case' )
-            // InternalGo.g:1344:3: 'case'
+            // InternalGo.g:1393:2: ( 'case' )
+            // InternalGo.g:1394:3: 'case'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCASEAccess().getCaseKeyword()); 
@@ -4566,11 +4736,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleCHAN"
-    // InternalGo.g:1354:1: entryRuleCHAN : ruleCHAN EOF ;
+    // InternalGo.g:1404:1: entryRuleCHAN : ruleCHAN EOF ;
     public final void entryRuleCHAN() throws RecognitionException {
         try {
-            // InternalGo.g:1355:1: ( ruleCHAN EOF )
-            // InternalGo.g:1356:1: ruleCHAN EOF
+            // InternalGo.g:1405:1: ( ruleCHAN EOF )
+            // InternalGo.g:1406:1: ruleCHAN EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCHANRule()); 
@@ -4600,17 +4770,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCHAN"
-    // InternalGo.g:1363:1: ruleCHAN : ( 'chan' ) ;
+    // InternalGo.g:1413:1: ruleCHAN : ( 'chan' ) ;
     public final void ruleCHAN() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1367:2: ( ( 'chan' ) )
-            // InternalGo.g:1368:2: ( 'chan' )
+            // InternalGo.g:1417:2: ( ( 'chan' ) )
+            // InternalGo.g:1418:2: ( 'chan' )
             {
-            // InternalGo.g:1368:2: ( 'chan' )
-            // InternalGo.g:1369:3: 'chan'
+            // InternalGo.g:1418:2: ( 'chan' )
+            // InternalGo.g:1419:3: 'chan'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCHANAccess().getChanKeyword()); 
@@ -4641,11 +4811,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleCONST"
-    // InternalGo.g:1379:1: entryRuleCONST : ruleCONST EOF ;
+    // InternalGo.g:1429:1: entryRuleCONST : ruleCONST EOF ;
     public final void entryRuleCONST() throws RecognitionException {
         try {
-            // InternalGo.g:1380:1: ( ruleCONST EOF )
-            // InternalGo.g:1381:1: ruleCONST EOF
+            // InternalGo.g:1430:1: ( ruleCONST EOF )
+            // InternalGo.g:1431:1: ruleCONST EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCONSTRule()); 
@@ -4675,17 +4845,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCONST"
-    // InternalGo.g:1388:1: ruleCONST : ( 'const' ) ;
+    // InternalGo.g:1438:1: ruleCONST : ( 'const' ) ;
     public final void ruleCONST() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1392:2: ( ( 'const' ) )
-            // InternalGo.g:1393:2: ( 'const' )
+            // InternalGo.g:1442:2: ( ( 'const' ) )
+            // InternalGo.g:1443:2: ( 'const' )
             {
-            // InternalGo.g:1393:2: ( 'const' )
-            // InternalGo.g:1394:3: 'const'
+            // InternalGo.g:1443:2: ( 'const' )
+            // InternalGo.g:1444:3: 'const'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCONSTAccess().getConstKeyword()); 
@@ -4716,11 +4886,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleCONTINUE"
-    // InternalGo.g:1404:1: entryRuleCONTINUE : ruleCONTINUE EOF ;
+    // InternalGo.g:1454:1: entryRuleCONTINUE : ruleCONTINUE EOF ;
     public final void entryRuleCONTINUE() throws RecognitionException {
         try {
-            // InternalGo.g:1405:1: ( ruleCONTINUE EOF )
-            // InternalGo.g:1406:1: ruleCONTINUE EOF
+            // InternalGo.g:1455:1: ( ruleCONTINUE EOF )
+            // InternalGo.g:1456:1: ruleCONTINUE EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCONTINUERule()); 
@@ -4750,17 +4920,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCONTINUE"
-    // InternalGo.g:1413:1: ruleCONTINUE : ( 'continue' ) ;
+    // InternalGo.g:1463:1: ruleCONTINUE : ( 'continue' ) ;
     public final void ruleCONTINUE() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1417:2: ( ( 'continue' ) )
-            // InternalGo.g:1418:2: ( 'continue' )
+            // InternalGo.g:1467:2: ( ( 'continue' ) )
+            // InternalGo.g:1468:2: ( 'continue' )
             {
-            // InternalGo.g:1418:2: ( 'continue' )
-            // InternalGo.g:1419:3: 'continue'
+            // InternalGo.g:1468:2: ( 'continue' )
+            // InternalGo.g:1469:3: 'continue'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCONTINUEAccess().getContinueKeyword()); 
@@ -4791,11 +4961,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleELSE"
-    // InternalGo.g:1429:1: entryRuleELSE : ruleELSE EOF ;
+    // InternalGo.g:1479:1: entryRuleELSE : ruleELSE EOF ;
     public final void entryRuleELSE() throws RecognitionException {
         try {
-            // InternalGo.g:1430:1: ( ruleELSE EOF )
-            // InternalGo.g:1431:1: ruleELSE EOF
+            // InternalGo.g:1480:1: ( ruleELSE EOF )
+            // InternalGo.g:1481:1: ruleELSE EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getELSERule()); 
@@ -4825,17 +4995,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleELSE"
-    // InternalGo.g:1438:1: ruleELSE : ( 'else' ) ;
+    // InternalGo.g:1488:1: ruleELSE : ( 'else' ) ;
     public final void ruleELSE() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1442:2: ( ( 'else' ) )
-            // InternalGo.g:1443:2: ( 'else' )
+            // InternalGo.g:1492:2: ( ( 'else' ) )
+            // InternalGo.g:1493:2: ( 'else' )
             {
-            // InternalGo.g:1443:2: ( 'else' )
-            // InternalGo.g:1444:3: 'else'
+            // InternalGo.g:1493:2: ( 'else' )
+            // InternalGo.g:1494:3: 'else'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getELSEAccess().getElseKeyword()); 
@@ -4866,11 +5036,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleFOR"
-    // InternalGo.g:1454:1: entryRuleFOR : ruleFOR EOF ;
+    // InternalGo.g:1504:1: entryRuleFOR : ruleFOR EOF ;
     public final void entryRuleFOR() throws RecognitionException {
         try {
-            // InternalGo.g:1455:1: ( ruleFOR EOF )
-            // InternalGo.g:1456:1: ruleFOR EOF
+            // InternalGo.g:1505:1: ( ruleFOR EOF )
+            // InternalGo.g:1506:1: ruleFOR EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFORRule()); 
@@ -4900,17 +5070,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleFOR"
-    // InternalGo.g:1463:1: ruleFOR : ( 'for' ) ;
+    // InternalGo.g:1513:1: ruleFOR : ( 'for' ) ;
     public final void ruleFOR() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1467:2: ( ( 'for' ) )
-            // InternalGo.g:1468:2: ( 'for' )
+            // InternalGo.g:1517:2: ( ( 'for' ) )
+            // InternalGo.g:1518:2: ( 'for' )
             {
-            // InternalGo.g:1468:2: ( 'for' )
-            // InternalGo.g:1469:3: 'for'
+            // InternalGo.g:1518:2: ( 'for' )
+            // InternalGo.g:1519:3: 'for'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFORAccess().getForKeyword()); 
@@ -4941,11 +5111,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleFUNC"
-    // InternalGo.g:1479:1: entryRuleFUNC : ruleFUNC EOF ;
+    // InternalGo.g:1529:1: entryRuleFUNC : ruleFUNC EOF ;
     public final void entryRuleFUNC() throws RecognitionException {
         try {
-            // InternalGo.g:1480:1: ( ruleFUNC EOF )
-            // InternalGo.g:1481:1: ruleFUNC EOF
+            // InternalGo.g:1530:1: ( ruleFUNC EOF )
+            // InternalGo.g:1531:1: ruleFUNC EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFUNCRule()); 
@@ -4975,17 +5145,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleFUNC"
-    // InternalGo.g:1488:1: ruleFUNC : ( 'func' ) ;
+    // InternalGo.g:1538:1: ruleFUNC : ( 'func' ) ;
     public final void ruleFUNC() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1492:2: ( ( 'func' ) )
-            // InternalGo.g:1493:2: ( 'func' )
+            // InternalGo.g:1542:2: ( ( 'func' ) )
+            // InternalGo.g:1543:2: ( 'func' )
             {
-            // InternalGo.g:1493:2: ( 'func' )
-            // InternalGo.g:1494:3: 'func'
+            // InternalGo.g:1543:2: ( 'func' )
+            // InternalGo.g:1544:3: 'func'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFUNCAccess().getFuncKeyword()); 
@@ -5016,11 +5186,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleIF"
-    // InternalGo.g:1504:1: entryRuleIF : ruleIF EOF ;
+    // InternalGo.g:1554:1: entryRuleIF : ruleIF EOF ;
     public final void entryRuleIF() throws RecognitionException {
         try {
-            // InternalGo.g:1505:1: ( ruleIF EOF )
-            // InternalGo.g:1506:1: ruleIF EOF
+            // InternalGo.g:1555:1: ( ruleIF EOF )
+            // InternalGo.g:1556:1: ruleIF EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIFRule()); 
@@ -5050,17 +5220,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleIF"
-    // InternalGo.g:1513:1: ruleIF : ( 'if' ) ;
+    // InternalGo.g:1563:1: ruleIF : ( 'if' ) ;
     public final void ruleIF() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1517:2: ( ( 'if' ) )
-            // InternalGo.g:1518:2: ( 'if' )
+            // InternalGo.g:1567:2: ( ( 'if' ) )
+            // InternalGo.g:1568:2: ( 'if' )
             {
-            // InternalGo.g:1518:2: ( 'if' )
-            // InternalGo.g:1519:3: 'if'
+            // InternalGo.g:1568:2: ( 'if' )
+            // InternalGo.g:1569:3: 'if'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIFAccess().getIfKeyword()); 
@@ -5091,11 +5261,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleIMPORT"
-    // InternalGo.g:1529:1: entryRuleIMPORT : ruleIMPORT EOF ;
+    // InternalGo.g:1579:1: entryRuleIMPORT : ruleIMPORT EOF ;
     public final void entryRuleIMPORT() throws RecognitionException {
         try {
-            // InternalGo.g:1530:1: ( ruleIMPORT EOF )
-            // InternalGo.g:1531:1: ruleIMPORT EOF
+            // InternalGo.g:1580:1: ( ruleIMPORT EOF )
+            // InternalGo.g:1581:1: ruleIMPORT EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIMPORTRule()); 
@@ -5125,17 +5295,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleIMPORT"
-    // InternalGo.g:1538:1: ruleIMPORT : ( 'import' ) ;
+    // InternalGo.g:1588:1: ruleIMPORT : ( 'import' ) ;
     public final void ruleIMPORT() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1542:2: ( ( 'import' ) )
-            // InternalGo.g:1543:2: ( 'import' )
+            // InternalGo.g:1592:2: ( ( 'import' ) )
+            // InternalGo.g:1593:2: ( 'import' )
             {
-            // InternalGo.g:1543:2: ( 'import' )
-            // InternalGo.g:1544:3: 'import'
+            // InternalGo.g:1593:2: ( 'import' )
+            // InternalGo.g:1594:3: 'import'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIMPORTAccess().getImportKeyword()); 
@@ -5166,11 +5336,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleRETURN"
-    // InternalGo.g:1554:1: entryRuleRETURN : ruleRETURN EOF ;
+    // InternalGo.g:1604:1: entryRuleRETURN : ruleRETURN EOF ;
     public final void entryRuleRETURN() throws RecognitionException {
         try {
-            // InternalGo.g:1555:1: ( ruleRETURN EOF )
-            // InternalGo.g:1556:1: ruleRETURN EOF
+            // InternalGo.g:1605:1: ( ruleRETURN EOF )
+            // InternalGo.g:1606:1: ruleRETURN EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRETURNRule()); 
@@ -5200,17 +5370,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleRETURN"
-    // InternalGo.g:1563:1: ruleRETURN : ( 'return' ) ;
+    // InternalGo.g:1613:1: ruleRETURN : ( 'return' ) ;
     public final void ruleRETURN() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1567:2: ( ( 'return' ) )
-            // InternalGo.g:1568:2: ( 'return' )
+            // InternalGo.g:1617:2: ( ( 'return' ) )
+            // InternalGo.g:1618:2: ( 'return' )
             {
-            // InternalGo.g:1568:2: ( 'return' )
-            // InternalGo.g:1569:3: 'return'
+            // InternalGo.g:1618:2: ( 'return' )
+            // InternalGo.g:1619:3: 'return'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRETURNAccess().getReturnKeyword()); 
@@ -5241,11 +5411,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRulePACKAGE"
-    // InternalGo.g:1579:1: entryRulePACKAGE : rulePACKAGE EOF ;
+    // InternalGo.g:1629:1: entryRulePACKAGE : rulePACKAGE EOF ;
     public final void entryRulePACKAGE() throws RecognitionException {
         try {
-            // InternalGo.g:1580:1: ( rulePACKAGE EOF )
-            // InternalGo.g:1581:1: rulePACKAGE EOF
+            // InternalGo.g:1630:1: ( rulePACKAGE EOF )
+            // InternalGo.g:1631:1: rulePACKAGE EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPACKAGERule()); 
@@ -5275,17 +5445,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rulePACKAGE"
-    // InternalGo.g:1588:1: rulePACKAGE : ( 'package' ) ;
+    // InternalGo.g:1638:1: rulePACKAGE : ( 'package' ) ;
     public final void rulePACKAGE() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1592:2: ( ( 'package' ) )
-            // InternalGo.g:1593:2: ( 'package' )
+            // InternalGo.g:1642:2: ( ( 'package' ) )
+            // InternalGo.g:1643:2: ( 'package' )
             {
-            // InternalGo.g:1593:2: ( 'package' )
-            // InternalGo.g:1594:3: 'package'
+            // InternalGo.g:1643:2: ( 'package' )
+            // InternalGo.g:1644:3: 'package'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPACKAGEAccess().getPackageKeyword()); 
@@ -5316,11 +5486,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleTYPE"
-    // InternalGo.g:1604:1: entryRuleTYPE : ruleTYPE EOF ;
+    // InternalGo.g:1654:1: entryRuleTYPE : ruleTYPE EOF ;
     public final void entryRuleTYPE() throws RecognitionException {
         try {
-            // InternalGo.g:1605:1: ( ruleTYPE EOF )
-            // InternalGo.g:1606:1: ruleTYPE EOF
+            // InternalGo.g:1655:1: ( ruleTYPE EOF )
+            // InternalGo.g:1656:1: ruleTYPE EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTYPERule()); 
@@ -5350,17 +5520,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleTYPE"
-    // InternalGo.g:1613:1: ruleTYPE : ( 'type' ) ;
+    // InternalGo.g:1663:1: ruleTYPE : ( 'type' ) ;
     public final void ruleTYPE() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1617:2: ( ( 'type' ) )
-            // InternalGo.g:1618:2: ( 'type' )
+            // InternalGo.g:1667:2: ( ( 'type' ) )
+            // InternalGo.g:1668:2: ( 'type' )
             {
-            // InternalGo.g:1618:2: ( 'type' )
-            // InternalGo.g:1619:3: 'type'
+            // InternalGo.g:1668:2: ( 'type' )
+            // InternalGo.g:1669:3: 'type'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTYPEAccess().getTypeKeyword()); 
@@ -5391,11 +5561,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleVAR"
-    // InternalGo.g:1629:1: entryRuleVAR : ruleVAR EOF ;
+    // InternalGo.g:1679:1: entryRuleVAR : ruleVAR EOF ;
     public final void entryRuleVAR() throws RecognitionException {
         try {
-            // InternalGo.g:1630:1: ( ruleVAR EOF )
-            // InternalGo.g:1631:1: ruleVAR EOF
+            // InternalGo.g:1680:1: ( ruleVAR EOF )
+            // InternalGo.g:1681:1: ruleVAR EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVARRule()); 
@@ -5425,17 +5595,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleVAR"
-    // InternalGo.g:1638:1: ruleVAR : ( 'var' ) ;
+    // InternalGo.g:1688:1: ruleVAR : ( 'var' ) ;
     public final void ruleVAR() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1642:2: ( ( 'var' ) )
-            // InternalGo.g:1643:2: ( 'var' )
+            // InternalGo.g:1692:2: ( ( 'var' ) )
+            // InternalGo.g:1693:2: ( 'var' )
             {
-            // InternalGo.g:1643:2: ( 'var' )
-            // InternalGo.g:1644:3: 'var'
+            // InternalGo.g:1693:2: ( 'var' )
+            // InternalGo.g:1694:3: 'var'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVARAccess().getVarKeyword()); 
@@ -5466,11 +5636,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleDEFAULT"
-    // InternalGo.g:1654:1: entryRuleDEFAULT : ruleDEFAULT EOF ;
+    // InternalGo.g:1704:1: entryRuleDEFAULT : ruleDEFAULT EOF ;
     public final void entryRuleDEFAULT() throws RecognitionException {
         try {
-            // InternalGo.g:1655:1: ( ruleDEFAULT EOF )
-            // InternalGo.g:1656:1: ruleDEFAULT EOF
+            // InternalGo.g:1705:1: ( ruleDEFAULT EOF )
+            // InternalGo.g:1706:1: ruleDEFAULT EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDEFAULTRule()); 
@@ -5500,17 +5670,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleDEFAULT"
-    // InternalGo.g:1663:1: ruleDEFAULT : ( 'default' ) ;
+    // InternalGo.g:1713:1: ruleDEFAULT : ( 'default' ) ;
     public final void ruleDEFAULT() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1667:2: ( ( 'default' ) )
-            // InternalGo.g:1668:2: ( 'default' )
+            // InternalGo.g:1717:2: ( ( 'default' ) )
+            // InternalGo.g:1718:2: ( 'default' )
             {
-            // InternalGo.g:1668:2: ( 'default' )
-            // InternalGo.g:1669:3: 'default'
+            // InternalGo.g:1718:2: ( 'default' )
+            // InternalGo.g:1719:3: 'default'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDEFAULTAccess().getDefaultKeyword()); 
@@ -5541,11 +5711,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleSWITCH"
-    // InternalGo.g:1679:1: entryRuleSWITCH : ruleSWITCH EOF ;
+    // InternalGo.g:1729:1: entryRuleSWITCH : ruleSWITCH EOF ;
     public final void entryRuleSWITCH() throws RecognitionException {
         try {
-            // InternalGo.g:1680:1: ( ruleSWITCH EOF )
-            // InternalGo.g:1681:1: ruleSWITCH EOF
+            // InternalGo.g:1730:1: ( ruleSWITCH EOF )
+            // InternalGo.g:1731:1: ruleSWITCH EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSWITCHRule()); 
@@ -5575,17 +5745,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleSWITCH"
-    // InternalGo.g:1688:1: ruleSWITCH : ( 'switch' ) ;
+    // InternalGo.g:1738:1: ruleSWITCH : ( 'switch' ) ;
     public final void ruleSWITCH() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1692:2: ( ( 'switch' ) )
-            // InternalGo.g:1693:2: ( 'switch' )
+            // InternalGo.g:1742:2: ( ( 'switch' ) )
+            // InternalGo.g:1743:2: ( 'switch' )
             {
-            // InternalGo.g:1693:2: ( 'switch' )
-            // InternalGo.g:1694:3: 'switch'
+            // InternalGo.g:1743:2: ( 'switch' )
+            // InternalGo.g:1744:3: 'switch'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSWITCHAccess().getSwitchKeyword()); 
@@ -5616,11 +5786,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleRANGE"
-    // InternalGo.g:1704:1: entryRuleRANGE : ruleRANGE EOF ;
+    // InternalGo.g:1754:1: entryRuleRANGE : ruleRANGE EOF ;
     public final void entryRuleRANGE() throws RecognitionException {
         try {
-            // InternalGo.g:1705:1: ( ruleRANGE EOF )
-            // InternalGo.g:1706:1: ruleRANGE EOF
+            // InternalGo.g:1755:1: ( ruleRANGE EOF )
+            // InternalGo.g:1756:1: ruleRANGE EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRANGERule()); 
@@ -5650,17 +5820,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleRANGE"
-    // InternalGo.g:1713:1: ruleRANGE : ( 'range' ) ;
+    // InternalGo.g:1763:1: ruleRANGE : ( 'range' ) ;
     public final void ruleRANGE() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1717:2: ( ( 'range' ) )
-            // InternalGo.g:1718:2: ( 'range' )
+            // InternalGo.g:1767:2: ( ( 'range' ) )
+            // InternalGo.g:1768:2: ( 'range' )
             {
-            // InternalGo.g:1718:2: ( 'range' )
-            // InternalGo.g:1719:3: 'range'
+            // InternalGo.g:1768:2: ( 'range' )
+            // InternalGo.g:1769:3: 'range'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRANGEAccess().getRangeKeyword()); 
@@ -5691,11 +5861,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleDataType"
-    // InternalGo.g:1729:1: entryRuleDataType : ruleDataType EOF ;
+    // InternalGo.g:1779:1: entryRuleDataType : ruleDataType EOF ;
     public final void entryRuleDataType() throws RecognitionException {
         try {
-            // InternalGo.g:1730:1: ( ruleDataType EOF )
-            // InternalGo.g:1731:1: ruleDataType EOF
+            // InternalGo.g:1780:1: ( ruleDataType EOF )
+            // InternalGo.g:1781:1: ruleDataType EOF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDataTypeRule()); 
@@ -5725,23 +5895,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleDataType"
-    // InternalGo.g:1738:1: ruleDataType : ( ( rule__DataType__Group__0 ) ) ;
+    // InternalGo.g:1788:1: ruleDataType : ( ( rule__DataType__Group__0 ) ) ;
     public final void ruleDataType() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1742:2: ( ( ( rule__DataType__Group__0 ) ) )
-            // InternalGo.g:1743:2: ( ( rule__DataType__Group__0 ) )
+            // InternalGo.g:1792:2: ( ( ( rule__DataType__Group__0 ) ) )
+            // InternalGo.g:1793:2: ( ( rule__DataType__Group__0 ) )
             {
-            // InternalGo.g:1743:2: ( ( rule__DataType__Group__0 ) )
-            // InternalGo.g:1744:3: ( rule__DataType__Group__0 )
+            // InternalGo.g:1793:2: ( ( rule__DataType__Group__0 ) )
+            // InternalGo.g:1794:3: ( rule__DataType__Group__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDataTypeAccess().getGroup()); 
             }
-            // InternalGo.g:1745:3: ( rule__DataType__Group__0 )
-            // InternalGo.g:1745:4: rule__DataType__Group__0
+            // InternalGo.g:1795:3: ( rule__DataType__Group__0 )
+            // InternalGo.g:1795:4: rule__DataType__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__DataType__Group__0();
@@ -5776,21 +5946,21 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Greeting__Alternatives"
-    // InternalGo.g:1753:1: rule__Greeting__Alternatives : ( ( ruleMultDecVars ) | ( ruleDecVar ) | ( ruleDataType ) | ( ruleDecFunc ) | ( RULE_EOL ) | ( ruleCondition ) | ( ruleSwitchCase ) | ( ruleDecImport ) | ( ruleCallFunc ) | ( ruleCallFor ) | ( ruleVariable ) );
+    // InternalGo.g:1803:1: rule__Greeting__Alternatives : ( ( ruleMultDecVars ) | ( ruleDecVar ) | ( ruleDataType ) | ( ruleDecFunc ) | ( RULE_EOL ) | ( ruleCondition ) | ( ruleSwitchCase ) | ( ruleDecImport ) | ( ruleCallFunc ) | ( ruleCallFor ) | ( ruleVariable ) );
     public final void rule__Greeting__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1757:1: ( ( ruleMultDecVars ) | ( ruleDecVar ) | ( ruleDataType ) | ( ruleDecFunc ) | ( RULE_EOL ) | ( ruleCondition ) | ( ruleSwitchCase ) | ( ruleDecImport ) | ( ruleCallFunc ) | ( ruleCallFor ) | ( ruleVariable ) )
+            // InternalGo.g:1807:1: ( ( ruleMultDecVars ) | ( ruleDecVar ) | ( ruleDataType ) | ( ruleDecFunc ) | ( RULE_EOL ) | ( ruleCondition ) | ( ruleSwitchCase ) | ( ruleDecImport ) | ( ruleCallFunc ) | ( ruleCallFor ) | ( ruleVariable ) )
             int alt4=11;
             alt4 = dfa4.predict(input);
             switch (alt4) {
                 case 1 :
-                    // InternalGo.g:1758:2: ( ruleMultDecVars )
+                    // InternalGo.g:1808:2: ( ruleMultDecVars )
                     {
-                    // InternalGo.g:1758:2: ( ruleMultDecVars )
-                    // InternalGo.g:1759:3: ruleMultDecVars
+                    // InternalGo.g:1808:2: ( ruleMultDecVars )
+                    // InternalGo.g:1809:3: ruleMultDecVars
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGreetingAccess().getMultDecVarsParserRuleCall_0()); 
@@ -5810,10 +5980,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:1764:2: ( ruleDecVar )
+                    // InternalGo.g:1814:2: ( ruleDecVar )
                     {
-                    // InternalGo.g:1764:2: ( ruleDecVar )
-                    // InternalGo.g:1765:3: ruleDecVar
+                    // InternalGo.g:1814:2: ( ruleDecVar )
+                    // InternalGo.g:1815:3: ruleDecVar
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGreetingAccess().getDecVarParserRuleCall_1()); 
@@ -5833,10 +6003,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalGo.g:1770:2: ( ruleDataType )
+                    // InternalGo.g:1820:2: ( ruleDataType )
                     {
-                    // InternalGo.g:1770:2: ( ruleDataType )
-                    // InternalGo.g:1771:3: ruleDataType
+                    // InternalGo.g:1820:2: ( ruleDataType )
+                    // InternalGo.g:1821:3: ruleDataType
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGreetingAccess().getDataTypeParserRuleCall_2()); 
@@ -5856,10 +6026,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalGo.g:1776:2: ( ruleDecFunc )
+                    // InternalGo.g:1826:2: ( ruleDecFunc )
                     {
-                    // InternalGo.g:1776:2: ( ruleDecFunc )
-                    // InternalGo.g:1777:3: ruleDecFunc
+                    // InternalGo.g:1826:2: ( ruleDecFunc )
+                    // InternalGo.g:1827:3: ruleDecFunc
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGreetingAccess().getDecFuncParserRuleCall_3()); 
@@ -5879,10 +6049,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalGo.g:1782:2: ( RULE_EOL )
+                    // InternalGo.g:1832:2: ( RULE_EOL )
                     {
-                    // InternalGo.g:1782:2: ( RULE_EOL )
-                    // InternalGo.g:1783:3: RULE_EOL
+                    // InternalGo.g:1832:2: ( RULE_EOL )
+                    // InternalGo.g:1833:3: RULE_EOL
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGreetingAccess().getEOLTerminalRuleCall_4()); 
@@ -5898,10 +6068,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // InternalGo.g:1788:2: ( ruleCondition )
+                    // InternalGo.g:1838:2: ( ruleCondition )
                     {
-                    // InternalGo.g:1788:2: ( ruleCondition )
-                    // InternalGo.g:1789:3: ruleCondition
+                    // InternalGo.g:1838:2: ( ruleCondition )
+                    // InternalGo.g:1839:3: ruleCondition
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGreetingAccess().getConditionParserRuleCall_5()); 
@@ -5921,10 +6091,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 7 :
-                    // InternalGo.g:1794:2: ( ruleSwitchCase )
+                    // InternalGo.g:1844:2: ( ruleSwitchCase )
                     {
-                    // InternalGo.g:1794:2: ( ruleSwitchCase )
-                    // InternalGo.g:1795:3: ruleSwitchCase
+                    // InternalGo.g:1844:2: ( ruleSwitchCase )
+                    // InternalGo.g:1845:3: ruleSwitchCase
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGreetingAccess().getSwitchCaseParserRuleCall_6()); 
@@ -5944,10 +6114,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 8 :
-                    // InternalGo.g:1800:2: ( ruleDecImport )
+                    // InternalGo.g:1850:2: ( ruleDecImport )
                     {
-                    // InternalGo.g:1800:2: ( ruleDecImport )
-                    // InternalGo.g:1801:3: ruleDecImport
+                    // InternalGo.g:1850:2: ( ruleDecImport )
+                    // InternalGo.g:1851:3: ruleDecImport
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGreetingAccess().getDecImportParserRuleCall_7()); 
@@ -5967,10 +6137,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 9 :
-                    // InternalGo.g:1806:2: ( ruleCallFunc )
+                    // InternalGo.g:1856:2: ( ruleCallFunc )
                     {
-                    // InternalGo.g:1806:2: ( ruleCallFunc )
-                    // InternalGo.g:1807:3: ruleCallFunc
+                    // InternalGo.g:1856:2: ( ruleCallFunc )
+                    // InternalGo.g:1857:3: ruleCallFunc
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGreetingAccess().getCallFuncParserRuleCall_8()); 
@@ -5990,10 +6160,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 10 :
-                    // InternalGo.g:1812:2: ( ruleCallFor )
+                    // InternalGo.g:1862:2: ( ruleCallFor )
                     {
-                    // InternalGo.g:1812:2: ( ruleCallFor )
-                    // InternalGo.g:1813:3: ruleCallFor
+                    // InternalGo.g:1862:2: ( ruleCallFor )
+                    // InternalGo.g:1863:3: ruleCallFor
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGreetingAccess().getCallForParserRuleCall_9()); 
@@ -6013,10 +6183,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 11 :
-                    // InternalGo.g:1818:2: ( ruleVariable )
+                    // InternalGo.g:1868:2: ( ruleVariable )
                     {
-                    // InternalGo.g:1818:2: ( ruleVariable )
-                    // InternalGo.g:1819:3: ruleVariable
+                    // InternalGo.g:1868:2: ( ruleVariable )
+                    // InternalGo.g:1869:3: ruleVariable
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getGreetingAccess().getVariableParserRuleCall_10()); 
@@ -6053,27 +6223,27 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecVar__Alternatives"
-    // InternalGo.g:1828:1: rule__DecVar__Alternatives : ( ( ( rule__DecVar__DeclarationAssignment_0 ) ) | ( ( rule__DecVar__AssignmentAssignment_1 ) ) | ( ( rule__DecVar__AtribuicaoAssignment_2 ) ) | ( ( rule__DecVar__ReassignmentAssignment_3 ) ) );
+    // InternalGo.g:1878:1: rule__DecVar__Alternatives : ( ( ( rule__DecVar__DeclarationAssignment_0 ) ) | ( ( rule__DecVar__AtribuicaoAssignment_1 ) ) | ( ( rule__DecVar__AssignmentAssignment_2 ) ) | ( ( rule__DecVar__ReassignmentAssignment_3 ) ) );
     public final void rule__DecVar__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1832:1: ( ( ( rule__DecVar__DeclarationAssignment_0 ) ) | ( ( rule__DecVar__AssignmentAssignment_1 ) ) | ( ( rule__DecVar__AtribuicaoAssignment_2 ) ) | ( ( rule__DecVar__ReassignmentAssignment_3 ) ) )
+            // InternalGo.g:1882:1: ( ( ( rule__DecVar__DeclarationAssignment_0 ) ) | ( ( rule__DecVar__AtribuicaoAssignment_1 ) ) | ( ( rule__DecVar__AssignmentAssignment_2 ) ) | ( ( rule__DecVar__ReassignmentAssignment_3 ) ) )
             int alt5=4;
             alt5 = dfa5.predict(input);
             switch (alt5) {
                 case 1 :
-                    // InternalGo.g:1833:2: ( ( rule__DecVar__DeclarationAssignment_0 ) )
+                    // InternalGo.g:1883:2: ( ( rule__DecVar__DeclarationAssignment_0 ) )
                     {
-                    // InternalGo.g:1833:2: ( ( rule__DecVar__DeclarationAssignment_0 ) )
-                    // InternalGo.g:1834:3: ( rule__DecVar__DeclarationAssignment_0 )
+                    // InternalGo.g:1883:2: ( ( rule__DecVar__DeclarationAssignment_0 ) )
+                    // InternalGo.g:1884:3: ( rule__DecVar__DeclarationAssignment_0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getDecVarAccess().getDeclarationAssignment_0()); 
                     }
-                    // InternalGo.g:1835:3: ( rule__DecVar__DeclarationAssignment_0 )
-                    // InternalGo.g:1835:4: rule__DecVar__DeclarationAssignment_0
+                    // InternalGo.g:1885:3: ( rule__DecVar__DeclarationAssignment_0 )
+                    // InternalGo.g:1885:4: rule__DecVar__DeclarationAssignment_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DecVar__DeclarationAssignment_0();
@@ -6093,19 +6263,19 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:1839:2: ( ( rule__DecVar__AssignmentAssignment_1 ) )
+                    // InternalGo.g:1889:2: ( ( rule__DecVar__AtribuicaoAssignment_1 ) )
                     {
-                    // InternalGo.g:1839:2: ( ( rule__DecVar__AssignmentAssignment_1 ) )
-                    // InternalGo.g:1840:3: ( rule__DecVar__AssignmentAssignment_1 )
+                    // InternalGo.g:1889:2: ( ( rule__DecVar__AtribuicaoAssignment_1 ) )
+                    // InternalGo.g:1890:3: ( rule__DecVar__AtribuicaoAssignment_1 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getDecVarAccess().getAssignmentAssignment_1()); 
+                       before(grammarAccess.getDecVarAccess().getAtribuicaoAssignment_1()); 
                     }
-                    // InternalGo.g:1841:3: ( rule__DecVar__AssignmentAssignment_1 )
-                    // InternalGo.g:1841:4: rule__DecVar__AssignmentAssignment_1
+                    // InternalGo.g:1891:3: ( rule__DecVar__AtribuicaoAssignment_1 )
+                    // InternalGo.g:1891:4: rule__DecVar__AtribuicaoAssignment_1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__DecVar__AssignmentAssignment_1();
+                    rule__DecVar__AtribuicaoAssignment_1();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -6113,7 +6283,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getDecVarAccess().getAssignmentAssignment_1()); 
+                       after(grammarAccess.getDecVarAccess().getAtribuicaoAssignment_1()); 
                     }
 
                     }
@@ -6122,19 +6292,19 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalGo.g:1845:2: ( ( rule__DecVar__AtribuicaoAssignment_2 ) )
+                    // InternalGo.g:1895:2: ( ( rule__DecVar__AssignmentAssignment_2 ) )
                     {
-                    // InternalGo.g:1845:2: ( ( rule__DecVar__AtribuicaoAssignment_2 ) )
-                    // InternalGo.g:1846:3: ( rule__DecVar__AtribuicaoAssignment_2 )
+                    // InternalGo.g:1895:2: ( ( rule__DecVar__AssignmentAssignment_2 ) )
+                    // InternalGo.g:1896:3: ( rule__DecVar__AssignmentAssignment_2 )
                     {
                     if ( state.backtracking==0 ) {
-                       before(grammarAccess.getDecVarAccess().getAtribuicaoAssignment_2()); 
+                       before(grammarAccess.getDecVarAccess().getAssignmentAssignment_2()); 
                     }
-                    // InternalGo.g:1847:3: ( rule__DecVar__AtribuicaoAssignment_2 )
-                    // InternalGo.g:1847:4: rule__DecVar__AtribuicaoAssignment_2
+                    // InternalGo.g:1897:3: ( rule__DecVar__AssignmentAssignment_2 )
+                    // InternalGo.g:1897:4: rule__DecVar__AssignmentAssignment_2
                     {
                     pushFollow(FOLLOW_2);
-                    rule__DecVar__AtribuicaoAssignment_2();
+                    rule__DecVar__AssignmentAssignment_2();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -6142,7 +6312,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
 
                     if ( state.backtracking==0 ) {
-                       after(grammarAccess.getDecVarAccess().getAtribuicaoAssignment_2()); 
+                       after(grammarAccess.getDecVarAccess().getAssignmentAssignment_2()); 
                     }
 
                     }
@@ -6151,16 +6321,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalGo.g:1851:2: ( ( rule__DecVar__ReassignmentAssignment_3 ) )
+                    // InternalGo.g:1901:2: ( ( rule__DecVar__ReassignmentAssignment_3 ) )
                     {
-                    // InternalGo.g:1851:2: ( ( rule__DecVar__ReassignmentAssignment_3 ) )
-                    // InternalGo.g:1852:3: ( rule__DecVar__ReassignmentAssignment_3 )
+                    // InternalGo.g:1901:2: ( ( rule__DecVar__ReassignmentAssignment_3 ) )
+                    // InternalGo.g:1902:3: ( rule__DecVar__ReassignmentAssignment_3 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getDecVarAccess().getReassignmentAssignment_3()); 
                     }
-                    // InternalGo.g:1853:3: ( rule__DecVar__ReassignmentAssignment_3 )
-                    // InternalGo.g:1853:4: rule__DecVar__ReassignmentAssignment_3
+                    // InternalGo.g:1903:3: ( rule__DecVar__ReassignmentAssignment_3 )
+                    // InternalGo.g:1903:4: rule__DecVar__ReassignmentAssignment_3
                     {
                     pushFollow(FOLLOW_2);
                     rule__DecVar__ReassignmentAssignment_3();
@@ -6197,13 +6367,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib_Aux__Alternatives"
-    // InternalGo.g:1861:1: rule__Atrib_Aux__Alternatives : ( ( ruleOperations ) | ( ruleAtri ) | ( ruleVariable ) | ( ruleCallFunc ) );
+    // InternalGo.g:1911:1: rule__Atrib_Aux__Alternatives : ( ( ruleOperations ) | ( ruleAtri ) | ( ruleVariable ) | ( ruleCallFunc ) );
     public final void rule__Atrib_Aux__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1865:1: ( ( ruleOperations ) | ( ruleAtri ) | ( ruleVariable ) | ( ruleCallFunc ) )
+            // InternalGo.g:1915:1: ( ( ruleOperations ) | ( ruleAtri ) | ( ruleVariable ) | ( ruleCallFunc ) )
             int alt6=4;
             switch ( input.LA(1) ) {
             case RULE_OPEN_PARENTHESES:
@@ -6242,25 +6412,25 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                 {
                 int LA6_4 = input.LA(2);
 
-                if ( (LA6_4==EOF||(LA6_4>=RULE_EOL && LA6_4<=RULE_STRING)||LA6_4==RULE_ID||LA6_4==RULE_COMMA||LA6_4==RULE_CLOSED_KEY||(LA6_4>=RULE_OPEN_BRACKETS && LA6_4<=RULE_INT)||LA6_4==RULE_PONTOVIRGULA||LA6_4==34||LA6_4==36||(LA6_4>=39 && LA6_4<=42)||(LA6_4>=46 && LA6_4<=48)||(LA6_4>=64 && LA6_4<=66)) ) {
-                    alt6=3;
-                }
-                else if ( (LA6_4==RULE_OPEN_PARENTHESES) ) {
-                    int LA6_6 = input.LA(3);
+                if ( (LA6_4==RULE_OPEN_PARENTHESES) ) {
+                    int LA6_5 = input.LA(3);
 
-                    if ( (LA6_6==RULE_OPEN_PARENTHESES||LA6_6==RULE_INT) ) {
-                        alt6=3;
-                    }
-                    else if ( (LA6_6==RULE_ID||LA6_6==RULE_CLOSED_PARENTHESES) ) {
+                    if ( (LA6_5==RULE_ID||LA6_5==RULE_CLOSED_PARENTHESES) ) {
                         alt6=4;
+                    }
+                    else if ( (LA6_5==RULE_OPEN_PARENTHESES||LA6_5==RULE_INT) ) {
+                        alt6=3;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 6, 6, input);
+                            new NoViableAltException("", 6, 5, input);
 
                         throw nvae;
                     }
+                }
+                else if ( (LA6_4==EOF||(LA6_4>=RULE_EOL && LA6_4<=RULE_STRING)||LA6_4==RULE_ID||LA6_4==RULE_COMMA||LA6_4==RULE_CLOSED_KEY||(LA6_4>=RULE_OPEN_BRACKETS && LA6_4<=RULE_INT)||LA6_4==RULE_PONTOVIRGULA||LA6_4==34||LA6_4==36||(LA6_4>=39 && LA6_4<=43)||(LA6_4>=46 && LA6_4<=48)||(LA6_4>=64 && LA6_4<=66)) ) {
+                    alt6=3;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -6281,10 +6451,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
             switch (alt6) {
                 case 1 :
-                    // InternalGo.g:1866:2: ( ruleOperations )
+                    // InternalGo.g:1916:2: ( ruleOperations )
                     {
-                    // InternalGo.g:1866:2: ( ruleOperations )
-                    // InternalGo.g:1867:3: ruleOperations
+                    // InternalGo.g:1916:2: ( ruleOperations )
+                    // InternalGo.g:1917:3: ruleOperations
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getAtrib_AuxAccess().getOperationsParserRuleCall_0()); 
@@ -6304,10 +6474,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:1872:2: ( ruleAtri )
+                    // InternalGo.g:1922:2: ( ruleAtri )
                     {
-                    // InternalGo.g:1872:2: ( ruleAtri )
-                    // InternalGo.g:1873:3: ruleAtri
+                    // InternalGo.g:1922:2: ( ruleAtri )
+                    // InternalGo.g:1923:3: ruleAtri
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getAtrib_AuxAccess().getAtriParserRuleCall_1()); 
@@ -6327,10 +6497,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalGo.g:1878:2: ( ruleVariable )
+                    // InternalGo.g:1928:2: ( ruleVariable )
                     {
-                    // InternalGo.g:1878:2: ( ruleVariable )
-                    // InternalGo.g:1879:3: ruleVariable
+                    // InternalGo.g:1928:2: ( ruleVariable )
+                    // InternalGo.g:1929:3: ruleVariable
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getAtrib_AuxAccess().getVariableParserRuleCall_2()); 
@@ -6350,10 +6520,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalGo.g:1884:2: ( ruleCallFunc )
+                    // InternalGo.g:1934:2: ( ruleCallFunc )
                     {
-                    // InternalGo.g:1884:2: ( ruleCallFunc )
-                    // InternalGo.g:1885:3: ruleCallFunc
+                    // InternalGo.g:1934:2: ( ruleCallFunc )
+                    // InternalGo.g:1935:3: ruleCallFunc
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getAtrib_AuxAccess().getCallFuncParserRuleCall_3()); 
@@ -6390,13 +6560,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__Alternatives_2_2"
-    // InternalGo.g:1894:1: rule__MultDecVars__Alternatives_2_2 : ( ( ( rule__MultDecVars__TypwAssignment_2_2_0 ) ) | ( ( rule__MultDecVars__ValueAssignment_2_2_1 ) ) );
+    // InternalGo.g:1944:1: rule__MultDecVars__Alternatives_2_2 : ( ( ( rule__MultDecVars__TypwAssignment_2_2_0 ) ) | ( ( rule__MultDecVars__ValueAssignment_2_2_1 ) ) );
     public final void rule__MultDecVars__Alternatives_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1898:1: ( ( ( rule__MultDecVars__TypwAssignment_2_2_0 ) ) | ( ( rule__MultDecVars__ValueAssignment_2_2_1 ) ) )
+            // InternalGo.g:1948:1: ( ( ( rule__MultDecVars__TypwAssignment_2_2_0 ) ) | ( ( rule__MultDecVars__ValueAssignment_2_2_1 ) ) )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -6415,16 +6585,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt7) {
                 case 1 :
-                    // InternalGo.g:1899:2: ( ( rule__MultDecVars__TypwAssignment_2_2_0 ) )
+                    // InternalGo.g:1949:2: ( ( rule__MultDecVars__TypwAssignment_2_2_0 ) )
                     {
-                    // InternalGo.g:1899:2: ( ( rule__MultDecVars__TypwAssignment_2_2_0 ) )
-                    // InternalGo.g:1900:3: ( rule__MultDecVars__TypwAssignment_2_2_0 )
+                    // InternalGo.g:1949:2: ( ( rule__MultDecVars__TypwAssignment_2_2_0 ) )
+                    // InternalGo.g:1950:3: ( rule__MultDecVars__TypwAssignment_2_2_0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMultDecVarsAccess().getTypwAssignment_2_2_0()); 
                     }
-                    // InternalGo.g:1901:3: ( rule__MultDecVars__TypwAssignment_2_2_0 )
-                    // InternalGo.g:1901:4: rule__MultDecVars__TypwAssignment_2_2_0
+                    // InternalGo.g:1951:3: ( rule__MultDecVars__TypwAssignment_2_2_0 )
+                    // InternalGo.g:1951:4: rule__MultDecVars__TypwAssignment_2_2_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__MultDecVars__TypwAssignment_2_2_0();
@@ -6444,16 +6614,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:1905:2: ( ( rule__MultDecVars__ValueAssignment_2_2_1 ) )
+                    // InternalGo.g:1955:2: ( ( rule__MultDecVars__ValueAssignment_2_2_1 ) )
                     {
-                    // InternalGo.g:1905:2: ( ( rule__MultDecVars__ValueAssignment_2_2_1 ) )
-                    // InternalGo.g:1906:3: ( rule__MultDecVars__ValueAssignment_2_2_1 )
+                    // InternalGo.g:1955:2: ( ( rule__MultDecVars__ValueAssignment_2_2_1 ) )
+                    // InternalGo.g:1956:3: ( rule__MultDecVars__ValueAssignment_2_2_1 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getMultDecVarsAccess().getValueAssignment_2_2_1()); 
                     }
-                    // InternalGo.g:1907:3: ( rule__MultDecVars__ValueAssignment_2_2_1 )
-                    // InternalGo.g:1907:4: rule__MultDecVars__ValueAssignment_2_2_1
+                    // InternalGo.g:1957:3: ( rule__MultDecVars__ValueAssignment_2_2_1 )
+                    // InternalGo.g:1957:4: rule__MultDecVars__ValueAssignment_2_2_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__MultDecVars__ValueAssignment_2_2_1();
@@ -6490,13 +6660,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Alternatives"
-    // InternalGo.g:1915:1: rule__Atri__Alternatives : ( ( ( rule__Atri__Group_0__0 ) ) | ( ruleTypeValue ) );
+    // InternalGo.g:1965:1: rule__Atri__Alternatives : ( ( ( rule__Atri__Group_0__0 ) ) | ( ruleTypeValue ) );
     public final void rule__Atri__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1919:1: ( ( ( rule__Atri__Group_0__0 ) ) | ( ruleTypeValue ) )
+            // InternalGo.g:1969:1: ( ( ( rule__Atri__Group_0__0 ) ) | ( ruleTypeValue ) )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -6515,16 +6685,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt8) {
                 case 1 :
-                    // InternalGo.g:1920:2: ( ( rule__Atri__Group_0__0 ) )
+                    // InternalGo.g:1970:2: ( ( rule__Atri__Group_0__0 ) )
                     {
-                    // InternalGo.g:1920:2: ( ( rule__Atri__Group_0__0 ) )
-                    // InternalGo.g:1921:3: ( rule__Atri__Group_0__0 )
+                    // InternalGo.g:1970:2: ( ( rule__Atri__Group_0__0 ) )
+                    // InternalGo.g:1971:3: ( rule__Atri__Group_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getAtriAccess().getGroup_0()); 
                     }
-                    // InternalGo.g:1922:3: ( rule__Atri__Group_0__0 )
-                    // InternalGo.g:1922:4: rule__Atri__Group_0__0
+                    // InternalGo.g:1972:3: ( rule__Atri__Group_0__0 )
+                    // InternalGo.g:1972:4: rule__Atri__Group_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Atri__Group_0__0();
@@ -6544,10 +6714,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:1926:2: ( ruleTypeValue )
+                    // InternalGo.g:1976:2: ( ruleTypeValue )
                     {
-                    // InternalGo.g:1926:2: ( ruleTypeValue )
-                    // InternalGo.g:1927:3: ruleTypeValue
+                    // InternalGo.g:1976:2: ( ruleTypeValue )
+                    // InternalGo.g:1977:3: ruleTypeValue
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getAtriAccess().getTypeValueParserRuleCall_1()); 
@@ -6584,13 +6754,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeValue__Alternatives"
-    // InternalGo.g:1936:1: rule__TypeValue__Alternatives : ( ( ruleStr ) | ( ruleNumbers ) | ( ruleBool ) );
+    // InternalGo.g:1986:1: rule__TypeValue__Alternatives : ( ( ruleStr ) | ( ruleNumbers ) | ( ruleBool ) );
     public final void rule__TypeValue__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1940:1: ( ( ruleStr ) | ( ruleNumbers ) | ( ruleBool ) )
+            // InternalGo.g:1990:1: ( ( ruleStr ) | ( ruleNumbers ) | ( ruleBool ) )
             int alt9=3;
             switch ( input.LA(1) ) {
             case RULE_STRING:
@@ -6619,10 +6789,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
             switch (alt9) {
                 case 1 :
-                    // InternalGo.g:1941:2: ( ruleStr )
+                    // InternalGo.g:1991:2: ( ruleStr )
                     {
-                    // InternalGo.g:1941:2: ( ruleStr )
-                    // InternalGo.g:1942:3: ruleStr
+                    // InternalGo.g:1991:2: ( ruleStr )
+                    // InternalGo.g:1992:3: ruleStr
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTypeValueAccess().getStrParserRuleCall_0()); 
@@ -6642,10 +6812,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:1947:2: ( ruleNumbers )
+                    // InternalGo.g:1997:2: ( ruleNumbers )
                     {
-                    // InternalGo.g:1947:2: ( ruleNumbers )
-                    // InternalGo.g:1948:3: ruleNumbers
+                    // InternalGo.g:1997:2: ( ruleNumbers )
+                    // InternalGo.g:1998:3: ruleNumbers
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTypeValueAccess().getNumbersParserRuleCall_1()); 
@@ -6665,10 +6835,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalGo.g:1953:2: ( ruleBool )
+                    // InternalGo.g:2003:2: ( ruleBool )
                     {
-                    // InternalGo.g:1953:2: ( ruleBool )
-                    // InternalGo.g:1954:3: ruleBool
+                    // InternalGo.g:2003:2: ( ruleBool )
+                    // InternalGo.g:2004:3: ruleBool
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTypeValueAccess().getBoolParserRuleCall_2()); 
@@ -6705,13 +6875,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecImport__Alternatives_1"
-    // InternalGo.g:1963:1: rule__DecImport__Alternatives_1 : ( ( RULE_STRING ) | ( ( rule__DecImport__Group_1_1__0 ) ) );
+    // InternalGo.g:2013:1: rule__DecImport__Alternatives_1 : ( ( RULE_STRING ) | ( ( rule__DecImport__Group_1_1__0 ) ) );
     public final void rule__DecImport__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1967:1: ( ( RULE_STRING ) | ( ( rule__DecImport__Group_1_1__0 ) ) )
+            // InternalGo.g:2017:1: ( ( RULE_STRING ) | ( ( rule__DecImport__Group_1_1__0 ) ) )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -6730,10 +6900,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalGo.g:1968:2: ( RULE_STRING )
+                    // InternalGo.g:2018:2: ( RULE_STRING )
                     {
-                    // InternalGo.g:1968:2: ( RULE_STRING )
-                    // InternalGo.g:1969:3: RULE_STRING
+                    // InternalGo.g:2018:2: ( RULE_STRING )
+                    // InternalGo.g:2019:3: RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getDecImportAccess().getSTRINGTerminalRuleCall_1_0()); 
@@ -6749,16 +6919,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:1974:2: ( ( rule__DecImport__Group_1_1__0 ) )
+                    // InternalGo.g:2024:2: ( ( rule__DecImport__Group_1_1__0 ) )
                     {
-                    // InternalGo.g:1974:2: ( ( rule__DecImport__Group_1_1__0 ) )
-                    // InternalGo.g:1975:3: ( rule__DecImport__Group_1_1__0 )
+                    // InternalGo.g:2024:2: ( ( rule__DecImport__Group_1_1__0 ) )
+                    // InternalGo.g:2025:3: ( rule__DecImport__Group_1_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getDecImportAccess().getGroup_1_1()); 
                     }
-                    // InternalGo.g:1976:3: ( rule__DecImport__Group_1_1__0 )
-                    // InternalGo.g:1976:4: rule__DecImport__Group_1_1__0
+                    // InternalGo.g:2026:3: ( rule__DecImport__Group_1_1__0 )
+                    // InternalGo.g:2026:4: rule__DecImport__Group_1_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DecImport__Group_1_1__0();
@@ -6795,13 +6965,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsOneEquals__Alternatives_1"
-    // InternalGo.g:1984:1: rule__OperationsOneEquals__Alternatives_1 : ( ( RULE_PLUSEQUALS ) | ( RULE_MINUSEQUALS ) );
+    // InternalGo.g:2034:1: rule__OperationsOneEquals__Alternatives_1 : ( ( RULE_PLUSEQUALS ) | ( RULE_MINUSEQUALS ) );
     public final void rule__OperationsOneEquals__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:1988:1: ( ( RULE_PLUSEQUALS ) | ( RULE_MINUSEQUALS ) )
+            // InternalGo.g:2038:1: ( ( RULE_PLUSEQUALS ) | ( RULE_MINUSEQUALS ) )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -6820,10 +6990,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt11) {
                 case 1 :
-                    // InternalGo.g:1989:2: ( RULE_PLUSEQUALS )
+                    // InternalGo.g:2039:2: ( RULE_PLUSEQUALS )
                     {
-                    // InternalGo.g:1989:2: ( RULE_PLUSEQUALS )
-                    // InternalGo.g:1990:3: RULE_PLUSEQUALS
+                    // InternalGo.g:2039:2: ( RULE_PLUSEQUALS )
+                    // InternalGo.g:2040:3: RULE_PLUSEQUALS
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperationsOneEqualsAccess().getPlusEqualsTerminalRuleCall_1_0()); 
@@ -6839,10 +7009,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:1995:2: ( RULE_MINUSEQUALS )
+                    // InternalGo.g:2045:2: ( RULE_MINUSEQUALS )
                     {
-                    // InternalGo.g:1995:2: ( RULE_MINUSEQUALS )
-                    // InternalGo.g:1996:3: RULE_MINUSEQUALS
+                    // InternalGo.g:2045:2: ( RULE_MINUSEQUALS )
+                    // InternalGo.g:2046:3: RULE_MINUSEQUALS
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperationsOneEqualsAccess().getMinusEqualsTerminalRuleCall_1_1()); 
@@ -6875,13 +7045,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsOneEquals__Alternatives_2"
-    // InternalGo.g:2005:1: rule__OperationsOneEquals__Alternatives_2 : ( ( RULE_ID ) | ( ( rule__OperationsOneEquals__NAssignment_2_1 ) ) );
+    // InternalGo.g:2055:1: rule__OperationsOneEquals__Alternatives_2 : ( ( RULE_ID ) | ( ( rule__OperationsOneEquals__NAssignment_2_1 ) ) );
     public final void rule__OperationsOneEquals__Alternatives_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2009:1: ( ( RULE_ID ) | ( ( rule__OperationsOneEquals__NAssignment_2_1 ) ) )
+            // InternalGo.g:2059:1: ( ( RULE_ID ) | ( ( rule__OperationsOneEquals__NAssignment_2_1 ) ) )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -6900,10 +7070,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt12) {
                 case 1 :
-                    // InternalGo.g:2010:2: ( RULE_ID )
+                    // InternalGo.g:2060:2: ( RULE_ID )
                     {
-                    // InternalGo.g:2010:2: ( RULE_ID )
-                    // InternalGo.g:2011:3: RULE_ID
+                    // InternalGo.g:2060:2: ( RULE_ID )
+                    // InternalGo.g:2061:3: RULE_ID
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperationsOneEqualsAccess().getIDTerminalRuleCall_2_0()); 
@@ -6919,16 +7089,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2016:2: ( ( rule__OperationsOneEquals__NAssignment_2_1 ) )
+                    // InternalGo.g:2066:2: ( ( rule__OperationsOneEquals__NAssignment_2_1 ) )
                     {
-                    // InternalGo.g:2016:2: ( ( rule__OperationsOneEquals__NAssignment_2_1 ) )
-                    // InternalGo.g:2017:3: ( rule__OperationsOneEquals__NAssignment_2_1 )
+                    // InternalGo.g:2066:2: ( ( rule__OperationsOneEquals__NAssignment_2_1 ) )
+                    // InternalGo.g:2067:3: ( rule__OperationsOneEquals__NAssignment_2_1 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperationsOneEqualsAccess().getNAssignment_2_1()); 
                     }
-                    // InternalGo.g:2018:3: ( rule__OperationsOneEquals__NAssignment_2_1 )
-                    // InternalGo.g:2018:4: rule__OperationsOneEquals__NAssignment_2_1
+                    // InternalGo.g:2068:3: ( rule__OperationsOneEquals__NAssignment_2_1 )
+                    // InternalGo.g:2068:4: rule__OperationsOneEquals__NAssignment_2_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__OperationsOneEquals__NAssignment_2_1();
@@ -6965,13 +7135,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numbers__Alternatives"
-    // InternalGo.g:2026:1: rule__Numbers__Alternatives : ( ( ( rule__Numbers__IntAssignment_0 ) ) | ( ( rule__Numbers__DAssignment_1 ) ) );
+    // InternalGo.g:2076:1: rule__Numbers__Alternatives : ( ( ( rule__Numbers__IntAssignment_0 ) ) | ( ( rule__Numbers__DAssignment_1 ) ) );
     public final void rule__Numbers__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2030:1: ( ( ( rule__Numbers__IntAssignment_0 ) ) | ( ( rule__Numbers__DAssignment_1 ) ) )
+            // InternalGo.g:2080:1: ( ( ( rule__Numbers__IntAssignment_0 ) ) | ( ( rule__Numbers__DAssignment_1 ) ) )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -6981,7 +7151,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                 if ( (LA13_1==RULE_DOT) ) {
                     alt13=2;
                 }
-                else if ( (LA13_1==EOF||(LA13_1>=RULE_EOL && LA13_1<=RULE_STRING)||LA13_1==RULE_ID||LA13_1==RULE_COMMA||(LA13_1>=RULE_OPEN_PARENTHESES && LA13_1<=RULE_INT)||(LA13_1>=RULE_PLUS && LA13_1<=RULE_PONTOVIRGULA)||LA13_1==34||LA13_1==36||(LA13_1>=39 && LA13_1<=42)||(LA13_1>=46 && LA13_1<=48)||(LA13_1>=50 && LA13_1<=54)||(LA13_1>=62 && LA13_1<=66)) ) {
+                else if ( (LA13_1==EOF||(LA13_1>=RULE_EOL && LA13_1<=RULE_STRING)||LA13_1==RULE_ID||LA13_1==RULE_COMMA||(LA13_1>=RULE_OPEN_PARENTHESES && LA13_1<=RULE_INT)||(LA13_1>=RULE_PLUS && LA13_1<=RULE_PONTOVIRGULA)||LA13_1==34||LA13_1==36||(LA13_1>=39 && LA13_1<=43)||(LA13_1>=46 && LA13_1<=48)||(LA13_1>=50 && LA13_1<=54)||(LA13_1>=62 && LA13_1<=66)) ) {
                     alt13=1;
                 }
                 else {
@@ -7001,16 +7171,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt13) {
                 case 1 :
-                    // InternalGo.g:2031:2: ( ( rule__Numbers__IntAssignment_0 ) )
+                    // InternalGo.g:2081:2: ( ( rule__Numbers__IntAssignment_0 ) )
                     {
-                    // InternalGo.g:2031:2: ( ( rule__Numbers__IntAssignment_0 ) )
-                    // InternalGo.g:2032:3: ( rule__Numbers__IntAssignment_0 )
+                    // InternalGo.g:2081:2: ( ( rule__Numbers__IntAssignment_0 ) )
+                    // InternalGo.g:2082:3: ( rule__Numbers__IntAssignment_0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNumbersAccess().getIntAssignment_0()); 
                     }
-                    // InternalGo.g:2033:3: ( rule__Numbers__IntAssignment_0 )
-                    // InternalGo.g:2033:4: rule__Numbers__IntAssignment_0
+                    // InternalGo.g:2083:3: ( rule__Numbers__IntAssignment_0 )
+                    // InternalGo.g:2083:4: rule__Numbers__IntAssignment_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Numbers__IntAssignment_0();
@@ -7030,16 +7200,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2037:2: ( ( rule__Numbers__DAssignment_1 ) )
+                    // InternalGo.g:2087:2: ( ( rule__Numbers__DAssignment_1 ) )
                     {
-                    // InternalGo.g:2037:2: ( ( rule__Numbers__DAssignment_1 ) )
-                    // InternalGo.g:2038:3: ( rule__Numbers__DAssignment_1 )
+                    // InternalGo.g:2087:2: ( ( rule__Numbers__DAssignment_1 ) )
+                    // InternalGo.g:2088:3: ( rule__Numbers__DAssignment_1 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getNumbersAccess().getDAssignment_1()); 
                     }
-                    // InternalGo.g:2039:3: ( rule__Numbers__DAssignment_1 )
-                    // InternalGo.g:2039:4: rule__Numbers__DAssignment_1
+                    // InternalGo.g:2089:3: ( rule__Numbers__DAssignment_1 )
+                    // InternalGo.g:2089:4: rule__Numbers__DAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Numbers__DAssignment_1();
@@ -7076,13 +7246,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__I__Alternatives"
-    // InternalGo.g:2047:1: rule__I__Alternatives : ( ( ( rule__I__Group_0__0 ) ) | ( ( rule__I__Group_1__0 ) ) );
+    // InternalGo.g:2097:1: rule__I__Alternatives : ( ( ( rule__I__Group_0__0 ) ) | ( ( rule__I__Group_1__0 ) ) );
     public final void rule__I__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2051:1: ( ( ( rule__I__Group_0__0 ) ) | ( ( rule__I__Group_1__0 ) ) )
+            // InternalGo.g:2101:1: ( ( ( rule__I__Group_0__0 ) ) | ( ( rule__I__Group_1__0 ) ) )
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -7101,16 +7271,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt14) {
                 case 1 :
-                    // InternalGo.g:2052:2: ( ( rule__I__Group_0__0 ) )
+                    // InternalGo.g:2102:2: ( ( rule__I__Group_0__0 ) )
                     {
-                    // InternalGo.g:2052:2: ( ( rule__I__Group_0__0 ) )
-                    // InternalGo.g:2053:3: ( rule__I__Group_0__0 )
+                    // InternalGo.g:2102:2: ( ( rule__I__Group_0__0 ) )
+                    // InternalGo.g:2103:3: ( rule__I__Group_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getIAccess().getGroup_0()); 
                     }
-                    // InternalGo.g:2054:3: ( rule__I__Group_0__0 )
-                    // InternalGo.g:2054:4: rule__I__Group_0__0
+                    // InternalGo.g:2104:3: ( rule__I__Group_0__0 )
+                    // InternalGo.g:2104:4: rule__I__Group_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__I__Group_0__0();
@@ -7130,16 +7300,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2058:2: ( ( rule__I__Group_1__0 ) )
+                    // InternalGo.g:2108:2: ( ( rule__I__Group_1__0 ) )
                     {
-                    // InternalGo.g:2058:2: ( ( rule__I__Group_1__0 ) )
-                    // InternalGo.g:2059:3: ( rule__I__Group_1__0 )
+                    // InternalGo.g:2108:2: ( ( rule__I__Group_1__0 ) )
+                    // InternalGo.g:2109:3: ( rule__I__Group_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getIAccess().getGroup_1()); 
                     }
-                    // InternalGo.g:2060:3: ( rule__I__Group_1__0 )
-                    // InternalGo.g:2060:4: rule__I__Group_1__0
+                    // InternalGo.g:2110:3: ( rule__I__Group_1__0 )
+                    // InternalGo.g:2110:4: rule__I__Group_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__I__Group_1__0();
@@ -7176,13 +7346,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__Alternatives"
-    // InternalGo.g:2068:1: rule__Y__Alternatives : ( ( ( rule__Y__Group_0__0 ) ) | ( ( rule__Y__Group_1__0 ) ) );
+    // InternalGo.g:2118:1: rule__Y__Alternatives : ( ( ( rule__Y__Group_0__0 ) ) | ( ( rule__Y__Group_1__0 ) ) );
     public final void rule__Y__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2072:1: ( ( ( rule__Y__Group_0__0 ) ) | ( ( rule__Y__Group_1__0 ) ) )
+            // InternalGo.g:2122:1: ( ( ( rule__Y__Group_0__0 ) ) | ( ( rule__Y__Group_1__0 ) ) )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -7201,16 +7371,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt15) {
                 case 1 :
-                    // InternalGo.g:2073:2: ( ( rule__Y__Group_0__0 ) )
+                    // InternalGo.g:2123:2: ( ( rule__Y__Group_0__0 ) )
                     {
-                    // InternalGo.g:2073:2: ( ( rule__Y__Group_0__0 ) )
-                    // InternalGo.g:2074:3: ( rule__Y__Group_0__0 )
+                    // InternalGo.g:2123:2: ( ( rule__Y__Group_0__0 ) )
+                    // InternalGo.g:2124:3: ( rule__Y__Group_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getYAccess().getGroup_0()); 
                     }
-                    // InternalGo.g:2075:3: ( rule__Y__Group_0__0 )
-                    // InternalGo.g:2075:4: rule__Y__Group_0__0
+                    // InternalGo.g:2125:3: ( rule__Y__Group_0__0 )
+                    // InternalGo.g:2125:4: rule__Y__Group_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Y__Group_0__0();
@@ -7230,16 +7400,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2079:2: ( ( rule__Y__Group_1__0 ) )
+                    // InternalGo.g:2129:2: ( ( rule__Y__Group_1__0 ) )
                     {
-                    // InternalGo.g:2079:2: ( ( rule__Y__Group_1__0 ) )
-                    // InternalGo.g:2080:3: ( rule__Y__Group_1__0 )
+                    // InternalGo.g:2129:2: ( ( rule__Y__Group_1__0 ) )
+                    // InternalGo.g:2130:3: ( rule__Y__Group_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getYAccess().getGroup_1()); 
                     }
-                    // InternalGo.g:2081:3: ( rule__Y__Group_1__0 )
-                    // InternalGo.g:2081:4: rule__Y__Group_1__0
+                    // InternalGo.g:2131:3: ( rule__Y__Group_1__0 )
+                    // InternalGo.g:2131:4: rule__Y__Group_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Y__Group_1__0();
@@ -7276,13 +7446,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__F__Alternatives"
-    // InternalGo.g:2089:1: rule__F__Alternatives : ( ( ( rule__F__Group_0__0 ) ) | ( ruleNumbers ) );
+    // InternalGo.g:2139:1: rule__F__Alternatives : ( ( ( rule__F__Group_0__0 ) ) | ( ruleNumbers ) );
     public final void rule__F__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2093:1: ( ( ( rule__F__Group_0__0 ) ) | ( ruleNumbers ) )
+            // InternalGo.g:2143:1: ( ( ( rule__F__Group_0__0 ) ) | ( ruleNumbers ) )
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -7301,16 +7471,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt16) {
                 case 1 :
-                    // InternalGo.g:2094:2: ( ( rule__F__Group_0__0 ) )
+                    // InternalGo.g:2144:2: ( ( rule__F__Group_0__0 ) )
                     {
-                    // InternalGo.g:2094:2: ( ( rule__F__Group_0__0 ) )
-                    // InternalGo.g:2095:3: ( rule__F__Group_0__0 )
+                    // InternalGo.g:2144:2: ( ( rule__F__Group_0__0 ) )
+                    // InternalGo.g:2145:3: ( rule__F__Group_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getFAccess().getGroup_0()); 
                     }
-                    // InternalGo.g:2096:3: ( rule__F__Group_0__0 )
-                    // InternalGo.g:2096:4: rule__F__Group_0__0
+                    // InternalGo.g:2146:3: ( rule__F__Group_0__0 )
+                    // InternalGo.g:2146:4: rule__F__Group_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__F__Group_0__0();
@@ -7330,10 +7500,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2100:2: ( ruleNumbers )
+                    // InternalGo.g:2150:2: ( ruleNumbers )
                     {
-                    // InternalGo.g:2100:2: ( ruleNumbers )
-                    // InternalGo.g:2101:3: ruleNumbers
+                    // InternalGo.g:2150:2: ( ruleNumbers )
+                    // InternalGo.g:2151:3: ruleNumbers
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getFAccess().getNumbersParserRuleCall_1()); 
@@ -7370,13 +7540,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__Alternatives_0"
-    // InternalGo.g:2110:1: rule__Expression__Alternatives_0 : ( ( ( rule__Expression__XAssignment_0_0 ) ) | ( ( rule__Expression__BooleanAssignment_0_1 ) ) | ( RULE_ID ) );
+    // InternalGo.g:2160:1: rule__Expression__Alternatives_0 : ( ( ( rule__Expression__XAssignment_0_0 ) ) | ( ( rule__Expression__BooleanAssignment_0_1 ) ) | ( RULE_ID ) );
     public final void rule__Expression__Alternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2114:1: ( ( ( rule__Expression__XAssignment_0_0 ) ) | ( ( rule__Expression__BooleanAssignment_0_1 ) ) | ( RULE_ID ) )
+            // InternalGo.g:2164:1: ( ( ( rule__Expression__XAssignment_0_0 ) ) | ( ( rule__Expression__BooleanAssignment_0_1 ) ) | ( RULE_ID ) )
             int alt17=3;
             switch ( input.LA(1) ) {
             case RULE_OPEN_PARENTHESES:
@@ -7452,16 +7622,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
             switch (alt17) {
                 case 1 :
-                    // InternalGo.g:2115:2: ( ( rule__Expression__XAssignment_0_0 ) )
+                    // InternalGo.g:2165:2: ( ( rule__Expression__XAssignment_0_0 ) )
                     {
-                    // InternalGo.g:2115:2: ( ( rule__Expression__XAssignment_0_0 ) )
-                    // InternalGo.g:2116:3: ( rule__Expression__XAssignment_0_0 )
+                    // InternalGo.g:2165:2: ( ( rule__Expression__XAssignment_0_0 ) )
+                    // InternalGo.g:2166:3: ( rule__Expression__XAssignment_0_0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionAccess().getXAssignment_0_0()); 
                     }
-                    // InternalGo.g:2117:3: ( rule__Expression__XAssignment_0_0 )
-                    // InternalGo.g:2117:4: rule__Expression__XAssignment_0_0
+                    // InternalGo.g:2167:3: ( rule__Expression__XAssignment_0_0 )
+                    // InternalGo.g:2167:4: rule__Expression__XAssignment_0_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Expression__XAssignment_0_0();
@@ -7481,16 +7651,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2121:2: ( ( rule__Expression__BooleanAssignment_0_1 ) )
+                    // InternalGo.g:2171:2: ( ( rule__Expression__BooleanAssignment_0_1 ) )
                     {
-                    // InternalGo.g:2121:2: ( ( rule__Expression__BooleanAssignment_0_1 ) )
-                    // InternalGo.g:2122:3: ( rule__Expression__BooleanAssignment_0_1 )
+                    // InternalGo.g:2171:2: ( ( rule__Expression__BooleanAssignment_0_1 ) )
+                    // InternalGo.g:2172:3: ( rule__Expression__BooleanAssignment_0_1 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionAccess().getBooleanAssignment_0_1()); 
                     }
-                    // InternalGo.g:2123:3: ( rule__Expression__BooleanAssignment_0_1 )
-                    // InternalGo.g:2123:4: rule__Expression__BooleanAssignment_0_1
+                    // InternalGo.g:2173:3: ( rule__Expression__BooleanAssignment_0_1 )
+                    // InternalGo.g:2173:4: rule__Expression__BooleanAssignment_0_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Expression__BooleanAssignment_0_1();
@@ -7510,10 +7680,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalGo.g:2127:2: ( RULE_ID )
+                    // InternalGo.g:2177:2: ( RULE_ID )
                     {
-                    // InternalGo.g:2127:2: ( RULE_ID )
-                    // InternalGo.g:2128:3: RULE_ID
+                    // InternalGo.g:2177:2: ( RULE_ID )
+                    // InternalGo.g:2178:3: RULE_ID
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getExpressionAccess().getIDTerminalRuleCall_0_2()); 
@@ -7546,13 +7716,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SubMult__Alternatives"
-    // InternalGo.g:2137:1: rule__SubMult__Alternatives : ( ( ( ruleMultiplication ) ) | ( ( ruleDivision ) ) );
+    // InternalGo.g:2187:1: rule__SubMult__Alternatives : ( ( ( ruleMultiplication ) ) | ( ( ruleDivision ) ) );
     public final void rule__SubMult__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2141:1: ( ( ( ruleMultiplication ) ) | ( ( ruleDivision ) ) )
+            // InternalGo.g:2191:1: ( ( ( ruleMultiplication ) ) | ( ( ruleDivision ) ) )
             int alt18=2;
             switch ( input.LA(1) ) {
             case RULE_OPEN_PARENTHESES:
@@ -7660,16 +7830,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
             switch (alt18) {
                 case 1 :
-                    // InternalGo.g:2142:2: ( ( ruleMultiplication ) )
+                    // InternalGo.g:2192:2: ( ( ruleMultiplication ) )
                     {
-                    // InternalGo.g:2142:2: ( ( ruleMultiplication ) )
-                    // InternalGo.g:2143:3: ( ruleMultiplication )
+                    // InternalGo.g:2192:2: ( ( ruleMultiplication ) )
+                    // InternalGo.g:2193:3: ( ruleMultiplication )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getSubMultAccess().getMultiplicationParserRuleCall_0()); 
                     }
-                    // InternalGo.g:2144:3: ( ruleMultiplication )
-                    // InternalGo.g:2144:4: ruleMultiplication
+                    // InternalGo.g:2194:3: ( ruleMultiplication )
+                    // InternalGo.g:2194:4: ruleMultiplication
                     {
                     pushFollow(FOLLOW_2);
                     ruleMultiplication();
@@ -7689,16 +7859,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2148:2: ( ( ruleDivision ) )
+                    // InternalGo.g:2198:2: ( ( ruleDivision ) )
                     {
-                    // InternalGo.g:2148:2: ( ( ruleDivision ) )
-                    // InternalGo.g:2149:3: ( ruleDivision )
+                    // InternalGo.g:2198:2: ( ( ruleDivision ) )
+                    // InternalGo.g:2199:3: ( ruleDivision )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getSubMultAccess().getDivisionParserRuleCall_1()); 
                     }
-                    // InternalGo.g:2150:3: ( ruleDivision )
-                    // InternalGo.g:2150:4: ruleDivision
+                    // InternalGo.g:2200:3: ( ruleDivision )
+                    // InternalGo.g:2200:4: ruleDivision
                     {
                     pushFollow(FOLLOW_2);
                     ruleDivision();
@@ -7735,13 +7905,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpression__Alternatives"
-    // InternalGo.g:2158:1: rule__PrimaryExpression__Alternatives : ( ( ( rule__PrimaryExpression__Group_0__0 ) ) | ( ruleLiteral ) );
+    // InternalGo.g:2208:1: rule__PrimaryExpression__Alternatives : ( ( ( rule__PrimaryExpression__Group_0__0 ) ) | ( ruleLiteral ) );
     public final void rule__PrimaryExpression__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2162:1: ( ( ( rule__PrimaryExpression__Group_0__0 ) ) | ( ruleLiteral ) )
+            // InternalGo.g:2212:1: ( ( ( rule__PrimaryExpression__Group_0__0 ) ) | ( ruleLiteral ) )
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -7760,16 +7930,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt19) {
                 case 1 :
-                    // InternalGo.g:2163:2: ( ( rule__PrimaryExpression__Group_0__0 ) )
+                    // InternalGo.g:2213:2: ( ( rule__PrimaryExpression__Group_0__0 ) )
                     {
-                    // InternalGo.g:2163:2: ( ( rule__PrimaryExpression__Group_0__0 ) )
-                    // InternalGo.g:2164:3: ( rule__PrimaryExpression__Group_0__0 )
+                    // InternalGo.g:2213:2: ( ( rule__PrimaryExpression__Group_0__0 ) )
+                    // InternalGo.g:2214:3: ( rule__PrimaryExpression__Group_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getPrimaryExpressionAccess().getGroup_0()); 
                     }
-                    // InternalGo.g:2165:3: ( rule__PrimaryExpression__Group_0__0 )
-                    // InternalGo.g:2165:4: rule__PrimaryExpression__Group_0__0
+                    // InternalGo.g:2215:3: ( rule__PrimaryExpression__Group_0__0 )
+                    // InternalGo.g:2215:4: rule__PrimaryExpression__Group_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__PrimaryExpression__Group_0__0();
@@ -7789,10 +7959,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2169:2: ( ruleLiteral )
+                    // InternalGo.g:2219:2: ( ruleLiteral )
                     {
-                    // InternalGo.g:2169:2: ( ruleLiteral )
-                    // InternalGo.g:2170:3: ruleLiteral
+                    // InternalGo.g:2219:2: ( ruleLiteral )
+                    // InternalGo.g:2220:3: ruleLiteral
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getPrimaryExpressionAccess().getLiteralParserRuleCall_1()); 
@@ -7829,13 +7999,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operator__Alternatives"
-    // InternalGo.g:2179:1: rule__Operator__Alternatives : ( ( '<' ) | ( '<=' ) | ( '==' ) | ( '>=' ) | ( '>' ) );
+    // InternalGo.g:2229:1: rule__Operator__Alternatives : ( ( '<' ) | ( '<=' ) | ( '==' ) | ( '>=' ) | ( '>' ) );
     public final void rule__Operator__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2183:1: ( ( '<' ) | ( '<=' ) | ( '==' ) | ( '>=' ) | ( '>' ) )
+            // InternalGo.g:2233:1: ( ( '<' ) | ( '<=' ) | ( '==' ) | ( '>=' ) | ( '>' ) )
             int alt20=5;
             switch ( input.LA(1) ) {
             case 50:
@@ -7873,10 +8043,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
             switch (alt20) {
                 case 1 :
-                    // InternalGo.g:2184:2: ( '<' )
+                    // InternalGo.g:2234:2: ( '<' )
                     {
-                    // InternalGo.g:2184:2: ( '<' )
-                    // InternalGo.g:2185:3: '<'
+                    // InternalGo.g:2234:2: ( '<' )
+                    // InternalGo.g:2235:3: '<'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorAccess().getLessThanSignKeyword_0()); 
@@ -7892,10 +8062,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2190:2: ( '<=' )
+                    // InternalGo.g:2240:2: ( '<=' )
                     {
-                    // InternalGo.g:2190:2: ( '<=' )
-                    // InternalGo.g:2191:3: '<='
+                    // InternalGo.g:2240:2: ( '<=' )
+                    // InternalGo.g:2241:3: '<='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorAccess().getLessThanSignEqualsSignKeyword_1()); 
@@ -7911,10 +8081,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalGo.g:2196:2: ( '==' )
+                    // InternalGo.g:2246:2: ( '==' )
                     {
-                    // InternalGo.g:2196:2: ( '==' )
-                    // InternalGo.g:2197:3: '=='
+                    // InternalGo.g:2246:2: ( '==' )
+                    // InternalGo.g:2247:3: '=='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorAccess().getEqualsSignEqualsSignKeyword_2()); 
@@ -7930,10 +8100,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalGo.g:2202:2: ( '>=' )
+                    // InternalGo.g:2252:2: ( '>=' )
                     {
-                    // InternalGo.g:2202:2: ( '>=' )
-                    // InternalGo.g:2203:3: '>='
+                    // InternalGo.g:2252:2: ( '>=' )
+                    // InternalGo.g:2253:3: '>='
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorAccess().getGreaterThanSignEqualsSignKeyword_3()); 
@@ -7949,10 +8119,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalGo.g:2208:2: ( '>' )
+                    // InternalGo.g:2258:2: ( '>' )
                     {
-                    // InternalGo.g:2208:2: ( '>' )
-                    // InternalGo.g:2209:3: '>'
+                    // InternalGo.g:2258:2: ( '>' )
+                    // InternalGo.g:2259:3: '>'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperatorAccess().getGreaterThanSignKeyword_4()); 
@@ -7985,13 +8155,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsOne__Alternatives_1"
-    // InternalGo.g:2218:1: rule__OperationsOne__Alternatives_1 : ( ( RULE_PLUSONE ) | ( RULE_MINUSONE ) );
+    // InternalGo.g:2268:1: rule__OperationsOne__Alternatives_1 : ( ( RULE_PLUSONE ) | ( RULE_MINUSONE ) );
     public final void rule__OperationsOne__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2222:1: ( ( RULE_PLUSONE ) | ( RULE_MINUSONE ) )
+            // InternalGo.g:2272:1: ( ( RULE_PLUSONE ) | ( RULE_MINUSONE ) )
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -8010,10 +8180,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt21) {
                 case 1 :
-                    // InternalGo.g:2223:2: ( RULE_PLUSONE )
+                    // InternalGo.g:2273:2: ( RULE_PLUSONE )
                     {
-                    // InternalGo.g:2223:2: ( RULE_PLUSONE )
-                    // InternalGo.g:2224:3: RULE_PLUSONE
+                    // InternalGo.g:2273:2: ( RULE_PLUSONE )
+                    // InternalGo.g:2274:3: RULE_PLUSONE
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperationsOneAccess().getPlusOneTerminalRuleCall_1_0()); 
@@ -8029,10 +8199,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2229:2: ( RULE_MINUSONE )
+                    // InternalGo.g:2279:2: ( RULE_MINUSONE )
                     {
-                    // InternalGo.g:2229:2: ( RULE_MINUSONE )
-                    // InternalGo.g:2230:3: RULE_MINUSONE
+                    // InternalGo.g:2279:2: ( RULE_MINUSONE )
+                    // InternalGo.g:2280:3: RULE_MINUSONE
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getOperationsOneAccess().getMinusOneTerminalRuleCall_1_1()); 
@@ -8065,13 +8235,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VarFor__Alternatives"
-    // InternalGo.g:2239:1: rule__VarFor__Alternatives : ( ( ( ruleComparisonExpression ) ) | ( ( rule__VarFor__Group_1__0 ) ) );
+    // InternalGo.g:2289:1: rule__VarFor__Alternatives : ( ( ( ruleComparisonExpression ) ) | ( ( rule__VarFor__Group_1__0 ) ) );
     public final void rule__VarFor__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2243:1: ( ( ( ruleComparisonExpression ) ) | ( ( rule__VarFor__Group_1__0 ) ) )
+            // InternalGo.g:2293:1: ( ( ( ruleComparisonExpression ) ) | ( ( rule__VarFor__Group_1__0 ) ) )
             int alt22=2;
             switch ( input.LA(1) ) {
             case RULE_OPEN_PARENTHESES:
@@ -8117,16 +8287,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
             switch (alt22) {
                 case 1 :
-                    // InternalGo.g:2244:2: ( ( ruleComparisonExpression ) )
+                    // InternalGo.g:2294:2: ( ( ruleComparisonExpression ) )
                     {
-                    // InternalGo.g:2244:2: ( ( ruleComparisonExpression ) )
-                    // InternalGo.g:2245:3: ( ruleComparisonExpression )
+                    // InternalGo.g:2294:2: ( ( ruleComparisonExpression ) )
+                    // InternalGo.g:2295:3: ( ruleComparisonExpression )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVarForAccess().getComparisonExpressionParserRuleCall_0()); 
                     }
-                    // InternalGo.g:2246:3: ( ruleComparisonExpression )
-                    // InternalGo.g:2246:4: ruleComparisonExpression
+                    // InternalGo.g:2296:3: ( ruleComparisonExpression )
+                    // InternalGo.g:2296:4: ruleComparisonExpression
                     {
                     pushFollow(FOLLOW_2);
                     ruleComparisonExpression();
@@ -8146,16 +8316,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2250:2: ( ( rule__VarFor__Group_1__0 ) )
+                    // InternalGo.g:2300:2: ( ( rule__VarFor__Group_1__0 ) )
                     {
-                    // InternalGo.g:2250:2: ( ( rule__VarFor__Group_1__0 ) )
-                    // InternalGo.g:2251:3: ( rule__VarFor__Group_1__0 )
+                    // InternalGo.g:2300:2: ( ( rule__VarFor__Group_1__0 ) )
+                    // InternalGo.g:2301:3: ( rule__VarFor__Group_1__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVarForAccess().getGroup_1()); 
                     }
-                    // InternalGo.g:2252:3: ( rule__VarFor__Group_1__0 )
-                    // InternalGo.g:2252:4: rule__VarFor__Group_1__0
+                    // InternalGo.g:2302:3: ( rule__VarFor__Group_1__0 )
+                    // InternalGo.g:2302:4: rule__VarFor__Group_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__VarFor__Group_1__0();
@@ -8192,13 +8362,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VarFor__Alternatives_1_0"
-    // InternalGo.g:2260:1: rule__VarFor__Alternatives_1_0 : ( ( ruleAtrib ) | ( ruleReAtrib ) );
+    // InternalGo.g:2310:1: rule__VarFor__Alternatives_1_0 : ( ( ruleAtrib ) | ( ruleReAtrib ) );
     public final void rule__VarFor__Alternatives_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2264:1: ( ( ruleAtrib ) | ( ruleReAtrib ) )
+            // InternalGo.g:2314:1: ( ( ruleAtrib ) | ( ruleReAtrib ) )
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -8217,10 +8387,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt23) {
                 case 1 :
-                    // InternalGo.g:2265:2: ( ruleAtrib )
+                    // InternalGo.g:2315:2: ( ruleAtrib )
                     {
-                    // InternalGo.g:2265:2: ( ruleAtrib )
-                    // InternalGo.g:2266:3: ruleAtrib
+                    // InternalGo.g:2315:2: ( ruleAtrib )
+                    // InternalGo.g:2316:3: ruleAtrib
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVarForAccess().getAtribParserRuleCall_1_0_0()); 
@@ -8240,10 +8410,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2271:2: ( ruleReAtrib )
+                    // InternalGo.g:2321:2: ( ruleReAtrib )
                     {
-                    // InternalGo.g:2271:2: ( ruleReAtrib )
-                    // InternalGo.g:2272:3: ruleReAtrib
+                    // InternalGo.g:2321:2: ( ruleReAtrib )
+                    // InternalGo.g:2322:3: ruleReAtrib
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVarForAccess().getReAtribParserRuleCall_1_0_1()); 
@@ -8280,13 +8450,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VarFor__KAlternatives_1_4_0"
-    // InternalGo.g:2281:1: rule__VarFor__KAlternatives_1_4_0 : ( ( ruleoperationsOne ) | ( ruleOperationsOneEquals ) | ( ruleOperations ) );
+    // InternalGo.g:2331:1: rule__VarFor__KAlternatives_1_4_0 : ( ( ruleoperationsOne ) | ( ruleOperationsOneEquals ) | ( ruleOperations ) );
     public final void rule__VarFor__KAlternatives_1_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2285:1: ( ( ruleoperationsOne ) | ( ruleOperationsOneEquals ) | ( ruleOperations ) )
+            // InternalGo.g:2335:1: ( ( ruleoperationsOne ) | ( ruleOperationsOneEquals ) | ( ruleOperations ) )
             int alt24=3;
             int LA24_0 = input.LA(1);
 
@@ -8319,10 +8489,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt24) {
                 case 1 :
-                    // InternalGo.g:2286:2: ( ruleoperationsOne )
+                    // InternalGo.g:2336:2: ( ruleoperationsOne )
                     {
-                    // InternalGo.g:2286:2: ( ruleoperationsOne )
-                    // InternalGo.g:2287:3: ruleoperationsOne
+                    // InternalGo.g:2336:2: ( ruleoperationsOne )
+                    // InternalGo.g:2337:3: ruleoperationsOne
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVarForAccess().getKOperationsOneParserRuleCall_1_4_0_0()); 
@@ -8342,10 +8512,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2292:2: ( ruleOperationsOneEquals )
+                    // InternalGo.g:2342:2: ( ruleOperationsOneEquals )
                     {
-                    // InternalGo.g:2292:2: ( ruleOperationsOneEquals )
-                    // InternalGo.g:2293:3: ruleOperationsOneEquals
+                    // InternalGo.g:2342:2: ( ruleOperationsOneEquals )
+                    // InternalGo.g:2343:3: ruleOperationsOneEquals
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVarForAccess().getKOperationsOneEqualsParserRuleCall_1_4_0_1()); 
@@ -8365,10 +8535,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalGo.g:2298:2: ( ruleOperations )
+                    // InternalGo.g:2348:2: ( ruleOperations )
                     {
-                    // InternalGo.g:2298:2: ( ruleOperations )
-                    // InternalGo.g:2299:3: ruleOperations
+                    // InternalGo.g:2348:2: ( ruleOperations )
+                    // InternalGo.g:2349:3: ruleOperations
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVarForAccess().getKOperationsParserRuleCall_1_4_0_2()); 
@@ -8405,13 +8575,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Literal__Alternatives"
-    // InternalGo.g:2308:1: rule__Literal__Alternatives : ( ( ( rule__Literal__Group_0__0 ) ) | ( ruleNumbers ) | ( ruleVariable ) );
+    // InternalGo.g:2358:1: rule__Literal__Alternatives : ( ( ( rule__Literal__Group_0__0 ) ) | ( ruleNumbers ) | ( ruleVariable ) );
     public final void rule__Literal__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2312:1: ( ( ( rule__Literal__Group_0__0 ) ) | ( ruleNumbers ) | ( ruleVariable ) )
+            // InternalGo.g:2362:1: ( ( ( rule__Literal__Group_0__0 ) ) | ( ruleNumbers ) | ( ruleVariable ) )
             int alt25=3;
             switch ( input.LA(1) ) {
             case 65:
@@ -8440,16 +8610,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
             switch (alt25) {
                 case 1 :
-                    // InternalGo.g:2313:2: ( ( rule__Literal__Group_0__0 ) )
+                    // InternalGo.g:2363:2: ( ( rule__Literal__Group_0__0 ) )
                     {
-                    // InternalGo.g:2313:2: ( ( rule__Literal__Group_0__0 ) )
-                    // InternalGo.g:2314:3: ( rule__Literal__Group_0__0 )
+                    // InternalGo.g:2363:2: ( ( rule__Literal__Group_0__0 ) )
+                    // InternalGo.g:2364:3: ( rule__Literal__Group_0__0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getLiteralAccess().getGroup_0()); 
                     }
-                    // InternalGo.g:2315:3: ( rule__Literal__Group_0__0 )
-                    // InternalGo.g:2315:4: rule__Literal__Group_0__0
+                    // InternalGo.g:2365:3: ( rule__Literal__Group_0__0 )
+                    // InternalGo.g:2365:4: rule__Literal__Group_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Literal__Group_0__0();
@@ -8469,10 +8639,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2319:2: ( ruleNumbers )
+                    // InternalGo.g:2369:2: ( ruleNumbers )
                     {
-                    // InternalGo.g:2319:2: ( ruleNumbers )
-                    // InternalGo.g:2320:3: ruleNumbers
+                    // InternalGo.g:2369:2: ( ruleNumbers )
+                    // InternalGo.g:2370:3: ruleNumbers
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getLiteralAccess().getNumbersParserRuleCall_1()); 
@@ -8492,10 +8662,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalGo.g:2325:2: ( ruleVariable )
+                    // InternalGo.g:2375:2: ( ruleVariable )
                     {
-                    // InternalGo.g:2325:2: ( ruleVariable )
-                    // InternalGo.g:2326:3: ruleVariable
+                    // InternalGo.g:2375:2: ( ruleVariable )
+                    // InternalGo.g:2376:3: ruleVariable
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getLiteralAccess().getVariableParserRuleCall_2()); 
@@ -8532,13 +8702,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Types__Alternatives"
-    // InternalGo.g:2335:1: rule__Types__Alternatives : ( ( ruleTYPE ) | ( 'string' ) | ( 'int' ) | ( 'bool' ) | ( 'byte' ) | ( 'rune' ) | ( 'float32' ) | ( 'float64' ) );
+    // InternalGo.g:2385:1: rule__Types__Alternatives : ( ( ruleTYPE ) | ( 'string' ) | ( 'int' ) | ( 'bool' ) | ( 'byte' ) | ( 'rune' ) | ( 'float32' ) | ( 'float64' ) );
     public final void rule__Types__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2339:1: ( ( ruleTYPE ) | ( 'string' ) | ( 'int' ) | ( 'bool' ) | ( 'byte' ) | ( 'rune' ) | ( 'float32' ) | ( 'float64' ) )
+            // InternalGo.g:2389:1: ( ( ruleTYPE ) | ( 'string' ) | ( 'int' ) | ( 'bool' ) | ( 'byte' ) | ( 'rune' ) | ( 'float32' ) | ( 'float64' ) )
             int alt26=8;
             switch ( input.LA(1) ) {
             case 45:
@@ -8591,10 +8761,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
             switch (alt26) {
                 case 1 :
-                    // InternalGo.g:2340:2: ( ruleTYPE )
+                    // InternalGo.g:2390:2: ( ruleTYPE )
                     {
-                    // InternalGo.g:2340:2: ( ruleTYPE )
-                    // InternalGo.g:2341:3: ruleTYPE
+                    // InternalGo.g:2390:2: ( ruleTYPE )
+                    // InternalGo.g:2391:3: ruleTYPE
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTypesAccess().getTYPEParserRuleCall_0()); 
@@ -8614,10 +8784,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2346:2: ( 'string' )
+                    // InternalGo.g:2396:2: ( 'string' )
                     {
-                    // InternalGo.g:2346:2: ( 'string' )
-                    // InternalGo.g:2347:3: 'string'
+                    // InternalGo.g:2396:2: ( 'string' )
+                    // InternalGo.g:2397:3: 'string'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTypesAccess().getStringKeyword_1()); 
@@ -8633,10 +8803,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalGo.g:2352:2: ( 'int' )
+                    // InternalGo.g:2402:2: ( 'int' )
                     {
-                    // InternalGo.g:2352:2: ( 'int' )
-                    // InternalGo.g:2353:3: 'int'
+                    // InternalGo.g:2402:2: ( 'int' )
+                    // InternalGo.g:2403:3: 'int'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTypesAccess().getIntKeyword_2()); 
@@ -8652,10 +8822,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // InternalGo.g:2358:2: ( 'bool' )
+                    // InternalGo.g:2408:2: ( 'bool' )
                     {
-                    // InternalGo.g:2358:2: ( 'bool' )
-                    // InternalGo.g:2359:3: 'bool'
+                    // InternalGo.g:2408:2: ( 'bool' )
+                    // InternalGo.g:2409:3: 'bool'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTypesAccess().getBoolKeyword_3()); 
@@ -8671,10 +8841,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // InternalGo.g:2364:2: ( 'byte' )
+                    // InternalGo.g:2414:2: ( 'byte' )
                     {
-                    // InternalGo.g:2364:2: ( 'byte' )
-                    // InternalGo.g:2365:3: 'byte'
+                    // InternalGo.g:2414:2: ( 'byte' )
+                    // InternalGo.g:2415:3: 'byte'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTypesAccess().getByteKeyword_4()); 
@@ -8690,10 +8860,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // InternalGo.g:2370:2: ( 'rune' )
+                    // InternalGo.g:2420:2: ( 'rune' )
                     {
-                    // InternalGo.g:2370:2: ( 'rune' )
-                    // InternalGo.g:2371:3: 'rune'
+                    // InternalGo.g:2420:2: ( 'rune' )
+                    // InternalGo.g:2421:3: 'rune'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTypesAccess().getRuneKeyword_5()); 
@@ -8709,10 +8879,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 7 :
-                    // InternalGo.g:2376:2: ( 'float32' )
+                    // InternalGo.g:2426:2: ( 'float32' )
                     {
-                    // InternalGo.g:2376:2: ( 'float32' )
-                    // InternalGo.g:2377:3: 'float32'
+                    // InternalGo.g:2426:2: ( 'float32' )
+                    // InternalGo.g:2427:3: 'float32'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTypesAccess().getFloat32Keyword_6()); 
@@ -8728,10 +8898,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 8 :
-                    // InternalGo.g:2382:2: ( 'float64' )
+                    // InternalGo.g:2432:2: ( 'float64' )
                     {
-                    // InternalGo.g:2382:2: ( 'float64' )
-                    // InternalGo.g:2383:3: 'float64'
+                    // InternalGo.g:2432:2: ( 'float64' )
+                    // InternalGo.g:2433:3: 'float64'
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getTypesAccess().getFloat64Keyword_7()); 
@@ -8764,13 +8934,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Modif__Alternatives"
-    // InternalGo.g:2392:1: rule__Modif__Alternatives : ( ( ruleVAR ) | ( ruleCONST ) );
+    // InternalGo.g:2442:1: rule__Modif__Alternatives : ( ( ruleVAR ) | ( ruleCONST ) );
     public final void rule__Modif__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2396:1: ( ( ruleVAR ) | ( ruleCONST ) )
+            // InternalGo.g:2446:1: ( ( ruleVAR ) | ( ruleCONST ) )
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -8789,10 +8959,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt27) {
                 case 1 :
-                    // InternalGo.g:2397:2: ( ruleVAR )
+                    // InternalGo.g:2447:2: ( ruleVAR )
                     {
-                    // InternalGo.g:2397:2: ( ruleVAR )
-                    // InternalGo.g:2398:3: ruleVAR
+                    // InternalGo.g:2447:2: ( ruleVAR )
+                    // InternalGo.g:2448:3: ruleVAR
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getModifAccess().getVARParserRuleCall_0()); 
@@ -8812,10 +8982,10 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2403:2: ( ruleCONST )
+                    // InternalGo.g:2453:2: ( ruleCONST )
                     {
-                    // InternalGo.g:2403:2: ( ruleCONST )
-                    // InternalGo.g:2404:3: ruleCONST
+                    // InternalGo.g:2453:2: ( ruleCONST )
+                    // InternalGo.g:2454:3: ruleCONST
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getModifAccess().getCONSTParserRuleCall_1()); 
@@ -8852,13 +9022,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Bool__Alternatives"
-    // InternalGo.g:2413:1: rule__Bool__Alternatives : ( ( ( rule__Bool__ValAssignment_0 ) ) | ( ( rule__Bool__ValAssignment_1 ) ) );
+    // InternalGo.g:2463:1: rule__Bool__Alternatives : ( ( ( rule__Bool__ValAssignment_0 ) ) | ( ( rule__Bool__ValAssignment_1 ) ) );
     public final void rule__Bool__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2417:1: ( ( ( rule__Bool__ValAssignment_0 ) ) | ( ( rule__Bool__ValAssignment_1 ) ) )
+            // InternalGo.g:2467:1: ( ( ( rule__Bool__ValAssignment_0 ) ) | ( ( rule__Bool__ValAssignment_1 ) ) )
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -8877,16 +9047,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt28) {
                 case 1 :
-                    // InternalGo.g:2418:2: ( ( rule__Bool__ValAssignment_0 ) )
+                    // InternalGo.g:2468:2: ( ( rule__Bool__ValAssignment_0 ) )
                     {
-                    // InternalGo.g:2418:2: ( ( rule__Bool__ValAssignment_0 ) )
-                    // InternalGo.g:2419:3: ( rule__Bool__ValAssignment_0 )
+                    // InternalGo.g:2468:2: ( ( rule__Bool__ValAssignment_0 ) )
+                    // InternalGo.g:2469:3: ( rule__Bool__ValAssignment_0 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBoolAccess().getValAssignment_0()); 
                     }
-                    // InternalGo.g:2420:3: ( rule__Bool__ValAssignment_0 )
-                    // InternalGo.g:2420:4: rule__Bool__ValAssignment_0
+                    // InternalGo.g:2470:3: ( rule__Bool__ValAssignment_0 )
+                    // InternalGo.g:2470:4: rule__Bool__ValAssignment_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Bool__ValAssignment_0();
@@ -8906,16 +9076,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGo.g:2424:2: ( ( rule__Bool__ValAssignment_1 ) )
+                    // InternalGo.g:2474:2: ( ( rule__Bool__ValAssignment_1 ) )
                     {
-                    // InternalGo.g:2424:2: ( ( rule__Bool__ValAssignment_1 ) )
-                    // InternalGo.g:2425:3: ( rule__Bool__ValAssignment_1 )
+                    // InternalGo.g:2474:2: ( ( rule__Bool__ValAssignment_1 ) )
+                    // InternalGo.g:2475:3: ( rule__Bool__ValAssignment_1 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getBoolAccess().getValAssignment_1()); 
                     }
-                    // InternalGo.g:2426:3: ( rule__Bool__ValAssignment_1 )
-                    // InternalGo.g:2426:4: rule__Bool__ValAssignment_1
+                    // InternalGo.g:2476:3: ( rule__Bool__ValAssignment_1 )
+                    // InternalGo.g:2476:4: rule__Bool__ValAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Bool__ValAssignment_1();
@@ -8952,14 +9122,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Decl__Group__0"
-    // InternalGo.g:2434:1: rule__Decl__Group__0 : rule__Decl__Group__0__Impl rule__Decl__Group__1 ;
+    // InternalGo.g:2484:1: rule__Decl__Group__0 : rule__Decl__Group__0__Impl rule__Decl__Group__1 ;
     public final void rule__Decl__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2438:1: ( rule__Decl__Group__0__Impl rule__Decl__Group__1 )
-            // InternalGo.g:2439:2: rule__Decl__Group__0__Impl rule__Decl__Group__1
+            // InternalGo.g:2488:1: ( rule__Decl__Group__0__Impl rule__Decl__Group__1 )
+            // InternalGo.g:2489:2: rule__Decl__Group__0__Impl rule__Decl__Group__1
             {
             pushFollow(FOLLOW_4);
             rule__Decl__Group__0__Impl();
@@ -8990,17 +9160,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Decl__Group__0__Impl"
-    // InternalGo.g:2446:1: rule__Decl__Group__0__Impl : ( ruleModif ) ;
+    // InternalGo.g:2496:1: rule__Decl__Group__0__Impl : ( ruleModif ) ;
     public final void rule__Decl__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2450:1: ( ( ruleModif ) )
-            // InternalGo.g:2451:1: ( ruleModif )
+            // InternalGo.g:2500:1: ( ( ruleModif ) )
+            // InternalGo.g:2501:1: ( ruleModif )
             {
-            // InternalGo.g:2451:1: ( ruleModif )
-            // InternalGo.g:2452:2: ruleModif
+            // InternalGo.g:2501:1: ( ruleModif )
+            // InternalGo.g:2502:2: ruleModif
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDeclAccess().getModifParserRuleCall_0()); 
@@ -9035,14 +9205,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Decl__Group__1"
-    // InternalGo.g:2461:1: rule__Decl__Group__1 : rule__Decl__Group__1__Impl rule__Decl__Group__2 ;
+    // InternalGo.g:2511:1: rule__Decl__Group__1 : rule__Decl__Group__1__Impl rule__Decl__Group__2 ;
     public final void rule__Decl__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2465:1: ( rule__Decl__Group__1__Impl rule__Decl__Group__2 )
-            // InternalGo.g:2466:2: rule__Decl__Group__1__Impl rule__Decl__Group__2
+            // InternalGo.g:2515:1: ( rule__Decl__Group__1__Impl rule__Decl__Group__2 )
+            // InternalGo.g:2516:2: rule__Decl__Group__1__Impl rule__Decl__Group__2
             {
             pushFollow(FOLLOW_5);
             rule__Decl__Group__1__Impl();
@@ -9073,23 +9243,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Decl__Group__1__Impl"
-    // InternalGo.g:2473:1: rule__Decl__Group__1__Impl : ( ( rule__Decl__NameAssignment_1 ) ) ;
+    // InternalGo.g:2523:1: rule__Decl__Group__1__Impl : ( ( rule__Decl__NameAssignment_1 ) ) ;
     public final void rule__Decl__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2477:1: ( ( ( rule__Decl__NameAssignment_1 ) ) )
-            // InternalGo.g:2478:1: ( ( rule__Decl__NameAssignment_1 ) )
+            // InternalGo.g:2527:1: ( ( ( rule__Decl__NameAssignment_1 ) ) )
+            // InternalGo.g:2528:1: ( ( rule__Decl__NameAssignment_1 ) )
             {
-            // InternalGo.g:2478:1: ( ( rule__Decl__NameAssignment_1 ) )
-            // InternalGo.g:2479:2: ( rule__Decl__NameAssignment_1 )
+            // InternalGo.g:2528:1: ( ( rule__Decl__NameAssignment_1 ) )
+            // InternalGo.g:2529:2: ( rule__Decl__NameAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDeclAccess().getNameAssignment_1()); 
             }
-            // InternalGo.g:2480:2: ( rule__Decl__NameAssignment_1 )
-            // InternalGo.g:2480:3: rule__Decl__NameAssignment_1
+            // InternalGo.g:2530:2: ( rule__Decl__NameAssignment_1 )
+            // InternalGo.g:2530:3: rule__Decl__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Decl__NameAssignment_1();
@@ -9124,14 +9294,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Decl__Group__2"
-    // InternalGo.g:2488:1: rule__Decl__Group__2 : rule__Decl__Group__2__Impl ;
+    // InternalGo.g:2538:1: rule__Decl__Group__2 : rule__Decl__Group__2__Impl ;
     public final void rule__Decl__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2492:1: ( rule__Decl__Group__2__Impl )
-            // InternalGo.g:2493:2: rule__Decl__Group__2__Impl
+            // InternalGo.g:2542:1: ( rule__Decl__Group__2__Impl )
+            // InternalGo.g:2543:2: rule__Decl__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Decl__Group__2__Impl();
@@ -9157,23 +9327,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Decl__Group__2__Impl"
-    // InternalGo.g:2499:1: rule__Decl__Group__2__Impl : ( ( rule__Decl__TypeAssignment_2 ) ) ;
+    // InternalGo.g:2549:1: rule__Decl__Group__2__Impl : ( ( rule__Decl__TypeAssignment_2 ) ) ;
     public final void rule__Decl__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2503:1: ( ( ( rule__Decl__TypeAssignment_2 ) ) )
-            // InternalGo.g:2504:1: ( ( rule__Decl__TypeAssignment_2 ) )
+            // InternalGo.g:2553:1: ( ( ( rule__Decl__TypeAssignment_2 ) ) )
+            // InternalGo.g:2554:1: ( ( rule__Decl__TypeAssignment_2 ) )
             {
-            // InternalGo.g:2504:1: ( ( rule__Decl__TypeAssignment_2 ) )
-            // InternalGo.g:2505:2: ( rule__Decl__TypeAssignment_2 )
+            // InternalGo.g:2554:1: ( ( rule__Decl__TypeAssignment_2 ) )
+            // InternalGo.g:2555:2: ( rule__Decl__TypeAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDeclAccess().getTypeAssignment_2()); 
             }
-            // InternalGo.g:2506:2: ( rule__Decl__TypeAssignment_2 )
-            // InternalGo.g:2506:3: rule__Decl__TypeAssignment_2
+            // InternalGo.g:2556:2: ( rule__Decl__TypeAssignment_2 )
+            // InternalGo.g:2556:3: rule__Decl__TypeAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Decl__TypeAssignment_2();
@@ -9208,14 +9378,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group__0"
-    // InternalGo.g:2515:1: rule__AtribVar__Group__0 : rule__AtribVar__Group__0__Impl rule__AtribVar__Group__1 ;
+    // InternalGo.g:2565:1: rule__AtribVar__Group__0 : rule__AtribVar__Group__0__Impl rule__AtribVar__Group__1 ;
     public final void rule__AtribVar__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2519:1: ( rule__AtribVar__Group__0__Impl rule__AtribVar__Group__1 )
-            // InternalGo.g:2520:2: rule__AtribVar__Group__0__Impl rule__AtribVar__Group__1
+            // InternalGo.g:2569:1: ( rule__AtribVar__Group__0__Impl rule__AtribVar__Group__1 )
+            // InternalGo.g:2570:2: rule__AtribVar__Group__0__Impl rule__AtribVar__Group__1
             {
             pushFollow(FOLLOW_4);
             rule__AtribVar__Group__0__Impl();
@@ -9246,17 +9416,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group__0__Impl"
-    // InternalGo.g:2527:1: rule__AtribVar__Group__0__Impl : ( ruleModif ) ;
+    // InternalGo.g:2577:1: rule__AtribVar__Group__0__Impl : ( ruleModif ) ;
     public final void rule__AtribVar__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2531:1: ( ( ruleModif ) )
-            // InternalGo.g:2532:1: ( ruleModif )
+            // InternalGo.g:2581:1: ( ( ruleModif ) )
+            // InternalGo.g:2582:1: ( ruleModif )
             {
-            // InternalGo.g:2532:1: ( ruleModif )
-            // InternalGo.g:2533:2: ruleModif
+            // InternalGo.g:2582:1: ( ruleModif )
+            // InternalGo.g:2583:2: ruleModif
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getModifParserRuleCall_0()); 
@@ -9291,14 +9461,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group__1"
-    // InternalGo.g:2542:1: rule__AtribVar__Group__1 : rule__AtribVar__Group__1__Impl rule__AtribVar__Group__2 ;
+    // InternalGo.g:2592:1: rule__AtribVar__Group__1 : rule__AtribVar__Group__1__Impl rule__AtribVar__Group__2 ;
     public final void rule__AtribVar__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2546:1: ( rule__AtribVar__Group__1__Impl rule__AtribVar__Group__2 )
-            // InternalGo.g:2547:2: rule__AtribVar__Group__1__Impl rule__AtribVar__Group__2
+            // InternalGo.g:2596:1: ( rule__AtribVar__Group__1__Impl rule__AtribVar__Group__2 )
+            // InternalGo.g:2597:2: rule__AtribVar__Group__1__Impl rule__AtribVar__Group__2
             {
             pushFollow(FOLLOW_6);
             rule__AtribVar__Group__1__Impl();
@@ -9329,23 +9499,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group__1__Impl"
-    // InternalGo.g:2554:1: rule__AtribVar__Group__1__Impl : ( ( rule__AtribVar__VarsAssignment_1 ) ) ;
+    // InternalGo.g:2604:1: rule__AtribVar__Group__1__Impl : ( ( rule__AtribVar__VarsAssignment_1 ) ) ;
     public final void rule__AtribVar__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2558:1: ( ( ( rule__AtribVar__VarsAssignment_1 ) ) )
-            // InternalGo.g:2559:1: ( ( rule__AtribVar__VarsAssignment_1 ) )
+            // InternalGo.g:2608:1: ( ( ( rule__AtribVar__VarsAssignment_1 ) ) )
+            // InternalGo.g:2609:1: ( ( rule__AtribVar__VarsAssignment_1 ) )
             {
-            // InternalGo.g:2559:1: ( ( rule__AtribVar__VarsAssignment_1 ) )
-            // InternalGo.g:2560:2: ( rule__AtribVar__VarsAssignment_1 )
+            // InternalGo.g:2609:1: ( ( rule__AtribVar__VarsAssignment_1 ) )
+            // InternalGo.g:2610:2: ( rule__AtribVar__VarsAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getVarsAssignment_1()); 
             }
-            // InternalGo.g:2561:2: ( rule__AtribVar__VarsAssignment_1 )
-            // InternalGo.g:2561:3: rule__AtribVar__VarsAssignment_1
+            // InternalGo.g:2611:2: ( rule__AtribVar__VarsAssignment_1 )
+            // InternalGo.g:2611:3: rule__AtribVar__VarsAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__AtribVar__VarsAssignment_1();
@@ -9380,14 +9550,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group__2"
-    // InternalGo.g:2569:1: rule__AtribVar__Group__2 : rule__AtribVar__Group__2__Impl rule__AtribVar__Group__3 ;
+    // InternalGo.g:2619:1: rule__AtribVar__Group__2 : rule__AtribVar__Group__2__Impl rule__AtribVar__Group__3 ;
     public final void rule__AtribVar__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2573:1: ( rule__AtribVar__Group__2__Impl rule__AtribVar__Group__3 )
-            // InternalGo.g:2574:2: rule__AtribVar__Group__2__Impl rule__AtribVar__Group__3
+            // InternalGo.g:2623:1: ( rule__AtribVar__Group__2__Impl rule__AtribVar__Group__3 )
+            // InternalGo.g:2624:2: rule__AtribVar__Group__2__Impl rule__AtribVar__Group__3
             {
             pushFollow(FOLLOW_6);
             rule__AtribVar__Group__2__Impl();
@@ -9418,22 +9588,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group__2__Impl"
-    // InternalGo.g:2581:1: rule__AtribVar__Group__2__Impl : ( ( rule__AtribVar__Group_2__0 )* ) ;
+    // InternalGo.g:2631:1: rule__AtribVar__Group__2__Impl : ( ( rule__AtribVar__Group_2__0 )* ) ;
     public final void rule__AtribVar__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2585:1: ( ( ( rule__AtribVar__Group_2__0 )* ) )
-            // InternalGo.g:2586:1: ( ( rule__AtribVar__Group_2__0 )* )
+            // InternalGo.g:2635:1: ( ( ( rule__AtribVar__Group_2__0 )* ) )
+            // InternalGo.g:2636:1: ( ( rule__AtribVar__Group_2__0 )* )
             {
-            // InternalGo.g:2586:1: ( ( rule__AtribVar__Group_2__0 )* )
-            // InternalGo.g:2587:2: ( rule__AtribVar__Group_2__0 )*
+            // InternalGo.g:2636:1: ( ( rule__AtribVar__Group_2__0 )* )
+            // InternalGo.g:2637:2: ( rule__AtribVar__Group_2__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getGroup_2()); 
             }
-            // InternalGo.g:2588:2: ( rule__AtribVar__Group_2__0 )*
+            // InternalGo.g:2638:2: ( rule__AtribVar__Group_2__0 )*
             loop29:
             do {
                 int alt29=2;
@@ -9446,7 +9616,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt29) {
             	case 1 :
-            	    // InternalGo.g:2588:3: rule__AtribVar__Group_2__0
+            	    // InternalGo.g:2638:3: rule__AtribVar__Group_2__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__AtribVar__Group_2__0();
@@ -9487,14 +9657,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group__3"
-    // InternalGo.g:2596:1: rule__AtribVar__Group__3 : rule__AtribVar__Group__3__Impl rule__AtribVar__Group__4 ;
+    // InternalGo.g:2646:1: rule__AtribVar__Group__3 : rule__AtribVar__Group__3__Impl rule__AtribVar__Group__4 ;
     public final void rule__AtribVar__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2600:1: ( rule__AtribVar__Group__3__Impl rule__AtribVar__Group__4 )
-            // InternalGo.g:2601:2: rule__AtribVar__Group__3__Impl rule__AtribVar__Group__4
+            // InternalGo.g:2650:1: ( rule__AtribVar__Group__3__Impl rule__AtribVar__Group__4 )
+            // InternalGo.g:2651:2: rule__AtribVar__Group__3__Impl rule__AtribVar__Group__4
             {
             pushFollow(FOLLOW_8);
             rule__AtribVar__Group__3__Impl();
@@ -9525,23 +9695,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group__3__Impl"
-    // InternalGo.g:2608:1: rule__AtribVar__Group__3__Impl : ( ( rule__AtribVar__TypeAssignment_3 ) ) ;
+    // InternalGo.g:2658:1: rule__AtribVar__Group__3__Impl : ( ( rule__AtribVar__TypeAssignment_3 ) ) ;
     public final void rule__AtribVar__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2612:1: ( ( ( rule__AtribVar__TypeAssignment_3 ) ) )
-            // InternalGo.g:2613:1: ( ( rule__AtribVar__TypeAssignment_3 ) )
+            // InternalGo.g:2662:1: ( ( ( rule__AtribVar__TypeAssignment_3 ) ) )
+            // InternalGo.g:2663:1: ( ( rule__AtribVar__TypeAssignment_3 ) )
             {
-            // InternalGo.g:2613:1: ( ( rule__AtribVar__TypeAssignment_3 ) )
-            // InternalGo.g:2614:2: ( rule__AtribVar__TypeAssignment_3 )
+            // InternalGo.g:2663:1: ( ( rule__AtribVar__TypeAssignment_3 ) )
+            // InternalGo.g:2664:2: ( rule__AtribVar__TypeAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getTypeAssignment_3()); 
             }
-            // InternalGo.g:2615:2: ( rule__AtribVar__TypeAssignment_3 )
-            // InternalGo.g:2615:3: rule__AtribVar__TypeAssignment_3
+            // InternalGo.g:2665:2: ( rule__AtribVar__TypeAssignment_3 )
+            // InternalGo.g:2665:3: rule__AtribVar__TypeAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__AtribVar__TypeAssignment_3();
@@ -9576,14 +9746,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group__4"
-    // InternalGo.g:2623:1: rule__AtribVar__Group__4 : rule__AtribVar__Group__4__Impl ;
+    // InternalGo.g:2673:1: rule__AtribVar__Group__4 : rule__AtribVar__Group__4__Impl ;
     public final void rule__AtribVar__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2627:1: ( rule__AtribVar__Group__4__Impl )
-            // InternalGo.g:2628:2: rule__AtribVar__Group__4__Impl
+            // InternalGo.g:2677:1: ( rule__AtribVar__Group__4__Impl )
+            // InternalGo.g:2678:2: rule__AtribVar__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__AtribVar__Group__4__Impl();
@@ -9609,22 +9779,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group__4__Impl"
-    // InternalGo.g:2634:1: rule__AtribVar__Group__4__Impl : ( ( rule__AtribVar__Group_4__0 )? ) ;
+    // InternalGo.g:2684:1: rule__AtribVar__Group__4__Impl : ( ( rule__AtribVar__Group_4__0 )? ) ;
     public final void rule__AtribVar__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2638:1: ( ( ( rule__AtribVar__Group_4__0 )? ) )
-            // InternalGo.g:2639:1: ( ( rule__AtribVar__Group_4__0 )? )
+            // InternalGo.g:2688:1: ( ( ( rule__AtribVar__Group_4__0 )? ) )
+            // InternalGo.g:2689:1: ( ( rule__AtribVar__Group_4__0 )? )
             {
-            // InternalGo.g:2639:1: ( ( rule__AtribVar__Group_4__0 )? )
-            // InternalGo.g:2640:2: ( rule__AtribVar__Group_4__0 )?
+            // InternalGo.g:2689:1: ( ( rule__AtribVar__Group_4__0 )? )
+            // InternalGo.g:2690:2: ( rule__AtribVar__Group_4__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getGroup_4()); 
             }
-            // InternalGo.g:2641:2: ( rule__AtribVar__Group_4__0 )?
+            // InternalGo.g:2691:2: ( rule__AtribVar__Group_4__0 )?
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -9633,7 +9803,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt30) {
                 case 1 :
-                    // InternalGo.g:2641:3: rule__AtribVar__Group_4__0
+                    // InternalGo.g:2691:3: rule__AtribVar__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__AtribVar__Group_4__0();
@@ -9671,14 +9841,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group_2__0"
-    // InternalGo.g:2650:1: rule__AtribVar__Group_2__0 : rule__AtribVar__Group_2__0__Impl rule__AtribVar__Group_2__1 ;
+    // InternalGo.g:2700:1: rule__AtribVar__Group_2__0 : rule__AtribVar__Group_2__0__Impl rule__AtribVar__Group_2__1 ;
     public final void rule__AtribVar__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2654:1: ( rule__AtribVar__Group_2__0__Impl rule__AtribVar__Group_2__1 )
-            // InternalGo.g:2655:2: rule__AtribVar__Group_2__0__Impl rule__AtribVar__Group_2__1
+            // InternalGo.g:2704:1: ( rule__AtribVar__Group_2__0__Impl rule__AtribVar__Group_2__1 )
+            // InternalGo.g:2705:2: rule__AtribVar__Group_2__0__Impl rule__AtribVar__Group_2__1
             {
             pushFollow(FOLLOW_4);
             rule__AtribVar__Group_2__0__Impl();
@@ -9709,17 +9879,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group_2__0__Impl"
-    // InternalGo.g:2662:1: rule__AtribVar__Group_2__0__Impl : ( RULE_COMMA ) ;
+    // InternalGo.g:2712:1: rule__AtribVar__Group_2__0__Impl : ( RULE_COMMA ) ;
     public final void rule__AtribVar__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2666:1: ( ( RULE_COMMA ) )
-            // InternalGo.g:2667:1: ( RULE_COMMA )
+            // InternalGo.g:2716:1: ( ( RULE_COMMA ) )
+            // InternalGo.g:2717:1: ( RULE_COMMA )
             {
-            // InternalGo.g:2667:1: ( RULE_COMMA )
-            // InternalGo.g:2668:2: RULE_COMMA
+            // InternalGo.g:2717:1: ( RULE_COMMA )
+            // InternalGo.g:2718:2: RULE_COMMA
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getCommaTerminalRuleCall_2_0()); 
@@ -9750,14 +9920,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group_2__1"
-    // InternalGo.g:2677:1: rule__AtribVar__Group_2__1 : rule__AtribVar__Group_2__1__Impl ;
+    // InternalGo.g:2727:1: rule__AtribVar__Group_2__1 : rule__AtribVar__Group_2__1__Impl ;
     public final void rule__AtribVar__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2681:1: ( rule__AtribVar__Group_2__1__Impl )
-            // InternalGo.g:2682:2: rule__AtribVar__Group_2__1__Impl
+            // InternalGo.g:2731:1: ( rule__AtribVar__Group_2__1__Impl )
+            // InternalGo.g:2732:2: rule__AtribVar__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__AtribVar__Group_2__1__Impl();
@@ -9783,23 +9953,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group_2__1__Impl"
-    // InternalGo.g:2688:1: rule__AtribVar__Group_2__1__Impl : ( ( rule__AtribVar__VarsAssignment_2_1 ) ) ;
+    // InternalGo.g:2738:1: rule__AtribVar__Group_2__1__Impl : ( ( rule__AtribVar__VarsAssignment_2_1 ) ) ;
     public final void rule__AtribVar__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2692:1: ( ( ( rule__AtribVar__VarsAssignment_2_1 ) ) )
-            // InternalGo.g:2693:1: ( ( rule__AtribVar__VarsAssignment_2_1 ) )
+            // InternalGo.g:2742:1: ( ( ( rule__AtribVar__VarsAssignment_2_1 ) ) )
+            // InternalGo.g:2743:1: ( ( rule__AtribVar__VarsAssignment_2_1 ) )
             {
-            // InternalGo.g:2693:1: ( ( rule__AtribVar__VarsAssignment_2_1 ) )
-            // InternalGo.g:2694:2: ( rule__AtribVar__VarsAssignment_2_1 )
+            // InternalGo.g:2743:1: ( ( rule__AtribVar__VarsAssignment_2_1 ) )
+            // InternalGo.g:2744:2: ( rule__AtribVar__VarsAssignment_2_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getVarsAssignment_2_1()); 
             }
-            // InternalGo.g:2695:2: ( rule__AtribVar__VarsAssignment_2_1 )
-            // InternalGo.g:2695:3: rule__AtribVar__VarsAssignment_2_1
+            // InternalGo.g:2745:2: ( rule__AtribVar__VarsAssignment_2_1 )
+            // InternalGo.g:2745:3: rule__AtribVar__VarsAssignment_2_1
             {
             pushFollow(FOLLOW_2);
             rule__AtribVar__VarsAssignment_2_1();
@@ -9834,14 +10004,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group_4__0"
-    // InternalGo.g:2704:1: rule__AtribVar__Group_4__0 : rule__AtribVar__Group_4__0__Impl rule__AtribVar__Group_4__1 ;
+    // InternalGo.g:2754:1: rule__AtribVar__Group_4__0 : rule__AtribVar__Group_4__0__Impl rule__AtribVar__Group_4__1 ;
     public final void rule__AtribVar__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2708:1: ( rule__AtribVar__Group_4__0__Impl rule__AtribVar__Group_4__1 )
-            // InternalGo.g:2709:2: rule__AtribVar__Group_4__0__Impl rule__AtribVar__Group_4__1
+            // InternalGo.g:2758:1: ( rule__AtribVar__Group_4__0__Impl rule__AtribVar__Group_4__1 )
+            // InternalGo.g:2759:2: rule__AtribVar__Group_4__0__Impl rule__AtribVar__Group_4__1
             {
             pushFollow(FOLLOW_9);
             rule__AtribVar__Group_4__0__Impl();
@@ -9872,17 +10042,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group_4__0__Impl"
-    // InternalGo.g:2716:1: rule__AtribVar__Group_4__0__Impl : ( RULE_EQUALS ) ;
+    // InternalGo.g:2766:1: rule__AtribVar__Group_4__0__Impl : ( RULE_EQUALS ) ;
     public final void rule__AtribVar__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2720:1: ( ( RULE_EQUALS ) )
-            // InternalGo.g:2721:1: ( RULE_EQUALS )
+            // InternalGo.g:2770:1: ( ( RULE_EQUALS ) )
+            // InternalGo.g:2771:1: ( RULE_EQUALS )
             {
-            // InternalGo.g:2721:1: ( RULE_EQUALS )
-            // InternalGo.g:2722:2: RULE_EQUALS
+            // InternalGo.g:2771:1: ( RULE_EQUALS )
+            // InternalGo.g:2772:2: RULE_EQUALS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getEqualsTerminalRuleCall_4_0()); 
@@ -9913,14 +10083,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group_4__1"
-    // InternalGo.g:2731:1: rule__AtribVar__Group_4__1 : rule__AtribVar__Group_4__1__Impl rule__AtribVar__Group_4__2 ;
+    // InternalGo.g:2781:1: rule__AtribVar__Group_4__1 : rule__AtribVar__Group_4__1__Impl rule__AtribVar__Group_4__2 ;
     public final void rule__AtribVar__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2735:1: ( rule__AtribVar__Group_4__1__Impl rule__AtribVar__Group_4__2 )
-            // InternalGo.g:2736:2: rule__AtribVar__Group_4__1__Impl rule__AtribVar__Group_4__2
+            // InternalGo.g:2785:1: ( rule__AtribVar__Group_4__1__Impl rule__AtribVar__Group_4__2 )
+            // InternalGo.g:2786:2: rule__AtribVar__Group_4__1__Impl rule__AtribVar__Group_4__2
             {
             pushFollow(FOLLOW_10);
             rule__AtribVar__Group_4__1__Impl();
@@ -9951,23 +10121,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group_4__1__Impl"
-    // InternalGo.g:2743:1: rule__AtribVar__Group_4__1__Impl : ( ( rule__AtribVar__AtrbAssignment_4_1 ) ) ;
+    // InternalGo.g:2793:1: rule__AtribVar__Group_4__1__Impl : ( ( rule__AtribVar__AtrbAssignment_4_1 ) ) ;
     public final void rule__AtribVar__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2747:1: ( ( ( rule__AtribVar__AtrbAssignment_4_1 ) ) )
-            // InternalGo.g:2748:1: ( ( rule__AtribVar__AtrbAssignment_4_1 ) )
+            // InternalGo.g:2797:1: ( ( ( rule__AtribVar__AtrbAssignment_4_1 ) ) )
+            // InternalGo.g:2798:1: ( ( rule__AtribVar__AtrbAssignment_4_1 ) )
             {
-            // InternalGo.g:2748:1: ( ( rule__AtribVar__AtrbAssignment_4_1 ) )
-            // InternalGo.g:2749:2: ( rule__AtribVar__AtrbAssignment_4_1 )
+            // InternalGo.g:2798:1: ( ( rule__AtribVar__AtrbAssignment_4_1 ) )
+            // InternalGo.g:2799:2: ( rule__AtribVar__AtrbAssignment_4_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getAtrbAssignment_4_1()); 
             }
-            // InternalGo.g:2750:2: ( rule__AtribVar__AtrbAssignment_4_1 )
-            // InternalGo.g:2750:3: rule__AtribVar__AtrbAssignment_4_1
+            // InternalGo.g:2800:2: ( rule__AtribVar__AtrbAssignment_4_1 )
+            // InternalGo.g:2800:3: rule__AtribVar__AtrbAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__AtribVar__AtrbAssignment_4_1();
@@ -10002,14 +10172,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group_4__2"
-    // InternalGo.g:2758:1: rule__AtribVar__Group_4__2 : rule__AtribVar__Group_4__2__Impl ;
+    // InternalGo.g:2808:1: rule__AtribVar__Group_4__2 : rule__AtribVar__Group_4__2__Impl ;
     public final void rule__AtribVar__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2762:1: ( rule__AtribVar__Group_4__2__Impl )
-            // InternalGo.g:2763:2: rule__AtribVar__Group_4__2__Impl
+            // InternalGo.g:2812:1: ( rule__AtribVar__Group_4__2__Impl )
+            // InternalGo.g:2813:2: rule__AtribVar__Group_4__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__AtribVar__Group_4__2__Impl();
@@ -10035,23 +10205,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group_4__2__Impl"
-    // InternalGo.g:2769:1: rule__AtribVar__Group_4__2__Impl : ( ( rule__AtribVar__Group_4_2__0 ) ) ;
+    // InternalGo.g:2819:1: rule__AtribVar__Group_4__2__Impl : ( ( rule__AtribVar__Group_4_2__0 ) ) ;
     public final void rule__AtribVar__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2773:1: ( ( ( rule__AtribVar__Group_4_2__0 ) ) )
-            // InternalGo.g:2774:1: ( ( rule__AtribVar__Group_4_2__0 ) )
+            // InternalGo.g:2823:1: ( ( ( rule__AtribVar__Group_4_2__0 ) ) )
+            // InternalGo.g:2824:1: ( ( rule__AtribVar__Group_4_2__0 ) )
             {
-            // InternalGo.g:2774:1: ( ( rule__AtribVar__Group_4_2__0 ) )
-            // InternalGo.g:2775:2: ( rule__AtribVar__Group_4_2__0 )
+            // InternalGo.g:2824:1: ( ( rule__AtribVar__Group_4_2__0 ) )
+            // InternalGo.g:2825:2: ( rule__AtribVar__Group_4_2__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getGroup_4_2()); 
             }
-            // InternalGo.g:2776:2: ( rule__AtribVar__Group_4_2__0 )
-            // InternalGo.g:2776:3: rule__AtribVar__Group_4_2__0
+            // InternalGo.g:2826:2: ( rule__AtribVar__Group_4_2__0 )
+            // InternalGo.g:2826:3: rule__AtribVar__Group_4_2__0
             {
             pushFollow(FOLLOW_2);
             rule__AtribVar__Group_4_2__0();
@@ -10086,14 +10256,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group_4_2__0"
-    // InternalGo.g:2785:1: rule__AtribVar__Group_4_2__0 : rule__AtribVar__Group_4_2__0__Impl rule__AtribVar__Group_4_2__1 ;
+    // InternalGo.g:2835:1: rule__AtribVar__Group_4_2__0 : rule__AtribVar__Group_4_2__0__Impl rule__AtribVar__Group_4_2__1 ;
     public final void rule__AtribVar__Group_4_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2789:1: ( rule__AtribVar__Group_4_2__0__Impl rule__AtribVar__Group_4_2__1 )
-            // InternalGo.g:2790:2: rule__AtribVar__Group_4_2__0__Impl rule__AtribVar__Group_4_2__1
+            // InternalGo.g:2839:1: ( rule__AtribVar__Group_4_2__0__Impl rule__AtribVar__Group_4_2__1 )
+            // InternalGo.g:2840:2: rule__AtribVar__Group_4_2__0__Impl rule__AtribVar__Group_4_2__1
             {
             pushFollow(FOLLOW_9);
             rule__AtribVar__Group_4_2__0__Impl();
@@ -10124,17 +10294,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group_4_2__0__Impl"
-    // InternalGo.g:2797:1: rule__AtribVar__Group_4_2__0__Impl : ( RULE_COMMA ) ;
+    // InternalGo.g:2847:1: rule__AtribVar__Group_4_2__0__Impl : ( RULE_COMMA ) ;
     public final void rule__AtribVar__Group_4_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2801:1: ( ( RULE_COMMA ) )
-            // InternalGo.g:2802:1: ( RULE_COMMA )
+            // InternalGo.g:2851:1: ( ( RULE_COMMA ) )
+            // InternalGo.g:2852:1: ( RULE_COMMA )
             {
-            // InternalGo.g:2802:1: ( RULE_COMMA )
-            // InternalGo.g:2803:2: RULE_COMMA
+            // InternalGo.g:2852:1: ( RULE_COMMA )
+            // InternalGo.g:2853:2: RULE_COMMA
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getCommaTerminalRuleCall_4_2_0()); 
@@ -10165,14 +10335,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group_4_2__1"
-    // InternalGo.g:2812:1: rule__AtribVar__Group_4_2__1 : rule__AtribVar__Group_4_2__1__Impl ;
+    // InternalGo.g:2862:1: rule__AtribVar__Group_4_2__1 : rule__AtribVar__Group_4_2__1__Impl ;
     public final void rule__AtribVar__Group_4_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2816:1: ( rule__AtribVar__Group_4_2__1__Impl )
-            // InternalGo.g:2817:2: rule__AtribVar__Group_4_2__1__Impl
+            // InternalGo.g:2866:1: ( rule__AtribVar__Group_4_2__1__Impl )
+            // InternalGo.g:2867:2: rule__AtribVar__Group_4_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__AtribVar__Group_4_2__1__Impl();
@@ -10198,22 +10368,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__Group_4_2__1__Impl"
-    // InternalGo.g:2823:1: rule__AtribVar__Group_4_2__1__Impl : ( ( rule__AtribVar__AtrbAssignment_4_2_1 )* ) ;
+    // InternalGo.g:2873:1: rule__AtribVar__Group_4_2__1__Impl : ( ( rule__AtribVar__AtrbAssignment_4_2_1 )* ) ;
     public final void rule__AtribVar__Group_4_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2827:1: ( ( ( rule__AtribVar__AtrbAssignment_4_2_1 )* ) )
-            // InternalGo.g:2828:1: ( ( rule__AtribVar__AtrbAssignment_4_2_1 )* )
+            // InternalGo.g:2877:1: ( ( ( rule__AtribVar__AtrbAssignment_4_2_1 )* ) )
+            // InternalGo.g:2878:1: ( ( rule__AtribVar__AtrbAssignment_4_2_1 )* )
             {
-            // InternalGo.g:2828:1: ( ( rule__AtribVar__AtrbAssignment_4_2_1 )* )
-            // InternalGo.g:2829:2: ( rule__AtribVar__AtrbAssignment_4_2_1 )*
+            // InternalGo.g:2878:1: ( ( rule__AtribVar__AtrbAssignment_4_2_1 )* )
+            // InternalGo.g:2879:2: ( rule__AtribVar__AtrbAssignment_4_2_1 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getAtrbAssignment_4_2_1()); 
             }
-            // InternalGo.g:2830:2: ( rule__AtribVar__AtrbAssignment_4_2_1 )*
+            // InternalGo.g:2880:2: ( rule__AtribVar__AtrbAssignment_4_2_1 )*
             loop31:
             do {
                 int alt31=2;
@@ -10235,7 +10405,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt31) {
             	case 1 :
-            	    // InternalGo.g:2830:3: rule__AtribVar__AtrbAssignment_4_2_1
+            	    // InternalGo.g:2880:3: rule__AtribVar__AtrbAssignment_4_2_1
             	    {
             	    pushFollow(FOLLOW_11);
             	    rule__AtribVar__AtrbAssignment_4_2_1();
@@ -10276,14 +10446,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib__Group__0"
-    // InternalGo.g:2839:1: rule__Atrib__Group__0 : rule__Atrib__Group__0__Impl rule__Atrib__Group__1 ;
+    // InternalGo.g:2889:1: rule__Atrib__Group__0 : rule__Atrib__Group__0__Impl rule__Atrib__Group__1 ;
     public final void rule__Atrib__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2843:1: ( rule__Atrib__Group__0__Impl rule__Atrib__Group__1 )
-            // InternalGo.g:2844:2: rule__Atrib__Group__0__Impl rule__Atrib__Group__1
+            // InternalGo.g:2893:1: ( rule__Atrib__Group__0__Impl rule__Atrib__Group__1 )
+            // InternalGo.g:2894:2: rule__Atrib__Group__0__Impl rule__Atrib__Group__1
             {
             pushFollow(FOLLOW_4);
             rule__Atrib__Group__0__Impl();
@@ -10314,23 +10484,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib__Group__0__Impl"
-    // InternalGo.g:2851:1: rule__Atrib__Group__0__Impl : ( ( rule__Atrib__ModifierAssignment_0 ) ) ;
+    // InternalGo.g:2901:1: rule__Atrib__Group__0__Impl : ( ( rule__Atrib__ModifierAssignment_0 ) ) ;
     public final void rule__Atrib__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2855:1: ( ( ( rule__Atrib__ModifierAssignment_0 ) ) )
-            // InternalGo.g:2856:1: ( ( rule__Atrib__ModifierAssignment_0 ) )
+            // InternalGo.g:2905:1: ( ( ( rule__Atrib__ModifierAssignment_0 ) ) )
+            // InternalGo.g:2906:1: ( ( rule__Atrib__ModifierAssignment_0 ) )
             {
-            // InternalGo.g:2856:1: ( ( rule__Atrib__ModifierAssignment_0 ) )
-            // InternalGo.g:2857:2: ( rule__Atrib__ModifierAssignment_0 )
+            // InternalGo.g:2906:1: ( ( rule__Atrib__ModifierAssignment_0 ) )
+            // InternalGo.g:2907:2: ( rule__Atrib__ModifierAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribAccess().getModifierAssignment_0()); 
             }
-            // InternalGo.g:2858:2: ( rule__Atrib__ModifierAssignment_0 )
-            // InternalGo.g:2858:3: rule__Atrib__ModifierAssignment_0
+            // InternalGo.g:2908:2: ( rule__Atrib__ModifierAssignment_0 )
+            // InternalGo.g:2908:3: rule__Atrib__ModifierAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Atrib__ModifierAssignment_0();
@@ -10365,14 +10535,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib__Group__1"
-    // InternalGo.g:2866:1: rule__Atrib__Group__1 : rule__Atrib__Group__1__Impl rule__Atrib__Group__2 ;
+    // InternalGo.g:2916:1: rule__Atrib__Group__1 : rule__Atrib__Group__1__Impl rule__Atrib__Group__2 ;
     public final void rule__Atrib__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2870:1: ( rule__Atrib__Group__1__Impl rule__Atrib__Group__2 )
-            // InternalGo.g:2871:2: rule__Atrib__Group__1__Impl rule__Atrib__Group__2
+            // InternalGo.g:2920:1: ( rule__Atrib__Group__1__Impl rule__Atrib__Group__2 )
+            // InternalGo.g:2921:2: rule__Atrib__Group__1__Impl rule__Atrib__Group__2
             {
             pushFollow(FOLLOW_5);
             rule__Atrib__Group__1__Impl();
@@ -10403,23 +10573,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib__Group__1__Impl"
-    // InternalGo.g:2878:1: rule__Atrib__Group__1__Impl : ( ( rule__Atrib__NameAssignment_1 ) ) ;
+    // InternalGo.g:2928:1: rule__Atrib__Group__1__Impl : ( ( rule__Atrib__NameAssignment_1 ) ) ;
     public final void rule__Atrib__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2882:1: ( ( ( rule__Atrib__NameAssignment_1 ) ) )
-            // InternalGo.g:2883:1: ( ( rule__Atrib__NameAssignment_1 ) )
+            // InternalGo.g:2932:1: ( ( ( rule__Atrib__NameAssignment_1 ) ) )
+            // InternalGo.g:2933:1: ( ( rule__Atrib__NameAssignment_1 ) )
             {
-            // InternalGo.g:2883:1: ( ( rule__Atrib__NameAssignment_1 ) )
-            // InternalGo.g:2884:2: ( rule__Atrib__NameAssignment_1 )
+            // InternalGo.g:2933:1: ( ( rule__Atrib__NameAssignment_1 ) )
+            // InternalGo.g:2934:2: ( rule__Atrib__NameAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribAccess().getNameAssignment_1()); 
             }
-            // InternalGo.g:2885:2: ( rule__Atrib__NameAssignment_1 )
-            // InternalGo.g:2885:3: rule__Atrib__NameAssignment_1
+            // InternalGo.g:2935:2: ( rule__Atrib__NameAssignment_1 )
+            // InternalGo.g:2935:3: rule__Atrib__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Atrib__NameAssignment_1();
@@ -10454,14 +10624,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib__Group__2"
-    // InternalGo.g:2893:1: rule__Atrib__Group__2 : rule__Atrib__Group__2__Impl rule__Atrib__Group__3 ;
+    // InternalGo.g:2943:1: rule__Atrib__Group__2 : rule__Atrib__Group__2__Impl rule__Atrib__Group__3 ;
     public final void rule__Atrib__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2897:1: ( rule__Atrib__Group__2__Impl rule__Atrib__Group__3 )
-            // InternalGo.g:2898:2: rule__Atrib__Group__2__Impl rule__Atrib__Group__3
+            // InternalGo.g:2947:1: ( rule__Atrib__Group__2__Impl rule__Atrib__Group__3 )
+            // InternalGo.g:2948:2: rule__Atrib__Group__2__Impl rule__Atrib__Group__3
             {
             pushFollow(FOLLOW_8);
             rule__Atrib__Group__2__Impl();
@@ -10492,23 +10662,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib__Group__2__Impl"
-    // InternalGo.g:2905:1: rule__Atrib__Group__2__Impl : ( ( rule__Atrib__TypeAssignment_2 ) ) ;
+    // InternalGo.g:2955:1: rule__Atrib__Group__2__Impl : ( ( rule__Atrib__TypeAssignment_2 ) ) ;
     public final void rule__Atrib__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2909:1: ( ( ( rule__Atrib__TypeAssignment_2 ) ) )
-            // InternalGo.g:2910:1: ( ( rule__Atrib__TypeAssignment_2 ) )
+            // InternalGo.g:2959:1: ( ( ( rule__Atrib__TypeAssignment_2 ) ) )
+            // InternalGo.g:2960:1: ( ( rule__Atrib__TypeAssignment_2 ) )
             {
-            // InternalGo.g:2910:1: ( ( rule__Atrib__TypeAssignment_2 ) )
-            // InternalGo.g:2911:2: ( rule__Atrib__TypeAssignment_2 )
+            // InternalGo.g:2960:1: ( ( rule__Atrib__TypeAssignment_2 ) )
+            // InternalGo.g:2961:2: ( rule__Atrib__TypeAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribAccess().getTypeAssignment_2()); 
             }
-            // InternalGo.g:2912:2: ( rule__Atrib__TypeAssignment_2 )
-            // InternalGo.g:2912:3: rule__Atrib__TypeAssignment_2
+            // InternalGo.g:2962:2: ( rule__Atrib__TypeAssignment_2 )
+            // InternalGo.g:2962:3: rule__Atrib__TypeAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Atrib__TypeAssignment_2();
@@ -10543,14 +10713,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib__Group__3"
-    // InternalGo.g:2920:1: rule__Atrib__Group__3 : rule__Atrib__Group__3__Impl rule__Atrib__Group__4 ;
+    // InternalGo.g:2970:1: rule__Atrib__Group__3 : rule__Atrib__Group__3__Impl rule__Atrib__Group__4 ;
     public final void rule__Atrib__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2924:1: ( rule__Atrib__Group__3__Impl rule__Atrib__Group__4 )
-            // InternalGo.g:2925:2: rule__Atrib__Group__3__Impl rule__Atrib__Group__4
+            // InternalGo.g:2974:1: ( rule__Atrib__Group__3__Impl rule__Atrib__Group__4 )
+            // InternalGo.g:2975:2: rule__Atrib__Group__3__Impl rule__Atrib__Group__4
             {
             pushFollow(FOLLOW_9);
             rule__Atrib__Group__3__Impl();
@@ -10581,17 +10751,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib__Group__3__Impl"
-    // InternalGo.g:2932:1: rule__Atrib__Group__3__Impl : ( RULE_EQUALS ) ;
+    // InternalGo.g:2982:1: rule__Atrib__Group__3__Impl : ( RULE_EQUALS ) ;
     public final void rule__Atrib__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2936:1: ( ( RULE_EQUALS ) )
-            // InternalGo.g:2937:1: ( RULE_EQUALS )
+            // InternalGo.g:2986:1: ( ( RULE_EQUALS ) )
+            // InternalGo.g:2987:1: ( RULE_EQUALS )
             {
-            // InternalGo.g:2937:1: ( RULE_EQUALS )
-            // InternalGo.g:2938:2: RULE_EQUALS
+            // InternalGo.g:2987:1: ( RULE_EQUALS )
+            // InternalGo.g:2988:2: RULE_EQUALS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribAccess().getEqualsTerminalRuleCall_3()); 
@@ -10622,14 +10792,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib__Group__4"
-    // InternalGo.g:2947:1: rule__Atrib__Group__4 : rule__Atrib__Group__4__Impl ;
+    // InternalGo.g:2997:1: rule__Atrib__Group__4 : rule__Atrib__Group__4__Impl ;
     public final void rule__Atrib__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2951:1: ( rule__Atrib__Group__4__Impl )
-            // InternalGo.g:2952:2: rule__Atrib__Group__4__Impl
+            // InternalGo.g:3001:1: ( rule__Atrib__Group__4__Impl )
+            // InternalGo.g:3002:2: rule__Atrib__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Atrib__Group__4__Impl();
@@ -10655,23 +10825,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib__Group__4__Impl"
-    // InternalGo.g:2958:1: rule__Atrib__Group__4__Impl : ( ( rule__Atrib__AtribAssignment_4 ) ) ;
+    // InternalGo.g:3008:1: rule__Atrib__Group__4__Impl : ( ( rule__Atrib__AtribAssignment_4 ) ) ;
     public final void rule__Atrib__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2962:1: ( ( ( rule__Atrib__AtribAssignment_4 ) ) )
-            // InternalGo.g:2963:1: ( ( rule__Atrib__AtribAssignment_4 ) )
+            // InternalGo.g:3012:1: ( ( ( rule__Atrib__AtribAssignment_4 ) ) )
+            // InternalGo.g:3013:1: ( ( rule__Atrib__AtribAssignment_4 ) )
             {
-            // InternalGo.g:2963:1: ( ( rule__Atrib__AtribAssignment_4 ) )
-            // InternalGo.g:2964:2: ( rule__Atrib__AtribAssignment_4 )
+            // InternalGo.g:3013:1: ( ( rule__Atrib__AtribAssignment_4 ) )
+            // InternalGo.g:3014:2: ( rule__Atrib__AtribAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribAccess().getAtribAssignment_4()); 
             }
-            // InternalGo.g:2965:2: ( rule__Atrib__AtribAssignment_4 )
-            // InternalGo.g:2965:3: rule__Atrib__AtribAssignment_4
+            // InternalGo.g:3015:2: ( rule__Atrib__AtribAssignment_4 )
+            // InternalGo.g:3015:3: rule__Atrib__AtribAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__Atrib__AtribAssignment_4();
@@ -10706,14 +10876,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReAtrib__Group__0"
-    // InternalGo.g:2974:1: rule__ReAtrib__Group__0 : rule__ReAtrib__Group__0__Impl rule__ReAtrib__Group__1 ;
+    // InternalGo.g:3024:1: rule__ReAtrib__Group__0 : rule__ReAtrib__Group__0__Impl rule__ReAtrib__Group__1 ;
     public final void rule__ReAtrib__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2978:1: ( rule__ReAtrib__Group__0__Impl rule__ReAtrib__Group__1 )
-            // InternalGo.g:2979:2: rule__ReAtrib__Group__0__Impl rule__ReAtrib__Group__1
+            // InternalGo.g:3028:1: ( rule__ReAtrib__Group__0__Impl rule__ReAtrib__Group__1 )
+            // InternalGo.g:3029:2: rule__ReAtrib__Group__0__Impl rule__ReAtrib__Group__1
             {
             pushFollow(FOLLOW_8);
             rule__ReAtrib__Group__0__Impl();
@@ -10744,23 +10914,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReAtrib__Group__0__Impl"
-    // InternalGo.g:2986:1: rule__ReAtrib__Group__0__Impl : ( ( rule__ReAtrib__NameAssignment_0 ) ) ;
+    // InternalGo.g:3036:1: rule__ReAtrib__Group__0__Impl : ( ( rule__ReAtrib__NameAssignment_0 ) ) ;
     public final void rule__ReAtrib__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:2990:1: ( ( ( rule__ReAtrib__NameAssignment_0 ) ) )
-            // InternalGo.g:2991:1: ( ( rule__ReAtrib__NameAssignment_0 ) )
+            // InternalGo.g:3040:1: ( ( ( rule__ReAtrib__NameAssignment_0 ) ) )
+            // InternalGo.g:3041:1: ( ( rule__ReAtrib__NameAssignment_0 ) )
             {
-            // InternalGo.g:2991:1: ( ( rule__ReAtrib__NameAssignment_0 ) )
-            // InternalGo.g:2992:2: ( rule__ReAtrib__NameAssignment_0 )
+            // InternalGo.g:3041:1: ( ( rule__ReAtrib__NameAssignment_0 ) )
+            // InternalGo.g:3042:2: ( rule__ReAtrib__NameAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReAtribAccess().getNameAssignment_0()); 
             }
-            // InternalGo.g:2993:2: ( rule__ReAtrib__NameAssignment_0 )
-            // InternalGo.g:2993:3: rule__ReAtrib__NameAssignment_0
+            // InternalGo.g:3043:2: ( rule__ReAtrib__NameAssignment_0 )
+            // InternalGo.g:3043:3: rule__ReAtrib__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__ReAtrib__NameAssignment_0();
@@ -10795,14 +10965,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReAtrib__Group__1"
-    // InternalGo.g:3001:1: rule__ReAtrib__Group__1 : rule__ReAtrib__Group__1__Impl rule__ReAtrib__Group__2 ;
+    // InternalGo.g:3051:1: rule__ReAtrib__Group__1 : rule__ReAtrib__Group__1__Impl rule__ReAtrib__Group__2 ;
     public final void rule__ReAtrib__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3005:1: ( rule__ReAtrib__Group__1__Impl rule__ReAtrib__Group__2 )
-            // InternalGo.g:3006:2: rule__ReAtrib__Group__1__Impl rule__ReAtrib__Group__2
+            // InternalGo.g:3055:1: ( rule__ReAtrib__Group__1__Impl rule__ReAtrib__Group__2 )
+            // InternalGo.g:3056:2: rule__ReAtrib__Group__1__Impl rule__ReAtrib__Group__2
             {
             pushFollow(FOLLOW_9);
             rule__ReAtrib__Group__1__Impl();
@@ -10833,17 +11003,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReAtrib__Group__1__Impl"
-    // InternalGo.g:3013:1: rule__ReAtrib__Group__1__Impl : ( RULE_EQUALS ) ;
+    // InternalGo.g:3063:1: rule__ReAtrib__Group__1__Impl : ( RULE_EQUALS ) ;
     public final void rule__ReAtrib__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3017:1: ( ( RULE_EQUALS ) )
-            // InternalGo.g:3018:1: ( RULE_EQUALS )
+            // InternalGo.g:3067:1: ( ( RULE_EQUALS ) )
+            // InternalGo.g:3068:1: ( RULE_EQUALS )
             {
-            // InternalGo.g:3018:1: ( RULE_EQUALS )
-            // InternalGo.g:3019:2: RULE_EQUALS
+            // InternalGo.g:3068:1: ( RULE_EQUALS )
+            // InternalGo.g:3069:2: RULE_EQUALS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReAtribAccess().getEqualsTerminalRuleCall_1()); 
@@ -10874,14 +11044,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReAtrib__Group__2"
-    // InternalGo.g:3028:1: rule__ReAtrib__Group__2 : rule__ReAtrib__Group__2__Impl ;
+    // InternalGo.g:3078:1: rule__ReAtrib__Group__2 : rule__ReAtrib__Group__2__Impl ;
     public final void rule__ReAtrib__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3032:1: ( rule__ReAtrib__Group__2__Impl )
-            // InternalGo.g:3033:2: rule__ReAtrib__Group__2__Impl
+            // InternalGo.g:3082:1: ( rule__ReAtrib__Group__2__Impl )
+            // InternalGo.g:3083:2: rule__ReAtrib__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ReAtrib__Group__2__Impl();
@@ -10907,23 +11077,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReAtrib__Group__2__Impl"
-    // InternalGo.g:3039:1: rule__ReAtrib__Group__2__Impl : ( ( rule__ReAtrib__AtribAssignment_2 ) ) ;
+    // InternalGo.g:3089:1: rule__ReAtrib__Group__2__Impl : ( ( rule__ReAtrib__AtribAssignment_2 ) ) ;
     public final void rule__ReAtrib__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3043:1: ( ( ( rule__ReAtrib__AtribAssignment_2 ) ) )
-            // InternalGo.g:3044:1: ( ( rule__ReAtrib__AtribAssignment_2 ) )
+            // InternalGo.g:3093:1: ( ( ( rule__ReAtrib__AtribAssignment_2 ) ) )
+            // InternalGo.g:3094:1: ( ( rule__ReAtrib__AtribAssignment_2 ) )
             {
-            // InternalGo.g:3044:1: ( ( rule__ReAtrib__AtribAssignment_2 ) )
-            // InternalGo.g:3045:2: ( rule__ReAtrib__AtribAssignment_2 )
+            // InternalGo.g:3094:1: ( ( rule__ReAtrib__AtribAssignment_2 ) )
+            // InternalGo.g:3095:2: ( rule__ReAtrib__AtribAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReAtribAccess().getAtribAssignment_2()); 
             }
-            // InternalGo.g:3046:2: ( rule__ReAtrib__AtribAssignment_2 )
-            // InternalGo.g:3046:3: rule__ReAtrib__AtribAssignment_2
+            // InternalGo.g:3096:2: ( rule__ReAtrib__AtribAssignment_2 )
+            // InternalGo.g:3096:3: rule__ReAtrib__AtribAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__ReAtrib__AtribAssignment_2();
@@ -10958,14 +11128,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__Group__0"
-    // InternalGo.g:3055:1: rule__MultDecVars__Group__0 : rule__MultDecVars__Group__0__Impl rule__MultDecVars__Group__1 ;
+    // InternalGo.g:3105:1: rule__MultDecVars__Group__0 : rule__MultDecVars__Group__0__Impl rule__MultDecVars__Group__1 ;
     public final void rule__MultDecVars__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3059:1: ( rule__MultDecVars__Group__0__Impl rule__MultDecVars__Group__1 )
-            // InternalGo.g:3060:2: rule__MultDecVars__Group__0__Impl rule__MultDecVars__Group__1
+            // InternalGo.g:3109:1: ( rule__MultDecVars__Group__0__Impl rule__MultDecVars__Group__1 )
+            // InternalGo.g:3110:2: rule__MultDecVars__Group__0__Impl rule__MultDecVars__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__MultDecVars__Group__0__Impl();
@@ -10996,17 +11166,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__Group__0__Impl"
-    // InternalGo.g:3067:1: rule__MultDecVars__Group__0__Impl : ( ruleModif ) ;
+    // InternalGo.g:3117:1: rule__MultDecVars__Group__0__Impl : ( ruleModif ) ;
     public final void rule__MultDecVars__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3071:1: ( ( ruleModif ) )
-            // InternalGo.g:3072:1: ( ruleModif )
+            // InternalGo.g:3121:1: ( ( ruleModif ) )
+            // InternalGo.g:3122:1: ( ruleModif )
             {
-            // InternalGo.g:3072:1: ( ruleModif )
-            // InternalGo.g:3073:2: ruleModif
+            // InternalGo.g:3122:1: ( ruleModif )
+            // InternalGo.g:3123:2: ruleModif
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultDecVarsAccess().getModifParserRuleCall_0()); 
@@ -11041,14 +11211,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__Group__1"
-    // InternalGo.g:3082:1: rule__MultDecVars__Group__1 : rule__MultDecVars__Group__1__Impl rule__MultDecVars__Group__2 ;
+    // InternalGo.g:3132:1: rule__MultDecVars__Group__1 : rule__MultDecVars__Group__1__Impl rule__MultDecVars__Group__2 ;
     public final void rule__MultDecVars__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3086:1: ( rule__MultDecVars__Group__1__Impl rule__MultDecVars__Group__2 )
-            // InternalGo.g:3087:2: rule__MultDecVars__Group__1__Impl rule__MultDecVars__Group__2
+            // InternalGo.g:3136:1: ( rule__MultDecVars__Group__1__Impl rule__MultDecVars__Group__2 )
+            // InternalGo.g:3137:2: rule__MultDecVars__Group__1__Impl rule__MultDecVars__Group__2
             {
             pushFollow(FOLLOW_13);
             rule__MultDecVars__Group__1__Impl();
@@ -11079,17 +11249,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__Group__1__Impl"
-    // InternalGo.g:3094:1: rule__MultDecVars__Group__1__Impl : ( RULE_OPEN_PARENTHESES ) ;
+    // InternalGo.g:3144:1: rule__MultDecVars__Group__1__Impl : ( RULE_OPEN_PARENTHESES ) ;
     public final void rule__MultDecVars__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3098:1: ( ( RULE_OPEN_PARENTHESES ) )
-            // InternalGo.g:3099:1: ( RULE_OPEN_PARENTHESES )
+            // InternalGo.g:3148:1: ( ( RULE_OPEN_PARENTHESES ) )
+            // InternalGo.g:3149:1: ( RULE_OPEN_PARENTHESES )
             {
-            // InternalGo.g:3099:1: ( RULE_OPEN_PARENTHESES )
-            // InternalGo.g:3100:2: RULE_OPEN_PARENTHESES
+            // InternalGo.g:3149:1: ( RULE_OPEN_PARENTHESES )
+            // InternalGo.g:3150:2: RULE_OPEN_PARENTHESES
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultDecVarsAccess().getOpen_parenthesesTerminalRuleCall_1()); 
@@ -11120,14 +11290,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__Group__2"
-    // InternalGo.g:3109:1: rule__MultDecVars__Group__2 : rule__MultDecVars__Group__2__Impl rule__MultDecVars__Group__3 ;
+    // InternalGo.g:3159:1: rule__MultDecVars__Group__2 : rule__MultDecVars__Group__2__Impl rule__MultDecVars__Group__3 ;
     public final void rule__MultDecVars__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3113:1: ( rule__MultDecVars__Group__2__Impl rule__MultDecVars__Group__3 )
-            // InternalGo.g:3114:2: rule__MultDecVars__Group__2__Impl rule__MultDecVars__Group__3
+            // InternalGo.g:3163:1: ( rule__MultDecVars__Group__2__Impl rule__MultDecVars__Group__3 )
+            // InternalGo.g:3164:2: rule__MultDecVars__Group__2__Impl rule__MultDecVars__Group__3
             {
             pushFollow(FOLLOW_13);
             rule__MultDecVars__Group__2__Impl();
@@ -11158,22 +11328,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__Group__2__Impl"
-    // InternalGo.g:3121:1: rule__MultDecVars__Group__2__Impl : ( ( rule__MultDecVars__Group_2__0 )* ) ;
+    // InternalGo.g:3171:1: rule__MultDecVars__Group__2__Impl : ( ( rule__MultDecVars__Group_2__0 )* ) ;
     public final void rule__MultDecVars__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3125:1: ( ( ( rule__MultDecVars__Group_2__0 )* ) )
-            // InternalGo.g:3126:1: ( ( rule__MultDecVars__Group_2__0 )* )
+            // InternalGo.g:3175:1: ( ( ( rule__MultDecVars__Group_2__0 )* ) )
+            // InternalGo.g:3176:1: ( ( rule__MultDecVars__Group_2__0 )* )
             {
-            // InternalGo.g:3126:1: ( ( rule__MultDecVars__Group_2__0 )* )
-            // InternalGo.g:3127:2: ( rule__MultDecVars__Group_2__0 )*
+            // InternalGo.g:3176:1: ( ( rule__MultDecVars__Group_2__0 )* )
+            // InternalGo.g:3177:2: ( rule__MultDecVars__Group_2__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultDecVarsAccess().getGroup_2()); 
             }
-            // InternalGo.g:3128:2: ( rule__MultDecVars__Group_2__0 )*
+            // InternalGo.g:3178:2: ( rule__MultDecVars__Group_2__0 )*
             loop32:
             do {
                 int alt32=2;
@@ -11186,7 +11356,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt32) {
             	case 1 :
-            	    // InternalGo.g:3128:3: rule__MultDecVars__Group_2__0
+            	    // InternalGo.g:3178:3: rule__MultDecVars__Group_2__0
             	    {
             	    pushFollow(FOLLOW_14);
             	    rule__MultDecVars__Group_2__0();
@@ -11227,14 +11397,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__Group__3"
-    // InternalGo.g:3136:1: rule__MultDecVars__Group__3 : rule__MultDecVars__Group__3__Impl ;
+    // InternalGo.g:3186:1: rule__MultDecVars__Group__3 : rule__MultDecVars__Group__3__Impl ;
     public final void rule__MultDecVars__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3140:1: ( rule__MultDecVars__Group__3__Impl )
-            // InternalGo.g:3141:2: rule__MultDecVars__Group__3__Impl
+            // InternalGo.g:3190:1: ( rule__MultDecVars__Group__3__Impl )
+            // InternalGo.g:3191:2: rule__MultDecVars__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MultDecVars__Group__3__Impl();
@@ -11260,17 +11430,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__Group__3__Impl"
-    // InternalGo.g:3147:1: rule__MultDecVars__Group__3__Impl : ( RULE_CLOSED_PARENTHESES ) ;
+    // InternalGo.g:3197:1: rule__MultDecVars__Group__3__Impl : ( RULE_CLOSED_PARENTHESES ) ;
     public final void rule__MultDecVars__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3151:1: ( ( RULE_CLOSED_PARENTHESES ) )
-            // InternalGo.g:3152:1: ( RULE_CLOSED_PARENTHESES )
+            // InternalGo.g:3201:1: ( ( RULE_CLOSED_PARENTHESES ) )
+            // InternalGo.g:3202:1: ( RULE_CLOSED_PARENTHESES )
             {
-            // InternalGo.g:3152:1: ( RULE_CLOSED_PARENTHESES )
-            // InternalGo.g:3153:2: RULE_CLOSED_PARENTHESES
+            // InternalGo.g:3202:1: ( RULE_CLOSED_PARENTHESES )
+            // InternalGo.g:3203:2: RULE_CLOSED_PARENTHESES
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultDecVarsAccess().getClosed_parenthesesTerminalRuleCall_3()); 
@@ -11301,14 +11471,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__Group_2__0"
-    // InternalGo.g:3163:1: rule__MultDecVars__Group_2__0 : rule__MultDecVars__Group_2__0__Impl rule__MultDecVars__Group_2__1 ;
+    // InternalGo.g:3213:1: rule__MultDecVars__Group_2__0 : rule__MultDecVars__Group_2__0__Impl rule__MultDecVars__Group_2__1 ;
     public final void rule__MultDecVars__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3167:1: ( rule__MultDecVars__Group_2__0__Impl rule__MultDecVars__Group_2__1 )
-            // InternalGo.g:3168:2: rule__MultDecVars__Group_2__0__Impl rule__MultDecVars__Group_2__1
+            // InternalGo.g:3217:1: ( rule__MultDecVars__Group_2__0__Impl rule__MultDecVars__Group_2__1 )
+            // InternalGo.g:3218:2: rule__MultDecVars__Group_2__0__Impl rule__MultDecVars__Group_2__1
             {
             pushFollow(FOLLOW_8);
             rule__MultDecVars__Group_2__0__Impl();
@@ -11339,23 +11509,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__Group_2__0__Impl"
-    // InternalGo.g:3175:1: rule__MultDecVars__Group_2__0__Impl : ( ( rule__MultDecVars__NameAssignment_2_0 ) ) ;
+    // InternalGo.g:3225:1: rule__MultDecVars__Group_2__0__Impl : ( ( rule__MultDecVars__NameAssignment_2_0 ) ) ;
     public final void rule__MultDecVars__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3179:1: ( ( ( rule__MultDecVars__NameAssignment_2_0 ) ) )
-            // InternalGo.g:3180:1: ( ( rule__MultDecVars__NameAssignment_2_0 ) )
+            // InternalGo.g:3229:1: ( ( ( rule__MultDecVars__NameAssignment_2_0 ) ) )
+            // InternalGo.g:3230:1: ( ( rule__MultDecVars__NameAssignment_2_0 ) )
             {
-            // InternalGo.g:3180:1: ( ( rule__MultDecVars__NameAssignment_2_0 ) )
-            // InternalGo.g:3181:2: ( rule__MultDecVars__NameAssignment_2_0 )
+            // InternalGo.g:3230:1: ( ( rule__MultDecVars__NameAssignment_2_0 ) )
+            // InternalGo.g:3231:2: ( rule__MultDecVars__NameAssignment_2_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultDecVarsAccess().getNameAssignment_2_0()); 
             }
-            // InternalGo.g:3182:2: ( rule__MultDecVars__NameAssignment_2_0 )
-            // InternalGo.g:3182:3: rule__MultDecVars__NameAssignment_2_0
+            // InternalGo.g:3232:2: ( rule__MultDecVars__NameAssignment_2_0 )
+            // InternalGo.g:3232:3: rule__MultDecVars__NameAssignment_2_0
             {
             pushFollow(FOLLOW_2);
             rule__MultDecVars__NameAssignment_2_0();
@@ -11390,14 +11560,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__Group_2__1"
-    // InternalGo.g:3190:1: rule__MultDecVars__Group_2__1 : rule__MultDecVars__Group_2__1__Impl rule__MultDecVars__Group_2__2 ;
+    // InternalGo.g:3240:1: rule__MultDecVars__Group_2__1 : rule__MultDecVars__Group_2__1__Impl rule__MultDecVars__Group_2__2 ;
     public final void rule__MultDecVars__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3194:1: ( rule__MultDecVars__Group_2__1__Impl rule__MultDecVars__Group_2__2 )
-            // InternalGo.g:3195:2: rule__MultDecVars__Group_2__1__Impl rule__MultDecVars__Group_2__2
+            // InternalGo.g:3244:1: ( rule__MultDecVars__Group_2__1__Impl rule__MultDecVars__Group_2__2 )
+            // InternalGo.g:3245:2: rule__MultDecVars__Group_2__1__Impl rule__MultDecVars__Group_2__2
             {
             pushFollow(FOLLOW_15);
             rule__MultDecVars__Group_2__1__Impl();
@@ -11428,17 +11598,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__Group_2__1__Impl"
-    // InternalGo.g:3202:1: rule__MultDecVars__Group_2__1__Impl : ( RULE_EQUALS ) ;
+    // InternalGo.g:3252:1: rule__MultDecVars__Group_2__1__Impl : ( RULE_EQUALS ) ;
     public final void rule__MultDecVars__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3206:1: ( ( RULE_EQUALS ) )
-            // InternalGo.g:3207:1: ( RULE_EQUALS )
+            // InternalGo.g:3256:1: ( ( RULE_EQUALS ) )
+            // InternalGo.g:3257:1: ( RULE_EQUALS )
             {
-            // InternalGo.g:3207:1: ( RULE_EQUALS )
-            // InternalGo.g:3208:2: RULE_EQUALS
+            // InternalGo.g:3257:1: ( RULE_EQUALS )
+            // InternalGo.g:3258:2: RULE_EQUALS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultDecVarsAccess().getEqualsTerminalRuleCall_2_1()); 
@@ -11469,14 +11639,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__Group_2__2"
-    // InternalGo.g:3217:1: rule__MultDecVars__Group_2__2 : rule__MultDecVars__Group_2__2__Impl ;
+    // InternalGo.g:3267:1: rule__MultDecVars__Group_2__2 : rule__MultDecVars__Group_2__2__Impl ;
     public final void rule__MultDecVars__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3221:1: ( rule__MultDecVars__Group_2__2__Impl )
-            // InternalGo.g:3222:2: rule__MultDecVars__Group_2__2__Impl
+            // InternalGo.g:3271:1: ( rule__MultDecVars__Group_2__2__Impl )
+            // InternalGo.g:3272:2: rule__MultDecVars__Group_2__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MultDecVars__Group_2__2__Impl();
@@ -11502,23 +11672,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__Group_2__2__Impl"
-    // InternalGo.g:3228:1: rule__MultDecVars__Group_2__2__Impl : ( ( rule__MultDecVars__Alternatives_2_2 ) ) ;
+    // InternalGo.g:3278:1: rule__MultDecVars__Group_2__2__Impl : ( ( rule__MultDecVars__Alternatives_2_2 ) ) ;
     public final void rule__MultDecVars__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3232:1: ( ( ( rule__MultDecVars__Alternatives_2_2 ) ) )
-            // InternalGo.g:3233:1: ( ( rule__MultDecVars__Alternatives_2_2 ) )
+            // InternalGo.g:3282:1: ( ( ( rule__MultDecVars__Alternatives_2_2 ) ) )
+            // InternalGo.g:3283:1: ( ( rule__MultDecVars__Alternatives_2_2 ) )
             {
-            // InternalGo.g:3233:1: ( ( rule__MultDecVars__Alternatives_2_2 ) )
-            // InternalGo.g:3234:2: ( rule__MultDecVars__Alternatives_2_2 )
+            // InternalGo.g:3283:1: ( ( rule__MultDecVars__Alternatives_2_2 ) )
+            // InternalGo.g:3284:2: ( rule__MultDecVars__Alternatives_2_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultDecVarsAccess().getAlternatives_2_2()); 
             }
-            // InternalGo.g:3235:2: ( rule__MultDecVars__Alternatives_2_2 )
-            // InternalGo.g:3235:3: rule__MultDecVars__Alternatives_2_2
+            // InternalGo.g:3285:2: ( rule__MultDecVars__Alternatives_2_2 )
+            // InternalGo.g:3285:3: rule__MultDecVars__Alternatives_2_2
             {
             pushFollow(FOLLOW_2);
             rule__MultDecVars__Alternatives_2_2();
@@ -11553,14 +11723,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group__0"
-    // InternalGo.g:3244:1: rule__SwitchCase__Group__0 : rule__SwitchCase__Group__0__Impl rule__SwitchCase__Group__1 ;
+    // InternalGo.g:3294:1: rule__SwitchCase__Group__0 : rule__SwitchCase__Group__0__Impl rule__SwitchCase__Group__1 ;
     public final void rule__SwitchCase__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3248:1: ( rule__SwitchCase__Group__0__Impl rule__SwitchCase__Group__1 )
-            // InternalGo.g:3249:2: rule__SwitchCase__Group__0__Impl rule__SwitchCase__Group__1
+            // InternalGo.g:3298:1: ( rule__SwitchCase__Group__0__Impl rule__SwitchCase__Group__1 )
+            // InternalGo.g:3299:2: rule__SwitchCase__Group__0__Impl rule__SwitchCase__Group__1
             {
             pushFollow(FOLLOW_16);
             rule__SwitchCase__Group__0__Impl();
@@ -11591,17 +11761,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group__0__Impl"
-    // InternalGo.g:3256:1: rule__SwitchCase__Group__0__Impl : ( ruleSWITCH ) ;
+    // InternalGo.g:3306:1: rule__SwitchCase__Group__0__Impl : ( ruleSWITCH ) ;
     public final void rule__SwitchCase__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3260:1: ( ( ruleSWITCH ) )
-            // InternalGo.g:3261:1: ( ruleSWITCH )
+            // InternalGo.g:3310:1: ( ( ruleSWITCH ) )
+            // InternalGo.g:3311:1: ( ruleSWITCH )
             {
-            // InternalGo.g:3261:1: ( ruleSWITCH )
-            // InternalGo.g:3262:2: ruleSWITCH
+            // InternalGo.g:3311:1: ( ruleSWITCH )
+            // InternalGo.g:3312:2: ruleSWITCH
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitchCaseAccess().getSWITCHParserRuleCall_0()); 
@@ -11636,14 +11806,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group__1"
-    // InternalGo.g:3271:1: rule__SwitchCase__Group__1 : rule__SwitchCase__Group__1__Impl rule__SwitchCase__Group__2 ;
+    // InternalGo.g:3321:1: rule__SwitchCase__Group__1 : rule__SwitchCase__Group__1__Impl rule__SwitchCase__Group__2 ;
     public final void rule__SwitchCase__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3275:1: ( rule__SwitchCase__Group__1__Impl rule__SwitchCase__Group__2 )
-            // InternalGo.g:3276:2: rule__SwitchCase__Group__1__Impl rule__SwitchCase__Group__2
+            // InternalGo.g:3325:1: ( rule__SwitchCase__Group__1__Impl rule__SwitchCase__Group__2 )
+            // InternalGo.g:3326:2: rule__SwitchCase__Group__1__Impl rule__SwitchCase__Group__2
             {
             pushFollow(FOLLOW_17);
             rule__SwitchCase__Group__1__Impl();
@@ -11674,17 +11844,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group__1__Impl"
-    // InternalGo.g:3283:1: rule__SwitchCase__Group__1__Impl : ( ruleVariable ) ;
+    // InternalGo.g:3333:1: rule__SwitchCase__Group__1__Impl : ( ruleVariable ) ;
     public final void rule__SwitchCase__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3287:1: ( ( ruleVariable ) )
-            // InternalGo.g:3288:1: ( ruleVariable )
+            // InternalGo.g:3337:1: ( ( ruleVariable ) )
+            // InternalGo.g:3338:1: ( ruleVariable )
             {
-            // InternalGo.g:3288:1: ( ruleVariable )
-            // InternalGo.g:3289:2: ruleVariable
+            // InternalGo.g:3338:1: ( ruleVariable )
+            // InternalGo.g:3339:2: ruleVariable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitchCaseAccess().getVariableParserRuleCall_1()); 
@@ -11719,14 +11889,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group__2"
-    // InternalGo.g:3298:1: rule__SwitchCase__Group__2 : rule__SwitchCase__Group__2__Impl rule__SwitchCase__Group__3 ;
+    // InternalGo.g:3348:1: rule__SwitchCase__Group__2 : rule__SwitchCase__Group__2__Impl rule__SwitchCase__Group__3 ;
     public final void rule__SwitchCase__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3302:1: ( rule__SwitchCase__Group__2__Impl rule__SwitchCase__Group__3 )
-            // InternalGo.g:3303:2: rule__SwitchCase__Group__2__Impl rule__SwitchCase__Group__3
+            // InternalGo.g:3352:1: ( rule__SwitchCase__Group__2__Impl rule__SwitchCase__Group__3 )
+            // InternalGo.g:3353:2: rule__SwitchCase__Group__2__Impl rule__SwitchCase__Group__3
             {
             pushFollow(FOLLOW_18);
             rule__SwitchCase__Group__2__Impl();
@@ -11757,17 +11927,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group__2__Impl"
-    // InternalGo.g:3310:1: rule__SwitchCase__Group__2__Impl : ( RULE_OPEN_KEY ) ;
+    // InternalGo.g:3360:1: rule__SwitchCase__Group__2__Impl : ( RULE_OPEN_KEY ) ;
     public final void rule__SwitchCase__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3314:1: ( ( RULE_OPEN_KEY ) )
-            // InternalGo.g:3315:1: ( RULE_OPEN_KEY )
+            // InternalGo.g:3364:1: ( ( RULE_OPEN_KEY ) )
+            // InternalGo.g:3365:1: ( RULE_OPEN_KEY )
             {
-            // InternalGo.g:3315:1: ( RULE_OPEN_KEY )
-            // InternalGo.g:3316:2: RULE_OPEN_KEY
+            // InternalGo.g:3365:1: ( RULE_OPEN_KEY )
+            // InternalGo.g:3366:2: RULE_OPEN_KEY
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitchCaseAccess().getOpen_KeyTerminalRuleCall_2()); 
@@ -11798,14 +11968,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group__3"
-    // InternalGo.g:3325:1: rule__SwitchCase__Group__3 : rule__SwitchCase__Group__3__Impl rule__SwitchCase__Group__4 ;
+    // InternalGo.g:3375:1: rule__SwitchCase__Group__3 : rule__SwitchCase__Group__3__Impl rule__SwitchCase__Group__4 ;
     public final void rule__SwitchCase__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3329:1: ( rule__SwitchCase__Group__3__Impl rule__SwitchCase__Group__4 )
-            // InternalGo.g:3330:2: rule__SwitchCase__Group__3__Impl rule__SwitchCase__Group__4
+            // InternalGo.g:3379:1: ( rule__SwitchCase__Group__3__Impl rule__SwitchCase__Group__4 )
+            // InternalGo.g:3380:2: rule__SwitchCase__Group__3__Impl rule__SwitchCase__Group__4
             {
             pushFollow(FOLLOW_18);
             rule__SwitchCase__Group__3__Impl();
@@ -11836,22 +12006,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group__3__Impl"
-    // InternalGo.g:3337:1: rule__SwitchCase__Group__3__Impl : ( ( rule__SwitchCase__CasAssignment_3 )* ) ;
+    // InternalGo.g:3387:1: rule__SwitchCase__Group__3__Impl : ( ( rule__SwitchCase__CasAssignment_3 )* ) ;
     public final void rule__SwitchCase__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3341:1: ( ( ( rule__SwitchCase__CasAssignment_3 )* ) )
-            // InternalGo.g:3342:1: ( ( rule__SwitchCase__CasAssignment_3 )* )
+            // InternalGo.g:3391:1: ( ( ( rule__SwitchCase__CasAssignment_3 )* ) )
+            // InternalGo.g:3392:1: ( ( rule__SwitchCase__CasAssignment_3 )* )
             {
-            // InternalGo.g:3342:1: ( ( rule__SwitchCase__CasAssignment_3 )* )
-            // InternalGo.g:3343:2: ( rule__SwitchCase__CasAssignment_3 )*
+            // InternalGo.g:3392:1: ( ( rule__SwitchCase__CasAssignment_3 )* )
+            // InternalGo.g:3393:2: ( rule__SwitchCase__CasAssignment_3 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitchCaseAccess().getCasAssignment_3()); 
             }
-            // InternalGo.g:3344:2: ( rule__SwitchCase__CasAssignment_3 )*
+            // InternalGo.g:3394:2: ( rule__SwitchCase__CasAssignment_3 )*
             loop33:
             do {
                 int alt33=2;
@@ -11864,7 +12034,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt33) {
             	case 1 :
-            	    // InternalGo.g:3344:3: rule__SwitchCase__CasAssignment_3
+            	    // InternalGo.g:3394:3: rule__SwitchCase__CasAssignment_3
             	    {
             	    pushFollow(FOLLOW_19);
             	    rule__SwitchCase__CasAssignment_3();
@@ -11905,14 +12075,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group__4"
-    // InternalGo.g:3352:1: rule__SwitchCase__Group__4 : rule__SwitchCase__Group__4__Impl rule__SwitchCase__Group__5 ;
+    // InternalGo.g:3402:1: rule__SwitchCase__Group__4 : rule__SwitchCase__Group__4__Impl rule__SwitchCase__Group__5 ;
     public final void rule__SwitchCase__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3356:1: ( rule__SwitchCase__Group__4__Impl rule__SwitchCase__Group__5 )
-            // InternalGo.g:3357:2: rule__SwitchCase__Group__4__Impl rule__SwitchCase__Group__5
+            // InternalGo.g:3406:1: ( rule__SwitchCase__Group__4__Impl rule__SwitchCase__Group__5 )
+            // InternalGo.g:3407:2: rule__SwitchCase__Group__4__Impl rule__SwitchCase__Group__5
             {
             pushFollow(FOLLOW_18);
             rule__SwitchCase__Group__4__Impl();
@@ -11943,22 +12113,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group__4__Impl"
-    // InternalGo.g:3364:1: rule__SwitchCase__Group__4__Impl : ( ( rule__SwitchCase__Group_4__0 )? ) ;
+    // InternalGo.g:3414:1: rule__SwitchCase__Group__4__Impl : ( ( rule__SwitchCase__Group_4__0 )? ) ;
     public final void rule__SwitchCase__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3368:1: ( ( ( rule__SwitchCase__Group_4__0 )? ) )
-            // InternalGo.g:3369:1: ( ( rule__SwitchCase__Group_4__0 )? )
+            // InternalGo.g:3418:1: ( ( ( rule__SwitchCase__Group_4__0 )? ) )
+            // InternalGo.g:3419:1: ( ( rule__SwitchCase__Group_4__0 )? )
             {
-            // InternalGo.g:3369:1: ( ( rule__SwitchCase__Group_4__0 )? )
-            // InternalGo.g:3370:2: ( rule__SwitchCase__Group_4__0 )?
+            // InternalGo.g:3419:1: ( ( rule__SwitchCase__Group_4__0 )? )
+            // InternalGo.g:3420:2: ( rule__SwitchCase__Group_4__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitchCaseAccess().getGroup_4()); 
             }
-            // InternalGo.g:3371:2: ( rule__SwitchCase__Group_4__0 )?
+            // InternalGo.g:3421:2: ( rule__SwitchCase__Group_4__0 )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -11967,7 +12137,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt34) {
                 case 1 :
-                    // InternalGo.g:3371:3: rule__SwitchCase__Group_4__0
+                    // InternalGo.g:3421:3: rule__SwitchCase__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__SwitchCase__Group_4__0();
@@ -12005,14 +12175,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group__5"
-    // InternalGo.g:3379:1: rule__SwitchCase__Group__5 : rule__SwitchCase__Group__5__Impl ;
+    // InternalGo.g:3429:1: rule__SwitchCase__Group__5 : rule__SwitchCase__Group__5__Impl ;
     public final void rule__SwitchCase__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3383:1: ( rule__SwitchCase__Group__5__Impl )
-            // InternalGo.g:3384:2: rule__SwitchCase__Group__5__Impl
+            // InternalGo.g:3433:1: ( rule__SwitchCase__Group__5__Impl )
+            // InternalGo.g:3434:2: rule__SwitchCase__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__SwitchCase__Group__5__Impl();
@@ -12038,17 +12208,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group__5__Impl"
-    // InternalGo.g:3390:1: rule__SwitchCase__Group__5__Impl : ( RULE_CLOSED_KEY ) ;
+    // InternalGo.g:3440:1: rule__SwitchCase__Group__5__Impl : ( RULE_CLOSED_KEY ) ;
     public final void rule__SwitchCase__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3394:1: ( ( RULE_CLOSED_KEY ) )
-            // InternalGo.g:3395:1: ( RULE_CLOSED_KEY )
+            // InternalGo.g:3444:1: ( ( RULE_CLOSED_KEY ) )
+            // InternalGo.g:3445:1: ( RULE_CLOSED_KEY )
             {
-            // InternalGo.g:3395:1: ( RULE_CLOSED_KEY )
-            // InternalGo.g:3396:2: RULE_CLOSED_KEY
+            // InternalGo.g:3445:1: ( RULE_CLOSED_KEY )
+            // InternalGo.g:3446:2: RULE_CLOSED_KEY
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitchCaseAccess().getClosed_KeyTerminalRuleCall_5()); 
@@ -12079,14 +12249,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group_4__0"
-    // InternalGo.g:3406:1: rule__SwitchCase__Group_4__0 : rule__SwitchCase__Group_4__0__Impl rule__SwitchCase__Group_4__1 ;
+    // InternalGo.g:3456:1: rule__SwitchCase__Group_4__0 : rule__SwitchCase__Group_4__0__Impl rule__SwitchCase__Group_4__1 ;
     public final void rule__SwitchCase__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3410:1: ( rule__SwitchCase__Group_4__0__Impl rule__SwitchCase__Group_4__1 )
-            // InternalGo.g:3411:2: rule__SwitchCase__Group_4__0__Impl rule__SwitchCase__Group_4__1
+            // InternalGo.g:3460:1: ( rule__SwitchCase__Group_4__0__Impl rule__SwitchCase__Group_4__1 )
+            // InternalGo.g:3461:2: rule__SwitchCase__Group_4__0__Impl rule__SwitchCase__Group_4__1
             {
             pushFollow(FOLLOW_20);
             rule__SwitchCase__Group_4__0__Impl();
@@ -12117,17 +12287,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group_4__0__Impl"
-    // InternalGo.g:3418:1: rule__SwitchCase__Group_4__0__Impl : ( ruleDEFAULT ) ;
+    // InternalGo.g:3468:1: rule__SwitchCase__Group_4__0__Impl : ( ruleDEFAULT ) ;
     public final void rule__SwitchCase__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3422:1: ( ( ruleDEFAULT ) )
-            // InternalGo.g:3423:1: ( ruleDEFAULT )
+            // InternalGo.g:3472:1: ( ( ruleDEFAULT ) )
+            // InternalGo.g:3473:1: ( ruleDEFAULT )
             {
-            // InternalGo.g:3423:1: ( ruleDEFAULT )
-            // InternalGo.g:3424:2: ruleDEFAULT
+            // InternalGo.g:3473:1: ( ruleDEFAULT )
+            // InternalGo.g:3474:2: ruleDEFAULT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitchCaseAccess().getDEFAULTParserRuleCall_4_0()); 
@@ -12162,14 +12332,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group_4__1"
-    // InternalGo.g:3433:1: rule__SwitchCase__Group_4__1 : rule__SwitchCase__Group_4__1__Impl rule__SwitchCase__Group_4__2 ;
+    // InternalGo.g:3483:1: rule__SwitchCase__Group_4__1 : rule__SwitchCase__Group_4__1__Impl rule__SwitchCase__Group_4__2 ;
     public final void rule__SwitchCase__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3437:1: ( rule__SwitchCase__Group_4__1__Impl rule__SwitchCase__Group_4__2 )
-            // InternalGo.g:3438:2: rule__SwitchCase__Group_4__1__Impl rule__SwitchCase__Group_4__2
+            // InternalGo.g:3487:1: ( rule__SwitchCase__Group_4__1__Impl rule__SwitchCase__Group_4__2 )
+            // InternalGo.g:3488:2: rule__SwitchCase__Group_4__1__Impl rule__SwitchCase__Group_4__2
             {
             pushFollow(FOLLOW_16);
             rule__SwitchCase__Group_4__1__Impl();
@@ -12200,17 +12370,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group_4__1__Impl"
-    // InternalGo.g:3445:1: rule__SwitchCase__Group_4__1__Impl : ( RULE_DOISPONTOS ) ;
+    // InternalGo.g:3495:1: rule__SwitchCase__Group_4__1__Impl : ( RULE_DOISPONTOS ) ;
     public final void rule__SwitchCase__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3449:1: ( ( RULE_DOISPONTOS ) )
-            // InternalGo.g:3450:1: ( RULE_DOISPONTOS )
+            // InternalGo.g:3499:1: ( ( RULE_DOISPONTOS ) )
+            // InternalGo.g:3500:1: ( RULE_DOISPONTOS )
             {
-            // InternalGo.g:3450:1: ( RULE_DOISPONTOS )
-            // InternalGo.g:3451:2: RULE_DOISPONTOS
+            // InternalGo.g:3500:1: ( RULE_DOISPONTOS )
+            // InternalGo.g:3501:2: RULE_DOISPONTOS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitchCaseAccess().getDoisPontosTerminalRuleCall_4_1()); 
@@ -12241,14 +12411,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group_4__2"
-    // InternalGo.g:3460:1: rule__SwitchCase__Group_4__2 : rule__SwitchCase__Group_4__2__Impl ;
+    // InternalGo.g:3510:1: rule__SwitchCase__Group_4__2 : rule__SwitchCase__Group_4__2__Impl ;
     public final void rule__SwitchCase__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3464:1: ( rule__SwitchCase__Group_4__2__Impl )
-            // InternalGo.g:3465:2: rule__SwitchCase__Group_4__2__Impl
+            // InternalGo.g:3514:1: ( rule__SwitchCase__Group_4__2__Impl )
+            // InternalGo.g:3515:2: rule__SwitchCase__Group_4__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__SwitchCase__Group_4__2__Impl();
@@ -12274,22 +12444,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__Group_4__2__Impl"
-    // InternalGo.g:3471:1: rule__SwitchCase__Group_4__2__Impl : ( ( rule__SwitchCase__KAssignment_4_2 )* ) ;
+    // InternalGo.g:3521:1: rule__SwitchCase__Group_4__2__Impl : ( ( rule__SwitchCase__KAssignment_4_2 )* ) ;
     public final void rule__SwitchCase__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3475:1: ( ( ( rule__SwitchCase__KAssignment_4_2 )* ) )
-            // InternalGo.g:3476:1: ( ( rule__SwitchCase__KAssignment_4_2 )* )
+            // InternalGo.g:3525:1: ( ( ( rule__SwitchCase__KAssignment_4_2 )* ) )
+            // InternalGo.g:3526:1: ( ( rule__SwitchCase__KAssignment_4_2 )* )
             {
-            // InternalGo.g:3476:1: ( ( rule__SwitchCase__KAssignment_4_2 )* )
-            // InternalGo.g:3477:2: ( rule__SwitchCase__KAssignment_4_2 )*
+            // InternalGo.g:3526:1: ( ( rule__SwitchCase__KAssignment_4_2 )* )
+            // InternalGo.g:3527:2: ( rule__SwitchCase__KAssignment_4_2 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitchCaseAccess().getKAssignment_4_2()); 
             }
-            // InternalGo.g:3478:2: ( rule__SwitchCase__KAssignment_4_2 )*
+            // InternalGo.g:3528:2: ( rule__SwitchCase__KAssignment_4_2 )*
             loop35:
             do {
                 int alt35=2;
@@ -12302,7 +12472,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt35) {
             	case 1 :
-            	    // InternalGo.g:3478:3: rule__SwitchCase__KAssignment_4_2
+            	    // InternalGo.g:3528:3: rule__SwitchCase__KAssignment_4_2
             	    {
             	    pushFollow(FOLLOW_3);
             	    rule__SwitchCase__KAssignment_4_2();
@@ -12343,14 +12513,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cases__Group__0"
-    // InternalGo.g:3487:1: rule__Cases__Group__0 : rule__Cases__Group__0__Impl rule__Cases__Group__1 ;
+    // InternalGo.g:3537:1: rule__Cases__Group__0 : rule__Cases__Group__0__Impl rule__Cases__Group__1 ;
     public final void rule__Cases__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3491:1: ( rule__Cases__Group__0__Impl rule__Cases__Group__1 )
-            // InternalGo.g:3492:2: rule__Cases__Group__0__Impl rule__Cases__Group__1
+            // InternalGo.g:3541:1: ( rule__Cases__Group__0__Impl rule__Cases__Group__1 )
+            // InternalGo.g:3542:2: rule__Cases__Group__0__Impl rule__Cases__Group__1
             {
             pushFollow(FOLLOW_9);
             rule__Cases__Group__0__Impl();
@@ -12381,17 +12551,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cases__Group__0__Impl"
-    // InternalGo.g:3499:1: rule__Cases__Group__0__Impl : ( ruleCASE ) ;
+    // InternalGo.g:3549:1: rule__Cases__Group__0__Impl : ( ruleCASE ) ;
     public final void rule__Cases__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3503:1: ( ( ruleCASE ) )
-            // InternalGo.g:3504:1: ( ruleCASE )
+            // InternalGo.g:3553:1: ( ( ruleCASE ) )
+            // InternalGo.g:3554:1: ( ruleCASE )
             {
-            // InternalGo.g:3504:1: ( ruleCASE )
-            // InternalGo.g:3505:2: ruleCASE
+            // InternalGo.g:3554:1: ( ruleCASE )
+            // InternalGo.g:3555:2: ruleCASE
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCasesAccess().getCASEParserRuleCall_0()); 
@@ -12426,14 +12596,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cases__Group__1"
-    // InternalGo.g:3514:1: rule__Cases__Group__1 : rule__Cases__Group__1__Impl rule__Cases__Group__2 ;
+    // InternalGo.g:3564:1: rule__Cases__Group__1 : rule__Cases__Group__1__Impl rule__Cases__Group__2 ;
     public final void rule__Cases__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3518:1: ( rule__Cases__Group__1__Impl rule__Cases__Group__2 )
-            // InternalGo.g:3519:2: rule__Cases__Group__1__Impl rule__Cases__Group__2
+            // InternalGo.g:3568:1: ( rule__Cases__Group__1__Impl rule__Cases__Group__2 )
+            // InternalGo.g:3569:2: rule__Cases__Group__1__Impl rule__Cases__Group__2
             {
             pushFollow(FOLLOW_20);
             rule__Cases__Group__1__Impl();
@@ -12464,23 +12634,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cases__Group__1__Impl"
-    // InternalGo.g:3526:1: rule__Cases__Group__1__Impl : ( ( rule__Cases__XAssignment_1 ) ) ;
+    // InternalGo.g:3576:1: rule__Cases__Group__1__Impl : ( ( rule__Cases__XAssignment_1 ) ) ;
     public final void rule__Cases__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3530:1: ( ( ( rule__Cases__XAssignment_1 ) ) )
-            // InternalGo.g:3531:1: ( ( rule__Cases__XAssignment_1 ) )
+            // InternalGo.g:3580:1: ( ( ( rule__Cases__XAssignment_1 ) ) )
+            // InternalGo.g:3581:1: ( ( rule__Cases__XAssignment_1 ) )
             {
-            // InternalGo.g:3531:1: ( ( rule__Cases__XAssignment_1 ) )
-            // InternalGo.g:3532:2: ( rule__Cases__XAssignment_1 )
+            // InternalGo.g:3581:1: ( ( rule__Cases__XAssignment_1 ) )
+            // InternalGo.g:3582:2: ( rule__Cases__XAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCasesAccess().getXAssignment_1()); 
             }
-            // InternalGo.g:3533:2: ( rule__Cases__XAssignment_1 )
-            // InternalGo.g:3533:3: rule__Cases__XAssignment_1
+            // InternalGo.g:3583:2: ( rule__Cases__XAssignment_1 )
+            // InternalGo.g:3583:3: rule__Cases__XAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Cases__XAssignment_1();
@@ -12515,14 +12685,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cases__Group__2"
-    // InternalGo.g:3541:1: rule__Cases__Group__2 : rule__Cases__Group__2__Impl rule__Cases__Group__3 ;
+    // InternalGo.g:3591:1: rule__Cases__Group__2 : rule__Cases__Group__2__Impl rule__Cases__Group__3 ;
     public final void rule__Cases__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3545:1: ( rule__Cases__Group__2__Impl rule__Cases__Group__3 )
-            // InternalGo.g:3546:2: rule__Cases__Group__2__Impl rule__Cases__Group__3
+            // InternalGo.g:3595:1: ( rule__Cases__Group__2__Impl rule__Cases__Group__3 )
+            // InternalGo.g:3596:2: rule__Cases__Group__2__Impl rule__Cases__Group__3
             {
             pushFollow(FOLLOW_16);
             rule__Cases__Group__2__Impl();
@@ -12553,17 +12723,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cases__Group__2__Impl"
-    // InternalGo.g:3553:1: rule__Cases__Group__2__Impl : ( RULE_DOISPONTOS ) ;
+    // InternalGo.g:3603:1: rule__Cases__Group__2__Impl : ( RULE_DOISPONTOS ) ;
     public final void rule__Cases__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3557:1: ( ( RULE_DOISPONTOS ) )
-            // InternalGo.g:3558:1: ( RULE_DOISPONTOS )
+            // InternalGo.g:3607:1: ( ( RULE_DOISPONTOS ) )
+            // InternalGo.g:3608:1: ( RULE_DOISPONTOS )
             {
-            // InternalGo.g:3558:1: ( RULE_DOISPONTOS )
-            // InternalGo.g:3559:2: RULE_DOISPONTOS
+            // InternalGo.g:3608:1: ( RULE_DOISPONTOS )
+            // InternalGo.g:3609:2: RULE_DOISPONTOS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCasesAccess().getDoisPontosTerminalRuleCall_2()); 
@@ -12594,14 +12764,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cases__Group__3"
-    // InternalGo.g:3568:1: rule__Cases__Group__3 : rule__Cases__Group__3__Impl ;
+    // InternalGo.g:3618:1: rule__Cases__Group__3 : rule__Cases__Group__3__Impl ;
     public final void rule__Cases__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3572:1: ( rule__Cases__Group__3__Impl )
-            // InternalGo.g:3573:2: rule__Cases__Group__3__Impl
+            // InternalGo.g:3622:1: ( rule__Cases__Group__3__Impl )
+            // InternalGo.g:3623:2: rule__Cases__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Cases__Group__3__Impl();
@@ -12627,22 +12797,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cases__Group__3__Impl"
-    // InternalGo.g:3579:1: rule__Cases__Group__3__Impl : ( ( rule__Cases__VAssignment_3 )* ) ;
+    // InternalGo.g:3629:1: rule__Cases__Group__3__Impl : ( ( rule__Cases__VAssignment_3 )* ) ;
     public final void rule__Cases__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3583:1: ( ( ( rule__Cases__VAssignment_3 )* ) )
-            // InternalGo.g:3584:1: ( ( rule__Cases__VAssignment_3 )* )
+            // InternalGo.g:3633:1: ( ( ( rule__Cases__VAssignment_3 )* ) )
+            // InternalGo.g:3634:1: ( ( rule__Cases__VAssignment_3 )* )
             {
-            // InternalGo.g:3584:1: ( ( rule__Cases__VAssignment_3 )* )
-            // InternalGo.g:3585:2: ( rule__Cases__VAssignment_3 )*
+            // InternalGo.g:3634:1: ( ( rule__Cases__VAssignment_3 )* )
+            // InternalGo.g:3635:2: ( rule__Cases__VAssignment_3 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCasesAccess().getVAssignment_3()); 
             }
-            // InternalGo.g:3586:2: ( rule__Cases__VAssignment_3 )*
+            // InternalGo.g:3636:2: ( rule__Cases__VAssignment_3 )*
             loop36:
             do {
                 int alt36=2;
@@ -12655,7 +12825,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt36) {
             	case 1 :
-            	    // InternalGo.g:3586:3: rule__Cases__VAssignment_3
+            	    // InternalGo.g:3636:3: rule__Cases__VAssignment_3
             	    {
             	    pushFollow(FOLLOW_3);
             	    rule__Cases__VAssignment_3();
@@ -12696,14 +12866,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0__0"
-    // InternalGo.g:3595:1: rule__Atri__Group_0__0 : rule__Atri__Group_0__0__Impl rule__Atri__Group_0__1 ;
+    // InternalGo.g:3645:1: rule__Atri__Group_0__0 : rule__Atri__Group_0__0__Impl rule__Atri__Group_0__1 ;
     public final void rule__Atri__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3599:1: ( rule__Atri__Group_0__0__Impl rule__Atri__Group_0__1 )
-            // InternalGo.g:3600:2: rule__Atri__Group_0__0__Impl rule__Atri__Group_0__1
+            // InternalGo.g:3649:1: ( rule__Atri__Group_0__0__Impl rule__Atri__Group_0__1 )
+            // InternalGo.g:3650:2: rule__Atri__Group_0__0__Impl rule__Atri__Group_0__1
             {
             pushFollow(FOLLOW_21);
             rule__Atri__Group_0__0__Impl();
@@ -12734,17 +12904,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0__0__Impl"
-    // InternalGo.g:3607:1: rule__Atri__Group_0__0__Impl : ( RULE_OPEN_BRACKETS ) ;
+    // InternalGo.g:3657:1: rule__Atri__Group_0__0__Impl : ( RULE_OPEN_BRACKETS ) ;
     public final void rule__Atri__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3611:1: ( ( RULE_OPEN_BRACKETS ) )
-            // InternalGo.g:3612:1: ( RULE_OPEN_BRACKETS )
+            // InternalGo.g:3661:1: ( ( RULE_OPEN_BRACKETS ) )
+            // InternalGo.g:3662:1: ( RULE_OPEN_BRACKETS )
             {
-            // InternalGo.g:3612:1: ( RULE_OPEN_BRACKETS )
-            // InternalGo.g:3613:2: RULE_OPEN_BRACKETS
+            // InternalGo.g:3662:1: ( RULE_OPEN_BRACKETS )
+            // InternalGo.g:3663:2: RULE_OPEN_BRACKETS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtriAccess().getOpen_bracketsTerminalRuleCall_0_0()); 
@@ -12775,14 +12945,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0__1"
-    // InternalGo.g:3622:1: rule__Atri__Group_0__1 : rule__Atri__Group_0__1__Impl rule__Atri__Group_0__2 ;
+    // InternalGo.g:3672:1: rule__Atri__Group_0__1 : rule__Atri__Group_0__1__Impl rule__Atri__Group_0__2 ;
     public final void rule__Atri__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3626:1: ( rule__Atri__Group_0__1__Impl rule__Atri__Group_0__2 )
-            // InternalGo.g:3627:2: rule__Atri__Group_0__1__Impl rule__Atri__Group_0__2
+            // InternalGo.g:3676:1: ( rule__Atri__Group_0__1__Impl rule__Atri__Group_0__2 )
+            // InternalGo.g:3677:2: rule__Atri__Group_0__1__Impl rule__Atri__Group_0__2
             {
             pushFollow(FOLLOW_21);
             rule__Atri__Group_0__1__Impl();
@@ -12813,22 +12983,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0__1__Impl"
-    // InternalGo.g:3634:1: rule__Atri__Group_0__1__Impl : ( ( RULE_INT )? ) ;
+    // InternalGo.g:3684:1: rule__Atri__Group_0__1__Impl : ( ( RULE_INT )? ) ;
     public final void rule__Atri__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3638:1: ( ( ( RULE_INT )? ) )
-            // InternalGo.g:3639:1: ( ( RULE_INT )? )
+            // InternalGo.g:3688:1: ( ( ( RULE_INT )? ) )
+            // InternalGo.g:3689:1: ( ( RULE_INT )? )
             {
-            // InternalGo.g:3639:1: ( ( RULE_INT )? )
-            // InternalGo.g:3640:2: ( RULE_INT )?
+            // InternalGo.g:3689:1: ( ( RULE_INT )? )
+            // InternalGo.g:3690:2: ( RULE_INT )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtriAccess().getINTTerminalRuleCall_0_1()); 
             }
-            // InternalGo.g:3641:2: ( RULE_INT )?
+            // InternalGo.g:3691:2: ( RULE_INT )?
             int alt37=2;
             int LA37_0 = input.LA(1);
 
@@ -12837,7 +13007,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt37) {
                 case 1 :
-                    // InternalGo.g:3641:3: RULE_INT
+                    // InternalGo.g:3691:3: RULE_INT
                     {
                     match(input,RULE_INT,FOLLOW_2); if (state.failed) return ;
 
@@ -12871,14 +13041,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0__2"
-    // InternalGo.g:3649:1: rule__Atri__Group_0__2 : rule__Atri__Group_0__2__Impl rule__Atri__Group_0__3 ;
+    // InternalGo.g:3699:1: rule__Atri__Group_0__2 : rule__Atri__Group_0__2__Impl rule__Atri__Group_0__3 ;
     public final void rule__Atri__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3653:1: ( rule__Atri__Group_0__2__Impl rule__Atri__Group_0__3 )
-            // InternalGo.g:3654:2: rule__Atri__Group_0__2__Impl rule__Atri__Group_0__3
+            // InternalGo.g:3703:1: ( rule__Atri__Group_0__2__Impl rule__Atri__Group_0__3 )
+            // InternalGo.g:3704:2: rule__Atri__Group_0__2__Impl rule__Atri__Group_0__3
             {
             pushFollow(FOLLOW_5);
             rule__Atri__Group_0__2__Impl();
@@ -12909,17 +13079,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0__2__Impl"
-    // InternalGo.g:3661:1: rule__Atri__Group_0__2__Impl : ( RULE_CLOSED_BRACKETS ) ;
+    // InternalGo.g:3711:1: rule__Atri__Group_0__2__Impl : ( RULE_CLOSED_BRACKETS ) ;
     public final void rule__Atri__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3665:1: ( ( RULE_CLOSED_BRACKETS ) )
-            // InternalGo.g:3666:1: ( RULE_CLOSED_BRACKETS )
+            // InternalGo.g:3715:1: ( ( RULE_CLOSED_BRACKETS ) )
+            // InternalGo.g:3716:1: ( RULE_CLOSED_BRACKETS )
             {
-            // InternalGo.g:3666:1: ( RULE_CLOSED_BRACKETS )
-            // InternalGo.g:3667:2: RULE_CLOSED_BRACKETS
+            // InternalGo.g:3716:1: ( RULE_CLOSED_BRACKETS )
+            // InternalGo.g:3717:2: RULE_CLOSED_BRACKETS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtriAccess().getClosed_bracketsTerminalRuleCall_0_2()); 
@@ -12950,14 +13120,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0__3"
-    // InternalGo.g:3676:1: rule__Atri__Group_0__3 : rule__Atri__Group_0__3__Impl rule__Atri__Group_0__4 ;
+    // InternalGo.g:3726:1: rule__Atri__Group_0__3 : rule__Atri__Group_0__3__Impl rule__Atri__Group_0__4 ;
     public final void rule__Atri__Group_0__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3680:1: ( rule__Atri__Group_0__3__Impl rule__Atri__Group_0__4 )
-            // InternalGo.g:3681:2: rule__Atri__Group_0__3__Impl rule__Atri__Group_0__4
+            // InternalGo.g:3730:1: ( rule__Atri__Group_0__3__Impl rule__Atri__Group_0__4 )
+            // InternalGo.g:3731:2: rule__Atri__Group_0__3__Impl rule__Atri__Group_0__4
             {
             pushFollow(FOLLOW_17);
             rule__Atri__Group_0__3__Impl();
@@ -12988,17 +13158,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0__3__Impl"
-    // InternalGo.g:3688:1: rule__Atri__Group_0__3__Impl : ( ruleTypes ) ;
+    // InternalGo.g:3738:1: rule__Atri__Group_0__3__Impl : ( ruleTypes ) ;
     public final void rule__Atri__Group_0__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3692:1: ( ( ruleTypes ) )
-            // InternalGo.g:3693:1: ( ruleTypes )
+            // InternalGo.g:3742:1: ( ( ruleTypes ) )
+            // InternalGo.g:3743:1: ( ruleTypes )
             {
-            // InternalGo.g:3693:1: ( ruleTypes )
-            // InternalGo.g:3694:2: ruleTypes
+            // InternalGo.g:3743:1: ( ruleTypes )
+            // InternalGo.g:3744:2: ruleTypes
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtriAccess().getTypesParserRuleCall_0_3()); 
@@ -13033,14 +13203,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0__4"
-    // InternalGo.g:3703:1: rule__Atri__Group_0__4 : rule__Atri__Group_0__4__Impl ;
+    // InternalGo.g:3753:1: rule__Atri__Group_0__4 : rule__Atri__Group_0__4__Impl ;
     public final void rule__Atri__Group_0__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3707:1: ( rule__Atri__Group_0__4__Impl )
-            // InternalGo.g:3708:2: rule__Atri__Group_0__4__Impl
+            // InternalGo.g:3757:1: ( rule__Atri__Group_0__4__Impl )
+            // InternalGo.g:3758:2: rule__Atri__Group_0__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Atri__Group_0__4__Impl();
@@ -13066,22 +13236,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0__4__Impl"
-    // InternalGo.g:3714:1: rule__Atri__Group_0__4__Impl : ( ( rule__Atri__Group_0_4__0 )? ) ;
+    // InternalGo.g:3764:1: rule__Atri__Group_0__4__Impl : ( ( rule__Atri__Group_0_4__0 )? ) ;
     public final void rule__Atri__Group_0__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3718:1: ( ( ( rule__Atri__Group_0_4__0 )? ) )
-            // InternalGo.g:3719:1: ( ( rule__Atri__Group_0_4__0 )? )
+            // InternalGo.g:3768:1: ( ( ( rule__Atri__Group_0_4__0 )? ) )
+            // InternalGo.g:3769:1: ( ( rule__Atri__Group_0_4__0 )? )
             {
-            // InternalGo.g:3719:1: ( ( rule__Atri__Group_0_4__0 )? )
-            // InternalGo.g:3720:2: ( rule__Atri__Group_0_4__0 )?
+            // InternalGo.g:3769:1: ( ( rule__Atri__Group_0_4__0 )? )
+            // InternalGo.g:3770:2: ( rule__Atri__Group_0_4__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtriAccess().getGroup_0_4()); 
             }
-            // InternalGo.g:3721:2: ( rule__Atri__Group_0_4__0 )?
+            // InternalGo.g:3771:2: ( rule__Atri__Group_0_4__0 )?
             int alt38=2;
             int LA38_0 = input.LA(1);
 
@@ -13090,7 +13260,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt38) {
                 case 1 :
-                    // InternalGo.g:3721:3: rule__Atri__Group_0_4__0
+                    // InternalGo.g:3771:3: rule__Atri__Group_0_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Atri__Group_0_4__0();
@@ -13128,14 +13298,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0_4__0"
-    // InternalGo.g:3730:1: rule__Atri__Group_0_4__0 : rule__Atri__Group_0_4__0__Impl rule__Atri__Group_0_4__1 ;
+    // InternalGo.g:3780:1: rule__Atri__Group_0_4__0 : rule__Atri__Group_0_4__0__Impl rule__Atri__Group_0_4__1 ;
     public final void rule__Atri__Group_0_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3734:1: ( rule__Atri__Group_0_4__0__Impl rule__Atri__Group_0_4__1 )
-            // InternalGo.g:3735:2: rule__Atri__Group_0_4__0__Impl rule__Atri__Group_0_4__1
+            // InternalGo.g:3784:1: ( rule__Atri__Group_0_4__0__Impl rule__Atri__Group_0_4__1 )
+            // InternalGo.g:3785:2: rule__Atri__Group_0_4__0__Impl rule__Atri__Group_0_4__1
             {
             pushFollow(FOLLOW_22);
             rule__Atri__Group_0_4__0__Impl();
@@ -13166,17 +13336,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0_4__0__Impl"
-    // InternalGo.g:3742:1: rule__Atri__Group_0_4__0__Impl : ( RULE_OPEN_KEY ) ;
+    // InternalGo.g:3792:1: rule__Atri__Group_0_4__0__Impl : ( RULE_OPEN_KEY ) ;
     public final void rule__Atri__Group_0_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3746:1: ( ( RULE_OPEN_KEY ) )
-            // InternalGo.g:3747:1: ( RULE_OPEN_KEY )
+            // InternalGo.g:3796:1: ( ( RULE_OPEN_KEY ) )
+            // InternalGo.g:3797:1: ( RULE_OPEN_KEY )
             {
-            // InternalGo.g:3747:1: ( RULE_OPEN_KEY )
-            // InternalGo.g:3748:2: RULE_OPEN_KEY
+            // InternalGo.g:3797:1: ( RULE_OPEN_KEY )
+            // InternalGo.g:3798:2: RULE_OPEN_KEY
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtriAccess().getOpen_KeyTerminalRuleCall_0_4_0()); 
@@ -13207,14 +13377,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0_4__1"
-    // InternalGo.g:3757:1: rule__Atri__Group_0_4__1 : rule__Atri__Group_0_4__1__Impl rule__Atri__Group_0_4__2 ;
+    // InternalGo.g:3807:1: rule__Atri__Group_0_4__1 : rule__Atri__Group_0_4__1__Impl rule__Atri__Group_0_4__2 ;
     public final void rule__Atri__Group_0_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3761:1: ( rule__Atri__Group_0_4__1__Impl rule__Atri__Group_0_4__2 )
-            // InternalGo.g:3762:2: rule__Atri__Group_0_4__1__Impl rule__Atri__Group_0_4__2
+            // InternalGo.g:3811:1: ( rule__Atri__Group_0_4__1__Impl rule__Atri__Group_0_4__2 )
+            // InternalGo.g:3812:2: rule__Atri__Group_0_4__1__Impl rule__Atri__Group_0_4__2
             {
             pushFollow(FOLLOW_23);
             rule__Atri__Group_0_4__1__Impl();
@@ -13245,17 +13415,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0_4__1__Impl"
-    // InternalGo.g:3769:1: rule__Atri__Group_0_4__1__Impl : ( ruleTypeValue ) ;
+    // InternalGo.g:3819:1: rule__Atri__Group_0_4__1__Impl : ( ruleTypeValue ) ;
     public final void rule__Atri__Group_0_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3773:1: ( ( ruleTypeValue ) )
-            // InternalGo.g:3774:1: ( ruleTypeValue )
+            // InternalGo.g:3823:1: ( ( ruleTypeValue ) )
+            // InternalGo.g:3824:1: ( ruleTypeValue )
             {
-            // InternalGo.g:3774:1: ( ruleTypeValue )
-            // InternalGo.g:3775:2: ruleTypeValue
+            // InternalGo.g:3824:1: ( ruleTypeValue )
+            // InternalGo.g:3825:2: ruleTypeValue
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtriAccess().getTypeValueParserRuleCall_0_4_1()); 
@@ -13290,14 +13460,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0_4__2"
-    // InternalGo.g:3784:1: rule__Atri__Group_0_4__2 : rule__Atri__Group_0_4__2__Impl ;
+    // InternalGo.g:3834:1: rule__Atri__Group_0_4__2 : rule__Atri__Group_0_4__2__Impl ;
     public final void rule__Atri__Group_0_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3788:1: ( rule__Atri__Group_0_4__2__Impl )
-            // InternalGo.g:3789:2: rule__Atri__Group_0_4__2__Impl
+            // InternalGo.g:3838:1: ( rule__Atri__Group_0_4__2__Impl )
+            // InternalGo.g:3839:2: rule__Atri__Group_0_4__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Atri__Group_0_4__2__Impl();
@@ -13323,17 +13493,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atri__Group_0_4__2__Impl"
-    // InternalGo.g:3795:1: rule__Atri__Group_0_4__2__Impl : ( RULE_CLOSED_KEY ) ;
+    // InternalGo.g:3845:1: rule__Atri__Group_0_4__2__Impl : ( RULE_CLOSED_KEY ) ;
     public final void rule__Atri__Group_0_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3799:1: ( ( RULE_CLOSED_KEY ) )
-            // InternalGo.g:3800:1: ( RULE_CLOSED_KEY )
+            // InternalGo.g:3849:1: ( ( RULE_CLOSED_KEY ) )
+            // InternalGo.g:3850:1: ( RULE_CLOSED_KEY )
             {
-            // InternalGo.g:3800:1: ( RULE_CLOSED_KEY )
-            // InternalGo.g:3801:2: RULE_CLOSED_KEY
+            // InternalGo.g:3850:1: ( RULE_CLOSED_KEY )
+            // InternalGo.g:3851:2: RULE_CLOSED_KEY
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtriAccess().getClosed_KeyTerminalRuleCall_0_4_2()); 
@@ -13364,14 +13534,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__Group__0"
-    // InternalGo.g:3811:1: rule__Params__Group__0 : rule__Params__Group__0__Impl rule__Params__Group__1 ;
+    // InternalGo.g:3861:1: rule__Params__Group__0 : rule__Params__Group__0__Impl rule__Params__Group__1 ;
     public final void rule__Params__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3815:1: ( rule__Params__Group__0__Impl rule__Params__Group__1 )
-            // InternalGo.g:3816:2: rule__Params__Group__0__Impl rule__Params__Group__1
+            // InternalGo.g:3865:1: ( rule__Params__Group__0__Impl rule__Params__Group__1 )
+            // InternalGo.g:3866:2: rule__Params__Group__0__Impl rule__Params__Group__1
             {
             pushFollow(FOLLOW_6);
             rule__Params__Group__0__Impl();
@@ -13402,23 +13572,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__Group__0__Impl"
-    // InternalGo.g:3823:1: rule__Params__Group__0__Impl : ( ( rule__Params__ParamsAssignment_0 ) ) ;
+    // InternalGo.g:3873:1: rule__Params__Group__0__Impl : ( ( rule__Params__ParamsAssignment_0 ) ) ;
     public final void rule__Params__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3827:1: ( ( ( rule__Params__ParamsAssignment_0 ) ) )
-            // InternalGo.g:3828:1: ( ( rule__Params__ParamsAssignment_0 ) )
+            // InternalGo.g:3877:1: ( ( ( rule__Params__ParamsAssignment_0 ) ) )
+            // InternalGo.g:3878:1: ( ( rule__Params__ParamsAssignment_0 ) )
             {
-            // InternalGo.g:3828:1: ( ( rule__Params__ParamsAssignment_0 ) )
-            // InternalGo.g:3829:2: ( rule__Params__ParamsAssignment_0 )
+            // InternalGo.g:3878:1: ( ( rule__Params__ParamsAssignment_0 ) )
+            // InternalGo.g:3879:2: ( rule__Params__ParamsAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParamsAccess().getParamsAssignment_0()); 
             }
-            // InternalGo.g:3830:2: ( rule__Params__ParamsAssignment_0 )
-            // InternalGo.g:3830:3: rule__Params__ParamsAssignment_0
+            // InternalGo.g:3880:2: ( rule__Params__ParamsAssignment_0 )
+            // InternalGo.g:3880:3: rule__Params__ParamsAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Params__ParamsAssignment_0();
@@ -13453,14 +13623,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__Group__1"
-    // InternalGo.g:3838:1: rule__Params__Group__1 : rule__Params__Group__1__Impl rule__Params__Group__2 ;
+    // InternalGo.g:3888:1: rule__Params__Group__1 : rule__Params__Group__1__Impl rule__Params__Group__2 ;
     public final void rule__Params__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3842:1: ( rule__Params__Group__1__Impl rule__Params__Group__2 )
-            // InternalGo.g:3843:2: rule__Params__Group__1__Impl rule__Params__Group__2
+            // InternalGo.g:3892:1: ( rule__Params__Group__1__Impl rule__Params__Group__2 )
+            // InternalGo.g:3893:2: rule__Params__Group__1__Impl rule__Params__Group__2
             {
             pushFollow(FOLLOW_6);
             rule__Params__Group__1__Impl();
@@ -13491,22 +13661,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__Group__1__Impl"
-    // InternalGo.g:3850:1: rule__Params__Group__1__Impl : ( ( rule__Params__TypeAssignment_1 )? ) ;
+    // InternalGo.g:3900:1: rule__Params__Group__1__Impl : ( ( rule__Params__TypeAssignment_1 )? ) ;
     public final void rule__Params__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3854:1: ( ( ( rule__Params__TypeAssignment_1 )? ) )
-            // InternalGo.g:3855:1: ( ( rule__Params__TypeAssignment_1 )? )
+            // InternalGo.g:3904:1: ( ( ( rule__Params__TypeAssignment_1 )? ) )
+            // InternalGo.g:3905:1: ( ( rule__Params__TypeAssignment_1 )? )
             {
-            // InternalGo.g:3855:1: ( ( rule__Params__TypeAssignment_1 )? )
-            // InternalGo.g:3856:2: ( rule__Params__TypeAssignment_1 )?
+            // InternalGo.g:3905:1: ( ( rule__Params__TypeAssignment_1 )? )
+            // InternalGo.g:3906:2: ( rule__Params__TypeAssignment_1 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParamsAccess().getTypeAssignment_1()); 
             }
-            // InternalGo.g:3857:2: ( rule__Params__TypeAssignment_1 )?
+            // InternalGo.g:3907:2: ( rule__Params__TypeAssignment_1 )?
             int alt39=2;
             int LA39_0 = input.LA(1);
 
@@ -13515,7 +13685,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt39) {
                 case 1 :
-                    // InternalGo.g:3857:3: rule__Params__TypeAssignment_1
+                    // InternalGo.g:3907:3: rule__Params__TypeAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Params__TypeAssignment_1();
@@ -13553,14 +13723,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__Group__2"
-    // InternalGo.g:3865:1: rule__Params__Group__2 : rule__Params__Group__2__Impl ;
+    // InternalGo.g:3915:1: rule__Params__Group__2 : rule__Params__Group__2__Impl ;
     public final void rule__Params__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3869:1: ( rule__Params__Group__2__Impl )
-            // InternalGo.g:3870:2: rule__Params__Group__2__Impl
+            // InternalGo.g:3919:1: ( rule__Params__Group__2__Impl )
+            // InternalGo.g:3920:2: rule__Params__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Params__Group__2__Impl();
@@ -13586,22 +13756,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__Group__2__Impl"
-    // InternalGo.g:3876:1: rule__Params__Group__2__Impl : ( ( rule__Params__Group_2__0 )* ) ;
+    // InternalGo.g:3926:1: rule__Params__Group__2__Impl : ( ( rule__Params__Group_2__0 )* ) ;
     public final void rule__Params__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3880:1: ( ( ( rule__Params__Group_2__0 )* ) )
-            // InternalGo.g:3881:1: ( ( rule__Params__Group_2__0 )* )
+            // InternalGo.g:3930:1: ( ( ( rule__Params__Group_2__0 )* ) )
+            // InternalGo.g:3931:1: ( ( rule__Params__Group_2__0 )* )
             {
-            // InternalGo.g:3881:1: ( ( rule__Params__Group_2__0 )* )
-            // InternalGo.g:3882:2: ( rule__Params__Group_2__0 )*
+            // InternalGo.g:3931:1: ( ( rule__Params__Group_2__0 )* )
+            // InternalGo.g:3932:2: ( rule__Params__Group_2__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParamsAccess().getGroup_2()); 
             }
-            // InternalGo.g:3883:2: ( rule__Params__Group_2__0 )*
+            // InternalGo.g:3933:2: ( rule__Params__Group_2__0 )*
             loop40:
             do {
                 int alt40=2;
@@ -13614,7 +13784,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt40) {
             	case 1 :
-            	    // InternalGo.g:3883:3: rule__Params__Group_2__0
+            	    // InternalGo.g:3933:3: rule__Params__Group_2__0
             	    {
             	    pushFollow(FOLLOW_7);
             	    rule__Params__Group_2__0();
@@ -13655,14 +13825,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__Group_2__0"
-    // InternalGo.g:3892:1: rule__Params__Group_2__0 : rule__Params__Group_2__0__Impl rule__Params__Group_2__1 ;
+    // InternalGo.g:3942:1: rule__Params__Group_2__0 : rule__Params__Group_2__0__Impl rule__Params__Group_2__1 ;
     public final void rule__Params__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3896:1: ( rule__Params__Group_2__0__Impl rule__Params__Group_2__1 )
-            // InternalGo.g:3897:2: rule__Params__Group_2__0__Impl rule__Params__Group_2__1
+            // InternalGo.g:3946:1: ( rule__Params__Group_2__0__Impl rule__Params__Group_2__1 )
+            // InternalGo.g:3947:2: rule__Params__Group_2__0__Impl rule__Params__Group_2__1
             {
             pushFollow(FOLLOW_4);
             rule__Params__Group_2__0__Impl();
@@ -13693,17 +13863,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__Group_2__0__Impl"
-    // InternalGo.g:3904:1: rule__Params__Group_2__0__Impl : ( RULE_COMMA ) ;
+    // InternalGo.g:3954:1: rule__Params__Group_2__0__Impl : ( RULE_COMMA ) ;
     public final void rule__Params__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3908:1: ( ( RULE_COMMA ) )
-            // InternalGo.g:3909:1: ( RULE_COMMA )
+            // InternalGo.g:3958:1: ( ( RULE_COMMA ) )
+            // InternalGo.g:3959:1: ( RULE_COMMA )
             {
-            // InternalGo.g:3909:1: ( RULE_COMMA )
-            // InternalGo.g:3910:2: RULE_COMMA
+            // InternalGo.g:3959:1: ( RULE_COMMA )
+            // InternalGo.g:3960:2: RULE_COMMA
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParamsAccess().getCommaTerminalRuleCall_2_0()); 
@@ -13734,14 +13904,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__Group_2__1"
-    // InternalGo.g:3919:1: rule__Params__Group_2__1 : rule__Params__Group_2__1__Impl rule__Params__Group_2__2 ;
+    // InternalGo.g:3969:1: rule__Params__Group_2__1 : rule__Params__Group_2__1__Impl rule__Params__Group_2__2 ;
     public final void rule__Params__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3923:1: ( rule__Params__Group_2__1__Impl rule__Params__Group_2__2 )
-            // InternalGo.g:3924:2: rule__Params__Group_2__1__Impl rule__Params__Group_2__2
+            // InternalGo.g:3973:1: ( rule__Params__Group_2__1__Impl rule__Params__Group_2__2 )
+            // InternalGo.g:3974:2: rule__Params__Group_2__1__Impl rule__Params__Group_2__2
             {
             pushFollow(FOLLOW_5);
             rule__Params__Group_2__1__Impl();
@@ -13772,23 +13942,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__Group_2__1__Impl"
-    // InternalGo.g:3931:1: rule__Params__Group_2__1__Impl : ( ( rule__Params__ParamsAssignment_2_1 ) ) ;
+    // InternalGo.g:3981:1: rule__Params__Group_2__1__Impl : ( ( rule__Params__ParamsAssignment_2_1 ) ) ;
     public final void rule__Params__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3935:1: ( ( ( rule__Params__ParamsAssignment_2_1 ) ) )
-            // InternalGo.g:3936:1: ( ( rule__Params__ParamsAssignment_2_1 ) )
+            // InternalGo.g:3985:1: ( ( ( rule__Params__ParamsAssignment_2_1 ) ) )
+            // InternalGo.g:3986:1: ( ( rule__Params__ParamsAssignment_2_1 ) )
             {
-            // InternalGo.g:3936:1: ( ( rule__Params__ParamsAssignment_2_1 ) )
-            // InternalGo.g:3937:2: ( rule__Params__ParamsAssignment_2_1 )
+            // InternalGo.g:3986:1: ( ( rule__Params__ParamsAssignment_2_1 ) )
+            // InternalGo.g:3987:2: ( rule__Params__ParamsAssignment_2_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParamsAccess().getParamsAssignment_2_1()); 
             }
-            // InternalGo.g:3938:2: ( rule__Params__ParamsAssignment_2_1 )
-            // InternalGo.g:3938:3: rule__Params__ParamsAssignment_2_1
+            // InternalGo.g:3988:2: ( rule__Params__ParamsAssignment_2_1 )
+            // InternalGo.g:3988:3: rule__Params__ParamsAssignment_2_1
             {
             pushFollow(FOLLOW_2);
             rule__Params__ParamsAssignment_2_1();
@@ -13823,14 +13993,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__Group_2__2"
-    // InternalGo.g:3946:1: rule__Params__Group_2__2 : rule__Params__Group_2__2__Impl ;
+    // InternalGo.g:3996:1: rule__Params__Group_2__2 : rule__Params__Group_2__2__Impl ;
     public final void rule__Params__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3950:1: ( rule__Params__Group_2__2__Impl )
-            // InternalGo.g:3951:2: rule__Params__Group_2__2__Impl
+            // InternalGo.g:4000:1: ( rule__Params__Group_2__2__Impl )
+            // InternalGo.g:4001:2: rule__Params__Group_2__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Params__Group_2__2__Impl();
@@ -13856,22 +14026,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__Group_2__2__Impl"
-    // InternalGo.g:3957:1: rule__Params__Group_2__2__Impl : ( ( rule__Params__TypeAssignment_2_2 )? ) ;
+    // InternalGo.g:4007:1: rule__Params__Group_2__2__Impl : ( ( rule__Params__TypeAssignment_2_2 )? ) ;
     public final void rule__Params__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3961:1: ( ( ( rule__Params__TypeAssignment_2_2 )? ) )
-            // InternalGo.g:3962:1: ( ( rule__Params__TypeAssignment_2_2 )? )
+            // InternalGo.g:4011:1: ( ( ( rule__Params__TypeAssignment_2_2 )? ) )
+            // InternalGo.g:4012:1: ( ( rule__Params__TypeAssignment_2_2 )? )
             {
-            // InternalGo.g:3962:1: ( ( rule__Params__TypeAssignment_2_2 )? )
-            // InternalGo.g:3963:2: ( rule__Params__TypeAssignment_2_2 )?
+            // InternalGo.g:4012:1: ( ( rule__Params__TypeAssignment_2_2 )? )
+            // InternalGo.g:4013:2: ( rule__Params__TypeAssignment_2_2 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParamsAccess().getTypeAssignment_2_2()); 
             }
-            // InternalGo.g:3964:2: ( rule__Params__TypeAssignment_2_2 )?
+            // InternalGo.g:4014:2: ( rule__Params__TypeAssignment_2_2 )?
             int alt41=2;
             int LA41_0 = input.LA(1);
 
@@ -13880,7 +14050,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt41) {
                 case 1 :
-                    // InternalGo.g:3964:3: rule__Params__TypeAssignment_2_2
+                    // InternalGo.g:4014:3: rule__Params__TypeAssignment_2_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Params__TypeAssignment_2_2();
@@ -13918,14 +14088,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecImport__Group__0"
-    // InternalGo.g:3973:1: rule__DecImport__Group__0 : rule__DecImport__Group__0__Impl rule__DecImport__Group__1 ;
+    // InternalGo.g:4023:1: rule__DecImport__Group__0 : rule__DecImport__Group__0__Impl rule__DecImport__Group__1 ;
     public final void rule__DecImport__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3977:1: ( rule__DecImport__Group__0__Impl rule__DecImport__Group__1 )
-            // InternalGo.g:3978:2: rule__DecImport__Group__0__Impl rule__DecImport__Group__1
+            // InternalGo.g:4027:1: ( rule__DecImport__Group__0__Impl rule__DecImport__Group__1 )
+            // InternalGo.g:4028:2: rule__DecImport__Group__0__Impl rule__DecImport__Group__1
             {
             pushFollow(FOLLOW_24);
             rule__DecImport__Group__0__Impl();
@@ -13956,17 +14126,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecImport__Group__0__Impl"
-    // InternalGo.g:3985:1: rule__DecImport__Group__0__Impl : ( ruleIMPORT ) ;
+    // InternalGo.g:4035:1: rule__DecImport__Group__0__Impl : ( ruleIMPORT ) ;
     public final void rule__DecImport__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:3989:1: ( ( ruleIMPORT ) )
-            // InternalGo.g:3990:1: ( ruleIMPORT )
+            // InternalGo.g:4039:1: ( ( ruleIMPORT ) )
+            // InternalGo.g:4040:1: ( ruleIMPORT )
             {
-            // InternalGo.g:3990:1: ( ruleIMPORT )
-            // InternalGo.g:3991:2: ruleIMPORT
+            // InternalGo.g:4040:1: ( ruleIMPORT )
+            // InternalGo.g:4041:2: ruleIMPORT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecImportAccess().getIMPORTParserRuleCall_0()); 
@@ -14001,14 +14171,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecImport__Group__1"
-    // InternalGo.g:4000:1: rule__DecImport__Group__1 : rule__DecImport__Group__1__Impl ;
+    // InternalGo.g:4050:1: rule__DecImport__Group__1 : rule__DecImport__Group__1__Impl ;
     public final void rule__DecImport__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4004:1: ( rule__DecImport__Group__1__Impl )
-            // InternalGo.g:4005:2: rule__DecImport__Group__1__Impl
+            // InternalGo.g:4054:1: ( rule__DecImport__Group__1__Impl )
+            // InternalGo.g:4055:2: rule__DecImport__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__DecImport__Group__1__Impl();
@@ -14034,23 +14204,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecImport__Group__1__Impl"
-    // InternalGo.g:4011:1: rule__DecImport__Group__1__Impl : ( ( rule__DecImport__Alternatives_1 ) ) ;
+    // InternalGo.g:4061:1: rule__DecImport__Group__1__Impl : ( ( rule__DecImport__Alternatives_1 ) ) ;
     public final void rule__DecImport__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4015:1: ( ( ( rule__DecImport__Alternatives_1 ) ) )
-            // InternalGo.g:4016:1: ( ( rule__DecImport__Alternatives_1 ) )
+            // InternalGo.g:4065:1: ( ( ( rule__DecImport__Alternatives_1 ) ) )
+            // InternalGo.g:4066:1: ( ( rule__DecImport__Alternatives_1 ) )
             {
-            // InternalGo.g:4016:1: ( ( rule__DecImport__Alternatives_1 ) )
-            // InternalGo.g:4017:2: ( rule__DecImport__Alternatives_1 )
+            // InternalGo.g:4066:1: ( ( rule__DecImport__Alternatives_1 ) )
+            // InternalGo.g:4067:2: ( rule__DecImport__Alternatives_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecImportAccess().getAlternatives_1()); 
             }
-            // InternalGo.g:4018:2: ( rule__DecImport__Alternatives_1 )
-            // InternalGo.g:4018:3: rule__DecImport__Alternatives_1
+            // InternalGo.g:4068:2: ( rule__DecImport__Alternatives_1 )
+            // InternalGo.g:4068:3: rule__DecImport__Alternatives_1
             {
             pushFollow(FOLLOW_2);
             rule__DecImport__Alternatives_1();
@@ -14085,14 +14255,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecImport__Group_1_1__0"
-    // InternalGo.g:4027:1: rule__DecImport__Group_1_1__0 : rule__DecImport__Group_1_1__0__Impl rule__DecImport__Group_1_1__1 ;
+    // InternalGo.g:4077:1: rule__DecImport__Group_1_1__0 : rule__DecImport__Group_1_1__0__Impl rule__DecImport__Group_1_1__1 ;
     public final void rule__DecImport__Group_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4031:1: ( rule__DecImport__Group_1_1__0__Impl rule__DecImport__Group_1_1__1 )
-            // InternalGo.g:4032:2: rule__DecImport__Group_1_1__0__Impl rule__DecImport__Group_1_1__1
+            // InternalGo.g:4081:1: ( rule__DecImport__Group_1_1__0__Impl rule__DecImport__Group_1_1__1 )
+            // InternalGo.g:4082:2: rule__DecImport__Group_1_1__0__Impl rule__DecImport__Group_1_1__1
             {
             pushFollow(FOLLOW_25);
             rule__DecImport__Group_1_1__0__Impl();
@@ -14123,17 +14293,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecImport__Group_1_1__0__Impl"
-    // InternalGo.g:4039:1: rule__DecImport__Group_1_1__0__Impl : ( RULE_OPEN_PARENTHESES ) ;
+    // InternalGo.g:4089:1: rule__DecImport__Group_1_1__0__Impl : ( RULE_OPEN_PARENTHESES ) ;
     public final void rule__DecImport__Group_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4043:1: ( ( RULE_OPEN_PARENTHESES ) )
-            // InternalGo.g:4044:1: ( RULE_OPEN_PARENTHESES )
+            // InternalGo.g:4093:1: ( ( RULE_OPEN_PARENTHESES ) )
+            // InternalGo.g:4094:1: ( RULE_OPEN_PARENTHESES )
             {
-            // InternalGo.g:4044:1: ( RULE_OPEN_PARENTHESES )
-            // InternalGo.g:4045:2: RULE_OPEN_PARENTHESES
+            // InternalGo.g:4094:1: ( RULE_OPEN_PARENTHESES )
+            // InternalGo.g:4095:2: RULE_OPEN_PARENTHESES
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecImportAccess().getOpen_parenthesesTerminalRuleCall_1_1_0()); 
@@ -14164,14 +14334,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecImport__Group_1_1__1"
-    // InternalGo.g:4054:1: rule__DecImport__Group_1_1__1 : rule__DecImport__Group_1_1__1__Impl rule__DecImport__Group_1_1__2 ;
+    // InternalGo.g:4104:1: rule__DecImport__Group_1_1__1 : rule__DecImport__Group_1_1__1__Impl rule__DecImport__Group_1_1__2 ;
     public final void rule__DecImport__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4058:1: ( rule__DecImport__Group_1_1__1__Impl rule__DecImport__Group_1_1__2 )
-            // InternalGo.g:4059:2: rule__DecImport__Group_1_1__1__Impl rule__DecImport__Group_1_1__2
+            // InternalGo.g:4108:1: ( rule__DecImport__Group_1_1__1__Impl rule__DecImport__Group_1_1__2 )
+            // InternalGo.g:4109:2: rule__DecImport__Group_1_1__1__Impl rule__DecImport__Group_1_1__2
             {
             pushFollow(FOLLOW_26);
             rule__DecImport__Group_1_1__1__Impl();
@@ -14202,26 +14372,26 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecImport__Group_1_1__1__Impl"
-    // InternalGo.g:4066:1: rule__DecImport__Group_1_1__1__Impl : ( ( ( RULE_STRING ) ) ( ( RULE_STRING )* ) ) ;
+    // InternalGo.g:4116:1: rule__DecImport__Group_1_1__1__Impl : ( ( ( RULE_STRING ) ) ( ( RULE_STRING )* ) ) ;
     public final void rule__DecImport__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4070:1: ( ( ( ( RULE_STRING ) ) ( ( RULE_STRING )* ) ) )
-            // InternalGo.g:4071:1: ( ( ( RULE_STRING ) ) ( ( RULE_STRING )* ) )
+            // InternalGo.g:4120:1: ( ( ( ( RULE_STRING ) ) ( ( RULE_STRING )* ) ) )
+            // InternalGo.g:4121:1: ( ( ( RULE_STRING ) ) ( ( RULE_STRING )* ) )
             {
-            // InternalGo.g:4071:1: ( ( ( RULE_STRING ) ) ( ( RULE_STRING )* ) )
-            // InternalGo.g:4072:2: ( ( RULE_STRING ) ) ( ( RULE_STRING )* )
+            // InternalGo.g:4121:1: ( ( ( RULE_STRING ) ) ( ( RULE_STRING )* ) )
+            // InternalGo.g:4122:2: ( ( RULE_STRING ) ) ( ( RULE_STRING )* )
             {
-            // InternalGo.g:4072:2: ( ( RULE_STRING ) )
-            // InternalGo.g:4073:3: ( RULE_STRING )
+            // InternalGo.g:4122:2: ( ( RULE_STRING ) )
+            // InternalGo.g:4123:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecImportAccess().getSTRINGTerminalRuleCall_1_1_1()); 
             }
-            // InternalGo.g:4074:3: ( RULE_STRING )
-            // InternalGo.g:4074:4: RULE_STRING
+            // InternalGo.g:4124:3: ( RULE_STRING )
+            // InternalGo.g:4124:4: RULE_STRING
             {
             match(input,RULE_STRING,FOLLOW_27); if (state.failed) return ;
 
@@ -14233,13 +14403,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // InternalGo.g:4077:2: ( ( RULE_STRING )* )
-            // InternalGo.g:4078:3: ( RULE_STRING )*
+            // InternalGo.g:4127:2: ( ( RULE_STRING )* )
+            // InternalGo.g:4128:3: ( RULE_STRING )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecImportAccess().getSTRINGTerminalRuleCall_1_1_1()); 
             }
-            // InternalGo.g:4079:3: ( RULE_STRING )*
+            // InternalGo.g:4129:3: ( RULE_STRING )*
             loop42:
             do {
                 int alt42=2;
@@ -14252,7 +14422,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt42) {
             	case 1 :
-            	    // InternalGo.g:4079:4: RULE_STRING
+            	    // InternalGo.g:4129:4: RULE_STRING
             	    {
             	    match(input,RULE_STRING,FOLLOW_27); if (state.failed) return ;
 
@@ -14292,14 +14462,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecImport__Group_1_1__2"
-    // InternalGo.g:4088:1: rule__DecImport__Group_1_1__2 : rule__DecImport__Group_1_1__2__Impl ;
+    // InternalGo.g:4138:1: rule__DecImport__Group_1_1__2 : rule__DecImport__Group_1_1__2__Impl ;
     public final void rule__DecImport__Group_1_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4092:1: ( rule__DecImport__Group_1_1__2__Impl )
-            // InternalGo.g:4093:2: rule__DecImport__Group_1_1__2__Impl
+            // InternalGo.g:4142:1: ( rule__DecImport__Group_1_1__2__Impl )
+            // InternalGo.g:4143:2: rule__DecImport__Group_1_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__DecImport__Group_1_1__2__Impl();
@@ -14325,17 +14495,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecImport__Group_1_1__2__Impl"
-    // InternalGo.g:4099:1: rule__DecImport__Group_1_1__2__Impl : ( RULE_CLOSED_PARENTHESES ) ;
+    // InternalGo.g:4149:1: rule__DecImport__Group_1_1__2__Impl : ( RULE_CLOSED_PARENTHESES ) ;
     public final void rule__DecImport__Group_1_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4103:1: ( ( RULE_CLOSED_PARENTHESES ) )
-            // InternalGo.g:4104:1: ( RULE_CLOSED_PARENTHESES )
+            // InternalGo.g:4153:1: ( ( RULE_CLOSED_PARENTHESES ) )
+            // InternalGo.g:4154:1: ( RULE_CLOSED_PARENTHESES )
             {
-            // InternalGo.g:4104:1: ( RULE_CLOSED_PARENTHESES )
-            // InternalGo.g:4105:2: RULE_CLOSED_PARENTHESES
+            // InternalGo.g:4154:1: ( RULE_CLOSED_PARENTHESES )
+            // InternalGo.g:4155:2: RULE_CLOSED_PARENTHESES
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecImportAccess().getClosed_parenthesesTerminalRuleCall_1_1_2()); 
@@ -14366,14 +14536,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsOneEquals__Group__0"
-    // InternalGo.g:4115:1: rule__OperationsOneEquals__Group__0 : rule__OperationsOneEquals__Group__0__Impl rule__OperationsOneEquals__Group__1 ;
+    // InternalGo.g:4165:1: rule__OperationsOneEquals__Group__0 : rule__OperationsOneEquals__Group__0__Impl rule__OperationsOneEquals__Group__1 ;
     public final void rule__OperationsOneEquals__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4119:1: ( rule__OperationsOneEquals__Group__0__Impl rule__OperationsOneEquals__Group__1 )
-            // InternalGo.g:4120:2: rule__OperationsOneEquals__Group__0__Impl rule__OperationsOneEquals__Group__1
+            // InternalGo.g:4169:1: ( rule__OperationsOneEquals__Group__0__Impl rule__OperationsOneEquals__Group__1 )
+            // InternalGo.g:4170:2: rule__OperationsOneEquals__Group__0__Impl rule__OperationsOneEquals__Group__1
             {
             pushFollow(FOLLOW_28);
             rule__OperationsOneEquals__Group__0__Impl();
@@ -14404,17 +14574,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsOneEquals__Group__0__Impl"
-    // InternalGo.g:4127:1: rule__OperationsOneEquals__Group__0__Impl : ( ruleVariable ) ;
+    // InternalGo.g:4177:1: rule__OperationsOneEquals__Group__0__Impl : ( ruleVariable ) ;
     public final void rule__OperationsOneEquals__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4131:1: ( ( ruleVariable ) )
-            // InternalGo.g:4132:1: ( ruleVariable )
+            // InternalGo.g:4181:1: ( ( ruleVariable ) )
+            // InternalGo.g:4182:1: ( ruleVariable )
             {
-            // InternalGo.g:4132:1: ( ruleVariable )
-            // InternalGo.g:4133:2: ruleVariable
+            // InternalGo.g:4182:1: ( ruleVariable )
+            // InternalGo.g:4183:2: ruleVariable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsOneEqualsAccess().getVariableParserRuleCall_0()); 
@@ -14449,14 +14619,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsOneEquals__Group__1"
-    // InternalGo.g:4142:1: rule__OperationsOneEquals__Group__1 : rule__OperationsOneEquals__Group__1__Impl rule__OperationsOneEquals__Group__2 ;
+    // InternalGo.g:4192:1: rule__OperationsOneEquals__Group__1 : rule__OperationsOneEquals__Group__1__Impl rule__OperationsOneEquals__Group__2 ;
     public final void rule__OperationsOneEquals__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4146:1: ( rule__OperationsOneEquals__Group__1__Impl rule__OperationsOneEquals__Group__2 )
-            // InternalGo.g:4147:2: rule__OperationsOneEquals__Group__1__Impl rule__OperationsOneEquals__Group__2
+            // InternalGo.g:4196:1: ( rule__OperationsOneEquals__Group__1__Impl rule__OperationsOneEquals__Group__2 )
+            // InternalGo.g:4197:2: rule__OperationsOneEquals__Group__1__Impl rule__OperationsOneEquals__Group__2
             {
             pushFollow(FOLLOW_29);
             rule__OperationsOneEquals__Group__1__Impl();
@@ -14487,23 +14657,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsOneEquals__Group__1__Impl"
-    // InternalGo.g:4154:1: rule__OperationsOneEquals__Group__1__Impl : ( ( rule__OperationsOneEquals__Alternatives_1 ) ) ;
+    // InternalGo.g:4204:1: rule__OperationsOneEquals__Group__1__Impl : ( ( rule__OperationsOneEquals__Alternatives_1 ) ) ;
     public final void rule__OperationsOneEquals__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4158:1: ( ( ( rule__OperationsOneEquals__Alternatives_1 ) ) )
-            // InternalGo.g:4159:1: ( ( rule__OperationsOneEquals__Alternatives_1 ) )
+            // InternalGo.g:4208:1: ( ( ( rule__OperationsOneEquals__Alternatives_1 ) ) )
+            // InternalGo.g:4209:1: ( ( rule__OperationsOneEquals__Alternatives_1 ) )
             {
-            // InternalGo.g:4159:1: ( ( rule__OperationsOneEquals__Alternatives_1 ) )
-            // InternalGo.g:4160:2: ( rule__OperationsOneEquals__Alternatives_1 )
+            // InternalGo.g:4209:1: ( ( rule__OperationsOneEquals__Alternatives_1 ) )
+            // InternalGo.g:4210:2: ( rule__OperationsOneEquals__Alternatives_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsOneEqualsAccess().getAlternatives_1()); 
             }
-            // InternalGo.g:4161:2: ( rule__OperationsOneEquals__Alternatives_1 )
-            // InternalGo.g:4161:3: rule__OperationsOneEquals__Alternatives_1
+            // InternalGo.g:4211:2: ( rule__OperationsOneEquals__Alternatives_1 )
+            // InternalGo.g:4211:3: rule__OperationsOneEquals__Alternatives_1
             {
             pushFollow(FOLLOW_2);
             rule__OperationsOneEquals__Alternatives_1();
@@ -14538,14 +14708,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsOneEquals__Group__2"
-    // InternalGo.g:4169:1: rule__OperationsOneEquals__Group__2 : rule__OperationsOneEquals__Group__2__Impl ;
+    // InternalGo.g:4219:1: rule__OperationsOneEquals__Group__2 : rule__OperationsOneEquals__Group__2__Impl ;
     public final void rule__OperationsOneEquals__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4173:1: ( rule__OperationsOneEquals__Group__2__Impl )
-            // InternalGo.g:4174:2: rule__OperationsOneEquals__Group__2__Impl
+            // InternalGo.g:4223:1: ( rule__OperationsOneEquals__Group__2__Impl )
+            // InternalGo.g:4224:2: rule__OperationsOneEquals__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__OperationsOneEquals__Group__2__Impl();
@@ -14571,23 +14741,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsOneEquals__Group__2__Impl"
-    // InternalGo.g:4180:1: rule__OperationsOneEquals__Group__2__Impl : ( ( rule__OperationsOneEquals__Alternatives_2 ) ) ;
+    // InternalGo.g:4230:1: rule__OperationsOneEquals__Group__2__Impl : ( ( rule__OperationsOneEquals__Alternatives_2 ) ) ;
     public final void rule__OperationsOneEquals__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4184:1: ( ( ( rule__OperationsOneEquals__Alternatives_2 ) ) )
-            // InternalGo.g:4185:1: ( ( rule__OperationsOneEquals__Alternatives_2 ) )
+            // InternalGo.g:4234:1: ( ( ( rule__OperationsOneEquals__Alternatives_2 ) ) )
+            // InternalGo.g:4235:1: ( ( rule__OperationsOneEquals__Alternatives_2 ) )
             {
-            // InternalGo.g:4185:1: ( ( rule__OperationsOneEquals__Alternatives_2 ) )
-            // InternalGo.g:4186:2: ( rule__OperationsOneEquals__Alternatives_2 )
+            // InternalGo.g:4235:1: ( ( rule__OperationsOneEquals__Alternatives_2 ) )
+            // InternalGo.g:4236:2: ( rule__OperationsOneEquals__Alternatives_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsOneEqualsAccess().getAlternatives_2()); 
             }
-            // InternalGo.g:4187:2: ( rule__OperationsOneEquals__Alternatives_2 )
-            // InternalGo.g:4187:3: rule__OperationsOneEquals__Alternatives_2
+            // InternalGo.g:4237:2: ( rule__OperationsOneEquals__Alternatives_2 )
+            // InternalGo.g:4237:3: rule__OperationsOneEquals__Alternatives_2
             {
             pushFollow(FOLLOW_2);
             rule__OperationsOneEquals__Alternatives_2();
@@ -14622,14 +14792,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Double__Group__0"
-    // InternalGo.g:4196:1: rule__Double__Group__0 : rule__Double__Group__0__Impl rule__Double__Group__1 ;
+    // InternalGo.g:4246:1: rule__Double__Group__0 : rule__Double__Group__0__Impl rule__Double__Group__1 ;
     public final void rule__Double__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4200:1: ( rule__Double__Group__0__Impl rule__Double__Group__1 )
-            // InternalGo.g:4201:2: rule__Double__Group__0__Impl rule__Double__Group__1
+            // InternalGo.g:4250:1: ( rule__Double__Group__0__Impl rule__Double__Group__1 )
+            // InternalGo.g:4251:2: rule__Double__Group__0__Impl rule__Double__Group__1
             {
             pushFollow(FOLLOW_30);
             rule__Double__Group__0__Impl();
@@ -14660,23 +14830,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Double__Group__0__Impl"
-    // InternalGo.g:4208:1: rule__Double__Group__0__Impl : ( ( rule__Double__DAssignment_0 ) ) ;
+    // InternalGo.g:4258:1: rule__Double__Group__0__Impl : ( ( rule__Double__DAssignment_0 ) ) ;
     public final void rule__Double__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4212:1: ( ( ( rule__Double__DAssignment_0 ) ) )
-            // InternalGo.g:4213:1: ( ( rule__Double__DAssignment_0 ) )
+            // InternalGo.g:4262:1: ( ( ( rule__Double__DAssignment_0 ) ) )
+            // InternalGo.g:4263:1: ( ( rule__Double__DAssignment_0 ) )
             {
-            // InternalGo.g:4213:1: ( ( rule__Double__DAssignment_0 ) )
-            // InternalGo.g:4214:2: ( rule__Double__DAssignment_0 )
+            // InternalGo.g:4263:1: ( ( rule__Double__DAssignment_0 ) )
+            // InternalGo.g:4264:2: ( rule__Double__DAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDoubleAccess().getDAssignment_0()); 
             }
-            // InternalGo.g:4215:2: ( rule__Double__DAssignment_0 )
-            // InternalGo.g:4215:3: rule__Double__DAssignment_0
+            // InternalGo.g:4265:2: ( rule__Double__DAssignment_0 )
+            // InternalGo.g:4265:3: rule__Double__DAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Double__DAssignment_0();
@@ -14711,14 +14881,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Double__Group__1"
-    // InternalGo.g:4223:1: rule__Double__Group__1 : rule__Double__Group__1__Impl rule__Double__Group__2 ;
+    // InternalGo.g:4273:1: rule__Double__Group__1 : rule__Double__Group__1__Impl rule__Double__Group__2 ;
     public final void rule__Double__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4227:1: ( rule__Double__Group__1__Impl rule__Double__Group__2 )
-            // InternalGo.g:4228:2: rule__Double__Group__1__Impl rule__Double__Group__2
+            // InternalGo.g:4277:1: ( rule__Double__Group__1__Impl rule__Double__Group__2 )
+            // InternalGo.g:4278:2: rule__Double__Group__1__Impl rule__Double__Group__2
             {
             pushFollow(FOLLOW_31);
             rule__Double__Group__1__Impl();
@@ -14749,17 +14919,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Double__Group__1__Impl"
-    // InternalGo.g:4235:1: rule__Double__Group__1__Impl : ( RULE_DOT ) ;
+    // InternalGo.g:4285:1: rule__Double__Group__1__Impl : ( RULE_DOT ) ;
     public final void rule__Double__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4239:1: ( ( RULE_DOT ) )
-            // InternalGo.g:4240:1: ( RULE_DOT )
+            // InternalGo.g:4289:1: ( ( RULE_DOT ) )
+            // InternalGo.g:4290:1: ( RULE_DOT )
             {
-            // InternalGo.g:4240:1: ( RULE_DOT )
-            // InternalGo.g:4241:2: RULE_DOT
+            // InternalGo.g:4290:1: ( RULE_DOT )
+            // InternalGo.g:4291:2: RULE_DOT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDoubleAccess().getDotTerminalRuleCall_1()); 
@@ -14790,14 +14960,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Double__Group__2"
-    // InternalGo.g:4250:1: rule__Double__Group__2 : rule__Double__Group__2__Impl ;
+    // InternalGo.g:4300:1: rule__Double__Group__2 : rule__Double__Group__2__Impl ;
     public final void rule__Double__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4254:1: ( rule__Double__Group__2__Impl )
-            // InternalGo.g:4255:2: rule__Double__Group__2__Impl
+            // InternalGo.g:4304:1: ( rule__Double__Group__2__Impl )
+            // InternalGo.g:4305:2: rule__Double__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Double__Group__2__Impl();
@@ -14823,17 +14993,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Double__Group__2__Impl"
-    // InternalGo.g:4261:1: rule__Double__Group__2__Impl : ( RULE_INT ) ;
+    // InternalGo.g:4311:1: rule__Double__Group__2__Impl : ( RULE_INT ) ;
     public final void rule__Double__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4265:1: ( ( RULE_INT ) )
-            // InternalGo.g:4266:1: ( RULE_INT )
+            // InternalGo.g:4315:1: ( ( RULE_INT ) )
+            // InternalGo.g:4316:1: ( RULE_INT )
             {
-            // InternalGo.g:4266:1: ( RULE_INT )
-            // InternalGo.g:4267:2: RULE_INT
+            // InternalGo.g:4316:1: ( RULE_INT )
+            // InternalGo.g:4317:2: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDoubleAccess().getINTTerminalRuleCall_2()); 
@@ -14864,14 +15034,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operations__Group__0"
-    // InternalGo.g:4277:1: rule__Operations__Group__0 : rule__Operations__Group__0__Impl rule__Operations__Group__1 ;
+    // InternalGo.g:4327:1: rule__Operations__Group__0 : rule__Operations__Group__0__Impl rule__Operations__Group__1 ;
     public final void rule__Operations__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4281:1: ( rule__Operations__Group__0__Impl rule__Operations__Group__1 )
-            // InternalGo.g:4282:2: rule__Operations__Group__0__Impl rule__Operations__Group__1
+            // InternalGo.g:4331:1: ( rule__Operations__Group__0__Impl rule__Operations__Group__1 )
+            // InternalGo.g:4332:2: rule__Operations__Group__0__Impl rule__Operations__Group__1
             {
             pushFollow(FOLLOW_32);
             rule__Operations__Group__0__Impl();
@@ -14902,17 +15072,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operations__Group__0__Impl"
-    // InternalGo.g:4289:1: rule__Operations__Group__0__Impl : ( ruleT ) ;
+    // InternalGo.g:4339:1: rule__Operations__Group__0__Impl : ( ruleT ) ;
     public final void rule__Operations__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4293:1: ( ( ruleT ) )
-            // InternalGo.g:4294:1: ( ruleT )
+            // InternalGo.g:4343:1: ( ( ruleT ) )
+            // InternalGo.g:4344:1: ( ruleT )
             {
-            // InternalGo.g:4294:1: ( ruleT )
-            // InternalGo.g:4295:2: ruleT
+            // InternalGo.g:4344:1: ( ruleT )
+            // InternalGo.g:4345:2: ruleT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsAccess().getTParserRuleCall_0()); 
@@ -14947,14 +15117,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operations__Group__1"
-    // InternalGo.g:4304:1: rule__Operations__Group__1 : rule__Operations__Group__1__Impl ;
+    // InternalGo.g:4354:1: rule__Operations__Group__1 : rule__Operations__Group__1__Impl ;
     public final void rule__Operations__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4308:1: ( rule__Operations__Group__1__Impl )
-            // InternalGo.g:4309:2: rule__Operations__Group__1__Impl
+            // InternalGo.g:4358:1: ( rule__Operations__Group__1__Impl )
+            // InternalGo.g:4359:2: rule__Operations__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Operations__Group__1__Impl();
@@ -14980,23 +15150,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operations__Group__1__Impl"
-    // InternalGo.g:4315:1: rule__Operations__Group__1__Impl : ( ( rule__Operations__OAssignment_1 ) ) ;
+    // InternalGo.g:4365:1: rule__Operations__Group__1__Impl : ( ( rule__Operations__OAssignment_1 ) ) ;
     public final void rule__Operations__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4319:1: ( ( ( rule__Operations__OAssignment_1 ) ) )
-            // InternalGo.g:4320:1: ( ( rule__Operations__OAssignment_1 ) )
+            // InternalGo.g:4369:1: ( ( ( rule__Operations__OAssignment_1 ) ) )
+            // InternalGo.g:4370:1: ( ( rule__Operations__OAssignment_1 ) )
             {
-            // InternalGo.g:4320:1: ( ( rule__Operations__OAssignment_1 ) )
-            // InternalGo.g:4321:2: ( rule__Operations__OAssignment_1 )
+            // InternalGo.g:4370:1: ( ( rule__Operations__OAssignment_1 ) )
+            // InternalGo.g:4371:2: ( rule__Operations__OAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsAccess().getOAssignment_1()); 
             }
-            // InternalGo.g:4322:2: ( rule__Operations__OAssignment_1 )
-            // InternalGo.g:4322:3: rule__Operations__OAssignment_1
+            // InternalGo.g:4372:2: ( rule__Operations__OAssignment_1 )
+            // InternalGo.g:4372:3: rule__Operations__OAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Operations__OAssignment_1();
@@ -15031,14 +15201,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__I__Group_0__0"
-    // InternalGo.g:4331:1: rule__I__Group_0__0 : rule__I__Group_0__0__Impl rule__I__Group_0__1 ;
+    // InternalGo.g:4381:1: rule__I__Group_0__0 : rule__I__Group_0__0__Impl rule__I__Group_0__1 ;
     public final void rule__I__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4335:1: ( rule__I__Group_0__0__Impl rule__I__Group_0__1 )
-            // InternalGo.g:4336:2: rule__I__Group_0__0__Impl rule__I__Group_0__1
+            // InternalGo.g:4385:1: ( rule__I__Group_0__0__Impl rule__I__Group_0__1 )
+            // InternalGo.g:4386:2: rule__I__Group_0__0__Impl rule__I__Group_0__1
             {
             pushFollow(FOLLOW_33);
             rule__I__Group_0__0__Impl();
@@ -15069,17 +15239,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__I__Group_0__0__Impl"
-    // InternalGo.g:4343:1: rule__I__Group_0__0__Impl : ( RULE_PLUS ) ;
+    // InternalGo.g:4393:1: rule__I__Group_0__0__Impl : ( RULE_PLUS ) ;
     public final void rule__I__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4347:1: ( ( RULE_PLUS ) )
-            // InternalGo.g:4348:1: ( RULE_PLUS )
+            // InternalGo.g:4397:1: ( ( RULE_PLUS ) )
+            // InternalGo.g:4398:1: ( RULE_PLUS )
             {
-            // InternalGo.g:4348:1: ( RULE_PLUS )
-            // InternalGo.g:4349:2: RULE_PLUS
+            // InternalGo.g:4398:1: ( RULE_PLUS )
+            // InternalGo.g:4399:2: RULE_PLUS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIAccess().getPlusTerminalRuleCall_0_0()); 
@@ -15110,14 +15280,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__I__Group_0__1"
-    // InternalGo.g:4358:1: rule__I__Group_0__1 : rule__I__Group_0__1__Impl rule__I__Group_0__2 ;
+    // InternalGo.g:4408:1: rule__I__Group_0__1 : rule__I__Group_0__1__Impl rule__I__Group_0__2 ;
     public final void rule__I__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4362:1: ( rule__I__Group_0__1__Impl rule__I__Group_0__2 )
-            // InternalGo.g:4363:2: rule__I__Group_0__1__Impl rule__I__Group_0__2
+            // InternalGo.g:4412:1: ( rule__I__Group_0__1__Impl rule__I__Group_0__2 )
+            // InternalGo.g:4413:2: rule__I__Group_0__1__Impl rule__I__Group_0__2
             {
             pushFollow(FOLLOW_32);
             rule__I__Group_0__1__Impl();
@@ -15148,17 +15318,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__I__Group_0__1__Impl"
-    // InternalGo.g:4370:1: rule__I__Group_0__1__Impl : ( ruleT ) ;
+    // InternalGo.g:4420:1: rule__I__Group_0__1__Impl : ( ruleT ) ;
     public final void rule__I__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4374:1: ( ( ruleT ) )
-            // InternalGo.g:4375:1: ( ruleT )
+            // InternalGo.g:4424:1: ( ( ruleT ) )
+            // InternalGo.g:4425:1: ( ruleT )
             {
-            // InternalGo.g:4375:1: ( ruleT )
-            // InternalGo.g:4376:2: ruleT
+            // InternalGo.g:4425:1: ( ruleT )
+            // InternalGo.g:4426:2: ruleT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIAccess().getTParserRuleCall_0_1()); 
@@ -15193,14 +15363,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__I__Group_0__2"
-    // InternalGo.g:4385:1: rule__I__Group_0__2 : rule__I__Group_0__2__Impl ;
+    // InternalGo.g:4435:1: rule__I__Group_0__2 : rule__I__Group_0__2__Impl ;
     public final void rule__I__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4389:1: ( rule__I__Group_0__2__Impl )
-            // InternalGo.g:4390:2: rule__I__Group_0__2__Impl
+            // InternalGo.g:4439:1: ( rule__I__Group_0__2__Impl )
+            // InternalGo.g:4440:2: rule__I__Group_0__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__I__Group_0__2__Impl();
@@ -15226,23 +15396,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__I__Group_0__2__Impl"
-    // InternalGo.g:4396:1: rule__I__Group_0__2__Impl : ( ( rule__I__OAssignment_0_2 ) ) ;
+    // InternalGo.g:4446:1: rule__I__Group_0__2__Impl : ( ( rule__I__OAssignment_0_2 ) ) ;
     public final void rule__I__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4400:1: ( ( ( rule__I__OAssignment_0_2 ) ) )
-            // InternalGo.g:4401:1: ( ( rule__I__OAssignment_0_2 ) )
+            // InternalGo.g:4450:1: ( ( ( rule__I__OAssignment_0_2 ) ) )
+            // InternalGo.g:4451:1: ( ( rule__I__OAssignment_0_2 ) )
             {
-            // InternalGo.g:4401:1: ( ( rule__I__OAssignment_0_2 ) )
-            // InternalGo.g:4402:2: ( rule__I__OAssignment_0_2 )
+            // InternalGo.g:4451:1: ( ( rule__I__OAssignment_0_2 ) )
+            // InternalGo.g:4452:2: ( rule__I__OAssignment_0_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIAccess().getOAssignment_0_2()); 
             }
-            // InternalGo.g:4403:2: ( rule__I__OAssignment_0_2 )
-            // InternalGo.g:4403:3: rule__I__OAssignment_0_2
+            // InternalGo.g:4453:2: ( rule__I__OAssignment_0_2 )
+            // InternalGo.g:4453:3: rule__I__OAssignment_0_2
             {
             pushFollow(FOLLOW_2);
             rule__I__OAssignment_0_2();
@@ -15277,14 +15447,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__I__Group_1__0"
-    // InternalGo.g:4412:1: rule__I__Group_1__0 : rule__I__Group_1__0__Impl rule__I__Group_1__1 ;
+    // InternalGo.g:4462:1: rule__I__Group_1__0 : rule__I__Group_1__0__Impl rule__I__Group_1__1 ;
     public final void rule__I__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4416:1: ( rule__I__Group_1__0__Impl rule__I__Group_1__1 )
-            // InternalGo.g:4417:2: rule__I__Group_1__0__Impl rule__I__Group_1__1
+            // InternalGo.g:4466:1: ( rule__I__Group_1__0__Impl rule__I__Group_1__1 )
+            // InternalGo.g:4467:2: rule__I__Group_1__0__Impl rule__I__Group_1__1
             {
             pushFollow(FOLLOW_33);
             rule__I__Group_1__0__Impl();
@@ -15315,17 +15485,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__I__Group_1__0__Impl"
-    // InternalGo.g:4424:1: rule__I__Group_1__0__Impl : ( RULE_MINUS ) ;
+    // InternalGo.g:4474:1: rule__I__Group_1__0__Impl : ( RULE_MINUS ) ;
     public final void rule__I__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4428:1: ( ( RULE_MINUS ) )
-            // InternalGo.g:4429:1: ( RULE_MINUS )
+            // InternalGo.g:4478:1: ( ( RULE_MINUS ) )
+            // InternalGo.g:4479:1: ( RULE_MINUS )
             {
-            // InternalGo.g:4429:1: ( RULE_MINUS )
-            // InternalGo.g:4430:2: RULE_MINUS
+            // InternalGo.g:4479:1: ( RULE_MINUS )
+            // InternalGo.g:4480:2: RULE_MINUS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIAccess().getMinusTerminalRuleCall_1_0()); 
@@ -15356,14 +15526,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__I__Group_1__1"
-    // InternalGo.g:4439:1: rule__I__Group_1__1 : rule__I__Group_1__1__Impl rule__I__Group_1__2 ;
+    // InternalGo.g:4489:1: rule__I__Group_1__1 : rule__I__Group_1__1__Impl rule__I__Group_1__2 ;
     public final void rule__I__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4443:1: ( rule__I__Group_1__1__Impl rule__I__Group_1__2 )
-            // InternalGo.g:4444:2: rule__I__Group_1__1__Impl rule__I__Group_1__2
+            // InternalGo.g:4493:1: ( rule__I__Group_1__1__Impl rule__I__Group_1__2 )
+            // InternalGo.g:4494:2: rule__I__Group_1__1__Impl rule__I__Group_1__2
             {
             pushFollow(FOLLOW_32);
             rule__I__Group_1__1__Impl();
@@ -15394,17 +15564,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__I__Group_1__1__Impl"
-    // InternalGo.g:4451:1: rule__I__Group_1__1__Impl : ( ruleT ) ;
+    // InternalGo.g:4501:1: rule__I__Group_1__1__Impl : ( ruleT ) ;
     public final void rule__I__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4455:1: ( ( ruleT ) )
-            // InternalGo.g:4456:1: ( ruleT )
+            // InternalGo.g:4505:1: ( ( ruleT ) )
+            // InternalGo.g:4506:1: ( ruleT )
             {
-            // InternalGo.g:4456:1: ( ruleT )
-            // InternalGo.g:4457:2: ruleT
+            // InternalGo.g:4506:1: ( ruleT )
+            // InternalGo.g:4507:2: ruleT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIAccess().getTParserRuleCall_1_1()); 
@@ -15439,14 +15609,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__I__Group_1__2"
-    // InternalGo.g:4466:1: rule__I__Group_1__2 : rule__I__Group_1__2__Impl ;
+    // InternalGo.g:4516:1: rule__I__Group_1__2 : rule__I__Group_1__2__Impl ;
     public final void rule__I__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4470:1: ( rule__I__Group_1__2__Impl )
-            // InternalGo.g:4471:2: rule__I__Group_1__2__Impl
+            // InternalGo.g:4520:1: ( rule__I__Group_1__2__Impl )
+            // InternalGo.g:4521:2: rule__I__Group_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__I__Group_1__2__Impl();
@@ -15472,23 +15642,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__I__Group_1__2__Impl"
-    // InternalGo.g:4477:1: rule__I__Group_1__2__Impl : ( ( rule__I__OAssignment_1_2 ) ) ;
+    // InternalGo.g:4527:1: rule__I__Group_1__2__Impl : ( ( rule__I__OAssignment_1_2 ) ) ;
     public final void rule__I__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4481:1: ( ( ( rule__I__OAssignment_1_2 ) ) )
-            // InternalGo.g:4482:1: ( ( rule__I__OAssignment_1_2 ) )
+            // InternalGo.g:4531:1: ( ( ( rule__I__OAssignment_1_2 ) ) )
+            // InternalGo.g:4532:1: ( ( rule__I__OAssignment_1_2 ) )
             {
-            // InternalGo.g:4482:1: ( ( rule__I__OAssignment_1_2 ) )
-            // InternalGo.g:4483:2: ( rule__I__OAssignment_1_2 )
+            // InternalGo.g:4532:1: ( ( rule__I__OAssignment_1_2 ) )
+            // InternalGo.g:4533:2: ( rule__I__OAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIAccess().getOAssignment_1_2()); 
             }
-            // InternalGo.g:4484:2: ( rule__I__OAssignment_1_2 )
-            // InternalGo.g:4484:3: rule__I__OAssignment_1_2
+            // InternalGo.g:4534:2: ( rule__I__OAssignment_1_2 )
+            // InternalGo.g:4534:3: rule__I__OAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__I__OAssignment_1_2();
@@ -15523,14 +15693,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__T__Group__0"
-    // InternalGo.g:4493:1: rule__T__Group__0 : rule__T__Group__0__Impl rule__T__Group__1 ;
+    // InternalGo.g:4543:1: rule__T__Group__0 : rule__T__Group__0__Impl rule__T__Group__1 ;
     public final void rule__T__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4497:1: ( rule__T__Group__0__Impl rule__T__Group__1 )
-            // InternalGo.g:4498:2: rule__T__Group__0__Impl rule__T__Group__1
+            // InternalGo.g:4547:1: ( rule__T__Group__0__Impl rule__T__Group__1 )
+            // InternalGo.g:4548:2: rule__T__Group__0__Impl rule__T__Group__1
             {
             pushFollow(FOLLOW_34);
             rule__T__Group__0__Impl();
@@ -15561,17 +15731,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__T__Group__0__Impl"
-    // InternalGo.g:4505:1: rule__T__Group__0__Impl : ( ruleF ) ;
+    // InternalGo.g:4555:1: rule__T__Group__0__Impl : ( ruleF ) ;
     public final void rule__T__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4509:1: ( ( ruleF ) )
-            // InternalGo.g:4510:1: ( ruleF )
+            // InternalGo.g:4559:1: ( ( ruleF ) )
+            // InternalGo.g:4560:1: ( ruleF )
             {
-            // InternalGo.g:4510:1: ( ruleF )
-            // InternalGo.g:4511:2: ruleF
+            // InternalGo.g:4560:1: ( ruleF )
+            // InternalGo.g:4561:2: ruleF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTAccess().getFParserRuleCall_0()); 
@@ -15606,14 +15776,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__T__Group__1"
-    // InternalGo.g:4520:1: rule__T__Group__1 : rule__T__Group__1__Impl ;
+    // InternalGo.g:4570:1: rule__T__Group__1 : rule__T__Group__1__Impl ;
     public final void rule__T__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4524:1: ( rule__T__Group__1__Impl )
-            // InternalGo.g:4525:2: rule__T__Group__1__Impl
+            // InternalGo.g:4574:1: ( rule__T__Group__1__Impl )
+            // InternalGo.g:4575:2: rule__T__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__T__Group__1__Impl();
@@ -15639,23 +15809,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__T__Group__1__Impl"
-    // InternalGo.g:4531:1: rule__T__Group__1__Impl : ( ( rule__T__OAssignment_1 ) ) ;
+    // InternalGo.g:4581:1: rule__T__Group__1__Impl : ( ( rule__T__OAssignment_1 ) ) ;
     public final void rule__T__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4535:1: ( ( ( rule__T__OAssignment_1 ) ) )
-            // InternalGo.g:4536:1: ( ( rule__T__OAssignment_1 ) )
+            // InternalGo.g:4585:1: ( ( ( rule__T__OAssignment_1 ) ) )
+            // InternalGo.g:4586:1: ( ( rule__T__OAssignment_1 ) )
             {
-            // InternalGo.g:4536:1: ( ( rule__T__OAssignment_1 ) )
-            // InternalGo.g:4537:2: ( rule__T__OAssignment_1 )
+            // InternalGo.g:4586:1: ( ( rule__T__OAssignment_1 ) )
+            // InternalGo.g:4587:2: ( rule__T__OAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTAccess().getOAssignment_1()); 
             }
-            // InternalGo.g:4538:2: ( rule__T__OAssignment_1 )
-            // InternalGo.g:4538:3: rule__T__OAssignment_1
+            // InternalGo.g:4588:2: ( rule__T__OAssignment_1 )
+            // InternalGo.g:4588:3: rule__T__OAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__T__OAssignment_1();
@@ -15690,14 +15860,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__Group_0__0"
-    // InternalGo.g:4547:1: rule__Y__Group_0__0 : rule__Y__Group_0__0__Impl rule__Y__Group_0__1 ;
+    // InternalGo.g:4597:1: rule__Y__Group_0__0 : rule__Y__Group_0__0__Impl rule__Y__Group_0__1 ;
     public final void rule__Y__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4551:1: ( rule__Y__Group_0__0__Impl rule__Y__Group_0__1 )
-            // InternalGo.g:4552:2: rule__Y__Group_0__0__Impl rule__Y__Group_0__1
+            // InternalGo.g:4601:1: ( rule__Y__Group_0__0__Impl rule__Y__Group_0__1 )
+            // InternalGo.g:4602:2: rule__Y__Group_0__0__Impl rule__Y__Group_0__1
             {
             pushFollow(FOLLOW_33);
             rule__Y__Group_0__0__Impl();
@@ -15728,17 +15898,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__Group_0__0__Impl"
-    // InternalGo.g:4559:1: rule__Y__Group_0__0__Impl : ( RULE_ASTERICS ) ;
+    // InternalGo.g:4609:1: rule__Y__Group_0__0__Impl : ( RULE_ASTERICS ) ;
     public final void rule__Y__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4563:1: ( ( RULE_ASTERICS ) )
-            // InternalGo.g:4564:1: ( RULE_ASTERICS )
+            // InternalGo.g:4613:1: ( ( RULE_ASTERICS ) )
+            // InternalGo.g:4614:1: ( RULE_ASTERICS )
             {
-            // InternalGo.g:4564:1: ( RULE_ASTERICS )
-            // InternalGo.g:4565:2: RULE_ASTERICS
+            // InternalGo.g:4614:1: ( RULE_ASTERICS )
+            // InternalGo.g:4615:2: RULE_ASTERICS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getYAccess().getAstericsTerminalRuleCall_0_0()); 
@@ -15769,14 +15939,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__Group_0__1"
-    // InternalGo.g:4574:1: rule__Y__Group_0__1 : rule__Y__Group_0__1__Impl rule__Y__Group_0__2 ;
+    // InternalGo.g:4624:1: rule__Y__Group_0__1 : rule__Y__Group_0__1__Impl rule__Y__Group_0__2 ;
     public final void rule__Y__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4578:1: ( rule__Y__Group_0__1__Impl rule__Y__Group_0__2 )
-            // InternalGo.g:4579:2: rule__Y__Group_0__1__Impl rule__Y__Group_0__2
+            // InternalGo.g:4628:1: ( rule__Y__Group_0__1__Impl rule__Y__Group_0__2 )
+            // InternalGo.g:4629:2: rule__Y__Group_0__1__Impl rule__Y__Group_0__2
             {
             pushFollow(FOLLOW_34);
             rule__Y__Group_0__1__Impl();
@@ -15807,23 +15977,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__Group_0__1__Impl"
-    // InternalGo.g:4586:1: rule__Y__Group_0__1__Impl : ( ( rule__Y__OAssignment_0_1 ) ) ;
+    // InternalGo.g:4636:1: rule__Y__Group_0__1__Impl : ( ( rule__Y__OAssignment_0_1 ) ) ;
     public final void rule__Y__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4590:1: ( ( ( rule__Y__OAssignment_0_1 ) ) )
-            // InternalGo.g:4591:1: ( ( rule__Y__OAssignment_0_1 ) )
+            // InternalGo.g:4640:1: ( ( ( rule__Y__OAssignment_0_1 ) ) )
+            // InternalGo.g:4641:1: ( ( rule__Y__OAssignment_0_1 ) )
             {
-            // InternalGo.g:4591:1: ( ( rule__Y__OAssignment_0_1 ) )
-            // InternalGo.g:4592:2: ( rule__Y__OAssignment_0_1 )
+            // InternalGo.g:4641:1: ( ( rule__Y__OAssignment_0_1 ) )
+            // InternalGo.g:4642:2: ( rule__Y__OAssignment_0_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getYAccess().getOAssignment_0_1()); 
             }
-            // InternalGo.g:4593:2: ( rule__Y__OAssignment_0_1 )
-            // InternalGo.g:4593:3: rule__Y__OAssignment_0_1
+            // InternalGo.g:4643:2: ( rule__Y__OAssignment_0_1 )
+            // InternalGo.g:4643:3: rule__Y__OAssignment_0_1
             {
             pushFollow(FOLLOW_2);
             rule__Y__OAssignment_0_1();
@@ -15858,14 +16028,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__Group_0__2"
-    // InternalGo.g:4601:1: rule__Y__Group_0__2 : rule__Y__Group_0__2__Impl ;
+    // InternalGo.g:4651:1: rule__Y__Group_0__2 : rule__Y__Group_0__2__Impl ;
     public final void rule__Y__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4605:1: ( rule__Y__Group_0__2__Impl )
-            // InternalGo.g:4606:2: rule__Y__Group_0__2__Impl
+            // InternalGo.g:4655:1: ( rule__Y__Group_0__2__Impl )
+            // InternalGo.g:4656:2: rule__Y__Group_0__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Y__Group_0__2__Impl();
@@ -15891,23 +16061,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__Group_0__2__Impl"
-    // InternalGo.g:4612:1: rule__Y__Group_0__2__Impl : ( ( rule__Y__OAssignment_0_2 ) ) ;
+    // InternalGo.g:4662:1: rule__Y__Group_0__2__Impl : ( ( rule__Y__OAssignment_0_2 ) ) ;
     public final void rule__Y__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4616:1: ( ( ( rule__Y__OAssignment_0_2 ) ) )
-            // InternalGo.g:4617:1: ( ( rule__Y__OAssignment_0_2 ) )
+            // InternalGo.g:4666:1: ( ( ( rule__Y__OAssignment_0_2 ) ) )
+            // InternalGo.g:4667:1: ( ( rule__Y__OAssignment_0_2 ) )
             {
-            // InternalGo.g:4617:1: ( ( rule__Y__OAssignment_0_2 ) )
-            // InternalGo.g:4618:2: ( rule__Y__OAssignment_0_2 )
+            // InternalGo.g:4667:1: ( ( rule__Y__OAssignment_0_2 ) )
+            // InternalGo.g:4668:2: ( rule__Y__OAssignment_0_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getYAccess().getOAssignment_0_2()); 
             }
-            // InternalGo.g:4619:2: ( rule__Y__OAssignment_0_2 )
-            // InternalGo.g:4619:3: rule__Y__OAssignment_0_2
+            // InternalGo.g:4669:2: ( rule__Y__OAssignment_0_2 )
+            // InternalGo.g:4669:3: rule__Y__OAssignment_0_2
             {
             pushFollow(FOLLOW_2);
             rule__Y__OAssignment_0_2();
@@ -15942,14 +16112,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__Group_1__0"
-    // InternalGo.g:4628:1: rule__Y__Group_1__0 : rule__Y__Group_1__0__Impl rule__Y__Group_1__1 ;
+    // InternalGo.g:4678:1: rule__Y__Group_1__0 : rule__Y__Group_1__0__Impl rule__Y__Group_1__1 ;
     public final void rule__Y__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4632:1: ( rule__Y__Group_1__0__Impl rule__Y__Group_1__1 )
-            // InternalGo.g:4633:2: rule__Y__Group_1__0__Impl rule__Y__Group_1__1
+            // InternalGo.g:4682:1: ( rule__Y__Group_1__0__Impl rule__Y__Group_1__1 )
+            // InternalGo.g:4683:2: rule__Y__Group_1__0__Impl rule__Y__Group_1__1
             {
             pushFollow(FOLLOW_33);
             rule__Y__Group_1__0__Impl();
@@ -15980,17 +16150,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__Group_1__0__Impl"
-    // InternalGo.g:4640:1: rule__Y__Group_1__0__Impl : ( RULE_BAR ) ;
+    // InternalGo.g:4690:1: rule__Y__Group_1__0__Impl : ( RULE_BAR ) ;
     public final void rule__Y__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4644:1: ( ( RULE_BAR ) )
-            // InternalGo.g:4645:1: ( RULE_BAR )
+            // InternalGo.g:4694:1: ( ( RULE_BAR ) )
+            // InternalGo.g:4695:1: ( RULE_BAR )
             {
-            // InternalGo.g:4645:1: ( RULE_BAR )
-            // InternalGo.g:4646:2: RULE_BAR
+            // InternalGo.g:4695:1: ( RULE_BAR )
+            // InternalGo.g:4696:2: RULE_BAR
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getYAccess().getBarTerminalRuleCall_1_0()); 
@@ -16021,14 +16191,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__Group_1__1"
-    // InternalGo.g:4655:1: rule__Y__Group_1__1 : rule__Y__Group_1__1__Impl rule__Y__Group_1__2 ;
+    // InternalGo.g:4705:1: rule__Y__Group_1__1 : rule__Y__Group_1__1__Impl rule__Y__Group_1__2 ;
     public final void rule__Y__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4659:1: ( rule__Y__Group_1__1__Impl rule__Y__Group_1__2 )
-            // InternalGo.g:4660:2: rule__Y__Group_1__1__Impl rule__Y__Group_1__2
+            // InternalGo.g:4709:1: ( rule__Y__Group_1__1__Impl rule__Y__Group_1__2 )
+            // InternalGo.g:4710:2: rule__Y__Group_1__1__Impl rule__Y__Group_1__2
             {
             pushFollow(FOLLOW_34);
             rule__Y__Group_1__1__Impl();
@@ -16059,23 +16229,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__Group_1__1__Impl"
-    // InternalGo.g:4667:1: rule__Y__Group_1__1__Impl : ( ( rule__Y__OAssignment_1_1 ) ) ;
+    // InternalGo.g:4717:1: rule__Y__Group_1__1__Impl : ( ( rule__Y__OAssignment_1_1 ) ) ;
     public final void rule__Y__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4671:1: ( ( ( rule__Y__OAssignment_1_1 ) ) )
-            // InternalGo.g:4672:1: ( ( rule__Y__OAssignment_1_1 ) )
+            // InternalGo.g:4721:1: ( ( ( rule__Y__OAssignment_1_1 ) ) )
+            // InternalGo.g:4722:1: ( ( rule__Y__OAssignment_1_1 ) )
             {
-            // InternalGo.g:4672:1: ( ( rule__Y__OAssignment_1_1 ) )
-            // InternalGo.g:4673:2: ( rule__Y__OAssignment_1_1 )
+            // InternalGo.g:4722:1: ( ( rule__Y__OAssignment_1_1 ) )
+            // InternalGo.g:4723:2: ( rule__Y__OAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getYAccess().getOAssignment_1_1()); 
             }
-            // InternalGo.g:4674:2: ( rule__Y__OAssignment_1_1 )
-            // InternalGo.g:4674:3: rule__Y__OAssignment_1_1
+            // InternalGo.g:4724:2: ( rule__Y__OAssignment_1_1 )
+            // InternalGo.g:4724:3: rule__Y__OAssignment_1_1
             {
             pushFollow(FOLLOW_2);
             rule__Y__OAssignment_1_1();
@@ -16110,14 +16280,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__Group_1__2"
-    // InternalGo.g:4682:1: rule__Y__Group_1__2 : rule__Y__Group_1__2__Impl ;
+    // InternalGo.g:4732:1: rule__Y__Group_1__2 : rule__Y__Group_1__2__Impl ;
     public final void rule__Y__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4686:1: ( rule__Y__Group_1__2__Impl )
-            // InternalGo.g:4687:2: rule__Y__Group_1__2__Impl
+            // InternalGo.g:4736:1: ( rule__Y__Group_1__2__Impl )
+            // InternalGo.g:4737:2: rule__Y__Group_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Y__Group_1__2__Impl();
@@ -16143,23 +16313,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__Group_1__2__Impl"
-    // InternalGo.g:4693:1: rule__Y__Group_1__2__Impl : ( ( rule__Y__OAssignment_1_2 ) ) ;
+    // InternalGo.g:4743:1: rule__Y__Group_1__2__Impl : ( ( rule__Y__OAssignment_1_2 ) ) ;
     public final void rule__Y__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4697:1: ( ( ( rule__Y__OAssignment_1_2 ) ) )
-            // InternalGo.g:4698:1: ( ( rule__Y__OAssignment_1_2 ) )
+            // InternalGo.g:4747:1: ( ( ( rule__Y__OAssignment_1_2 ) ) )
+            // InternalGo.g:4748:1: ( ( rule__Y__OAssignment_1_2 ) )
             {
-            // InternalGo.g:4698:1: ( ( rule__Y__OAssignment_1_2 ) )
-            // InternalGo.g:4699:2: ( rule__Y__OAssignment_1_2 )
+            // InternalGo.g:4748:1: ( ( rule__Y__OAssignment_1_2 ) )
+            // InternalGo.g:4749:2: ( rule__Y__OAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getYAccess().getOAssignment_1_2()); 
             }
-            // InternalGo.g:4700:2: ( rule__Y__OAssignment_1_2 )
-            // InternalGo.g:4700:3: rule__Y__OAssignment_1_2
+            // InternalGo.g:4750:2: ( rule__Y__OAssignment_1_2 )
+            // InternalGo.g:4750:3: rule__Y__OAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__Y__OAssignment_1_2();
@@ -16194,14 +16364,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__F__Group_0__0"
-    // InternalGo.g:4709:1: rule__F__Group_0__0 : rule__F__Group_0__0__Impl rule__F__Group_0__1 ;
+    // InternalGo.g:4759:1: rule__F__Group_0__0 : rule__F__Group_0__0__Impl rule__F__Group_0__1 ;
     public final void rule__F__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4713:1: ( rule__F__Group_0__0__Impl rule__F__Group_0__1 )
-            // InternalGo.g:4714:2: rule__F__Group_0__0__Impl rule__F__Group_0__1
+            // InternalGo.g:4763:1: ( rule__F__Group_0__0__Impl rule__F__Group_0__1 )
+            // InternalGo.g:4764:2: rule__F__Group_0__0__Impl rule__F__Group_0__1
             {
             pushFollow(FOLLOW_33);
             rule__F__Group_0__0__Impl();
@@ -16232,17 +16402,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__F__Group_0__0__Impl"
-    // InternalGo.g:4721:1: rule__F__Group_0__0__Impl : ( RULE_OPEN_PARENTHESES ) ;
+    // InternalGo.g:4771:1: rule__F__Group_0__0__Impl : ( RULE_OPEN_PARENTHESES ) ;
     public final void rule__F__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4725:1: ( ( RULE_OPEN_PARENTHESES ) )
-            // InternalGo.g:4726:1: ( RULE_OPEN_PARENTHESES )
+            // InternalGo.g:4775:1: ( ( RULE_OPEN_PARENTHESES ) )
+            // InternalGo.g:4776:1: ( RULE_OPEN_PARENTHESES )
             {
-            // InternalGo.g:4726:1: ( RULE_OPEN_PARENTHESES )
-            // InternalGo.g:4727:2: RULE_OPEN_PARENTHESES
+            // InternalGo.g:4776:1: ( RULE_OPEN_PARENTHESES )
+            // InternalGo.g:4777:2: RULE_OPEN_PARENTHESES
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFAccess().getOpen_parenthesesTerminalRuleCall_0_0()); 
@@ -16273,14 +16443,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__F__Group_0__1"
-    // InternalGo.g:4736:1: rule__F__Group_0__1 : rule__F__Group_0__1__Impl rule__F__Group_0__2 ;
+    // InternalGo.g:4786:1: rule__F__Group_0__1 : rule__F__Group_0__1__Impl rule__F__Group_0__2 ;
     public final void rule__F__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4740:1: ( rule__F__Group_0__1__Impl rule__F__Group_0__2 )
-            // InternalGo.g:4741:2: rule__F__Group_0__1__Impl rule__F__Group_0__2
+            // InternalGo.g:4790:1: ( rule__F__Group_0__1__Impl rule__F__Group_0__2 )
+            // InternalGo.g:4791:2: rule__F__Group_0__1__Impl rule__F__Group_0__2
             {
             pushFollow(FOLLOW_26);
             rule__F__Group_0__1__Impl();
@@ -16311,23 +16481,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__F__Group_0__1__Impl"
-    // InternalGo.g:4748:1: rule__F__Group_0__1__Impl : ( ( rule__F__OAssignment_0_1 ) ) ;
+    // InternalGo.g:4798:1: rule__F__Group_0__1__Impl : ( ( rule__F__OAssignment_0_1 ) ) ;
     public final void rule__F__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4752:1: ( ( ( rule__F__OAssignment_0_1 ) ) )
-            // InternalGo.g:4753:1: ( ( rule__F__OAssignment_0_1 ) )
+            // InternalGo.g:4802:1: ( ( ( rule__F__OAssignment_0_1 ) ) )
+            // InternalGo.g:4803:1: ( ( rule__F__OAssignment_0_1 ) )
             {
-            // InternalGo.g:4753:1: ( ( rule__F__OAssignment_0_1 ) )
-            // InternalGo.g:4754:2: ( rule__F__OAssignment_0_1 )
+            // InternalGo.g:4803:1: ( ( rule__F__OAssignment_0_1 ) )
+            // InternalGo.g:4804:2: ( rule__F__OAssignment_0_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFAccess().getOAssignment_0_1()); 
             }
-            // InternalGo.g:4755:2: ( rule__F__OAssignment_0_1 )
-            // InternalGo.g:4755:3: rule__F__OAssignment_0_1
+            // InternalGo.g:4805:2: ( rule__F__OAssignment_0_1 )
+            // InternalGo.g:4805:3: rule__F__OAssignment_0_1
             {
             pushFollow(FOLLOW_2);
             rule__F__OAssignment_0_1();
@@ -16362,14 +16532,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__F__Group_0__2"
-    // InternalGo.g:4763:1: rule__F__Group_0__2 : rule__F__Group_0__2__Impl ;
+    // InternalGo.g:4813:1: rule__F__Group_0__2 : rule__F__Group_0__2__Impl ;
     public final void rule__F__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4767:1: ( rule__F__Group_0__2__Impl )
-            // InternalGo.g:4768:2: rule__F__Group_0__2__Impl
+            // InternalGo.g:4817:1: ( rule__F__Group_0__2__Impl )
+            // InternalGo.g:4818:2: rule__F__Group_0__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__F__Group_0__2__Impl();
@@ -16395,17 +16565,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__F__Group_0__2__Impl"
-    // InternalGo.g:4774:1: rule__F__Group_0__2__Impl : ( RULE_CLOSED_PARENTHESES ) ;
+    // InternalGo.g:4824:1: rule__F__Group_0__2__Impl : ( RULE_CLOSED_PARENTHESES ) ;
     public final void rule__F__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4778:1: ( ( RULE_CLOSED_PARENTHESES ) )
-            // InternalGo.g:4779:1: ( RULE_CLOSED_PARENTHESES )
+            // InternalGo.g:4828:1: ( ( RULE_CLOSED_PARENTHESES ) )
+            // InternalGo.g:4829:1: ( RULE_CLOSED_PARENTHESES )
             {
-            // InternalGo.g:4779:1: ( RULE_CLOSED_PARENTHESES )
-            // InternalGo.g:4780:2: RULE_CLOSED_PARENTHESES
+            // InternalGo.g:4829:1: ( RULE_CLOSED_PARENTHESES )
+            // InternalGo.g:4830:2: RULE_CLOSED_PARENTHESES
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFAccess().getClosed_parenthesesTerminalRuleCall_0_2()); 
@@ -16436,14 +16606,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__Group__0"
-    // InternalGo.g:4790:1: rule__Condition__Group__0 : rule__Condition__Group__0__Impl rule__Condition__Group__1 ;
+    // InternalGo.g:4840:1: rule__Condition__Group__0 : rule__Condition__Group__0__Impl rule__Condition__Group__1 ;
     public final void rule__Condition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4794:1: ( rule__Condition__Group__0__Impl rule__Condition__Group__1 )
-            // InternalGo.g:4795:2: rule__Condition__Group__0__Impl rule__Condition__Group__1
+            // InternalGo.g:4844:1: ( rule__Condition__Group__0__Impl rule__Condition__Group__1 )
+            // InternalGo.g:4845:2: rule__Condition__Group__0__Impl rule__Condition__Group__1
             {
             pushFollow(FOLLOW_35);
             rule__Condition__Group__0__Impl();
@@ -16474,23 +16644,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__Group__0__Impl"
-    // InternalGo.g:4802:1: rule__Condition__Group__0__Impl : ( ( rule__Condition__IfAssignment_0 ) ) ;
+    // InternalGo.g:4852:1: rule__Condition__Group__0__Impl : ( ( rule__Condition__IfAssignment_0 ) ) ;
     public final void rule__Condition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4806:1: ( ( ( rule__Condition__IfAssignment_0 ) ) )
-            // InternalGo.g:4807:1: ( ( rule__Condition__IfAssignment_0 ) )
+            // InternalGo.g:4856:1: ( ( ( rule__Condition__IfAssignment_0 ) ) )
+            // InternalGo.g:4857:1: ( ( rule__Condition__IfAssignment_0 ) )
             {
-            // InternalGo.g:4807:1: ( ( rule__Condition__IfAssignment_0 ) )
-            // InternalGo.g:4808:2: ( rule__Condition__IfAssignment_0 )
+            // InternalGo.g:4857:1: ( ( rule__Condition__IfAssignment_0 ) )
+            // InternalGo.g:4858:2: ( rule__Condition__IfAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionAccess().getIfAssignment_0()); 
             }
-            // InternalGo.g:4809:2: ( rule__Condition__IfAssignment_0 )
-            // InternalGo.g:4809:3: rule__Condition__IfAssignment_0
+            // InternalGo.g:4859:2: ( rule__Condition__IfAssignment_0 )
+            // InternalGo.g:4859:3: rule__Condition__IfAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Condition__IfAssignment_0();
@@ -16525,14 +16695,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__Group__1"
-    // InternalGo.g:4817:1: rule__Condition__Group__1 : rule__Condition__Group__1__Impl rule__Condition__Group__2 ;
+    // InternalGo.g:4867:1: rule__Condition__Group__1 : rule__Condition__Group__1__Impl rule__Condition__Group__2 ;
     public final void rule__Condition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4821:1: ( rule__Condition__Group__1__Impl rule__Condition__Group__2 )
-            // InternalGo.g:4822:2: rule__Condition__Group__1__Impl rule__Condition__Group__2
+            // InternalGo.g:4871:1: ( rule__Condition__Group__1__Impl rule__Condition__Group__2 )
+            // InternalGo.g:4872:2: rule__Condition__Group__1__Impl rule__Condition__Group__2
             {
             pushFollow(FOLLOW_35);
             rule__Condition__Group__1__Impl();
@@ -16563,22 +16733,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__Group__1__Impl"
-    // InternalGo.g:4829:1: rule__Condition__Group__1__Impl : ( ( rule__Condition__ElseifAssignment_1 )* ) ;
+    // InternalGo.g:4879:1: rule__Condition__Group__1__Impl : ( ( rule__Condition__ElseifAssignment_1 )* ) ;
     public final void rule__Condition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4833:1: ( ( ( rule__Condition__ElseifAssignment_1 )* ) )
-            // InternalGo.g:4834:1: ( ( rule__Condition__ElseifAssignment_1 )* )
+            // InternalGo.g:4883:1: ( ( ( rule__Condition__ElseifAssignment_1 )* ) )
+            // InternalGo.g:4884:1: ( ( rule__Condition__ElseifAssignment_1 )* )
             {
-            // InternalGo.g:4834:1: ( ( rule__Condition__ElseifAssignment_1 )* )
-            // InternalGo.g:4835:2: ( rule__Condition__ElseifAssignment_1 )*
+            // InternalGo.g:4884:1: ( ( rule__Condition__ElseifAssignment_1 )* )
+            // InternalGo.g:4885:2: ( rule__Condition__ElseifAssignment_1 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionAccess().getElseifAssignment_1()); 
             }
-            // InternalGo.g:4836:2: ( rule__Condition__ElseifAssignment_1 )*
+            // InternalGo.g:4886:2: ( rule__Condition__ElseifAssignment_1 )*
             loop43:
             do {
                 int alt43=2;
@@ -16597,7 +16767,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt43) {
             	case 1 :
-            	    // InternalGo.g:4836:3: rule__Condition__ElseifAssignment_1
+            	    // InternalGo.g:4886:3: rule__Condition__ElseifAssignment_1
             	    {
             	    pushFollow(FOLLOW_36);
             	    rule__Condition__ElseifAssignment_1();
@@ -16638,14 +16808,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__Group__2"
-    // InternalGo.g:4844:1: rule__Condition__Group__2 : rule__Condition__Group__2__Impl ;
+    // InternalGo.g:4894:1: rule__Condition__Group__2 : rule__Condition__Group__2__Impl ;
     public final void rule__Condition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4848:1: ( rule__Condition__Group__2__Impl )
-            // InternalGo.g:4849:2: rule__Condition__Group__2__Impl
+            // InternalGo.g:4898:1: ( rule__Condition__Group__2__Impl )
+            // InternalGo.g:4899:2: rule__Condition__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Condition__Group__2__Impl();
@@ -16671,22 +16841,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__Group__2__Impl"
-    // InternalGo.g:4855:1: rule__Condition__Group__2__Impl : ( ( rule__Condition__ElseAssignment_2 )? ) ;
+    // InternalGo.g:4905:1: rule__Condition__Group__2__Impl : ( ( rule__Condition__ElseAssignment_2 )? ) ;
     public final void rule__Condition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4859:1: ( ( ( rule__Condition__ElseAssignment_2 )? ) )
-            // InternalGo.g:4860:1: ( ( rule__Condition__ElseAssignment_2 )? )
+            // InternalGo.g:4909:1: ( ( ( rule__Condition__ElseAssignment_2 )? ) )
+            // InternalGo.g:4910:1: ( ( rule__Condition__ElseAssignment_2 )? )
             {
-            // InternalGo.g:4860:1: ( ( rule__Condition__ElseAssignment_2 )? )
-            // InternalGo.g:4861:2: ( rule__Condition__ElseAssignment_2 )?
+            // InternalGo.g:4910:1: ( ( rule__Condition__ElseAssignment_2 )? )
+            // InternalGo.g:4911:2: ( rule__Condition__ElseAssignment_2 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionAccess().getElseAssignment_2()); 
             }
-            // InternalGo.g:4862:2: ( rule__Condition__ElseAssignment_2 )?
+            // InternalGo.g:4912:2: ( rule__Condition__ElseAssignment_2 )?
             int alt44=2;
             int LA44_0 = input.LA(1);
 
@@ -16695,7 +16865,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt44) {
                 case 1 :
-                    // InternalGo.g:4862:3: rule__Condition__ElseAssignment_2
+                    // InternalGo.g:4912:3: rule__Condition__ElseAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Condition__ElseAssignment_2();
@@ -16733,14 +16903,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__0"
-    // InternalGo.g:4871:1: rule__IfCondition__Group__0 : rule__IfCondition__Group__0__Impl rule__IfCondition__Group__1 ;
+    // InternalGo.g:4921:1: rule__IfCondition__Group__0 : rule__IfCondition__Group__0__Impl rule__IfCondition__Group__1 ;
     public final void rule__IfCondition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4875:1: ( rule__IfCondition__Group__0__Impl rule__IfCondition__Group__1 )
-            // InternalGo.g:4876:2: rule__IfCondition__Group__0__Impl rule__IfCondition__Group__1
+            // InternalGo.g:4925:1: ( rule__IfCondition__Group__0__Impl rule__IfCondition__Group__1 )
+            // InternalGo.g:4926:2: rule__IfCondition__Group__0__Impl rule__IfCondition__Group__1
             {
             pushFollow(FOLLOW_9);
             rule__IfCondition__Group__0__Impl();
@@ -16771,17 +16941,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__0__Impl"
-    // InternalGo.g:4883:1: rule__IfCondition__Group__0__Impl : ( ruleIF ) ;
+    // InternalGo.g:4933:1: rule__IfCondition__Group__0__Impl : ( ruleIF ) ;
     public final void rule__IfCondition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4887:1: ( ( ruleIF ) )
-            // InternalGo.g:4888:1: ( ruleIF )
+            // InternalGo.g:4937:1: ( ( ruleIF ) )
+            // InternalGo.g:4938:1: ( ruleIF )
             {
-            // InternalGo.g:4888:1: ( ruleIF )
-            // InternalGo.g:4889:2: ruleIF
+            // InternalGo.g:4938:1: ( ruleIF )
+            // InternalGo.g:4939:2: ruleIF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfConditionAccess().getIFParserRuleCall_0()); 
@@ -16816,14 +16986,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__1"
-    // InternalGo.g:4898:1: rule__IfCondition__Group__1 : rule__IfCondition__Group__1__Impl rule__IfCondition__Group__2 ;
+    // InternalGo.g:4948:1: rule__IfCondition__Group__1 : rule__IfCondition__Group__1__Impl rule__IfCondition__Group__2 ;
     public final void rule__IfCondition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4902:1: ( rule__IfCondition__Group__1__Impl rule__IfCondition__Group__2 )
-            // InternalGo.g:4903:2: rule__IfCondition__Group__1__Impl rule__IfCondition__Group__2
+            // InternalGo.g:4952:1: ( rule__IfCondition__Group__1__Impl rule__IfCondition__Group__2 )
+            // InternalGo.g:4953:2: rule__IfCondition__Group__1__Impl rule__IfCondition__Group__2
             {
             pushFollow(FOLLOW_17);
             rule__IfCondition__Group__1__Impl();
@@ -16854,23 +17024,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__1__Impl"
-    // InternalGo.g:4910:1: rule__IfCondition__Group__1__Impl : ( ( rule__IfCondition__CondAssignment_1 ) ) ;
+    // InternalGo.g:4960:1: rule__IfCondition__Group__1__Impl : ( ( rule__IfCondition__CondAssignment_1 ) ) ;
     public final void rule__IfCondition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4914:1: ( ( ( rule__IfCondition__CondAssignment_1 ) ) )
-            // InternalGo.g:4915:1: ( ( rule__IfCondition__CondAssignment_1 ) )
+            // InternalGo.g:4964:1: ( ( ( rule__IfCondition__CondAssignment_1 ) ) )
+            // InternalGo.g:4965:1: ( ( rule__IfCondition__CondAssignment_1 ) )
             {
-            // InternalGo.g:4915:1: ( ( rule__IfCondition__CondAssignment_1 ) )
-            // InternalGo.g:4916:2: ( rule__IfCondition__CondAssignment_1 )
+            // InternalGo.g:4965:1: ( ( rule__IfCondition__CondAssignment_1 ) )
+            // InternalGo.g:4966:2: ( rule__IfCondition__CondAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfConditionAccess().getCondAssignment_1()); 
             }
-            // InternalGo.g:4917:2: ( rule__IfCondition__CondAssignment_1 )
-            // InternalGo.g:4917:3: rule__IfCondition__CondAssignment_1
+            // InternalGo.g:4967:2: ( rule__IfCondition__CondAssignment_1 )
+            // InternalGo.g:4967:3: rule__IfCondition__CondAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__IfCondition__CondAssignment_1();
@@ -16905,14 +17075,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__2"
-    // InternalGo.g:4925:1: rule__IfCondition__Group__2 : rule__IfCondition__Group__2__Impl rule__IfCondition__Group__3 ;
+    // InternalGo.g:4975:1: rule__IfCondition__Group__2 : rule__IfCondition__Group__2__Impl rule__IfCondition__Group__3 ;
     public final void rule__IfCondition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4929:1: ( rule__IfCondition__Group__2__Impl rule__IfCondition__Group__3 )
-            // InternalGo.g:4930:2: rule__IfCondition__Group__2__Impl rule__IfCondition__Group__3
+            // InternalGo.g:4979:1: ( rule__IfCondition__Group__2__Impl rule__IfCondition__Group__3 )
+            // InternalGo.g:4980:2: rule__IfCondition__Group__2__Impl rule__IfCondition__Group__3
             {
             pushFollow(FOLLOW_37);
             rule__IfCondition__Group__2__Impl();
@@ -16943,17 +17113,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__2__Impl"
-    // InternalGo.g:4937:1: rule__IfCondition__Group__2__Impl : ( RULE_OPEN_KEY ) ;
+    // InternalGo.g:4987:1: rule__IfCondition__Group__2__Impl : ( RULE_OPEN_KEY ) ;
     public final void rule__IfCondition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4941:1: ( ( RULE_OPEN_KEY ) )
-            // InternalGo.g:4942:1: ( RULE_OPEN_KEY )
+            // InternalGo.g:4991:1: ( ( RULE_OPEN_KEY ) )
+            // InternalGo.g:4992:1: ( RULE_OPEN_KEY )
             {
-            // InternalGo.g:4942:1: ( RULE_OPEN_KEY )
-            // InternalGo.g:4943:2: RULE_OPEN_KEY
+            // InternalGo.g:4992:1: ( RULE_OPEN_KEY )
+            // InternalGo.g:4993:2: RULE_OPEN_KEY
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfConditionAccess().getOpen_KeyTerminalRuleCall_2()); 
@@ -16984,14 +17154,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__3"
-    // InternalGo.g:4952:1: rule__IfCondition__Group__3 : rule__IfCondition__Group__3__Impl rule__IfCondition__Group__4 ;
+    // InternalGo.g:5002:1: rule__IfCondition__Group__3 : rule__IfCondition__Group__3__Impl rule__IfCondition__Group__4 ;
     public final void rule__IfCondition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4956:1: ( rule__IfCondition__Group__3__Impl rule__IfCondition__Group__4 )
-            // InternalGo.g:4957:2: rule__IfCondition__Group__3__Impl rule__IfCondition__Group__4
+            // InternalGo.g:5006:1: ( rule__IfCondition__Group__3__Impl rule__IfCondition__Group__4 )
+            // InternalGo.g:5007:2: rule__IfCondition__Group__3__Impl rule__IfCondition__Group__4
             {
             pushFollow(FOLLOW_37);
             rule__IfCondition__Group__3__Impl();
@@ -17022,22 +17192,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__3__Impl"
-    // InternalGo.g:4964:1: rule__IfCondition__Group__3__Impl : ( ( rule__IfCondition__ThenAssignment_3 )* ) ;
+    // InternalGo.g:5014:1: rule__IfCondition__Group__3__Impl : ( ( rule__IfCondition__ThenAssignment_3 )* ) ;
     public final void rule__IfCondition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4968:1: ( ( ( rule__IfCondition__ThenAssignment_3 )* ) )
-            // InternalGo.g:4969:1: ( ( rule__IfCondition__ThenAssignment_3 )* )
+            // InternalGo.g:5018:1: ( ( ( rule__IfCondition__ThenAssignment_3 )* ) )
+            // InternalGo.g:5019:1: ( ( rule__IfCondition__ThenAssignment_3 )* )
             {
-            // InternalGo.g:4969:1: ( ( rule__IfCondition__ThenAssignment_3 )* )
-            // InternalGo.g:4970:2: ( rule__IfCondition__ThenAssignment_3 )*
+            // InternalGo.g:5019:1: ( ( rule__IfCondition__ThenAssignment_3 )* )
+            // InternalGo.g:5020:2: ( rule__IfCondition__ThenAssignment_3 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfConditionAccess().getThenAssignment_3()); 
             }
-            // InternalGo.g:4971:2: ( rule__IfCondition__ThenAssignment_3 )*
+            // InternalGo.g:5021:2: ( rule__IfCondition__ThenAssignment_3 )*
             loop45:
             do {
                 int alt45=2;
@@ -17050,7 +17220,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt45) {
             	case 1 :
-            	    // InternalGo.g:4971:3: rule__IfCondition__ThenAssignment_3
+            	    // InternalGo.g:5021:3: rule__IfCondition__ThenAssignment_3
             	    {
             	    pushFollow(FOLLOW_3);
             	    rule__IfCondition__ThenAssignment_3();
@@ -17091,14 +17261,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__4"
-    // InternalGo.g:4979:1: rule__IfCondition__Group__4 : rule__IfCondition__Group__4__Impl ;
+    // InternalGo.g:5029:1: rule__IfCondition__Group__4 : rule__IfCondition__Group__4__Impl ;
     public final void rule__IfCondition__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4983:1: ( rule__IfCondition__Group__4__Impl )
-            // InternalGo.g:4984:2: rule__IfCondition__Group__4__Impl
+            // InternalGo.g:5033:1: ( rule__IfCondition__Group__4__Impl )
+            // InternalGo.g:5034:2: rule__IfCondition__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__IfCondition__Group__4__Impl();
@@ -17124,17 +17294,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__Group__4__Impl"
-    // InternalGo.g:4990:1: rule__IfCondition__Group__4__Impl : ( RULE_CLOSED_KEY ) ;
+    // InternalGo.g:5040:1: rule__IfCondition__Group__4__Impl : ( RULE_CLOSED_KEY ) ;
     public final void rule__IfCondition__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:4994:1: ( ( RULE_CLOSED_KEY ) )
-            // InternalGo.g:4995:1: ( RULE_CLOSED_KEY )
+            // InternalGo.g:5044:1: ( ( RULE_CLOSED_KEY ) )
+            // InternalGo.g:5045:1: ( RULE_CLOSED_KEY )
             {
-            // InternalGo.g:4995:1: ( RULE_CLOSED_KEY )
-            // InternalGo.g:4996:2: RULE_CLOSED_KEY
+            // InternalGo.g:5045:1: ( RULE_CLOSED_KEY )
+            // InternalGo.g:5046:2: RULE_CLOSED_KEY
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfConditionAccess().getClosed_KeyTerminalRuleCall_4()); 
@@ -17165,14 +17335,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseIfCondition__Group__0"
-    // InternalGo.g:5006:1: rule__ElseIfCondition__Group__0 : rule__ElseIfCondition__Group__0__Impl rule__ElseIfCondition__Group__1 ;
+    // InternalGo.g:5056:1: rule__ElseIfCondition__Group__0 : rule__ElseIfCondition__Group__0__Impl rule__ElseIfCondition__Group__1 ;
     public final void rule__ElseIfCondition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5010:1: ( rule__ElseIfCondition__Group__0__Impl rule__ElseIfCondition__Group__1 )
-            // InternalGo.g:5011:2: rule__ElseIfCondition__Group__0__Impl rule__ElseIfCondition__Group__1
+            // InternalGo.g:5060:1: ( rule__ElseIfCondition__Group__0__Impl rule__ElseIfCondition__Group__1 )
+            // InternalGo.g:5061:2: rule__ElseIfCondition__Group__0__Impl rule__ElseIfCondition__Group__1
             {
             pushFollow(FOLLOW_38);
             rule__ElseIfCondition__Group__0__Impl();
@@ -17203,23 +17373,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseIfCondition__Group__0__Impl"
-    // InternalGo.g:5018:1: rule__ElseIfCondition__Group__0__Impl : ( ( ruleELSE ) ) ;
+    // InternalGo.g:5068:1: rule__ElseIfCondition__Group__0__Impl : ( ( ruleELSE ) ) ;
     public final void rule__ElseIfCondition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5022:1: ( ( ( ruleELSE ) ) )
-            // InternalGo.g:5023:1: ( ( ruleELSE ) )
+            // InternalGo.g:5072:1: ( ( ( ruleELSE ) ) )
+            // InternalGo.g:5073:1: ( ( ruleELSE ) )
             {
-            // InternalGo.g:5023:1: ( ( ruleELSE ) )
-            // InternalGo.g:5024:2: ( ruleELSE )
+            // InternalGo.g:5073:1: ( ( ruleELSE ) )
+            // InternalGo.g:5074:2: ( ruleELSE )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getElseIfConditionAccess().getELSEParserRuleCall_0()); 
             }
-            // InternalGo.g:5025:2: ( ruleELSE )
-            // InternalGo.g:5025:3: ruleELSE
+            // InternalGo.g:5075:2: ( ruleELSE )
+            // InternalGo.g:5075:3: ruleELSE
             {
             pushFollow(FOLLOW_2);
             ruleELSE();
@@ -17254,14 +17424,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseIfCondition__Group__1"
-    // InternalGo.g:5033:1: rule__ElseIfCondition__Group__1 : rule__ElseIfCondition__Group__1__Impl ;
+    // InternalGo.g:5083:1: rule__ElseIfCondition__Group__1 : rule__ElseIfCondition__Group__1__Impl ;
     public final void rule__ElseIfCondition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5037:1: ( rule__ElseIfCondition__Group__1__Impl )
-            // InternalGo.g:5038:2: rule__ElseIfCondition__Group__1__Impl
+            // InternalGo.g:5087:1: ( rule__ElseIfCondition__Group__1__Impl )
+            // InternalGo.g:5088:2: rule__ElseIfCondition__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ElseIfCondition__Group__1__Impl();
@@ -17287,17 +17457,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseIfCondition__Group__1__Impl"
-    // InternalGo.g:5044:1: rule__ElseIfCondition__Group__1__Impl : ( ruleIfCondition ) ;
+    // InternalGo.g:5094:1: rule__ElseIfCondition__Group__1__Impl : ( ruleIfCondition ) ;
     public final void rule__ElseIfCondition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5048:1: ( ( ruleIfCondition ) )
-            // InternalGo.g:5049:1: ( ruleIfCondition )
+            // InternalGo.g:5098:1: ( ( ruleIfCondition ) )
+            // InternalGo.g:5099:1: ( ruleIfCondition )
             {
-            // InternalGo.g:5049:1: ( ruleIfCondition )
-            // InternalGo.g:5050:2: ruleIfCondition
+            // InternalGo.g:5099:1: ( ruleIfCondition )
+            // InternalGo.g:5100:2: ruleIfCondition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getElseIfConditionAccess().getIfConditionParserRuleCall_1()); 
@@ -17332,14 +17502,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseCondition__Group__0"
-    // InternalGo.g:5060:1: rule__ElseCondition__Group__0 : rule__ElseCondition__Group__0__Impl rule__ElseCondition__Group__1 ;
+    // InternalGo.g:5110:1: rule__ElseCondition__Group__0 : rule__ElseCondition__Group__0__Impl rule__ElseCondition__Group__1 ;
     public final void rule__ElseCondition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5064:1: ( rule__ElseCondition__Group__0__Impl rule__ElseCondition__Group__1 )
-            // InternalGo.g:5065:2: rule__ElseCondition__Group__0__Impl rule__ElseCondition__Group__1
+            // InternalGo.g:5114:1: ( rule__ElseCondition__Group__0__Impl rule__ElseCondition__Group__1 )
+            // InternalGo.g:5115:2: rule__ElseCondition__Group__0__Impl rule__ElseCondition__Group__1
             {
             pushFollow(FOLLOW_17);
             rule__ElseCondition__Group__0__Impl();
@@ -17370,23 +17540,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseCondition__Group__0__Impl"
-    // InternalGo.g:5072:1: rule__ElseCondition__Group__0__Impl : ( ( ruleELSE ) ) ;
+    // InternalGo.g:5122:1: rule__ElseCondition__Group__0__Impl : ( ( ruleELSE ) ) ;
     public final void rule__ElseCondition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5076:1: ( ( ( ruleELSE ) ) )
-            // InternalGo.g:5077:1: ( ( ruleELSE ) )
+            // InternalGo.g:5126:1: ( ( ( ruleELSE ) ) )
+            // InternalGo.g:5127:1: ( ( ruleELSE ) )
             {
-            // InternalGo.g:5077:1: ( ( ruleELSE ) )
-            // InternalGo.g:5078:2: ( ruleELSE )
+            // InternalGo.g:5127:1: ( ( ruleELSE ) )
+            // InternalGo.g:5128:2: ( ruleELSE )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getElseConditionAccess().getELSEParserRuleCall_0()); 
             }
-            // InternalGo.g:5079:2: ( ruleELSE )
-            // InternalGo.g:5079:3: ruleELSE
+            // InternalGo.g:5129:2: ( ruleELSE )
+            // InternalGo.g:5129:3: ruleELSE
             {
             pushFollow(FOLLOW_2);
             ruleELSE();
@@ -17421,14 +17591,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseCondition__Group__1"
-    // InternalGo.g:5087:1: rule__ElseCondition__Group__1 : rule__ElseCondition__Group__1__Impl rule__ElseCondition__Group__2 ;
+    // InternalGo.g:5137:1: rule__ElseCondition__Group__1 : rule__ElseCondition__Group__1__Impl rule__ElseCondition__Group__2 ;
     public final void rule__ElseCondition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5091:1: ( rule__ElseCondition__Group__1__Impl rule__ElseCondition__Group__2 )
-            // InternalGo.g:5092:2: rule__ElseCondition__Group__1__Impl rule__ElseCondition__Group__2
+            // InternalGo.g:5141:1: ( rule__ElseCondition__Group__1__Impl rule__ElseCondition__Group__2 )
+            // InternalGo.g:5142:2: rule__ElseCondition__Group__1__Impl rule__ElseCondition__Group__2
             {
             pushFollow(FOLLOW_37);
             rule__ElseCondition__Group__1__Impl();
@@ -17459,17 +17629,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseCondition__Group__1__Impl"
-    // InternalGo.g:5099:1: rule__ElseCondition__Group__1__Impl : ( RULE_OPEN_KEY ) ;
+    // InternalGo.g:5149:1: rule__ElseCondition__Group__1__Impl : ( RULE_OPEN_KEY ) ;
     public final void rule__ElseCondition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5103:1: ( ( RULE_OPEN_KEY ) )
-            // InternalGo.g:5104:1: ( RULE_OPEN_KEY )
+            // InternalGo.g:5153:1: ( ( RULE_OPEN_KEY ) )
+            // InternalGo.g:5154:1: ( RULE_OPEN_KEY )
             {
-            // InternalGo.g:5104:1: ( RULE_OPEN_KEY )
-            // InternalGo.g:5105:2: RULE_OPEN_KEY
+            // InternalGo.g:5154:1: ( RULE_OPEN_KEY )
+            // InternalGo.g:5155:2: RULE_OPEN_KEY
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getElseConditionAccess().getOpen_KeyTerminalRuleCall_1()); 
@@ -17500,14 +17670,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseCondition__Group__2"
-    // InternalGo.g:5114:1: rule__ElseCondition__Group__2 : rule__ElseCondition__Group__2__Impl rule__ElseCondition__Group__3 ;
+    // InternalGo.g:5164:1: rule__ElseCondition__Group__2 : rule__ElseCondition__Group__2__Impl rule__ElseCondition__Group__3 ;
     public final void rule__ElseCondition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5118:1: ( rule__ElseCondition__Group__2__Impl rule__ElseCondition__Group__3 )
-            // InternalGo.g:5119:2: rule__ElseCondition__Group__2__Impl rule__ElseCondition__Group__3
+            // InternalGo.g:5168:1: ( rule__ElseCondition__Group__2__Impl rule__ElseCondition__Group__3 )
+            // InternalGo.g:5169:2: rule__ElseCondition__Group__2__Impl rule__ElseCondition__Group__3
             {
             pushFollow(FOLLOW_37);
             rule__ElseCondition__Group__2__Impl();
@@ -17538,22 +17708,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseCondition__Group__2__Impl"
-    // InternalGo.g:5126:1: rule__ElseCondition__Group__2__Impl : ( ( rule__ElseCondition__ThenAssignment_2 )* ) ;
+    // InternalGo.g:5176:1: rule__ElseCondition__Group__2__Impl : ( ( rule__ElseCondition__ThenAssignment_2 )* ) ;
     public final void rule__ElseCondition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5130:1: ( ( ( rule__ElseCondition__ThenAssignment_2 )* ) )
-            // InternalGo.g:5131:1: ( ( rule__ElseCondition__ThenAssignment_2 )* )
+            // InternalGo.g:5180:1: ( ( ( rule__ElseCondition__ThenAssignment_2 )* ) )
+            // InternalGo.g:5181:1: ( ( rule__ElseCondition__ThenAssignment_2 )* )
             {
-            // InternalGo.g:5131:1: ( ( rule__ElseCondition__ThenAssignment_2 )* )
-            // InternalGo.g:5132:2: ( rule__ElseCondition__ThenAssignment_2 )*
+            // InternalGo.g:5181:1: ( ( rule__ElseCondition__ThenAssignment_2 )* )
+            // InternalGo.g:5182:2: ( rule__ElseCondition__ThenAssignment_2 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getElseConditionAccess().getThenAssignment_2()); 
             }
-            // InternalGo.g:5133:2: ( rule__ElseCondition__ThenAssignment_2 )*
+            // InternalGo.g:5183:2: ( rule__ElseCondition__ThenAssignment_2 )*
             loop46:
             do {
                 int alt46=2;
@@ -17566,7 +17736,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt46) {
             	case 1 :
-            	    // InternalGo.g:5133:3: rule__ElseCondition__ThenAssignment_2
+            	    // InternalGo.g:5183:3: rule__ElseCondition__ThenAssignment_2
             	    {
             	    pushFollow(FOLLOW_3);
             	    rule__ElseCondition__ThenAssignment_2();
@@ -17607,14 +17777,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseCondition__Group__3"
-    // InternalGo.g:5141:1: rule__ElseCondition__Group__3 : rule__ElseCondition__Group__3__Impl ;
+    // InternalGo.g:5191:1: rule__ElseCondition__Group__3 : rule__ElseCondition__Group__3__Impl ;
     public final void rule__ElseCondition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5145:1: ( rule__ElseCondition__Group__3__Impl )
-            // InternalGo.g:5146:2: rule__ElseCondition__Group__3__Impl
+            // InternalGo.g:5195:1: ( rule__ElseCondition__Group__3__Impl )
+            // InternalGo.g:5196:2: rule__ElseCondition__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ElseCondition__Group__3__Impl();
@@ -17640,17 +17810,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseCondition__Group__3__Impl"
-    // InternalGo.g:5152:1: rule__ElseCondition__Group__3__Impl : ( RULE_CLOSED_KEY ) ;
+    // InternalGo.g:5202:1: rule__ElseCondition__Group__3__Impl : ( RULE_CLOSED_KEY ) ;
     public final void rule__ElseCondition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5156:1: ( ( RULE_CLOSED_KEY ) )
-            // InternalGo.g:5157:1: ( RULE_CLOSED_KEY )
+            // InternalGo.g:5206:1: ( ( RULE_CLOSED_KEY ) )
+            // InternalGo.g:5207:1: ( RULE_CLOSED_KEY )
             {
-            // InternalGo.g:5157:1: ( RULE_CLOSED_KEY )
-            // InternalGo.g:5158:2: RULE_CLOSED_KEY
+            // InternalGo.g:5207:1: ( RULE_CLOSED_KEY )
+            // InternalGo.g:5208:2: RULE_CLOSED_KEY
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getElseConditionAccess().getClosed_KeyTerminalRuleCall_3()); 
@@ -17681,14 +17851,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__Group__0"
-    // InternalGo.g:5168:1: rule__Expression__Group__0 : rule__Expression__Group__0__Impl ;
+    // InternalGo.g:5218:1: rule__Expression__Group__0 : rule__Expression__Group__0__Impl ;
     public final void rule__Expression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5172:1: ( rule__Expression__Group__0__Impl )
-            // InternalGo.g:5173:2: rule__Expression__Group__0__Impl
+            // InternalGo.g:5222:1: ( rule__Expression__Group__0__Impl )
+            // InternalGo.g:5223:2: rule__Expression__Group__0__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Expression__Group__0__Impl();
@@ -17714,23 +17884,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__Group__0__Impl"
-    // InternalGo.g:5179:1: rule__Expression__Group__0__Impl : ( ( rule__Expression__Alternatives_0 ) ) ;
+    // InternalGo.g:5229:1: rule__Expression__Group__0__Impl : ( ( rule__Expression__Alternatives_0 ) ) ;
     public final void rule__Expression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5183:1: ( ( ( rule__Expression__Alternatives_0 ) ) )
-            // InternalGo.g:5184:1: ( ( rule__Expression__Alternatives_0 ) )
+            // InternalGo.g:5233:1: ( ( ( rule__Expression__Alternatives_0 ) ) )
+            // InternalGo.g:5234:1: ( ( rule__Expression__Alternatives_0 ) )
             {
-            // InternalGo.g:5184:1: ( ( rule__Expression__Alternatives_0 ) )
-            // InternalGo.g:5185:2: ( rule__Expression__Alternatives_0 )
+            // InternalGo.g:5234:1: ( ( rule__Expression__Alternatives_0 ) )
+            // InternalGo.g:5235:2: ( rule__Expression__Alternatives_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionAccess().getAlternatives_0()); 
             }
-            // InternalGo.g:5186:2: ( rule__Expression__Alternatives_0 )
-            // InternalGo.g:5186:3: rule__Expression__Alternatives_0
+            // InternalGo.g:5236:2: ( rule__Expression__Alternatives_0 )
+            // InternalGo.g:5236:3: rule__Expression__Alternatives_0
             {
             pushFollow(FOLLOW_2);
             rule__Expression__Alternatives_0();
@@ -17765,14 +17935,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFor__Group__0"
-    // InternalGo.g:5195:1: rule__CallFor__Group__0 : rule__CallFor__Group__0__Impl rule__CallFor__Group__1 ;
+    // InternalGo.g:5245:1: rule__CallFor__Group__0 : rule__CallFor__Group__0__Impl rule__CallFor__Group__1 ;
     public final void rule__CallFor__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5199:1: ( rule__CallFor__Group__0__Impl rule__CallFor__Group__1 )
-            // InternalGo.g:5200:2: rule__CallFor__Group__0__Impl rule__CallFor__Group__1
+            // InternalGo.g:5249:1: ( rule__CallFor__Group__0__Impl rule__CallFor__Group__1 )
+            // InternalGo.g:5250:2: rule__CallFor__Group__0__Impl rule__CallFor__Group__1
             {
             pushFollow(FOLLOW_39);
             rule__CallFor__Group__0__Impl();
@@ -17803,17 +17973,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFor__Group__0__Impl"
-    // InternalGo.g:5207:1: rule__CallFor__Group__0__Impl : ( ruleFOR ) ;
+    // InternalGo.g:5257:1: rule__CallFor__Group__0__Impl : ( ruleFOR ) ;
     public final void rule__CallFor__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5211:1: ( ( ruleFOR ) )
-            // InternalGo.g:5212:1: ( ruleFOR )
+            // InternalGo.g:5261:1: ( ( ruleFOR ) )
+            // InternalGo.g:5262:1: ( ruleFOR )
             {
-            // InternalGo.g:5212:1: ( ruleFOR )
-            // InternalGo.g:5213:2: ruleFOR
+            // InternalGo.g:5262:1: ( ruleFOR )
+            // InternalGo.g:5263:2: ruleFOR
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallForAccess().getFORParserRuleCall_0()); 
@@ -17848,14 +18018,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFor__Group__1"
-    // InternalGo.g:5222:1: rule__CallFor__Group__1 : rule__CallFor__Group__1__Impl rule__CallFor__Group__2 ;
+    // InternalGo.g:5272:1: rule__CallFor__Group__1 : rule__CallFor__Group__1__Impl rule__CallFor__Group__2 ;
     public final void rule__CallFor__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5226:1: ( rule__CallFor__Group__1__Impl rule__CallFor__Group__2 )
-            // InternalGo.g:5227:2: rule__CallFor__Group__1__Impl rule__CallFor__Group__2
+            // InternalGo.g:5276:1: ( rule__CallFor__Group__1__Impl rule__CallFor__Group__2 )
+            // InternalGo.g:5277:2: rule__CallFor__Group__1__Impl rule__CallFor__Group__2
             {
             pushFollow(FOLLOW_39);
             rule__CallFor__Group__1__Impl();
@@ -17886,22 +18056,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFor__Group__1__Impl"
-    // InternalGo.g:5234:1: rule__CallFor__Group__1__Impl : ( ( rulevarFor )? ) ;
+    // InternalGo.g:5284:1: rule__CallFor__Group__1__Impl : ( ( rulevarFor )? ) ;
     public final void rule__CallFor__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5238:1: ( ( ( rulevarFor )? ) )
-            // InternalGo.g:5239:1: ( ( rulevarFor )? )
+            // InternalGo.g:5288:1: ( ( ( rulevarFor )? ) )
+            // InternalGo.g:5289:1: ( ( rulevarFor )? )
             {
-            // InternalGo.g:5239:1: ( ( rulevarFor )? )
-            // InternalGo.g:5240:2: ( rulevarFor )?
+            // InternalGo.g:5289:1: ( ( rulevarFor )? )
+            // InternalGo.g:5290:2: ( rulevarFor )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallForAccess().getVarForParserRuleCall_1()); 
             }
-            // InternalGo.g:5241:2: ( rulevarFor )?
+            // InternalGo.g:5291:2: ( rulevarFor )?
             int alt47=2;
             int LA47_0 = input.LA(1);
 
@@ -17910,7 +18080,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt47) {
                 case 1 :
-                    // InternalGo.g:5241:3: rulevarFor
+                    // InternalGo.g:5291:3: rulevarFor
                     {
                     pushFollow(FOLLOW_2);
                     rulevarFor();
@@ -17948,14 +18118,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFor__Group__2"
-    // InternalGo.g:5249:1: rule__CallFor__Group__2 : rule__CallFor__Group__2__Impl rule__CallFor__Group__3 ;
+    // InternalGo.g:5299:1: rule__CallFor__Group__2 : rule__CallFor__Group__2__Impl rule__CallFor__Group__3 ;
     public final void rule__CallFor__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5253:1: ( rule__CallFor__Group__2__Impl rule__CallFor__Group__3 )
-            // InternalGo.g:5254:2: rule__CallFor__Group__2__Impl rule__CallFor__Group__3
+            // InternalGo.g:5303:1: ( rule__CallFor__Group__2__Impl rule__CallFor__Group__3 )
+            // InternalGo.g:5304:2: rule__CallFor__Group__2__Impl rule__CallFor__Group__3
             {
             pushFollow(FOLLOW_37);
             rule__CallFor__Group__2__Impl();
@@ -17986,17 +18156,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFor__Group__2__Impl"
-    // InternalGo.g:5261:1: rule__CallFor__Group__2__Impl : ( RULE_OPEN_KEY ) ;
+    // InternalGo.g:5311:1: rule__CallFor__Group__2__Impl : ( RULE_OPEN_KEY ) ;
     public final void rule__CallFor__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5265:1: ( ( RULE_OPEN_KEY ) )
-            // InternalGo.g:5266:1: ( RULE_OPEN_KEY )
+            // InternalGo.g:5315:1: ( ( RULE_OPEN_KEY ) )
+            // InternalGo.g:5316:1: ( RULE_OPEN_KEY )
             {
-            // InternalGo.g:5266:1: ( RULE_OPEN_KEY )
-            // InternalGo.g:5267:2: RULE_OPEN_KEY
+            // InternalGo.g:5316:1: ( RULE_OPEN_KEY )
+            // InternalGo.g:5317:2: RULE_OPEN_KEY
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallForAccess().getOpen_KeyTerminalRuleCall_2()); 
@@ -18027,14 +18197,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFor__Group__3"
-    // InternalGo.g:5276:1: rule__CallFor__Group__3 : rule__CallFor__Group__3__Impl rule__CallFor__Group__4 ;
+    // InternalGo.g:5326:1: rule__CallFor__Group__3 : rule__CallFor__Group__3__Impl rule__CallFor__Group__4 ;
     public final void rule__CallFor__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5280:1: ( rule__CallFor__Group__3__Impl rule__CallFor__Group__4 )
-            // InternalGo.g:5281:2: rule__CallFor__Group__3__Impl rule__CallFor__Group__4
+            // InternalGo.g:5330:1: ( rule__CallFor__Group__3__Impl rule__CallFor__Group__4 )
+            // InternalGo.g:5331:2: rule__CallFor__Group__3__Impl rule__CallFor__Group__4
             {
             pushFollow(FOLLOW_37);
             rule__CallFor__Group__3__Impl();
@@ -18065,22 +18235,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFor__Group__3__Impl"
-    // InternalGo.g:5288:1: rule__CallFor__Group__3__Impl : ( ( rule__CallFor__XAssignment_3 )* ) ;
+    // InternalGo.g:5338:1: rule__CallFor__Group__3__Impl : ( ( rule__CallFor__XAssignment_3 )* ) ;
     public final void rule__CallFor__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5292:1: ( ( ( rule__CallFor__XAssignment_3 )* ) )
-            // InternalGo.g:5293:1: ( ( rule__CallFor__XAssignment_3 )* )
+            // InternalGo.g:5342:1: ( ( ( rule__CallFor__XAssignment_3 )* ) )
+            // InternalGo.g:5343:1: ( ( rule__CallFor__XAssignment_3 )* )
             {
-            // InternalGo.g:5293:1: ( ( rule__CallFor__XAssignment_3 )* )
-            // InternalGo.g:5294:2: ( rule__CallFor__XAssignment_3 )*
+            // InternalGo.g:5343:1: ( ( rule__CallFor__XAssignment_3 )* )
+            // InternalGo.g:5344:2: ( rule__CallFor__XAssignment_3 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallForAccess().getXAssignment_3()); 
             }
-            // InternalGo.g:5295:2: ( rule__CallFor__XAssignment_3 )*
+            // InternalGo.g:5345:2: ( rule__CallFor__XAssignment_3 )*
             loop48:
             do {
                 int alt48=2;
@@ -18093,7 +18263,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt48) {
             	case 1 :
-            	    // InternalGo.g:5295:3: rule__CallFor__XAssignment_3
+            	    // InternalGo.g:5345:3: rule__CallFor__XAssignment_3
             	    {
             	    pushFollow(FOLLOW_3);
             	    rule__CallFor__XAssignment_3();
@@ -18134,14 +18304,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFor__Group__4"
-    // InternalGo.g:5303:1: rule__CallFor__Group__4 : rule__CallFor__Group__4__Impl ;
+    // InternalGo.g:5353:1: rule__CallFor__Group__4 : rule__CallFor__Group__4__Impl ;
     public final void rule__CallFor__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5307:1: ( rule__CallFor__Group__4__Impl )
-            // InternalGo.g:5308:2: rule__CallFor__Group__4__Impl
+            // InternalGo.g:5357:1: ( rule__CallFor__Group__4__Impl )
+            // InternalGo.g:5358:2: rule__CallFor__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CallFor__Group__4__Impl();
@@ -18167,17 +18337,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFor__Group__4__Impl"
-    // InternalGo.g:5314:1: rule__CallFor__Group__4__Impl : ( RULE_CLOSED_KEY ) ;
+    // InternalGo.g:5364:1: rule__CallFor__Group__4__Impl : ( RULE_CLOSED_KEY ) ;
     public final void rule__CallFor__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5318:1: ( ( RULE_CLOSED_KEY ) )
-            // InternalGo.g:5319:1: ( RULE_CLOSED_KEY )
+            // InternalGo.g:5368:1: ( ( RULE_CLOSED_KEY ) )
+            // InternalGo.g:5369:1: ( RULE_CLOSED_KEY )
             {
-            // InternalGo.g:5319:1: ( RULE_CLOSED_KEY )
-            // InternalGo.g:5320:2: RULE_CLOSED_KEY
+            // InternalGo.g:5369:1: ( RULE_CLOSED_KEY )
+            // InternalGo.g:5370:2: RULE_CLOSED_KEY
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallForAccess().getClosed_KeyTerminalRuleCall_4()); 
@@ -18208,14 +18378,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Addition__Group__0"
-    // InternalGo.g:5330:1: rule__Addition__Group__0 : rule__Addition__Group__0__Impl rule__Addition__Group__1 ;
+    // InternalGo.g:5380:1: rule__Addition__Group__0 : rule__Addition__Group__0__Impl rule__Addition__Group__1 ;
     public final void rule__Addition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5334:1: ( rule__Addition__Group__0__Impl rule__Addition__Group__1 )
-            // InternalGo.g:5335:2: rule__Addition__Group__0__Impl rule__Addition__Group__1
+            // InternalGo.g:5384:1: ( rule__Addition__Group__0__Impl rule__Addition__Group__1 )
+            // InternalGo.g:5385:2: rule__Addition__Group__0__Impl rule__Addition__Group__1
             {
             pushFollow(FOLLOW_40);
             rule__Addition__Group__0__Impl();
@@ -18246,23 +18416,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Addition__Group__0__Impl"
-    // InternalGo.g:5342:1: rule__Addition__Group__0__Impl : ( ( ruleSubMult ) ) ;
+    // InternalGo.g:5392:1: rule__Addition__Group__0__Impl : ( ( ruleSubMult ) ) ;
     public final void rule__Addition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5346:1: ( ( ( ruleSubMult ) ) )
-            // InternalGo.g:5347:1: ( ( ruleSubMult ) )
+            // InternalGo.g:5396:1: ( ( ( ruleSubMult ) ) )
+            // InternalGo.g:5397:1: ( ( ruleSubMult ) )
             {
-            // InternalGo.g:5347:1: ( ( ruleSubMult ) )
-            // InternalGo.g:5348:2: ( ruleSubMult )
+            // InternalGo.g:5397:1: ( ( ruleSubMult ) )
+            // InternalGo.g:5398:2: ( ruleSubMult )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionAccess().getSubMultParserRuleCall_0()); 
             }
-            // InternalGo.g:5349:2: ( ruleSubMult )
-            // InternalGo.g:5349:3: ruleSubMult
+            // InternalGo.g:5399:2: ( ruleSubMult )
+            // InternalGo.g:5399:3: ruleSubMult
             {
             pushFollow(FOLLOW_2);
             ruleSubMult();
@@ -18297,14 +18467,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Addition__Group__1"
-    // InternalGo.g:5357:1: rule__Addition__Group__1 : rule__Addition__Group__1__Impl ;
+    // InternalGo.g:5407:1: rule__Addition__Group__1 : rule__Addition__Group__1__Impl ;
     public final void rule__Addition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5361:1: ( rule__Addition__Group__1__Impl )
-            // InternalGo.g:5362:2: rule__Addition__Group__1__Impl
+            // InternalGo.g:5411:1: ( rule__Addition__Group__1__Impl )
+            // InternalGo.g:5412:2: rule__Addition__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Addition__Group__1__Impl();
@@ -18330,22 +18500,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Addition__Group__1__Impl"
-    // InternalGo.g:5368:1: rule__Addition__Group__1__Impl : ( ( rule__Addition__Group_1__0 )* ) ;
+    // InternalGo.g:5418:1: rule__Addition__Group__1__Impl : ( ( rule__Addition__Group_1__0 )* ) ;
     public final void rule__Addition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5372:1: ( ( ( rule__Addition__Group_1__0 )* ) )
-            // InternalGo.g:5373:1: ( ( rule__Addition__Group_1__0 )* )
+            // InternalGo.g:5422:1: ( ( ( rule__Addition__Group_1__0 )* ) )
+            // InternalGo.g:5423:1: ( ( rule__Addition__Group_1__0 )* )
             {
-            // InternalGo.g:5373:1: ( ( rule__Addition__Group_1__0 )* )
-            // InternalGo.g:5374:2: ( rule__Addition__Group_1__0 )*
+            // InternalGo.g:5423:1: ( ( rule__Addition__Group_1__0 )* )
+            // InternalGo.g:5424:2: ( rule__Addition__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionAccess().getGroup_1()); 
             }
-            // InternalGo.g:5375:2: ( rule__Addition__Group_1__0 )*
+            // InternalGo.g:5425:2: ( rule__Addition__Group_1__0 )*
             loop49:
             do {
                 int alt49=2;
@@ -18358,7 +18528,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt49) {
             	case 1 :
-            	    // InternalGo.g:5375:3: rule__Addition__Group_1__0
+            	    // InternalGo.g:5425:3: rule__Addition__Group_1__0
             	    {
             	    pushFollow(FOLLOW_41);
             	    rule__Addition__Group_1__0();
@@ -18399,14 +18569,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Addition__Group_1__0"
-    // InternalGo.g:5384:1: rule__Addition__Group_1__0 : rule__Addition__Group_1__0__Impl rule__Addition__Group_1__1 ;
+    // InternalGo.g:5434:1: rule__Addition__Group_1__0 : rule__Addition__Group_1__0__Impl rule__Addition__Group_1__1 ;
     public final void rule__Addition__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5388:1: ( rule__Addition__Group_1__0__Impl rule__Addition__Group_1__1 )
-            // InternalGo.g:5389:2: rule__Addition__Group_1__0__Impl rule__Addition__Group_1__1
+            // InternalGo.g:5438:1: ( rule__Addition__Group_1__0__Impl rule__Addition__Group_1__1 )
+            // InternalGo.g:5439:2: rule__Addition__Group_1__0__Impl rule__Addition__Group_1__1
             {
             pushFollow(FOLLOW_40);
             rule__Addition__Group_1__0__Impl();
@@ -18437,23 +18607,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Addition__Group_1__0__Impl"
-    // InternalGo.g:5396:1: rule__Addition__Group_1__0__Impl : ( () ) ;
+    // InternalGo.g:5446:1: rule__Addition__Group_1__0__Impl : ( () ) ;
     public final void rule__Addition__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5400:1: ( ( () ) )
-            // InternalGo.g:5401:1: ( () )
+            // InternalGo.g:5450:1: ( ( () ) )
+            // InternalGo.g:5451:1: ( () )
             {
-            // InternalGo.g:5401:1: ( () )
-            // InternalGo.g:5402:2: ()
+            // InternalGo.g:5451:1: ( () )
+            // InternalGo.g:5452:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionAccess().getAdditionLeftAction_1_0()); 
             }
-            // InternalGo.g:5403:2: ()
-            // InternalGo.g:5403:3: 
+            // InternalGo.g:5453:2: ()
+            // InternalGo.g:5453:3: 
             {
             }
 
@@ -18478,14 +18648,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Addition__Group_1__1"
-    // InternalGo.g:5411:1: rule__Addition__Group_1__1 : rule__Addition__Group_1__1__Impl rule__Addition__Group_1__2 ;
+    // InternalGo.g:5461:1: rule__Addition__Group_1__1 : rule__Addition__Group_1__1__Impl rule__Addition__Group_1__2 ;
     public final void rule__Addition__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5415:1: ( rule__Addition__Group_1__1__Impl rule__Addition__Group_1__2 )
-            // InternalGo.g:5416:2: rule__Addition__Group_1__1__Impl rule__Addition__Group_1__2
+            // InternalGo.g:5465:1: ( rule__Addition__Group_1__1__Impl rule__Addition__Group_1__2 )
+            // InternalGo.g:5466:2: rule__Addition__Group_1__1__Impl rule__Addition__Group_1__2
             {
             pushFollow(FOLLOW_9);
             rule__Addition__Group_1__1__Impl();
@@ -18516,17 +18686,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Addition__Group_1__1__Impl"
-    // InternalGo.g:5423:1: rule__Addition__Group_1__1__Impl : ( RULE_PLUS ) ;
+    // InternalGo.g:5473:1: rule__Addition__Group_1__1__Impl : ( RULE_PLUS ) ;
     public final void rule__Addition__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5427:1: ( ( RULE_PLUS ) )
-            // InternalGo.g:5428:1: ( RULE_PLUS )
+            // InternalGo.g:5477:1: ( ( RULE_PLUS ) )
+            // InternalGo.g:5478:1: ( RULE_PLUS )
             {
-            // InternalGo.g:5428:1: ( RULE_PLUS )
-            // InternalGo.g:5429:2: RULE_PLUS
+            // InternalGo.g:5478:1: ( RULE_PLUS )
+            // InternalGo.g:5479:2: RULE_PLUS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionAccess().getPlusTerminalRuleCall_1_1()); 
@@ -18557,14 +18727,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Addition__Group_1__2"
-    // InternalGo.g:5438:1: rule__Addition__Group_1__2 : rule__Addition__Group_1__2__Impl ;
+    // InternalGo.g:5488:1: rule__Addition__Group_1__2 : rule__Addition__Group_1__2__Impl ;
     public final void rule__Addition__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5442:1: ( rule__Addition__Group_1__2__Impl )
-            // InternalGo.g:5443:2: rule__Addition__Group_1__2__Impl
+            // InternalGo.g:5492:1: ( rule__Addition__Group_1__2__Impl )
+            // InternalGo.g:5493:2: rule__Addition__Group_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Addition__Group_1__2__Impl();
@@ -18590,23 +18760,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Addition__Group_1__2__Impl"
-    // InternalGo.g:5449:1: rule__Addition__Group_1__2__Impl : ( ( rule__Addition__RightAssignment_1_2 ) ) ;
+    // InternalGo.g:5499:1: rule__Addition__Group_1__2__Impl : ( ( rule__Addition__RightAssignment_1_2 ) ) ;
     public final void rule__Addition__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5453:1: ( ( ( rule__Addition__RightAssignment_1_2 ) ) )
-            // InternalGo.g:5454:1: ( ( rule__Addition__RightAssignment_1_2 ) )
+            // InternalGo.g:5503:1: ( ( ( rule__Addition__RightAssignment_1_2 ) ) )
+            // InternalGo.g:5504:1: ( ( rule__Addition__RightAssignment_1_2 ) )
             {
-            // InternalGo.g:5454:1: ( ( rule__Addition__RightAssignment_1_2 ) )
-            // InternalGo.g:5455:2: ( rule__Addition__RightAssignment_1_2 )
+            // InternalGo.g:5504:1: ( ( rule__Addition__RightAssignment_1_2 ) )
+            // InternalGo.g:5505:2: ( rule__Addition__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionAccess().getRightAssignment_1_2()); 
             }
-            // InternalGo.g:5456:2: ( rule__Addition__RightAssignment_1_2 )
-            // InternalGo.g:5456:3: rule__Addition__RightAssignment_1_2
+            // InternalGo.g:5506:2: ( rule__Addition__RightAssignment_1_2 )
+            // InternalGo.g:5506:3: rule__Addition__RightAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__Addition__RightAssignment_1_2();
@@ -18641,14 +18811,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Subtration__Group__0"
-    // InternalGo.g:5465:1: rule__Subtration__Group__0 : rule__Subtration__Group__0__Impl rule__Subtration__Group__1 ;
+    // InternalGo.g:5515:1: rule__Subtration__Group__0 : rule__Subtration__Group__0__Impl rule__Subtration__Group__1 ;
     public final void rule__Subtration__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5469:1: ( rule__Subtration__Group__0__Impl rule__Subtration__Group__1 )
-            // InternalGo.g:5470:2: rule__Subtration__Group__0__Impl rule__Subtration__Group__1
+            // InternalGo.g:5519:1: ( rule__Subtration__Group__0__Impl rule__Subtration__Group__1 )
+            // InternalGo.g:5520:2: rule__Subtration__Group__0__Impl rule__Subtration__Group__1
             {
             pushFollow(FOLLOW_42);
             rule__Subtration__Group__0__Impl();
@@ -18679,23 +18849,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Subtration__Group__0__Impl"
-    // InternalGo.g:5477:1: rule__Subtration__Group__0__Impl : ( ( ruleSubMult ) ) ;
+    // InternalGo.g:5527:1: rule__Subtration__Group__0__Impl : ( ( ruleSubMult ) ) ;
     public final void rule__Subtration__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5481:1: ( ( ( ruleSubMult ) ) )
-            // InternalGo.g:5482:1: ( ( ruleSubMult ) )
+            // InternalGo.g:5531:1: ( ( ( ruleSubMult ) ) )
+            // InternalGo.g:5532:1: ( ( ruleSubMult ) )
             {
-            // InternalGo.g:5482:1: ( ( ruleSubMult ) )
-            // InternalGo.g:5483:2: ( ruleSubMult )
+            // InternalGo.g:5532:1: ( ( ruleSubMult ) )
+            // InternalGo.g:5533:2: ( ruleSubMult )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSubtrationAccess().getSubMultParserRuleCall_0()); 
             }
-            // InternalGo.g:5484:2: ( ruleSubMult )
-            // InternalGo.g:5484:3: ruleSubMult
+            // InternalGo.g:5534:2: ( ruleSubMult )
+            // InternalGo.g:5534:3: ruleSubMult
             {
             pushFollow(FOLLOW_2);
             ruleSubMult();
@@ -18730,14 +18900,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Subtration__Group__1"
-    // InternalGo.g:5492:1: rule__Subtration__Group__1 : rule__Subtration__Group__1__Impl ;
+    // InternalGo.g:5542:1: rule__Subtration__Group__1 : rule__Subtration__Group__1__Impl ;
     public final void rule__Subtration__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5496:1: ( rule__Subtration__Group__1__Impl )
-            // InternalGo.g:5497:2: rule__Subtration__Group__1__Impl
+            // InternalGo.g:5546:1: ( rule__Subtration__Group__1__Impl )
+            // InternalGo.g:5547:2: rule__Subtration__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Subtration__Group__1__Impl();
@@ -18763,22 +18933,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Subtration__Group__1__Impl"
-    // InternalGo.g:5503:1: rule__Subtration__Group__1__Impl : ( ( rule__Subtration__Group_1__0 )* ) ;
+    // InternalGo.g:5553:1: rule__Subtration__Group__1__Impl : ( ( rule__Subtration__Group_1__0 )* ) ;
     public final void rule__Subtration__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5507:1: ( ( ( rule__Subtration__Group_1__0 )* ) )
-            // InternalGo.g:5508:1: ( ( rule__Subtration__Group_1__0 )* )
+            // InternalGo.g:5557:1: ( ( ( rule__Subtration__Group_1__0 )* ) )
+            // InternalGo.g:5558:1: ( ( rule__Subtration__Group_1__0 )* )
             {
-            // InternalGo.g:5508:1: ( ( rule__Subtration__Group_1__0 )* )
-            // InternalGo.g:5509:2: ( rule__Subtration__Group_1__0 )*
+            // InternalGo.g:5558:1: ( ( rule__Subtration__Group_1__0 )* )
+            // InternalGo.g:5559:2: ( rule__Subtration__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSubtrationAccess().getGroup_1()); 
             }
-            // InternalGo.g:5510:2: ( rule__Subtration__Group_1__0 )*
+            // InternalGo.g:5560:2: ( rule__Subtration__Group_1__0 )*
             loop50:
             do {
                 int alt50=2;
@@ -18791,7 +18961,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt50) {
             	case 1 :
-            	    // InternalGo.g:5510:3: rule__Subtration__Group_1__0
+            	    // InternalGo.g:5560:3: rule__Subtration__Group_1__0
             	    {
             	    pushFollow(FOLLOW_43);
             	    rule__Subtration__Group_1__0();
@@ -18832,14 +19002,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Subtration__Group_1__0"
-    // InternalGo.g:5519:1: rule__Subtration__Group_1__0 : rule__Subtration__Group_1__0__Impl rule__Subtration__Group_1__1 ;
+    // InternalGo.g:5569:1: rule__Subtration__Group_1__0 : rule__Subtration__Group_1__0__Impl rule__Subtration__Group_1__1 ;
     public final void rule__Subtration__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5523:1: ( rule__Subtration__Group_1__0__Impl rule__Subtration__Group_1__1 )
-            // InternalGo.g:5524:2: rule__Subtration__Group_1__0__Impl rule__Subtration__Group_1__1
+            // InternalGo.g:5573:1: ( rule__Subtration__Group_1__0__Impl rule__Subtration__Group_1__1 )
+            // InternalGo.g:5574:2: rule__Subtration__Group_1__0__Impl rule__Subtration__Group_1__1
             {
             pushFollow(FOLLOW_42);
             rule__Subtration__Group_1__0__Impl();
@@ -18870,23 +19040,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Subtration__Group_1__0__Impl"
-    // InternalGo.g:5531:1: rule__Subtration__Group_1__0__Impl : ( () ) ;
+    // InternalGo.g:5581:1: rule__Subtration__Group_1__0__Impl : ( () ) ;
     public final void rule__Subtration__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5535:1: ( ( () ) )
-            // InternalGo.g:5536:1: ( () )
+            // InternalGo.g:5585:1: ( ( () ) )
+            // InternalGo.g:5586:1: ( () )
             {
-            // InternalGo.g:5536:1: ( () )
-            // InternalGo.g:5537:2: ()
+            // InternalGo.g:5586:1: ( () )
+            // InternalGo.g:5587:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSubtrationAccess().getSubtrationLeftAction_1_0()); 
             }
-            // InternalGo.g:5538:2: ()
-            // InternalGo.g:5538:3: 
+            // InternalGo.g:5588:2: ()
+            // InternalGo.g:5588:3: 
             {
             }
 
@@ -18911,14 +19081,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Subtration__Group_1__1"
-    // InternalGo.g:5546:1: rule__Subtration__Group_1__1 : rule__Subtration__Group_1__1__Impl rule__Subtration__Group_1__2 ;
+    // InternalGo.g:5596:1: rule__Subtration__Group_1__1 : rule__Subtration__Group_1__1__Impl rule__Subtration__Group_1__2 ;
     public final void rule__Subtration__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5550:1: ( rule__Subtration__Group_1__1__Impl rule__Subtration__Group_1__2 )
-            // InternalGo.g:5551:2: rule__Subtration__Group_1__1__Impl rule__Subtration__Group_1__2
+            // InternalGo.g:5600:1: ( rule__Subtration__Group_1__1__Impl rule__Subtration__Group_1__2 )
+            // InternalGo.g:5601:2: rule__Subtration__Group_1__1__Impl rule__Subtration__Group_1__2
             {
             pushFollow(FOLLOW_9);
             rule__Subtration__Group_1__1__Impl();
@@ -18949,17 +19119,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Subtration__Group_1__1__Impl"
-    // InternalGo.g:5558:1: rule__Subtration__Group_1__1__Impl : ( RULE_MINUS ) ;
+    // InternalGo.g:5608:1: rule__Subtration__Group_1__1__Impl : ( RULE_MINUS ) ;
     public final void rule__Subtration__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5562:1: ( ( RULE_MINUS ) )
-            // InternalGo.g:5563:1: ( RULE_MINUS )
+            // InternalGo.g:5612:1: ( ( RULE_MINUS ) )
+            // InternalGo.g:5613:1: ( RULE_MINUS )
             {
-            // InternalGo.g:5563:1: ( RULE_MINUS )
-            // InternalGo.g:5564:2: RULE_MINUS
+            // InternalGo.g:5613:1: ( RULE_MINUS )
+            // InternalGo.g:5614:2: RULE_MINUS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSubtrationAccess().getMinusTerminalRuleCall_1_1()); 
@@ -18990,14 +19160,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Subtration__Group_1__2"
-    // InternalGo.g:5573:1: rule__Subtration__Group_1__2 : rule__Subtration__Group_1__2__Impl ;
+    // InternalGo.g:5623:1: rule__Subtration__Group_1__2 : rule__Subtration__Group_1__2__Impl ;
     public final void rule__Subtration__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5577:1: ( rule__Subtration__Group_1__2__Impl )
-            // InternalGo.g:5578:2: rule__Subtration__Group_1__2__Impl
+            // InternalGo.g:5627:1: ( rule__Subtration__Group_1__2__Impl )
+            // InternalGo.g:5628:2: rule__Subtration__Group_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Subtration__Group_1__2__Impl();
@@ -19023,23 +19193,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Subtration__Group_1__2__Impl"
-    // InternalGo.g:5584:1: rule__Subtration__Group_1__2__Impl : ( ( rule__Subtration__RightAssignment_1_2 ) ) ;
+    // InternalGo.g:5634:1: rule__Subtration__Group_1__2__Impl : ( ( rule__Subtration__RightAssignment_1_2 ) ) ;
     public final void rule__Subtration__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5588:1: ( ( ( rule__Subtration__RightAssignment_1_2 ) ) )
-            // InternalGo.g:5589:1: ( ( rule__Subtration__RightAssignment_1_2 ) )
+            // InternalGo.g:5638:1: ( ( ( rule__Subtration__RightAssignment_1_2 ) ) )
+            // InternalGo.g:5639:1: ( ( rule__Subtration__RightAssignment_1_2 ) )
             {
-            // InternalGo.g:5589:1: ( ( rule__Subtration__RightAssignment_1_2 ) )
-            // InternalGo.g:5590:2: ( rule__Subtration__RightAssignment_1_2 )
+            // InternalGo.g:5639:1: ( ( rule__Subtration__RightAssignment_1_2 ) )
+            // InternalGo.g:5640:2: ( rule__Subtration__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSubtrationAccess().getRightAssignment_1_2()); 
             }
-            // InternalGo.g:5591:2: ( rule__Subtration__RightAssignment_1_2 )
-            // InternalGo.g:5591:3: rule__Subtration__RightAssignment_1_2
+            // InternalGo.g:5641:2: ( rule__Subtration__RightAssignment_1_2 )
+            // InternalGo.g:5641:3: rule__Subtration__RightAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__Subtration__RightAssignment_1_2();
@@ -19074,14 +19244,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplication__Group__0"
-    // InternalGo.g:5600:1: rule__Multiplication__Group__0 : rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1 ;
+    // InternalGo.g:5650:1: rule__Multiplication__Group__0 : rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1 ;
     public final void rule__Multiplication__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5604:1: ( rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1 )
-            // InternalGo.g:5605:2: rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1
+            // InternalGo.g:5654:1: ( rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1 )
+            // InternalGo.g:5655:2: rule__Multiplication__Group__0__Impl rule__Multiplication__Group__1
             {
             pushFollow(FOLLOW_44);
             rule__Multiplication__Group__0__Impl();
@@ -19112,23 +19282,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplication__Group__0__Impl"
-    // InternalGo.g:5612:1: rule__Multiplication__Group__0__Impl : ( ( rulePrimaryExpression ) ) ;
+    // InternalGo.g:5662:1: rule__Multiplication__Group__0__Impl : ( ( rulePrimaryExpression ) ) ;
     public final void rule__Multiplication__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5616:1: ( ( ( rulePrimaryExpression ) ) )
-            // InternalGo.g:5617:1: ( ( rulePrimaryExpression ) )
+            // InternalGo.g:5666:1: ( ( ( rulePrimaryExpression ) ) )
+            // InternalGo.g:5667:1: ( ( rulePrimaryExpression ) )
             {
-            // InternalGo.g:5617:1: ( ( rulePrimaryExpression ) )
-            // InternalGo.g:5618:2: ( rulePrimaryExpression )
+            // InternalGo.g:5667:1: ( ( rulePrimaryExpression ) )
+            // InternalGo.g:5668:2: ( rulePrimaryExpression )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationAccess().getPrimaryExpressionParserRuleCall_0()); 
             }
-            // InternalGo.g:5619:2: ( rulePrimaryExpression )
-            // InternalGo.g:5619:3: rulePrimaryExpression
+            // InternalGo.g:5669:2: ( rulePrimaryExpression )
+            // InternalGo.g:5669:3: rulePrimaryExpression
             {
             pushFollow(FOLLOW_2);
             rulePrimaryExpression();
@@ -19163,14 +19333,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplication__Group__1"
-    // InternalGo.g:5627:1: rule__Multiplication__Group__1 : rule__Multiplication__Group__1__Impl ;
+    // InternalGo.g:5677:1: rule__Multiplication__Group__1 : rule__Multiplication__Group__1__Impl ;
     public final void rule__Multiplication__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5631:1: ( rule__Multiplication__Group__1__Impl )
-            // InternalGo.g:5632:2: rule__Multiplication__Group__1__Impl
+            // InternalGo.g:5681:1: ( rule__Multiplication__Group__1__Impl )
+            // InternalGo.g:5682:2: rule__Multiplication__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Multiplication__Group__1__Impl();
@@ -19196,22 +19366,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplication__Group__1__Impl"
-    // InternalGo.g:5638:1: rule__Multiplication__Group__1__Impl : ( ( rule__Multiplication__Group_1__0 )* ) ;
+    // InternalGo.g:5688:1: rule__Multiplication__Group__1__Impl : ( ( rule__Multiplication__Group_1__0 )* ) ;
     public final void rule__Multiplication__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5642:1: ( ( ( rule__Multiplication__Group_1__0 )* ) )
-            // InternalGo.g:5643:1: ( ( rule__Multiplication__Group_1__0 )* )
+            // InternalGo.g:5692:1: ( ( ( rule__Multiplication__Group_1__0 )* ) )
+            // InternalGo.g:5693:1: ( ( rule__Multiplication__Group_1__0 )* )
             {
-            // InternalGo.g:5643:1: ( ( rule__Multiplication__Group_1__0 )* )
-            // InternalGo.g:5644:2: ( rule__Multiplication__Group_1__0 )*
+            // InternalGo.g:5693:1: ( ( rule__Multiplication__Group_1__0 )* )
+            // InternalGo.g:5694:2: ( rule__Multiplication__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationAccess().getGroup_1()); 
             }
-            // InternalGo.g:5645:2: ( rule__Multiplication__Group_1__0 )*
+            // InternalGo.g:5695:2: ( rule__Multiplication__Group_1__0 )*
             loop51:
             do {
                 int alt51=2;
@@ -19224,7 +19394,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt51) {
             	case 1 :
-            	    // InternalGo.g:5645:3: rule__Multiplication__Group_1__0
+            	    // InternalGo.g:5695:3: rule__Multiplication__Group_1__0
             	    {
             	    pushFollow(FOLLOW_45);
             	    rule__Multiplication__Group_1__0();
@@ -19265,14 +19435,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplication__Group_1__0"
-    // InternalGo.g:5654:1: rule__Multiplication__Group_1__0 : rule__Multiplication__Group_1__0__Impl rule__Multiplication__Group_1__1 ;
+    // InternalGo.g:5704:1: rule__Multiplication__Group_1__0 : rule__Multiplication__Group_1__0__Impl rule__Multiplication__Group_1__1 ;
     public final void rule__Multiplication__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5658:1: ( rule__Multiplication__Group_1__0__Impl rule__Multiplication__Group_1__1 )
-            // InternalGo.g:5659:2: rule__Multiplication__Group_1__0__Impl rule__Multiplication__Group_1__1
+            // InternalGo.g:5708:1: ( rule__Multiplication__Group_1__0__Impl rule__Multiplication__Group_1__1 )
+            // InternalGo.g:5709:2: rule__Multiplication__Group_1__0__Impl rule__Multiplication__Group_1__1
             {
             pushFollow(FOLLOW_44);
             rule__Multiplication__Group_1__0__Impl();
@@ -19303,23 +19473,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplication__Group_1__0__Impl"
-    // InternalGo.g:5666:1: rule__Multiplication__Group_1__0__Impl : ( () ) ;
+    // InternalGo.g:5716:1: rule__Multiplication__Group_1__0__Impl : ( () ) ;
     public final void rule__Multiplication__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5670:1: ( ( () ) )
-            // InternalGo.g:5671:1: ( () )
+            // InternalGo.g:5720:1: ( ( () ) )
+            // InternalGo.g:5721:1: ( () )
             {
-            // InternalGo.g:5671:1: ( () )
-            // InternalGo.g:5672:2: ()
+            // InternalGo.g:5721:1: ( () )
+            // InternalGo.g:5722:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationAccess().getMultiplicationLeftAction_1_0()); 
             }
-            // InternalGo.g:5673:2: ()
-            // InternalGo.g:5673:3: 
+            // InternalGo.g:5723:2: ()
+            // InternalGo.g:5723:3: 
             {
             }
 
@@ -19344,14 +19514,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplication__Group_1__1"
-    // InternalGo.g:5681:1: rule__Multiplication__Group_1__1 : rule__Multiplication__Group_1__1__Impl rule__Multiplication__Group_1__2 ;
+    // InternalGo.g:5731:1: rule__Multiplication__Group_1__1 : rule__Multiplication__Group_1__1__Impl rule__Multiplication__Group_1__2 ;
     public final void rule__Multiplication__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5685:1: ( rule__Multiplication__Group_1__1__Impl rule__Multiplication__Group_1__2 )
-            // InternalGo.g:5686:2: rule__Multiplication__Group_1__1__Impl rule__Multiplication__Group_1__2
+            // InternalGo.g:5735:1: ( rule__Multiplication__Group_1__1__Impl rule__Multiplication__Group_1__2 )
+            // InternalGo.g:5736:2: rule__Multiplication__Group_1__1__Impl rule__Multiplication__Group_1__2
             {
             pushFollow(FOLLOW_9);
             rule__Multiplication__Group_1__1__Impl();
@@ -19382,17 +19552,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplication__Group_1__1__Impl"
-    // InternalGo.g:5693:1: rule__Multiplication__Group_1__1__Impl : ( RULE_ASTERICS ) ;
+    // InternalGo.g:5743:1: rule__Multiplication__Group_1__1__Impl : ( RULE_ASTERICS ) ;
     public final void rule__Multiplication__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5697:1: ( ( RULE_ASTERICS ) )
-            // InternalGo.g:5698:1: ( RULE_ASTERICS )
+            // InternalGo.g:5747:1: ( ( RULE_ASTERICS ) )
+            // InternalGo.g:5748:1: ( RULE_ASTERICS )
             {
-            // InternalGo.g:5698:1: ( RULE_ASTERICS )
-            // InternalGo.g:5699:2: RULE_ASTERICS
+            // InternalGo.g:5748:1: ( RULE_ASTERICS )
+            // InternalGo.g:5749:2: RULE_ASTERICS
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationAccess().getAstericsTerminalRuleCall_1_1()); 
@@ -19423,14 +19593,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplication__Group_1__2"
-    // InternalGo.g:5708:1: rule__Multiplication__Group_1__2 : rule__Multiplication__Group_1__2__Impl ;
+    // InternalGo.g:5758:1: rule__Multiplication__Group_1__2 : rule__Multiplication__Group_1__2__Impl ;
     public final void rule__Multiplication__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5712:1: ( rule__Multiplication__Group_1__2__Impl )
-            // InternalGo.g:5713:2: rule__Multiplication__Group_1__2__Impl
+            // InternalGo.g:5762:1: ( rule__Multiplication__Group_1__2__Impl )
+            // InternalGo.g:5763:2: rule__Multiplication__Group_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Multiplication__Group_1__2__Impl();
@@ -19456,23 +19626,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplication__Group_1__2__Impl"
-    // InternalGo.g:5719:1: rule__Multiplication__Group_1__2__Impl : ( ( rule__Multiplication__RightAssignment_1_2 ) ) ;
+    // InternalGo.g:5769:1: rule__Multiplication__Group_1__2__Impl : ( ( rule__Multiplication__RightAssignment_1_2 ) ) ;
     public final void rule__Multiplication__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5723:1: ( ( ( rule__Multiplication__RightAssignment_1_2 ) ) )
-            // InternalGo.g:5724:1: ( ( rule__Multiplication__RightAssignment_1_2 ) )
+            // InternalGo.g:5773:1: ( ( ( rule__Multiplication__RightAssignment_1_2 ) ) )
+            // InternalGo.g:5774:1: ( ( rule__Multiplication__RightAssignment_1_2 ) )
             {
-            // InternalGo.g:5724:1: ( ( rule__Multiplication__RightAssignment_1_2 ) )
-            // InternalGo.g:5725:2: ( rule__Multiplication__RightAssignment_1_2 )
+            // InternalGo.g:5774:1: ( ( rule__Multiplication__RightAssignment_1_2 ) )
+            // InternalGo.g:5775:2: ( rule__Multiplication__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationAccess().getRightAssignment_1_2()); 
             }
-            // InternalGo.g:5726:2: ( rule__Multiplication__RightAssignment_1_2 )
-            // InternalGo.g:5726:3: rule__Multiplication__RightAssignment_1_2
+            // InternalGo.g:5776:2: ( rule__Multiplication__RightAssignment_1_2 )
+            // InternalGo.g:5776:3: rule__Multiplication__RightAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__Multiplication__RightAssignment_1_2();
@@ -19507,14 +19677,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Division__Group__0"
-    // InternalGo.g:5735:1: rule__Division__Group__0 : rule__Division__Group__0__Impl rule__Division__Group__1 ;
+    // InternalGo.g:5785:1: rule__Division__Group__0 : rule__Division__Group__0__Impl rule__Division__Group__1 ;
     public final void rule__Division__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5739:1: ( rule__Division__Group__0__Impl rule__Division__Group__1 )
-            // InternalGo.g:5740:2: rule__Division__Group__0__Impl rule__Division__Group__1
+            // InternalGo.g:5789:1: ( rule__Division__Group__0__Impl rule__Division__Group__1 )
+            // InternalGo.g:5790:2: rule__Division__Group__0__Impl rule__Division__Group__1
             {
             pushFollow(FOLLOW_46);
             rule__Division__Group__0__Impl();
@@ -19545,23 +19715,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Division__Group__0__Impl"
-    // InternalGo.g:5747:1: rule__Division__Group__0__Impl : ( ( rulePrimaryExpression ) ) ;
+    // InternalGo.g:5797:1: rule__Division__Group__0__Impl : ( ( rulePrimaryExpression ) ) ;
     public final void rule__Division__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5751:1: ( ( ( rulePrimaryExpression ) ) )
-            // InternalGo.g:5752:1: ( ( rulePrimaryExpression ) )
+            // InternalGo.g:5801:1: ( ( ( rulePrimaryExpression ) ) )
+            // InternalGo.g:5802:1: ( ( rulePrimaryExpression ) )
             {
-            // InternalGo.g:5752:1: ( ( rulePrimaryExpression ) )
-            // InternalGo.g:5753:2: ( rulePrimaryExpression )
+            // InternalGo.g:5802:1: ( ( rulePrimaryExpression ) )
+            // InternalGo.g:5803:2: ( rulePrimaryExpression )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDivisionAccess().getPrimaryExpressionParserRuleCall_0()); 
             }
-            // InternalGo.g:5754:2: ( rulePrimaryExpression )
-            // InternalGo.g:5754:3: rulePrimaryExpression
+            // InternalGo.g:5804:2: ( rulePrimaryExpression )
+            // InternalGo.g:5804:3: rulePrimaryExpression
             {
             pushFollow(FOLLOW_2);
             rulePrimaryExpression();
@@ -19596,14 +19766,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Division__Group__1"
-    // InternalGo.g:5762:1: rule__Division__Group__1 : rule__Division__Group__1__Impl ;
+    // InternalGo.g:5812:1: rule__Division__Group__1 : rule__Division__Group__1__Impl ;
     public final void rule__Division__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5766:1: ( rule__Division__Group__1__Impl )
-            // InternalGo.g:5767:2: rule__Division__Group__1__Impl
+            // InternalGo.g:5816:1: ( rule__Division__Group__1__Impl )
+            // InternalGo.g:5817:2: rule__Division__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Division__Group__1__Impl();
@@ -19629,22 +19799,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Division__Group__1__Impl"
-    // InternalGo.g:5773:1: rule__Division__Group__1__Impl : ( ( rule__Division__Group_1__0 )* ) ;
+    // InternalGo.g:5823:1: rule__Division__Group__1__Impl : ( ( rule__Division__Group_1__0 )* ) ;
     public final void rule__Division__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5777:1: ( ( ( rule__Division__Group_1__0 )* ) )
-            // InternalGo.g:5778:1: ( ( rule__Division__Group_1__0 )* )
+            // InternalGo.g:5827:1: ( ( ( rule__Division__Group_1__0 )* ) )
+            // InternalGo.g:5828:1: ( ( rule__Division__Group_1__0 )* )
             {
-            // InternalGo.g:5778:1: ( ( rule__Division__Group_1__0 )* )
-            // InternalGo.g:5779:2: ( rule__Division__Group_1__0 )*
+            // InternalGo.g:5828:1: ( ( rule__Division__Group_1__0 )* )
+            // InternalGo.g:5829:2: ( rule__Division__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDivisionAccess().getGroup_1()); 
             }
-            // InternalGo.g:5780:2: ( rule__Division__Group_1__0 )*
+            // InternalGo.g:5830:2: ( rule__Division__Group_1__0 )*
             loop52:
             do {
                 int alt52=2;
@@ -19657,7 +19827,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt52) {
             	case 1 :
-            	    // InternalGo.g:5780:3: rule__Division__Group_1__0
+            	    // InternalGo.g:5830:3: rule__Division__Group_1__0
             	    {
             	    pushFollow(FOLLOW_47);
             	    rule__Division__Group_1__0();
@@ -19698,14 +19868,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Division__Group_1__0"
-    // InternalGo.g:5789:1: rule__Division__Group_1__0 : rule__Division__Group_1__0__Impl rule__Division__Group_1__1 ;
+    // InternalGo.g:5839:1: rule__Division__Group_1__0 : rule__Division__Group_1__0__Impl rule__Division__Group_1__1 ;
     public final void rule__Division__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5793:1: ( rule__Division__Group_1__0__Impl rule__Division__Group_1__1 )
-            // InternalGo.g:5794:2: rule__Division__Group_1__0__Impl rule__Division__Group_1__1
+            // InternalGo.g:5843:1: ( rule__Division__Group_1__0__Impl rule__Division__Group_1__1 )
+            // InternalGo.g:5844:2: rule__Division__Group_1__0__Impl rule__Division__Group_1__1
             {
             pushFollow(FOLLOW_46);
             rule__Division__Group_1__0__Impl();
@@ -19736,23 +19906,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Division__Group_1__0__Impl"
-    // InternalGo.g:5801:1: rule__Division__Group_1__0__Impl : ( () ) ;
+    // InternalGo.g:5851:1: rule__Division__Group_1__0__Impl : ( () ) ;
     public final void rule__Division__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5805:1: ( ( () ) )
-            // InternalGo.g:5806:1: ( () )
+            // InternalGo.g:5855:1: ( ( () ) )
+            // InternalGo.g:5856:1: ( () )
             {
-            // InternalGo.g:5806:1: ( () )
-            // InternalGo.g:5807:2: ()
+            // InternalGo.g:5856:1: ( () )
+            // InternalGo.g:5857:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDivisionAccess().getDivisionLeftAction_1_0()); 
             }
-            // InternalGo.g:5808:2: ()
-            // InternalGo.g:5808:3: 
+            // InternalGo.g:5858:2: ()
+            // InternalGo.g:5858:3: 
             {
             }
 
@@ -19777,14 +19947,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Division__Group_1__1"
-    // InternalGo.g:5816:1: rule__Division__Group_1__1 : rule__Division__Group_1__1__Impl rule__Division__Group_1__2 ;
+    // InternalGo.g:5866:1: rule__Division__Group_1__1 : rule__Division__Group_1__1__Impl rule__Division__Group_1__2 ;
     public final void rule__Division__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5820:1: ( rule__Division__Group_1__1__Impl rule__Division__Group_1__2 )
-            // InternalGo.g:5821:2: rule__Division__Group_1__1__Impl rule__Division__Group_1__2
+            // InternalGo.g:5870:1: ( rule__Division__Group_1__1__Impl rule__Division__Group_1__2 )
+            // InternalGo.g:5871:2: rule__Division__Group_1__1__Impl rule__Division__Group_1__2
             {
             pushFollow(FOLLOW_9);
             rule__Division__Group_1__1__Impl();
@@ -19815,17 +19985,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Division__Group_1__1__Impl"
-    // InternalGo.g:5828:1: rule__Division__Group_1__1__Impl : ( RULE_BAR ) ;
+    // InternalGo.g:5878:1: rule__Division__Group_1__1__Impl : ( RULE_BAR ) ;
     public final void rule__Division__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5832:1: ( ( RULE_BAR ) )
-            // InternalGo.g:5833:1: ( RULE_BAR )
+            // InternalGo.g:5882:1: ( ( RULE_BAR ) )
+            // InternalGo.g:5883:1: ( RULE_BAR )
             {
-            // InternalGo.g:5833:1: ( RULE_BAR )
-            // InternalGo.g:5834:2: RULE_BAR
+            // InternalGo.g:5883:1: ( RULE_BAR )
+            // InternalGo.g:5884:2: RULE_BAR
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDivisionAccess().getBarTerminalRuleCall_1_1()); 
@@ -19856,14 +20026,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Division__Group_1__2"
-    // InternalGo.g:5843:1: rule__Division__Group_1__2 : rule__Division__Group_1__2__Impl ;
+    // InternalGo.g:5893:1: rule__Division__Group_1__2 : rule__Division__Group_1__2__Impl ;
     public final void rule__Division__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5847:1: ( rule__Division__Group_1__2__Impl )
-            // InternalGo.g:5848:2: rule__Division__Group_1__2__Impl
+            // InternalGo.g:5897:1: ( rule__Division__Group_1__2__Impl )
+            // InternalGo.g:5898:2: rule__Division__Group_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Division__Group_1__2__Impl();
@@ -19889,23 +20059,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Division__Group_1__2__Impl"
-    // InternalGo.g:5854:1: rule__Division__Group_1__2__Impl : ( ( rule__Division__RightAssignment_1_2 ) ) ;
+    // InternalGo.g:5904:1: rule__Division__Group_1__2__Impl : ( ( rule__Division__RightAssignment_1_2 ) ) ;
     public final void rule__Division__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5858:1: ( ( ( rule__Division__RightAssignment_1_2 ) ) )
-            // InternalGo.g:5859:1: ( ( rule__Division__RightAssignment_1_2 ) )
+            // InternalGo.g:5908:1: ( ( ( rule__Division__RightAssignment_1_2 ) ) )
+            // InternalGo.g:5909:1: ( ( rule__Division__RightAssignment_1_2 ) )
             {
-            // InternalGo.g:5859:1: ( ( rule__Division__RightAssignment_1_2 ) )
-            // InternalGo.g:5860:2: ( rule__Division__RightAssignment_1_2 )
+            // InternalGo.g:5909:1: ( ( rule__Division__RightAssignment_1_2 ) )
+            // InternalGo.g:5910:2: ( rule__Division__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDivisionAccess().getRightAssignment_1_2()); 
             }
-            // InternalGo.g:5861:2: ( rule__Division__RightAssignment_1_2 )
-            // InternalGo.g:5861:3: rule__Division__RightAssignment_1_2
+            // InternalGo.g:5911:2: ( rule__Division__RightAssignment_1_2 )
+            // InternalGo.g:5911:3: rule__Division__RightAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__Division__RightAssignment_1_2();
@@ -19940,14 +20110,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrExpression__Group__0"
-    // InternalGo.g:5870:1: rule__OrExpression__Group__0 : rule__OrExpression__Group__0__Impl rule__OrExpression__Group__1 ;
+    // InternalGo.g:5920:1: rule__OrExpression__Group__0 : rule__OrExpression__Group__0__Impl rule__OrExpression__Group__1 ;
     public final void rule__OrExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5874:1: ( rule__OrExpression__Group__0__Impl rule__OrExpression__Group__1 )
-            // InternalGo.g:5875:2: rule__OrExpression__Group__0__Impl rule__OrExpression__Group__1
+            // InternalGo.g:5924:1: ( rule__OrExpression__Group__0__Impl rule__OrExpression__Group__1 )
+            // InternalGo.g:5925:2: rule__OrExpression__Group__0__Impl rule__OrExpression__Group__1
             {
             pushFollow(FOLLOW_48);
             rule__OrExpression__Group__0__Impl();
@@ -19978,23 +20148,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrExpression__Group__0__Impl"
-    // InternalGo.g:5882:1: rule__OrExpression__Group__0__Impl : ( ( ruleAndExpression ) ) ;
+    // InternalGo.g:5932:1: rule__OrExpression__Group__0__Impl : ( ( ruleAndExpression ) ) ;
     public final void rule__OrExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5886:1: ( ( ( ruleAndExpression ) ) )
-            // InternalGo.g:5887:1: ( ( ruleAndExpression ) )
+            // InternalGo.g:5936:1: ( ( ( ruleAndExpression ) ) )
+            // InternalGo.g:5937:1: ( ( ruleAndExpression ) )
             {
-            // InternalGo.g:5887:1: ( ( ruleAndExpression ) )
-            // InternalGo.g:5888:2: ( ruleAndExpression )
+            // InternalGo.g:5937:1: ( ( ruleAndExpression ) )
+            // InternalGo.g:5938:2: ( ruleAndExpression )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrExpressionAccess().getAndExpressionParserRuleCall_0()); 
             }
-            // InternalGo.g:5889:2: ( ruleAndExpression )
-            // InternalGo.g:5889:3: ruleAndExpression
+            // InternalGo.g:5939:2: ( ruleAndExpression )
+            // InternalGo.g:5939:3: ruleAndExpression
             {
             pushFollow(FOLLOW_2);
             ruleAndExpression();
@@ -20029,14 +20199,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrExpression__Group__1"
-    // InternalGo.g:5897:1: rule__OrExpression__Group__1 : rule__OrExpression__Group__1__Impl ;
+    // InternalGo.g:5947:1: rule__OrExpression__Group__1 : rule__OrExpression__Group__1__Impl ;
     public final void rule__OrExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5901:1: ( rule__OrExpression__Group__1__Impl )
-            // InternalGo.g:5902:2: rule__OrExpression__Group__1__Impl
+            // InternalGo.g:5951:1: ( rule__OrExpression__Group__1__Impl )
+            // InternalGo.g:5952:2: rule__OrExpression__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__OrExpression__Group__1__Impl();
@@ -20062,22 +20232,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrExpression__Group__1__Impl"
-    // InternalGo.g:5908:1: rule__OrExpression__Group__1__Impl : ( ( rule__OrExpression__Group_1__0 )* ) ;
+    // InternalGo.g:5958:1: rule__OrExpression__Group__1__Impl : ( ( rule__OrExpression__Group_1__0 )* ) ;
     public final void rule__OrExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5912:1: ( ( ( rule__OrExpression__Group_1__0 )* ) )
-            // InternalGo.g:5913:1: ( ( rule__OrExpression__Group_1__0 )* )
+            // InternalGo.g:5962:1: ( ( ( rule__OrExpression__Group_1__0 )* ) )
+            // InternalGo.g:5963:1: ( ( rule__OrExpression__Group_1__0 )* )
             {
-            // InternalGo.g:5913:1: ( ( rule__OrExpression__Group_1__0 )* )
-            // InternalGo.g:5914:2: ( rule__OrExpression__Group_1__0 )*
+            // InternalGo.g:5963:1: ( ( rule__OrExpression__Group_1__0 )* )
+            // InternalGo.g:5964:2: ( rule__OrExpression__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrExpressionAccess().getGroup_1()); 
             }
-            // InternalGo.g:5915:2: ( rule__OrExpression__Group_1__0 )*
+            // InternalGo.g:5965:2: ( rule__OrExpression__Group_1__0 )*
             loop53:
             do {
                 int alt53=2;
@@ -20090,7 +20260,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt53) {
             	case 1 :
-            	    // InternalGo.g:5915:3: rule__OrExpression__Group_1__0
+            	    // InternalGo.g:5965:3: rule__OrExpression__Group_1__0
             	    {
             	    pushFollow(FOLLOW_49);
             	    rule__OrExpression__Group_1__0();
@@ -20131,14 +20301,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrExpression__Group_1__0"
-    // InternalGo.g:5924:1: rule__OrExpression__Group_1__0 : rule__OrExpression__Group_1__0__Impl rule__OrExpression__Group_1__1 ;
+    // InternalGo.g:5974:1: rule__OrExpression__Group_1__0 : rule__OrExpression__Group_1__0__Impl rule__OrExpression__Group_1__1 ;
     public final void rule__OrExpression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5928:1: ( rule__OrExpression__Group_1__0__Impl rule__OrExpression__Group_1__1 )
-            // InternalGo.g:5929:2: rule__OrExpression__Group_1__0__Impl rule__OrExpression__Group_1__1
+            // InternalGo.g:5978:1: ( rule__OrExpression__Group_1__0__Impl rule__OrExpression__Group_1__1 )
+            // InternalGo.g:5979:2: rule__OrExpression__Group_1__0__Impl rule__OrExpression__Group_1__1
             {
             pushFollow(FOLLOW_48);
             rule__OrExpression__Group_1__0__Impl();
@@ -20169,23 +20339,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrExpression__Group_1__0__Impl"
-    // InternalGo.g:5936:1: rule__OrExpression__Group_1__0__Impl : ( () ) ;
+    // InternalGo.g:5986:1: rule__OrExpression__Group_1__0__Impl : ( () ) ;
     public final void rule__OrExpression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5940:1: ( ( () ) )
-            // InternalGo.g:5941:1: ( () )
+            // InternalGo.g:5990:1: ( ( () ) )
+            // InternalGo.g:5991:1: ( () )
             {
-            // InternalGo.g:5941:1: ( () )
-            // InternalGo.g:5942:2: ()
+            // InternalGo.g:5991:1: ( () )
+            // InternalGo.g:5992:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrExpressionAccess().getOrExpressionLeftAction_1_0()); 
             }
-            // InternalGo.g:5943:2: ()
-            // InternalGo.g:5943:3: 
+            // InternalGo.g:5993:2: ()
+            // InternalGo.g:5993:3: 
             {
             }
 
@@ -20210,14 +20380,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrExpression__Group_1__1"
-    // InternalGo.g:5951:1: rule__OrExpression__Group_1__1 : rule__OrExpression__Group_1__1__Impl rule__OrExpression__Group_1__2 ;
+    // InternalGo.g:6001:1: rule__OrExpression__Group_1__1 : rule__OrExpression__Group_1__1__Impl rule__OrExpression__Group_1__2 ;
     public final void rule__OrExpression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5955:1: ( rule__OrExpression__Group_1__1__Impl rule__OrExpression__Group_1__2 )
-            // InternalGo.g:5956:2: rule__OrExpression__Group_1__1__Impl rule__OrExpression__Group_1__2
+            // InternalGo.g:6005:1: ( rule__OrExpression__Group_1__1__Impl rule__OrExpression__Group_1__2 )
+            // InternalGo.g:6006:2: rule__OrExpression__Group_1__1__Impl rule__OrExpression__Group_1__2
             {
             pushFollow(FOLLOW_9);
             rule__OrExpression__Group_1__1__Impl();
@@ -20248,17 +20418,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrExpression__Group_1__1__Impl"
-    // InternalGo.g:5963:1: rule__OrExpression__Group_1__1__Impl : ( '||' ) ;
+    // InternalGo.g:6013:1: rule__OrExpression__Group_1__1__Impl : ( '||' ) ;
     public final void rule__OrExpression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5967:1: ( ( '||' ) )
-            // InternalGo.g:5968:1: ( '||' )
+            // InternalGo.g:6017:1: ( ( '||' ) )
+            // InternalGo.g:6018:1: ( '||' )
             {
-            // InternalGo.g:5968:1: ( '||' )
-            // InternalGo.g:5969:2: '||'
+            // InternalGo.g:6018:1: ( '||' )
+            // InternalGo.g:6019:2: '||'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrExpressionAccess().getVerticalLineVerticalLineKeyword_1_1()); 
@@ -20289,14 +20459,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrExpression__Group_1__2"
-    // InternalGo.g:5978:1: rule__OrExpression__Group_1__2 : rule__OrExpression__Group_1__2__Impl ;
+    // InternalGo.g:6028:1: rule__OrExpression__Group_1__2 : rule__OrExpression__Group_1__2__Impl ;
     public final void rule__OrExpression__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5982:1: ( rule__OrExpression__Group_1__2__Impl )
-            // InternalGo.g:5983:2: rule__OrExpression__Group_1__2__Impl
+            // InternalGo.g:6032:1: ( rule__OrExpression__Group_1__2__Impl )
+            // InternalGo.g:6033:2: rule__OrExpression__Group_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__OrExpression__Group_1__2__Impl();
@@ -20322,23 +20492,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrExpression__Group_1__2__Impl"
-    // InternalGo.g:5989:1: rule__OrExpression__Group_1__2__Impl : ( ( rule__OrExpression__RightAssignment_1_2 ) ) ;
+    // InternalGo.g:6039:1: rule__OrExpression__Group_1__2__Impl : ( ( rule__OrExpression__RightAssignment_1_2 ) ) ;
     public final void rule__OrExpression__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:5993:1: ( ( ( rule__OrExpression__RightAssignment_1_2 ) ) )
-            // InternalGo.g:5994:1: ( ( rule__OrExpression__RightAssignment_1_2 ) )
+            // InternalGo.g:6043:1: ( ( ( rule__OrExpression__RightAssignment_1_2 ) ) )
+            // InternalGo.g:6044:1: ( ( rule__OrExpression__RightAssignment_1_2 ) )
             {
-            // InternalGo.g:5994:1: ( ( rule__OrExpression__RightAssignment_1_2 ) )
-            // InternalGo.g:5995:2: ( rule__OrExpression__RightAssignment_1_2 )
+            // InternalGo.g:6044:1: ( ( rule__OrExpression__RightAssignment_1_2 ) )
+            // InternalGo.g:6045:2: ( rule__OrExpression__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrExpressionAccess().getRightAssignment_1_2()); 
             }
-            // InternalGo.g:5996:2: ( rule__OrExpression__RightAssignment_1_2 )
-            // InternalGo.g:5996:3: rule__OrExpression__RightAssignment_1_2
+            // InternalGo.g:6046:2: ( rule__OrExpression__RightAssignment_1_2 )
+            // InternalGo.g:6046:3: rule__OrExpression__RightAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__OrExpression__RightAssignment_1_2();
@@ -20373,14 +20543,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndExpression__Group__0"
-    // InternalGo.g:6005:1: rule__AndExpression__Group__0 : rule__AndExpression__Group__0__Impl rule__AndExpression__Group__1 ;
+    // InternalGo.g:6055:1: rule__AndExpression__Group__0 : rule__AndExpression__Group__0__Impl rule__AndExpression__Group__1 ;
     public final void rule__AndExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6009:1: ( rule__AndExpression__Group__0__Impl rule__AndExpression__Group__1 )
-            // InternalGo.g:6010:2: rule__AndExpression__Group__0__Impl rule__AndExpression__Group__1
+            // InternalGo.g:6059:1: ( rule__AndExpression__Group__0__Impl rule__AndExpression__Group__1 )
+            // InternalGo.g:6060:2: rule__AndExpression__Group__0__Impl rule__AndExpression__Group__1
             {
             pushFollow(FOLLOW_50);
             rule__AndExpression__Group__0__Impl();
@@ -20411,23 +20581,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndExpression__Group__0__Impl"
-    // InternalGo.g:6017:1: rule__AndExpression__Group__0__Impl : ( ( ruleComparisonExpression ) ) ;
+    // InternalGo.g:6067:1: rule__AndExpression__Group__0__Impl : ( ( ruleComparisonExpression ) ) ;
     public final void rule__AndExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6021:1: ( ( ( ruleComparisonExpression ) ) )
-            // InternalGo.g:6022:1: ( ( ruleComparisonExpression ) )
+            // InternalGo.g:6071:1: ( ( ( ruleComparisonExpression ) ) )
+            // InternalGo.g:6072:1: ( ( ruleComparisonExpression ) )
             {
-            // InternalGo.g:6022:1: ( ( ruleComparisonExpression ) )
-            // InternalGo.g:6023:2: ( ruleComparisonExpression )
+            // InternalGo.g:6072:1: ( ( ruleComparisonExpression ) )
+            // InternalGo.g:6073:2: ( ruleComparisonExpression )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndExpressionAccess().getComparisonExpressionParserRuleCall_0()); 
             }
-            // InternalGo.g:6024:2: ( ruleComparisonExpression )
-            // InternalGo.g:6024:3: ruleComparisonExpression
+            // InternalGo.g:6074:2: ( ruleComparisonExpression )
+            // InternalGo.g:6074:3: ruleComparisonExpression
             {
             pushFollow(FOLLOW_2);
             ruleComparisonExpression();
@@ -20462,14 +20632,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndExpression__Group__1"
-    // InternalGo.g:6032:1: rule__AndExpression__Group__1 : rule__AndExpression__Group__1__Impl ;
+    // InternalGo.g:6082:1: rule__AndExpression__Group__1 : rule__AndExpression__Group__1__Impl ;
     public final void rule__AndExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6036:1: ( rule__AndExpression__Group__1__Impl )
-            // InternalGo.g:6037:2: rule__AndExpression__Group__1__Impl
+            // InternalGo.g:6086:1: ( rule__AndExpression__Group__1__Impl )
+            // InternalGo.g:6087:2: rule__AndExpression__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__AndExpression__Group__1__Impl();
@@ -20495,22 +20665,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndExpression__Group__1__Impl"
-    // InternalGo.g:6043:1: rule__AndExpression__Group__1__Impl : ( ( rule__AndExpression__Group_1__0 )* ) ;
+    // InternalGo.g:6093:1: rule__AndExpression__Group__1__Impl : ( ( rule__AndExpression__Group_1__0 )* ) ;
     public final void rule__AndExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6047:1: ( ( ( rule__AndExpression__Group_1__0 )* ) )
-            // InternalGo.g:6048:1: ( ( rule__AndExpression__Group_1__0 )* )
+            // InternalGo.g:6097:1: ( ( ( rule__AndExpression__Group_1__0 )* ) )
+            // InternalGo.g:6098:1: ( ( rule__AndExpression__Group_1__0 )* )
             {
-            // InternalGo.g:6048:1: ( ( rule__AndExpression__Group_1__0 )* )
-            // InternalGo.g:6049:2: ( rule__AndExpression__Group_1__0 )*
+            // InternalGo.g:6098:1: ( ( rule__AndExpression__Group_1__0 )* )
+            // InternalGo.g:6099:2: ( rule__AndExpression__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndExpressionAccess().getGroup_1()); 
             }
-            // InternalGo.g:6050:2: ( rule__AndExpression__Group_1__0 )*
+            // InternalGo.g:6100:2: ( rule__AndExpression__Group_1__0 )*
             loop54:
             do {
                 int alt54=2;
@@ -20523,7 +20693,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt54) {
             	case 1 :
-            	    // InternalGo.g:6050:3: rule__AndExpression__Group_1__0
+            	    // InternalGo.g:6100:3: rule__AndExpression__Group_1__0
             	    {
             	    pushFollow(FOLLOW_51);
             	    rule__AndExpression__Group_1__0();
@@ -20564,14 +20734,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndExpression__Group_1__0"
-    // InternalGo.g:6059:1: rule__AndExpression__Group_1__0 : rule__AndExpression__Group_1__0__Impl rule__AndExpression__Group_1__1 ;
+    // InternalGo.g:6109:1: rule__AndExpression__Group_1__0 : rule__AndExpression__Group_1__0__Impl rule__AndExpression__Group_1__1 ;
     public final void rule__AndExpression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6063:1: ( rule__AndExpression__Group_1__0__Impl rule__AndExpression__Group_1__1 )
-            // InternalGo.g:6064:2: rule__AndExpression__Group_1__0__Impl rule__AndExpression__Group_1__1
+            // InternalGo.g:6113:1: ( rule__AndExpression__Group_1__0__Impl rule__AndExpression__Group_1__1 )
+            // InternalGo.g:6114:2: rule__AndExpression__Group_1__0__Impl rule__AndExpression__Group_1__1
             {
             pushFollow(FOLLOW_50);
             rule__AndExpression__Group_1__0__Impl();
@@ -20602,23 +20772,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndExpression__Group_1__0__Impl"
-    // InternalGo.g:6071:1: rule__AndExpression__Group_1__0__Impl : ( () ) ;
+    // InternalGo.g:6121:1: rule__AndExpression__Group_1__0__Impl : ( () ) ;
     public final void rule__AndExpression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6075:1: ( ( () ) )
-            // InternalGo.g:6076:1: ( () )
+            // InternalGo.g:6125:1: ( ( () ) )
+            // InternalGo.g:6126:1: ( () )
             {
-            // InternalGo.g:6076:1: ( () )
-            // InternalGo.g:6077:2: ()
+            // InternalGo.g:6126:1: ( () )
+            // InternalGo.g:6127:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndExpressionAccess().getAndExpressionLeftAction_1_0()); 
             }
-            // InternalGo.g:6078:2: ()
-            // InternalGo.g:6078:3: 
+            // InternalGo.g:6128:2: ()
+            // InternalGo.g:6128:3: 
             {
             }
 
@@ -20643,14 +20813,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndExpression__Group_1__1"
-    // InternalGo.g:6086:1: rule__AndExpression__Group_1__1 : rule__AndExpression__Group_1__1__Impl rule__AndExpression__Group_1__2 ;
+    // InternalGo.g:6136:1: rule__AndExpression__Group_1__1 : rule__AndExpression__Group_1__1__Impl rule__AndExpression__Group_1__2 ;
     public final void rule__AndExpression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6090:1: ( rule__AndExpression__Group_1__1__Impl rule__AndExpression__Group_1__2 )
-            // InternalGo.g:6091:2: rule__AndExpression__Group_1__1__Impl rule__AndExpression__Group_1__2
+            // InternalGo.g:6140:1: ( rule__AndExpression__Group_1__1__Impl rule__AndExpression__Group_1__2 )
+            // InternalGo.g:6141:2: rule__AndExpression__Group_1__1__Impl rule__AndExpression__Group_1__2
             {
             pushFollow(FOLLOW_9);
             rule__AndExpression__Group_1__1__Impl();
@@ -20681,17 +20851,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndExpression__Group_1__1__Impl"
-    // InternalGo.g:6098:1: rule__AndExpression__Group_1__1__Impl : ( '&&' ) ;
+    // InternalGo.g:6148:1: rule__AndExpression__Group_1__1__Impl : ( '&&' ) ;
     public final void rule__AndExpression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6102:1: ( ( '&&' ) )
-            // InternalGo.g:6103:1: ( '&&' )
+            // InternalGo.g:6152:1: ( ( '&&' ) )
+            // InternalGo.g:6153:1: ( '&&' )
             {
-            // InternalGo.g:6103:1: ( '&&' )
-            // InternalGo.g:6104:2: '&&'
+            // InternalGo.g:6153:1: ( '&&' )
+            // InternalGo.g:6154:2: '&&'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndExpressionAccess().getAmpersandAmpersandKeyword_1_1()); 
@@ -20722,14 +20892,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndExpression__Group_1__2"
-    // InternalGo.g:6113:1: rule__AndExpression__Group_1__2 : rule__AndExpression__Group_1__2__Impl ;
+    // InternalGo.g:6163:1: rule__AndExpression__Group_1__2 : rule__AndExpression__Group_1__2__Impl ;
     public final void rule__AndExpression__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6117:1: ( rule__AndExpression__Group_1__2__Impl )
-            // InternalGo.g:6118:2: rule__AndExpression__Group_1__2__Impl
+            // InternalGo.g:6167:1: ( rule__AndExpression__Group_1__2__Impl )
+            // InternalGo.g:6168:2: rule__AndExpression__Group_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__AndExpression__Group_1__2__Impl();
@@ -20755,23 +20925,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndExpression__Group_1__2__Impl"
-    // InternalGo.g:6124:1: rule__AndExpression__Group_1__2__Impl : ( ( rule__AndExpression__RightAssignment_1_2 ) ) ;
+    // InternalGo.g:6174:1: rule__AndExpression__Group_1__2__Impl : ( ( rule__AndExpression__RightAssignment_1_2 ) ) ;
     public final void rule__AndExpression__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6128:1: ( ( ( rule__AndExpression__RightAssignment_1_2 ) ) )
-            // InternalGo.g:6129:1: ( ( rule__AndExpression__RightAssignment_1_2 ) )
+            // InternalGo.g:6178:1: ( ( ( rule__AndExpression__RightAssignment_1_2 ) ) )
+            // InternalGo.g:6179:1: ( ( rule__AndExpression__RightAssignment_1_2 ) )
             {
-            // InternalGo.g:6129:1: ( ( rule__AndExpression__RightAssignment_1_2 ) )
-            // InternalGo.g:6130:2: ( rule__AndExpression__RightAssignment_1_2 )
+            // InternalGo.g:6179:1: ( ( rule__AndExpression__RightAssignment_1_2 ) )
+            // InternalGo.g:6180:2: ( rule__AndExpression__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndExpressionAccess().getRightAssignment_1_2()); 
             }
-            // InternalGo.g:6131:2: ( rule__AndExpression__RightAssignment_1_2 )
-            // InternalGo.g:6131:3: rule__AndExpression__RightAssignment_1_2
+            // InternalGo.g:6181:2: ( rule__AndExpression__RightAssignment_1_2 )
+            // InternalGo.g:6181:3: rule__AndExpression__RightAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__AndExpression__RightAssignment_1_2();
@@ -20806,14 +20976,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ComparisonExpression__Group__0"
-    // InternalGo.g:6140:1: rule__ComparisonExpression__Group__0 : rule__ComparisonExpression__Group__0__Impl rule__ComparisonExpression__Group__1 ;
+    // InternalGo.g:6190:1: rule__ComparisonExpression__Group__0 : rule__ComparisonExpression__Group__0__Impl rule__ComparisonExpression__Group__1 ;
     public final void rule__ComparisonExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6144:1: ( rule__ComparisonExpression__Group__0__Impl rule__ComparisonExpression__Group__1 )
-            // InternalGo.g:6145:2: rule__ComparisonExpression__Group__0__Impl rule__ComparisonExpression__Group__1
+            // InternalGo.g:6194:1: ( rule__ComparisonExpression__Group__0__Impl rule__ComparisonExpression__Group__1 )
+            // InternalGo.g:6195:2: rule__ComparisonExpression__Group__0__Impl rule__ComparisonExpression__Group__1
             {
             pushFollow(FOLLOW_52);
             rule__ComparisonExpression__Group__0__Impl();
@@ -20844,23 +21014,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ComparisonExpression__Group__0__Impl"
-    // InternalGo.g:6152:1: rule__ComparisonExpression__Group__0__Impl : ( ( rulePrimaryExpression ) ) ;
+    // InternalGo.g:6202:1: rule__ComparisonExpression__Group__0__Impl : ( ( rulePrimaryExpression ) ) ;
     public final void rule__ComparisonExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6156:1: ( ( ( rulePrimaryExpression ) ) )
-            // InternalGo.g:6157:1: ( ( rulePrimaryExpression ) )
+            // InternalGo.g:6206:1: ( ( ( rulePrimaryExpression ) ) )
+            // InternalGo.g:6207:1: ( ( rulePrimaryExpression ) )
             {
-            // InternalGo.g:6157:1: ( ( rulePrimaryExpression ) )
-            // InternalGo.g:6158:2: ( rulePrimaryExpression )
+            // InternalGo.g:6207:1: ( ( rulePrimaryExpression ) )
+            // InternalGo.g:6208:2: ( rulePrimaryExpression )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonExpressionAccess().getPrimaryExpressionParserRuleCall_0()); 
             }
-            // InternalGo.g:6159:2: ( rulePrimaryExpression )
-            // InternalGo.g:6159:3: rulePrimaryExpression
+            // InternalGo.g:6209:2: ( rulePrimaryExpression )
+            // InternalGo.g:6209:3: rulePrimaryExpression
             {
             pushFollow(FOLLOW_2);
             rulePrimaryExpression();
@@ -20895,14 +21065,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ComparisonExpression__Group__1"
-    // InternalGo.g:6167:1: rule__ComparisonExpression__Group__1 : rule__ComparisonExpression__Group__1__Impl ;
+    // InternalGo.g:6217:1: rule__ComparisonExpression__Group__1 : rule__ComparisonExpression__Group__1__Impl ;
     public final void rule__ComparisonExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6171:1: ( rule__ComparisonExpression__Group__1__Impl )
-            // InternalGo.g:6172:2: rule__ComparisonExpression__Group__1__Impl
+            // InternalGo.g:6221:1: ( rule__ComparisonExpression__Group__1__Impl )
+            // InternalGo.g:6222:2: rule__ComparisonExpression__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ComparisonExpression__Group__1__Impl();
@@ -20928,22 +21098,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ComparisonExpression__Group__1__Impl"
-    // InternalGo.g:6178:1: rule__ComparisonExpression__Group__1__Impl : ( ( rule__ComparisonExpression__Group_1__0 )* ) ;
+    // InternalGo.g:6228:1: rule__ComparisonExpression__Group__1__Impl : ( ( rule__ComparisonExpression__Group_1__0 )* ) ;
     public final void rule__ComparisonExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6182:1: ( ( ( rule__ComparisonExpression__Group_1__0 )* ) )
-            // InternalGo.g:6183:1: ( ( rule__ComparisonExpression__Group_1__0 )* )
+            // InternalGo.g:6232:1: ( ( ( rule__ComparisonExpression__Group_1__0 )* ) )
+            // InternalGo.g:6233:1: ( ( rule__ComparisonExpression__Group_1__0 )* )
             {
-            // InternalGo.g:6183:1: ( ( rule__ComparisonExpression__Group_1__0 )* )
-            // InternalGo.g:6184:2: ( rule__ComparisonExpression__Group_1__0 )*
+            // InternalGo.g:6233:1: ( ( rule__ComparisonExpression__Group_1__0 )* )
+            // InternalGo.g:6234:2: ( rule__ComparisonExpression__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonExpressionAccess().getGroup_1()); 
             }
-            // InternalGo.g:6185:2: ( rule__ComparisonExpression__Group_1__0 )*
+            // InternalGo.g:6235:2: ( rule__ComparisonExpression__Group_1__0 )*
             loop55:
             do {
                 int alt55=2;
@@ -20956,7 +21126,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt55) {
             	case 1 :
-            	    // InternalGo.g:6185:3: rule__ComparisonExpression__Group_1__0
+            	    // InternalGo.g:6235:3: rule__ComparisonExpression__Group_1__0
             	    {
             	    pushFollow(FOLLOW_53);
             	    rule__ComparisonExpression__Group_1__0();
@@ -20997,14 +21167,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ComparisonExpression__Group_1__0"
-    // InternalGo.g:6194:1: rule__ComparisonExpression__Group_1__0 : rule__ComparisonExpression__Group_1__0__Impl rule__ComparisonExpression__Group_1__1 ;
+    // InternalGo.g:6244:1: rule__ComparisonExpression__Group_1__0 : rule__ComparisonExpression__Group_1__0__Impl rule__ComparisonExpression__Group_1__1 ;
     public final void rule__ComparisonExpression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6198:1: ( rule__ComparisonExpression__Group_1__0__Impl rule__ComparisonExpression__Group_1__1 )
-            // InternalGo.g:6199:2: rule__ComparisonExpression__Group_1__0__Impl rule__ComparisonExpression__Group_1__1
+            // InternalGo.g:6248:1: ( rule__ComparisonExpression__Group_1__0__Impl rule__ComparisonExpression__Group_1__1 )
+            // InternalGo.g:6249:2: rule__ComparisonExpression__Group_1__0__Impl rule__ComparisonExpression__Group_1__1
             {
             pushFollow(FOLLOW_52);
             rule__ComparisonExpression__Group_1__0__Impl();
@@ -21035,23 +21205,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ComparisonExpression__Group_1__0__Impl"
-    // InternalGo.g:6206:1: rule__ComparisonExpression__Group_1__0__Impl : ( () ) ;
+    // InternalGo.g:6256:1: rule__ComparisonExpression__Group_1__0__Impl : ( () ) ;
     public final void rule__ComparisonExpression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6210:1: ( ( () ) )
-            // InternalGo.g:6211:1: ( () )
+            // InternalGo.g:6260:1: ( ( () ) )
+            // InternalGo.g:6261:1: ( () )
             {
-            // InternalGo.g:6211:1: ( () )
-            // InternalGo.g:6212:2: ()
+            // InternalGo.g:6261:1: ( () )
+            // InternalGo.g:6262:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonExpressionAccess().getComparisonExpressionLeftAction_1_0()); 
             }
-            // InternalGo.g:6213:2: ()
-            // InternalGo.g:6213:3: 
+            // InternalGo.g:6263:2: ()
+            // InternalGo.g:6263:3: 
             {
             }
 
@@ -21076,14 +21246,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ComparisonExpression__Group_1__1"
-    // InternalGo.g:6221:1: rule__ComparisonExpression__Group_1__1 : rule__ComparisonExpression__Group_1__1__Impl rule__ComparisonExpression__Group_1__2 ;
+    // InternalGo.g:6271:1: rule__ComparisonExpression__Group_1__1 : rule__ComparisonExpression__Group_1__1__Impl rule__ComparisonExpression__Group_1__2 ;
     public final void rule__ComparisonExpression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6225:1: ( rule__ComparisonExpression__Group_1__1__Impl rule__ComparisonExpression__Group_1__2 )
-            // InternalGo.g:6226:2: rule__ComparisonExpression__Group_1__1__Impl rule__ComparisonExpression__Group_1__2
+            // InternalGo.g:6275:1: ( rule__ComparisonExpression__Group_1__1__Impl rule__ComparisonExpression__Group_1__2 )
+            // InternalGo.g:6276:2: rule__ComparisonExpression__Group_1__1__Impl rule__ComparisonExpression__Group_1__2
             {
             pushFollow(FOLLOW_9);
             rule__ComparisonExpression__Group_1__1__Impl();
@@ -21114,17 +21284,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ComparisonExpression__Group_1__1__Impl"
-    // InternalGo.g:6233:1: rule__ComparisonExpression__Group_1__1__Impl : ( ruleOperator ) ;
+    // InternalGo.g:6283:1: rule__ComparisonExpression__Group_1__1__Impl : ( ruleOperator ) ;
     public final void rule__ComparisonExpression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6237:1: ( ( ruleOperator ) )
-            // InternalGo.g:6238:1: ( ruleOperator )
+            // InternalGo.g:6287:1: ( ( ruleOperator ) )
+            // InternalGo.g:6288:1: ( ruleOperator )
             {
-            // InternalGo.g:6238:1: ( ruleOperator )
-            // InternalGo.g:6239:2: ruleOperator
+            // InternalGo.g:6288:1: ( ruleOperator )
+            // InternalGo.g:6289:2: ruleOperator
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonExpressionAccess().getOperatorParserRuleCall_1_1()); 
@@ -21159,14 +21329,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ComparisonExpression__Group_1__2"
-    // InternalGo.g:6248:1: rule__ComparisonExpression__Group_1__2 : rule__ComparisonExpression__Group_1__2__Impl ;
+    // InternalGo.g:6298:1: rule__ComparisonExpression__Group_1__2 : rule__ComparisonExpression__Group_1__2__Impl ;
     public final void rule__ComparisonExpression__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6252:1: ( rule__ComparisonExpression__Group_1__2__Impl )
-            // InternalGo.g:6253:2: rule__ComparisonExpression__Group_1__2__Impl
+            // InternalGo.g:6302:1: ( rule__ComparisonExpression__Group_1__2__Impl )
+            // InternalGo.g:6303:2: rule__ComparisonExpression__Group_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ComparisonExpression__Group_1__2__Impl();
@@ -21192,23 +21362,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ComparisonExpression__Group_1__2__Impl"
-    // InternalGo.g:6259:1: rule__ComparisonExpression__Group_1__2__Impl : ( ( rule__ComparisonExpression__RightAssignment_1_2 ) ) ;
+    // InternalGo.g:6309:1: rule__ComparisonExpression__Group_1__2__Impl : ( ( rule__ComparisonExpression__RightAssignment_1_2 ) ) ;
     public final void rule__ComparisonExpression__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6263:1: ( ( ( rule__ComparisonExpression__RightAssignment_1_2 ) ) )
-            // InternalGo.g:6264:1: ( ( rule__ComparisonExpression__RightAssignment_1_2 ) )
+            // InternalGo.g:6313:1: ( ( ( rule__ComparisonExpression__RightAssignment_1_2 ) ) )
+            // InternalGo.g:6314:1: ( ( rule__ComparisonExpression__RightAssignment_1_2 ) )
             {
-            // InternalGo.g:6264:1: ( ( rule__ComparisonExpression__RightAssignment_1_2 ) )
-            // InternalGo.g:6265:2: ( rule__ComparisonExpression__RightAssignment_1_2 )
+            // InternalGo.g:6314:1: ( ( rule__ComparisonExpression__RightAssignment_1_2 ) )
+            // InternalGo.g:6315:2: ( rule__ComparisonExpression__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonExpressionAccess().getRightAssignment_1_2()); 
             }
-            // InternalGo.g:6266:2: ( rule__ComparisonExpression__RightAssignment_1_2 )
-            // InternalGo.g:6266:3: rule__ComparisonExpression__RightAssignment_1_2
+            // InternalGo.g:6316:2: ( rule__ComparisonExpression__RightAssignment_1_2 )
+            // InternalGo.g:6316:3: rule__ComparisonExpression__RightAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__ComparisonExpression__RightAssignment_1_2();
@@ -21243,14 +21413,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpression__Group_0__0"
-    // InternalGo.g:6275:1: rule__PrimaryExpression__Group_0__0 : rule__PrimaryExpression__Group_0__0__Impl rule__PrimaryExpression__Group_0__1 ;
+    // InternalGo.g:6325:1: rule__PrimaryExpression__Group_0__0 : rule__PrimaryExpression__Group_0__0__Impl rule__PrimaryExpression__Group_0__1 ;
     public final void rule__PrimaryExpression__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6279:1: ( rule__PrimaryExpression__Group_0__0__Impl rule__PrimaryExpression__Group_0__1 )
-            // InternalGo.g:6280:2: rule__PrimaryExpression__Group_0__0__Impl rule__PrimaryExpression__Group_0__1
+            // InternalGo.g:6329:1: ( rule__PrimaryExpression__Group_0__0__Impl rule__PrimaryExpression__Group_0__1 )
+            // InternalGo.g:6330:2: rule__PrimaryExpression__Group_0__0__Impl rule__PrimaryExpression__Group_0__1
             {
             pushFollow(FOLLOW_9);
             rule__PrimaryExpression__Group_0__0__Impl();
@@ -21281,17 +21451,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpression__Group_0__0__Impl"
-    // InternalGo.g:6287:1: rule__PrimaryExpression__Group_0__0__Impl : ( RULE_OPEN_PARENTHESES ) ;
+    // InternalGo.g:6337:1: rule__PrimaryExpression__Group_0__0__Impl : ( RULE_OPEN_PARENTHESES ) ;
     public final void rule__PrimaryExpression__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6291:1: ( ( RULE_OPEN_PARENTHESES ) )
-            // InternalGo.g:6292:1: ( RULE_OPEN_PARENTHESES )
+            // InternalGo.g:6341:1: ( ( RULE_OPEN_PARENTHESES ) )
+            // InternalGo.g:6342:1: ( RULE_OPEN_PARENTHESES )
             {
-            // InternalGo.g:6292:1: ( RULE_OPEN_PARENTHESES )
-            // InternalGo.g:6293:2: RULE_OPEN_PARENTHESES
+            // InternalGo.g:6342:1: ( RULE_OPEN_PARENTHESES )
+            // InternalGo.g:6343:2: RULE_OPEN_PARENTHESES
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getOpen_parenthesesTerminalRuleCall_0_0()); 
@@ -21322,14 +21492,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpression__Group_0__1"
-    // InternalGo.g:6302:1: rule__PrimaryExpression__Group_0__1 : rule__PrimaryExpression__Group_0__1__Impl rule__PrimaryExpression__Group_0__2 ;
+    // InternalGo.g:6352:1: rule__PrimaryExpression__Group_0__1 : rule__PrimaryExpression__Group_0__1__Impl rule__PrimaryExpression__Group_0__2 ;
     public final void rule__PrimaryExpression__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6306:1: ( rule__PrimaryExpression__Group_0__1__Impl rule__PrimaryExpression__Group_0__2 )
-            // InternalGo.g:6307:2: rule__PrimaryExpression__Group_0__1__Impl rule__PrimaryExpression__Group_0__2
+            // InternalGo.g:6356:1: ( rule__PrimaryExpression__Group_0__1__Impl rule__PrimaryExpression__Group_0__2 )
+            // InternalGo.g:6357:2: rule__PrimaryExpression__Group_0__1__Impl rule__PrimaryExpression__Group_0__2
             {
             pushFollow(FOLLOW_26);
             rule__PrimaryExpression__Group_0__1__Impl();
@@ -21360,17 +21530,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpression__Group_0__1__Impl"
-    // InternalGo.g:6314:1: rule__PrimaryExpression__Group_0__1__Impl : ( ruleExpression ) ;
+    // InternalGo.g:6364:1: rule__PrimaryExpression__Group_0__1__Impl : ( ruleExpression ) ;
     public final void rule__PrimaryExpression__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6318:1: ( ( ruleExpression ) )
-            // InternalGo.g:6319:1: ( ruleExpression )
+            // InternalGo.g:6368:1: ( ( ruleExpression ) )
+            // InternalGo.g:6369:1: ( ruleExpression )
             {
-            // InternalGo.g:6319:1: ( ruleExpression )
-            // InternalGo.g:6320:2: ruleExpression
+            // InternalGo.g:6369:1: ( ruleExpression )
+            // InternalGo.g:6370:2: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getExpressionParserRuleCall_0_1()); 
@@ -21405,14 +21575,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpression__Group_0__2"
-    // InternalGo.g:6329:1: rule__PrimaryExpression__Group_0__2 : rule__PrimaryExpression__Group_0__2__Impl ;
+    // InternalGo.g:6379:1: rule__PrimaryExpression__Group_0__2 : rule__PrimaryExpression__Group_0__2__Impl ;
     public final void rule__PrimaryExpression__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6333:1: ( rule__PrimaryExpression__Group_0__2__Impl )
-            // InternalGo.g:6334:2: rule__PrimaryExpression__Group_0__2__Impl
+            // InternalGo.g:6383:1: ( rule__PrimaryExpression__Group_0__2__Impl )
+            // InternalGo.g:6384:2: rule__PrimaryExpression__Group_0__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__PrimaryExpression__Group_0__2__Impl();
@@ -21438,17 +21608,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimaryExpression__Group_0__2__Impl"
-    // InternalGo.g:6340:1: rule__PrimaryExpression__Group_0__2__Impl : ( RULE_CLOSED_PARENTHESES ) ;
+    // InternalGo.g:6390:1: rule__PrimaryExpression__Group_0__2__Impl : ( RULE_CLOSED_PARENTHESES ) ;
     public final void rule__PrimaryExpression__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6344:1: ( ( RULE_CLOSED_PARENTHESES ) )
-            // InternalGo.g:6345:1: ( RULE_CLOSED_PARENTHESES )
+            // InternalGo.g:6394:1: ( ( RULE_CLOSED_PARENTHESES ) )
+            // InternalGo.g:6395:1: ( RULE_CLOSED_PARENTHESES )
             {
-            // InternalGo.g:6345:1: ( RULE_CLOSED_PARENTHESES )
-            // InternalGo.g:6346:2: RULE_CLOSED_PARENTHESES
+            // InternalGo.g:6395:1: ( RULE_CLOSED_PARENTHESES )
+            // InternalGo.g:6396:2: RULE_CLOSED_PARENTHESES
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getClosed_parenthesesTerminalRuleCall_0_2()); 
@@ -21479,14 +21649,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsOne__Group__0"
-    // InternalGo.g:6356:1: rule__OperationsOne__Group__0 : rule__OperationsOne__Group__0__Impl rule__OperationsOne__Group__1 ;
+    // InternalGo.g:6406:1: rule__OperationsOne__Group__0 : rule__OperationsOne__Group__0__Impl rule__OperationsOne__Group__1 ;
     public final void rule__OperationsOne__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6360:1: ( rule__OperationsOne__Group__0__Impl rule__OperationsOne__Group__1 )
-            // InternalGo.g:6361:2: rule__OperationsOne__Group__0__Impl rule__OperationsOne__Group__1
+            // InternalGo.g:6410:1: ( rule__OperationsOne__Group__0__Impl rule__OperationsOne__Group__1 )
+            // InternalGo.g:6411:2: rule__OperationsOne__Group__0__Impl rule__OperationsOne__Group__1
             {
             pushFollow(FOLLOW_54);
             rule__OperationsOne__Group__0__Impl();
@@ -21517,17 +21687,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsOne__Group__0__Impl"
-    // InternalGo.g:6368:1: rule__OperationsOne__Group__0__Impl : ( ruleVariable ) ;
+    // InternalGo.g:6418:1: rule__OperationsOne__Group__0__Impl : ( ruleVariable ) ;
     public final void rule__OperationsOne__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6372:1: ( ( ruleVariable ) )
-            // InternalGo.g:6373:1: ( ruleVariable )
+            // InternalGo.g:6422:1: ( ( ruleVariable ) )
+            // InternalGo.g:6423:1: ( ruleVariable )
             {
-            // InternalGo.g:6373:1: ( ruleVariable )
-            // InternalGo.g:6374:2: ruleVariable
+            // InternalGo.g:6423:1: ( ruleVariable )
+            // InternalGo.g:6424:2: ruleVariable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsOneAccess().getVariableParserRuleCall_0()); 
@@ -21562,14 +21732,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsOne__Group__1"
-    // InternalGo.g:6383:1: rule__OperationsOne__Group__1 : rule__OperationsOne__Group__1__Impl ;
+    // InternalGo.g:6433:1: rule__OperationsOne__Group__1 : rule__OperationsOne__Group__1__Impl ;
     public final void rule__OperationsOne__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6387:1: ( rule__OperationsOne__Group__1__Impl )
-            // InternalGo.g:6388:2: rule__OperationsOne__Group__1__Impl
+            // InternalGo.g:6437:1: ( rule__OperationsOne__Group__1__Impl )
+            // InternalGo.g:6438:2: rule__OperationsOne__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__OperationsOne__Group__1__Impl();
@@ -21595,23 +21765,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsOne__Group__1__Impl"
-    // InternalGo.g:6394:1: rule__OperationsOne__Group__1__Impl : ( ( rule__OperationsOne__Alternatives_1 ) ) ;
+    // InternalGo.g:6444:1: rule__OperationsOne__Group__1__Impl : ( ( rule__OperationsOne__Alternatives_1 ) ) ;
     public final void rule__OperationsOne__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6398:1: ( ( ( rule__OperationsOne__Alternatives_1 ) ) )
-            // InternalGo.g:6399:1: ( ( rule__OperationsOne__Alternatives_1 ) )
+            // InternalGo.g:6448:1: ( ( ( rule__OperationsOne__Alternatives_1 ) ) )
+            // InternalGo.g:6449:1: ( ( rule__OperationsOne__Alternatives_1 ) )
             {
-            // InternalGo.g:6399:1: ( ( rule__OperationsOne__Alternatives_1 ) )
-            // InternalGo.g:6400:2: ( rule__OperationsOne__Alternatives_1 )
+            // InternalGo.g:6449:1: ( ( rule__OperationsOne__Alternatives_1 ) )
+            // InternalGo.g:6450:2: ( rule__OperationsOne__Alternatives_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsOneAccess().getAlternatives_1()); 
             }
-            // InternalGo.g:6401:2: ( rule__OperationsOne__Alternatives_1 )
-            // InternalGo.g:6401:3: rule__OperationsOne__Alternatives_1
+            // InternalGo.g:6451:2: ( rule__OperationsOne__Alternatives_1 )
+            // InternalGo.g:6451:3: rule__OperationsOne__Alternatives_1
             {
             pushFollow(FOLLOW_2);
             rule__OperationsOne__Alternatives_1();
@@ -21646,14 +21816,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VarFor__Group_1__0"
-    // InternalGo.g:6410:1: rule__VarFor__Group_1__0 : rule__VarFor__Group_1__0__Impl rule__VarFor__Group_1__1 ;
+    // InternalGo.g:6460:1: rule__VarFor__Group_1__0 : rule__VarFor__Group_1__0__Impl rule__VarFor__Group_1__1 ;
     public final void rule__VarFor__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6414:1: ( rule__VarFor__Group_1__0__Impl rule__VarFor__Group_1__1 )
-            // InternalGo.g:6415:2: rule__VarFor__Group_1__0__Impl rule__VarFor__Group_1__1
+            // InternalGo.g:6464:1: ( rule__VarFor__Group_1__0__Impl rule__VarFor__Group_1__1 )
+            // InternalGo.g:6465:2: rule__VarFor__Group_1__0__Impl rule__VarFor__Group_1__1
             {
             pushFollow(FOLLOW_55);
             rule__VarFor__Group_1__0__Impl();
@@ -21684,23 +21854,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VarFor__Group_1__0__Impl"
-    // InternalGo.g:6422:1: rule__VarFor__Group_1__0__Impl : ( ( rule__VarFor__Alternatives_1_0 ) ) ;
+    // InternalGo.g:6472:1: rule__VarFor__Group_1__0__Impl : ( ( rule__VarFor__Alternatives_1_0 ) ) ;
     public final void rule__VarFor__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6426:1: ( ( ( rule__VarFor__Alternatives_1_0 ) ) )
-            // InternalGo.g:6427:1: ( ( rule__VarFor__Alternatives_1_0 ) )
+            // InternalGo.g:6476:1: ( ( ( rule__VarFor__Alternatives_1_0 ) ) )
+            // InternalGo.g:6477:1: ( ( rule__VarFor__Alternatives_1_0 ) )
             {
-            // InternalGo.g:6427:1: ( ( rule__VarFor__Alternatives_1_0 ) )
-            // InternalGo.g:6428:2: ( rule__VarFor__Alternatives_1_0 )
+            // InternalGo.g:6477:1: ( ( rule__VarFor__Alternatives_1_0 ) )
+            // InternalGo.g:6478:2: ( rule__VarFor__Alternatives_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVarForAccess().getAlternatives_1_0()); 
             }
-            // InternalGo.g:6429:2: ( rule__VarFor__Alternatives_1_0 )
-            // InternalGo.g:6429:3: rule__VarFor__Alternatives_1_0
+            // InternalGo.g:6479:2: ( rule__VarFor__Alternatives_1_0 )
+            // InternalGo.g:6479:3: rule__VarFor__Alternatives_1_0
             {
             pushFollow(FOLLOW_2);
             rule__VarFor__Alternatives_1_0();
@@ -21735,14 +21905,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VarFor__Group_1__1"
-    // InternalGo.g:6437:1: rule__VarFor__Group_1__1 : rule__VarFor__Group_1__1__Impl rule__VarFor__Group_1__2 ;
+    // InternalGo.g:6487:1: rule__VarFor__Group_1__1 : rule__VarFor__Group_1__1__Impl rule__VarFor__Group_1__2 ;
     public final void rule__VarFor__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6441:1: ( rule__VarFor__Group_1__1__Impl rule__VarFor__Group_1__2 )
-            // InternalGo.g:6442:2: rule__VarFor__Group_1__1__Impl rule__VarFor__Group_1__2
+            // InternalGo.g:6491:1: ( rule__VarFor__Group_1__1__Impl rule__VarFor__Group_1__2 )
+            // InternalGo.g:6492:2: rule__VarFor__Group_1__1__Impl rule__VarFor__Group_1__2
             {
             pushFollow(FOLLOW_9);
             rule__VarFor__Group_1__1__Impl();
@@ -21773,17 +21943,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VarFor__Group_1__1__Impl"
-    // InternalGo.g:6449:1: rule__VarFor__Group_1__1__Impl : ( RULE_PONTOVIRGULA ) ;
+    // InternalGo.g:6499:1: rule__VarFor__Group_1__1__Impl : ( RULE_PONTOVIRGULA ) ;
     public final void rule__VarFor__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6453:1: ( ( RULE_PONTOVIRGULA ) )
-            // InternalGo.g:6454:1: ( RULE_PONTOVIRGULA )
+            // InternalGo.g:6503:1: ( ( RULE_PONTOVIRGULA ) )
+            // InternalGo.g:6504:1: ( RULE_PONTOVIRGULA )
             {
-            // InternalGo.g:6454:1: ( RULE_PONTOVIRGULA )
-            // InternalGo.g:6455:2: RULE_PONTOVIRGULA
+            // InternalGo.g:6504:1: ( RULE_PONTOVIRGULA )
+            // InternalGo.g:6505:2: RULE_PONTOVIRGULA
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVarForAccess().getPontoVirgulaTerminalRuleCall_1_1()); 
@@ -21814,14 +21984,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VarFor__Group_1__2"
-    // InternalGo.g:6464:1: rule__VarFor__Group_1__2 : rule__VarFor__Group_1__2__Impl rule__VarFor__Group_1__3 ;
+    // InternalGo.g:6514:1: rule__VarFor__Group_1__2 : rule__VarFor__Group_1__2__Impl rule__VarFor__Group_1__3 ;
     public final void rule__VarFor__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6468:1: ( rule__VarFor__Group_1__2__Impl rule__VarFor__Group_1__3 )
-            // InternalGo.g:6469:2: rule__VarFor__Group_1__2__Impl rule__VarFor__Group_1__3
+            // InternalGo.g:6518:1: ( rule__VarFor__Group_1__2__Impl rule__VarFor__Group_1__3 )
+            // InternalGo.g:6519:2: rule__VarFor__Group_1__2__Impl rule__VarFor__Group_1__3
             {
             pushFollow(FOLLOW_55);
             rule__VarFor__Group_1__2__Impl();
@@ -21852,23 +22022,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VarFor__Group_1__2__Impl"
-    // InternalGo.g:6476:1: rule__VarFor__Group_1__2__Impl : ( ( rule__VarFor__XAssignment_1_2 ) ) ;
+    // InternalGo.g:6526:1: rule__VarFor__Group_1__2__Impl : ( ( rule__VarFor__XAssignment_1_2 ) ) ;
     public final void rule__VarFor__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6480:1: ( ( ( rule__VarFor__XAssignment_1_2 ) ) )
-            // InternalGo.g:6481:1: ( ( rule__VarFor__XAssignment_1_2 ) )
+            // InternalGo.g:6530:1: ( ( ( rule__VarFor__XAssignment_1_2 ) ) )
+            // InternalGo.g:6531:1: ( ( rule__VarFor__XAssignment_1_2 ) )
             {
-            // InternalGo.g:6481:1: ( ( rule__VarFor__XAssignment_1_2 ) )
-            // InternalGo.g:6482:2: ( rule__VarFor__XAssignment_1_2 )
+            // InternalGo.g:6531:1: ( ( rule__VarFor__XAssignment_1_2 ) )
+            // InternalGo.g:6532:2: ( rule__VarFor__XAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVarForAccess().getXAssignment_1_2()); 
             }
-            // InternalGo.g:6483:2: ( rule__VarFor__XAssignment_1_2 )
-            // InternalGo.g:6483:3: rule__VarFor__XAssignment_1_2
+            // InternalGo.g:6533:2: ( rule__VarFor__XAssignment_1_2 )
+            // InternalGo.g:6533:3: rule__VarFor__XAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__VarFor__XAssignment_1_2();
@@ -21903,14 +22073,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VarFor__Group_1__3"
-    // InternalGo.g:6491:1: rule__VarFor__Group_1__3 : rule__VarFor__Group_1__3__Impl rule__VarFor__Group_1__4 ;
+    // InternalGo.g:6541:1: rule__VarFor__Group_1__3 : rule__VarFor__Group_1__3__Impl rule__VarFor__Group_1__4 ;
     public final void rule__VarFor__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6495:1: ( rule__VarFor__Group_1__3__Impl rule__VarFor__Group_1__4 )
-            // InternalGo.g:6496:2: rule__VarFor__Group_1__3__Impl rule__VarFor__Group_1__4
+            // InternalGo.g:6545:1: ( rule__VarFor__Group_1__3__Impl rule__VarFor__Group_1__4 )
+            // InternalGo.g:6546:2: rule__VarFor__Group_1__3__Impl rule__VarFor__Group_1__4
             {
             pushFollow(FOLLOW_56);
             rule__VarFor__Group_1__3__Impl();
@@ -21941,17 +22111,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VarFor__Group_1__3__Impl"
-    // InternalGo.g:6503:1: rule__VarFor__Group_1__3__Impl : ( RULE_PONTOVIRGULA ) ;
+    // InternalGo.g:6553:1: rule__VarFor__Group_1__3__Impl : ( RULE_PONTOVIRGULA ) ;
     public final void rule__VarFor__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6507:1: ( ( RULE_PONTOVIRGULA ) )
-            // InternalGo.g:6508:1: ( RULE_PONTOVIRGULA )
+            // InternalGo.g:6557:1: ( ( RULE_PONTOVIRGULA ) )
+            // InternalGo.g:6558:1: ( RULE_PONTOVIRGULA )
             {
-            // InternalGo.g:6508:1: ( RULE_PONTOVIRGULA )
-            // InternalGo.g:6509:2: RULE_PONTOVIRGULA
+            // InternalGo.g:6558:1: ( RULE_PONTOVIRGULA )
+            // InternalGo.g:6559:2: RULE_PONTOVIRGULA
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVarForAccess().getPontoVirgulaTerminalRuleCall_1_3()); 
@@ -21982,14 +22152,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VarFor__Group_1__4"
-    // InternalGo.g:6518:1: rule__VarFor__Group_1__4 : rule__VarFor__Group_1__4__Impl ;
+    // InternalGo.g:6568:1: rule__VarFor__Group_1__4 : rule__VarFor__Group_1__4__Impl ;
     public final void rule__VarFor__Group_1__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6522:1: ( rule__VarFor__Group_1__4__Impl )
-            // InternalGo.g:6523:2: rule__VarFor__Group_1__4__Impl
+            // InternalGo.g:6572:1: ( rule__VarFor__Group_1__4__Impl )
+            // InternalGo.g:6573:2: rule__VarFor__Group_1__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__VarFor__Group_1__4__Impl();
@@ -22015,23 +22185,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VarFor__Group_1__4__Impl"
-    // InternalGo.g:6529:1: rule__VarFor__Group_1__4__Impl : ( ( rule__VarFor__KAssignment_1_4 ) ) ;
+    // InternalGo.g:6579:1: rule__VarFor__Group_1__4__Impl : ( ( rule__VarFor__KAssignment_1_4 ) ) ;
     public final void rule__VarFor__Group_1__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6533:1: ( ( ( rule__VarFor__KAssignment_1_4 ) ) )
-            // InternalGo.g:6534:1: ( ( rule__VarFor__KAssignment_1_4 ) )
+            // InternalGo.g:6583:1: ( ( ( rule__VarFor__KAssignment_1_4 ) ) )
+            // InternalGo.g:6584:1: ( ( rule__VarFor__KAssignment_1_4 ) )
             {
-            // InternalGo.g:6534:1: ( ( rule__VarFor__KAssignment_1_4 ) )
-            // InternalGo.g:6535:2: ( rule__VarFor__KAssignment_1_4 )
+            // InternalGo.g:6584:1: ( ( rule__VarFor__KAssignment_1_4 ) )
+            // InternalGo.g:6585:2: ( rule__VarFor__KAssignment_1_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVarForAccess().getKAssignment_1_4()); 
             }
-            // InternalGo.g:6536:2: ( rule__VarFor__KAssignment_1_4 )
-            // InternalGo.g:6536:3: rule__VarFor__KAssignment_1_4
+            // InternalGo.g:6586:2: ( rule__VarFor__KAssignment_1_4 )
+            // InternalGo.g:6586:3: rule__VarFor__KAssignment_1_4
             {
             pushFollow(FOLLOW_2);
             rule__VarFor__KAssignment_1_4();
@@ -22066,14 +22236,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Literal__Group_0__0"
-    // InternalGo.g:6545:1: rule__Literal__Group_0__0 : rule__Literal__Group_0__0__Impl rule__Literal__Group_0__1 ;
+    // InternalGo.g:6595:1: rule__Literal__Group_0__0 : rule__Literal__Group_0__0__Impl rule__Literal__Group_0__1 ;
     public final void rule__Literal__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6549:1: ( rule__Literal__Group_0__0__Impl rule__Literal__Group_0__1 )
-            // InternalGo.g:6550:2: rule__Literal__Group_0__0__Impl rule__Literal__Group_0__1
+            // InternalGo.g:6599:1: ( rule__Literal__Group_0__0__Impl rule__Literal__Group_0__1 )
+            // InternalGo.g:6600:2: rule__Literal__Group_0__0__Impl rule__Literal__Group_0__1
             {
             pushFollow(FOLLOW_22);
             rule__Literal__Group_0__0__Impl();
@@ -22104,23 +22274,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Literal__Group_0__0__Impl"
-    // InternalGo.g:6557:1: rule__Literal__Group_0__0__Impl : ( () ) ;
+    // InternalGo.g:6607:1: rule__Literal__Group_0__0__Impl : ( () ) ;
     public final void rule__Literal__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6561:1: ( ( () ) )
-            // InternalGo.g:6562:1: ( () )
+            // InternalGo.g:6611:1: ( ( () ) )
+            // InternalGo.g:6612:1: ( () )
             {
-            // InternalGo.g:6562:1: ( () )
-            // InternalGo.g:6563:2: ()
+            // InternalGo.g:6612:1: ( () )
+            // InternalGo.g:6613:2: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralAccess().getLiteralAction_0_0()); 
             }
-            // InternalGo.g:6564:2: ()
-            // InternalGo.g:6564:3: 
+            // InternalGo.g:6614:2: ()
+            // InternalGo.g:6614:3: 
             {
             }
 
@@ -22145,14 +22315,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Literal__Group_0__1"
-    // InternalGo.g:6572:1: rule__Literal__Group_0__1 : rule__Literal__Group_0__1__Impl ;
+    // InternalGo.g:6622:1: rule__Literal__Group_0__1 : rule__Literal__Group_0__1__Impl ;
     public final void rule__Literal__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6576:1: ( rule__Literal__Group_0__1__Impl )
-            // InternalGo.g:6577:2: rule__Literal__Group_0__1__Impl
+            // InternalGo.g:6626:1: ( rule__Literal__Group_0__1__Impl )
+            // InternalGo.g:6627:2: rule__Literal__Group_0__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Literal__Group_0__1__Impl();
@@ -22178,23 +22348,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Literal__Group_0__1__Impl"
-    // InternalGo.g:6583:1: rule__Literal__Group_0__1__Impl : ( ( rule__Literal__ValueAssignment_0_1 ) ) ;
+    // InternalGo.g:6633:1: rule__Literal__Group_0__1__Impl : ( ( rule__Literal__ValueAssignment_0_1 ) ) ;
     public final void rule__Literal__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6587:1: ( ( ( rule__Literal__ValueAssignment_0_1 ) ) )
-            // InternalGo.g:6588:1: ( ( rule__Literal__ValueAssignment_0_1 ) )
+            // InternalGo.g:6637:1: ( ( ( rule__Literal__ValueAssignment_0_1 ) ) )
+            // InternalGo.g:6638:1: ( ( rule__Literal__ValueAssignment_0_1 ) )
             {
-            // InternalGo.g:6588:1: ( ( rule__Literal__ValueAssignment_0_1 ) )
-            // InternalGo.g:6589:2: ( rule__Literal__ValueAssignment_0_1 )
+            // InternalGo.g:6638:1: ( ( rule__Literal__ValueAssignment_0_1 ) )
+            // InternalGo.g:6639:2: ( rule__Literal__ValueAssignment_0_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralAccess().getValueAssignment_0_1()); 
             }
-            // InternalGo.g:6590:2: ( rule__Literal__ValueAssignment_0_1 )
-            // InternalGo.g:6590:3: rule__Literal__ValueAssignment_0_1
+            // InternalGo.g:6640:2: ( rule__Literal__ValueAssignment_0_1 )
+            // InternalGo.g:6640:3: rule__Literal__ValueAssignment_0_1
             {
             pushFollow(FOLLOW_2);
             rule__Literal__ValueAssignment_0_1();
@@ -22229,14 +22399,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__0"
-    // InternalGo.g:6599:1: rule__DecFunc__Group__0 : rule__DecFunc__Group__0__Impl rule__DecFunc__Group__1 ;
+    // InternalGo.g:6649:1: rule__DecFunc__Group__0 : rule__DecFunc__Group__0__Impl rule__DecFunc__Group__1 ;
     public final void rule__DecFunc__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6603:1: ( rule__DecFunc__Group__0__Impl rule__DecFunc__Group__1 )
-            // InternalGo.g:6604:2: rule__DecFunc__Group__0__Impl rule__DecFunc__Group__1
+            // InternalGo.g:6653:1: ( rule__DecFunc__Group__0__Impl rule__DecFunc__Group__1 )
+            // InternalGo.g:6654:2: rule__DecFunc__Group__0__Impl rule__DecFunc__Group__1
             {
             pushFollow(FOLLOW_4);
             rule__DecFunc__Group__0__Impl();
@@ -22267,17 +22437,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__0__Impl"
-    // InternalGo.g:6611:1: rule__DecFunc__Group__0__Impl : ( ruleFUNC ) ;
+    // InternalGo.g:6661:1: rule__DecFunc__Group__0__Impl : ( ruleFUNC ) ;
     public final void rule__DecFunc__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6615:1: ( ( ruleFUNC ) )
-            // InternalGo.g:6616:1: ( ruleFUNC )
+            // InternalGo.g:6665:1: ( ( ruleFUNC ) )
+            // InternalGo.g:6666:1: ( ruleFUNC )
             {
-            // InternalGo.g:6616:1: ( ruleFUNC )
-            // InternalGo.g:6617:2: ruleFUNC
+            // InternalGo.g:6666:1: ( ruleFUNC )
+            // InternalGo.g:6667:2: ruleFUNC
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getFUNCParserRuleCall_0()); 
@@ -22312,14 +22482,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__1"
-    // InternalGo.g:6626:1: rule__DecFunc__Group__1 : rule__DecFunc__Group__1__Impl rule__DecFunc__Group__2 ;
+    // InternalGo.g:6676:1: rule__DecFunc__Group__1 : rule__DecFunc__Group__1__Impl rule__DecFunc__Group__2 ;
     public final void rule__DecFunc__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6630:1: ( rule__DecFunc__Group__1__Impl rule__DecFunc__Group__2 )
-            // InternalGo.g:6631:2: rule__DecFunc__Group__1__Impl rule__DecFunc__Group__2
+            // InternalGo.g:6680:1: ( rule__DecFunc__Group__1__Impl rule__DecFunc__Group__2 )
+            // InternalGo.g:6681:2: rule__DecFunc__Group__1__Impl rule__DecFunc__Group__2
             {
             pushFollow(FOLLOW_12);
             rule__DecFunc__Group__1__Impl();
@@ -22350,23 +22520,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__1__Impl"
-    // InternalGo.g:6638:1: rule__DecFunc__Group__1__Impl : ( ( rule__DecFunc__NameAssignment_1 ) ) ;
+    // InternalGo.g:6688:1: rule__DecFunc__Group__1__Impl : ( ( rule__DecFunc__NameAssignment_1 ) ) ;
     public final void rule__DecFunc__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6642:1: ( ( ( rule__DecFunc__NameAssignment_1 ) ) )
-            // InternalGo.g:6643:1: ( ( rule__DecFunc__NameAssignment_1 ) )
+            // InternalGo.g:6692:1: ( ( ( rule__DecFunc__NameAssignment_1 ) ) )
+            // InternalGo.g:6693:1: ( ( rule__DecFunc__NameAssignment_1 ) )
             {
-            // InternalGo.g:6643:1: ( ( rule__DecFunc__NameAssignment_1 ) )
-            // InternalGo.g:6644:2: ( rule__DecFunc__NameAssignment_1 )
+            // InternalGo.g:6693:1: ( ( rule__DecFunc__NameAssignment_1 ) )
+            // InternalGo.g:6694:2: ( rule__DecFunc__NameAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getNameAssignment_1()); 
             }
-            // InternalGo.g:6645:2: ( rule__DecFunc__NameAssignment_1 )
-            // InternalGo.g:6645:3: rule__DecFunc__NameAssignment_1
+            // InternalGo.g:6695:2: ( rule__DecFunc__NameAssignment_1 )
+            // InternalGo.g:6695:3: rule__DecFunc__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__DecFunc__NameAssignment_1();
@@ -22401,14 +22571,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__2"
-    // InternalGo.g:6653:1: rule__DecFunc__Group__2 : rule__DecFunc__Group__2__Impl rule__DecFunc__Group__3 ;
+    // InternalGo.g:6703:1: rule__DecFunc__Group__2 : rule__DecFunc__Group__2__Impl rule__DecFunc__Group__3 ;
     public final void rule__DecFunc__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6657:1: ( rule__DecFunc__Group__2__Impl rule__DecFunc__Group__3 )
-            // InternalGo.g:6658:2: rule__DecFunc__Group__2__Impl rule__DecFunc__Group__3
+            // InternalGo.g:6707:1: ( rule__DecFunc__Group__2__Impl rule__DecFunc__Group__3 )
+            // InternalGo.g:6708:2: rule__DecFunc__Group__2__Impl rule__DecFunc__Group__3
             {
             pushFollow(FOLLOW_13);
             rule__DecFunc__Group__2__Impl();
@@ -22439,17 +22609,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__2__Impl"
-    // InternalGo.g:6665:1: rule__DecFunc__Group__2__Impl : ( RULE_OPEN_PARENTHESES ) ;
+    // InternalGo.g:6715:1: rule__DecFunc__Group__2__Impl : ( RULE_OPEN_PARENTHESES ) ;
     public final void rule__DecFunc__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6669:1: ( ( RULE_OPEN_PARENTHESES ) )
-            // InternalGo.g:6670:1: ( RULE_OPEN_PARENTHESES )
+            // InternalGo.g:6719:1: ( ( RULE_OPEN_PARENTHESES ) )
+            // InternalGo.g:6720:1: ( RULE_OPEN_PARENTHESES )
             {
-            // InternalGo.g:6670:1: ( RULE_OPEN_PARENTHESES )
-            // InternalGo.g:6671:2: RULE_OPEN_PARENTHESES
+            // InternalGo.g:6720:1: ( RULE_OPEN_PARENTHESES )
+            // InternalGo.g:6721:2: RULE_OPEN_PARENTHESES
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getOpen_parenthesesTerminalRuleCall_2()); 
@@ -22480,14 +22650,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__3"
-    // InternalGo.g:6680:1: rule__DecFunc__Group__3 : rule__DecFunc__Group__3__Impl rule__DecFunc__Group__4 ;
+    // InternalGo.g:6730:1: rule__DecFunc__Group__3 : rule__DecFunc__Group__3__Impl rule__DecFunc__Group__4 ;
     public final void rule__DecFunc__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6684:1: ( rule__DecFunc__Group__3__Impl rule__DecFunc__Group__4 )
-            // InternalGo.g:6685:2: rule__DecFunc__Group__3__Impl rule__DecFunc__Group__4
+            // InternalGo.g:6734:1: ( rule__DecFunc__Group__3__Impl rule__DecFunc__Group__4 )
+            // InternalGo.g:6735:2: rule__DecFunc__Group__3__Impl rule__DecFunc__Group__4
             {
             pushFollow(FOLLOW_13);
             rule__DecFunc__Group__3__Impl();
@@ -22518,22 +22688,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__3__Impl"
-    // InternalGo.g:6692:1: rule__DecFunc__Group__3__Impl : ( ( rule__DecFunc__ParamAssignment_3 )* ) ;
+    // InternalGo.g:6742:1: rule__DecFunc__Group__3__Impl : ( ( rule__DecFunc__ParamAssignment_3 )* ) ;
     public final void rule__DecFunc__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6696:1: ( ( ( rule__DecFunc__ParamAssignment_3 )* ) )
-            // InternalGo.g:6697:1: ( ( rule__DecFunc__ParamAssignment_3 )* )
+            // InternalGo.g:6746:1: ( ( ( rule__DecFunc__ParamAssignment_3 )* ) )
+            // InternalGo.g:6747:1: ( ( rule__DecFunc__ParamAssignment_3 )* )
             {
-            // InternalGo.g:6697:1: ( ( rule__DecFunc__ParamAssignment_3 )* )
-            // InternalGo.g:6698:2: ( rule__DecFunc__ParamAssignment_3 )*
+            // InternalGo.g:6747:1: ( ( rule__DecFunc__ParamAssignment_3 )* )
+            // InternalGo.g:6748:2: ( rule__DecFunc__ParamAssignment_3 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getParamAssignment_3()); 
             }
-            // InternalGo.g:6699:2: ( rule__DecFunc__ParamAssignment_3 )*
+            // InternalGo.g:6749:2: ( rule__DecFunc__ParamAssignment_3 )*
             loop56:
             do {
                 int alt56=2;
@@ -22546,7 +22716,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                 switch (alt56) {
             	case 1 :
-            	    // InternalGo.g:6699:3: rule__DecFunc__ParamAssignment_3
+            	    // InternalGo.g:6749:3: rule__DecFunc__ParamAssignment_3
             	    {
             	    pushFollow(FOLLOW_14);
             	    rule__DecFunc__ParamAssignment_3();
@@ -22587,14 +22757,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__4"
-    // InternalGo.g:6707:1: rule__DecFunc__Group__4 : rule__DecFunc__Group__4__Impl rule__DecFunc__Group__5 ;
+    // InternalGo.g:6757:1: rule__DecFunc__Group__4 : rule__DecFunc__Group__4__Impl rule__DecFunc__Group__5 ;
     public final void rule__DecFunc__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6711:1: ( rule__DecFunc__Group__4__Impl rule__DecFunc__Group__5 )
-            // InternalGo.g:6712:2: rule__DecFunc__Group__4__Impl rule__DecFunc__Group__5
+            // InternalGo.g:6761:1: ( rule__DecFunc__Group__4__Impl rule__DecFunc__Group__5 )
+            // InternalGo.g:6762:2: rule__DecFunc__Group__4__Impl rule__DecFunc__Group__5
             {
             pushFollow(FOLLOW_57);
             rule__DecFunc__Group__4__Impl();
@@ -22625,17 +22795,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__4__Impl"
-    // InternalGo.g:6719:1: rule__DecFunc__Group__4__Impl : ( RULE_CLOSED_PARENTHESES ) ;
+    // InternalGo.g:6769:1: rule__DecFunc__Group__4__Impl : ( RULE_CLOSED_PARENTHESES ) ;
     public final void rule__DecFunc__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6723:1: ( ( RULE_CLOSED_PARENTHESES ) )
-            // InternalGo.g:6724:1: ( RULE_CLOSED_PARENTHESES )
+            // InternalGo.g:6773:1: ( ( RULE_CLOSED_PARENTHESES ) )
+            // InternalGo.g:6774:1: ( RULE_CLOSED_PARENTHESES )
             {
-            // InternalGo.g:6724:1: ( RULE_CLOSED_PARENTHESES )
-            // InternalGo.g:6725:2: RULE_CLOSED_PARENTHESES
+            // InternalGo.g:6774:1: ( RULE_CLOSED_PARENTHESES )
+            // InternalGo.g:6775:2: RULE_CLOSED_PARENTHESES
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getClosed_parenthesesTerminalRuleCall_4()); 
@@ -22666,14 +22836,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__5"
-    // InternalGo.g:6734:1: rule__DecFunc__Group__5 : rule__DecFunc__Group__5__Impl rule__DecFunc__Group__6 ;
+    // InternalGo.g:6784:1: rule__DecFunc__Group__5 : rule__DecFunc__Group__5__Impl rule__DecFunc__Group__6 ;
     public final void rule__DecFunc__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6738:1: ( rule__DecFunc__Group__5__Impl rule__DecFunc__Group__6 )
-            // InternalGo.g:6739:2: rule__DecFunc__Group__5__Impl rule__DecFunc__Group__6
+            // InternalGo.g:6788:1: ( rule__DecFunc__Group__5__Impl rule__DecFunc__Group__6 )
+            // InternalGo.g:6789:2: rule__DecFunc__Group__5__Impl rule__DecFunc__Group__6
             {
             pushFollow(FOLLOW_57);
             rule__DecFunc__Group__5__Impl();
@@ -22704,22 +22874,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__5__Impl"
-    // InternalGo.g:6746:1: rule__DecFunc__Group__5__Impl : ( ( rule__DecFunc__ReturnTypeAssignment_5 )? ) ;
+    // InternalGo.g:6796:1: rule__DecFunc__Group__5__Impl : ( ( rule__DecFunc__ReturnTypeAssignment_5 )? ) ;
     public final void rule__DecFunc__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6750:1: ( ( ( rule__DecFunc__ReturnTypeAssignment_5 )? ) )
-            // InternalGo.g:6751:1: ( ( rule__DecFunc__ReturnTypeAssignment_5 )? )
+            // InternalGo.g:6800:1: ( ( ( rule__DecFunc__ReturnTypeAssignment_5 )? ) )
+            // InternalGo.g:6801:1: ( ( rule__DecFunc__ReturnTypeAssignment_5 )? )
             {
-            // InternalGo.g:6751:1: ( ( rule__DecFunc__ReturnTypeAssignment_5 )? )
-            // InternalGo.g:6752:2: ( rule__DecFunc__ReturnTypeAssignment_5 )?
+            // InternalGo.g:6801:1: ( ( rule__DecFunc__ReturnTypeAssignment_5 )? )
+            // InternalGo.g:6802:2: ( rule__DecFunc__ReturnTypeAssignment_5 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getReturnTypeAssignment_5()); 
             }
-            // InternalGo.g:6753:2: ( rule__DecFunc__ReturnTypeAssignment_5 )?
+            // InternalGo.g:6803:2: ( rule__DecFunc__ReturnTypeAssignment_5 )?
             int alt57=2;
             int LA57_0 = input.LA(1);
 
@@ -22728,7 +22898,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             }
             switch (alt57) {
                 case 1 :
-                    // InternalGo.g:6753:3: rule__DecFunc__ReturnTypeAssignment_5
+                    // InternalGo.g:6803:3: rule__DecFunc__ReturnTypeAssignment_5
                     {
                     pushFollow(FOLLOW_2);
                     rule__DecFunc__ReturnTypeAssignment_5();
@@ -22766,16 +22936,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__6"
-    // InternalGo.g:6761:1: rule__DecFunc__Group__6 : rule__DecFunc__Group__6__Impl rule__DecFunc__Group__7 ;
+    // InternalGo.g:6811:1: rule__DecFunc__Group__6 : rule__DecFunc__Group__6__Impl rule__DecFunc__Group__7 ;
     public final void rule__DecFunc__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6765:1: ( rule__DecFunc__Group__6__Impl rule__DecFunc__Group__7 )
-            // InternalGo.g:6766:2: rule__DecFunc__Group__6__Impl rule__DecFunc__Group__7
+            // InternalGo.g:6815:1: ( rule__DecFunc__Group__6__Impl rule__DecFunc__Group__7 )
+            // InternalGo.g:6816:2: rule__DecFunc__Group__6__Impl rule__DecFunc__Group__7
             {
-            pushFollow(FOLLOW_37);
+            pushFollow(FOLLOW_58);
             rule__DecFunc__Group__6__Impl();
 
             state._fsp--;
@@ -22804,17 +22974,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__6__Impl"
-    // InternalGo.g:6773:1: rule__DecFunc__Group__6__Impl : ( RULE_OPEN_KEY ) ;
+    // InternalGo.g:6823:1: rule__DecFunc__Group__6__Impl : ( RULE_OPEN_KEY ) ;
     public final void rule__DecFunc__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6777:1: ( ( RULE_OPEN_KEY ) )
-            // InternalGo.g:6778:1: ( RULE_OPEN_KEY )
+            // InternalGo.g:6827:1: ( ( RULE_OPEN_KEY ) )
+            // InternalGo.g:6828:1: ( RULE_OPEN_KEY )
             {
-            // InternalGo.g:6778:1: ( RULE_OPEN_KEY )
-            // InternalGo.g:6779:2: RULE_OPEN_KEY
+            // InternalGo.g:6828:1: ( RULE_OPEN_KEY )
+            // InternalGo.g:6829:2: RULE_OPEN_KEY
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getOpen_KeyTerminalRuleCall_6()); 
@@ -22845,16 +23015,16 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__7"
-    // InternalGo.g:6788:1: rule__DecFunc__Group__7 : rule__DecFunc__Group__7__Impl rule__DecFunc__Group__8 ;
+    // InternalGo.g:6838:1: rule__DecFunc__Group__7 : rule__DecFunc__Group__7__Impl rule__DecFunc__Group__8 ;
     public final void rule__DecFunc__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6792:1: ( rule__DecFunc__Group__7__Impl rule__DecFunc__Group__8 )
-            // InternalGo.g:6793:2: rule__DecFunc__Group__7__Impl rule__DecFunc__Group__8
+            // InternalGo.g:6842:1: ( rule__DecFunc__Group__7__Impl rule__DecFunc__Group__8 )
+            // InternalGo.g:6843:2: rule__DecFunc__Group__7__Impl rule__DecFunc__Group__8
             {
-            pushFollow(FOLLOW_37);
+            pushFollow(FOLLOW_23);
             rule__DecFunc__Group__7__Impl();
 
             state._fsp--;
@@ -22883,52 +23053,34 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__7__Impl"
-    // InternalGo.g:6800:1: rule__DecFunc__Group__7__Impl : ( ( rule__DecFunc__ArgsAssignment_7 )* ) ;
+    // InternalGo.g:6850:1: rule__DecFunc__Group__7__Impl : ( ( rule__DecFunc__BodyAssignment_7 ) ) ;
     public final void rule__DecFunc__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6804:1: ( ( ( rule__DecFunc__ArgsAssignment_7 )* ) )
-            // InternalGo.g:6805:1: ( ( rule__DecFunc__ArgsAssignment_7 )* )
+            // InternalGo.g:6854:1: ( ( ( rule__DecFunc__BodyAssignment_7 ) ) )
+            // InternalGo.g:6855:1: ( ( rule__DecFunc__BodyAssignment_7 ) )
             {
-            // InternalGo.g:6805:1: ( ( rule__DecFunc__ArgsAssignment_7 )* )
-            // InternalGo.g:6806:2: ( rule__DecFunc__ArgsAssignment_7 )*
+            // InternalGo.g:6855:1: ( ( rule__DecFunc__BodyAssignment_7 ) )
+            // InternalGo.g:6856:2: ( rule__DecFunc__BodyAssignment_7 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDecFuncAccess().getArgsAssignment_7()); 
+               before(grammarAccess.getDecFuncAccess().getBodyAssignment_7()); 
             }
-            // InternalGo.g:6807:2: ( rule__DecFunc__ArgsAssignment_7 )*
-            loop58:
-            do {
-                int alt58=2;
-                int LA58_0 = input.LA(1);
+            // InternalGo.g:6857:2: ( rule__DecFunc__BodyAssignment_7 )
+            // InternalGo.g:6857:3: rule__DecFunc__BodyAssignment_7
+            {
+            pushFollow(FOLLOW_2);
+            rule__DecFunc__BodyAssignment_7();
 
-                if ( (LA58_0==RULE_EOL||LA58_0==RULE_ID||LA58_0==36||(LA58_0>=39 && LA58_0<=42)||LA58_0==46||LA58_0==48||LA58_0==64) ) {
-                    alt58=1;
-                }
+            state._fsp--;
+            if (state.failed) return ;
 
-
-                switch (alt58) {
-            	case 1 :
-            	    // InternalGo.g:6807:3: rule__DecFunc__ArgsAssignment_7
-            	    {
-            	    pushFollow(FOLLOW_3);
-            	    rule__DecFunc__ArgsAssignment_7();
-
-            	    state._fsp--;
-            	    if (state.failed) return ;
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop58;
-                }
-            } while (true);
+            }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDecFuncAccess().getArgsAssignment_7()); 
+               after(grammarAccess.getDecFuncAccess().getBodyAssignment_7()); 
             }
 
             }
@@ -22952,14 +23104,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__8"
-    // InternalGo.g:6815:1: rule__DecFunc__Group__8 : rule__DecFunc__Group__8__Impl ;
+    // InternalGo.g:6865:1: rule__DecFunc__Group__8 : rule__DecFunc__Group__8__Impl ;
     public final void rule__DecFunc__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6819:1: ( rule__DecFunc__Group__8__Impl )
-            // InternalGo.g:6820:2: rule__DecFunc__Group__8__Impl
+            // InternalGo.g:6869:1: ( rule__DecFunc__Group__8__Impl )
+            // InternalGo.g:6870:2: rule__DecFunc__Group__8__Impl
             {
             pushFollow(FOLLOW_2);
             rule__DecFunc__Group__8__Impl();
@@ -22985,17 +23137,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__Group__8__Impl"
-    // InternalGo.g:6826:1: rule__DecFunc__Group__8__Impl : ( RULE_CLOSED_KEY ) ;
+    // InternalGo.g:6876:1: rule__DecFunc__Group__8__Impl : ( RULE_CLOSED_KEY ) ;
     public final void rule__DecFunc__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6830:1: ( ( RULE_CLOSED_KEY ) )
-            // InternalGo.g:6831:1: ( RULE_CLOSED_KEY )
+            // InternalGo.g:6880:1: ( ( RULE_CLOSED_KEY ) )
+            // InternalGo.g:6881:1: ( RULE_CLOSED_KEY )
             {
-            // InternalGo.g:6831:1: ( RULE_CLOSED_KEY )
-            // InternalGo.g:6832:2: RULE_CLOSED_KEY
+            // InternalGo.g:6881:1: ( RULE_CLOSED_KEY )
+            // InternalGo.g:6882:2: RULE_CLOSED_KEY
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getClosed_KeyTerminalRuleCall_8()); 
@@ -23025,15 +23177,395 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__DecFunc__Group__8__Impl"
 
 
+    // $ANTLR start "rule__FunctionBody__Group__0"
+    // InternalGo.g:6892:1: rule__FunctionBody__Group__0 : rule__FunctionBody__Group__0__Impl rule__FunctionBody__Group__1 ;
+    public final void rule__FunctionBody__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGo.g:6896:1: ( rule__FunctionBody__Group__0__Impl rule__FunctionBody__Group__1 )
+            // InternalGo.g:6897:2: rule__FunctionBody__Group__0__Impl rule__FunctionBody__Group__1
+            {
+            pushFollow(FOLLOW_58);
+            rule__FunctionBody__Group__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_2);
+            rule__FunctionBody__Group__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FunctionBody__Group__0"
+
+
+    // $ANTLR start "rule__FunctionBody__Group__0__Impl"
+    // InternalGo.g:6904:1: rule__FunctionBody__Group__0__Impl : ( ( rule__FunctionBody__ArgsAssignment_0 )* ) ;
+    public final void rule__FunctionBody__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGo.g:6908:1: ( ( ( rule__FunctionBody__ArgsAssignment_0 )* ) )
+            // InternalGo.g:6909:1: ( ( rule__FunctionBody__ArgsAssignment_0 )* )
+            {
+            // InternalGo.g:6909:1: ( ( rule__FunctionBody__ArgsAssignment_0 )* )
+            // InternalGo.g:6910:2: ( rule__FunctionBody__ArgsAssignment_0 )*
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getFunctionBodyAccess().getArgsAssignment_0()); 
+            }
+            // InternalGo.g:6911:2: ( rule__FunctionBody__ArgsAssignment_0 )*
+            loop58:
+            do {
+                int alt58=2;
+                int LA58_0 = input.LA(1);
+
+                if ( (LA58_0==RULE_EOL||LA58_0==RULE_ID||LA58_0==36||(LA58_0>=39 && LA58_0<=42)||LA58_0==46||LA58_0==48||LA58_0==64) ) {
+                    alt58=1;
+                }
+
+
+                switch (alt58) {
+            	case 1 :
+            	    // InternalGo.g:6911:3: rule__FunctionBody__ArgsAssignment_0
+            	    {
+            	    pushFollow(FOLLOW_3);
+            	    rule__FunctionBody__ArgsAssignment_0();
+
+            	    state._fsp--;
+            	    if (state.failed) return ;
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop58;
+                }
+            } while (true);
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getFunctionBodyAccess().getArgsAssignment_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FunctionBody__Group__0__Impl"
+
+
+    // $ANTLR start "rule__FunctionBody__Group__1"
+    // InternalGo.g:6919:1: rule__FunctionBody__Group__1 : rule__FunctionBody__Group__1__Impl ;
+    public final void rule__FunctionBody__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGo.g:6923:1: ( rule__FunctionBody__Group__1__Impl )
+            // InternalGo.g:6924:2: rule__FunctionBody__Group__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__FunctionBody__Group__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FunctionBody__Group__1"
+
+
+    // $ANTLR start "rule__FunctionBody__Group__1__Impl"
+    // InternalGo.g:6930:1: rule__FunctionBody__Group__1__Impl : ( ( rule__FunctionBody__RetAssignment_1 )? ) ;
+    public final void rule__FunctionBody__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGo.g:6934:1: ( ( ( rule__FunctionBody__RetAssignment_1 )? ) )
+            // InternalGo.g:6935:1: ( ( rule__FunctionBody__RetAssignment_1 )? )
+            {
+            // InternalGo.g:6935:1: ( ( rule__FunctionBody__RetAssignment_1 )? )
+            // InternalGo.g:6936:2: ( rule__FunctionBody__RetAssignment_1 )?
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getFunctionBodyAccess().getRetAssignment_1()); 
+            }
+            // InternalGo.g:6937:2: ( rule__FunctionBody__RetAssignment_1 )?
+            int alt59=2;
+            int LA59_0 = input.LA(1);
+
+            if ( (LA59_0==43) ) {
+                alt59=1;
+            }
+            switch (alt59) {
+                case 1 :
+                    // InternalGo.g:6937:3: rule__FunctionBody__RetAssignment_1
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__FunctionBody__RetAssignment_1();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getFunctionBodyAccess().getRetAssignment_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FunctionBody__Group__1__Impl"
+
+
+    // $ANTLR start "rule__FunctionReturn__Group__0"
+    // InternalGo.g:6946:1: rule__FunctionReturn__Group__0 : rule__FunctionReturn__Group__0__Impl rule__FunctionReturn__Group__1 ;
+    public final void rule__FunctionReturn__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGo.g:6950:1: ( rule__FunctionReturn__Group__0__Impl rule__FunctionReturn__Group__1 )
+            // InternalGo.g:6951:2: rule__FunctionReturn__Group__0__Impl rule__FunctionReturn__Group__1
+            {
+            pushFollow(FOLLOW_9);
+            rule__FunctionReturn__Group__0__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FOLLOW_2);
+            rule__FunctionReturn__Group__1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FunctionReturn__Group__0"
+
+
+    // $ANTLR start "rule__FunctionReturn__Group__0__Impl"
+    // InternalGo.g:6958:1: rule__FunctionReturn__Group__0__Impl : ( ruleRETURN ) ;
+    public final void rule__FunctionReturn__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGo.g:6962:1: ( ( ruleRETURN ) )
+            // InternalGo.g:6963:1: ( ruleRETURN )
+            {
+            // InternalGo.g:6963:1: ( ruleRETURN )
+            // InternalGo.g:6964:2: ruleRETURN
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getFunctionReturnAccess().getRETURNParserRuleCall_0()); 
+            }
+            pushFollow(FOLLOW_2);
+            ruleRETURN();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getFunctionReturnAccess().getRETURNParserRuleCall_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FunctionReturn__Group__0__Impl"
+
+
+    // $ANTLR start "rule__FunctionReturn__Group__1"
+    // InternalGo.g:6973:1: rule__FunctionReturn__Group__1 : rule__FunctionReturn__Group__1__Impl ;
+    public final void rule__FunctionReturn__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGo.g:6977:1: ( rule__FunctionReturn__Group__1__Impl )
+            // InternalGo.g:6978:2: rule__FunctionReturn__Group__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__FunctionReturn__Group__1__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FunctionReturn__Group__1"
+
+
+    // $ANTLR start "rule__FunctionReturn__Group__1__Impl"
+    // InternalGo.g:6984:1: rule__FunctionReturn__Group__1__Impl : ( ( rule__FunctionReturn__ReturnTypeAssignment_1 )? ) ;
+    public final void rule__FunctionReturn__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGo.g:6988:1: ( ( ( rule__FunctionReturn__ReturnTypeAssignment_1 )? ) )
+            // InternalGo.g:6989:1: ( ( rule__FunctionReturn__ReturnTypeAssignment_1 )? )
+            {
+            // InternalGo.g:6989:1: ( ( rule__FunctionReturn__ReturnTypeAssignment_1 )? )
+            // InternalGo.g:6990:2: ( rule__FunctionReturn__ReturnTypeAssignment_1 )?
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getFunctionReturnAccess().getReturnTypeAssignment_1()); 
+            }
+            // InternalGo.g:6991:2: ( rule__FunctionReturn__ReturnTypeAssignment_1 )?
+            int alt60=2;
+            int LA60_0 = input.LA(1);
+
+            if ( (LA60_0==RULE_STRING||LA60_0==RULE_ID||LA60_0==RULE_OPEN_PARENTHESES||(LA60_0>=RULE_OPEN_BRACKETS && LA60_0<=RULE_INT)||(LA60_0>=65 && LA60_0<=66)) ) {
+                alt60=1;
+            }
+            switch (alt60) {
+                case 1 :
+                    // InternalGo.g:6991:3: rule__FunctionReturn__ReturnTypeAssignment_1
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__FunctionReturn__ReturnTypeAssignment_1();
+
+                    state._fsp--;
+                    if (state.failed) return ;
+
+                    }
+                    break;
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getFunctionReturnAccess().getReturnTypeAssignment_1()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FunctionReturn__Group__1__Impl"
+
+
     // $ANTLR start "rule__CallFunc__Group__0"
-    // InternalGo.g:6842:1: rule__CallFunc__Group__0 : rule__CallFunc__Group__0__Impl rule__CallFunc__Group__1 ;
+    // InternalGo.g:7000:1: rule__CallFunc__Group__0 : rule__CallFunc__Group__0__Impl rule__CallFunc__Group__1 ;
     public final void rule__CallFunc__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6846:1: ( rule__CallFunc__Group__0__Impl rule__CallFunc__Group__1 )
-            // InternalGo.g:6847:2: rule__CallFunc__Group__0__Impl rule__CallFunc__Group__1
+            // InternalGo.g:7004:1: ( rule__CallFunc__Group__0__Impl rule__CallFunc__Group__1 )
+            // InternalGo.g:7005:2: rule__CallFunc__Group__0__Impl rule__CallFunc__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__CallFunc__Group__0__Impl();
@@ -23064,23 +23596,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFunc__Group__0__Impl"
-    // InternalGo.g:6854:1: rule__CallFunc__Group__0__Impl : ( ( rule__CallFunc__NameFuncAssignment_0 ) ) ;
+    // InternalGo.g:7012:1: rule__CallFunc__Group__0__Impl : ( ( rule__CallFunc__NameFuncAssignment_0 ) ) ;
     public final void rule__CallFunc__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6858:1: ( ( ( rule__CallFunc__NameFuncAssignment_0 ) ) )
-            // InternalGo.g:6859:1: ( ( rule__CallFunc__NameFuncAssignment_0 ) )
+            // InternalGo.g:7016:1: ( ( ( rule__CallFunc__NameFuncAssignment_0 ) ) )
+            // InternalGo.g:7017:1: ( ( rule__CallFunc__NameFuncAssignment_0 ) )
             {
-            // InternalGo.g:6859:1: ( ( rule__CallFunc__NameFuncAssignment_0 ) )
-            // InternalGo.g:6860:2: ( rule__CallFunc__NameFuncAssignment_0 )
+            // InternalGo.g:7017:1: ( ( rule__CallFunc__NameFuncAssignment_0 ) )
+            // InternalGo.g:7018:2: ( rule__CallFunc__NameFuncAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallFuncAccess().getNameFuncAssignment_0()); 
             }
-            // InternalGo.g:6861:2: ( rule__CallFunc__NameFuncAssignment_0 )
-            // InternalGo.g:6861:3: rule__CallFunc__NameFuncAssignment_0
+            // InternalGo.g:7019:2: ( rule__CallFunc__NameFuncAssignment_0 )
+            // InternalGo.g:7019:3: rule__CallFunc__NameFuncAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__CallFunc__NameFuncAssignment_0();
@@ -23115,14 +23647,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFunc__Group__1"
-    // InternalGo.g:6869:1: rule__CallFunc__Group__1 : rule__CallFunc__Group__1__Impl rule__CallFunc__Group__2 ;
+    // InternalGo.g:7027:1: rule__CallFunc__Group__1 : rule__CallFunc__Group__1__Impl rule__CallFunc__Group__2 ;
     public final void rule__CallFunc__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6873:1: ( rule__CallFunc__Group__1__Impl rule__CallFunc__Group__2 )
-            // InternalGo.g:6874:2: rule__CallFunc__Group__1__Impl rule__CallFunc__Group__2
+            // InternalGo.g:7031:1: ( rule__CallFunc__Group__1__Impl rule__CallFunc__Group__2 )
+            // InternalGo.g:7032:2: rule__CallFunc__Group__1__Impl rule__CallFunc__Group__2
             {
             pushFollow(FOLLOW_13);
             rule__CallFunc__Group__1__Impl();
@@ -23153,17 +23685,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFunc__Group__1__Impl"
-    // InternalGo.g:6881:1: rule__CallFunc__Group__1__Impl : ( RULE_OPEN_PARENTHESES ) ;
+    // InternalGo.g:7039:1: rule__CallFunc__Group__1__Impl : ( RULE_OPEN_PARENTHESES ) ;
     public final void rule__CallFunc__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6885:1: ( ( RULE_OPEN_PARENTHESES ) )
-            // InternalGo.g:6886:1: ( RULE_OPEN_PARENTHESES )
+            // InternalGo.g:7043:1: ( ( RULE_OPEN_PARENTHESES ) )
+            // InternalGo.g:7044:1: ( RULE_OPEN_PARENTHESES )
             {
-            // InternalGo.g:6886:1: ( RULE_OPEN_PARENTHESES )
-            // InternalGo.g:6887:2: RULE_OPEN_PARENTHESES
+            // InternalGo.g:7044:1: ( RULE_OPEN_PARENTHESES )
+            // InternalGo.g:7045:2: RULE_OPEN_PARENTHESES
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallFuncAccess().getOpen_parenthesesTerminalRuleCall_1()); 
@@ -23194,14 +23726,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFunc__Group__2"
-    // InternalGo.g:6896:1: rule__CallFunc__Group__2 : rule__CallFunc__Group__2__Impl rule__CallFunc__Group__3 ;
+    // InternalGo.g:7054:1: rule__CallFunc__Group__2 : rule__CallFunc__Group__2__Impl rule__CallFunc__Group__3 ;
     public final void rule__CallFunc__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6900:1: ( rule__CallFunc__Group__2__Impl rule__CallFunc__Group__3 )
-            // InternalGo.g:6901:2: rule__CallFunc__Group__2__Impl rule__CallFunc__Group__3
+            // InternalGo.g:7058:1: ( rule__CallFunc__Group__2__Impl rule__CallFunc__Group__3 )
+            // InternalGo.g:7059:2: rule__CallFunc__Group__2__Impl rule__CallFunc__Group__3
             {
             pushFollow(FOLLOW_13);
             rule__CallFunc__Group__2__Impl();
@@ -23232,35 +23764,35 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFunc__Group__2__Impl"
-    // InternalGo.g:6908:1: rule__CallFunc__Group__2__Impl : ( ( rule__CallFunc__ParamAssignment_2 )* ) ;
+    // InternalGo.g:7066:1: rule__CallFunc__Group__2__Impl : ( ( rule__CallFunc__ParamAssignment_2 )* ) ;
     public final void rule__CallFunc__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6912:1: ( ( ( rule__CallFunc__ParamAssignment_2 )* ) )
-            // InternalGo.g:6913:1: ( ( rule__CallFunc__ParamAssignment_2 )* )
+            // InternalGo.g:7070:1: ( ( ( rule__CallFunc__ParamAssignment_2 )* ) )
+            // InternalGo.g:7071:1: ( ( rule__CallFunc__ParamAssignment_2 )* )
             {
-            // InternalGo.g:6913:1: ( ( rule__CallFunc__ParamAssignment_2 )* )
-            // InternalGo.g:6914:2: ( rule__CallFunc__ParamAssignment_2 )*
+            // InternalGo.g:7071:1: ( ( rule__CallFunc__ParamAssignment_2 )* )
+            // InternalGo.g:7072:2: ( rule__CallFunc__ParamAssignment_2 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallFuncAccess().getParamAssignment_2()); 
             }
-            // InternalGo.g:6915:2: ( rule__CallFunc__ParamAssignment_2 )*
-            loop59:
+            // InternalGo.g:7073:2: ( rule__CallFunc__ParamAssignment_2 )*
+            loop61:
             do {
-                int alt59=2;
-                int LA59_0 = input.LA(1);
+                int alt61=2;
+                int LA61_0 = input.LA(1);
 
-                if ( (LA59_0==RULE_ID) ) {
-                    alt59=1;
+                if ( (LA61_0==RULE_ID) ) {
+                    alt61=1;
                 }
 
 
-                switch (alt59) {
+                switch (alt61) {
             	case 1 :
-            	    // InternalGo.g:6915:3: rule__CallFunc__ParamAssignment_2
+            	    // InternalGo.g:7073:3: rule__CallFunc__ParamAssignment_2
             	    {
             	    pushFollow(FOLLOW_14);
             	    rule__CallFunc__ParamAssignment_2();
@@ -23272,7 +23804,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop59;
+            	    break loop61;
                 }
             } while (true);
 
@@ -23301,14 +23833,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFunc__Group__3"
-    // InternalGo.g:6923:1: rule__CallFunc__Group__3 : rule__CallFunc__Group__3__Impl ;
+    // InternalGo.g:7081:1: rule__CallFunc__Group__3 : rule__CallFunc__Group__3__Impl ;
     public final void rule__CallFunc__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6927:1: ( rule__CallFunc__Group__3__Impl )
-            // InternalGo.g:6928:2: rule__CallFunc__Group__3__Impl
+            // InternalGo.g:7085:1: ( rule__CallFunc__Group__3__Impl )
+            // InternalGo.g:7086:2: rule__CallFunc__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CallFunc__Group__3__Impl();
@@ -23334,17 +23866,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFunc__Group__3__Impl"
-    // InternalGo.g:6934:1: rule__CallFunc__Group__3__Impl : ( RULE_CLOSED_PARENTHESES ) ;
+    // InternalGo.g:7092:1: rule__CallFunc__Group__3__Impl : ( RULE_CLOSED_PARENTHESES ) ;
     public final void rule__CallFunc__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6938:1: ( ( RULE_CLOSED_PARENTHESES ) )
-            // InternalGo.g:6939:1: ( RULE_CLOSED_PARENTHESES )
+            // InternalGo.g:7096:1: ( ( RULE_CLOSED_PARENTHESES ) )
+            // InternalGo.g:7097:1: ( RULE_CLOSED_PARENTHESES )
             {
-            // InternalGo.g:6939:1: ( RULE_CLOSED_PARENTHESES )
-            // InternalGo.g:6940:2: RULE_CLOSED_PARENTHESES
+            // InternalGo.g:7097:1: ( RULE_CLOSED_PARENTHESES )
+            // InternalGo.g:7098:2: RULE_CLOSED_PARENTHESES
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallFuncAccess().getClosed_parenthesesTerminalRuleCall_3()); 
@@ -23375,14 +23907,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__0"
-    // InternalGo.g:6950:1: rule__DataType__Group__0 : rule__DataType__Group__0__Impl rule__DataType__Group__1 ;
+    // InternalGo.g:7108:1: rule__DataType__Group__0 : rule__DataType__Group__0__Impl rule__DataType__Group__1 ;
     public final void rule__DataType__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6954:1: ( rule__DataType__Group__0__Impl rule__DataType__Group__1 )
-            // InternalGo.g:6955:2: rule__DataType__Group__0__Impl rule__DataType__Group__1
+            // InternalGo.g:7112:1: ( rule__DataType__Group__0__Impl rule__DataType__Group__1 )
+            // InternalGo.g:7113:2: rule__DataType__Group__0__Impl rule__DataType__Group__1
             {
             pushFollow(FOLLOW_4);
             rule__DataType__Group__0__Impl();
@@ -23413,17 +23945,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__0__Impl"
-    // InternalGo.g:6962:1: rule__DataType__Group__0__Impl : ( 'datatype' ) ;
+    // InternalGo.g:7120:1: rule__DataType__Group__0__Impl : ( 'datatype' ) ;
     public final void rule__DataType__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6966:1: ( ( 'datatype' ) )
-            // InternalGo.g:6967:1: ( 'datatype' )
+            // InternalGo.g:7124:1: ( ( 'datatype' ) )
+            // InternalGo.g:7125:1: ( 'datatype' )
             {
-            // InternalGo.g:6967:1: ( 'datatype' )
-            // InternalGo.g:6968:2: 'datatype'
+            // InternalGo.g:7125:1: ( 'datatype' )
+            // InternalGo.g:7126:2: 'datatype'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDataTypeAccess().getDatatypeKeyword_0()); 
@@ -23454,14 +23986,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__1"
-    // InternalGo.g:6977:1: rule__DataType__Group__1 : rule__DataType__Group__1__Impl ;
+    // InternalGo.g:7135:1: rule__DataType__Group__1 : rule__DataType__Group__1__Impl ;
     public final void rule__DataType__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6981:1: ( rule__DataType__Group__1__Impl )
-            // InternalGo.g:6982:2: rule__DataType__Group__1__Impl
+            // InternalGo.g:7139:1: ( rule__DataType__Group__1__Impl )
+            // InternalGo.g:7140:2: rule__DataType__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__DataType__Group__1__Impl();
@@ -23487,23 +24019,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__Group__1__Impl"
-    // InternalGo.g:6988:1: rule__DataType__Group__1__Impl : ( ( rule__DataType__NameAssignment_1 ) ) ;
+    // InternalGo.g:7146:1: rule__DataType__Group__1__Impl : ( ( rule__DataType__NameAssignment_1 ) ) ;
     public final void rule__DataType__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:6992:1: ( ( ( rule__DataType__NameAssignment_1 ) ) )
-            // InternalGo.g:6993:1: ( ( rule__DataType__NameAssignment_1 ) )
+            // InternalGo.g:7150:1: ( ( ( rule__DataType__NameAssignment_1 ) ) )
+            // InternalGo.g:7151:1: ( ( rule__DataType__NameAssignment_1 ) )
             {
-            // InternalGo.g:6993:1: ( ( rule__DataType__NameAssignment_1 ) )
-            // InternalGo.g:6994:2: ( rule__DataType__NameAssignment_1 )
+            // InternalGo.g:7151:1: ( ( rule__DataType__NameAssignment_1 ) )
+            // InternalGo.g:7152:2: ( rule__DataType__NameAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDataTypeAccess().getNameAssignment_1()); 
             }
-            // InternalGo.g:6995:2: ( rule__DataType__NameAssignment_1 )
-            // InternalGo.g:6995:3: rule__DataType__NameAssignment_1
+            // InternalGo.g:7153:2: ( rule__DataType__NameAssignment_1 )
+            // InternalGo.g:7153:3: rule__DataType__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__DataType__NameAssignment_1();
@@ -23538,17 +24070,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Go__ElementsAssignment"
-    // InternalGo.g:7004:1: rule__Go__ElementsAssignment : ( ruleGreeting ) ;
+    // InternalGo.g:7162:1: rule__Go__ElementsAssignment : ( ruleGreeting ) ;
     public final void rule__Go__ElementsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7008:1: ( ( ruleGreeting ) )
-            // InternalGo.g:7009:2: ( ruleGreeting )
+            // InternalGo.g:7166:1: ( ( ruleGreeting ) )
+            // InternalGo.g:7167:2: ( ruleGreeting )
             {
-            // InternalGo.g:7009:2: ( ruleGreeting )
-            // InternalGo.g:7010:3: ruleGreeting
+            // InternalGo.g:7167:2: ( ruleGreeting )
+            // InternalGo.g:7168:3: ruleGreeting
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGoAccess().getElementsGreetingParserRuleCall_0()); 
@@ -23583,17 +24115,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Decl__NameAssignment_1"
-    // InternalGo.g:7019:1: rule__Decl__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalGo.g:7177:1: rule__Decl__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Decl__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7023:1: ( ( RULE_ID ) )
-            // InternalGo.g:7024:2: ( RULE_ID )
+            // InternalGo.g:7181:1: ( ( RULE_ID ) )
+            // InternalGo.g:7182:2: ( RULE_ID )
             {
-            // InternalGo.g:7024:2: ( RULE_ID )
-            // InternalGo.g:7025:3: RULE_ID
+            // InternalGo.g:7182:2: ( RULE_ID )
+            // InternalGo.g:7183:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDeclAccess().getNameIDTerminalRuleCall_1_0()); 
@@ -23624,17 +24156,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Decl__TypeAssignment_2"
-    // InternalGo.g:7034:1: rule__Decl__TypeAssignment_2 : ( ruleTypes ) ;
+    // InternalGo.g:7192:1: rule__Decl__TypeAssignment_2 : ( ruleTypes ) ;
     public final void rule__Decl__TypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7038:1: ( ( ruleTypes ) )
-            // InternalGo.g:7039:2: ( ruleTypes )
+            // InternalGo.g:7196:1: ( ( ruleTypes ) )
+            // InternalGo.g:7197:2: ( ruleTypes )
             {
-            // InternalGo.g:7039:2: ( ruleTypes )
-            // InternalGo.g:7040:3: ruleTypes
+            // InternalGo.g:7197:2: ( ruleTypes )
+            // InternalGo.g:7198:3: ruleTypes
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDeclAccess().getTypeTypesParserRuleCall_2_0()); 
@@ -23669,17 +24201,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecVar__DeclarationAssignment_0"
-    // InternalGo.g:7049:1: rule__DecVar__DeclarationAssignment_0 : ( ruleDecl ) ;
+    // InternalGo.g:7207:1: rule__DecVar__DeclarationAssignment_0 : ( ruleDecl ) ;
     public final void rule__DecVar__DeclarationAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7053:1: ( ( ruleDecl ) )
-            // InternalGo.g:7054:2: ( ruleDecl )
+            // InternalGo.g:7211:1: ( ( ruleDecl ) )
+            // InternalGo.g:7212:2: ( ruleDecl )
             {
-            // InternalGo.g:7054:2: ( ruleDecl )
-            // InternalGo.g:7055:3: ruleDecl
+            // InternalGo.g:7212:2: ( ruleDecl )
+            // InternalGo.g:7213:3: ruleDecl
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecVarAccess().getDeclarationDeclParserRuleCall_0_0()); 
@@ -23713,66 +24245,21 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__DecVar__DeclarationAssignment_0"
 
 
-    // $ANTLR start "rule__DecVar__AssignmentAssignment_1"
-    // InternalGo.g:7064:1: rule__DecVar__AssignmentAssignment_1 : ( ruleAtribVar ) ;
-    public final void rule__DecVar__AssignmentAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__DecVar__AtribuicaoAssignment_1"
+    // InternalGo.g:7222:1: rule__DecVar__AtribuicaoAssignment_1 : ( ruleAtrib ) ;
+    public final void rule__DecVar__AtribuicaoAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7068:1: ( ( ruleAtribVar ) )
-            // InternalGo.g:7069:2: ( ruleAtribVar )
+            // InternalGo.g:7226:1: ( ( ruleAtrib ) )
+            // InternalGo.g:7227:2: ( ruleAtrib )
             {
-            // InternalGo.g:7069:2: ( ruleAtribVar )
-            // InternalGo.g:7070:3: ruleAtribVar
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDecVarAccess().getAssignmentAtribVarParserRuleCall_1_0()); 
-            }
-            pushFollow(FOLLOW_2);
-            ruleAtribVar();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getDecVarAccess().getAssignmentAtribVarParserRuleCall_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__DecVar__AssignmentAssignment_1"
-
-
-    // $ANTLR start "rule__DecVar__AtribuicaoAssignment_2"
-    // InternalGo.g:7079:1: rule__DecVar__AtribuicaoAssignment_2 : ( ruleAtrib ) ;
-    public final void rule__DecVar__AtribuicaoAssignment_2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalGo.g:7083:1: ( ( ruleAtrib ) )
-            // InternalGo.g:7084:2: ( ruleAtrib )
-            {
-            // InternalGo.g:7084:2: ( ruleAtrib )
-            // InternalGo.g:7085:3: ruleAtrib
+            // InternalGo.g:7227:2: ( ruleAtrib )
+            // InternalGo.g:7228:3: ruleAtrib
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDecVarAccess().getAtribuicaoAtribParserRuleCall_2_0()); 
+               before(grammarAccess.getDecVarAccess().getAtribuicaoAtribParserRuleCall_1_0()); 
             }
             pushFollow(FOLLOW_2);
             ruleAtrib();
@@ -23780,7 +24267,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDecVarAccess().getAtribuicaoAtribParserRuleCall_2_0()); 
+               after(grammarAccess.getDecVarAccess().getAtribuicaoAtribParserRuleCall_1_0()); 
             }
 
             }
@@ -23800,21 +24287,66 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__DecVar__AtribuicaoAssignment_2"
+    // $ANTLR end "rule__DecVar__AtribuicaoAssignment_1"
+
+
+    // $ANTLR start "rule__DecVar__AssignmentAssignment_2"
+    // InternalGo.g:7237:1: rule__DecVar__AssignmentAssignment_2 : ( ruleAtribVar ) ;
+    public final void rule__DecVar__AssignmentAssignment_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGo.g:7241:1: ( ( ruleAtribVar ) )
+            // InternalGo.g:7242:2: ( ruleAtribVar )
+            {
+            // InternalGo.g:7242:2: ( ruleAtribVar )
+            // InternalGo.g:7243:3: ruleAtribVar
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDecVarAccess().getAssignmentAtribVarParserRuleCall_2_0()); 
+            }
+            pushFollow(FOLLOW_2);
+            ruleAtribVar();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getDecVarAccess().getAssignmentAtribVarParserRuleCall_2_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__DecVar__AssignmentAssignment_2"
 
 
     // $ANTLR start "rule__DecVar__ReassignmentAssignment_3"
-    // InternalGo.g:7094:1: rule__DecVar__ReassignmentAssignment_3 : ( ruleReAtrib ) ;
+    // InternalGo.g:7252:1: rule__DecVar__ReassignmentAssignment_3 : ( ruleReAtrib ) ;
     public final void rule__DecVar__ReassignmentAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7098:1: ( ( ruleReAtrib ) )
-            // InternalGo.g:7099:2: ( ruleReAtrib )
+            // InternalGo.g:7256:1: ( ( ruleReAtrib ) )
+            // InternalGo.g:7257:2: ( ruleReAtrib )
             {
-            // InternalGo.g:7099:2: ( ruleReAtrib )
-            // InternalGo.g:7100:3: ruleReAtrib
+            // InternalGo.g:7257:2: ( ruleReAtrib )
+            // InternalGo.g:7258:3: ruleReAtrib
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecVarAccess().getReassignmentReAtribParserRuleCall_3_0()); 
@@ -23849,17 +24381,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__VarsAssignment_1"
-    // InternalGo.g:7109:1: rule__AtribVar__VarsAssignment_1 : ( RULE_ID ) ;
+    // InternalGo.g:7267:1: rule__AtribVar__VarsAssignment_1 : ( RULE_ID ) ;
     public final void rule__AtribVar__VarsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7113:1: ( ( RULE_ID ) )
-            // InternalGo.g:7114:2: ( RULE_ID )
+            // InternalGo.g:7271:1: ( ( RULE_ID ) )
+            // InternalGo.g:7272:2: ( RULE_ID )
             {
-            // InternalGo.g:7114:2: ( RULE_ID )
-            // InternalGo.g:7115:3: RULE_ID
+            // InternalGo.g:7272:2: ( RULE_ID )
+            // InternalGo.g:7273:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getVarsIDTerminalRuleCall_1_0()); 
@@ -23890,17 +24422,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__VarsAssignment_2_1"
-    // InternalGo.g:7124:1: rule__AtribVar__VarsAssignment_2_1 : ( RULE_ID ) ;
+    // InternalGo.g:7282:1: rule__AtribVar__VarsAssignment_2_1 : ( RULE_ID ) ;
     public final void rule__AtribVar__VarsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7128:1: ( ( RULE_ID ) )
-            // InternalGo.g:7129:2: ( RULE_ID )
+            // InternalGo.g:7286:1: ( ( RULE_ID ) )
+            // InternalGo.g:7287:2: ( RULE_ID )
             {
-            // InternalGo.g:7129:2: ( RULE_ID )
-            // InternalGo.g:7130:3: RULE_ID
+            // InternalGo.g:7287:2: ( RULE_ID )
+            // InternalGo.g:7288:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getVarsIDTerminalRuleCall_2_1_0()); 
@@ -23931,17 +24463,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__TypeAssignment_3"
-    // InternalGo.g:7139:1: rule__AtribVar__TypeAssignment_3 : ( ruleTypes ) ;
+    // InternalGo.g:7297:1: rule__AtribVar__TypeAssignment_3 : ( ruleTypes ) ;
     public final void rule__AtribVar__TypeAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7143:1: ( ( ruleTypes ) )
-            // InternalGo.g:7144:2: ( ruleTypes )
+            // InternalGo.g:7301:1: ( ( ruleTypes ) )
+            // InternalGo.g:7302:2: ( ruleTypes )
             {
-            // InternalGo.g:7144:2: ( ruleTypes )
-            // InternalGo.g:7145:3: ruleTypes
+            // InternalGo.g:7302:2: ( ruleTypes )
+            // InternalGo.g:7303:3: ruleTypes
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getTypeTypesParserRuleCall_3_0()); 
@@ -23976,17 +24508,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__AtrbAssignment_4_1"
-    // InternalGo.g:7154:1: rule__AtribVar__AtrbAssignment_4_1 : ( ruleAtrib_Aux ) ;
+    // InternalGo.g:7312:1: rule__AtribVar__AtrbAssignment_4_1 : ( ruleAtrib_Aux ) ;
     public final void rule__AtribVar__AtrbAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7158:1: ( ( ruleAtrib_Aux ) )
-            // InternalGo.g:7159:2: ( ruleAtrib_Aux )
+            // InternalGo.g:7316:1: ( ( ruleAtrib_Aux ) )
+            // InternalGo.g:7317:2: ( ruleAtrib_Aux )
             {
-            // InternalGo.g:7159:2: ( ruleAtrib_Aux )
-            // InternalGo.g:7160:3: ruleAtrib_Aux
+            // InternalGo.g:7317:2: ( ruleAtrib_Aux )
+            // InternalGo.g:7318:3: ruleAtrib_Aux
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getAtrbAtrib_AuxParserRuleCall_4_1_0()); 
@@ -24021,17 +24553,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AtribVar__AtrbAssignment_4_2_1"
-    // InternalGo.g:7169:1: rule__AtribVar__AtrbAssignment_4_2_1 : ( ruleAtrib_Aux ) ;
+    // InternalGo.g:7327:1: rule__AtribVar__AtrbAssignment_4_2_1 : ( ruleAtrib_Aux ) ;
     public final void rule__AtribVar__AtrbAssignment_4_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7173:1: ( ( ruleAtrib_Aux ) )
-            // InternalGo.g:7174:2: ( ruleAtrib_Aux )
+            // InternalGo.g:7331:1: ( ( ruleAtrib_Aux ) )
+            // InternalGo.g:7332:2: ( ruleAtrib_Aux )
             {
-            // InternalGo.g:7174:2: ( ruleAtrib_Aux )
-            // InternalGo.g:7175:3: ruleAtrib_Aux
+            // InternalGo.g:7332:2: ( ruleAtrib_Aux )
+            // InternalGo.g:7333:3: ruleAtrib_Aux
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribVarAccess().getAtrbAtrib_AuxParserRuleCall_4_2_1_0()); 
@@ -24066,17 +24598,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Variable__NameAssignment"
-    // InternalGo.g:7184:1: rule__Variable__NameAssignment : ( RULE_ID ) ;
+    // InternalGo.g:7342:1: rule__Variable__NameAssignment : ( RULE_ID ) ;
     public final void rule__Variable__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7188:1: ( ( RULE_ID ) )
-            // InternalGo.g:7189:2: ( RULE_ID )
+            // InternalGo.g:7346:1: ( ( RULE_ID ) )
+            // InternalGo.g:7347:2: ( RULE_ID )
             {
-            // InternalGo.g:7189:2: ( RULE_ID )
-            // InternalGo.g:7190:3: RULE_ID
+            // InternalGo.g:7347:2: ( RULE_ID )
+            // InternalGo.g:7348:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableAccess().getNameIDTerminalRuleCall_0()); 
@@ -24107,17 +24639,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib__ModifierAssignment_0"
-    // InternalGo.g:7199:1: rule__Atrib__ModifierAssignment_0 : ( ruleModif ) ;
+    // InternalGo.g:7357:1: rule__Atrib__ModifierAssignment_0 : ( ruleModif ) ;
     public final void rule__Atrib__ModifierAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7203:1: ( ( ruleModif ) )
-            // InternalGo.g:7204:2: ( ruleModif )
+            // InternalGo.g:7361:1: ( ( ruleModif ) )
+            // InternalGo.g:7362:2: ( ruleModif )
             {
-            // InternalGo.g:7204:2: ( ruleModif )
-            // InternalGo.g:7205:3: ruleModif
+            // InternalGo.g:7362:2: ( ruleModif )
+            // InternalGo.g:7363:3: ruleModif
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribAccess().getModifierModifParserRuleCall_0_0()); 
@@ -24152,17 +24684,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib__NameAssignment_1"
-    // InternalGo.g:7214:1: rule__Atrib__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalGo.g:7372:1: rule__Atrib__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Atrib__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7218:1: ( ( RULE_ID ) )
-            // InternalGo.g:7219:2: ( RULE_ID )
+            // InternalGo.g:7376:1: ( ( RULE_ID ) )
+            // InternalGo.g:7377:2: ( RULE_ID )
             {
-            // InternalGo.g:7219:2: ( RULE_ID )
-            // InternalGo.g:7220:3: RULE_ID
+            // InternalGo.g:7377:2: ( RULE_ID )
+            // InternalGo.g:7378:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribAccess().getNameIDTerminalRuleCall_1_0()); 
@@ -24193,17 +24725,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib__TypeAssignment_2"
-    // InternalGo.g:7229:1: rule__Atrib__TypeAssignment_2 : ( ruleTypes ) ;
+    // InternalGo.g:7387:1: rule__Atrib__TypeAssignment_2 : ( ruleTypes ) ;
     public final void rule__Atrib__TypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7233:1: ( ( ruleTypes ) )
-            // InternalGo.g:7234:2: ( ruleTypes )
+            // InternalGo.g:7391:1: ( ( ruleTypes ) )
+            // InternalGo.g:7392:2: ( ruleTypes )
             {
-            // InternalGo.g:7234:2: ( ruleTypes )
-            // InternalGo.g:7235:3: ruleTypes
+            // InternalGo.g:7392:2: ( ruleTypes )
+            // InternalGo.g:7393:3: ruleTypes
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribAccess().getTypeTypesParserRuleCall_2_0()); 
@@ -24238,17 +24770,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Atrib__AtribAssignment_4"
-    // InternalGo.g:7244:1: rule__Atrib__AtribAssignment_4 : ( ruleAtrib_Aux ) ;
+    // InternalGo.g:7402:1: rule__Atrib__AtribAssignment_4 : ( ruleAtrib_Aux ) ;
     public final void rule__Atrib__AtribAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7248:1: ( ( ruleAtrib_Aux ) )
-            // InternalGo.g:7249:2: ( ruleAtrib_Aux )
+            // InternalGo.g:7406:1: ( ( ruleAtrib_Aux ) )
+            // InternalGo.g:7407:2: ( ruleAtrib_Aux )
             {
-            // InternalGo.g:7249:2: ( ruleAtrib_Aux )
-            // InternalGo.g:7250:3: ruleAtrib_Aux
+            // InternalGo.g:7407:2: ( ruleAtrib_Aux )
+            // InternalGo.g:7408:3: ruleAtrib_Aux
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAtribAccess().getAtribAtrib_AuxParserRuleCall_4_0()); 
@@ -24283,17 +24815,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReAtrib__NameAssignment_0"
-    // InternalGo.g:7259:1: rule__ReAtrib__NameAssignment_0 : ( RULE_ID ) ;
+    // InternalGo.g:7417:1: rule__ReAtrib__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__ReAtrib__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7263:1: ( ( RULE_ID ) )
-            // InternalGo.g:7264:2: ( RULE_ID )
+            // InternalGo.g:7421:1: ( ( RULE_ID ) )
+            // InternalGo.g:7422:2: ( RULE_ID )
             {
-            // InternalGo.g:7264:2: ( RULE_ID )
-            // InternalGo.g:7265:3: RULE_ID
+            // InternalGo.g:7422:2: ( RULE_ID )
+            // InternalGo.g:7423:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReAtribAccess().getNameIDTerminalRuleCall_0_0()); 
@@ -24324,17 +24856,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ReAtrib__AtribAssignment_2"
-    // InternalGo.g:7274:1: rule__ReAtrib__AtribAssignment_2 : ( ruleAtrib_Aux ) ;
+    // InternalGo.g:7432:1: rule__ReAtrib__AtribAssignment_2 : ( ruleAtrib_Aux ) ;
     public final void rule__ReAtrib__AtribAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7278:1: ( ( ruleAtrib_Aux ) )
-            // InternalGo.g:7279:2: ( ruleAtrib_Aux )
+            // InternalGo.g:7436:1: ( ( ruleAtrib_Aux ) )
+            // InternalGo.g:7437:2: ( ruleAtrib_Aux )
             {
-            // InternalGo.g:7279:2: ( ruleAtrib_Aux )
-            // InternalGo.g:7280:3: ruleAtrib_Aux
+            // InternalGo.g:7437:2: ( ruleAtrib_Aux )
+            // InternalGo.g:7438:3: ruleAtrib_Aux
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getReAtribAccess().getAtribAtrib_AuxParserRuleCall_2_0()); 
@@ -24369,17 +24901,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__NameAssignment_2_0"
-    // InternalGo.g:7289:1: rule__MultDecVars__NameAssignment_2_0 : ( RULE_ID ) ;
+    // InternalGo.g:7447:1: rule__MultDecVars__NameAssignment_2_0 : ( RULE_ID ) ;
     public final void rule__MultDecVars__NameAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7293:1: ( ( RULE_ID ) )
-            // InternalGo.g:7294:2: ( RULE_ID )
+            // InternalGo.g:7451:1: ( ( RULE_ID ) )
+            // InternalGo.g:7452:2: ( RULE_ID )
             {
-            // InternalGo.g:7294:2: ( RULE_ID )
-            // InternalGo.g:7295:3: RULE_ID
+            // InternalGo.g:7452:2: ( RULE_ID )
+            // InternalGo.g:7453:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultDecVarsAccess().getNameIDTerminalRuleCall_2_0_0()); 
@@ -24410,17 +24942,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__TypwAssignment_2_2_0"
-    // InternalGo.g:7304:1: rule__MultDecVars__TypwAssignment_2_2_0 : ( ruleTypeValue ) ;
+    // InternalGo.g:7462:1: rule__MultDecVars__TypwAssignment_2_2_0 : ( ruleTypeValue ) ;
     public final void rule__MultDecVars__TypwAssignment_2_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7308:1: ( ( ruleTypeValue ) )
-            // InternalGo.g:7309:2: ( ruleTypeValue )
+            // InternalGo.g:7466:1: ( ( ruleTypeValue ) )
+            // InternalGo.g:7467:2: ( ruleTypeValue )
             {
-            // InternalGo.g:7309:2: ( ruleTypeValue )
-            // InternalGo.g:7310:3: ruleTypeValue
+            // InternalGo.g:7467:2: ( ruleTypeValue )
+            // InternalGo.g:7468:3: ruleTypeValue
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultDecVarsAccess().getTypwTypeValueParserRuleCall_2_2_0_0()); 
@@ -24455,17 +24987,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MultDecVars__ValueAssignment_2_2_1"
-    // InternalGo.g:7319:1: rule__MultDecVars__ValueAssignment_2_2_1 : ( RULE_ID ) ;
+    // InternalGo.g:7477:1: rule__MultDecVars__ValueAssignment_2_2_1 : ( RULE_ID ) ;
     public final void rule__MultDecVars__ValueAssignment_2_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7323:1: ( ( RULE_ID ) )
-            // InternalGo.g:7324:2: ( RULE_ID )
+            // InternalGo.g:7481:1: ( ( RULE_ID ) )
+            // InternalGo.g:7482:2: ( RULE_ID )
             {
-            // InternalGo.g:7324:2: ( RULE_ID )
-            // InternalGo.g:7325:3: RULE_ID
+            // InternalGo.g:7482:2: ( RULE_ID )
+            // InternalGo.g:7483:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultDecVarsAccess().getValueIDTerminalRuleCall_2_2_1_0()); 
@@ -24496,17 +25028,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__CasAssignment_3"
-    // InternalGo.g:7334:1: rule__SwitchCase__CasAssignment_3 : ( ruleCases ) ;
+    // InternalGo.g:7492:1: rule__SwitchCase__CasAssignment_3 : ( ruleCases ) ;
     public final void rule__SwitchCase__CasAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7338:1: ( ( ruleCases ) )
-            // InternalGo.g:7339:2: ( ruleCases )
+            // InternalGo.g:7496:1: ( ( ruleCases ) )
+            // InternalGo.g:7497:2: ( ruleCases )
             {
-            // InternalGo.g:7339:2: ( ruleCases )
-            // InternalGo.g:7340:3: ruleCases
+            // InternalGo.g:7497:2: ( ruleCases )
+            // InternalGo.g:7498:3: ruleCases
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitchCaseAccess().getCasCasesParserRuleCall_3_0()); 
@@ -24541,17 +25073,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SwitchCase__KAssignment_4_2"
-    // InternalGo.g:7349:1: rule__SwitchCase__KAssignment_4_2 : ( ruleGreeting ) ;
+    // InternalGo.g:7507:1: rule__SwitchCase__KAssignment_4_2 : ( ruleGreeting ) ;
     public final void rule__SwitchCase__KAssignment_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7353:1: ( ( ruleGreeting ) )
-            // InternalGo.g:7354:2: ( ruleGreeting )
+            // InternalGo.g:7511:1: ( ( ruleGreeting ) )
+            // InternalGo.g:7512:2: ( ruleGreeting )
             {
-            // InternalGo.g:7354:2: ( ruleGreeting )
-            // InternalGo.g:7355:3: ruleGreeting
+            // InternalGo.g:7512:2: ( ruleGreeting )
+            // InternalGo.g:7513:3: ruleGreeting
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSwitchCaseAccess().getKGreetingParserRuleCall_4_2_0()); 
@@ -24586,17 +25118,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cases__XAssignment_1"
-    // InternalGo.g:7364:1: rule__Cases__XAssignment_1 : ( ruleExpression ) ;
+    // InternalGo.g:7522:1: rule__Cases__XAssignment_1 : ( ruleExpression ) ;
     public final void rule__Cases__XAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7368:1: ( ( ruleExpression ) )
-            // InternalGo.g:7369:2: ( ruleExpression )
+            // InternalGo.g:7526:1: ( ( ruleExpression ) )
+            // InternalGo.g:7527:2: ( ruleExpression )
             {
-            // InternalGo.g:7369:2: ( ruleExpression )
-            // InternalGo.g:7370:3: ruleExpression
+            // InternalGo.g:7527:2: ( ruleExpression )
+            // InternalGo.g:7528:3: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCasesAccess().getXExpressionParserRuleCall_1_0()); 
@@ -24631,17 +25163,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Cases__VAssignment_3"
-    // InternalGo.g:7379:1: rule__Cases__VAssignment_3 : ( ruleGreeting ) ;
+    // InternalGo.g:7537:1: rule__Cases__VAssignment_3 : ( ruleGreeting ) ;
     public final void rule__Cases__VAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7383:1: ( ( ruleGreeting ) )
-            // InternalGo.g:7384:2: ( ruleGreeting )
+            // InternalGo.g:7541:1: ( ( ruleGreeting ) )
+            // InternalGo.g:7542:2: ( ruleGreeting )
             {
-            // InternalGo.g:7384:2: ( ruleGreeting )
-            // InternalGo.g:7385:3: ruleGreeting
+            // InternalGo.g:7542:2: ( ruleGreeting )
+            // InternalGo.g:7543:3: ruleGreeting
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCasesAccess().getVGreetingParserRuleCall_3_0()); 
@@ -24676,17 +25208,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__ParamsAssignment_0"
-    // InternalGo.g:7394:1: rule__Params__ParamsAssignment_0 : ( RULE_ID ) ;
+    // InternalGo.g:7552:1: rule__Params__ParamsAssignment_0 : ( RULE_ID ) ;
     public final void rule__Params__ParamsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7398:1: ( ( RULE_ID ) )
-            // InternalGo.g:7399:2: ( RULE_ID )
+            // InternalGo.g:7556:1: ( ( RULE_ID ) )
+            // InternalGo.g:7557:2: ( RULE_ID )
             {
-            // InternalGo.g:7399:2: ( RULE_ID )
-            // InternalGo.g:7400:3: RULE_ID
+            // InternalGo.g:7557:2: ( RULE_ID )
+            // InternalGo.g:7558:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParamsAccess().getParamsIDTerminalRuleCall_0_0()); 
@@ -24717,17 +25249,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__TypeAssignment_1"
-    // InternalGo.g:7409:1: rule__Params__TypeAssignment_1 : ( ruleTypes ) ;
+    // InternalGo.g:7567:1: rule__Params__TypeAssignment_1 : ( ruleTypes ) ;
     public final void rule__Params__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7413:1: ( ( ruleTypes ) )
-            // InternalGo.g:7414:2: ( ruleTypes )
+            // InternalGo.g:7571:1: ( ( ruleTypes ) )
+            // InternalGo.g:7572:2: ( ruleTypes )
             {
-            // InternalGo.g:7414:2: ( ruleTypes )
-            // InternalGo.g:7415:3: ruleTypes
+            // InternalGo.g:7572:2: ( ruleTypes )
+            // InternalGo.g:7573:3: ruleTypes
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParamsAccess().getTypeTypesParserRuleCall_1_0()); 
@@ -24762,17 +25294,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__ParamsAssignment_2_1"
-    // InternalGo.g:7424:1: rule__Params__ParamsAssignment_2_1 : ( RULE_ID ) ;
+    // InternalGo.g:7582:1: rule__Params__ParamsAssignment_2_1 : ( RULE_ID ) ;
     public final void rule__Params__ParamsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7428:1: ( ( RULE_ID ) )
-            // InternalGo.g:7429:2: ( RULE_ID )
+            // InternalGo.g:7586:1: ( ( RULE_ID ) )
+            // InternalGo.g:7587:2: ( RULE_ID )
             {
-            // InternalGo.g:7429:2: ( RULE_ID )
-            // InternalGo.g:7430:3: RULE_ID
+            // InternalGo.g:7587:2: ( RULE_ID )
+            // InternalGo.g:7588:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParamsAccess().getParamsIDTerminalRuleCall_2_1_0()); 
@@ -24803,17 +25335,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Params__TypeAssignment_2_2"
-    // InternalGo.g:7439:1: rule__Params__TypeAssignment_2_2 : ( ruleTypes ) ;
+    // InternalGo.g:7597:1: rule__Params__TypeAssignment_2_2 : ( ruleTypes ) ;
     public final void rule__Params__TypeAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7443:1: ( ( ruleTypes ) )
-            // InternalGo.g:7444:2: ( ruleTypes )
+            // InternalGo.g:7601:1: ( ( ruleTypes ) )
+            // InternalGo.g:7602:2: ( ruleTypes )
             {
-            // InternalGo.g:7444:2: ( ruleTypes )
-            // InternalGo.g:7445:3: ruleTypes
+            // InternalGo.g:7602:2: ( ruleTypes )
+            // InternalGo.g:7603:3: ruleTypes
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getParamsAccess().getTypeTypesParserRuleCall_2_2_0()); 
@@ -24848,17 +25380,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Str__SAssignment"
-    // InternalGo.g:7454:1: rule__Str__SAssignment : ( RULE_STRING ) ;
+    // InternalGo.g:7612:1: rule__Str__SAssignment : ( RULE_STRING ) ;
     public final void rule__Str__SAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7458:1: ( ( RULE_STRING ) )
-            // InternalGo.g:7459:2: ( RULE_STRING )
+            // InternalGo.g:7616:1: ( ( RULE_STRING ) )
+            // InternalGo.g:7617:2: ( RULE_STRING )
             {
-            // InternalGo.g:7459:2: ( RULE_STRING )
-            // InternalGo.g:7460:3: RULE_STRING
+            // InternalGo.g:7617:2: ( RULE_STRING )
+            // InternalGo.g:7618:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStrAccess().getSSTRINGTerminalRuleCall_0()); 
@@ -24889,17 +25421,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationsOneEquals__NAssignment_2_1"
-    // InternalGo.g:7469:1: rule__OperationsOneEquals__NAssignment_2_1 : ( ruleNumbers ) ;
+    // InternalGo.g:7627:1: rule__OperationsOneEquals__NAssignment_2_1 : ( ruleNumbers ) ;
     public final void rule__OperationsOneEquals__NAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7473:1: ( ( ruleNumbers ) )
-            // InternalGo.g:7474:2: ( ruleNumbers )
+            // InternalGo.g:7631:1: ( ( ruleNumbers ) )
+            // InternalGo.g:7632:2: ( ruleNumbers )
             {
-            // InternalGo.g:7474:2: ( ruleNumbers )
-            // InternalGo.g:7475:3: ruleNumbers
+            // InternalGo.g:7632:2: ( ruleNumbers )
+            // InternalGo.g:7633:3: ruleNumbers
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsOneEqualsAccess().getNNumbersParserRuleCall_2_1_0()); 
@@ -24934,17 +25466,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numbers__IntAssignment_0"
-    // InternalGo.g:7484:1: rule__Numbers__IntAssignment_0 : ( ruleIntg ) ;
+    // InternalGo.g:7642:1: rule__Numbers__IntAssignment_0 : ( ruleIntg ) ;
     public final void rule__Numbers__IntAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7488:1: ( ( ruleIntg ) )
-            // InternalGo.g:7489:2: ( ruleIntg )
+            // InternalGo.g:7646:1: ( ( ruleIntg ) )
+            // InternalGo.g:7647:2: ( ruleIntg )
             {
-            // InternalGo.g:7489:2: ( ruleIntg )
-            // InternalGo.g:7490:3: ruleIntg
+            // InternalGo.g:7647:2: ( ruleIntg )
+            // InternalGo.g:7648:3: ruleIntg
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumbersAccess().getIntIntgParserRuleCall_0_0()); 
@@ -24979,17 +25511,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Numbers__DAssignment_1"
-    // InternalGo.g:7499:1: rule__Numbers__DAssignment_1 : ( ruleDouble ) ;
+    // InternalGo.g:7657:1: rule__Numbers__DAssignment_1 : ( ruleDouble ) ;
     public final void rule__Numbers__DAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7503:1: ( ( ruleDouble ) )
-            // InternalGo.g:7504:2: ( ruleDouble )
+            // InternalGo.g:7661:1: ( ( ruleDouble ) )
+            // InternalGo.g:7662:2: ( ruleDouble )
             {
-            // InternalGo.g:7504:2: ( ruleDouble )
-            // InternalGo.g:7505:3: ruleDouble
+            // InternalGo.g:7662:2: ( ruleDouble )
+            // InternalGo.g:7663:3: ruleDouble
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumbersAccess().getDDoubleParserRuleCall_1_0()); 
@@ -25024,17 +25556,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Intg__IAssignment"
-    // InternalGo.g:7514:1: rule__Intg__IAssignment : ( RULE_INT ) ;
+    // InternalGo.g:7672:1: rule__Intg__IAssignment : ( RULE_INT ) ;
     public final void rule__Intg__IAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7518:1: ( ( RULE_INT ) )
-            // InternalGo.g:7519:2: ( RULE_INT )
+            // InternalGo.g:7676:1: ( ( RULE_INT ) )
+            // InternalGo.g:7677:2: ( RULE_INT )
             {
-            // InternalGo.g:7519:2: ( RULE_INT )
-            // InternalGo.g:7520:3: RULE_INT
+            // InternalGo.g:7677:2: ( RULE_INT )
+            // InternalGo.g:7678:3: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIntgAccess().getIINTTerminalRuleCall_0()); 
@@ -25065,17 +25597,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Double__DAssignment_0"
-    // InternalGo.g:7529:1: rule__Double__DAssignment_0 : ( RULE_INT ) ;
+    // InternalGo.g:7687:1: rule__Double__DAssignment_0 : ( RULE_INT ) ;
     public final void rule__Double__DAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7533:1: ( ( RULE_INT ) )
-            // InternalGo.g:7534:2: ( RULE_INT )
+            // InternalGo.g:7691:1: ( ( RULE_INT ) )
+            // InternalGo.g:7692:2: ( RULE_INT )
             {
-            // InternalGo.g:7534:2: ( RULE_INT )
-            // InternalGo.g:7535:3: RULE_INT
+            // InternalGo.g:7692:2: ( RULE_INT )
+            // InternalGo.g:7693:3: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDoubleAccess().getDINTTerminalRuleCall_0_0()); 
@@ -25106,17 +25638,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operations__OAssignment_1"
-    // InternalGo.g:7544:1: rule__Operations__OAssignment_1 : ( ruleI ) ;
+    // InternalGo.g:7702:1: rule__Operations__OAssignment_1 : ( ruleI ) ;
     public final void rule__Operations__OAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7548:1: ( ( ruleI ) )
-            // InternalGo.g:7549:2: ( ruleI )
+            // InternalGo.g:7706:1: ( ( ruleI ) )
+            // InternalGo.g:7707:2: ( ruleI )
             {
-            // InternalGo.g:7549:2: ( ruleI )
-            // InternalGo.g:7550:3: ruleI
+            // InternalGo.g:7707:2: ( ruleI )
+            // InternalGo.g:7708:3: ruleI
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOperationsAccess().getOIParserRuleCall_1_0()); 
@@ -25151,17 +25683,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__I__OAssignment_0_2"
-    // InternalGo.g:7559:1: rule__I__OAssignment_0_2 : ( ruleI ) ;
+    // InternalGo.g:7717:1: rule__I__OAssignment_0_2 : ( ruleI ) ;
     public final void rule__I__OAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7563:1: ( ( ruleI ) )
-            // InternalGo.g:7564:2: ( ruleI )
+            // InternalGo.g:7721:1: ( ( ruleI ) )
+            // InternalGo.g:7722:2: ( ruleI )
             {
-            // InternalGo.g:7564:2: ( ruleI )
-            // InternalGo.g:7565:3: ruleI
+            // InternalGo.g:7722:2: ( ruleI )
+            // InternalGo.g:7723:3: ruleI
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIAccess().getOIParserRuleCall_0_2_0()); 
@@ -25196,17 +25728,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__I__OAssignment_1_2"
-    // InternalGo.g:7574:1: rule__I__OAssignment_1_2 : ( ruleI ) ;
+    // InternalGo.g:7732:1: rule__I__OAssignment_1_2 : ( ruleI ) ;
     public final void rule__I__OAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7578:1: ( ( ruleI ) )
-            // InternalGo.g:7579:2: ( ruleI )
+            // InternalGo.g:7736:1: ( ( ruleI ) )
+            // InternalGo.g:7737:2: ( ruleI )
             {
-            // InternalGo.g:7579:2: ( ruleI )
-            // InternalGo.g:7580:3: ruleI
+            // InternalGo.g:7737:2: ( ruleI )
+            // InternalGo.g:7738:3: ruleI
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIAccess().getOIParserRuleCall_1_2_0()); 
@@ -25241,17 +25773,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__T__OAssignment_1"
-    // InternalGo.g:7589:1: rule__T__OAssignment_1 : ( ruleY ) ;
+    // InternalGo.g:7747:1: rule__T__OAssignment_1 : ( ruleY ) ;
     public final void rule__T__OAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7593:1: ( ( ruleY ) )
-            // InternalGo.g:7594:2: ( ruleY )
+            // InternalGo.g:7751:1: ( ( ruleY ) )
+            // InternalGo.g:7752:2: ( ruleY )
             {
-            // InternalGo.g:7594:2: ( ruleY )
-            // InternalGo.g:7595:3: ruleY
+            // InternalGo.g:7752:2: ( ruleY )
+            // InternalGo.g:7753:3: ruleY
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTAccess().getOYParserRuleCall_1_0()); 
@@ -25286,17 +25818,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__OAssignment_0_1"
-    // InternalGo.g:7604:1: rule__Y__OAssignment_0_1 : ( ruleF ) ;
+    // InternalGo.g:7762:1: rule__Y__OAssignment_0_1 : ( ruleF ) ;
     public final void rule__Y__OAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7608:1: ( ( ruleF ) )
-            // InternalGo.g:7609:2: ( ruleF )
+            // InternalGo.g:7766:1: ( ( ruleF ) )
+            // InternalGo.g:7767:2: ( ruleF )
             {
-            // InternalGo.g:7609:2: ( ruleF )
-            // InternalGo.g:7610:3: ruleF
+            // InternalGo.g:7767:2: ( ruleF )
+            // InternalGo.g:7768:3: ruleF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getYAccess().getOFParserRuleCall_0_1_0()); 
@@ -25331,17 +25863,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__OAssignment_0_2"
-    // InternalGo.g:7619:1: rule__Y__OAssignment_0_2 : ( ruleY ) ;
+    // InternalGo.g:7777:1: rule__Y__OAssignment_0_2 : ( ruleY ) ;
     public final void rule__Y__OAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7623:1: ( ( ruleY ) )
-            // InternalGo.g:7624:2: ( ruleY )
+            // InternalGo.g:7781:1: ( ( ruleY ) )
+            // InternalGo.g:7782:2: ( ruleY )
             {
-            // InternalGo.g:7624:2: ( ruleY )
-            // InternalGo.g:7625:3: ruleY
+            // InternalGo.g:7782:2: ( ruleY )
+            // InternalGo.g:7783:3: ruleY
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getYAccess().getOYParserRuleCall_0_2_0()); 
@@ -25376,17 +25908,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__OAssignment_1_1"
-    // InternalGo.g:7634:1: rule__Y__OAssignment_1_1 : ( ruleF ) ;
+    // InternalGo.g:7792:1: rule__Y__OAssignment_1_1 : ( ruleF ) ;
     public final void rule__Y__OAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7638:1: ( ( ruleF ) )
-            // InternalGo.g:7639:2: ( ruleF )
+            // InternalGo.g:7796:1: ( ( ruleF ) )
+            // InternalGo.g:7797:2: ( ruleF )
             {
-            // InternalGo.g:7639:2: ( ruleF )
-            // InternalGo.g:7640:3: ruleF
+            // InternalGo.g:7797:2: ( ruleF )
+            // InternalGo.g:7798:3: ruleF
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getYAccess().getOFParserRuleCall_1_1_0()); 
@@ -25421,17 +25953,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Y__OAssignment_1_2"
-    // InternalGo.g:7649:1: rule__Y__OAssignment_1_2 : ( ruleY ) ;
+    // InternalGo.g:7807:1: rule__Y__OAssignment_1_2 : ( ruleY ) ;
     public final void rule__Y__OAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7653:1: ( ( ruleY ) )
-            // InternalGo.g:7654:2: ( ruleY )
+            // InternalGo.g:7811:1: ( ( ruleY ) )
+            // InternalGo.g:7812:2: ( ruleY )
             {
-            // InternalGo.g:7654:2: ( ruleY )
-            // InternalGo.g:7655:3: ruleY
+            // InternalGo.g:7812:2: ( ruleY )
+            // InternalGo.g:7813:3: ruleY
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getYAccess().getOYParserRuleCall_1_2_0()); 
@@ -25466,17 +25998,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__F__OAssignment_0_1"
-    // InternalGo.g:7664:1: rule__F__OAssignment_0_1 : ( ruleOperations ) ;
+    // InternalGo.g:7822:1: rule__F__OAssignment_0_1 : ( ruleOperations ) ;
     public final void rule__F__OAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7668:1: ( ( ruleOperations ) )
-            // InternalGo.g:7669:2: ( ruleOperations )
+            // InternalGo.g:7826:1: ( ( ruleOperations ) )
+            // InternalGo.g:7827:2: ( ruleOperations )
             {
-            // InternalGo.g:7669:2: ( ruleOperations )
-            // InternalGo.g:7670:3: ruleOperations
+            // InternalGo.g:7827:2: ( ruleOperations )
+            // InternalGo.g:7828:3: ruleOperations
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFAccess().getOOperationsParserRuleCall_0_1_0()); 
@@ -25511,17 +26043,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__IfAssignment_0"
-    // InternalGo.g:7679:1: rule__Condition__IfAssignment_0 : ( ruleIfCondition ) ;
+    // InternalGo.g:7837:1: rule__Condition__IfAssignment_0 : ( ruleIfCondition ) ;
     public final void rule__Condition__IfAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7683:1: ( ( ruleIfCondition ) )
-            // InternalGo.g:7684:2: ( ruleIfCondition )
+            // InternalGo.g:7841:1: ( ( ruleIfCondition ) )
+            // InternalGo.g:7842:2: ( ruleIfCondition )
             {
-            // InternalGo.g:7684:2: ( ruleIfCondition )
-            // InternalGo.g:7685:3: ruleIfCondition
+            // InternalGo.g:7842:2: ( ruleIfCondition )
+            // InternalGo.g:7843:3: ruleIfCondition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionAccess().getIfIfConditionParserRuleCall_0_0()); 
@@ -25556,17 +26088,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__ElseifAssignment_1"
-    // InternalGo.g:7694:1: rule__Condition__ElseifAssignment_1 : ( ruleElseIfCondition ) ;
+    // InternalGo.g:7852:1: rule__Condition__ElseifAssignment_1 : ( ruleElseIfCondition ) ;
     public final void rule__Condition__ElseifAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7698:1: ( ( ruleElseIfCondition ) )
-            // InternalGo.g:7699:2: ( ruleElseIfCondition )
+            // InternalGo.g:7856:1: ( ( ruleElseIfCondition ) )
+            // InternalGo.g:7857:2: ( ruleElseIfCondition )
             {
-            // InternalGo.g:7699:2: ( ruleElseIfCondition )
-            // InternalGo.g:7700:3: ruleElseIfCondition
+            // InternalGo.g:7857:2: ( ruleElseIfCondition )
+            // InternalGo.g:7858:3: ruleElseIfCondition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionAccess().getElseifElseIfConditionParserRuleCall_1_0()); 
@@ -25601,17 +26133,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__ElseAssignment_2"
-    // InternalGo.g:7709:1: rule__Condition__ElseAssignment_2 : ( ruleElseCondition ) ;
+    // InternalGo.g:7867:1: rule__Condition__ElseAssignment_2 : ( ruleElseCondition ) ;
     public final void rule__Condition__ElseAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7713:1: ( ( ruleElseCondition ) )
-            // InternalGo.g:7714:2: ( ruleElseCondition )
+            // InternalGo.g:7871:1: ( ( ruleElseCondition ) )
+            // InternalGo.g:7872:2: ( ruleElseCondition )
             {
-            // InternalGo.g:7714:2: ( ruleElseCondition )
-            // InternalGo.g:7715:3: ruleElseCondition
+            // InternalGo.g:7872:2: ( ruleElseCondition )
+            // InternalGo.g:7873:3: ruleElseCondition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConditionAccess().getElseElseConditionParserRuleCall_2_0()); 
@@ -25646,17 +26178,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__CondAssignment_1"
-    // InternalGo.g:7724:1: rule__IfCondition__CondAssignment_1 : ( ruleOrExpression ) ;
+    // InternalGo.g:7882:1: rule__IfCondition__CondAssignment_1 : ( ruleOrExpression ) ;
     public final void rule__IfCondition__CondAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7728:1: ( ( ruleOrExpression ) )
-            // InternalGo.g:7729:2: ( ruleOrExpression )
+            // InternalGo.g:7886:1: ( ( ruleOrExpression ) )
+            // InternalGo.g:7887:2: ( ruleOrExpression )
             {
-            // InternalGo.g:7729:2: ( ruleOrExpression )
-            // InternalGo.g:7730:3: ruleOrExpression
+            // InternalGo.g:7887:2: ( ruleOrExpression )
+            // InternalGo.g:7888:3: ruleOrExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfConditionAccess().getCondOrExpressionParserRuleCall_1_0()); 
@@ -25691,17 +26223,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IfCondition__ThenAssignment_3"
-    // InternalGo.g:7739:1: rule__IfCondition__ThenAssignment_3 : ( ruleGreeting ) ;
+    // InternalGo.g:7897:1: rule__IfCondition__ThenAssignment_3 : ( ruleGreeting ) ;
     public final void rule__IfCondition__ThenAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7743:1: ( ( ruleGreeting ) )
-            // InternalGo.g:7744:2: ( ruleGreeting )
+            // InternalGo.g:7901:1: ( ( ruleGreeting ) )
+            // InternalGo.g:7902:2: ( ruleGreeting )
             {
-            // InternalGo.g:7744:2: ( ruleGreeting )
-            // InternalGo.g:7745:3: ruleGreeting
+            // InternalGo.g:7902:2: ( ruleGreeting )
+            // InternalGo.g:7903:3: ruleGreeting
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfConditionAccess().getThenGreetingParserRuleCall_3_0()); 
@@ -25736,17 +26268,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ElseCondition__ThenAssignment_2"
-    // InternalGo.g:7754:1: rule__ElseCondition__ThenAssignment_2 : ( ruleGreeting ) ;
+    // InternalGo.g:7912:1: rule__ElseCondition__ThenAssignment_2 : ( ruleGreeting ) ;
     public final void rule__ElseCondition__ThenAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7758:1: ( ( ruleGreeting ) )
-            // InternalGo.g:7759:2: ( ruleGreeting )
+            // InternalGo.g:7916:1: ( ( ruleGreeting ) )
+            // InternalGo.g:7917:2: ( ruleGreeting )
             {
-            // InternalGo.g:7759:2: ( ruleGreeting )
-            // InternalGo.g:7760:3: ruleGreeting
+            // InternalGo.g:7917:2: ( ruleGreeting )
+            // InternalGo.g:7918:3: ruleGreeting
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getElseConditionAccess().getThenGreetingParserRuleCall_2_0()); 
@@ -25781,17 +26313,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__XAssignment_0_0"
-    // InternalGo.g:7769:1: rule__Expression__XAssignment_0_0 : ( ruleOperations ) ;
+    // InternalGo.g:7927:1: rule__Expression__XAssignment_0_0 : ( ruleOperations ) ;
     public final void rule__Expression__XAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7773:1: ( ( ruleOperations ) )
-            // InternalGo.g:7774:2: ( ruleOperations )
+            // InternalGo.g:7931:1: ( ( ruleOperations ) )
+            // InternalGo.g:7932:2: ( ruleOperations )
             {
-            // InternalGo.g:7774:2: ( ruleOperations )
-            // InternalGo.g:7775:3: ruleOperations
+            // InternalGo.g:7932:2: ( ruleOperations )
+            // InternalGo.g:7933:3: ruleOperations
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionAccess().getXOperationsParserRuleCall_0_0_0()); 
@@ -25826,17 +26358,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Expression__BooleanAssignment_0_1"
-    // InternalGo.g:7784:1: rule__Expression__BooleanAssignment_0_1 : ( ruleOrExpression ) ;
+    // InternalGo.g:7942:1: rule__Expression__BooleanAssignment_0_1 : ( ruleOrExpression ) ;
     public final void rule__Expression__BooleanAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7788:1: ( ( ruleOrExpression ) )
-            // InternalGo.g:7789:2: ( ruleOrExpression )
+            // InternalGo.g:7946:1: ( ( ruleOrExpression ) )
+            // InternalGo.g:7947:2: ( ruleOrExpression )
             {
-            // InternalGo.g:7789:2: ( ruleOrExpression )
-            // InternalGo.g:7790:3: ruleOrExpression
+            // InternalGo.g:7947:2: ( ruleOrExpression )
+            // InternalGo.g:7948:3: ruleOrExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionAccess().getBooleanOrExpressionParserRuleCall_0_1_0()); 
@@ -25871,17 +26403,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFor__XAssignment_3"
-    // InternalGo.g:7799:1: rule__CallFor__XAssignment_3 : ( ruleGreeting ) ;
+    // InternalGo.g:7957:1: rule__CallFor__XAssignment_3 : ( ruleGreeting ) ;
     public final void rule__CallFor__XAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7803:1: ( ( ruleGreeting ) )
-            // InternalGo.g:7804:2: ( ruleGreeting )
+            // InternalGo.g:7961:1: ( ( ruleGreeting ) )
+            // InternalGo.g:7962:2: ( ruleGreeting )
             {
-            // InternalGo.g:7804:2: ( ruleGreeting )
-            // InternalGo.g:7805:3: ruleGreeting
+            // InternalGo.g:7962:2: ( ruleGreeting )
+            // InternalGo.g:7963:3: ruleGreeting
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallForAccess().getXGreetingParserRuleCall_3_0()); 
@@ -25916,17 +26448,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Addition__RightAssignment_1_2"
-    // InternalGo.g:7814:1: rule__Addition__RightAssignment_1_2 : ( ruleSubMult ) ;
+    // InternalGo.g:7972:1: rule__Addition__RightAssignment_1_2 : ( ruleSubMult ) ;
     public final void rule__Addition__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7818:1: ( ( ruleSubMult ) )
-            // InternalGo.g:7819:2: ( ruleSubMult )
+            // InternalGo.g:7976:1: ( ( ruleSubMult ) )
+            // InternalGo.g:7977:2: ( ruleSubMult )
             {
-            // InternalGo.g:7819:2: ( ruleSubMult )
-            // InternalGo.g:7820:3: ruleSubMult
+            // InternalGo.g:7977:2: ( ruleSubMult )
+            // InternalGo.g:7978:3: ruleSubMult
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionAccess().getRightSubMultParserRuleCall_1_2_0()); 
@@ -25961,17 +26493,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Subtration__RightAssignment_1_2"
-    // InternalGo.g:7829:1: rule__Subtration__RightAssignment_1_2 : ( ruleSubMult ) ;
+    // InternalGo.g:7987:1: rule__Subtration__RightAssignment_1_2 : ( ruleSubMult ) ;
     public final void rule__Subtration__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7833:1: ( ( ruleSubMult ) )
-            // InternalGo.g:7834:2: ( ruleSubMult )
+            // InternalGo.g:7991:1: ( ( ruleSubMult ) )
+            // InternalGo.g:7992:2: ( ruleSubMult )
             {
-            // InternalGo.g:7834:2: ( ruleSubMult )
-            // InternalGo.g:7835:3: ruleSubMult
+            // InternalGo.g:7992:2: ( ruleSubMult )
+            // InternalGo.g:7993:3: ruleSubMult
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSubtrationAccess().getRightSubMultParserRuleCall_1_2_0()); 
@@ -26006,17 +26538,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplication__RightAssignment_1_2"
-    // InternalGo.g:7844:1: rule__Multiplication__RightAssignment_1_2 : ( rulePrimaryExpression ) ;
+    // InternalGo.g:8002:1: rule__Multiplication__RightAssignment_1_2 : ( rulePrimaryExpression ) ;
     public final void rule__Multiplication__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7848:1: ( ( rulePrimaryExpression ) )
-            // InternalGo.g:7849:2: ( rulePrimaryExpression )
+            // InternalGo.g:8006:1: ( ( rulePrimaryExpression ) )
+            // InternalGo.g:8007:2: ( rulePrimaryExpression )
             {
-            // InternalGo.g:7849:2: ( rulePrimaryExpression )
-            // InternalGo.g:7850:3: rulePrimaryExpression
+            // InternalGo.g:8007:2: ( rulePrimaryExpression )
+            // InternalGo.g:8008:3: rulePrimaryExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationAccess().getRightPrimaryExpressionParserRuleCall_1_2_0()); 
@@ -26051,17 +26583,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Division__RightAssignment_1_2"
-    // InternalGo.g:7859:1: rule__Division__RightAssignment_1_2 : ( rulePrimaryExpression ) ;
+    // InternalGo.g:8017:1: rule__Division__RightAssignment_1_2 : ( rulePrimaryExpression ) ;
     public final void rule__Division__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7863:1: ( ( rulePrimaryExpression ) )
-            // InternalGo.g:7864:2: ( rulePrimaryExpression )
+            // InternalGo.g:8021:1: ( ( rulePrimaryExpression ) )
+            // InternalGo.g:8022:2: ( rulePrimaryExpression )
             {
-            // InternalGo.g:7864:2: ( rulePrimaryExpression )
-            // InternalGo.g:7865:3: rulePrimaryExpression
+            // InternalGo.g:8022:2: ( rulePrimaryExpression )
+            // InternalGo.g:8023:3: rulePrimaryExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDivisionAccess().getRightPrimaryExpressionParserRuleCall_1_2_0()); 
@@ -26096,17 +26628,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrExpression__RightAssignment_1_2"
-    // InternalGo.g:7874:1: rule__OrExpression__RightAssignment_1_2 : ( ruleAndExpression ) ;
+    // InternalGo.g:8032:1: rule__OrExpression__RightAssignment_1_2 : ( ruleAndExpression ) ;
     public final void rule__OrExpression__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7878:1: ( ( ruleAndExpression ) )
-            // InternalGo.g:7879:2: ( ruleAndExpression )
+            // InternalGo.g:8036:1: ( ( ruleAndExpression ) )
+            // InternalGo.g:8037:2: ( ruleAndExpression )
             {
-            // InternalGo.g:7879:2: ( ruleAndExpression )
-            // InternalGo.g:7880:3: ruleAndExpression
+            // InternalGo.g:8037:2: ( ruleAndExpression )
+            // InternalGo.g:8038:3: ruleAndExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrExpressionAccess().getRightAndExpressionParserRuleCall_1_2_0()); 
@@ -26141,17 +26673,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndExpression__RightAssignment_1_2"
-    // InternalGo.g:7889:1: rule__AndExpression__RightAssignment_1_2 : ( ruleComparisonExpression ) ;
+    // InternalGo.g:8047:1: rule__AndExpression__RightAssignment_1_2 : ( ruleComparisonExpression ) ;
     public final void rule__AndExpression__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7893:1: ( ( ruleComparisonExpression ) )
-            // InternalGo.g:7894:2: ( ruleComparisonExpression )
+            // InternalGo.g:8051:1: ( ( ruleComparisonExpression ) )
+            // InternalGo.g:8052:2: ( ruleComparisonExpression )
             {
-            // InternalGo.g:7894:2: ( ruleComparisonExpression )
-            // InternalGo.g:7895:3: ruleComparisonExpression
+            // InternalGo.g:8052:2: ( ruleComparisonExpression )
+            // InternalGo.g:8053:3: ruleComparisonExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndExpressionAccess().getRightComparisonExpressionParserRuleCall_1_2_0()); 
@@ -26186,17 +26718,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ComparisonExpression__RightAssignment_1_2"
-    // InternalGo.g:7904:1: rule__ComparisonExpression__RightAssignment_1_2 : ( rulePrimaryExpression ) ;
+    // InternalGo.g:8062:1: rule__ComparisonExpression__RightAssignment_1_2 : ( rulePrimaryExpression ) ;
     public final void rule__ComparisonExpression__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7908:1: ( ( rulePrimaryExpression ) )
-            // InternalGo.g:7909:2: ( rulePrimaryExpression )
+            // InternalGo.g:8066:1: ( ( rulePrimaryExpression ) )
+            // InternalGo.g:8067:2: ( rulePrimaryExpression )
             {
-            // InternalGo.g:7909:2: ( rulePrimaryExpression )
-            // InternalGo.g:7910:3: rulePrimaryExpression
+            // InternalGo.g:8067:2: ( rulePrimaryExpression )
+            // InternalGo.g:8068:3: rulePrimaryExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComparisonExpressionAccess().getRightPrimaryExpressionParserRuleCall_1_2_0()); 
@@ -26231,17 +26763,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VarFor__XAssignment_1_2"
-    // InternalGo.g:7919:1: rule__VarFor__XAssignment_1_2 : ( ruleOrExpression ) ;
+    // InternalGo.g:8077:1: rule__VarFor__XAssignment_1_2 : ( ruleOrExpression ) ;
     public final void rule__VarFor__XAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7923:1: ( ( ruleOrExpression ) )
-            // InternalGo.g:7924:2: ( ruleOrExpression )
+            // InternalGo.g:8081:1: ( ( ruleOrExpression ) )
+            // InternalGo.g:8082:2: ( ruleOrExpression )
             {
-            // InternalGo.g:7924:2: ( ruleOrExpression )
-            // InternalGo.g:7925:3: ruleOrExpression
+            // InternalGo.g:8082:2: ( ruleOrExpression )
+            // InternalGo.g:8083:3: ruleOrExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVarForAccess().getXOrExpressionParserRuleCall_1_2_0()); 
@@ -26276,23 +26808,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VarFor__KAssignment_1_4"
-    // InternalGo.g:7934:1: rule__VarFor__KAssignment_1_4 : ( ( rule__VarFor__KAlternatives_1_4_0 ) ) ;
+    // InternalGo.g:8092:1: rule__VarFor__KAssignment_1_4 : ( ( rule__VarFor__KAlternatives_1_4_0 ) ) ;
     public final void rule__VarFor__KAssignment_1_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7938:1: ( ( ( rule__VarFor__KAlternatives_1_4_0 ) ) )
-            // InternalGo.g:7939:2: ( ( rule__VarFor__KAlternatives_1_4_0 ) )
+            // InternalGo.g:8096:1: ( ( ( rule__VarFor__KAlternatives_1_4_0 ) ) )
+            // InternalGo.g:8097:2: ( ( rule__VarFor__KAlternatives_1_4_0 ) )
             {
-            // InternalGo.g:7939:2: ( ( rule__VarFor__KAlternatives_1_4_0 ) )
-            // InternalGo.g:7940:3: ( rule__VarFor__KAlternatives_1_4_0 )
+            // InternalGo.g:8097:2: ( ( rule__VarFor__KAlternatives_1_4_0 ) )
+            // InternalGo.g:8098:3: ( rule__VarFor__KAlternatives_1_4_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVarForAccess().getKAlternatives_1_4_0()); 
             }
-            // InternalGo.g:7941:3: ( rule__VarFor__KAlternatives_1_4_0 )
-            // InternalGo.g:7941:4: rule__VarFor__KAlternatives_1_4_0
+            // InternalGo.g:8099:3: ( rule__VarFor__KAlternatives_1_4_0 )
+            // InternalGo.g:8099:4: rule__VarFor__KAlternatives_1_4_0
             {
             pushFollow(FOLLOW_2);
             rule__VarFor__KAlternatives_1_4_0();
@@ -26327,17 +26859,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Literal__ValueAssignment_0_1"
-    // InternalGo.g:7949:1: rule__Literal__ValueAssignment_0_1 : ( ruleBool ) ;
+    // InternalGo.g:8107:1: rule__Literal__ValueAssignment_0_1 : ( ruleBool ) ;
     public final void rule__Literal__ValueAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7953:1: ( ( ruleBool ) )
-            // InternalGo.g:7954:2: ( ruleBool )
+            // InternalGo.g:8111:1: ( ( ruleBool ) )
+            // InternalGo.g:8112:2: ( ruleBool )
             {
-            // InternalGo.g:7954:2: ( ruleBool )
-            // InternalGo.g:7955:3: ruleBool
+            // InternalGo.g:8112:2: ( ruleBool )
+            // InternalGo.g:8113:3: ruleBool
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralAccess().getValueBoolParserRuleCall_0_1_0()); 
@@ -26372,17 +26904,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__NameAssignment_1"
-    // InternalGo.g:7964:1: rule__DecFunc__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalGo.g:8122:1: rule__DecFunc__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__DecFunc__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7968:1: ( ( RULE_ID ) )
-            // InternalGo.g:7969:2: ( RULE_ID )
+            // InternalGo.g:8126:1: ( ( RULE_ID ) )
+            // InternalGo.g:8127:2: ( RULE_ID )
             {
-            // InternalGo.g:7969:2: ( RULE_ID )
-            // InternalGo.g:7970:3: RULE_ID
+            // InternalGo.g:8127:2: ( RULE_ID )
+            // InternalGo.g:8128:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getNameIDTerminalRuleCall_1_0()); 
@@ -26413,17 +26945,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__ParamAssignment_3"
-    // InternalGo.g:7979:1: rule__DecFunc__ParamAssignment_3 : ( ruleParams ) ;
+    // InternalGo.g:8137:1: rule__DecFunc__ParamAssignment_3 : ( ruleParams ) ;
     public final void rule__DecFunc__ParamAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7983:1: ( ( ruleParams ) )
-            // InternalGo.g:7984:2: ( ruleParams )
+            // InternalGo.g:8141:1: ( ( ruleParams ) )
+            // InternalGo.g:8142:2: ( ruleParams )
             {
-            // InternalGo.g:7984:2: ( ruleParams )
-            // InternalGo.g:7985:3: ruleParams
+            // InternalGo.g:8142:2: ( ruleParams )
+            // InternalGo.g:8143:3: ruleParams
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getParamParamsParserRuleCall_3_0()); 
@@ -26458,17 +26990,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecFunc__ReturnTypeAssignment_5"
-    // InternalGo.g:7994:1: rule__DecFunc__ReturnTypeAssignment_5 : ( ruleTypes ) ;
+    // InternalGo.g:8152:1: rule__DecFunc__ReturnTypeAssignment_5 : ( ruleTypes ) ;
     public final void rule__DecFunc__ReturnTypeAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:7998:1: ( ( ruleTypes ) )
-            // InternalGo.g:7999:2: ( ruleTypes )
+            // InternalGo.g:8156:1: ( ( ruleTypes ) )
+            // InternalGo.g:8157:2: ( ruleTypes )
             {
-            // InternalGo.g:7999:2: ( ruleTypes )
-            // InternalGo.g:8000:3: ruleTypes
+            // InternalGo.g:8157:2: ( ruleTypes )
+            // InternalGo.g:8158:3: ruleTypes
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDecFuncAccess().getReturnTypeTypesParserRuleCall_5_0()); 
@@ -26502,29 +27034,29 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__DecFunc__ReturnTypeAssignment_5"
 
 
-    // $ANTLR start "rule__DecFunc__ArgsAssignment_7"
-    // InternalGo.g:8009:1: rule__DecFunc__ArgsAssignment_7 : ( ruleGreeting ) ;
-    public final void rule__DecFunc__ArgsAssignment_7() throws RecognitionException {
+    // $ANTLR start "rule__DecFunc__BodyAssignment_7"
+    // InternalGo.g:8167:1: rule__DecFunc__BodyAssignment_7 : ( ruleFunctionBody ) ;
+    public final void rule__DecFunc__BodyAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:8013:1: ( ( ruleGreeting ) )
-            // InternalGo.g:8014:2: ( ruleGreeting )
+            // InternalGo.g:8171:1: ( ( ruleFunctionBody ) )
+            // InternalGo.g:8172:2: ( ruleFunctionBody )
             {
-            // InternalGo.g:8014:2: ( ruleGreeting )
-            // InternalGo.g:8015:3: ruleGreeting
+            // InternalGo.g:8172:2: ( ruleFunctionBody )
+            // InternalGo.g:8173:3: ruleFunctionBody
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDecFuncAccess().getArgsGreetingParserRuleCall_7_0()); 
+               before(grammarAccess.getDecFuncAccess().getBodyFunctionBodyParserRuleCall_7_0()); 
             }
             pushFollow(FOLLOW_2);
-            ruleGreeting();
+            ruleFunctionBody();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDecFuncAccess().getArgsGreetingParserRuleCall_7_0()); 
+               after(grammarAccess.getDecFuncAccess().getBodyFunctionBodyParserRuleCall_7_0()); 
             }
 
             }
@@ -26544,21 +27076,156 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__DecFunc__ArgsAssignment_7"
+    // $ANTLR end "rule__DecFunc__BodyAssignment_7"
+
+
+    // $ANTLR start "rule__FunctionBody__ArgsAssignment_0"
+    // InternalGo.g:8182:1: rule__FunctionBody__ArgsAssignment_0 : ( ruleGreeting ) ;
+    public final void rule__FunctionBody__ArgsAssignment_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGo.g:8186:1: ( ( ruleGreeting ) )
+            // InternalGo.g:8187:2: ( ruleGreeting )
+            {
+            // InternalGo.g:8187:2: ( ruleGreeting )
+            // InternalGo.g:8188:3: ruleGreeting
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getFunctionBodyAccess().getArgsGreetingParserRuleCall_0_0()); 
+            }
+            pushFollow(FOLLOW_2);
+            ruleGreeting();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getFunctionBodyAccess().getArgsGreetingParserRuleCall_0_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FunctionBody__ArgsAssignment_0"
+
+
+    // $ANTLR start "rule__FunctionBody__RetAssignment_1"
+    // InternalGo.g:8197:1: rule__FunctionBody__RetAssignment_1 : ( ruleFunctionReturn ) ;
+    public final void rule__FunctionBody__RetAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGo.g:8201:1: ( ( ruleFunctionReturn ) )
+            // InternalGo.g:8202:2: ( ruleFunctionReturn )
+            {
+            // InternalGo.g:8202:2: ( ruleFunctionReturn )
+            // InternalGo.g:8203:3: ruleFunctionReturn
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getFunctionBodyAccess().getRetFunctionReturnParserRuleCall_1_0()); 
+            }
+            pushFollow(FOLLOW_2);
+            ruleFunctionReturn();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getFunctionBodyAccess().getRetFunctionReturnParserRuleCall_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FunctionBody__RetAssignment_1"
+
+
+    // $ANTLR start "rule__FunctionReturn__ReturnTypeAssignment_1"
+    // InternalGo.g:8212:1: rule__FunctionReturn__ReturnTypeAssignment_1 : ( ruleAtrib_Aux ) ;
+    public final void rule__FunctionReturn__ReturnTypeAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGo.g:8216:1: ( ( ruleAtrib_Aux ) )
+            // InternalGo.g:8217:2: ( ruleAtrib_Aux )
+            {
+            // InternalGo.g:8217:2: ( ruleAtrib_Aux )
+            // InternalGo.g:8218:3: ruleAtrib_Aux
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getFunctionReturnAccess().getReturnTypeAtrib_AuxParserRuleCall_1_0()); 
+            }
+            pushFollow(FOLLOW_2);
+            ruleAtrib_Aux();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getFunctionReturnAccess().getReturnTypeAtrib_AuxParserRuleCall_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FunctionReturn__ReturnTypeAssignment_1"
 
 
     // $ANTLR start "rule__CallFunc__NameFuncAssignment_0"
-    // InternalGo.g:8024:1: rule__CallFunc__NameFuncAssignment_0 : ( RULE_ID ) ;
+    // InternalGo.g:8227:1: rule__CallFunc__NameFuncAssignment_0 : ( RULE_ID ) ;
     public final void rule__CallFunc__NameFuncAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:8028:1: ( ( RULE_ID ) )
-            // InternalGo.g:8029:2: ( RULE_ID )
+            // InternalGo.g:8231:1: ( ( RULE_ID ) )
+            // InternalGo.g:8232:2: ( RULE_ID )
             {
-            // InternalGo.g:8029:2: ( RULE_ID )
-            // InternalGo.g:8030:3: RULE_ID
+            // InternalGo.g:8232:2: ( RULE_ID )
+            // InternalGo.g:8233:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallFuncAccess().getNameFuncIDTerminalRuleCall_0_0()); 
@@ -26589,17 +27256,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CallFunc__ParamAssignment_2"
-    // InternalGo.g:8039:1: rule__CallFunc__ParamAssignment_2 : ( ruleParams ) ;
+    // InternalGo.g:8242:1: rule__CallFunc__ParamAssignment_2 : ( ruleParams ) ;
     public final void rule__CallFunc__ParamAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:8043:1: ( ( ruleParams ) )
-            // InternalGo.g:8044:2: ( ruleParams )
+            // InternalGo.g:8246:1: ( ( ruleParams ) )
+            // InternalGo.g:8247:2: ( ruleParams )
             {
-            // InternalGo.g:8044:2: ( ruleParams )
-            // InternalGo.g:8045:3: ruleParams
+            // InternalGo.g:8247:2: ( ruleParams )
+            // InternalGo.g:8248:3: ruleParams
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCallFuncAccess().getParamParamsParserRuleCall_2_0()); 
@@ -26634,23 +27301,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Bool__ValAssignment_0"
-    // InternalGo.g:8054:1: rule__Bool__ValAssignment_0 : ( ( 'true' ) ) ;
+    // InternalGo.g:8257:1: rule__Bool__ValAssignment_0 : ( ( 'true' ) ) ;
     public final void rule__Bool__ValAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:8058:1: ( ( ( 'true' ) ) )
-            // InternalGo.g:8059:2: ( ( 'true' ) )
+            // InternalGo.g:8261:1: ( ( ( 'true' ) ) )
+            // InternalGo.g:8262:2: ( ( 'true' ) )
             {
-            // InternalGo.g:8059:2: ( ( 'true' ) )
-            // InternalGo.g:8060:3: ( 'true' )
+            // InternalGo.g:8262:2: ( ( 'true' ) )
+            // InternalGo.g:8263:3: ( 'true' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolAccess().getValTrueKeyword_0_0()); 
             }
-            // InternalGo.g:8061:3: ( 'true' )
-            // InternalGo.g:8062:4: 'true'
+            // InternalGo.g:8264:3: ( 'true' )
+            // InternalGo.g:8265:4: 'true'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolAccess().getValTrueKeyword_0_0()); 
@@ -26687,23 +27354,23 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Bool__ValAssignment_1"
-    // InternalGo.g:8073:1: rule__Bool__ValAssignment_1 : ( ( 'false' ) ) ;
+    // InternalGo.g:8276:1: rule__Bool__ValAssignment_1 : ( ( 'false' ) ) ;
     public final void rule__Bool__ValAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:8077:1: ( ( ( 'false' ) ) )
-            // InternalGo.g:8078:2: ( ( 'false' ) )
+            // InternalGo.g:8280:1: ( ( ( 'false' ) ) )
+            // InternalGo.g:8281:2: ( ( 'false' ) )
             {
-            // InternalGo.g:8078:2: ( ( 'false' ) )
-            // InternalGo.g:8079:3: ( 'false' )
+            // InternalGo.g:8281:2: ( ( 'false' ) )
+            // InternalGo.g:8282:3: ( 'false' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolAccess().getValFalseKeyword_1_0()); 
             }
-            // InternalGo.g:8080:3: ( 'false' )
-            // InternalGo.g:8081:4: 'false'
+            // InternalGo.g:8283:3: ( 'false' )
+            // InternalGo.g:8284:4: 'false'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoolAccess().getValFalseKeyword_1_0()); 
@@ -26740,17 +27407,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DataType__NameAssignment_1"
-    // InternalGo.g:8092:1: rule__DataType__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalGo.g:8295:1: rule__DataType__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__DataType__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGo.g:8096:1: ( ( RULE_ID ) )
-            // InternalGo.g:8097:2: ( RULE_ID )
+            // InternalGo.g:8299:1: ( ( RULE_ID ) )
+            // InternalGo.g:8300:2: ( RULE_ID )
             {
-            // InternalGo.g:8097:2: ( RULE_ID )
-            // InternalGo.g:8098:3: RULE_ID
+            // InternalGo.g:8300:2: ( RULE_ID )
+            // InternalGo.g:8301:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDataTypeAccess().getNameIDTerminalRuleCall_1_0()); 
@@ -26781,17 +27448,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred14_InternalGo
     public final void synpred14_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:1833:2: ( ( ( rule__DecVar__DeclarationAssignment_0 ) ) )
-        // InternalGo.g:1833:2: ( ( rule__DecVar__DeclarationAssignment_0 ) )
+        // InternalGo.g:1883:2: ( ( ( rule__DecVar__DeclarationAssignment_0 ) ) )
+        // InternalGo.g:1883:2: ( ( rule__DecVar__DeclarationAssignment_0 ) )
         {
-        // InternalGo.g:1833:2: ( ( rule__DecVar__DeclarationAssignment_0 ) )
-        // InternalGo.g:1834:3: ( rule__DecVar__DeclarationAssignment_0 )
+        // InternalGo.g:1883:2: ( ( rule__DecVar__DeclarationAssignment_0 ) )
+        // InternalGo.g:1884:3: ( rule__DecVar__DeclarationAssignment_0 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getDecVarAccess().getDeclarationAssignment_0()); 
         }
-        // InternalGo.g:1835:3: ( rule__DecVar__DeclarationAssignment_0 )
-        // InternalGo.g:1835:4: rule__DecVar__DeclarationAssignment_0
+        // InternalGo.g:1885:3: ( rule__DecVar__DeclarationAssignment_0 )
+        // InternalGo.g:1885:4: rule__DecVar__DeclarationAssignment_0
         {
         pushFollow(FOLLOW_2);
         rule__DecVar__DeclarationAssignment_0();
@@ -26809,22 +27476,22 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
     }
     // $ANTLR end synpred14_InternalGo
 
-    // $ANTLR start synpred15_InternalGo
-    public final void synpred15_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:1839:2: ( ( ( rule__DecVar__AssignmentAssignment_1 ) ) )
-        // InternalGo.g:1839:2: ( ( rule__DecVar__AssignmentAssignment_1 ) )
+    // $ANTLR start synpred16_InternalGo
+    public final void synpred16_InternalGo_fragment() throws RecognitionException {   
+        // InternalGo.g:1895:2: ( ( ( rule__DecVar__AssignmentAssignment_2 ) ) )
+        // InternalGo.g:1895:2: ( ( rule__DecVar__AssignmentAssignment_2 ) )
         {
-        // InternalGo.g:1839:2: ( ( rule__DecVar__AssignmentAssignment_1 ) )
-        // InternalGo.g:1840:3: ( rule__DecVar__AssignmentAssignment_1 )
+        // InternalGo.g:1895:2: ( ( rule__DecVar__AssignmentAssignment_2 ) )
+        // InternalGo.g:1896:3: ( rule__DecVar__AssignmentAssignment_2 )
         {
         if ( state.backtracking==0 ) {
-           before(grammarAccess.getDecVarAccess().getAssignmentAssignment_1()); 
+           before(grammarAccess.getDecVarAccess().getAssignmentAssignment_2()); 
         }
-        // InternalGo.g:1841:3: ( rule__DecVar__AssignmentAssignment_1 )
-        // InternalGo.g:1841:4: rule__DecVar__AssignmentAssignment_1
+        // InternalGo.g:1897:3: ( rule__DecVar__AssignmentAssignment_2 )
+        // InternalGo.g:1897:4: rule__DecVar__AssignmentAssignment_2
         {
         pushFollow(FOLLOW_2);
-        rule__DecVar__AssignmentAssignment_1();
+        rule__DecVar__AssignmentAssignment_2();
 
         state._fsp--;
         if (state.failed) return ;
@@ -26837,15 +27504,15 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
         }
     }
-    // $ANTLR end synpred15_InternalGo
+    // $ANTLR end synpred16_InternalGo
 
     // $ANTLR start synpred17_InternalGo
     public final void synpred17_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:1866:2: ( ( ruleOperations ) )
-        // InternalGo.g:1866:2: ( ruleOperations )
+        // InternalGo.g:1916:2: ( ( ruleOperations ) )
+        // InternalGo.g:1916:2: ( ruleOperations )
         {
-        // InternalGo.g:1866:2: ( ruleOperations )
-        // InternalGo.g:1867:3: ruleOperations
+        // InternalGo.g:1916:2: ( ruleOperations )
+        // InternalGo.g:1917:3: ruleOperations
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getAtrib_AuxAccess().getOperationsParserRuleCall_0()); 
@@ -26865,11 +27532,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred18_InternalGo
     public final void synpred18_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:1872:2: ( ( ruleAtri ) )
-        // InternalGo.g:1872:2: ( ruleAtri )
+        // InternalGo.g:1922:2: ( ( ruleAtri ) )
+        // InternalGo.g:1922:2: ( ruleAtri )
         {
-        // InternalGo.g:1872:2: ( ruleAtri )
-        // InternalGo.g:1873:3: ruleAtri
+        // InternalGo.g:1922:2: ( ruleAtri )
+        // InternalGo.g:1923:3: ruleAtri
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getAtrib_AuxAccess().getAtriParserRuleCall_1()); 
@@ -26889,17 +27556,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred31_InternalGo
     public final void synpred31_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:2115:2: ( ( ( rule__Expression__XAssignment_0_0 ) ) )
-        // InternalGo.g:2115:2: ( ( rule__Expression__XAssignment_0_0 ) )
+        // InternalGo.g:2165:2: ( ( ( rule__Expression__XAssignment_0_0 ) ) )
+        // InternalGo.g:2165:2: ( ( rule__Expression__XAssignment_0_0 ) )
         {
-        // InternalGo.g:2115:2: ( ( rule__Expression__XAssignment_0_0 ) )
-        // InternalGo.g:2116:3: ( rule__Expression__XAssignment_0_0 )
+        // InternalGo.g:2165:2: ( ( rule__Expression__XAssignment_0_0 ) )
+        // InternalGo.g:2166:3: ( rule__Expression__XAssignment_0_0 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getExpressionAccess().getXAssignment_0_0()); 
         }
-        // InternalGo.g:2117:3: ( rule__Expression__XAssignment_0_0 )
-        // InternalGo.g:2117:4: rule__Expression__XAssignment_0_0
+        // InternalGo.g:2167:3: ( rule__Expression__XAssignment_0_0 )
+        // InternalGo.g:2167:4: rule__Expression__XAssignment_0_0
         {
         pushFollow(FOLLOW_2);
         rule__Expression__XAssignment_0_0();
@@ -26919,17 +27586,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred32_InternalGo
     public final void synpred32_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:2121:2: ( ( ( rule__Expression__BooleanAssignment_0_1 ) ) )
-        // InternalGo.g:2121:2: ( ( rule__Expression__BooleanAssignment_0_1 ) )
+        // InternalGo.g:2171:2: ( ( ( rule__Expression__BooleanAssignment_0_1 ) ) )
+        // InternalGo.g:2171:2: ( ( rule__Expression__BooleanAssignment_0_1 ) )
         {
-        // InternalGo.g:2121:2: ( ( rule__Expression__BooleanAssignment_0_1 ) )
-        // InternalGo.g:2122:3: ( rule__Expression__BooleanAssignment_0_1 )
+        // InternalGo.g:2171:2: ( ( rule__Expression__BooleanAssignment_0_1 ) )
+        // InternalGo.g:2172:3: ( rule__Expression__BooleanAssignment_0_1 )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getExpressionAccess().getBooleanAssignment_0_1()); 
         }
-        // InternalGo.g:2123:3: ( rule__Expression__BooleanAssignment_0_1 )
-        // InternalGo.g:2123:4: rule__Expression__BooleanAssignment_0_1
+        // InternalGo.g:2173:3: ( rule__Expression__BooleanAssignment_0_1 )
+        // InternalGo.g:2173:4: rule__Expression__BooleanAssignment_0_1
         {
         pushFollow(FOLLOW_2);
         rule__Expression__BooleanAssignment_0_1();
@@ -26949,17 +27616,17 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred33_InternalGo
     public final void synpred33_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:2142:2: ( ( ( ruleMultiplication ) ) )
-        // InternalGo.g:2142:2: ( ( ruleMultiplication ) )
+        // InternalGo.g:2192:2: ( ( ( ruleMultiplication ) ) )
+        // InternalGo.g:2192:2: ( ( ruleMultiplication ) )
         {
-        // InternalGo.g:2142:2: ( ( ruleMultiplication ) )
-        // InternalGo.g:2143:3: ( ruleMultiplication )
+        // InternalGo.g:2192:2: ( ( ruleMultiplication ) )
+        // InternalGo.g:2193:3: ( ruleMultiplication )
         {
         if ( state.backtracking==0 ) {
            before(grammarAccess.getSubMultAccess().getMultiplicationParserRuleCall_0()); 
         }
-        // InternalGo.g:2144:3: ( ruleMultiplication )
-        // InternalGo.g:2144:4: ruleMultiplication
+        // InternalGo.g:2194:3: ( ruleMultiplication )
+        // InternalGo.g:2194:4: ruleMultiplication
         {
         pushFollow(FOLLOW_2);
         ruleMultiplication();
@@ -26979,8 +27646,8 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
     // $ANTLR start synpred57_InternalGo
     public final void synpred57_InternalGo_fragment() throws RecognitionException {   
-        // InternalGo.g:2830:3: ( rule__AtribVar__AtrbAssignment_4_2_1 )
-        // InternalGo.g:2830:3: rule__AtribVar__AtrbAssignment_4_2_1
+        // InternalGo.g:2880:3: ( rule__AtribVar__AtrbAssignment_4_2_1 )
+        // InternalGo.g:2880:3: rule__AtribVar__AtrbAssignment_4_2_1
         {
         pushFollow(FOLLOW_2);
         rule__AtribVar__AtrbAssignment_4_2_1();
@@ -27078,11 +27745,11 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred15_InternalGo() {
+    public final boolean synpred16_InternalGo() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred15_InternalGo_fragment(); // can never throw exception
+            synpred16_InternalGo_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -27114,13 +27781,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
     static final String dfa_2s = "\3\uffff\1\16\13\uffff";
     static final String dfa_3s = "\1\4\2\10\1\4\13\uffff";
     static final String dfa_4s = "\1\100\2\15\1\100\13\uffff";
-    static final String dfa_5s = "\4\uffff\1\3\1\4\1\5\1\6\1\7\1\10\1\12\1\2\1\1\1\11\1\13";
+    static final String dfa_5s = "\4\uffff\1\3\1\4\1\5\1\6\1\7\1\10\1\12\1\1\1\2\1\11\1\13";
     static final String dfa_6s = "\17\uffff}>";
     static final String[] dfa_7s = {
             "\1\6\3\uffff\1\3\33\uffff\1\2\2\uffff\1\12\1\5\1\7\1\11\3\uffff\1\1\1\uffff\1\10\17\uffff\1\4",
-            "\1\13\4\uffff\1\14",
-            "\1\13\4\uffff\1\14",
-            "\1\16\3\uffff\1\16\3\uffff\1\13\1\15\2\uffff\1\16\21\uffff\1\16\1\uffff\1\16\2\uffff\4\16\3\uffff\3\16\17\uffff\1\16",
+            "\1\14\4\uffff\1\13",
+            "\1\14\4\uffff\1\13",
+            "\1\16\3\uffff\1\16\3\uffff\1\14\1\15\2\uffff\1\16\21\uffff\1\16\1\uffff\1\16\2\uffff\5\16\2\uffff\3\16\17\uffff\1\16",
             "",
             "",
             "",
@@ -27156,14 +27823,14 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             this.transition = dfa_7;
         }
         public String getDescription() {
-            return "1753:1: rule__Greeting__Alternatives : ( ( ruleMultDecVars ) | ( ruleDecVar ) | ( ruleDataType ) | ( ruleDecFunc ) | ( RULE_EOL ) | ( ruleCondition ) | ( ruleSwitchCase ) | ( ruleDecImport ) | ( ruleCallFunc ) | ( ruleCallFor ) | ( ruleVariable ) );";
+            return "1803:1: rule__Greeting__Alternatives : ( ( ruleMultDecVars ) | ( ruleDecVar ) | ( ruleDataType ) | ( ruleDecFunc ) | ( RULE_EOL ) | ( ruleCondition ) | ( ruleSwitchCase ) | ( ruleDecImport ) | ( ruleCallFunc ) | ( ruleCallFor ) | ( ruleVariable ) );";
         }
     }
     static final String dfa_8s = "\20\uffff";
     static final String dfa_9s = "\3\10\1\uffff\1\13\10\14\3\uffff";
     static final String dfa_10s = "\1\56\2\10\1\uffff\1\75\10\14\3\uffff";
-    static final String dfa_11s = "\3\uffff\1\4\11\uffff\1\2\1\3\1\1";
-    static final String dfa_12s = "\5\uffff\1\2\1\6\1\3\1\0\1\7\1\4\1\1\1\5\3\uffff}>";
+    static final String dfa_11s = "\3\uffff\1\4\11\uffff\1\3\1\2\1\1";
+    static final String dfa_12s = "\5\uffff\1\1\1\4\1\7\1\0\1\3\1\5\1\2\1\6\3\uffff}>";
     static final String[] dfa_13s = {
             "\1\3\33\uffff\1\2\11\uffff\1\1",
             "\1\4",
@@ -27204,7 +27871,7 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
             this.transition = dfa_13;
         }
         public String getDescription() {
-            return "1828:1: rule__DecVar__Alternatives : ( ( ( rule__DecVar__DeclarationAssignment_0 ) ) | ( ( rule__DecVar__AssignmentAssignment_1 ) ) | ( ( rule__DecVar__AtribuicaoAssignment_2 ) ) | ( ( rule__DecVar__ReassignmentAssignment_3 ) ) );";
+            return "1878:1: rule__DecVar__Alternatives : ( ( ( rule__DecVar__DeclarationAssignment_0 ) ) | ( ( rule__DecVar__AtribuicaoAssignment_1 ) ) | ( ( rule__DecVar__AssignmentAssignment_2 ) ) | ( ( rule__DecVar__ReassignmentAssignment_3 ) ) );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -27221,30 +27888,13 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                         else if ( (synpred14_InternalGo()) ) {s = 15;}
 
-                        else if ( (synpred15_InternalGo()) ) {s = 13;}
+                        else if ( (synpred16_InternalGo()) ) {s = 13;}
 
                          
                         input.seek(index5_8);
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA5_11 = input.LA(1);
-
-                         
-                        int index5_11 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (LA5_11==RULE_EQUALS) ) {s = 14;}
-
-                        else if ( (synpred14_InternalGo()) ) {s = 15;}
-
-                        else if ( (synpred15_InternalGo()) ) {s = 13;}
-
-                         
-                        input.seek(index5_11);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA5_5 = input.LA(1);
 
                          
@@ -27255,81 +27905,30 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                         else if ( (synpred14_InternalGo()) ) {s = 15;}
 
-                        else if ( (synpred15_InternalGo()) ) {s = 13;}
+                        else if ( (synpred16_InternalGo()) ) {s = 13;}
 
                          
                         input.seek(index5_5);
                         if ( s>=0 ) return s;
                         break;
+                    case 2 : 
+                        int LA5_11 = input.LA(1);
+
+                         
+                        int index5_11 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA5_11==RULE_EQUALS) ) {s = 14;}
+
+                        else if ( (synpred14_InternalGo()) ) {s = 15;}
+
+                        else if ( (synpred16_InternalGo()) ) {s = 13;}
+
+                         
+                        input.seek(index5_11);
+                        if ( s>=0 ) return s;
+                        break;
                     case 3 : 
-                        int LA5_7 = input.LA(1);
-
-                         
-                        int index5_7 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (LA5_7==RULE_EQUALS) ) {s = 14;}
-
-                        else if ( (synpred14_InternalGo()) ) {s = 15;}
-
-                        else if ( (synpred15_InternalGo()) ) {s = 13;}
-
-                         
-                        input.seek(index5_7);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
-                        int LA5_10 = input.LA(1);
-
-                         
-                        int index5_10 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (LA5_10==RULE_EQUALS) ) {s = 14;}
-
-                        else if ( (synpred14_InternalGo()) ) {s = 15;}
-
-                        else if ( (synpred15_InternalGo()) ) {s = 13;}
-
-                         
-                        input.seek(index5_10);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 5 : 
-                        int LA5_12 = input.LA(1);
-
-                         
-                        int index5_12 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (LA5_12==RULE_EQUALS) ) {s = 14;}
-
-                        else if ( (synpred14_InternalGo()) ) {s = 15;}
-
-                        else if ( (synpred15_InternalGo()) ) {s = 13;}
-
-                         
-                        input.seek(index5_12);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 6 : 
-                        int LA5_6 = input.LA(1);
-
-                         
-                        int index5_6 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (LA5_6==RULE_EQUALS) ) {s = 14;}
-
-                        else if ( (synpred14_InternalGo()) ) {s = 15;}
-
-                        else if ( (synpred15_InternalGo()) ) {s = 13;}
-
-                         
-                        input.seek(index5_6);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 7 : 
                         int LA5_9 = input.LA(1);
 
                          
@@ -27340,10 +27939,78 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
 
                         else if ( (synpred14_InternalGo()) ) {s = 15;}
 
-                        else if ( (synpred15_InternalGo()) ) {s = 13;}
+                        else if ( (synpred16_InternalGo()) ) {s = 13;}
 
                          
                         input.seek(index5_9);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
+                        int LA5_6 = input.LA(1);
+
+                         
+                        int index5_6 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA5_6==RULE_EQUALS) ) {s = 14;}
+
+                        else if ( (synpred14_InternalGo()) ) {s = 15;}
+
+                        else if ( (synpred16_InternalGo()) ) {s = 13;}
+
+                         
+                        input.seek(index5_6);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 5 : 
+                        int LA5_10 = input.LA(1);
+
+                         
+                        int index5_10 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA5_10==RULE_EQUALS) ) {s = 14;}
+
+                        else if ( (synpred14_InternalGo()) ) {s = 15;}
+
+                        else if ( (synpred16_InternalGo()) ) {s = 13;}
+
+                         
+                        input.seek(index5_10);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 6 : 
+                        int LA5_12 = input.LA(1);
+
+                         
+                        int index5_12 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA5_12==RULE_EQUALS) ) {s = 14;}
+
+                        else if ( (synpred14_InternalGo()) ) {s = 15;}
+
+                        else if ( (synpred16_InternalGo()) ) {s = 13;}
+
+                         
+                        input.seek(index5_12);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 7 : 
+                        int LA5_7 = input.LA(1);
+
+                         
+                        int index5_7 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA5_7==RULE_EQUALS) ) {s = 14;}
+
+                        else if ( (synpred14_InternalGo()) ) {s = 15;}
+
+                        else if ( (synpred16_InternalGo()) ) {s = 13;}
+
+                         
+                        input.seek(index5_7);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -27413,5 +28080,6 @@ public class InternalGoParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0001479000082110L,0x0000000000000001L});
     public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x3F80200000008000L});
+    public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x00014F9000000110L,0x0000000000000001L});
 
 }

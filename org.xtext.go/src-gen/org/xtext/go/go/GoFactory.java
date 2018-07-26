@@ -339,6 +339,24 @@ public interface GoFactory extends EFactory
   DecFunc createDecFunc();
 
   /**
+   * Returns a new object of class '<em>Function Body</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Function Body</em>'.
+   * @generated
+   */
+  FunctionBody createFunctionBody();
+
+  /**
+   * Returns a new object of class '<em>Function Return</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Function Return</em>'.
+   * @generated
+   */
+  FunctionReturn createFunctionReturn();
+
+  /**
    * Returns a new object of class '<em>Call Func</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

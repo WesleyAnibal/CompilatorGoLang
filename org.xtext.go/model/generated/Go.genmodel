@@ -16,8 +16,8 @@
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//DecVar">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecVar/declaration"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecVar/assignment"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecVar/atribuicao"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecVar/assignment"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecVar/reassignment"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//AtribVar">
@@ -114,7 +114,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecFunc/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecFunc/param"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//DecFunc/returnType"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecFunc/args"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//DecFunc/body"/>
+    </genClasses>
+    <genClasses ecoreClass="Go.ecore#//FunctionBody">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//FunctionBody/args"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//FunctionBody/ret"/>
+    </genClasses>
+    <genClasses ecoreClass="Go.ecore#//FunctionReturn">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//FunctionReturn/returnType"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//CallFunc">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//CallFunc/nameFunc"/>

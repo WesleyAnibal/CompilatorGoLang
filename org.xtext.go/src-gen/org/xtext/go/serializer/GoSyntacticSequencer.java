@@ -108,6 +108,8 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getPlusOneToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getPontoVirgulaRule())
 			return getPontoVirgulaToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getRETURNRule())
+			return getRETURNToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSWITCHRule())
 			return getSWITCHToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getTypesRule())
@@ -149,7 +151,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * terminal Closed_Key:
-	 * 	"}";
+	 * 	"\n"?"}";
 	 */
 	protected String getClosed_KeyToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
@@ -338,7 +340,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * terminal Open_Key:
-	 * 	"{";
+	 * 	"\n"?"{";
 	 */
 	protected String getOpen_KeyToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
@@ -414,6 +416,16 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return ";";
+	}
+	
+	/**
+	 * RETURN:
+	 * 	"return";
+	 */
+	protected String getRETURNToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "return";
 	}
 	
 	/**
@@ -537,7 +549,7 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     Plus | Minus
+	 *     Minus | Plus
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) Open_parentheses o=Operations
