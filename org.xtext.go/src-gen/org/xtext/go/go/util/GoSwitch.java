@@ -165,8 +165,14 @@ public class GoSwitch<T1> extends Switch<T1>
       {
         Variable variable = (Variable)theEObject;
         T1 result = caseVariable(variable);
-        if (result == null) result = caseGreeting(variable);
         if (result == null) result = caseAtrib_Aux(variable);
+        if (result == null) result = caseSwitchCase(variable);
+        if (result == null) result = caseOperationsOneEquals(variable);
+        if (result == null) result = caseoperationsOne(variable);
+        if (result == null) result = caseExpression(variable);
+        if (result == null) result = casevarFor(variable);
+        if (result == null) result = caseCallFor(variable);
+        if (result == null) result = caseGreeting(variable);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -174,6 +180,9 @@ public class GoSwitch<T1> extends Switch<T1>
       {
         Atrib atrib = (Atrib)theEObject;
         T1 result = caseAtrib(atrib);
+        if (result == null) result = casevarFor(atrib);
+        if (result == null) result = caseCallFor(atrib);
+        if (result == null) result = caseGreeting(atrib);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -181,6 +190,9 @@ public class GoSwitch<T1> extends Switch<T1>
       {
         ReAtrib reAtrib = (ReAtrib)theEObject;
         T1 result = caseReAtrib(reAtrib);
+        if (result == null) result = casevarFor(reAtrib);
+        if (result == null) result = caseCallFor(reAtrib);
+        if (result == null) result = caseGreeting(reAtrib);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -252,9 +264,6 @@ public class GoSwitch<T1> extends Switch<T1>
       {
         OperationsOneEquals operationsOneEquals = (OperationsOneEquals)theEObject;
         T1 result = caseOperationsOneEquals(operationsOneEquals);
-        if (result == null) result = casevarFor(operationsOneEquals);
-        if (result == null) result = caseCallFor(operationsOneEquals);
-        if (result == null) result = caseGreeting(operationsOneEquals);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -385,9 +394,6 @@ public class GoSwitch<T1> extends Switch<T1>
       {
         operationsOne operationsOne = (operationsOne)theEObject;
         T1 result = caseoperationsOne(operationsOne);
-        if (result == null) result = casevarFor(operationsOne);
-        if (result == null) result = caseCallFor(operationsOne);
-        if (result == null) result = caseGreeting(operationsOne);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

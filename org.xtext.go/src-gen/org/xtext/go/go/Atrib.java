@@ -18,13 +18,14 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.go.go.Atrib#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.go.go.Atrib#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.go.go.Atrib#getAtrib <em>Atrib</em>}</li>
+ *   <li>{@link org.xtext.go.go.Atrib#getK <em>K</em>}</li>
  * </ul>
  *
  * @see org.xtext.go.go.GoPackage#getAtrib()
  * @model
  * @generated
  */
-public interface Atrib extends EObject
+public interface Atrib extends varFor
 {
   /**
    * Returns the value of the '<em><b>Modifier</b></em>' attribute.
@@ -129,5 +130,31 @@ public interface Atrib extends EObject
    * @generated
    */
   void setAtrib(Atrib_Aux value);
+
+  /**
+   * Returns the value of the '<em><b>K</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>K</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>K</em>' containment reference.
+   * @see #setK(EObject)
+   * @see org.xtext.go.go.GoPackage#getAtrib_K()
+   * @model containment="true"
+   * @generated
+   */
+  EObject getK();
+
+  /**
+   * Sets the value of the '{@link org.xtext.go.go.Atrib#getK <em>K</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>K</em>' containment reference.
+   * @see #getK()
+   * @generated
+   */
+  void setK(EObject value);
 
 } // Atrib

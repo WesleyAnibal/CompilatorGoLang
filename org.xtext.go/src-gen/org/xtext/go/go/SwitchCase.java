@@ -9,14 +9,6 @@ package org.xtext.go.go;
  * A representation of the model object '<em><b>Switch Case</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link org.xtext.go.go.SwitchCase#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.go.go.SwitchCase#getCas <em>Cas</em>}</li>
- *   <li>{@link org.xtext.go.go.SwitchCase#getK <em>K</em>}</li>
- * </ul>
  *
  * @see org.xtext.go.go.GoPackage#getSwitchCase()
  * @model
@@ -24,82 +16,4 @@ package org.xtext.go.go;
  */
 public interface SwitchCase extends Greeting
 {
-  /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see org.xtext.go.go.GoPackage#getSwitchCase_Name()
-   * @model
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link org.xtext.go.go.SwitchCase#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
-
-  /**
-   * Returns the value of the '<em><b>Cas</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Cas</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Cas</em>' containment reference.
-   * @see #setCas(Cases)
-   * @see org.xtext.go.go.GoPackage#getSwitchCase_Cas()
-   * @model containment="true"
-   * @generated
-   */
-  Cases getCas();
-
-  /**
-   * Sets the value of the '{@link org.xtext.go.go.SwitchCase#getCas <em>Cas</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Cas</em>' containment reference.
-   * @see #getCas()
-   * @generated
-   */
-  void setCas(Cases value);
-
-  /**
-   * Returns the value of the '<em><b>K</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>K</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>K</em>' containment reference.
-   * @see #setK(Greeting)
-   * @see org.xtext.go.go.GoPackage#getSwitchCase_K()
-   * @model containment="true"
-   * @generated
-   */
-  Greeting getK();
-
-  /**
-   * Sets the value of the '{@link org.xtext.go.go.SwitchCase#getK <em>K</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>K</em>' containment reference.
-   * @see #getK()
-   * @generated
-   */
-  void setK(Greeting value);
-
 } // SwitchCase

@@ -51,7 +51,8 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOperatorAccess().getAlternatives(), "rule__Operator__Alternatives");
 					put(grammarAccess.getOperationsOneAccess().getAlternatives_1(), "rule__OperationsOne__Alternatives_1");
 					put(grammarAccess.getVarForAccess().getAlternatives(), "rule__VarFor__Alternatives");
-					put(grammarAccess.getVarForAccess().getAlternatives_1_10(), "rule__VarFor__Alternatives_1_10");
+					put(grammarAccess.getVarForAccess().getAlternatives_1_0(), "rule__VarFor__Alternatives_1_0");
+					put(grammarAccess.getVarForAccess().getKAlternatives_1_4_0(), "rule__VarFor__KAlternatives_1_4_0");
 					put(grammarAccess.getLiteralAccess().getAlternatives(), "rule__Literal__Alternatives");
 					put(grammarAccess.getTerminalsAccess().getAlternatives(), "rule__Terminals__Alternatives");
 					put(grammarAccess.getTypesAccess().getAlternatives(), "rule__Types__Alternatives");
@@ -140,7 +141,6 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDecVarsAccess().getVarsAssignment_1_1(), "rule__DecVars__VarsAssignment_1_1");
 					put(grammarAccess.getDecVarsAccess().getAtrbAssignment_3(), "rule__DecVars__AtrbAssignment_3");
 					put(grammarAccess.getDecVarsAccess().getAtrbAssignment_4_1(), "rule__DecVars__AtrbAssignment_4_1");
-					put(grammarAccess.getSwitchCaseAccess().getNameAssignment_1(), "rule__SwitchCase__NameAssignment_1");
 					put(grammarAccess.getSwitchCaseAccess().getCasAssignment_3(), "rule__SwitchCase__CasAssignment_3");
 					put(grammarAccess.getSwitchCaseAccess().getKAssignment_4_2(), "rule__SwitchCase__KAssignment_4_2");
 					put(grammarAccess.getCasesAccess().getXAssignment_1(), "rule__Cases__XAssignment_1");
@@ -150,7 +150,6 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParamsAccess().getParamsAssignment_2_1(), "rule__Params__ParamsAssignment_2_1");
 					put(grammarAccess.getParamsAccess().getTypeAssignment_2_2(), "rule__Params__TypeAssignment_2_2");
 					put(grammarAccess.getStrAccess().getSAssignment(), "rule__Str__SAssignment");
-					put(grammarAccess.getOperationsOneEqualsAccess().getNameAssignment_0(), "rule__OperationsOneEquals__NameAssignment_0");
 					put(grammarAccess.getOperationsOneEqualsAccess().getNAssignment_2_1(), "rule__OperationsOneEquals__NAssignment_2_1");
 					put(grammarAccess.getNumbersAccess().getIntAssignment_0(), "rule__Numbers__IntAssignment_0");
 					put(grammarAccess.getNumbersAccess().getDAssignment_1(), "rule__Numbers__DAssignment_1");
@@ -183,11 +182,8 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOrExpressionAccess().getRightAssignment_1_2(), "rule__OrExpression__RightAssignment_1_2");
 					put(grammarAccess.getAndExpressionAccess().getRightAssignment_1_2(), "rule__AndExpression__RightAssignment_1_2");
 					put(grammarAccess.getComparisonExpressionAccess().getRightAssignment_1_2(), "rule__ComparisonExpression__RightAssignment_1_2");
-					put(grammarAccess.getOperationsOneAccess().getNameAssignment_0(), "rule__OperationsOne__NameAssignment_0");
-					put(grammarAccess.getVarForAccess().getVarAssignment_1_1(), "rule__VarFor__VarAssignment_1_1");
-					put(grammarAccess.getVarForAccess().getAtrbAssignment_1_4(), "rule__VarFor__AtrbAssignment_1_4");
-					put(grammarAccess.getVarForAccess().getRightAssignment_1_6(), "rule__VarFor__RightAssignment_1_6");
-					put(grammarAccess.getVarForAccess().getLeftAssignment_1_8(), "rule__VarFor__LeftAssignment_1_8");
+					put(grammarAccess.getVarForAccess().getXAssignment_1_2(), "rule__VarFor__XAssignment_1_2");
+					put(grammarAccess.getVarForAccess().getKAssignment_1_4(), "rule__VarFor__KAssignment_1_4");
 					put(grammarAccess.getLiteralAccess().getValueAssignment_0_1(), "rule__Literal__ValueAssignment_0_1");
 					put(grammarAccess.getDecFuncAccess().getNameAssignment_1(), "rule__DecFunc__NameAssignment_1");
 					put(grammarAccess.getDecFuncAccess().getParamAssignment_3(), "rule__DecFunc__ParamAssignment_3");

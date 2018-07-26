@@ -272,13 +272,76 @@ public interface GoPackage extends EPackage
   int VARIABLE = 6;
 
   /**
+   * The feature id for the '<em><b>X</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__X = GREETING_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Boolean</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__BOOLEAN = GREETING_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Sum</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__SUM = GREETING_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__SUB = GREETING_FEATURE_COUNT + 3;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VARIABLE__NAME = GREETING_FEATURE_COUNT + 0;
+  int VARIABLE__NAME = GREETING_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Cas</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__CAS = GREETING_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>K</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__K = GREETING_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>N</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__N = GREETING_FEATURE_COUNT + 7;
 
   /**
    * The number of structural features of the '<em>Variable</em>' class.
@@ -287,7 +350,63 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VARIABLE_FEATURE_COUNT = GREETING_FEATURE_COUNT + 1;
+  int VARIABLE_FEATURE_COUNT = GREETING_FEATURE_COUNT + 8;
+
+  /**
+   * The meta object id for the '{@link org.xtext.go.go.impl.CallForImpl <em>Call For</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.go.go.impl.CallForImpl
+   * @see org.xtext.go.go.impl.GoPackageImpl#getCallFor()
+   * @generated
+   */
+  int CALL_FOR = 31;
+
+  /**
+   * The feature id for the '<em><b>X</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CALL_FOR__X = GREETING_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Call For</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CALL_FOR_FEATURE_COUNT = GREETING_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.go.go.impl.varForImpl <em>var For</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.go.go.impl.varForImpl
+   * @see org.xtext.go.go.impl.GoPackageImpl#getvarFor()
+   * @generated
+   */
+  int VAR_FOR = 33;
+
+  /**
+   * The feature id for the '<em><b>X</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_FOR__X = CALL_FOR__X;
+
+  /**
+   * The number of structural features of the '<em>var For</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_FOR_FEATURE_COUNT = CALL_FOR_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.AtribImpl <em>Atrib</em>}' class.
@@ -300,13 +419,22 @@ public interface GoPackage extends EPackage
   int ATRIB = 7;
 
   /**
+   * The feature id for the '<em><b>X</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATRIB__X = VAR_FOR__X;
+
+  /**
    * The feature id for the '<em><b>Modifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATRIB__MODIFIER = 0;
+  int ATRIB__MODIFIER = VAR_FOR_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -315,7 +443,7 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATRIB__NAME = 1;
+  int ATRIB__NAME = VAR_FOR_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -324,7 +452,7 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATRIB__TYPE = 2;
+  int ATRIB__TYPE = VAR_FOR_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Atrib</b></em>' containment reference.
@@ -333,7 +461,16 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATRIB__ATRIB = 3;
+  int ATRIB__ATRIB = VAR_FOR_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>K</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATRIB__K = VAR_FOR_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Atrib</em>' class.
@@ -342,7 +479,7 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATRIB_FEATURE_COUNT = 4;
+  int ATRIB_FEATURE_COUNT = VAR_FOR_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.ReAtribImpl <em>Re Atrib</em>}' class.
@@ -355,13 +492,22 @@ public interface GoPackage extends EPackage
   int RE_ATRIB = 8;
 
   /**
+   * The feature id for the '<em><b>X</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RE_ATRIB__X = VAR_FOR__X;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RE_ATRIB__NAME = 0;
+  int RE_ATRIB__NAME = VAR_FOR_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Atrib</b></em>' containment reference.
@@ -370,7 +516,16 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RE_ATRIB__ATRIB = 1;
+  int RE_ATRIB__ATRIB = VAR_FOR_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>K</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RE_ATRIB__K = VAR_FOR_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Re Atrib</em>' class.
@@ -379,7 +534,7 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RE_ATRIB_FEATURE_COUNT = 2;
+  int RE_ATRIB_FEATURE_COUNT = VAR_FOR_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.MultDecVarsImpl <em>Mult Dec Vars</em>}' class.
@@ -475,40 +630,13 @@ public interface GoPackage extends EPackage
   int SWITCH_CASE = 11;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SWITCH_CASE__NAME = GREETING_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Cas</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SWITCH_CASE__CAS = GREETING_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>K</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SWITCH_CASE__K = GREETING_FEATURE_COUNT + 2;
-
-  /**
    * The number of structural features of the '<em>Switch Case</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SWITCH_CASE_FEATURE_COUNT = GREETING_FEATURE_COUNT + 3;
+  int SWITCH_CASE_FEATURE_COUNT = GREETING_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.CasesImpl <em>Cases</em>}' class.
@@ -651,98 +779,6 @@ public interface GoPackage extends EPackage
   int STR_FEATURE_COUNT = TYPE_VALUE_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.go.go.impl.CallForImpl <em>Call For</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.go.go.impl.CallForImpl
-   * @see org.xtext.go.go.impl.GoPackageImpl#getCallFor()
-   * @generated
-   */
-  int CALL_FOR = 31;
-
-  /**
-   * The feature id for the '<em><b>X</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_FOR__X = GREETING_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Call For</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALL_FOR_FEATURE_COUNT = GREETING_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.go.go.impl.varForImpl <em>var For</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.go.go.impl.varForImpl
-   * @see org.xtext.go.go.impl.GoPackageImpl#getvarFor()
-   * @generated
-   */
-  int VAR_FOR = 33;
-
-  /**
-   * The feature id for the '<em><b>X</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VAR_FOR__X = CALL_FOR__X;
-
-  /**
-   * The feature id for the '<em><b>Var</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VAR_FOR__VAR = CALL_FOR_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Atrb</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VAR_FOR__ATRB = CALL_FOR_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VAR_FOR__RIGHT = CALL_FOR_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VAR_FOR__LEFT = CALL_FOR_FEATURE_COUNT + 3;
-
-  /**
-   * The number of structural features of the '<em>var For</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VAR_FOR_FEATURE_COUNT = CALL_FOR_FEATURE_COUNT + 4;
-
-  /**
    * The meta object id for the '{@link org.xtext.go.go.impl.OperationsOneEqualsImpl <em>Operations One Equals</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -753,76 +789,13 @@ public interface GoPackage extends EPackage
   int OPERATIONS_ONE_EQUALS = 17;
 
   /**
-   * The feature id for the '<em><b>X</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATIONS_ONE_EQUALS__X = VAR_FOR__X;
-
-  /**
-   * The feature id for the '<em><b>Var</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATIONS_ONE_EQUALS__VAR = VAR_FOR__VAR;
-
-  /**
-   * The feature id for the '<em><b>Atrb</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATIONS_ONE_EQUALS__ATRB = VAR_FOR__ATRB;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATIONS_ONE_EQUALS__RIGHT = VAR_FOR__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATIONS_ONE_EQUALS__LEFT = VAR_FOR__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATIONS_ONE_EQUALS__NAME = VAR_FOR_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>N</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATIONS_ONE_EQUALS__N = VAR_FOR_FEATURE_COUNT + 1;
-
-  /**
    * The number of structural features of the '<em>Operations One Equals</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OPERATIONS_ONE_EQUALS_FEATURE_COUNT = VAR_FOR_FEATURE_COUNT + 2;
+  int OPERATIONS_ONE_EQUALS_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.NumbersImpl <em>Numbers</em>}' class.
@@ -853,49 +826,13 @@ public interface GoPackage extends EPackage
   int NUMBERS__X = TYPE_VALUE_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Var</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NUMBERS__VAR = TYPE_VALUE_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Atrb</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NUMBERS__ATRB = TYPE_VALUE_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NUMBERS__RIGHT = TYPE_VALUE_FEATURE_COUNT + 4;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NUMBERS__LEFT = TYPE_VALUE_FEATURE_COUNT + 5;
-
-  /**
    * The feature id for the '<em><b>Boolean</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NUMBERS__BOOLEAN = TYPE_VALUE_FEATURE_COUNT + 6;
+  int NUMBERS__BOOLEAN = TYPE_VALUE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Sum</b></em>' containment reference.
@@ -904,7 +841,7 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NUMBERS__SUM = TYPE_VALUE_FEATURE_COUNT + 7;
+  int NUMBERS__SUM = TYPE_VALUE_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Sub</b></em>' containment reference.
@@ -913,7 +850,7 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NUMBERS__SUB = TYPE_VALUE_FEATURE_COUNT + 8;
+  int NUMBERS__SUB = TYPE_VALUE_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Int</b></em>' containment reference.
@@ -922,7 +859,7 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NUMBERS__INT = TYPE_VALUE_FEATURE_COUNT + 9;
+  int NUMBERS__INT = TYPE_VALUE_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>D</b></em>' containment reference.
@@ -931,7 +868,7 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NUMBERS__D = TYPE_VALUE_FEATURE_COUNT + 10;
+  int NUMBERS__D = TYPE_VALUE_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>Numbers</em>' class.
@@ -940,7 +877,7 @@ public interface GoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NUMBERS_FEATURE_COUNT = TYPE_VALUE_FEATURE_COUNT + 11;
+  int NUMBERS_FEATURE_COUNT = TYPE_VALUE_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.IntgImpl <em>Intg</em>}' class.
@@ -1270,42 +1207,6 @@ public interface GoPackage extends EPackage
   int EXPRESSION__X = VAR_FOR__X;
 
   /**
-   * The feature id for the '<em><b>Var</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__VAR = VAR_FOR__VAR;
-
-  /**
-   * The feature id for the '<em><b>Atrb</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__ATRB = VAR_FOR__ATRB;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__RIGHT = VAR_FOR__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION__LEFT = VAR_FOR__LEFT;
-
-  /**
    * The feature id for the '<em><b>Boolean</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1352,67 +1253,13 @@ public interface GoPackage extends EPackage
   int OPERATIONS_ONE = 32;
 
   /**
-   * The feature id for the '<em><b>X</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATIONS_ONE__X = VAR_FOR__X;
-
-  /**
-   * The feature id for the '<em><b>Var</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATIONS_ONE__VAR = VAR_FOR__VAR;
-
-  /**
-   * The feature id for the '<em><b>Atrb</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATIONS_ONE__ATRB = VAR_FOR__ATRB;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATIONS_ONE__RIGHT = VAR_FOR__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATIONS_ONE__LEFT = VAR_FOR__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPERATIONS_ONE__NAME = VAR_FOR_FEATURE_COUNT + 0;
-
-  /**
    * The number of structural features of the '<em>operations One</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OPERATIONS_ONE_FEATURE_COUNT = VAR_FOR_FEATURE_COUNT + 1;
+  int OPERATIONS_ONE_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.DecFuncImpl <em>Dec Func</em>}' class.
@@ -1582,42 +1429,6 @@ public interface GoPackage extends EPackage
   int ADDITION__X = EXPRESSION__X;
 
   /**
-   * The feature id for the '<em><b>Var</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ADDITION__VAR = EXPRESSION__VAR;
-
-  /**
-   * The feature id for the '<em><b>Atrb</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ADDITION__ATRB = EXPRESSION__ATRB;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ADDITION__RIGHT = EXPRESSION__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ADDITION__LEFT = EXPRESSION__LEFT;
-
-  /**
    * The feature id for the '<em><b>Boolean</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1645,13 +1456,31 @@ public interface GoPackage extends EPackage
   int ADDITION__SUB = EXPRESSION__SUB;
 
   /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITION__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Addition</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ADDITION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+  int ADDITION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.SubtrationImpl <em>Subtration</em>}' class.
@@ -1671,42 +1500,6 @@ public interface GoPackage extends EPackage
    * @ordered
    */
   int SUBTRATION__X = EXPRESSION__X;
-
-  /**
-   * The feature id for the '<em><b>Var</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SUBTRATION__VAR = EXPRESSION__VAR;
-
-  /**
-   * The feature id for the '<em><b>Atrb</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SUBTRATION__ATRB = EXPRESSION__ATRB;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SUBTRATION__RIGHT = EXPRESSION__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SUBTRATION__LEFT = EXPRESSION__LEFT;
 
   /**
    * The feature id for the '<em><b>Boolean</b></em>' containment reference.
@@ -1736,13 +1529,31 @@ public interface GoPackage extends EPackage
   int SUBTRATION__SUB = EXPRESSION__SUB;
 
   /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUBTRATION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUBTRATION__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Subtration</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SUBTRATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+  int SUBTRATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.MultiplicationImpl <em>Multiplication</em>}' class.
@@ -1762,42 +1573,6 @@ public interface GoPackage extends EPackage
    * @ordered
    */
   int MULTIPLICATION__X = EXPRESSION__X;
-
-  /**
-   * The feature id for the '<em><b>Var</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULTIPLICATION__VAR = EXPRESSION__VAR;
-
-  /**
-   * The feature id for the '<em><b>Atrb</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULTIPLICATION__ATRB = EXPRESSION__ATRB;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULTIPLICATION__RIGHT = EXPRESSION__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MULTIPLICATION__LEFT = EXPRESSION__LEFT;
 
   /**
    * The feature id for the '<em><b>Boolean</b></em>' containment reference.
@@ -1827,13 +1602,31 @@ public interface GoPackage extends EPackage
   int MULTIPLICATION__SUB = EXPRESSION__SUB;
 
   /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATION__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Multiplication</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MULTIPLICATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+  int MULTIPLICATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.DivisionImpl <em>Division</em>}' class.
@@ -1853,42 +1646,6 @@ public interface GoPackage extends EPackage
    * @ordered
    */
   int DIVISION__X = EXPRESSION__X;
-
-  /**
-   * The feature id for the '<em><b>Var</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DIVISION__VAR = EXPRESSION__VAR;
-
-  /**
-   * The feature id for the '<em><b>Atrb</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DIVISION__ATRB = EXPRESSION__ATRB;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DIVISION__RIGHT = EXPRESSION__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DIVISION__LEFT = EXPRESSION__LEFT;
 
   /**
    * The feature id for the '<em><b>Boolean</b></em>' containment reference.
@@ -1918,13 +1675,31 @@ public interface GoPackage extends EPackage
   int DIVISION__SUB = EXPRESSION__SUB;
 
   /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIVISION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIVISION__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Division</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DIVISION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+  int DIVISION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.OrExpressionImpl <em>Or Expression</em>}' class.
@@ -1944,42 +1719,6 @@ public interface GoPackage extends EPackage
    * @ordered
    */
   int OR_EXPRESSION__X = EXPRESSION__X;
-
-  /**
-   * The feature id for the '<em><b>Var</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OR_EXPRESSION__VAR = EXPRESSION__VAR;
-
-  /**
-   * The feature id for the '<em><b>Atrb</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OR_EXPRESSION__ATRB = EXPRESSION__ATRB;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OR_EXPRESSION__RIGHT = EXPRESSION__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OR_EXPRESSION__LEFT = EXPRESSION__LEFT;
 
   /**
    * The feature id for the '<em><b>Boolean</b></em>' containment reference.
@@ -2009,13 +1748,31 @@ public interface GoPackage extends EPackage
   int OR_EXPRESSION__SUB = EXPRESSION__SUB;
 
   /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OR_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OR_EXPRESSION__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Or Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OR_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+  int OR_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.AndExpressionImpl <em>And Expression</em>}' class.
@@ -2035,42 +1792,6 @@ public interface GoPackage extends EPackage
    * @ordered
    */
   int AND_EXPRESSION__X = EXPRESSION__X;
-
-  /**
-   * The feature id for the '<em><b>Var</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AND_EXPRESSION__VAR = EXPRESSION__VAR;
-
-  /**
-   * The feature id for the '<em><b>Atrb</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AND_EXPRESSION__ATRB = EXPRESSION__ATRB;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AND_EXPRESSION__RIGHT = EXPRESSION__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AND_EXPRESSION__LEFT = EXPRESSION__LEFT;
 
   /**
    * The feature id for the '<em><b>Boolean</b></em>' containment reference.
@@ -2100,13 +1821,31 @@ public interface GoPackage extends EPackage
   int AND_EXPRESSION__SUB = EXPRESSION__SUB;
 
   /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AND_EXPRESSION__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>And Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int AND_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+  int AND_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.ComparisonExpressionImpl <em>Comparison Expression</em>}' class.
@@ -2126,42 +1865,6 @@ public interface GoPackage extends EPackage
    * @ordered
    */
   int COMPARISON_EXPRESSION__X = EXPRESSION__X;
-
-  /**
-   * The feature id for the '<em><b>Var</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARISON_EXPRESSION__VAR = EXPRESSION__VAR;
-
-  /**
-   * The feature id for the '<em><b>Atrb</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARISON_EXPRESSION__ATRB = EXPRESSION__ATRB;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARISON_EXPRESSION__RIGHT = EXPRESSION__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPARISON_EXPRESSION__LEFT = EXPRESSION__LEFT;
 
   /**
    * The feature id for the '<em><b>Boolean</b></em>' containment reference.
@@ -2191,13 +1894,31 @@ public interface GoPackage extends EPackage
   int COMPARISON_EXPRESSION__SUB = EXPRESSION__SUB;
 
   /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPARISON_EXPRESSION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPARISON_EXPRESSION__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Comparison Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMPARISON_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+  int COMPARISON_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.LiteralImpl <em>Literal</em>}' class.
@@ -2217,42 +1938,6 @@ public interface GoPackage extends EPackage
    * @ordered
    */
   int LITERAL__X = EXPRESSION__X;
-
-  /**
-   * The feature id for the '<em><b>Var</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL__VAR = EXPRESSION__VAR;
-
-  /**
-   * The feature id for the '<em><b>Atrb</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL__ATRB = EXPRESSION__ATRB;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL__RIGHT = EXPRESSION__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL__LEFT = EXPRESSION__LEFT;
 
   /**
    * The feature id for the '<em><b>Boolean</b></em>' containment reference.
@@ -2492,6 +2177,39 @@ public interface GoPackage extends EPackage
   EAttribute getVariable_Name();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Variable#getCas <em>Cas</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Cas</em>'.
+   * @see org.xtext.go.go.Variable#getCas()
+   * @see #getVariable()
+   * @generated
+   */
+  EReference getVariable_Cas();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Variable#getK <em>K</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>K</em>'.
+   * @see org.xtext.go.go.Variable#getK()
+   * @see #getVariable()
+   * @generated
+   */
+  EReference getVariable_K();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Variable#getN <em>N</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>N</em>'.
+   * @see org.xtext.go.go.Variable#getN()
+   * @see #getVariable()
+   * @generated
+   */
+  EReference getVariable_N();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.go.go.Atrib <em>Atrib</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2546,6 +2264,17 @@ public interface GoPackage extends EPackage
   EReference getAtrib_Atrib();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Atrib#getK <em>K</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>K</em>'.
+   * @see org.xtext.go.go.Atrib#getK()
+   * @see #getAtrib()
+   * @generated
+   */
+  EReference getAtrib_K();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.go.go.ReAtrib <em>Re Atrib</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2576,6 +2305,17 @@ public interface GoPackage extends EPackage
    * @generated
    */
   EReference getReAtrib_Atrib();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.ReAtrib#getK <em>K</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>K</em>'.
+   * @see org.xtext.go.go.ReAtrib#getK()
+   * @see #getReAtrib()
+   * @generated
+   */
+  EReference getReAtrib_K();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.MultDecVars <em>Mult Dec Vars</em>}'.
@@ -2661,39 +2401,6 @@ public interface GoPackage extends EPackage
    * @generated
    */
   EClass getSwitchCase();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.go.go.SwitchCase#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.go.go.SwitchCase#getName()
-   * @see #getSwitchCase()
-   * @generated
-   */
-  EAttribute getSwitchCase_Name();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.go.go.SwitchCase#getCas <em>Cas</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Cas</em>'.
-   * @see org.xtext.go.go.SwitchCase#getCas()
-   * @see #getSwitchCase()
-   * @generated
-   */
-  EReference getSwitchCase_Cas();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.go.go.SwitchCase#getK <em>K</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>K</em>'.
-   * @see org.xtext.go.go.SwitchCase#getK()
-   * @see #getSwitchCase()
-   * @generated
-   */
-  EReference getSwitchCase_K();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.Cases <em>Cases</em>}'.
@@ -2809,28 +2516,6 @@ public interface GoPackage extends EPackage
    * @generated
    */
   EClass getOperationsOneEquals();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.go.go.OperationsOneEquals#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.go.go.OperationsOneEquals#getName()
-   * @see #getOperationsOneEquals()
-   * @generated
-   */
-  EAttribute getOperationsOneEquals_Name();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.go.go.OperationsOneEquals#getN <em>N</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>N</em>'.
-   * @see org.xtext.go.go.OperationsOneEquals#getN()
-   * @see #getOperationsOneEquals()
-   * @generated
-   */
-  EReference getOperationsOneEquals_N();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.Numbers <em>Numbers</em>}'.
@@ -3159,17 +2844,6 @@ public interface GoPackage extends EPackage
   EClass getoperationsOne();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.go.go.operationsOne#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.go.go.operationsOne#getName()
-   * @see #getoperationsOne()
-   * @generated
-   */
-  EAttribute getoperationsOne_Name();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.go.go.varFor <em>var For</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3178,50 +2852,6 @@ public interface GoPackage extends EPackage
    * @generated
    */
   EClass getvarFor();
-
-  /**
-   * Returns the meta object for the attribute list '{@link org.xtext.go.go.varFor#getVar <em>Var</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Var</em>'.
-   * @see org.xtext.go.go.varFor#getVar()
-   * @see #getvarFor()
-   * @generated
-   */
-  EAttribute getvarFor_Var();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.go.go.varFor#getAtrb <em>Atrb</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Atrb</em>'.
-   * @see org.xtext.go.go.varFor#getAtrb()
-   * @see #getvarFor()
-   * @generated
-   */
-  EReference getvarFor_Atrb();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.go.go.varFor#getRight <em>Right</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see org.xtext.go.go.varFor#getRight()
-   * @see #getvarFor()
-   * @generated
-   */
-  EReference getvarFor_Right();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.go.go.varFor#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.xtext.go.go.varFor#getLeft()
-   * @see #getvarFor()
-   * @generated
-   */
-  EReference getvarFor_Left();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.DecFunc <em>Dec Func</em>}'.
@@ -3362,6 +2992,28 @@ public interface GoPackage extends EPackage
   EClass getAddition();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Addition#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.go.go.Addition#getLeft()
+   * @see #getAddition()
+   * @generated
+   */
+  EReference getAddition_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Addition#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.go.go.Addition#getRight()
+   * @see #getAddition()
+   * @generated
+   */
+  EReference getAddition_Right();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.go.go.Subtration <em>Subtration</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3370,6 +3022,28 @@ public interface GoPackage extends EPackage
    * @generated
    */
   EClass getSubtration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Subtration#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.go.go.Subtration#getLeft()
+   * @see #getSubtration()
+   * @generated
+   */
+  EReference getSubtration_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Subtration#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.go.go.Subtration#getRight()
+   * @see #getSubtration()
+   * @generated
+   */
+  EReference getSubtration_Right();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.Multiplication <em>Multiplication</em>}'.
@@ -3382,6 +3056,28 @@ public interface GoPackage extends EPackage
   EClass getMultiplication();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Multiplication#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.go.go.Multiplication#getLeft()
+   * @see #getMultiplication()
+   * @generated
+   */
+  EReference getMultiplication_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Multiplication#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.go.go.Multiplication#getRight()
+   * @see #getMultiplication()
+   * @generated
+   */
+  EReference getMultiplication_Right();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.go.go.Division <em>Division</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3390,6 +3086,28 @@ public interface GoPackage extends EPackage
    * @generated
    */
   EClass getDivision();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Division#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.go.go.Division#getLeft()
+   * @see #getDivision()
+   * @generated
+   */
+  EReference getDivision_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Division#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.go.go.Division#getRight()
+   * @see #getDivision()
+   * @generated
+   */
+  EReference getDivision_Right();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.OrExpression <em>Or Expression</em>}'.
@@ -3402,6 +3120,28 @@ public interface GoPackage extends EPackage
   EClass getOrExpression();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.OrExpression#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.go.go.OrExpression#getLeft()
+   * @see #getOrExpression()
+   * @generated
+   */
+  EReference getOrExpression_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.OrExpression#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.go.go.OrExpression#getRight()
+   * @see #getOrExpression()
+   * @generated
+   */
+  EReference getOrExpression_Right();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.go.go.AndExpression <em>And Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3412,6 +3152,28 @@ public interface GoPackage extends EPackage
   EClass getAndExpression();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.AndExpression#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.go.go.AndExpression#getLeft()
+   * @see #getAndExpression()
+   * @generated
+   */
+  EReference getAndExpression_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.AndExpression#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.go.go.AndExpression#getRight()
+   * @see #getAndExpression()
+   * @generated
+   */
+  EReference getAndExpression_Right();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.go.go.ComparisonExpression <em>Comparison Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3420,6 +3182,28 @@ public interface GoPackage extends EPackage
    * @generated
    */
   EClass getComparisonExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.ComparisonExpression#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.go.go.ComparisonExpression#getLeft()
+   * @see #getComparisonExpression()
+   * @generated
+   */
+  EReference getComparisonExpression_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.go.go.ComparisonExpression#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.go.go.ComparisonExpression#getRight()
+   * @see #getComparisonExpression()
+   * @generated
+   */
+  EReference getComparisonExpression_Right();
 
   /**
    * Returns the meta object for class '{@link org.xtext.go.go.Literal <em>Literal</em>}'.
@@ -3624,6 +3408,30 @@ public interface GoPackage extends EPackage
     EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
 
     /**
+     * The meta object literal for the '<em><b>Cas</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VARIABLE__CAS = eINSTANCE.getVariable_Cas();
+
+    /**
+     * The meta object literal for the '<em><b>K</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VARIABLE__K = eINSTANCE.getVariable_K();
+
+    /**
+     * The meta object literal for the '<em><b>N</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VARIABLE__N = eINSTANCE.getVariable_N();
+
+    /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.AtribImpl <em>Atrib</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3666,6 +3474,14 @@ public interface GoPackage extends EPackage
     EReference ATRIB__ATRIB = eINSTANCE.getAtrib_Atrib();
 
     /**
+     * The meta object literal for the '<em><b>K</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ATRIB__K = eINSTANCE.getAtrib_K();
+
+    /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.ReAtribImpl <em>Re Atrib</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3690,6 +3506,14 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EReference RE_ATRIB__ATRIB = eINSTANCE.getReAtrib_Atrib();
+
+    /**
+     * The meta object literal for the '<em><b>K</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RE_ATRIB__K = eINSTANCE.getReAtrib_K();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.MultDecVarsImpl <em>Mult Dec Vars</em>}' class.
@@ -3760,30 +3584,6 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EClass SWITCH_CASE = eINSTANCE.getSwitchCase();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SWITCH_CASE__NAME = eINSTANCE.getSwitchCase_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Cas</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SWITCH_CASE__CAS = eINSTANCE.getSwitchCase_Cas();
-
-    /**
-     * The meta object literal for the '<em><b>K</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SWITCH_CASE__K = eINSTANCE.getSwitchCase_K();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.CasesImpl <em>Cases</em>}' class.
@@ -3884,22 +3684,6 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EClass OPERATIONS_ONE_EQUALS = eINSTANCE.getOperationsOneEquals();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute OPERATIONS_ONE_EQUALS__NAME = eINSTANCE.getOperationsOneEquals_Name();
-
-    /**
-     * The meta object literal for the '<em><b>N</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference OPERATIONS_ONE_EQUALS__N = eINSTANCE.getOperationsOneEquals_N();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.NumbersImpl <em>Numbers</em>}' class.
@@ -4180,14 +3964,6 @@ public interface GoPackage extends EPackage
     EClass OPERATIONS_ONE = eINSTANCE.getoperationsOne();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute OPERATIONS_ONE__NAME = eINSTANCE.getoperationsOne_Name();
-
-    /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.varForImpl <em>var For</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4196,38 +3972,6 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EClass VAR_FOR = eINSTANCE.getvarFor();
-
-    /**
-     * The meta object literal for the '<em><b>Var</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute VAR_FOR__VAR = eINSTANCE.getvarFor_Var();
-
-    /**
-     * The meta object literal for the '<em><b>Atrb</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference VAR_FOR__ATRB = eINSTANCE.getvarFor_Atrb();
-
-    /**
-     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference VAR_FOR__RIGHT = eINSTANCE.getvarFor_Right();
-
-    /**
-     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference VAR_FOR__LEFT = eINSTANCE.getvarFor_Left();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.DecFuncImpl <em>Dec Func</em>}' class.
@@ -4344,6 +4088,22 @@ public interface GoPackage extends EPackage
     EClass ADDITION = eINSTANCE.getAddition();
 
     /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ADDITION__LEFT = eINSTANCE.getAddition_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ADDITION__RIGHT = eINSTANCE.getAddition_Right();
+
+    /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.SubtrationImpl <em>Subtration</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4352,6 +4112,22 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EClass SUBTRATION = eINSTANCE.getSubtration();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SUBTRATION__LEFT = eINSTANCE.getSubtration_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SUBTRATION__RIGHT = eINSTANCE.getSubtration_Right();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.MultiplicationImpl <em>Multiplication</em>}' class.
@@ -4364,6 +4140,22 @@ public interface GoPackage extends EPackage
     EClass MULTIPLICATION = eINSTANCE.getMultiplication();
 
     /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTIPLICATION__LEFT = eINSTANCE.getMultiplication_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTIPLICATION__RIGHT = eINSTANCE.getMultiplication_Right();
+
+    /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.DivisionImpl <em>Division</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4372,6 +4164,22 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EClass DIVISION = eINSTANCE.getDivision();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIVISION__LEFT = eINSTANCE.getDivision_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIVISION__RIGHT = eINSTANCE.getDivision_Right();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.OrExpressionImpl <em>Or Expression</em>}' class.
@@ -4384,6 +4192,22 @@ public interface GoPackage extends EPackage
     EClass OR_EXPRESSION = eINSTANCE.getOrExpression();
 
     /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OR_EXPRESSION__LEFT = eINSTANCE.getOrExpression_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OR_EXPRESSION__RIGHT = eINSTANCE.getOrExpression_Right();
+
+    /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.AndExpressionImpl <em>And Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4394,6 +4218,22 @@ public interface GoPackage extends EPackage
     EClass AND_EXPRESSION = eINSTANCE.getAndExpression();
 
     /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AND_EXPRESSION__LEFT = eINSTANCE.getAndExpression_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AND_EXPRESSION__RIGHT = eINSTANCE.getAndExpression_Right();
+
+    /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.ComparisonExpressionImpl <em>Comparison Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4402,6 +4242,22 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EClass COMPARISON_EXPRESSION = eINSTANCE.getComparisonExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMPARISON_EXPRESSION__LEFT = eINSTANCE.getComparisonExpression_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMPARISON_EXPRESSION__RIGHT = eINSTANCE.getComparisonExpression_Right();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.LiteralImpl <em>Literal</em>}' class.

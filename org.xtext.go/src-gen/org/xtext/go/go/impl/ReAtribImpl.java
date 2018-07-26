@@ -7,10 +7,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.go.go.Atrib_Aux;
 import org.xtext.go.go.GoPackage;
@@ -26,11 +26,12 @@ import org.xtext.go.go.ReAtrib;
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.ReAtribImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.ReAtribImpl#getAtrib <em>Atrib</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.ReAtribImpl#getK <em>K</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ReAtribImpl extends MinimalEObjectImpl.Container implements ReAtrib
+public class ReAtribImpl extends varForImpl implements ReAtrib
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -61,6 +62,16 @@ public class ReAtribImpl extends MinimalEObjectImpl.Container implements ReAtrib
    * @ordered
    */
   protected Atrib_Aux atrib;
+
+  /**
+   * The cached value of the '{@link #getK() <em>K</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getK()
+   * @generated
+   * @ordered
+   */
+  protected EObject k;
 
   /**
    * <!-- begin-user-doc -->
@@ -159,6 +170,54 @@ public class ReAtribImpl extends MinimalEObjectImpl.Container implements ReAtrib
    * <!-- end-user-doc -->
    * @generated
    */
+  public EObject getK()
+  {
+    return k;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetK(EObject newK, NotificationChain msgs)
+  {
+    EObject oldK = k;
+    k = newK;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.RE_ATRIB__K, oldK, newK);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setK(EObject newK)
+  {
+    if (newK != k)
+    {
+      NotificationChain msgs = null;
+      if (k != null)
+        msgs = ((InternalEObject)k).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.RE_ATRIB__K, null, msgs);
+      if (newK != null)
+        msgs = ((InternalEObject)newK).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.RE_ATRIB__K, null, msgs);
+      msgs = basicSetK(newK, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.RE_ATRIB__K, newK, newK));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -166,6 +225,8 @@ public class ReAtribImpl extends MinimalEObjectImpl.Container implements ReAtrib
     {
       case GoPackage.RE_ATRIB__ATRIB:
         return basicSetAtrib(null, msgs);
+      case GoPackage.RE_ATRIB__K:
+        return basicSetK(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -184,6 +245,8 @@ public class ReAtribImpl extends MinimalEObjectImpl.Container implements ReAtrib
         return getName();
       case GoPackage.RE_ATRIB__ATRIB:
         return getAtrib();
+      case GoPackage.RE_ATRIB__K:
+        return getK();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -203,6 +266,9 @@ public class ReAtribImpl extends MinimalEObjectImpl.Container implements ReAtrib
         return;
       case GoPackage.RE_ATRIB__ATRIB:
         setAtrib((Atrib_Aux)newValue);
+        return;
+      case GoPackage.RE_ATRIB__K:
+        setK((EObject)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -224,6 +290,9 @@ public class ReAtribImpl extends MinimalEObjectImpl.Container implements ReAtrib
       case GoPackage.RE_ATRIB__ATRIB:
         setAtrib((Atrib_Aux)null);
         return;
+      case GoPackage.RE_ATRIB__K:
+        setK((EObject)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -242,6 +311,8 @@ public class ReAtribImpl extends MinimalEObjectImpl.Container implements ReAtrib
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case GoPackage.RE_ATRIB__ATRIB:
         return atrib != null;
+      case GoPackage.RE_ATRIB__K:
+        return k != null;
     }
     return super.eIsSet(featureID);
   }

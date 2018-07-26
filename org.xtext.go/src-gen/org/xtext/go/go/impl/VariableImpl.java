@@ -4,13 +4,26 @@
 package org.xtext.go.go.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.xtext.go.go.Atrib_Aux;
+import org.xtext.go.go.CallFor;
+import org.xtext.go.go.Cases;
+import org.xtext.go.go.Expression;
 import org.xtext.go.go.GoPackage;
+import org.xtext.go.go.Greeting;
+import org.xtext.go.go.Numbers;
+import org.xtext.go.go.OperationsOneEquals;
+import org.xtext.go.go.SwitchCase;
 import org.xtext.go.go.Variable;
+import org.xtext.go.go.operationsOne;
+import org.xtext.go.go.varFor;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,13 +33,60 @@ import org.xtext.go.go.Variable;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.go.go.impl.VariableImpl#getX <em>X</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.VariableImpl#getBoolean <em>Boolean</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.VariableImpl#getSum <em>Sum</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.VariableImpl#getSub <em>Sub</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.VariableImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.VariableImpl#getCas <em>Cas</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.VariableImpl#getK <em>K</em>}</li>
+ *   <li>{@link org.xtext.go.go.impl.VariableImpl#getN <em>N</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class VariableImpl extends GreetingImpl implements Variable
 {
+  /**
+   * The cached value of the '{@link #getX() <em>X</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getX()
+   * @generated
+   * @ordered
+   */
+  protected EObject x;
+
+  /**
+   * The cached value of the '{@link #getBoolean() <em>Boolean</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBoolean()
+   * @generated
+   * @ordered
+   */
+  protected Expression boolean_;
+
+  /**
+   * The cached value of the '{@link #getSum() <em>Sum</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSum()
+   * @generated
+   * @ordered
+   */
+  protected Expression sum;
+
+  /**
+   * The cached value of the '{@link #getSub() <em>Sub</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSub()
+   * @generated
+   * @ordered
+   */
+  protected Expression sub;
+
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -48,6 +108,36 @@ public class VariableImpl extends GreetingImpl implements Variable
   protected String name = NAME_EDEFAULT;
 
   /**
+   * The cached value of the '{@link #getCas() <em>Cas</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCas()
+   * @generated
+   * @ordered
+   */
+  protected Cases cas;
+
+  /**
+   * The cached value of the '{@link #getK() <em>K</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getK()
+   * @generated
+   * @ordered
+   */
+  protected Greeting k;
+
+  /**
+   * The cached value of the '{@link #getN() <em>N</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getN()
+   * @generated
+   * @ordered
+   */
+  protected Numbers n;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -66,6 +156,198 @@ public class VariableImpl extends GreetingImpl implements Variable
   protected EClass eStaticClass()
   {
     return GoPackage.Literals.VARIABLE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EObject getX()
+  {
+    return x;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetX(EObject newX, NotificationChain msgs)
+  {
+    EObject oldX = x;
+    x = newX;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__X, oldX, newX);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setX(EObject newX)
+  {
+    if (newX != x)
+    {
+      NotificationChain msgs = null;
+      if (x != null)
+        msgs = ((InternalEObject)x).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__X, null, msgs);
+      if (newX != null)
+        msgs = ((InternalEObject)newX).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__X, null, msgs);
+      msgs = basicSetX(newX, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__X, newX, newX));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression getBoolean()
+  {
+    return boolean_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetBoolean(Expression newBoolean, NotificationChain msgs)
+  {
+    Expression oldBoolean = boolean_;
+    boolean_ = newBoolean;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__BOOLEAN, oldBoolean, newBoolean);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setBoolean(Expression newBoolean)
+  {
+    if (newBoolean != boolean_)
+    {
+      NotificationChain msgs = null;
+      if (boolean_ != null)
+        msgs = ((InternalEObject)boolean_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__BOOLEAN, null, msgs);
+      if (newBoolean != null)
+        msgs = ((InternalEObject)newBoolean).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__BOOLEAN, null, msgs);
+      msgs = basicSetBoolean(newBoolean, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__BOOLEAN, newBoolean, newBoolean));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression getSum()
+  {
+    return sum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetSum(Expression newSum, NotificationChain msgs)
+  {
+    Expression oldSum = sum;
+    sum = newSum;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__SUM, oldSum, newSum);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSum(Expression newSum)
+  {
+    if (newSum != sum)
+    {
+      NotificationChain msgs = null;
+      if (sum != null)
+        msgs = ((InternalEObject)sum).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__SUM, null, msgs);
+      if (newSum != null)
+        msgs = ((InternalEObject)newSum).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__SUM, null, msgs);
+      msgs = basicSetSum(newSum, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__SUM, newSum, newSum));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression getSub()
+  {
+    return sub;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetSub(Expression newSub, NotificationChain msgs)
+  {
+    Expression oldSub = sub;
+    sub = newSub;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__SUB, oldSub, newSub);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSub(Expression newSub)
+  {
+    if (newSub != sub)
+    {
+      NotificationChain msgs = null;
+      if (sub != null)
+        msgs = ((InternalEObject)sub).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__SUB, null, msgs);
+      if (newSub != null)
+        msgs = ((InternalEObject)newSub).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__SUB, null, msgs);
+      msgs = basicSetSub(newSub, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__SUB, newSub, newSub));
   }
 
   /**
@@ -96,13 +378,199 @@ public class VariableImpl extends GreetingImpl implements Variable
    * <!-- end-user-doc -->
    * @generated
    */
+  public Cases getCas()
+  {
+    return cas;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetCas(Cases newCas, NotificationChain msgs)
+  {
+    Cases oldCas = cas;
+    cas = newCas;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__CAS, oldCas, newCas);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setCas(Cases newCas)
+  {
+    if (newCas != cas)
+    {
+      NotificationChain msgs = null;
+      if (cas != null)
+        msgs = ((InternalEObject)cas).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__CAS, null, msgs);
+      if (newCas != null)
+        msgs = ((InternalEObject)newCas).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__CAS, null, msgs);
+      msgs = basicSetCas(newCas, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__CAS, newCas, newCas));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Greeting getK()
+  {
+    return k;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetK(Greeting newK, NotificationChain msgs)
+  {
+    Greeting oldK = k;
+    k = newK;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__K, oldK, newK);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setK(Greeting newK)
+  {
+    if (newK != k)
+    {
+      NotificationChain msgs = null;
+      if (k != null)
+        msgs = ((InternalEObject)k).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__K, null, msgs);
+      if (newK != null)
+        msgs = ((InternalEObject)newK).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__K, null, msgs);
+      msgs = basicSetK(newK, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__K, newK, newK));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Numbers getN()
+  {
+    return n;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetN(Numbers newN, NotificationChain msgs)
+  {
+    Numbers oldN = n;
+    n = newN;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__N, oldN, newN);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setN(Numbers newN)
+  {
+    if (newN != n)
+    {
+      NotificationChain msgs = null;
+      if (n != null)
+        msgs = ((InternalEObject)n).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__N, null, msgs);
+      if (newN != null)
+        msgs = ((InternalEObject)newN).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__N, null, msgs);
+      msgs = basicSetN(newN, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__N, newN, newN));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GoPackage.VARIABLE__X:
+        return basicSetX(null, msgs);
+      case GoPackage.VARIABLE__BOOLEAN:
+        return basicSetBoolean(null, msgs);
+      case GoPackage.VARIABLE__SUM:
+        return basicSetSum(null, msgs);
+      case GoPackage.VARIABLE__SUB:
+        return basicSetSub(null, msgs);
+      case GoPackage.VARIABLE__CAS:
+        return basicSetCas(null, msgs);
+      case GoPackage.VARIABLE__K:
+        return basicSetK(null, msgs);
+      case GoPackage.VARIABLE__N:
+        return basicSetN(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
+      case GoPackage.VARIABLE__X:
+        return getX();
+      case GoPackage.VARIABLE__BOOLEAN:
+        return getBoolean();
+      case GoPackage.VARIABLE__SUM:
+        return getSum();
+      case GoPackage.VARIABLE__SUB:
+        return getSub();
       case GoPackage.VARIABLE__NAME:
         return getName();
+      case GoPackage.VARIABLE__CAS:
+        return getCas();
+      case GoPackage.VARIABLE__K:
+        return getK();
+      case GoPackage.VARIABLE__N:
+        return getN();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +585,29 @@ public class VariableImpl extends GreetingImpl implements Variable
   {
     switch (featureID)
     {
+      case GoPackage.VARIABLE__X:
+        setX((EObject)newValue);
+        return;
+      case GoPackage.VARIABLE__BOOLEAN:
+        setBoolean((Expression)newValue);
+        return;
+      case GoPackage.VARIABLE__SUM:
+        setSum((Expression)newValue);
+        return;
+      case GoPackage.VARIABLE__SUB:
+        setSub((Expression)newValue);
+        return;
       case GoPackage.VARIABLE__NAME:
         setName((String)newValue);
+        return;
+      case GoPackage.VARIABLE__CAS:
+        setCas((Cases)newValue);
+        return;
+      case GoPackage.VARIABLE__K:
+        setK((Greeting)newValue);
+        return;
+      case GoPackage.VARIABLE__N:
+        setN((Numbers)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +623,29 @@ public class VariableImpl extends GreetingImpl implements Variable
   {
     switch (featureID)
     {
+      case GoPackage.VARIABLE__X:
+        setX((EObject)null);
+        return;
+      case GoPackage.VARIABLE__BOOLEAN:
+        setBoolean((Expression)null);
+        return;
+      case GoPackage.VARIABLE__SUM:
+        setSum((Expression)null);
+        return;
+      case GoPackage.VARIABLE__SUB:
+        setSub((Expression)null);
+        return;
       case GoPackage.VARIABLE__NAME:
         setName(NAME_EDEFAULT);
+        return;
+      case GoPackage.VARIABLE__CAS:
+        setCas((Cases)null);
+        return;
+      case GoPackage.VARIABLE__K:
+        setK((Greeting)null);
+        return;
+      case GoPackage.VARIABLE__N:
+        setN((Numbers)null);
         return;
     }
     super.eUnset(featureID);
@@ -151,10 +661,152 @@ public class VariableImpl extends GreetingImpl implements Variable
   {
     switch (featureID)
     {
+      case GoPackage.VARIABLE__X:
+        return x != null;
+      case GoPackage.VARIABLE__BOOLEAN:
+        return boolean_ != null;
+      case GoPackage.VARIABLE__SUM:
+        return sum != null;
+      case GoPackage.VARIABLE__SUB:
+        return sub != null;
       case GoPackage.VARIABLE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case GoPackage.VARIABLE__CAS:
+        return cas != null;
+      case GoPackage.VARIABLE__K:
+        return k != null;
+      case GoPackage.VARIABLE__N:
+        return n != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Atrib_Aux.class)
+    {
+      switch (derivedFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == SwitchCase.class)
+    {
+      switch (derivedFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == OperationsOneEquals.class)
+    {
+      switch (derivedFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == operationsOne.class)
+    {
+      switch (derivedFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == CallFor.class)
+    {
+      switch (derivedFeatureID)
+      {
+        case GoPackage.VARIABLE__X: return GoPackage.CALL_FOR__X;
+        default: return -1;
+      }
+    }
+    if (baseClass == varFor.class)
+    {
+      switch (derivedFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == Expression.class)
+    {
+      switch (derivedFeatureID)
+      {
+        case GoPackage.VARIABLE__BOOLEAN: return GoPackage.EXPRESSION__BOOLEAN;
+        case GoPackage.VARIABLE__SUM: return GoPackage.EXPRESSION__SUM;
+        case GoPackage.VARIABLE__SUB: return GoPackage.EXPRESSION__SUB;
+        default: return -1;
+      }
+    }
+    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Atrib_Aux.class)
+    {
+      switch (baseFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == SwitchCase.class)
+    {
+      switch (baseFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == OperationsOneEquals.class)
+    {
+      switch (baseFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == operationsOne.class)
+    {
+      switch (baseFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == CallFor.class)
+    {
+      switch (baseFeatureID)
+      {
+        case GoPackage.CALL_FOR__X: return GoPackage.VARIABLE__X;
+        default: return -1;
+      }
+    }
+    if (baseClass == varFor.class)
+    {
+      switch (baseFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == Expression.class)
+    {
+      switch (baseFeatureID)
+      {
+        case GoPackage.EXPRESSION__BOOLEAN: return GoPackage.VARIABLE__BOOLEAN;
+        case GoPackage.EXPRESSION__SUM: return GoPackage.VARIABLE__SUM;
+        case GoPackage.EXPRESSION__SUB: return GoPackage.VARIABLE__SUB;
+        default: return -1;
+      }
+    }
+    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
   }
 
   /**

@@ -3,12 +3,8 @@
  */
 package org.xtext.go.go.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -16,11 +12,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.xtext.go.go.Atrib_Aux;
 import org.xtext.go.go.CallFor;
 import org.xtext.go.go.Expression;
 import org.xtext.go.go.F;
@@ -43,10 +34,6 @@ import org.xtext.go.go.varFor;
  * <ul>
  *   <li>{@link org.xtext.go.go.impl.NumbersImpl#getO <em>O</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.NumbersImpl#getX <em>X</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.NumbersImpl#getVar <em>Var</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.NumbersImpl#getAtrb <em>Atrb</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.NumbersImpl#getRight <em>Right</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.NumbersImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.NumbersImpl#getBoolean <em>Boolean</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.NumbersImpl#getSum <em>Sum</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.NumbersImpl#getSub <em>Sub</em>}</li>
@@ -77,46 +64,6 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
    * @ordered
    */
   protected EObject x;
-
-  /**
-   * The cached value of the '{@link #getVar() <em>Var</em>}' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVar()
-   * @generated
-   * @ordered
-   */
-  protected EList<String> var;
-
-  /**
-   * The cached value of the '{@link #getAtrb() <em>Atrb</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAtrb()
-   * @generated
-   * @ordered
-   */
-  protected EList<Atrib_Aux> atrb;
-
-  /**
-   * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getRight()
-   * @generated
-   * @ordered
-   */
-  protected Expression right;
-
-  /**
-   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLeft()
-   * @generated
-   * @ordered
-   */
-  protected Expression left;
 
   /**
    * The cached value of the '{@link #getBoolean() <em>Boolean</em>}' containment reference.
@@ -283,130 +230,6 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
     }
     else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.NUMBERS__X, newX, newX));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<String> getVar()
-  {
-    if (var == null)
-    {
-      var = new EDataTypeEList<String>(String.class, this, GoPackage.NUMBERS__VAR);
-    }
-    return var;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Atrib_Aux> getAtrb()
-  {
-    if (atrb == null)
-    {
-      atrb = new EObjectContainmentEList<Atrib_Aux>(Atrib_Aux.class, this, GoPackage.NUMBERS__ATRB);
-    }
-    return atrb;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Expression getRight()
-  {
-    return right;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetRight(Expression newRight, NotificationChain msgs)
-  {
-    Expression oldRight = right;
-    right = newRight;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.NUMBERS__RIGHT, oldRight, newRight);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRight(Expression newRight)
-  {
-    if (newRight != right)
-    {
-      NotificationChain msgs = null;
-      if (right != null)
-        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.NUMBERS__RIGHT, null, msgs);
-      if (newRight != null)
-        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.NUMBERS__RIGHT, null, msgs);
-      msgs = basicSetRight(newRight, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.NUMBERS__RIGHT, newRight, newRight));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Expression getLeft()
-  {
-    return left;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetLeft(Expression newLeft, NotificationChain msgs)
-  {
-    Expression oldLeft = left;
-    left = newLeft;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.NUMBERS__LEFT, oldLeft, newLeft);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLeft(Expression newLeft)
-  {
-    if (newLeft != left)
-    {
-      NotificationChain msgs = null;
-      if (left != null)
-        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.NUMBERS__LEFT, null, msgs);
-      if (newLeft != null)
-        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.NUMBERS__LEFT, null, msgs);
-      msgs = basicSetLeft(newLeft, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.NUMBERS__LEFT, newLeft, newLeft));
   }
 
   /**
@@ -663,12 +486,6 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
         return basicSetO(null, msgs);
       case GoPackage.NUMBERS__X:
         return basicSetX(null, msgs);
-      case GoPackage.NUMBERS__ATRB:
-        return ((InternalEList<?>)getAtrb()).basicRemove(otherEnd, msgs);
-      case GoPackage.NUMBERS__RIGHT:
-        return basicSetRight(null, msgs);
-      case GoPackage.NUMBERS__LEFT:
-        return basicSetLeft(null, msgs);
       case GoPackage.NUMBERS__BOOLEAN:
         return basicSetBoolean(null, msgs);
       case GoPackage.NUMBERS__SUM:
@@ -697,14 +514,6 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
         return getO();
       case GoPackage.NUMBERS__X:
         return getX();
-      case GoPackage.NUMBERS__VAR:
-        return getVar();
-      case GoPackage.NUMBERS__ATRB:
-        return getAtrb();
-      case GoPackage.NUMBERS__RIGHT:
-        return getRight();
-      case GoPackage.NUMBERS__LEFT:
-        return getLeft();
       case GoPackage.NUMBERS__BOOLEAN:
         return getBoolean();
       case GoPackage.NUMBERS__SUM:
@@ -724,7 +533,6 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -735,20 +543,6 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
         return;
       case GoPackage.NUMBERS__X:
         setX((EObject)newValue);
-        return;
-      case GoPackage.NUMBERS__VAR:
-        getVar().clear();
-        getVar().addAll((Collection<? extends String>)newValue);
-        return;
-      case GoPackage.NUMBERS__ATRB:
-        getAtrb().clear();
-        getAtrb().addAll((Collection<? extends Atrib_Aux>)newValue);
-        return;
-      case GoPackage.NUMBERS__RIGHT:
-        setRight((Expression)newValue);
-        return;
-      case GoPackage.NUMBERS__LEFT:
-        setLeft((Expression)newValue);
         return;
       case GoPackage.NUMBERS__BOOLEAN:
         setBoolean((Expression)newValue);
@@ -785,18 +579,6 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
       case GoPackage.NUMBERS__X:
         setX((EObject)null);
         return;
-      case GoPackage.NUMBERS__VAR:
-        getVar().clear();
-        return;
-      case GoPackage.NUMBERS__ATRB:
-        getAtrb().clear();
-        return;
-      case GoPackage.NUMBERS__RIGHT:
-        setRight((Expression)null);
-        return;
-      case GoPackage.NUMBERS__LEFT:
-        setLeft((Expression)null);
-        return;
       case GoPackage.NUMBERS__BOOLEAN:
         setBoolean((Expression)null);
         return;
@@ -830,14 +612,6 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
         return o != null;
       case GoPackage.NUMBERS__X:
         return x != null;
-      case GoPackage.NUMBERS__VAR:
-        return var != null && !var.isEmpty();
-      case GoPackage.NUMBERS__ATRB:
-        return atrb != null && !atrb.isEmpty();
-      case GoPackage.NUMBERS__RIGHT:
-        return right != null;
-      case GoPackage.NUMBERS__LEFT:
-        return left != null;
       case GoPackage.NUMBERS__BOOLEAN:
         return boolean_ != null;
       case GoPackage.NUMBERS__SUM:
@@ -908,10 +682,6 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
     {
       switch (derivedFeatureID)
       {
-        case GoPackage.NUMBERS__VAR: return GoPackage.VAR_FOR__VAR;
-        case GoPackage.NUMBERS__ATRB: return GoPackage.VAR_FOR__ATRB;
-        case GoPackage.NUMBERS__RIGHT: return GoPackage.VAR_FOR__RIGHT;
-        case GoPackage.NUMBERS__LEFT: return GoPackage.VAR_FOR__LEFT;
         default: return -1;
       }
     }
@@ -984,10 +754,6 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
     {
       switch (baseFeatureID)
       {
-        case GoPackage.VAR_FOR__VAR: return GoPackage.NUMBERS__VAR;
-        case GoPackage.VAR_FOR__ATRB: return GoPackage.NUMBERS__ATRB;
-        case GoPackage.VAR_FOR__RIGHT: return GoPackage.NUMBERS__RIGHT;
-        case GoPackage.VAR_FOR__LEFT: return GoPackage.NUMBERS__LEFT;
         default: return -1;
       }
     }
@@ -1002,23 +768,6 @@ public class NumbersImpl extends TypeValueImpl implements Numbers
       }
     }
     return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (var: ");
-    result.append(var);
-    result.append(')');
-    return result.toString();
   }
 
 } //NumbersImpl
