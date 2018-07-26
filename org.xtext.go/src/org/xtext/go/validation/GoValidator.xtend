@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.EAttribute
 import org.xtext.go.go.ReAtrib
 import org.xtext.go.go.Bool
 import org.xtext.go.go.Intg
+import org.xtext.go.go.FunctionBody
 
 /**
  * This class contains custom validation rules. 
@@ -58,6 +59,9 @@ class GoValidator extends AbstractGoValidator {
 
 	public static Map<String, DecFunc> funcImplements = new HashMap<String, DecFunc>();
 	public static Map<String, Atrib> variablesDeclarationMap = new HashMap<String, Atrib>();
+	public static Map<String, List<Atrib>> variablesInFunction = new HashMap<String, List<Atrib>>();
+		
+		Object v
 
 	@Check
 	def checkGreetingStartsWithCapital(AtribVar g) {
@@ -103,42 +107,42 @@ class GoValidator extends AbstractGoValidator {
 		}
 
 	}
-	
-	def checkIfIsTypeCompatible(String t1, TypeValue t2, EAttribute pack){
-		
-		if(t1.equals("bool") && !(t2 instanceof Bool)){
-			error(SEMANTIC_ERROR + "Não é possível converter " + t1.toString() +  " para " +  getTypeNameFromTypeValue(t2), pack);
+
+	def checkIfIsTypeCompatible(String t1, TypeValue t2, EAttribute pack) {
+
+		if (t1.equals("bool") && !(t2 instanceof Bool)) {
+			error(SEMANTIC_ERROR + "Não é possível converter " + t1.toString() + " para " +
+				getTypeNameFromTypeValue(t2), pack);
 		}
-		if(!t1.equals("bool") && (t2 instanceof Bool)){
-			error(SEMANTIC_ERROR + "Não é possível converter " + t1.toString() +  " para boolean", pack);
+		if (!t1.equals("bool") && (t2 instanceof Bool)) {
+			error(SEMANTIC_ERROR + "Não é possível converter " + t1.toString() + " para boolean", pack);
 		}
-		if(!t1.equals("string")&& (t2 instanceof Str)){
-			
-			error(SEMANTIC_ERROR + "Não é possível converter " + t1.toString() +  " para string", pack);
+		if (!t1.equals("string") && (t2 instanceof Str)) {
+
+			error(SEMANTIC_ERROR + "Não é possível converter " + t1.toString() + " para string", pack);
 		}
-		
-		
-		if(t1.equals("string")&& !(t2 instanceof Str)){
-			error(SEMANTIC_ERROR + "Não é possível converter " + t1.toString() +  " para " + getTypeNameFromTypeValue(t2) , pack);
+
+		if (t1.equals("string") && !(t2 instanceof Str)) {
+			error(
+				SEMANTIC_ERROR + "Não é possível converter " + t1.toString() + " para " + getTypeNameFromTypeValue(t2),
+				pack);
 		}
-		
-		
-		
+
 	}
-	
-	def getTypeNameFromTypeValue(TypeValue typeValue){
-		if(typeValue instanceof Str){
+
+	def getTypeNameFromTypeValue(TypeValue typeValue) {
+		if (typeValue instanceof Str) {
 			return "string";
 		}
-		if(typeValue instanceof Numbers){
+		if (typeValue instanceof Numbers) {
 			var Numbers n = typeValue as Numbers;
-			if(n instanceof Intg){
+			if (n instanceof Intg) { // ta ocorrendo alguma em n não é visto como um inteiro. 
 				return "int";
-			}else{
+			} else {
 				return "float"
 			}
 		}
-		if(typeValue instanceof Bool){
+		if (typeValue instanceof Bool) {
 			return "bool";
 		}
 	}
@@ -170,6 +174,7 @@ class GoValidator extends AbstractGoValidator {
 	def addVariableDeclarations(Atrib dec) {
 		checkTypeDeclarationAtrib(dec);
 		variablesDeclarationMap.put(dec.name.toString(), dec);
+		
 	}
 
 	/**
@@ -254,7 +259,7 @@ class GoValidator extends AbstractGoValidator {
 	def atribDeclarationTypes(Atrib dec) {
 		if (dec.atrib instanceof TypeValue) {
 			var TypeValue type = dec.atrib as TypeValue;
-			checkIfIsTypeCompatible(dec.type, type,  GoPackage.Literals.ATRIB__TYPE);
+			checkIfIsTypeCompatible(dec.type, type, GoPackage.Literals.ATRIB__TYPE);
 //			if (dec.type.equals("string") && dec.atrib instanceof Numbers) {
 //				error(SEMANTIC_ERROR + "não é possível converter number para string", GoPackage.Literals.ATRIB__TYPE);
 //			}
@@ -280,14 +285,62 @@ class GoValidator extends AbstractGoValidator {
 	@Check
 	def addFuncToImplements(DecFunc dec) {
 		funcImplements.put(dec.name.toString(), dec);
+		variablesInFunction.put(dec.name, new ArrayList<Atrib>());
+		
+		mapVariableInBodyFunction(dec);
+		verifiesBodyFunction(dec);
 
 	}
 
-	@Check
-	def checkIfFunctionOverhead(DecFunc dec) {
-		if (!funcImplements.containsKey(dec.name)) {
-			error(SEMANTIC_ERROR + "função não declarada", GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+	def mapVariableInBodyFunction(DecFunc dec) {
+
+
+		var FunctionBody body = dec.body;
+		for (Greeting gret : body.args) {
+
+			if (gret instanceof DecVar) {
+				var DecVar variable = gret as DecVar;
+				if (variable.atribuicao !== null) {
+					var Atrib atrib =variable.atribuicao;
+					variablesInFunction.get(dec.name).add(atrib);
+				}
+			}
+
 		}
+	}
+
+	def verifiesBodyFunction(DecFunc dec) {
+
+		var FunctionBody body = dec.body;
+		for (Greeting gret : body.args) {
+			
+			if(gret instanceof Variable){
+				var Variable variable = gret as Variable;
+				if(!searchVariable(dec.name, variable.name)){
+					if(!variablesDeclarationMap.containsKey(variable.name))
+						error(SEMANTIC_ERROR + "Variavel nao declarada no escopo da função", GoPackage.Literals.DEC_FUNC__BODY);
+				}
+			}
+
+//			if (gret instanceof DecVar) {
+//				var DecVar variable = gret as DecVar;
+//				if (variable instanceof Atrib) {
+//					var Atrib atrib = variable as Atrib;
+//					variablesInFunction.get(dec.name).add(atrib);
+//				}
+//			}
+		}
+	}
+	
+	def searchVariable(String nameFunc, String nameVar){
+		var List<Atrib> attrs = variablesInFunction.get(nameFunc);
+		for(Atrib at : attrs){
+			if(at.name.equals(nameVar)){
+				return true;
+			}
+		}
+		return false; 
+		
 	}
 
 	@Check
@@ -331,6 +384,8 @@ class GoValidator extends AbstractGoValidator {
 		return tipos.size();
 
 	}
+
+	
 
 	def getVariableById(String name) {
 		return variablesDeclarationMap.get(name);

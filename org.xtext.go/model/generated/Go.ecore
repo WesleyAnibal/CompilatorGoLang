@@ -13,9 +13,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="DecVar" eSuperTypes="#//Greeting">
     <eStructuralFeatures xsi:type="ecore:EReference" name="declaration" eType="#//Decl"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="assignment" eType="#//AtribVar"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="atribuicao" eType="#//Atrib"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assignment" eType="#//AtribVar"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="reassignment" eType="#//ReAtrib"
         containment="true"/>
@@ -152,6 +152,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="param" eType="#//Params"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="returnType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="#//FunctionBody"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionBody">
     <eStructuralFeatures xsi:type="ecore:EReference" name="args" upperBound="-1" eType="#//Greeting"
         containment="true"/>
   </eClassifiers>
