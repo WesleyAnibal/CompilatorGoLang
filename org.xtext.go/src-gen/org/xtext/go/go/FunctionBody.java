@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.go.go.FunctionBody#getArgs <em>Args</em>}</li>
+ *   <li>{@link org.xtext.go.go.FunctionBody#getReturnType <em>Return Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -40,5 +41,31 @@ public interface FunctionBody extends EObject
    * @generated
    */
   EList<Greeting> getArgs();
+
+  /**
+   * Returns the value of the '<em><b>Return Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Return Type</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Return Type</em>' containment reference.
+   * @see #setReturnType(Atrib_Aux)
+   * @see org.xtext.go.go.GoPackage#getFunctionBody_ReturnType()
+   * @model containment="true"
+   * @generated
+   */
+  Atrib_Aux getReturnType();
+
+  /**
+   * Sets the value of the '{@link org.xtext.go.go.FunctionBody#getReturnType <em>Return Type</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Return Type</em>' containment reference.
+   * @see #getReturnType()
+   * @generated
+   */
+  void setReturnType(Atrib_Aux value);
 
 } // FunctionBody

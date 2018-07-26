@@ -3252,23 +3252,53 @@ ruleFunctionBody returns [EObject current=null]
 }:
 	(
 		(
-			{
-				newCompositeNode(grammarAccess.getFunctionBodyAccess().getArgsGreetingParserRuleCall_0());
-			}
-			lv_args_0_0=ruleGreeting
-			{
-				if ($current==null) {
-					$current = createModelElementForParent(grammarAccess.getFunctionBodyRule());
+			(
+				{
+					newCompositeNode(grammarAccess.getFunctionBodyAccess().getArgsGreetingParserRuleCall_0_0());
 				}
-				add(
-					$current,
-					"args",
-					lv_args_0_0,
-					"org.xtext.go.Go.Greeting");
+				lv_args_0_0=ruleGreeting
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getFunctionBodyRule());
+					}
+					add(
+						$current,
+						"args",
+						lv_args_0_0,
+						"org.xtext.go.Go.Greeting");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		(
+			{
+				newCompositeNode(grammarAccess.getFunctionBodyAccess().getRETURNParserRuleCall_1_0());
+			}
+			ruleRETURN
+			{
 				afterParserOrEnumRuleCall();
 			}
-		)
-	)*
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getFunctionBodyAccess().getReturnTypeAtrib_AuxParserRuleCall_1_1_0());
+					}
+					lv_returnType_2_0=ruleAtrib_Aux
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getFunctionBodyRule());
+						}
+						set(
+							$current,
+							"returnType",
+							lv_returnType_2_0,
+							"org.xtext.go.Go.Atrib_Aux");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+	)
 ;
 
 // Entry rule entryRuleCallFunc

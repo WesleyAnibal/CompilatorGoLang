@@ -1400,6 +1400,16 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getFunctionBody_ReturnType()
+  {
+    return (EReference)functionBodyEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getCallFunc()
   {
     return callFuncEClass;
@@ -1714,6 +1724,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     functionBodyEClass = createEClass(FUNCTION_BODY);
     createEReference(functionBodyEClass, FUNCTION_BODY__ARGS);
+    createEReference(functionBodyEClass, FUNCTION_BODY__RETURN_TYPE);
 
     callFuncEClass = createEClass(CALL_FUNC);
     createEAttribute(callFuncEClass, CALL_FUNC__NAME_FUNC);
@@ -1938,6 +1949,7 @@ public class GoPackageImpl extends EPackageImpl implements GoPackage
 
     initEClass(functionBodyEClass, FunctionBody.class, "FunctionBody", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFunctionBody_Args(), this.getGreeting(), null, "args", null, 0, -1, FunctionBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFunctionBody_ReturnType(), this.getAtrib_Aux(), null, "returnType", null, 0, 1, FunctionBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(callFuncEClass, CallFunc.class, "CallFunc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCallFunc_NameFunc(), ecorePackage.getEString(), "nameFunc", null, 0, 1, CallFunc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

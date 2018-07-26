@@ -168,7 +168,7 @@ DecFunc:
 ;
 
 FunctionBody:
-	args+=Greeting*
+	args+=Greeting*  (RETURN returnType=Atrib_Aux)?
 ;
 	
 CallFunc:

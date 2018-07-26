@@ -1834,18 +1834,38 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class FunctionBodyElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.FunctionBody");
-		private final Assignment cArgsAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cArgsGreetingParserRuleCall_0 = (RuleCall)cArgsAssignment.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cArgsAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cArgsGreetingParserRuleCall_0_0 = (RuleCall)cArgsAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final RuleCall cRETURNParserRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Assignment cReturnTypeAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cReturnTypeAtrib_AuxParserRuleCall_1_1_0 = (RuleCall)cReturnTypeAssignment_1_1.eContents().get(0);
 		
 		//FunctionBody:
-		//	args+=Greeting*;
+		//	args+=Greeting* (RETURN returnType=Atrib_Aux)?;
 		@Override public ParserRule getRule() { return rule; }
 		
+		//args+=Greeting* (RETURN returnType=Atrib_Aux)?
+		public Group getGroup() { return cGroup; }
+		
 		//args+=Greeting*
-		public Assignment getArgsAssignment() { return cArgsAssignment; }
+		public Assignment getArgsAssignment_0() { return cArgsAssignment_0; }
 		
 		//Greeting
-		public RuleCall getArgsGreetingParserRuleCall_0() { return cArgsGreetingParserRuleCall_0; }
+		public RuleCall getArgsGreetingParserRuleCall_0_0() { return cArgsGreetingParserRuleCall_0_0; }
+		
+		//(RETURN returnType=Atrib_Aux)?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//RETURN
+		public RuleCall getRETURNParserRuleCall_1_0() { return cRETURNParserRuleCall_1_0; }
+		
+		//returnType=Atrib_Aux
+		public Assignment getReturnTypeAssignment_1_1() { return cReturnTypeAssignment_1_1; }
+		
+		//Atrib_Aux
+		public RuleCall getReturnTypeAtrib_AuxParserRuleCall_1_1_0() { return cReturnTypeAtrib_AuxParserRuleCall_1_1_0; }
 	}
 	public class CallFuncElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.CallFunc");
@@ -2975,7 +2995,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//FunctionBody:
-	//	args+=Greeting*;
+	//	args+=Greeting* (RETURN returnType=Atrib_Aux)?;
 	public FunctionBodyElements getFunctionBodyAccess() {
 		return pFunctionBody;
 	}

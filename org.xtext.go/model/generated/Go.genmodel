@@ -127,6 +127,7 @@
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//FunctionBody">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//FunctionBody/args"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//FunctionBody/returnType"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//CallFunc">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//CallFunc/nameFunc"/>

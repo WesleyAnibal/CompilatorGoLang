@@ -803,7 +803,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     FunctionBody returns FunctionBody
 	 *
 	 * Constraint:
-	 *     args+=Greeting+
+	 *     ((args+=Greeting+ returnType=Atrib_Aux) | returnType=Atrib_Aux)?
 	 */
 	protected void sequence_FunctionBody(ISerializationContext context, FunctionBody semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
