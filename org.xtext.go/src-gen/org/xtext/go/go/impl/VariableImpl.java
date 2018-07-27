@@ -18,7 +18,6 @@ import org.xtext.go.go.Cases;
 import org.xtext.go.go.Expression;
 import org.xtext.go.go.GoPackage;
 import org.xtext.go.go.Greeting;
-import org.xtext.go.go.Numbers;
 import org.xtext.go.go.OperationsOneEquals;
 import org.xtext.go.go.SwitchCase;
 import org.xtext.go.go.Variable;
@@ -40,7 +39,6 @@ import org.xtext.go.go.varFor;
  *   <li>{@link org.xtext.go.go.impl.VariableImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.VariableImpl#getCas <em>Cas</em>}</li>
  *   <li>{@link org.xtext.go.go.impl.VariableImpl#getK <em>K</em>}</li>
- *   <li>{@link org.xtext.go.go.impl.VariableImpl#getN <em>N</em>}</li>
  * </ul>
  *
  * @generated
@@ -126,16 +124,6 @@ public class VariableImpl extends GreetingImpl implements Variable
    * @ordered
    */
   protected Greeting k;
-
-  /**
-   * The cached value of the '{@link #getN() <em>N</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getN()
-   * @generated
-   * @ordered
-   */
-  protected Numbers n;
 
   /**
    * <!-- begin-user-doc -->
@@ -474,54 +462,6 @@ public class VariableImpl extends GreetingImpl implements Variable
    * <!-- end-user-doc -->
    * @generated
    */
-  public Numbers getN()
-  {
-    return n;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetN(Numbers newN, NotificationChain msgs)
-  {
-    Numbers oldN = n;
-    n = newN;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__N, oldN, newN);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setN(Numbers newN)
-  {
-    if (newN != n)
-    {
-      NotificationChain msgs = null;
-      if (n != null)
-        msgs = ((InternalEObject)n).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__N, null, msgs);
-      if (newN != null)
-        msgs = ((InternalEObject)newN).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GoPackage.VARIABLE__N, null, msgs);
-      msgs = basicSetN(newN, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GoPackage.VARIABLE__N, newN, newN));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -539,8 +479,6 @@ public class VariableImpl extends GreetingImpl implements Variable
         return basicSetCas(null, msgs);
       case GoPackage.VARIABLE__K:
         return basicSetK(null, msgs);
-      case GoPackage.VARIABLE__N:
-        return basicSetN(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -569,8 +507,6 @@ public class VariableImpl extends GreetingImpl implements Variable
         return getCas();
       case GoPackage.VARIABLE__K:
         return getK();
-      case GoPackage.VARIABLE__N:
-        return getN();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -605,9 +541,6 @@ public class VariableImpl extends GreetingImpl implements Variable
         return;
       case GoPackage.VARIABLE__K:
         setK((Greeting)newValue);
-        return;
-      case GoPackage.VARIABLE__N:
-        setN((Numbers)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -644,9 +577,6 @@ public class VariableImpl extends GreetingImpl implements Variable
       case GoPackage.VARIABLE__K:
         setK((Greeting)null);
         return;
-      case GoPackage.VARIABLE__N:
-        setN((Numbers)null);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -675,8 +605,6 @@ public class VariableImpl extends GreetingImpl implements Variable
         return cas != null;
       case GoPackage.VARIABLE__K:
         return k != null;
-      case GoPackage.VARIABLE__N:
-        return n != null;
     }
     return super.eIsSet(featureID);
   }

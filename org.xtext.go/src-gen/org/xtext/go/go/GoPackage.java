@@ -335,22 +335,13 @@ public interface GoPackage extends EPackage
   int VARIABLE__K = GREETING_FEATURE_COUNT + 6;
 
   /**
-   * The feature id for the '<em><b>N</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE__N = GREETING_FEATURE_COUNT + 7;
-
-  /**
    * The number of structural features of the '<em>Variable</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VARIABLE_FEATURE_COUNT = GREETING_FEATURE_COUNT + 8;
+  int VARIABLE_FEATURE_COUNT = GREETING_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link org.xtext.go.go.impl.CallForImpl <em>Call For</em>}' class.
@@ -2264,17 +2255,6 @@ public interface GoPackage extends EPackage
   EReference getVariable_K();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.go.go.Variable#getN <em>N</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>N</em>'.
-   * @see org.xtext.go.go.Variable#getN()
-   * @see #getVariable()
-   * @generated
-   */
-  EReference getVariable_N();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.go.go.Atrib <em>Atrib</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3540,14 +3520,6 @@ public interface GoPackage extends EPackage
      * @generated
      */
     EReference VARIABLE__K = eINSTANCE.getVariable_K();
-
-    /**
-     * The meta object literal for the '<em><b>N</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference VARIABLE__N = eINSTANCE.getVariable_N();
 
     /**
      * The meta object literal for the '{@link org.xtext.go.go.impl.AtribImpl <em>Atrib</em>}' class.

@@ -1132,7 +1132,7 @@ public class GoSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     OperationsOneEquals returns Variable
 	 *
 	 * Constraint:
-	 *     (name=ID n=Numbers?)
+	 *     (name=ID (x=Variable | x=Numbers))
 	 */
 	protected void sequence_OperationsOneEquals_Variable(ISerializationContext context, Variable semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

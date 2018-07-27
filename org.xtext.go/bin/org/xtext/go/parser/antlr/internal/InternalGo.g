@@ -1360,25 +1360,36 @@ ruleOperationsOneEquals returns [EObject current=null]
 			}
 		)
 		(
-			this_ID_3=RULE_ID
-			{
-				newLeafNode(this_ID_3, grammarAccess.getOperationsOneEqualsAccess().getIDTerminalRuleCall_2_0());
-			}
-			    |
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getOperationsOneEqualsAccess().getNNumbersParserRuleCall_2_1_0());
+						newCompositeNode(grammarAccess.getOperationsOneEqualsAccess().getXVariableParserRuleCall_2_0_0());
 					}
-					lv_n_4_0=ruleNumbers
+					lv_x_3_1=ruleVariable
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getOperationsOneEqualsRule());
 						}
 						set(
 							$current,
-							"n",
-							lv_n_4_0,
+							"x",
+							lv_x_3_1,
+							"org.xtext.go.Go.Variable");
+						afterParserOrEnumRuleCall();
+					}
+					    |
+					{
+						newCompositeNode(grammarAccess.getOperationsOneEqualsAccess().getXNumbersParserRuleCall_2_0_1());
+					}
+					lv_x_3_2=ruleNumbers
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getOperationsOneEqualsRule());
+						}
+						set(
+							$current,
+							"x",
+							lv_x_3_2,
 							"org.xtext.go.Go.Numbers");
 						afterParserOrEnumRuleCall();
 					}

@@ -33,7 +33,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="cas" eType="#//Cases" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="k" eType="#//Greeting"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="n" eType="#//Numbers" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Atrib" eSuperTypes="#//varFor">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

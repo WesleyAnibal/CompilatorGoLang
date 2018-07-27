@@ -66,12 +66,12 @@ DecImport:
 	IMPORT (STRING | Open_parentheses STRING+ Closed_parentheses);
 	
 OperationsOneEquals:
-	Variable(PlusEquals| MinusEquals)(ID|n=Numbers);
+	Variable(PlusEquals| MinusEquals)x=(Variable|Numbers);
 //Removi a recursão a esquerda
 
 
 Numbers:
-	int=Intg | d=Double;
+	int=Intg|d=Double;
 
 Intg:
 	i=INT
@@ -87,12 +87,10 @@ I:
 	((Plus T o=I)|(Minus T o=I))?;	
 T: 
 	F o=Y;
-	
 Y:
-	((Asterics o=F o=Y) |(Bar o=F o=Y))?;
-	
+	((Asterics o=F o=Y) |(Bar o=F o=Y))?;	
 F:
-	Open_parentheses o=Operations Closed_parentheses| Numbers;
+	Open_parentheses o=Operations Closed_parentheses|Numbers;
 	
 Condition: 
     (if=IfCondition(elseif=ElseIfCondition)*(else=ElseCondition)?);

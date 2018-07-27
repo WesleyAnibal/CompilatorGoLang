@@ -39,7 +39,7 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTypeValueAccess().getAlternatives(), "rule__TypeValue__Alternatives");
 					put(grammarAccess.getDecImportAccess().getAlternatives_1(), "rule__DecImport__Alternatives_1");
 					put(grammarAccess.getOperationsOneEqualsAccess().getAlternatives_1(), "rule__OperationsOneEquals__Alternatives_1");
-					put(grammarAccess.getOperationsOneEqualsAccess().getAlternatives_2(), "rule__OperationsOneEquals__Alternatives_2");
+					put(grammarAccess.getOperationsOneEqualsAccess().getXAlternatives_2_0(), "rule__OperationsOneEquals__XAlternatives_2_0");
 					put(grammarAccess.getNumbersAccess().getAlternatives(), "rule__Numbers__Alternatives");
 					put(grammarAccess.getIAccess().getAlternatives(), "rule__I__Alternatives");
 					put(grammarAccess.getYAccess().getAlternatives(), "rule__Y__Alternatives");
@@ -152,7 +152,7 @@ public class GoParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParamsAccess().getParamsAssignment_2_1(), "rule__Params__ParamsAssignment_2_1");
 					put(grammarAccess.getParamsAccess().getTypeAssignment_2_2(), "rule__Params__TypeAssignment_2_2");
 					put(grammarAccess.getStrAccess().getSAssignment(), "rule__Str__SAssignment");
-					put(grammarAccess.getOperationsOneEqualsAccess().getNAssignment_2_1(), "rule__OperationsOneEquals__NAssignment_2_1");
+					put(grammarAccess.getOperationsOneEqualsAccess().getXAssignment_2(), "rule__OperationsOneEquals__XAssignment_2");
 					put(grammarAccess.getNumbersAccess().getIntAssignment_0(), "rule__Numbers__IntAssignment_0");
 					put(grammarAccess.getNumbersAccess().getDAssignment_1(), "rule__Numbers__DAssignment_1");
 					put(grammarAccess.getIntgAccess().getIAssignment(), "rule__Intg__IAssignment");

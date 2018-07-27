@@ -30,7 +30,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Variable/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Variable/cas"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Variable/k"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Go.ecore#//Variable/n"/>
     </genClasses>
     <genClasses ecoreClass="Go.ecore#//Atrib">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Go.ecore#//Atrib/modifier"/>

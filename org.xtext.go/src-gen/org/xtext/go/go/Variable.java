@@ -16,7 +16,6 @@ package org.xtext.go.go;
  *   <li>{@link org.xtext.go.go.Variable#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.go.go.Variable#getCas <em>Cas</em>}</li>
  *   <li>{@link org.xtext.go.go.Variable#getK <em>K</em>}</li>
- *   <li>{@link org.xtext.go.go.Variable#getN <em>N</em>}</li>
  * </ul>
  *
  * @see org.xtext.go.go.GoPackage#getVariable()
@@ -102,31 +101,5 @@ public interface Variable extends Greeting, Atrib_Aux, SwitchCase, OperationsOne
    * @generated
    */
   void setK(Greeting value);
-
-  /**
-   * Returns the value of the '<em><b>N</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>N</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>N</em>' containment reference.
-   * @see #setN(Numbers)
-   * @see org.xtext.go.go.GoPackage#getVariable_N()
-   * @model containment="true"
-   * @generated
-   */
-  Numbers getN();
-
-  /**
-   * Sets the value of the '{@link org.xtext.go.go.Variable#getN <em>N</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>N</em>' containment reference.
-   * @see #getN()
-   * @generated
-   */
-  void setN(Numbers value);
 
 } // Variable

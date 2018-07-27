@@ -764,16 +764,16 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
 		private final RuleCall cPlusEqualsTerminalRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
 		private final RuleCall cMinusEqualsTerminalRuleCall_1_1 = (RuleCall)cAlternatives_1.eContents().get(1);
-		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final RuleCall cIDTerminalRuleCall_2_0 = (RuleCall)cAlternatives_2.eContents().get(0);
-		private final Assignment cNAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
-		private final RuleCall cNNumbersParserRuleCall_2_1_0 = (RuleCall)cNAssignment_2_1.eContents().get(0);
+		private final Assignment cXAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Alternatives cXAlternatives_2_0 = (Alternatives)cXAssignment_2.eContents().get(0);
+		private final RuleCall cXVariableParserRuleCall_2_0_0 = (RuleCall)cXAlternatives_2_0.eContents().get(0);
+		private final RuleCall cXNumbersParserRuleCall_2_0_1 = (RuleCall)cXAlternatives_2_0.eContents().get(1);
 		
 		//OperationsOneEquals:
-		//	Variable (PlusEquals | MinusEquals) (ID | n=Numbers);
+		//	Variable (PlusEquals | MinusEquals) x=(Variable | Numbers);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Variable (PlusEquals | MinusEquals) (ID | n=Numbers)
+		//Variable (PlusEquals | MinusEquals) x=(Variable | Numbers)
 		public Group getGroup() { return cGroup; }
 		
 		//Variable
@@ -788,17 +788,17 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 		//MinusEquals
 		public RuleCall getMinusEqualsTerminalRuleCall_1_1() { return cMinusEqualsTerminalRuleCall_1_1; }
 		
-		//ID | n=Numbers
-		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+		//x=(Variable | Numbers)
+		public Assignment getXAssignment_2() { return cXAssignment_2; }
 		
-		//ID
-		public RuleCall getIDTerminalRuleCall_2_0() { return cIDTerminalRuleCall_2_0; }
+		//(Variable | Numbers)
+		public Alternatives getXAlternatives_2_0() { return cXAlternatives_2_0; }
 		
-		//n=Numbers
-		public Assignment getNAssignment_2_1() { return cNAssignment_2_1; }
+		//Variable
+		public RuleCall getXVariableParserRuleCall_2_0_0() { return cXVariableParserRuleCall_2_0_0; }
 		
 		//Numbers
-		public RuleCall getNNumbersParserRuleCall_2_1_0() { return cNNumbersParserRuleCall_2_1_0; }
+		public RuleCall getXNumbersParserRuleCall_2_0_1() { return cXNumbersParserRuleCall_2_0_1; }
 	}
 	public class NumbersElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.go.Go.Numbers");
@@ -2680,7 +2680,7 @@ public class GoGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//OperationsOneEquals:
-	//	Variable (PlusEquals | MinusEquals) (ID | n=Numbers);
+	//	Variable (PlusEquals | MinusEquals) x=(Variable | Numbers);
 	public OperationsOneEqualsElements getOperationsOneEqualsAccess() {
 		return pOperationsOneEquals;
 	}

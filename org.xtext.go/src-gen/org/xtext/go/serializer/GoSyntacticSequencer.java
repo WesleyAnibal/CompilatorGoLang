@@ -565,8 +565,8 @@ public class GoSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     PlusEquals | MinusEquals
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name=ID (ambiguity) ID (rule end)
-	 *     name=ID (ambiguity) n=Numbers
+	 *     name=ID (ambiguity) x=Numbers
+	 *     name=ID (ambiguity) x=Variable
 	 */
 	protected void emit_OperationsOneEquals_MinusEqualsTerminalRuleCall_1_1_or_PlusEqualsTerminalRuleCall_1_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

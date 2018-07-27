@@ -2052,21 +2052,21 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__OperationsOneEquals__Alternatives_2
+rule__OperationsOneEquals__XAlternatives_2_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getOperationsOneEqualsAccess().getIDTerminalRuleCall_2_0()); }
-		RULE_ID
-		{ after(grammarAccess.getOperationsOneEqualsAccess().getIDTerminalRuleCall_2_0()); }
+		{ before(grammarAccess.getOperationsOneEqualsAccess().getXVariableParserRuleCall_2_0_0()); }
+		ruleVariable
+		{ after(grammarAccess.getOperationsOneEqualsAccess().getXVariableParserRuleCall_2_0_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getOperationsOneEqualsAccess().getNAssignment_2_1()); }
-		(rule__OperationsOneEquals__NAssignment_2_1)
-		{ after(grammarAccess.getOperationsOneEqualsAccess().getNAssignment_2_1()); }
+		{ before(grammarAccess.getOperationsOneEqualsAccess().getXNumbersParserRuleCall_2_0_1()); }
+		ruleNumbers
+		{ after(grammarAccess.getOperationsOneEqualsAccess().getXNumbersParserRuleCall_2_0_1()); }
 	)
 ;
 finally {
@@ -4233,9 +4233,9 @@ rule__OperationsOneEquals__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getOperationsOneEqualsAccess().getAlternatives_2()); }
-	(rule__OperationsOneEquals__Alternatives_2)
-	{ after(grammarAccess.getOperationsOneEqualsAccess().getAlternatives_2()); }
+	{ before(grammarAccess.getOperationsOneEqualsAccess().getXAssignment_2()); }
+	(rule__OperationsOneEquals__XAssignment_2)
+	{ after(grammarAccess.getOperationsOneEqualsAccess().getXAssignment_2()); }
 )
 ;
 finally {
@@ -7624,15 +7624,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__OperationsOneEquals__NAssignment_2_1
+rule__OperationsOneEquals__XAssignment_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getOperationsOneEqualsAccess().getNNumbersParserRuleCall_2_1_0()); }
-		ruleNumbers
-		{ after(grammarAccess.getOperationsOneEqualsAccess().getNNumbersParserRuleCall_2_1_0()); }
+		{ before(grammarAccess.getOperationsOneEqualsAccess().getXAlternatives_2_0()); }
+		(rule__OperationsOneEquals__XAlternatives_2_0)
+		{ after(grammarAccess.getOperationsOneEqualsAccess().getXAlternatives_2_0()); }
 	)
 ;
 finally {
