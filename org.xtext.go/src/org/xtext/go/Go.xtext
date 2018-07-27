@@ -6,13 +6,13 @@ Go:
 	(elements+=Greeting*);
 
 Greeting:
-	 MultDecVars |DecVar | DataType | DecFunc | EOL | Condition |  SwitchCase | DecImport | CallFunc | CallFor | Variable;
+	 MultDecVars | DecVar | DataType | DecFunc | EOL | Condition |  SwitchCase | DecImport | CallFunc | CallFor | Variable;
 
 Decl:
 	Modif name=ID type=Types
 ;
 DecVar:
-	declaration=Decl | assignment=AtribVar | atribuicao=Atrib
+	declaration=Decl | atribuicao=Atrib | assignment=AtribVar | reassignment =ReAtrib
 ;
 
 AtribVar:
@@ -21,7 +21,7 @@ AtribVar:
 ;
 
 Atrib_Aux:
-	Atri|Variable
+	Operations|Atri|Variable|CallFunc
 ;
 
 Variable:
@@ -29,7 +29,11 @@ Variable:
 ;
 
 Atrib:
-	Modif name=ID type=Types equals atrib=Atrib_Aux
+	modifier=Modif name=ID type=Types equals atrib=Atrib_Aux
+;
+
+ReAtrib: 
+	name=ID equals atrib=Atrib_Aux
 ;
 
 MultDecVars:
@@ -53,7 +57,7 @@ Params:
 	params+=ID type+=Types? (Comma params+=ID type+=Types?)*;
 	
 TypeValue:
-	Str | Numbers | Boolean;
+	Str | Numbers | Bool ;
 
 Str:
 	s=STRING
@@ -68,10 +72,28 @@ OperationsOneEquals:
 
 
 Numbers:
-	int=INT | d=Double;
+	int=Intg | d=Double;
+
+Intg:
+	i=INT
+;	
 	
 Double:
 	d=INT Dot INT;
+	
+Operations:
+	T o=I;
+
+I:
+	((Plus T o=I)|(Minus T o=I))?;	
+T: 
+	F o=Y;
+	
+Y:
+	((Asterics o=F o=Y) |(Bar o=F o=Y))?;
+	
+F:
+	Open_parentheses o=Operations Closed_parentheses| Numbers;
 	
 Condition: 
     (if=IfCondition(elseif=ElseIfCondition)*(else=ElseCondition)?);
@@ -86,7 +108,7 @@ ElseCondition:
 	(=>ELSE Open_Key then=Greeting*Closed_Key); 
   
 Expression:
-    =>(x=Opers | OrExpression | ID) 
+    =>(x=Operations | boolean=OrExpression | ID) 
 ;   
 
 CallFor :
@@ -138,11 +160,19 @@ varFor:
 	ComparisonExpression | (Modif var+=ID Types equals atrb+=Atrib_Aux PontoVirgula right=Literal Operator left=Literal PontoVirgula (operationsOne| OperationsOneEquals));
 
 Literal returns Expression:
-    {Literal} value=Boolean | Numbers 
+    {Literal} value=Bool | Numbers 
 ;
 
 DecFunc:
-	FUNC name=ID Open_parentheses param=Params* Closed_parentheses return=Types? Open_Key args+=Greeting*Closed_Key
+	FUNC name=ID Open_parentheses param=Params* Closed_parentheses returnType=Types? Open_Key body=FunctionBody Closed_Key
+;
+
+FunctionBody:
+	args+=Greeting*  ret=FunctionReturn?
+;
+
+FunctionReturn:
+	RETURN returnType=Atrib_Aux?
 ;
 	
 CallFunc:
@@ -164,10 +194,10 @@ terminal PontoVirgula:
 	";";
 	
 terminal Open_Key:
-	"{";
+	"\n"?"{";
 
 terminal Closed_Key:
-	"}";
+	"\n"?"}";
 
 terminal Open_brackets:
 	"[";
@@ -186,7 +216,7 @@ terminal Open_parentheses:
 
 terminal Closed_parentheses:
 	")";
-Boolean:
+Bool:
 	val="true" | val="false";
 		
 BREAK:

@@ -9,15 +9,22 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.xtext.validation.Check;
 import org.xtext.go.go.Atrib;
 import org.xtext.go.go.AtribVar;
 import org.xtext.go.go.Atrib_Aux;
+import org.xtext.go.go.Bool;
 import org.xtext.go.go.CallFunc;
 import org.xtext.go.go.DecFunc;
+import org.xtext.go.go.DecVar;
+import org.xtext.go.go.FunctionBody;
 import org.xtext.go.go.GoPackage;
+import org.xtext.go.go.Greeting;
+import org.xtext.go.go.Intg;
 import org.xtext.go.go.Numbers;
 import org.xtext.go.go.Params;
+import org.xtext.go.go.ReAtrib;
 import org.xtext.go.go.Str;
 import org.xtext.go.go.TypeValue;
 import org.xtext.go.go.Variable;
@@ -32,9 +39,15 @@ import org.xtext.go.validation.AbstractGoValidator;
 public class GoValidator extends AbstractGoValidator {
   public final static String SEMANTIC_ERROR = "Erro Semântico: ";
   
+  public final static String SYNTACTIC_ERROR = "Erro Sintático: ";
+  
   public static Map<String, DecFunc> funcImplements = new HashMap<String, DecFunc>();
   
   public static Map<String, Atrib> variablesDeclarationMap = new HashMap<String, Atrib>();
+  
+  public static Map<String, List<Atrib>> variablesInFunction = new HashMap<String, List<Atrib>>();
+  
+  private Object v;
   
   @Check
   public void checkGreetingStartsWithCapital(final AtribVar g) {
@@ -67,6 +80,117 @@ public class GoValidator extends AbstractGoValidator {
     return out;
   }
   
+  @Check
+  public void reassignmentVar(final ReAtrib re) {
+    boolean _containsKey = GoValidator.variablesDeclarationMap.containsKey(re.getName());
+    boolean _not = (!_containsKey);
+    if (_not) {
+      String _name = re.getName();
+      String _plus = ((GoValidator.SEMANTIC_ERROR + "Não é possível reaatribuir valor. Variavel ") + _name);
+      String _plus_1 = (_plus + " não declarada");
+      this.error(_plus_1, 
+        GoPackage.Literals.RE_ATRIB__NAME);
+    } else {
+      Atrib at = GoValidator.variablesDeclarationMap.get(re.getName());
+      boolean _equals = at.getModifier().equals("const");
+      if (_equals) {
+        this.error((GoValidator.SEMANTIC_ERROR + "Não é possível reaatribuir valor para variáveis const."), 
+          GoPackage.Literals.RE_ATRIB__NAME);
+      }
+    }
+    this.validateReassignmentWithVariable(re);
+    Atrib_Aux _atrib = re.getAtrib();
+    if ((_atrib instanceof TypeValue)) {
+      Atrib_Aux _atrib_1 = re.getAtrib();
+      TypeValue type = ((TypeValue) _atrib_1);
+      Atrib at_1 = GoValidator.variablesDeclarationMap.get(re.getName());
+      this.checkIfIsTypeCompatible(at_1.getType(), type, GoPackage.Literals.RE_ATRIB__NAME);
+    }
+  }
+  
+  public void checkIfIsTypeCompatible(final String t1, final TypeValue t2, final EAttribute pack) {
+    if ((t1.equals("bool") && (!(t2 instanceof Bool)))) {
+      String _string = t1.toString();
+      String _plus = ((GoValidator.SEMANTIC_ERROR + "Não é possível converter ") + _string);
+      String _plus_1 = (_plus + " para ");
+      String _typeNameFromTypeValue = this.getTypeNameFromTypeValue(t2);
+      String _plus_2 = (_plus_1 + _typeNameFromTypeValue);
+      this.error(_plus_2, pack);
+    }
+    if (((!t1.equals("bool")) && (t2 instanceof Bool))) {
+      String _string_1 = t1.toString();
+      String _plus_3 = ((GoValidator.SEMANTIC_ERROR + "Não é possível converter ") + _string_1);
+      String _plus_4 = (_plus_3 + " para boolean");
+      this.error(_plus_4, pack);
+    }
+    if (((!t1.equals("string")) && (t2 instanceof Str))) {
+      String _string_2 = t1.toString();
+      String _plus_5 = ((GoValidator.SEMANTIC_ERROR + "Não é possível converter ") + _string_2);
+      String _plus_6 = (_plus_5 + " para string");
+      this.error(_plus_6, pack);
+    }
+    if ((t1.equals("string") && (!(t2 instanceof Str)))) {
+      String _string_3 = t1.toString();
+      String _plus_7 = ((GoValidator.SEMANTIC_ERROR + "Não é possível converter ") + _string_3);
+      String _plus_8 = (_plus_7 + " para ");
+      String _typeNameFromTypeValue_1 = this.getTypeNameFromTypeValue(t2);
+      String _plus_9 = (_plus_8 + _typeNameFromTypeValue_1);
+      this.error(_plus_9, pack);
+    }
+  }
+  
+  public String getTypeNameFromTypeValue(final TypeValue typeValue) {
+    if ((typeValue instanceof Str)) {
+      return "string";
+    }
+    if ((typeValue instanceof Numbers)) {
+      Numbers n = ((Numbers) typeValue);
+      if ((n instanceof Intg)) {
+        return "int";
+      } else {
+        return "float";
+      }
+    }
+    if ((typeValue instanceof Bool)) {
+      return "bool";
+    }
+    return null;
+  }
+  
+  /**
+   * Verifies a var reassignment with another var
+   */
+  public void validateReassignmentWithVariable(final ReAtrib re) {
+    Atrib_Aux _atrib = re.getAtrib();
+    if ((_atrib instanceof Variable)) {
+      Atrib_Aux _atrib_1 = re.getAtrib();
+      Variable variable = ((Variable) _atrib_1);
+      boolean _containsKey = GoValidator.variablesDeclarationMap.containsKey(variable.getName());
+      boolean _not = (!_containsKey);
+      if (_not) {
+        String _name = variable.getName();
+        String _plus = ((GoValidator.SEMANTIC_ERROR + "Não é possível reatribuir valor. Variavel ") + _name);
+        String _plus_1 = (_plus + " não declarada");
+        this.error(_plus_1, 
+          GoPackage.Literals.RE_ATRIB__ATRIB);
+      } else {
+        Atrib assgn = GoValidator.variablesDeclarationMap.get(re.getName());
+        Atrib atrib = GoValidator.variablesDeclarationMap.get(variable.getName());
+        boolean _equals = assgn.getType().equals(atrib.getType());
+        boolean _not_1 = (!_equals);
+        if (_not_1) {
+          String _type = atrib.getType();
+          String _plus_2 = ((GoValidator.SEMANTIC_ERROR + "não é possível converter ") + _type);
+          String _plus_3 = (_plus_2 + " para ");
+          String _type_1 = assgn.getType();
+          String _plus_4 = (_plus_3 + _type_1);
+          this.error(_plus_4, 
+            GoPackage.Literals.RE_ATRIB__ATRIB);
+        }
+      }
+    }
+  }
+  
   /**
    * This function add in the map all the variables in the source code
    */
@@ -84,6 +208,7 @@ public class GoValidator extends AbstractGoValidator {
    * Check if the declaration variables are in accord with the golang specification
    */
   public void checkTypeDeclarationAtrib(final Atrib dec) {
+    EAttribute erro = GoPackage.Literals.ATRIB_VAR__TYPE;
     this.atribDeclarationTypes(dec);
     Atrib_Aux _atrib = dec.getAtrib();
     if ((_atrib instanceof Variable)) {
@@ -95,12 +220,62 @@ public class GoValidator extends AbstractGoValidator {
         String _name = variable.getName();
         String _plus = ((GoValidator.SEMANTIC_ERROR + "Não é possível atribuir valor. Variavel ") + _name);
         String _plus_1 = (_plus + " não declarada");
-        this.error(_plus_1, 
-          GoPackage.Literals.ATRIB_VAR__ATRB);
+        this.error(_plus_1, erro);
       } else {
         Atrib atrib = GoValidator.variablesDeclarationMap.get(variable.getName());
         this.checkIfAtribsAreCompatible(dec, atrib);
       }
+    }
+    Atrib_Aux _atrib_2 = dec.getAtrib();
+    if ((_atrib_2 instanceof CallFunc)) {
+      Atrib_Aux _atrib_3 = dec.getAtrib();
+      CallFunc call = ((CallFunc) _atrib_3);
+      this.checkIfFunctionExists(call, erro);
+      DecFunc decF = GoValidator.funcImplements.get(call.getNameFunc());
+      String _returnType = decF.getReturnType();
+      boolean _tripleEquals = (_returnType == null);
+      if (_tripleEquals) {
+        this.error(
+          (GoValidator.SEMANTIC_ERROR + "Não é possível atribuir valor a variável. Funcao sem tipo de retorno."), 
+          GoPackage.Literals.ATRIB__TYPE);
+      }
+      this.checkIfFunctionHasReturnType(call, erro);
+      this.checkTypeFunctionWithAtrib(call, dec, GoPackage.Literals.ATRIB__TYPE);
+    }
+  }
+  
+  public void checkIfFunctionHasReturnType(final CallFunc call, final EAttribute pack) {
+    DecFunc dec = GoValidator.funcImplements.get(call.getNameFunc());
+    String _returnType = dec.getReturnType();
+    boolean _tripleEquals = (_returnType == null);
+    if (_tripleEquals) {
+      this.error(
+        (GoValidator.SEMANTIC_ERROR + "Não é possível atribuir valor a variável. Funcao sem tipo de retorno."), pack);
+    }
+  }
+  
+  public void checkTypeFunctionWithAtrib(final CallFunc call, final Atrib atrib, final EAttribute pack) {
+    DecFunc dec = GoValidator.funcImplements.get(call.getNameFunc());
+    boolean _equals = atrib.getType().equals(dec.getReturnType());
+    boolean _not = (!_equals);
+    if (_not) {
+      String _returnType = dec.getReturnType();
+      String _plus = ((GoValidator.SEMANTIC_ERROR + "retorno da função é diferente do tipo da variável. Tipo da Função: ") + _returnType);
+      String _plus_1 = (_plus + " Tipo da variável: ");
+      String _type = atrib.getType();
+      String _plus_2 = (_plus_1 + _type);
+      this.error(_plus_2, pack);
+    }
+  }
+  
+  /**
+   * Auxiliary method that allows know if a callFunc is already declared
+   */
+  public void checkIfFunctionExists(final CallFunc callFunc, final EAttribute pack) {
+    boolean _containsKey = GoValidator.funcImplements.containsKey(callFunc.getNameFunc());
+    boolean _not = (!_containsKey);
+    if (_not) {
+      this.error((GoValidator.SEMANTIC_ERROR + "função não declarada"), pack);
     }
   }
   
@@ -128,15 +303,9 @@ public class GoValidator extends AbstractGoValidator {
   public void atribDeclarationTypes(final Atrib dec) {
     Atrib_Aux _atrib = dec.getAtrib();
     if ((_atrib instanceof TypeValue)) {
-      if ((dec.getType().equals("string") && (dec.getAtrib() instanceof Numbers))) {
-        this.error((GoValidator.SEMANTIC_ERROR + "não é possível converter number para string"), GoPackage.Literals.ATRIB__TYPE);
-      }
-      if (((!dec.getType().equals("string")) && (dec.getAtrib() instanceof Str))) {
-        String _type = dec.getType();
-        String _plus = ((GoValidator.SEMANTIC_ERROR + "não é possível converter string para ") + _type);
-        this.error(_plus, 
-          GoPackage.Literals.ATRIB__TYPE);
-      }
+      Atrib_Aux _atrib_1 = dec.getAtrib();
+      TypeValue type = ((TypeValue) _atrib_1);
+      this.checkIfIsTypeCompatible(dec.getType(), type, GoPackage.Literals.ATRIB__TYPE);
     }
   }
   
@@ -150,26 +319,75 @@ public class GoValidator extends AbstractGoValidator {
   }
   
   @Check
-  public DecFunc addFuncToImplements(final DecFunc dec) {
-    return GoValidator.funcImplements.put(dec.getName().toString(), dec);
+  public void addFuncToImplements(final DecFunc dec) {
+    GoValidator.funcImplements.put(dec.getName().toString(), dec);
+    String _name = dec.getName();
+    ArrayList<Atrib> _arrayList = new ArrayList<Atrib>();
+    GoValidator.variablesInFunction.put(_name, _arrayList);
+    this.verifiesReturnFunctionAndReturnBody(dec);
+    this.mapVariableInBodyFunction(dec);
+    this.verifiesBodyFunction(dec);
   }
   
-  @Check
-  public void checkIfFunctionOverhead(final DecFunc dec) {
-    boolean _containsKey = GoValidator.funcImplements.containsKey(dec.getName());
-    boolean _not = (!_containsKey);
-    if (_not) {
-      this.error((GoValidator.SEMANTIC_ERROR + "função não declarada"), GoPackage.Literals.CALL_FUNC__NAME_FUNC);
+  public void verifiesReturnFunctionAndReturnBody(final DecFunc dec) {
+    FunctionBody body = dec.getBody();
+    if (((dec.getReturnType() == null) && (body.getRet() != null))) {
+      this.error((GoValidator.SEMANTIC_ERROR + "Função void: não precisa de retorno"), GoPackage.Literals.DEC_FUNC__RETURN_TYPE);
     }
+    if (((dec.getReturnType() != null) && (body.getRet() == null))) {
+      this.error((GoValidator.SEMANTIC_ERROR + "Retorno nao encontrado"), GoPackage.Literals.DEC_FUNC__RETURN_TYPE);
+    }
+  }
+  
+  public void mapVariableInBodyFunction(final DecFunc dec) {
+    FunctionBody body = dec.getBody();
+    EList<Greeting> _args = body.getArgs();
+    for (final Greeting gret : _args) {
+      if ((gret instanceof DecVar)) {
+        DecVar variable = ((DecVar) gret);
+        Atrib _atribuicao = variable.getAtribuicao();
+        boolean _tripleNotEquals = (_atribuicao != null);
+        if (_tripleNotEquals) {
+          Atrib atrib = variable.getAtribuicao();
+          GoValidator.variablesInFunction.get(dec.getName()).add(atrib);
+        }
+      }
+    }
+  }
+  
+  public void verifiesBodyFunction(final DecFunc dec) {
+    FunctionBody body = dec.getBody();
+    EList<Greeting> _args = body.getArgs();
+    for (final Greeting gret : _args) {
+      if ((gret instanceof Variable)) {
+        Variable variable = ((Variable) gret);
+        boolean _searchVariable = this.searchVariable(dec.getName(), variable.getName());
+        boolean _not = (!_searchVariable);
+        if (_not) {
+          boolean _containsKey = GoValidator.variablesDeclarationMap.containsKey(variable.getName());
+          boolean _not_1 = (!_containsKey);
+          if (_not_1) {
+            this.error((GoValidator.SEMANTIC_ERROR + "Variavel não declarada no escopo da função"), GoPackage.Literals.DEC_FUNC__BODY);
+          }
+        }
+      }
+    }
+  }
+  
+  public boolean searchVariable(final String nameFunc, final String nameVar) {
+    List<Atrib> attrs = GoValidator.variablesInFunction.get(nameFunc);
+    for (final Atrib at : attrs) {
+      boolean _equals = at.getName().equals(nameVar);
+      if (_equals) {
+        return true;
+      }
+    }
+    return false;
   }
   
   @Check
   public void callFunc(final CallFunc callFunc) {
-    boolean _containsKey = GoValidator.funcImplements.containsKey(callFunc.getNameFunc());
-    boolean _not = (!_containsKey);
-    if (_not) {
-      this.error((GoValidator.SEMANTIC_ERROR + "função não declarada"), GoPackage.Literals.CALL_FUNC__NAME_FUNC);
-    }
+    this.checkIfFunctionExists(callFunc, GoPackage.Literals.CALL_FUNC__NAME_FUNC);
     DecFunc func = GoValidator.funcImplements.get(callFunc.getNameFunc());
     this.checkIfHasEqualTypes(func, callFunc);
   }
@@ -214,12 +432,28 @@ public class GoValidator extends AbstractGoValidator {
     return tipos.size();
   }
   
+  public Atrib getVariableById(final String name) {
+    return GoValidator.variablesDeclarationMap.get(name);
+  }
+  
   public List<String> getParametersType(final Params param) {
     List<String> tipos = new ArrayList<String>();
     if (((param != null) && (param.getType() != null))) {
-      EList<String> _type = param.getType();
-      for (final String id : _type) {
-        tipos.add(id);
+      int _size = param.getType().size();
+      boolean _equals = (_size == 0);
+      if (_equals) {
+        EList<String> _params = param.getParams();
+        for (final String id : _params) {
+          {
+            Atrib variable = this.getVariableById(id);
+            tipos.add(variable.getType());
+          }
+        }
+      } else {
+        EList<String> _type = param.getType();
+        for (final String t : _type) {
+          tipos.add(t);
+        }
       }
     }
     return tipos;
