@@ -305,7 +305,6 @@ class GoValidator extends AbstractGoValidator {
 
 	def mapVariableInBodyFunction(DecFunc dec) {
 
-
 		var FunctionBody body = dec.body;
 		for (Greeting gret : body.args) {
 
